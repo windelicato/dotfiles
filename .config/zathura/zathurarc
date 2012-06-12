@@ -1,0 +1,9 @@
+set font "terminus normal 9"
+set default-bg "#2c2c2c"
+set default-fg "#d0d0d0"
+set statusbar-bg "#222222"
+set statusbar-fg "#d0d0d0"
+set adjust-open	width
+set inputbar-fg "#a0a57e"
+set completion-highlight-bg "#2c2c2c"
+set completion-highlight-fg "#c37561"

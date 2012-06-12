@@ -1,0 +1,95 @@
+# MUTT Email config
+
+# Info
+
+# IMAP
+set imap_user 	= "wei001@bucknell.edu"
+set imap_pass 	= PASSWORD
+set folder 	= "imaps://imap.gmail.com:993"
+set imap_check_subscribed
+
+# SMTP
+set smtp_url	= "smtps://wei001@bucknell.edu@smtp.gmail.com/465"
+set smtp_pass	= "###grunty11"
+set from 	= "wei001@bucknell.edu"
+set realname 	= "Bill Indelicato"
+
+set editor	= "vim"
+
+set spoolfile 	= "+INBOX"
+set postponed 	= "+[Gmail]/Drafts"
+#set trash	= "imaps://imap.gmail.com/[Gmail]/Trash"
+
+set header_cache 	=~/.mutt/cache/headers
+set message_cachedir 	=~/.mutt/cache/bodies
+set certificate_file 	=~/.mutt/certificates
+
+# Binds
+bind editor <space> noop
+bind editor ^T complete
+bind pager gg top
+bind pager G bottom
+bind index gg first-entry
+bind index G last-entry
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=[Gmail]/All Mail<enter>" "Go to all mail"
+macro index gs "<change-folder>=[Gmail]/Sent Mail<enter>" "Go to Sent Mail"
+macro index gd "<change-folder>=[Gmail]/Drafts<enter>" "Go to drafts"
+set move = no  #Stop asking to "move read messages to mbox"!
+
+# Pager options
+set pager_index_lines   = 10                                    # number of index lines to show 
+set pager_context       = 5                                     # number of context lines to show
+set pager_stop                                                  # don't go to next message automatically
+set menu_scroll                                                 # scroll in menus 
+set smart_wrap                                                  # don't split words
+set tilde                                                       # show tildes like in vim
+unset markers                                                   # no ugly plus signs
+auto_view text/html                                             # view html automatically
+alternative_order text/plain text/enriched text/html            # save html for last
+set quote_regexp        = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+
+# Format
+set date_format         = "%m/%d (%I:%M%P)"
+set index_format        = "%3C  %S   %D  •  %-15.15L %s %> %c"
+set pager_format        = "Reading message %C of %m %> %lL [%P]" # pager statusbar
+set folder_format       = "%2C %t %N %2s %d %f"                 # mailbox list view
+set status_format       = " %?M?%M/?%m Mails %?n?%n new, ?%?u?%u unread, ?%?p?%p drafts, ?%?t?%t +tagged, ?%?d?%d deleted, ?[%f %l]  %?b?%b unread messages. ?%>  %V   sort by: %s/%S  [%P]"
+set alias_format        = "%4n %t %-20a  %r"
+
+# Auto check settings
+set check_new	= yes
+set imap_check_subscribed = yes
+set mail_check	= 60
+set timeout = 15
+
+# Auto sort options
+set include
+set sort = 'threads'
+set sort_aux = 'reverse-last-date-received'
+set auto_tag = yes
+
+# Auto display HTML
+set mailcap_path    = ~/.mutt/mailcap
+auto_view text/html
+
+# Color settings
+#
+#color   object     foreground       background
+#color   hdrdefault   blue              default
+#color   quoted       blue              default
+#color   signature    blue              default
+#color   attachment   red               default
+#color   message      brightblue        default
+#color   error        brightblue        default 
+#color   indicator    red 	       default
+#color   status       brightgreen       	default 
+#color   tree         yellow		default
+#color   normal       white             default
+#color   markers      red		default
+#color   search       white             default
+##color   tilde        brightmagenta     default
+#color   index        blue              default ~F 
+#color   index        brightblue               default "~N|~O"
+
+source ~/.mutt/colors

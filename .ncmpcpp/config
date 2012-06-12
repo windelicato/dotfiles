@@ -1,0 +1,183 @@
+ncmpcpp_directory = "~/.ncmpcpp"
+mpd_host = "localhost"
+mpd_port = "6600"
+mpd_music_dir = "~/music/"
+#
+##### music visualizer #####
+##
+## audio_output {
+##        type            "fifo"
+##        name            "My FIFO"
+##        path            "/tmp/mpd.fifo"
+##        format          "44100:16:2"
+## }
+##
+#
+##
+## If you set format to 44100:16:2, make it 'yes'.
+visualizer_in_stereo = "no"
+visualizer_fifo_path = "/tmp/mpd.fifo"
+visualizer_output_name = "my_fifo"
+visualizer_sync_interval = "0.5"
+visualizer_type = "spectrum" (spectrum/wave)
+#visualizer_look = "|"
+#system_encoding = ""
+#playlist_disable_highlight_delay = "5"
+#message_delay_time = "4"
+#
+#
+##### song format #####
+##
+## for song format you can use:
+##
+## %l - length
+## %f - filename
+## %D - directory
+## %a - artist
+## %A - album artist
+## %t - title
+## %b - album
+## %y - year
+## %n - track number (01/12 -> 01)
+## %N - full track info (01/12 -> 01/12)
+## %g - genre
+## %c - composer
+## %p - performer
+## %d - disc
+## %C - comment
+## $R - begin right alignment
+##
+## - 0 - default window color (discards all other colors)
+## - 1 - black
+## - 2 - red
+## - 3 - green
+## - 4 - yellow
+## - 5 - blue
+## - 6 - magenta
+## - 7 - cyan
+## - 8 - white
+## - 9 - end of current color
+#
+#song_list_format = "{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
+#song_status_format = "{{%a{ \"%b\"{ (%y)}} - }{%t}}|{%f}"
+#song_library_format = "{%n - }{%t}|{%f}"
+#tag_editor_album_format = "{(%y) }%b"
+alternative_header_first_line_format = "$b$1$aqqu$/a$9 $/b$3{%t}|{%f}$9 $b$1$atqq$/a$9$/b"
+alternative_header_second_line_format = "{{$5%a$9}{ ($b$1%y$9$/b)}}|{%D}"
+#now_playing_prefix = "$b"
+#now_playing_suffix = "$/b"
+#browser_playlist_prefix = "$2playlist$9 "
+#selected_item_prefix = "$6"
+#selected_item_suffix = "$9"
+## colors are not supported for below variable
+#song_window_title_format = "{%a - }{%t}|{%f}"
+song_columns_list_format = "(7f)[white]{l} (25)[blue]{a} (40)[green]{t|f} (30)[black]{b}"
+#
+##### various settings #####
+#
+#execute_on_song_change = ""
+#playlist_show_remaining_time = "no"
+#playlist_shorten_total_times = "no"
+#playlist_separate_albums = "no"
+playlist_display_mode = "columns" (classic/columns)
+#browser_display_mode = "classic" (classic/columns)
+#search_engine_display_mode = "classic" (classic/columns)
+#playlist_editor_display_mode = "classic" (classic/columns)
+#discard_colors_if_item_is_selected = "yes"
+#incremental_seeking = "yes"
+#seek_time = "1"
+#autocenter_mode = "no"
+#centered_cursor = "no"
+progressbar_look = "=)"
+#default_place_to_search_in = "database" (database/playlist)
+user_interface = "alternative" (classic/alternative)
+#media_library_left_column = "a" (possible values: a,y,g,c,p, legend above)
+#default_find_mode = "wrapped" (wrapped/normal)
+#default_space_mode = "add" (add/select)
+#default_tag_editor_left_col = "albums" (albums/dirs)
+#default_tag_editor_pattern = "%n - %t"
+#header_visibility = "yes"
+#statusbar_visibility = "yes"
+#titles_visibility = "yes"
+#header_text_scrolling = "yes"
+#fancy_scrolling = "yes"
+#cyclic_scrolling = "no"
+#lines_scrolled = "2"
+#follow_now_playing_lyrics = "no"
+#fetch_lyrics_for_current_song_in_background = "no"
+#store_lyrics_in_song_dir = "no"
+#lastfm_preferred_language = ""
+#ncmpc_like_songs_adding = "no" (enabled - add/remove, disabled - always add)
+#show_hidden_files_in_local_browser = "no"
+#display_screens_numbers_on_start = "yes"
+##
+## Screen numbers you can use after 'sequence' keyword are:
+##
+## - 1 - help
+## - 2 - playlist
+## - 3 - browser
+## - 4 - search engine
+## - 5 - media library
+## - 6 - playlist editor
+## - 7 - tag editor
+## - 8 - outputs
+## - 9 - visualizer
+## - 10 - clock
+##
+##
+screen_switcher_mode = "sequence: 2 -> 5 -> 10"
+#
+##
+## Default width of locked screen (in %).
+## Acceptable values are from 20 to 80.
+##
+#
+#locked_screen_width_part = "50"
+#ask_for_locked_screen_width_part = "yes"
+#
+##
+## Note: You can define startup screen for ncmpcpp
+## by choosing screen number from the list above.
+##
+startup_screen = "5"
+#jump_to_now_playing_song_at_start = "yes"
+#ask_before_clearing_main_playlist = "no"
+#clock_display_seconds = "no"
+#display_volume_level = "yes"
+display_bitrate = "yes"
+#display_remaining_time = "no"
+#regular_expressions = "basic" (basic/extended)
+ignore_leading_the = "yes"
+#block_search_constraints_change_if_items_found = "yes"
+#mouse_support = "yes"
+#mouse_list_scroll_whole_page = "yes"
+#empty_tag_marker = "<empty>"
+#tag_editor_extended_numeration = "no"
+#media_library_display_date = "yes"
+#media_library_display_empty_tag = "yes"
+#media_library_disable_two_column_mode = "no"
+#enable_window_title = "yes"
+#search_engine_default_search_mode = "1"
+#allow_physical_files_deletion = "no"
+#allow_physical_directories_deletion = "no"
+#external_editor = ""
+#use_console_editor = "no" (set to yes, if your editor is console app)
+#
+##### colors definitions #####
+colors_enabled = "yes"
+empty_tag_color = "cyan"
+header_window_color = "default"
+volume_color = "default"
+state_line_color = "default"
+state_flags_color = "default"
+main_window_color = "default"
+color1 = "white"
+color2 = "green"
+main_window_highlight_color = "black"
+progressbar_color = "black"
+statusbar_color = "default"
+alternative_ui_separator_color = "black"
+active_column_color = "green"
+visualizer_color = "magenta"
+window_border_color = "green"
+active_window_border = "red"

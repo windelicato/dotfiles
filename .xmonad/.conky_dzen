@@ -1,0 +1,9 @@
+background yes
+out_to_console yes
+out_to_x no
+update_interval 1
+update_interval_on_battery 10
+ 
+TEXT
+^fg(\#C8B55B)^i(/home/sunn/.xmonad/dzen2/bat_full_01.xbm) ^fg(\#746C48)${battery_percent}% (${battery_time})     ^fg(\#C8B55B)^i(/home/sunn/.xmonad/dzen2/cpu.xbm) ^fg(\#746C48)${cpu cpu0}% ${cpu cpu1}% ${cpu cpu2}% ${cpu cpu3}%     ^fg(\#C8B55B)^i(/home/sunn/.xmonad/dzen2/temp.xbm)^fg(\#746C48) ${execi 30 sensors | tail -n2 | gawk '{printf $2}'} ${execi 15 aticonfig --adapter=0 --od-gettemperature | tail -n1 | gawk '{printf $5}'}°C      ^fg(\#C8B55B)^i(/home/sunn/.xmonad/dzen2/mem.xbm) ^fg(\#746C48)${memperc}% ${mem}/${memmax}^fg(\#C8B55B)       ^i(/home/sunn/.xmonad/dzen2/spkr_01.xbm) ^fg(\#746C48)${exec amixer get Master| egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}%  ^fg(\#746C48)${scroll 20 ${mpd_smart}}        ^fg(\#C8B55B)^i(/home/sunn/.xmonad/dzen2/clock.xbm) ^fg(\#746C48)${time %m.%d.%Y} ^fg(\#392925) (((  ^fg(\#C8B55B)${time %I:%M %P} ^fg(\#392925) )))
+
