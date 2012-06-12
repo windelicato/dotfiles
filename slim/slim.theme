@@ -1,0 +1,44 @@
+# mindlock for SLiM
+# Johannes Winkelmann
+
+# Messages (ie: shutdown)
+msg_color               #c37561
+msg_font                Termsyn:size=16:bold:dpi=96
+msg_x                   80%
+msg_y                   80%
+msg_shadow_color        #606092
+msg_shadow_xoffset      1
+msg_shadow_yoffset      1
+
+# valid values: stretch, tile
+background_style        stretch
+
+# Input controls
+input_panel_x           80%
+input_panel_y           75%
+input_name_x            40
+input_name_y            102
+input_font          	Termsyn:size=12:dpi=96
+input_color           #000000
+
+# Welcome message
+welcome_font          	Termsyn:size=16:bold:dpi=96
+welcome_color          	#170F0D
+welcome_shadow_color   #363636
+welcome_shadow_xoffset 1
+welcome_shadow_yoffset 1
+welcome_x              	50%
+welcome_y              	38
+
+# Username / password request
+username_font          	Termsyn:size=12:dpi=96
+username_color          #908F32
+username_shadow_color   #363636
+username_shadow_xoffset 1
+username_shadow_yoffset 1
+username_x              50%
+username_y              146
+password_x              50%
+password_y              146
+username_msg            USERNAME
+password_msg            PASS
