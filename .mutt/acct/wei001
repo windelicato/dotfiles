@@ -10,7 +10,7 @@ set imap_check_subscribed
 
 # SMTP
 set smtp_url	= "smtps://wei001@bucknell.edu@smtp.gmail.com/465"
-set smtp_pass	= "###grunty11"
+
 set from 	= "wei001@bucknell.edu"
 set realname 	= "Bill Indelicato"
 
