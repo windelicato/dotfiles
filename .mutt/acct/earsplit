@@ -12,7 +12,7 @@ set imap_check_subscribed
 
 # SMTP
 set smtp_url	= "smtp://earsplit@smtp.gmail.com:587/"
-set smtp_pass	= "*grunty11"
+
 
 set editor	= "vim"
 
