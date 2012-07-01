@@ -12,7 +12,7 @@ set imap_check_subscribed
 
 # SMTP
 set smtp_url	= "smtp://suns.music@smtp.gmail.com:587/"
-set smtp_pass	= "batmann435"
+
 
 set editor	= "vim"
 
