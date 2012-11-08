@@ -1,0 +1,241 @@
+! #########################################
+
+urxvt*perl-lib:			/usr/lib/urxvt/perl
+urxvt*perl-ext-common:		default,matcher
+!urxvt*letterspace: -1
+!urxvt*transparent: 		true
+!urxvt*shading:			60
+urxvt*cursorBlink:		true
+urxvt*scrollBar:		false
+!urxvt*font: -*-terminus-medium-r-normal-*-17-*-*-*-*-*-*-*
+!urxvt*font: -artwiz-cure-medium-r-normal-*-*-*-*-*-*-*-*-*
+urxvt*font: -artwiz-lime-medium-r-normal-*-10-*-*-*-*-*-*-*
+urxvt*boldFont: -artwiz-lime-medium-r-normal-*-10-*-*-*-*-*-*-*
+urxvt*italicFont: -artwiz-lime-medium-r-normal-*-10-*-*-*-*-*-*-*
+urxvt*bolditalicFont: -artwiz-lime-medium-r-normal-*-10-*-*-*-*-*-*-*
+!urxvt*font: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+
+! #########################################
+! BLUE AWESOME COLORS
+! #########################################
+urxvt*cursorUnderline: 1
+urxvt*cursorColor: #2f468e
+urxvt*colorUL:	#FFFFFF
+urxvt*colorIT: #FFFFFF
+urxvt*background: #000000
+urxvt*foreground: #FFFFFF
+
+urxvt*color0:	#343639
+urxvt*color8:	#404040
+
+urxvt*color1:	#2f468e
+urxvt*color9:	#7791e0
+
+urxvt*color2:	#424242
+urxvt*color10:	#828a8c
+
+urxvt*color3:	#6b8ba3
+urxvt*color11:	#8ebdde
+
+urxvt*color4:	#1c4582
+urxvt*color12:	#5365a6
+
+urxvt*color5:	#74637d
+urxvt*color13:	#927d9e
+
+urxvt*color6:	#556c85
+urxvt*color14:	#6e98b8
+
+urxvt*color7:	#b2b2b2
+urxvt*color15:	#bdbdbd
+
+! #########################################
+! SPACE COLORS
+! #########################################
+
+!urxvt*cursorColor:		#d0d0d0
+!urxvt*colorIT:			#c37561
+!urxvt*colorUL:			#a0a57e
+!
+!!Background / Foreground
+!urxvt*background: #202020
+!urxvt*foreground: #ddccbb
+!!Black / Light black
+!urxvt*color0: #222222
+!urxvt*color8: #666666
+!!Red / Light red
+!urxvt*color1:  #cc4747
+!urxvt*color9:  #bf5858
+!!Green / Light green
+!urxvt*color2:  #a0cf5d
+!urxvt*color10: #b8d68c
+!!Yellow / Light yellow
+!urxvt*color3:  #e0a524
+!urxvt*color11: #edB85c
+!!Blue / Light blue
+!urxvt*color4:  #4194d9
+!urxvt*color12: #60aae6
+!!Purple / Light purple
+!urxvt*color5:  #cc2f6e
+!urxvt*color13: #db588c
+!!Cyan / Light cyan
+!urxvt*color6:  #6d878d
+!urxvt*color14:  #42717b
+!!White / Light white...?
+!urxvt*color7:  #dedede
+!urxvt*color15: #f2f2f2
+!
+!*foreground: #D7D0C7
+!*background: #151515
+
+! #########################################
+! X::Dotshare COLORS
+! #########################################
+!black
+!urxvt*color0:     #AF875F
+!urxvt*color8:     #AF875F
+!!urxvt*color0:     #101010
+!!urxvt*color8:     #404040
+!!red
+!urxvt*color1:     #E84F4F
+!urxvt*color9:     #D23D3D
+!!green
+!urxvt*color2:     #B8D68C
+!urxvt*color10:    #A0CF5D
+!!yellow
+!urxvt*color3:     #E1AA5D
+!urxvt*color11:    #F39D21
+!!blue
+!urxvt*color4:     #7DC1CF
+!urxvt*color12:    #4E9FB1
+!!magenta
+!urxvt*color5:     #9B64FB
+!urxvt*color13:    #8542FF
+!!cyan
+!urxvt*color6:     #6D878D
+!urxvt*color14:    #42717B
+!!white
+!urxvt*color7:     #dddddd
+!urxvt*color15:    #dddddd
+!
+!URxvt*borderColor:        #151515
+!URxvt*colorBD:            #ffffff
+!URxvt*cursorColor:        #ff8939
+!URxvt*cursorColor2:       #151515
+
+
+! #########################################
+! THAW COLORS
+! #########################################
+!urxvt*background:       #170F0D
+!urxvt*foreground:       #746C48
+!urxvt*cursorColor:      #6666CC
+!urxvt*colorBD:          #C8B984
+!
+!
+!urxvt*color0:           #392925
+!urxvt*color8:           #544B2E
+!
+!urxvt*color1:           #98724C
+!urxvt*color9:           #AF652F
+!
+!urxvt*color2:           #908F32
+!urxvt*color10:          #C3C13D
+!
+!urxvt*color3:           #AA964C
+!urxvt*color11:          #C8B55B
+!
+!urxvt*color4:           #7B854E
+!urxvt*color12:          #70A16C
+!
+!urxvt*color5:           #6B5644
+!urxvt*color13:          #98724C
+!
+!urxvt*color6:           #5C5142
+!urxvt*color14:          #778725
+!
+!urxvt*color7:           #C8B55B
+!urxvt*color15:          #E4DC8C
+
+! #########################################
+! BW ON WHITE
+! #########################################
+
+!urxvt*background: #FFFFFF
+!urxvt*foreground: #000000
+!urxvt*colorUL: #4E4FFF
+!
+!!BLACK
+!urxvt*color0:  #FFFFFF
+!urxvt*color8:  #9A9A9A
+!! RED
+!urxvt*color1:               #121212
+!urxvt*color9:               #1C1C1C
+!
+!! GREEN
+!urxvt*color2:               #A5A5A5
+!urxvt*color10:              #A4A4A4
+!
+!!YELLOW
+!urxvt*color3:               #777777
+!urxvt*color11:              #646464
+!
+!! BLUE
+!urxvt*color4:               #999999
+!urxvt*color12:              #7C7C7C
+!
+!! MAGENTA
+!urxvt*color5:               #4C4C4C
+!urxvt*color13:              #515151
+!
+!! CYAN
+!urxvt*color6:               #2B2B2B
+!urxvt*color14:              #322929
+!
+!!WHITE
+!urxvt*color7:  #000000
+!urxvt*color15: #101010
+
+
+! #########################################
+! BW ON BLACK
+! #########################################
+!URxvt.background: #FFFFFF
+!URxvt.foreground: #000000
+!!black
+!URxvt*color0:  #000000
+!URxvt*color8:  #090909
+!!red
+!URxvt*color1:  #111111
+!URxvt*color9:  #181818
+!!green
+!URxvt*color2:  #222222
+!URxvt*color10: #272727
+!!yellow
+!URxvt*color3:  #333333
+!URxvt*color11: #393939
+!!blue 
+!URxvt*color4:  #444444
+!URxvt*color12: #484848
+!!magenta
+!URxvt*color5:  #555555
+!URxvt*color13: #595959
+!!cyan
+!URxvt*color6:  #666666
+!URxvt*color14: #707070
+!!white
+!URxvt*color7:  #777777
+!URxvt*color15: #818181
+
+
+
+Xft.dpi:	96
+Xft.rgba:	rgb
+Xft.antialias: 	true
+Xft.hinting: 	true
+Xft.autohint: 	false
+Xft.hintstyle: 	hintslight
+Xft.lcdfilter: 	lcddefault
