@@ -1,0 +1,14 @@
+ ^fg(#556c85)^i(/home/sunn/.dzen/arch.xbm)^fg() term:urxvt
+ ^fg(#556c85)^i(/home/sunn/.dzen/fs_01.xbm)^fg() www:chromium
+ ^fg(#556c85)^i(/home/sunn/.dzen/diskette.xbm)^fg() pdf:zathura
+ ^fg(#556c85)^i(/home/sunn/.dzen/plug.xbm)^fg() doc:lowriter
+ ^fg(#556c85)^i(/home/sunn/.dzen/stop.xbm)^fg() xls:localc
+ ^fg(#556c85)^i(/home/sunn/.dzen/ac.xbm)^fg() ppt:loimpress
+ ^fg(#556c85)^i(/home/sunn/.dzen/fox.xbm)^fg() gimp:gimp
+ ^fg(#556c85)^i(/home/sunn/.dzen/cpu.xbm)^fg() ise:ise
+ ^fg(#556c85)^i(/home/sunn/.dzen/mem.xbm)^fg() matlab:urxvt -e matlab -nodesktop -nosplash
+----------
+ ^fg(#556c85)^i(/home/sunn/.dzen/play.xbm)^fg() run:gmrun
+ ^fg(#556c85)^i(/home/sunn/.dzen/full.xbm)^fg() suspend:sudo pm-suspend
+ ^fg(#556c85)^i(/home/sunn/.dzen/half.xbm)^fg() restart:sudo reboot
+ ^fg(#556c85)^i(/home/sunn/.dzen/empty.xbm)^fg() shutdown:sudo shutdown -h now
