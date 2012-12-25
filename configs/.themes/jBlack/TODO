@@ -1,0 +1,18 @@
+TODO
+====
+
+1. Evolution's "New" button background on the toolbar
+   I heard this is a bug in Evo to tell you the truth I'm getting sick of all these custom things in evo
+   
+2. Hilight Firefox's main menu if it's selected
+   I think it should be added to the userChrome.css
+
+3. Change checkboxe's foreground (text[NORMAL] = white;)
+   In gtkList (see for e.g. gedit->Edit->Preferences->Plugins) the checkboxes are totally black.
+   
+4. Progressbar is acting strangely 
+   In firefox and some gnome apps the bar resizes sometimes and I have no idea why!
+   
+---
+If someone has any fix for the above points please let me know!
+me@pijulius.com

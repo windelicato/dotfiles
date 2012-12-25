@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="24"
+   height="24"
+   id="svg3894">
+  <defs
+     id="defs3896">
+    <linearGradient
+       id="linearGradient3587-6-5">
+      <stop
+         id="stop3589-9-2"
+         style="stop-color:#000000;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3591-7-4"
+         style="stop-color:#363636;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="-11.031802"
+       y1="7.1812897"
+       x2="-11.031802"
+       y2="18.182138"
+       id="linearGradient3892"
+       xlink:href="#linearGradient3587-6-5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(-1,0,0,1,7.4207958e-2,-1.1818178)" />
+  </defs>
+  <g
+     id="layer1">
+    <path
+       d="M 2.006131,7 C 1.992687,10.84584 2.005443,14.047563 2.006131,18 L 4.006131,18 L 4.006131,12.5 L 13.006131,18 L 13.006131,12.5 L 22.006131,18 L 22.006131,7 L 13.006131,12.5 L 13.006131,7 L 4.006131,12.5 C 4.006973,10.636574 4.006131,8.7418973 4.006131,7 L 2.006131,7 z"
+       id="path3888"
+       style="opacity:0.6;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       d="M 2.006131,6 C 1.992687,9.8458404 2.005443,13.047563 2.006131,17 L 4.006131,17 L 4.006131,11.5 L 13.006131,17 L 13.006131,11.5 L 22.006131,17 L 22.006131,6 L 13.006131,11.5 L 13.006131,6 L 4.006131,11.5 C 4.006973,9.6365737 4.006131,7.7418973 4.006131,6 L 2.006131,6 z"
+       id="path3375"
+       style="opacity:0.7;fill:url(#linearGradient3892);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+  </g>
+</svg>

@@ -1,0 +1,126 @@
+style "nautilus-breadcrumbs"
+{
+	xthickness = 3
+	ythickness = 0
+	
+	GtkButton::child-displacement-y		= 0
+	GtkButton::inner-border				= { 0, 8, 0, 0}
+
+	engine "pixmap"
+	{	
+		image
+		{
+			function        	= BOX
+			shadow				= OUT
+			recolorable     	= TRUE
+			state				= PRELIGHT
+			file				= "breadcrumb_prelight.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}		
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			shadow				= IN
+			state				= PRELIGHT
+			file				= "breadcrumb_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	  
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= NORMAL
+			file				= "breadcrumb_normal.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+		
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= PRELIGHT
+			file				= "breadcrumb_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= ACTIVE
+			file				= "breadcrumb_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}  
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= INSENSITIVE
+			file				= "breadcrumb_normal.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		} 
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state				= SELECTED
+			file				= "breadcrumb_active.png"
+			border				= { 3, 13, 3, 3 }
+			stretch         	= TRUE
+		}
+	}
+}
+
+widget_class "*NautilusPathBar.*ToggleButton" style "nautilus-breadcrumbs" # afecta solo a los botones de direcciones :)
+
+
+style "nautilus-left-slider"
+{
+	xthickness = 0
+	ythickness = 0
+	
+	engine "pixmap"
+	{
+		image {
+			function 		= BOX
+			file			= "left_slider_normal.png"
+			border			= { 3, 3, 3, 3 }
+			stretch			= TRUE
+		}
+	}
+
+}
+
+widget "Nautilus*left_slider*" style "nautilus-left-slider" # afecta solo al boton a la izquierda del breadcrumb
+
+
+
+style "nautilus-right-slider"
+{	
+	xthickness = 0
+	ythickness = 0
+	
+	engine "pixmap"
+	{
+		image {
+			function 		= BOX
+			file			= "right_slider_normal.png"
+			border			= { 3, 3, 3, 3 }
+			stretch			= TRUE
+		}
+	}
+}
+
+widget "Nautilus*right_slider*" style "nautilus-right-slider" # afecta solo al boton a la derecha del breadcrumb

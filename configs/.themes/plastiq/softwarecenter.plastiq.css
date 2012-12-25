@@ -1,0 +1,90 @@
+@define-color bg #2D2D2D;
+@define-color bg_a #687A94;
+@define-color bg_b #4E6E9C;
+@define-color button #616161;
+@define-color star_a #4D5A6E;
+@define-color button_border #8d8d8d;
+
+#featured-star {
+    border-color: shade(@star_a, 1.3);
+    color: shade(@star_a, 1.45);
+}
+
+.grid-lines {
+    border-color: shade (@bg_a, 1.025);
+}
+
+
+.backforward-left-button {
+    border-radius: 5 0 0 5;
+    
+}
+
+.backforward-right-button {
+    border-radius: 0 5 5 0;
+}
+
+.subtle,
+#subtle-label {
+    -GtkWidget-link-color: shade(@bg_a, 1.2);
+    -GtkWidget-visited-link-color: shade (@bg_b, 1.05);
+    color: shade (white, 0.5); /* non-link text color */
+    text-shadow: 0 1 2 darker (@bg);
+}
+
+.cellrenderer-button {
+    border-radius: 5;
+}
+
+.cellrenderer-avgrating-label {
+    color:  white;/*#706E6E;  dark gray */
+}
+
+.cellrenderer-avgrating-label:selected {
+    color: white;
+}
+
+.more-link {
+    -GtkButton-inner-border: 0;
+    -GtkButton-default-border: 0;
+    -GtkButton-default-outside-border: 0;
+    color: white;
+    background-color: shade (@bg_a, 0.925);
+    border-color: shade (@bg_b, 0.875);
+    text-shadow: 0 1 2 black;
+}
+
+.frame-header-title {
+    text-shadow: 0 1 2 black;
+}
+
+.item-view-separator {
+    border-color: shade (@bg_a, 0.9);
+    border-width: 1;
+}
+
+.section-sel-bg {
+    background-image: none;
+    background-color: alpha(@bg_a, 0.6);
+}
+
+GtkArrow:hover,
+.label-tile:hover,
+.category-tile:hover {
+    color: shade(@bg_b, 1.25);
+}
+
+.light-aubergine-bg {
+    background-color: @bg_a;
+}
+
+.super-light-aubergine-b {
+    background-color: @bg_b;
+    border-color: shade (@bg_b, 0.975)
+}
+
+GtkViewport {
+    background-color: @bg;
+    border-width: 0;
+    padding: 0;
+}

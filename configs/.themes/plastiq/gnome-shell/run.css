@@ -1,0 +1,33 @@
+/* Run Dialog */
+.run-dialog-label {
+	font-size: 9pt;
+	color: rgba(255,255,255,0.8);
+	padding-bottom: 10px;
+	text-shadow: rgba(255,255,255,0.5) 0px 1px 0px; 
+}
+
+.run-dialog-error-label {
+    font-size: 8pt;
+    color: rgba(125,125,125,0.8);
+    text-shadow: rgba(0,0,0,0.5) 0px 1px 0px; 
+}
+
+
+.run-dialog-error-box {
+    padding-top: 15px;
+    spacing: 5px;
+}
+
+.run-dialog {
+	padding: 15px;
+	background-gradient-direction: vertical;
+    background-gradient-start: rgba(25,25,25,0.8);
+    background-gradient-end: rgba(0,0,0,0.8);
+	color: #fff;
+	border: 1px solid rgba(255,255,255,0.3);
+	border-radius: 5px;
+}
+
+.lightbox {
+	background-color: rgba(0,0,0,0.3);
+}

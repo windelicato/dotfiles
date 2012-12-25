@@ -1,0 +1,14 @@
+active
+background-color: rgba(169,182,204,0.4);
+background-gradient-end: rgba(104,122,148,0.2);
+
+background-gradient-direction: vertical;
+background-gradient-start: rgba(25,25,25,0.8);
+background-gradient-end: rgba(0,0,0,0.5);
+active-text 
+#81A0D6
+
+active gradient no rgba
+background-gradient-direction: vertical;
+background-gradient-start: #A9B6CC;
+background-gradient-end: #687A94;

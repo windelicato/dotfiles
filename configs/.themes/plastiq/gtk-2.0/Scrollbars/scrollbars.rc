@@ -1,0 +1,29 @@
+style "theme-scrollbar" =  "theme-default"{
+    GtkRange::trough_border = 1
+    GtkRange::slider_width = 10
+    GtkRange::stepper_size = 10
+	
+    xthickness   = 0
+    ythickness   = 0
+    #Arrow glyph
+    text[ACTIVE] = @bg_color
+    text[PRELIGHT] = @fg_color
+    text[NORMAL] = @bg_color
+    text[INSENSITIVE] = shade (0.45, @bg_color)
+    bg[ACTIVE]   = @bg_color
+    bg[NORMAL]   = mix (0.9, @button_hover_gradient_color_b, @button_hover_gradient_color_a) #Button and lines
+    bg[PRELIGHT] = mix (0.9, @button_hover_gradient_color_b, @button_hover_gradient_color_a) #Button and lines
+    bg[INSENSITIVE] = mix (0.9, shade (0.3, @bg_color),shade (0.1, @bg_color))
+	
+	
+    engine "murrine"
+    {
+        roundness		= 20
+        border_shades   = {0.8, 0.65}
+        trough_shades	= { 1.1, 1.5 }
+        shadow_shades   = { 1.25, 0.2 }
+    }
+
+}
+
+class "GtkScrollbar"	style "theme-scrollbar"

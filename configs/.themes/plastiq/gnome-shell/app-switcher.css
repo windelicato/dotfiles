@@ -1,0 +1,90 @@
+/* App Switcher */
+#altTabPopup {
+    padding: 11px;
+    spacing: 16px;
+}
+
+.switcher-list {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(25,25,25,0.9);
+    background-gradient-end: rgba(0,0,0,0.9);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 20px;
+    text-shadow: rgba(0,0,0,0.8) 0px 1px 0px;
+    box-shadow: 0px 1px 15px 5px rgba(0,0,0,0.5);
+}
+
+.switcher-list-item-container {
+    spacing: 10px;
+}
+
+.thumbnail-scroll-gradient-left {
+	background-gradient-direction: horizontal;
+    background-gradient-start: rgba(255,255, 51, 0);
+    background-gradient-end: rgba(51, 51, 51, 1.0);
+    border-radius: 5px;
+    border-radius-topright: 0px;
+    border-radius-bottomright: 0px;
+    width: 60px;
+}
+
+.thumbnail-scroll-gradient-right {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(169,182,204,0.5);
+    background-gradient-end: rgba(104,122,148,0.2);
+    border-radius: 5px;
+    border-radius-topleft: 0px;
+    border-radius-bottomleft: 0px;
+    width: 60px;
+}
+
+.switcher-list .item-box {
+    padding: 5px;
+    border-radius: 3px;
+    color: #fff;
+    border: 1px rgba(255,255,255,0.0);
+}
+
+.switcher-list .item-box:outlined {
+    background-color: rgba(169,182,204,0.2);
+    box-shadow: inset 0 2px 3px 0 rgba(0,0,0,0.5);
+    border: 1px rgba(255,255,255,0.3);
+}
+
+.switcher-list .item-box:selected {
+     background-color: rgba(169,182,204,0.4)
+     
+}
+
+.switcher-list .thumbnail-box {
+    padding: 0px;
+    spacing: 4px;
+}
+
+.switcher-list .thumbnail {
+    width: 300px;
+}
+
+.switcher-list .separator {
+    width: 1px;
+    background-color: rgba(255,255,255,0.2);
+}
+
+.ripple-box {
+}
+
+.switcher-arrow {
+    border-color: rgba(0,0,0,0);
+    color: #808080;
+    width: 19px;
+    height: 19px;
+}
+
+.switcher-arrow:highlighted {
+    border-color: rgba(0,0,0,0);
+    color: white;
+}

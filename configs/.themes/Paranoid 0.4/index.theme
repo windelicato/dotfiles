@@ -1,0 +1,14 @@
+[Desktop Entry]
+Name=Paranoid 0.4
+Type=X-GNOME-Metatheme
+Comment=
+
+[X-GNOME-Metatheme]
+GtkTheme=Paranoid 0.4
+MetacityTheme=Paranoid 0.4
+IconTheme=ACYL_Icon_Theme_0.9.2
+GtkColorScheme=progress_color:#f2f2f2,progress_text_color:#101010
+CursorTheme=default
+CursorSize=18
+NotificationTheme=standard
+BackgroundImage=/home/monkey/Desktop/Parallels Shared Folders/Home/Pictures/Classic Wood 2560x1600.png

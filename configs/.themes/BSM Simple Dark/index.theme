@@ -1,0 +1,7 @@
+[X-GNOME-Metatheme]
+Name=BSM Simple Dark
+Encoding=UTF-8
+GtkTheme=BSM Simple Dark
+MetacityTheme=BSM Simple Dark
+IconTheme=Faenza-Darkest
+GtkColorScheme=fg_color:#D0D0D0D0D0D0,bg_color:#444444,text_color:#d0d0d0,base_color:#262626,selected_fg_color:#d0d0d0,selected_bg_color:#222222,tooltip_fg_color:#D0D0D0,tooltip_bg_color:#363636"

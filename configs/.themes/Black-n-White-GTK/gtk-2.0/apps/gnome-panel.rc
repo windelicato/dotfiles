@@ -1,0 +1,121 @@
+# ==============================================================================
+# GNOME PANEL SPECIFIC SETTINGS
+# ==============================================================================
+
+style "panel"
+{
+	xthickness = 0
+	ythickness = 0
+
+	bg_pixmap[NORMAL] = "img/panel.png"
+#	bg[NORMAL] = "#4b4a46"
+
+	engine "murrine" {
+		#contrast = 1.0
+		textstyle = 1
+		text_shade = 1.5
+	}
+}
+
+style "panel_task_button"
+{
+	xthickness = 3
+	xthickness = 3
+
+	GtkWidget::focus-line-width        = 0
+	GtkWidget::focus_padding           = 0
+	GtkWidget::interior_focus          = 0
+	GtkWidget::internal_padding        = 0
+
+	GtkButton::child_displacement_x    = 0
+	GtkButton::child_displacement_y    = 0
+	GtkButton::default_border          = {0, 0, 0, 0}
+	GtkButton::default_outside_border  = {0, 0, 0, 0}
+	GtkButtonBox::child_internal_pad_x = 0
+	GtkButtonBox::child_internal_pad_y = 0
+	GtkButtonBox::child_min_heigth     = 0
+
+	bg[SELECTED] = shade (0.2, @bg_color)
+	bg[PRELIGHT] = shade (0.26, @bg_color)
+	bg[ACTIVE] = shade (0.2, @bg_color)
+
+	engine "pixmap" {
+      
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state			= NORMAL
+			file            	= "img/panel-button-inactive.png"
+			border          	= { 1, 1, 1, 1 }
+			stretch         	= TRUE			
+		}
+		
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state			= PRELIGHT
+			file            	= "img/panel-button-hover.png"
+			border          	= { 1, 1, 1, 1 }
+			stretch         	= TRUE
+		}
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			shadow			= OUT
+			state			= PRELIGHT
+			file            	= "img/panel-button-hover.png"
+			border          	= { 1, 1, 1, 1 }
+			stretch         	= TRUE
+			
+		}
+		
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			shadow			= IN
+			state			= PRELIGHT
+			file            	= "img/panel-button-hover.png"
+			border          	= { 1, 1, 1, 1 }
+			stretch         	= TRUE
+			 
+		}
+		
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state			= ACTIVE
+			file            	= "img/panel-button-active.png"
+			border          	= { 4, 4, 4, 4 }
+			stretch         	= TRUE
+		}  
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state			= INSENSITIVE
+			file            	= "img/panel-button-inactive.png"
+			border          	= { 1, 1, 1, 1 }
+			stretch         	 = TRUE
+		}
+	}
+}
+
+#widget_class "*Panel*"            style "panel"
+widget "*PanelWidget*"            style "panel"
+widget "*PanelApplet*"            style "panel"
+widget "*fast-user-switch*"       style "panel" # workaround for Fast User Switch applet
+class "PanelApp*"                 style "panel"
+class "PanelToplevel*"            style "panel"
+#widget_class "*Mail*"             style "panel"
+widget_class "*notif*"            style "panel"
+
+#widget_class "*?anel*utton"       style "panel_task_button" # causing problems to monodevelop
+widget "*task*"                   style "panel_task_button"
+widget "*.tasklist-button"        style "panel_task_button"
+widget "*PanelApplet*TaskTitle*"  style "panel_task_button"

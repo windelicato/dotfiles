@@ -1,0 +1,145 @@
+/****************
+ * Text Entries *
+ ****************/
+.entry,
+GtkComboBox.combobox-entry .entry,
+.toolbar.entry {
+    border-width:   1px;
+    padding:        3px;
+    margin:         2px;
+    color:          @entry_text_color;
+    border-radius:  3px;
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                     from (shade (#FFF, 0.62)),
+                                            color-stop (0.50, shade (#FFF, 0.94)),
+                                            color-stop (0.90, #FFF),
+                                     to (#FFF));
+                 
+    transition: 50ms ease-in-out;
+    
+    -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (@bg_color),
+                                           to (shade (@button_border, 0.15)));
+            
+    -unico-bullet-outline-color: @button_active_border; 
+          
+                                           
+    -unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                from (alpha (#000, 0.00)),
+                                                to (alpha (shade (@bg_color, 1.75), 0.8)));
+    
+    -unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                from (alpha(@base_color, 0.5)),
+                                                to (alpha(shade (@bg_color, 1.015), 0.5)));
+    -unico-outer-stroke-width: 1;
+    -unico-inner-stroke-width: 1;
+}
+
+.entry:focused {
+    box-shadow: 0 3 6 alpha(@selected_bg_color, 0.8);
+    transition: 50ms ease-in-out;
+    
+    -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                             from (@button_active_border),
+                                             to (@selected_bg_color));
+                                                
+    -unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                from (alpha (#000, 0.3)),
+                                                to (alpha (#000, 0.5)));
+                                                
+    -unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                from (alpha (#000, 0.00)),
+                                                to (alpha (shade (@bg_color, 1.75), 0.8)));
+                        
+    -unico-glow-color: #FF00FF; /*@selected_bg_color;*/
+    -unico-glow-radius: 5;
+    
+    -unico-outer-stroke-width: 1;
+    -unico-inner-stroke-width: 1;
+}
+
+GtkComboBox.combobox-entry .entry:insensitive,
+.primary-toolbar GtkComboBox.combobox-entry .entry:insensitive,
+.entry:insensitive {
+
+    background-image: -gtk-gradient (linear, left top, left bottom,
+                                 from (shade(@menu_color, 0.9)),
+                                 to (@bg_color));
+    color:shade(@theme_text_color, 0.5);
+    
+    -unico-outer-stroke-style: solid;
+    -unico-inner-stroke-style: custom;
+    -unico-inner-stroke-width: 1px;
+    -unico-outer-stroke-width: 1px;
+    -unico-outer-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                 from (alpha (#000, 0.00)),
+                                                 to (alpha (shade (@bg_color, 1.75), 0.6)));
+    
+    -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                             from (shade (@bg_color, 0.77)),
+                                             to (shade (@bg_color, 0.84))); 
+                                             
+    -unico-inner-stroke-gradient: -gtk-gradient (linear, left top, left bottom,
+                                                from (alpha (#000, 0.10)),
+                                                to (alpha (#000, 0.06)));
+            
+
+}
+
+.entry.progressbar {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+
+    border-width: 1px;
+    border-radius: 1px;
+}
+
+.entry:selected{
+    color: @base_color;
+}
+
+/******************
+ * combobox entry *
+ ******************/
+GtkComboBox.combobox-entry .entry,
+GtkSpinButton.entry{
+    -unico-border-gradient: -gtk-gradient (linear, left top, left bottom,
+                                           from (@button_border),
+                                           to (shade (@button_border, 0.15)))
+}
+ 
+.primary-toolbar GtkComboBox.combobox-entry .entry,
+.primary-toolbar GtkComboBox.combobox-entry .entry:active,
+.primary-toolbar GtkComboBox.combobox-entry .entry:focused,
+GtkComboBox.combobox-entry .entry,
+GtkComboBox.combobox-entry .entry:active,
+GtkComboBox.combobox-entry .entry:focused{
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 3px;
+    border-width: 1px 0px 1px 1px;
+
+    -unico-outer-stroke-width: 1 0 1 1;
+    -unico-inner-stroke-width: 1 0 1 1;
+    box-shadow: 1 2 inset alpha(@theme_selected_bg_color, 0.1),
+                1 1 inset alpha(@theme_selected_bg_color, 0.1),
+                0 -1 inset alpha(@theme_selected_bg_color, 0.2);
+}
+
+.primary-toolbar GtkComboBox.combobox-entry .button,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover,
+.primary-toolbar GtkComboBox.combobox-entry .button:active,
+.primary-toolbar GtkComboBox.combobox-entry .button:insensitive,
+GtkComboBox.combobox-entry .button,
+GtkComboBox.combobox-entry .button:hover,
+GtkComboBox.combobox-entry .button:active,
+GtkComboBox.combobox-entry .button:insensitive {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-width: 1px 1px 1px 0px;
+
+    -unico-outer-stroke-width: 1 1 1 0;
+    -unico-inner-stroke-width: 1 1 1 0;
+    -unico-border-width: 1 1 1 0;
+    
+}
+

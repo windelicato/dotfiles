@@ -1,0 +1,341 @@
+/* Message Tray */
+#message-tray {
+    height: 25px;
+}
+
+.summary-boxpointer #notification{
+    border: 0;
+    background-color: rgba(0,0,0,0) !important;
+    padding-bottom: 12px;
+}
+
+#notification {
+    border: 1px solid rgba(255,255,255,0.4);
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(25,25,25,0.9);
+    background-gradient-end: rgba(0,0,0,0.9);
+    color: rgba(255,255,255,0.9);
+    border-bottom: 0px;
+    border-radius: 5px 5px 0px 0px;
+    font-size: 8.7pt;
+    padding: 8px 40px 15px 15px;
+    spacing-columns: 10px;
+    spacing-rows: 10px;
+    width: 350px;
+    box-shadow: 0px -1px 15px 5px rgba(0,0,0,0.5);
+}
+
+#notification.multi-line-notification {
+    padding-bottom: 8px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(25,25,25,0.9);
+    background-gradient-end: rgba(0,0,0,0.9);
+}
+
+/* We use row-span = 2 for the image cell, which prevents its height preferences to be
+   taken into account during allocation, so its height ends up being limited by the height
+   of the content in the other rows. To avoid showing a stretched image, we set the minimum
+   height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 = 159 */
+.notification-with-image {
+    min-height: 159px;
+}
+
+.summary-boxpointer {
+    -arrow-border-radius: 5px;
+    -arrow-background-color: rgba(0,0,0,0.9);
+    -arrow-border-width: 1px;
+    -arrow-border-color: rgba(255,255,255,0.5);
+    -arrow-base: 15px;
+    -arrow-rise: 7px;
+    padding: 2px 7px 0px 7px;
+}
+
+.summary-boxpointer #notification{
+    border: 0;
+    background-gradient-direction: vertical;
+    background-gradient-start: transparent;
+    background-gradient-end: transparent;
+    padding-bottom: 12px;
+}
+
+.summary-boxpointer #summary-right-click-menu {
+
+    color: rgba(0,0,0,0.8);
+    font-size: 8.7pt;
+}
+
+
+#summary-notification-stack-scrollview {
+    max-height: 18em;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#summary-notification-stack-scrollview > .top-shadow, #summary-notification-stack-scrollview > .bottom-shadow {
+    height: 1em;
+}
+
+#summary-notification-stack-scrollview:ltr {
+    padding-right: 8px;
+}
+
+#summary-notification-stack-scrollview:rtl {
+    padding-left: 8px;
+}
+
+#notification-scrollview {
+    max-height: 10em;
+}
+
+#notification-scrollview > .top-shadow, #notification-scrollview > .bottom-shadow {
+    height: 1em;
+}
+
+#notification-scrollview:ltr > StScrollBar {
+    padding-left: 6px;
+}
+
+#notification-scrollview:rtl > StScrollBar {
+    padding-right: 6px;
+}
+
+#notification-body {
+    spacing: 5px;
+}
+
+#notification-actions {
+    spacing: 10px;
+}
+
+.notification-button {
+    border-radius: 5px;
+    padding: 4px 30px 5px;
+}
+
+.notification-button:focus {
+    border: 1px rgba(0,0,0,0.7);
+}
+
+.notification-icon-button {
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.notification-icon-button:focus {
+    padding: 4px;
+}
+
+.notification-icon-button > StIcon {
+    icon-size: 36px;
+}
+
+/*Hotplug*/
+
+
+.hotplug-transient-box {
+    spacing: 8px;
+    padding: 2px;
+}
+
+.hotplug-notification-item {
+    padding: 2px 5px;
+    font-size: 9pt;
+    
+}
+
+.hotplug-notification-item:focus {
+}
+
+.hotplug-notification-item-icon {
+    icon-size: 16px;
+    padding: 2px 5px;
+}
+
+.hotplug-resident-box {
+    spacing: 8px;
+}
+
+.hotplug-resident-mount {
+    spacing: 8px;
+    padding: 3px;
+}
+
+.hotplug-resident-mount:hover {
+    color: #fff;
+    border: 1px  rgba(250,0,250,0.5);
+    background-color: #95A8C5;
+    box-shadow: inset 0px 1px 0px rgba(255,255,255,0.4);
+    text-shadow: rgba(0,0,0,0.4) 0px 1px 0px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.3);
+    padding: 2px;    
+}
+
+.hotplug-resident-mount-label {
+    color: #fff;
+    font-size: 8.7pt;
+    font-weight: bold;
+    padding: 0.1em .5em;
+}
+
+.hotplug-resident-mount-icon {
+    icon-size: 16px;
+    padding-left: 3px;
+}
+
+.hotplug-resident-eject-icon {
+    icon-size: 16px;
+    text-shadow: #00 0px -1px 0px;
+}
+
+.hotplug-resident-eject-button {
+    padding: 3px;
+    color: #fff;
+    border-radius: 35px;
+    text-shadow: rgba(0,0,0,0.9) 0px 1px 1px;
+}
+
+/*Chat*/
+.chat-log-message {
+    color: #888888;
+}
+
+.chat-group-sent, .chat-group-meta {
+    padding: 8px 0;
+}
+
+
+.chat-received:rtl {
+    padding-left: 0px;
+    padding-right: 4px;
+}
+
+
+.chat-received:ltr {
+    padding-left: 0px;
+    padding-right: 4px;
+}
+
+.chat-sent:ltr {
+    padding-left: 18pt;
+    border-radius: 4px;
+    color: #7E7E7E;
+}
+
+.chat-sent:rtl {
+    padding-left: 0px;
+    padding-right: 18pt;
+}
+
+.chat-meta-message {
+    padding-left: 4px;
+    border-radius: 4px;
+    font-size: 8pt;
+    color: rgba(255,255,255,0.4);
+}
+
+
+.chat-meta-message:rtl {
+    padding-left: 0px;
+    padding-right: 4px;
+}
+
+.subscription-message {
+    font-style: italic;
+}
+
+
+/* The spacing and padding on the summary is tricky; we want to keep
+ * the icons from touching each other or the edges of the screen, but
+ * we also want them to be "Fitts"-y with respect to the edges, so the
+ * summary area's bottom and right padding must actually be part of
+ * the icons. However, we can't put *all* of the padding into the
+ * icons, because then the summary would be 0x0 when there were no
+ * icons in it, and so you wouldn't be able to hover over it to
+ * activate it.
+ *
+ * Also, the spacing between a summary-source's icon and title is
+ * actually specified as padding-left in source-title, because we
+ * want the spacing to collapse along with the title.
+ */
+#summary-mode {
+    padding: 1px 5px 0px 5px;
+    height: 2.5em;
+    background-gradient-direction: vertical;
+    background-gradient-end: rgba(0,0,0,0.9);
+	background-gradient-start: rgba(25,25,25,0.9);
+    border-radius: 5px 0 0 0 ;
+    border: rgba(255,255,255,0.35);
+    border-left: 1px;
+    border-top: 1px;
+    border-right: 0;
+    border-bottom: 0;
+    box-shadow: 0px -1px 15px 5px rgba(0,0,0,0.5);
+}
+
+#summary-mode:rtl {
+    padding: 2px 4px 0px 0px;
+}
+
+.summary-source-button {
+    text-shadow: black 0px 1px 0px;
+}
+
+.summary-source-button:ltr {
+    padding-right: 12px;
+}
+
+.summary-source-button:selected .summary-source {
+    text-shadow: rgba(0,0,0,0.5) 0px -1px 0;
+    background-gradient-direction: vertical;
+	background-gradient-start: #A9B6CC;
+	background-gradient-end: #687A94;
+    box-shadow: inset 0px 1px 2px 0px rgba(0,0,0,0.7);
+    color: #fff;
+}
+
+.summary-source-button:expanded:selected .summary-source {
+    background-image: none;
+    border-image: none;
+}
+
+.summary-source-button:expanded:selected {
+}
+
+.summary-source-button:rtl {
+    padding-left: 12px;
+}
+
+.summary-source-button:last-child:ltr {
+    padding-right: 12px;
+}
+
+.summary-source-button:last-child:rtl {
+    padding-left: 12px;
+}
+
+.summary-source { /*Controls the icons at the bottom right*/
+    color: rgba(255,255,255,0.9);
+    padding: 0px 5px 7px;
+
+}
+.summary-source-counter {
+    color: white;
+    background-color: #95A8C5;
+    text-shadow: black 1px 1px 0;
+    font-size: 9pt;
+    border-radius: 1em;
+    min-height: 1em;
+    min-width: 1em;
+}
+
+.source-title {
+    font-size: 9pt;
+    font-weight: bold;
+    padding-left: 4px;
+}
+
+.source-title:rtl {
+    padding-left: 0px;
+    padding-right: 4px;
+}

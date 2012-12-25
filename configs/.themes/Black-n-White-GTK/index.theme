@@ -1,0 +1,10 @@
+[X-GNOME-Metatheme]
+Name=Black-n-White-GTK
+Type=X-GNOME-Metatheme
+Comment=There is only one
+Encoding=UTF-8
+GtkTheme=Black-n-White-GTK
+MetacityTheme=Black-n-White-GTK
+IconTheme=gnome
+CursorTheme=DMZ-White
+CursorSize=24

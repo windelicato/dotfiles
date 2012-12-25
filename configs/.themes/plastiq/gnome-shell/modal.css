@@ -1,0 +1,25 @@
+/* Modal Dialogs */
+.modal-dialog {
+    padding: 10px 20px 10px 20px;
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(25,25,25,0.9);
+    background-gradient-end: rgba(0,0,0,0.9);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    text-shadow: rgba(0,0,0,0.8) 0px 1px 0px;
+    padding: 10px 20px 10px 20px;
+    box-shadow: 0px 1px 15px 5px rgba(0,0,0,0.5);
+}
+
+.modal-dialog-button-box {
+    spacing: 50px;
+}
+
+.modal-dialog-button{
+}
+
+.modal-dialog-button:disabled {
+    color: rgb(60, 60, 60);
+}

@@ -1,0 +1,384 @@
+<?xml version="1.0"?>
+<metacity_theme>
+<info>
+  <name>Black-Diamond</name>
+  <author>Amit Mendapara, Jiiprah</author>
+  <copyright>none</copyright>
+  <date>June 2009</date>
+  <description>Black-Diamond metacity, based on Humanoid-OSX metacity, originaly modded by Jiiprah
+  </description>
+</info>
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!--  DEFINE THE FRAME GEOMETRIES HERE -->
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+<frame_geometry name="normal" rounded_top_left="true" rounded_bottom_left="true" rounded_top_right="true" rounded_bottom_right="true">
+  <distance name="left_width" value="2"/>
+  <distance name="right_width" value="2"/>
+  <distance name="bottom_height" value="2"/>
+  <distance name="left_titlebar_edge" value="6"/>
+  <distance name="right_titlebar_edge" value="3"/>
+  <distance name="button_width" value="21"/>
+  <distance name="button_height" value="21"/>
+  <distance name="title_vertical_pad" value="6"/>
+  <border name="title_border" left="1" right="1" top="2" bottom="2"/>
+  <border name="button_border" left="0" right="1" top="0" bottom="0"/>
+</frame_geometry>
+
+<!-- The normal geometry w/ border thicknesses set to zero -->
+<frame_geometry name="normal_small_borders" parent="normal">
+  <distance name="left_width" value="0"/>
+  <distance name="right_width" value="0"/>
+  <distance name="bottom_height" value="0"/>
+  <distance name="left_titlebar_edge" value="0"/>
+  <distance name="right_titlebar_edge" value="0"/>
+</frame_geometry>
+
+<!-- Utility windows (palettes, etc) have the same geometry as normal windows -->
+<frame_geometry name="utility" title_scale="small" parent="normal"/>
+
+<frame_geometry name="border" has_title="false">
+  <distance name="left_width" value="2"/>
+  <distance name="right_width" value="2"/>
+  <distance name="bottom_height" value="2"/>
+  <distance name="left_titlebar_edge" value="0"/>
+  <distance name="right_titlebar_edge" value="0"/>
+  <distance name="button_width" value="0"/>
+  <distance name="button_height" value="0"/>
+  <distance name="title_vertical_pad" value="4"/>
+  <border name="title_border" left="0" right="0" top="0" bottom="0"/>
+  <border name="button_border" left="0" right="0" top="0" bottom="0"/>
+</frame_geometry>
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!-- Define constants that can be used later     -->
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+<constant name="ThickLineWidth" value="3"/>
+<constant name="IconTitleSpacing" value="6"/>
+
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!-- Begin Defining Drawing Operations           -->
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+<!-- First we define how to draw buttons For each button we specify
+       draw_ops for the normal, prelight(hover), and pressed states.-->
+
+<!-- The Menu Button -->
+<draw_ops name="menu_button">
+  <image filename="menu-button.png" x="0" y="0" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="menu_button_prelight">
+  <image filename="menu-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="menu_button_pressed">
+  <image filename="menu-button-pressed.png" x="0" y="0" width="object_width" height="object_height"/>
+</draw_ops>
+
+<!-- The Minimize Button --> 
+<draw_ops name="minimize_button">
+  <image filename="button-min.png" x="0" y="0" width="object_width" height="object_height" colorize="gtk:bg[SELECTED]" />
+</draw_ops>
+
+<draw_ops name="minimize_button_prelight">
+  <image filename="button-min-focus.png" x="0" y="0" width="object_width" height="object_height" colorize="shade/gtk:bg[SELECTED]/1.2" />
+</draw_ops>
+
+<draw_ops name="minimize_button_pressed">
+  <include name="minimize_button"/>
+</draw_ops>
+
+<!-- The Maximize Button -->
+<draw_ops name="maximize_button">
+  <image filename="button-max.png" x="0" y="0" width="object_width" height="object_height" colorize="gtk:bg[SELECTED]" />
+</draw_ops>
+
+<draw_ops name="maximize_button_prelight">
+  <image filename="button-max-focus.png" x="0" y="0" width="object_width" height="object_height" colorize="shade/gtk:bg[SELECTED]/1.2" />
+</draw_ops>
+
+<draw_ops name="maximize_button_pressed">
+  <include name="maximize_button"/>
+</draw_ops>
+
+<!-- The Restore Button -->
+<draw_ops name="restore_button">
+  <image filename="button-max.png" x="0" y="0" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="restore_button_prelight">
+  <image filename="button-max-focus.png" x="0" y="0" width="object_width" height="object_height"/>
+</draw_ops>
+
+<draw_ops name="restore_button_pressed">
+  <include name="restore_button"/>
+</draw_ops>
+
+<!-- The Close Button -->
+<draw_ops name="close_button">
+  <image filename="button-close.png" x="0" y="0" width="object_width" height="object_height" colorize="gtk:bg[SELECTED]" />
+</draw_ops>
+
+<draw_ops name="close_button_prelight">
+  <image filename="button-close-focus.png" x="0" y="0" width="object_width" height="object_height" colorize="shade/gtk:bg[SELECTED]/1.2" />
+</draw_ops>
+
+<draw_ops name="close_button_pressed">
+  <include name="close_button"/>
+</draw_ops>
+
+<!-- Inactive version of close, min, max, and restore -->
+<draw_ops name="inactive_button">
+  <image filename="button-inactive.png" x="0" y="0" width="object_width" height="object_height"/>
+</draw_ops>
+
+<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!-- Define Drawing Operations for the Window Frames -->
+<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+<!-- A draw_op that draws nothing -->
+<draw_ops name="blank">
+<!-- nothing -->
+</draw_ops>
+
+<!-- This draws the background for the windows. It sets up a dark grey outline, a lighter gray frame with a gradient at the top,
+	a window base color the same as the gtk:light[NORMAL] color, and a dark gray interior outline surrounding the "window base"
+        that applications use.-->
+<draw_ops name="background">
+   <!-- First we draw a filled rectangle set to the window frame color (cbcbcb).-->
+   <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" height="height" filled="true"/>
+   <!-- Now we draw the dark gray outline along the outer edge of the window. Note that, since the origin of the window 
+	  (the upper left corner 7474747) is (x,y)=(0,0), the lower right corner is (x,y)=(width-1,height-1). -->
+   <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width-1" height="height-1" filled="false"/>
+   <!-- The "window base", the background that gtk2 draws things on, is drawn as a filled rectangle.-->
+   <rectangle color="gtk:bg[NORMAL]" x="left_width-1" y="top_height-1" 
+	width="width-left_width-right_width+2" height="height-top_height-bottom_height" filled="true"/>
+   <!-- Draw a dark gray outline along the outside of the rectangle we just drew-->
+   <rectangle color="gtk:bg[NORMAL]"
+             x="left_width-1" y="top_height-1"
+             width="width-left_width-right_width+1"
+             height="height-top_height-bottom_height+1"/>
+    <!-- Draw the gradient on the title bar (top of the window) instead of using an image, on the off chance
+	   that using metacity's built in drawing commands is faster/more efficient.--> 
+    <gradient type="vertical" x="1" y="1" width="width-3" height="top_height-5">
+	<color value="gtk:bg[NORMAL]"/>
+	<color value="gtk:bg[NORMAL]"/>
+    </gradient>
+    <!-- This is a not-so-elegant way of drawing the dark gray outline along the rounded window corners. This could look
+           much nicer, especially the upper right hand corner, unless its just an artifact of my laptop screen. Also, all of
+	   the endpoints for the various lines shoule be defined in terms of the window geometry (i.e. right_width, etc..) -->
+    <line color="gtk:bg[NORMAL]" x1="0" y1="5" x2="2" y2="2"/>
+    <line color="gtk:bg[NORMAL]" x1="2" y1="2" x2="5" y2="0"/>
+
+    <line color="gtk:bg[NORMAL]" x1="width-right_width" y1="5" x2="width-right_width" y2="2"/>
+    <line color="gtk:bg[NORMAL]" x1="width-right_width-1" y1="2" x2="width-right_width-5" y2="0"/>
+
+    <line color="gtk:bg[NORMAL]" x1="width-right_width" y1="0" x2="width-right_width+3" y2="2"/>
+    <line color="gtk:bg[NORMAL]" x1="width-right_width+3" y1="2" x2="width" y2="5"/>
+    <line color="gtk:bg[NORMAL]" x1="0" y1="height-bottom_height" x2="2" y2="height-bottom_height+3"/>
+    <line color="gtk:bg[NORMAL]" x1="2" y1="height-bottom_height+3" x2="5" y2="height-1"/>
+    <line color="gtk:bg[NORMAL]" x1="width-1" y1="height-bottom_height" x2="width-3" y2="height-bottom_height+3"/>
+    <line color="gtk:bg[NORMAL]" x1="width-3" y1="height-bottom_height+3" x2="width-6" y2="height-1"/>
+
+</draw_ops>
+
+<!-- This draws the background for the unfocused windows. It is a copy of the above only with a titlebar that blends with the gtk theme - is there a more elegang way to do this?-->
+<draw_ops name="background_unfocused">
+   <!-- First we draw a filled rectangle set to the window frame color (cbcbcb).-->
+   <rectangle color="gtk:bg[NORMAL]" x="0" y="0" width="width" height="height" filled="true"/>
+   <!-- Now we draw the dark gray outline along the outer edge of the window. Note that, since the origin of the window 
+	  (the upper left corner 7474747) is (x,y)=(0,0), the lower right corner is (x,y)=(width-1,height-1). -->
+   <rectangle color="shade/gtk:bg[NORMAL]/0.5" x="0" y="0" width="width-1" height="height-1" filled="false"/>
+   <!-- The "window base", the background that gtk2 draws things on, is drawn as a filled rectangle.-->
+   <rectangle color="gtk:light[NORMAL]" x="left_width-1" y="top_height-1" 
+	width="width-left_width-right_width+2" height="height-top_height-bottom_height" filled="true"/>
+   <!-- Draw a dark gray outline along the outside of the rectangle we just drew-->
+   <rectangle color="gtk:bg[NORMAL]"
+             x="left_width-1" y="top_height-1"
+             width="width-left_width-right_width+1"
+             height="height-top_height-bottom_height+1"/>
+    <!-- Draw the gradient on the title bar (top of the window) instead of using an image, on the off chance
+	   that using metacity's built in drawing commands is faster/more efficient.--> 
+    <gradient type="vertical" x="1" y="1" width="width-2" height="top_height-1">
+	<color value="shade/gtk:bg[NORMAL]/1.2"/>
+	<color value="shade/gtk:bg[NORMAL]/1.0"/>
+    </gradient>
+    <!-- This is a not-so-elegant way of drawing the dark gray outline along the rounded window corners. This could look
+           much nicer, especially the upper right hand corner, unless its just an artifact of my laptop screen. Also, all of
+	   the endpoints for the various lines shoule be defined in terms of the window geometry (i.e. right_width, etc..) -->
+    <line color="shade/gtk:bg[NORMAL]/0.5" x1="0" y1="5" x2="2" y2="2"/>
+    <line color="shade/gtk:bg[NORMAL]/0.5" x1="2" y1="2" x2="5" y2="0"/>
+
+    <line color="shade/gtk:bg[NORMAL]/0.5" x1="width-right_width" y1="5" x2="width-right_width" y2="2"/>
+    <line color="shade/gtk:bg[NORMAL]/0.5" x1="width-right_width-1" y1="2" x2="width-right_width-5" y2="0"/>
+
+    <line color="shade/gtk:bg[NORMAL]/0.5" x1="width-right_width" y1="0" x2="width-right_width+3" y2="2"/>
+    <line color="shade/gtk:bg[NORMAL]/0.5" x1="width-right_width+3" y1="2" x2="width" y2="5"/>
+    <line color="shade/gtk:bg[NORMAL]/0.5" x1="0" y1="height-bottom_height" x2="2" y2="height-bottom_height+3"/>
+    <line color="shade/gtk:bg[NORMAL]/0.5" x1="2" y1="height-bottom_height+3" x2="5" y2="height-1"/>
+    <line color="shade/gtk:bg[NORMAL]/0.5" x1="width-1" y1="height-bottom_height" x2="width-3" y2="height-bottom_height+3"/>
+    <line color="shade/gtk:bg[NORMAL]/0.5" x1="width-3" y1="height-bottom_height+3" x2="width-6" y2="height-1"/>
+
+</draw_ops>
+<!-- Now we set up draw_ops for drawing the title text in different window types -->
+
+<!-- This is for drawing the title text in a focused window. We draw the title twice; one in medium gray
+       and then again in black to give a slight shadow effect. If it looks bad, simply remove the first <title/>
+       operation. The title is centered in the window, as opposed to centered in the title area. -->
+<draw_ops name="title_text_focused">
+  <clip x="0" y="0" width="width" height="height"/>
+  <!-- <title color="#9f9f9f"
+         x="(width - title_width) / 2+1" y="(height - title_height) / 2+1"/> -->
+  <title color="gtk:fg[NORMAL]"
+         x="(width - title_width) / 2" y="(height - title_height) / 2"/>
+</draw_ops>
+
+ <!-- This draws the title text in background (unfocused) windows. -->
+<draw_ops name="title_text">
+  <clip x="0" y="0" width="width" height="height"/>
+  <title color="blend/gtk:fg[NORMAL]/gtk:bg[NORMAL]/1.2"
+         x="(width - title_width) / 2" y="(height - title_height) / 2"/>
+</draw_ops>
+
+<!-- Set up draw_ops for drawing the actual title. These could be more involved,
+       but right now we just include the draw_ops we just defined for drawing the 
+       title text in the titlebar. -->
+
+<draw_ops name="title_normal">
+  <include name="title_text"/>
+</draw_ops>
+
+<draw_ops name="title_focused">
+  <include name="title_text_focused"/>
+</draw_ops>
+
+<draw_ops name="title_utility">
+  <include name="title_text"/>
+</draw_ops>
+
+<draw_ops name="title_utility_focused">
+  <include name="title_text_focused"/>
+</draw_ops>
+
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+<!--   Define how to use the draw_ops to draw the window frames.-->
+<!-- ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+
+<!-- First we set up normal, focused windows. They use the normal window
+       geometry. -->
+<frame_style name="normal_focused" geometry="normal">
+  <piece position="entire_background" draw_ops="background"/>
+  <piece position="title" draw_ops="title_focused"/>
+
+<!-- Use the button definitions we made earlier, telling metacity how to draw
+       buttons in normal, prelight, and pressed states. Any undefined state
+       defautls to the normal style. -->
+  <button function="close" state="normal" draw_ops="close_button"/>
+  <button function="close" state="prelight" draw_ops="close_button_prelight"/>
+  <button function="close" state="pressed" draw_ops="close_button_pressed"/>
+  <button function="minimize" state="normal" draw_ops="minimize_button"/>
+  <button function="minimize" state="prelight" draw_ops="minimize_button_prelight"/>
+  <button function="minimize" state="pressed" draw_ops="minimize_button_pressed"/>
+  <button function="maximize" state="normal" draw_ops="maximize_button"/>
+  <button function="maximize" state="prelight" draw_ops="maximize_button_prelight"/>
+  <button function="maximize" state="pressed" draw_ops="maximize_button_pressed"/>
+  <button function="menu" state="normal" draw_ops="menu_button"/>
+  <button function="menu" state="prelight" draw_ops="menu_button_prelight"/>
+  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+</frame_style>
+
+<!-- This sets up background (unfocused) windows. They have grayed out title text 
+       and their buttons are drawn in the inactive style. -->
+<frame_style name="normal_unfocused" geometry="normal">
+  <piece position="entire_background" draw_ops="background_unfocused"/>
+  <piece position="title" draw_ops="title_normal"/>
+
+<!-- Even though buttons are drawn as inactive, we define pressed states since you
+       can press a button on a window when it is unfocused. Depending on the button, 
+       the window may or may not change focus before the mouse button is released.-->
+  <button function="close" state="normal" draw_ops="inactive_button"/>
+  <button function="close" state="pressed" draw_ops="close_button_pressed"/>
+  <button function="minimize" state="normal" draw_ops="inactive_button"/>
+  <button function="minimize" state="pressed" draw_ops="minimize_button_pressed"/>
+  <button function="maximize" state="normal" draw_ops="inactive_button"/>
+  <button function="maximize" state="pressed" draw_ops="maximize_button_pressed"/>
+  <button function="menu" state="normal" draw_ops="menu_button"/>
+  <button function="menu" state="pressed" draw_ops="menu_button_pressed"/>
+</frame_style>
+
+<!-- Frame style for a window that is "rolled up" (windowshade or shaded mode). This
+       needs fixing, as the outlines on the bottom corners are not drawn correctly. -->
+<frame_style name="shaded_focused" geometry="normal" parent="normal_focused">
+  <piece position="title" draw_ops="title_focused"/>
+</frame_style>
+
+<frame_style name="maximized_unfocused" geometry="normal_small_borders" parent="normal_unfocused">
+  <piece position="entire_background" draw_ops="blank"/>
+</frame_style>
+
+<frame_style name="maximized_focused" geometry="normal_small_borders" parent="normal_focused">
+</frame_style>
+
+<frame_style name="utility_unfocused" geometry="utility" parent="normal_unfocused">
+  <piece position="title" draw_ops="title_utility"/>
+</frame_style>
+
+<frame_style name="utility_focused" geometry="utility" parent="normal_focused">
+  <piece position="title" draw_ops="title_utility_focused"/>
+</frame_style>
+
+<frame_style name="border" geometry="border" parent="normal_unfocused">
+  <piece position="entire_background" draw_ops="background"/>
+  <piece position="title" draw_ops="blank"/>
+</frame_style>
+
+<frame_style_set name="normal">
+<frame focus="yes" state="normal" resize="both" style="normal_focused"/>
+<frame focus="no" state="normal" resize="both" style="normal_unfocused"/>
+<frame focus="yes" state="maximized" style="maximized_focused"/>
+<frame focus="no" state="maximized" style="maximized_unfocused"/>
+<frame focus="yes" state="shaded" style="shaded_focused"/>
+<frame focus="no" state="shaded" style="normal_unfocused"/>
+<frame focus="yes" state="maximized_and_shaded" style="maximized_focused"/>
+<frame focus="no" state="maximized_and_shaded" style="maximized_unfocused"/>
+</frame_style_set>
+
+<frame_style_set name="utility" parent="normal">
+<frame focus="yes" state="normal" resize="both" style="utility_focused"/>
+<frame focus="no" state="normal" resize="both" style="utility_unfocused"/>
+<frame focus="yes" state="maximized" style="utility_focused"/>
+<frame focus="no" state="maximized" style="utility_unfocused"/>
+<frame focus="yes" state="shaded" style="utility_focused"/>
+<frame focus="no" state="shaded" style="utility_unfocused"/>
+<frame focus="yes" state="maximized_and_shaded" style="utility_focused"/>
+<frame focus="no" state="maximized_and_shaded" style="utility_unfocused"/>
+</frame_style_set>
+
+<frame_style_set name="border" parent="normal">
+<frame focus="yes" state="normal" resize="both" style="border"/>
+<frame focus="no" state="normal" resize="both" style="border"/>
+<frame focus="yes" state="maximized" style="utility_focused"/>
+<frame focus="no" state="maximized" style="utility_unfocused"/>
+<frame focus="yes" state="shaded" style="utility_focused"/>
+<frame focus="no" state="shaded" style="utility_unfocused"/>
+<frame focus="yes" state="maximized_and_shaded" style="utility_focused"/>
+<frame focus="no" state="maximized_and_shaded" style="utility_unfocused"/>
+</frame_style_set>
+
+<window type="normal" style_set="normal"/>
+<window type="dialog" style_set="normal"/>
+<window type="modal_dialog" style_set="normal"/>
+<window type="menu" style_set="normal"/>
+<window type="utility" style_set="utility"/>
+<window type="border" style_set="border"/>
+
+<menu_icon function="close" state="normal" draw_ops="close_button"/>
+<menu_icon function="maximize" state="normal" draw_ops="maximize_button"/>
+<menu_icon function="unmaximize" state="normal" draw_ops="restore_button"/>
+<menu_icon function="minimize" state="normal" draw_ops="minimize_button"/>
+
+</metacity_theme>

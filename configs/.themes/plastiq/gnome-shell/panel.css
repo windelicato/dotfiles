@@ -1,0 +1,188 @@
+
+/* Panel */
+
+#panel {
+	background-gradient-direction: vertical;
+    background-gradient-end: rgba(0,0,0,0.6);
+	background-gradient-start: rgba(25,25,25,0.6);
+    color: #fff;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    height: 1.9em;
+    box-shadow: 0px 1px 7px 5px #000;
+    font-size: 9pt;
+}
+
+#panelLeft, #panelCenter, #panelRight {
+    spacing: 2px;
+    font-weight: bold;
+}
+
+#panelLeft:ltr {
+    padding-right: 4px;
+}
+
+#panelLeft:rtl {
+    padding-left: 4px;
+}
+
+#panelRight:ltr {
+    padding-left: 4px;
+}
+
+#panelRight:rtl {
+    padding-right: 4px;
+}
+
+.panel-corner {
+}
+
+.panel-corner:active,
+.panel-corner:overview,
+.panel-corner:focus {
+}
+
+
+#appMenu {
+    spacing: 2px;
+    color: rgba(255,255,255,0.98);
+/*  padding: 3px 8px 3px 8px;*/
+/*  border: 1px  rgba(0,0,0,0.5);*/
+/*  background-color: #222222;*/
+/*  border-radius: 3px;*/
+/*  box-shadow:  0px 1px 0px 0px rgba(255,255,255,0.15);*/
+}
+
+#appMenu .popup-menu-item:hover{
+	border-radius: 5px;
+}
+
+.panel-button > StIcon {
+    icon-size: 16px; /* Tray icon size */
+    padding: 1px 0px 1px 0px;
+}
+
+.panel-button #appMenuIcon {
+    width: 0px;
+    height: 0px;
+}
+
+.panel-button:active #appMenuIcon,
+.panel-button:checked #appMenuIcon,
+.panel-button:focus #appMenuIcon {
+
+}
+
+.app-menu-icon {
+    /*  width: 16px;
+    height: 16px;*/
+}
+
+.panel-button {
+    -natural-hpadding: 12px;
+    -minimum-hpadding: 2px;
+    transition-duration: 0;
+}
+
+.panel-button:hover {
+    text-shadow: rgba(25,25,25,0.6) 0px -1px 3px;
+}
+
+.panel-button:active,
+.panel-button:overview,
+.panel-button:focus {
+    background-gradient-direction: vertical;
+	background-gradient-start: #A9B6CC;
+    background-gradient-end: #687A94;
+    color: #fff;
+    text-shadow: rgba(0,0,0,0.2) -1px -1px 0px;
+}
+
+.panel-status-button:active,
+.panel-status-button:checked,
+.panel-status-button:focus {
+}
+
+.panel-button:active > .system-status-icon,
+.panel-button:checked > .system-status-icon,
+.panel-button:focus > .system-status-icon {
+    icon-shadow: rgba{0,0,0,0.8} 0px -1px 0px;
+}
+
+.panel-menu {
+    -boxpointer-gap: 2px
+}
+
+#panelUserMenu {
+    spacing: 4px;
+}
+
+/*Status*/
+
+.status-chooser {
+    spacing: .4em;
+}
+
+.status-chooser .popup-menu-item { 
+    border-radius: 5px;
+    padding: .4em;
+    font-weight: normal;
+    
+}
+.status-chooser-combo .popup-menu-item {
+    padding: .4em;
+    border-radius: 0px;
+}
+
+
+.status-chooser-combo .popup-menu-item:first-child {
+    padding: .4em;
+    border-radius: 5px 5px 0 0;
+}
+
+.status-chooser-combo .popup-menu-item:last-child {
+    padding: .4em;
+    border-radius: 0 0 5px 5px;
+}
+
+.status-chooser-user-icon {
+    border: 1px solid #8b8b8b;
+    border-radius: 5px;
+    width: 48pt;
+    height: 48pt;
+}
+
+.status-chooser-user-icon:hover {
+    border: 1px solid #bbbbbb;
+}
+
+.status-chooser-user-name {
+    font-weight: bold;
+    font-size: 1.7em;
+    min-width: 120pt;
+}
+
+.status-chooser-combo {
+    border: 1px solid transparent;
+
+}
+
+.status-chooser-combo.popup-combo-menu {
+    background-color: rgba(0,0,0,0.98);
+    padding: 0em 0em;
+    border-radius: 5px;
+    border: 1px solid #5f5f5f;
+    color: #fff;
+
+}
+
+.status-chooser-status-item,
+.status-chooser-combo .popup-combobox-item {
+    spacing: .4em;
+    color: #fff;
+}
+
+.system-status-icon {
+    icon-size: 1.14em;
+}

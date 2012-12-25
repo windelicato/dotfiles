@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.0"
+   width="24"
+   height="24"
+   id="svg3231">
+  <defs
+     id="defs3233">
+    <linearGradient
+       id="linearGradient3587-6-5">
+      <stop
+         id="stop3589-9-2"
+         style="stop-color:#000000;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3591-7-4"
+         style="stop-color:#363636;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="-11.031802"
+       y1="3.1818178"
+       x2="-11.031802"
+       y2="22.2353"
+       id="linearGradient3225"
+       xlink:href="#linearGradient3587-6-5"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(23.931923,-1.1818178)" />
+  </defs>
+  <g
+     id="layer1">
+    <path
+       d="M 3,3 L 3,22 L 10,22 L 10,3 L 3,3 z M 14,3 L 14,22 L 21,22 L 21,3 L 14,3 z"
+       id="path3227"
+       style="opacity:0.6;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <path
+       d="M 3,2 L 3,21 L 10,21 L 10,2 L 3,2 z M 14,2 L 14,21 L 21,21 L 21,2 L 14,2 z"
+       id="path2645"
+       style="opacity:0.7;fill:url(#linearGradient3225);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;marker:none;marker-start:none;marker-mid:none;marker-end:none;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+  </g>
+</svg>

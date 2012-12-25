@@ -1,0 +1,282 @@
+/*************************
+ * Check and Radio items *
+ *************************/
+
+/* draw regular check and radio items using our SVG assets */
+.check,
+.check row:selected,
+.check row:selected:focused {
+    background-image: url("assets/checkbox-unchecked.svg");
+}
+
+.check:insensitive,
+.check row:selected:insensitive,
+.check row:selected:focused:insensitive {
+    background-image: url("assets/checkbox-unchecked-insensitive.svg");
+}
+
+.check:active,
+.check row:selected:active,
+.check row:selected:focused:active {
+    background-image: url("assets/checkbox-checked.svg");
+}
+
+.check:active:insensitive,
+.check row:selected:active:insensitive,
+.check row:selected:focused:active:insensitive
+{
+    background-image: url("assets/checkbox-checked-insensitive.svg");
+}
+
+.check:inconsistent,
+.check row:selected:inconsistent,
+.check row:selected:focused:inconsistent {
+    background-image: url("assets/checkbox-mixed.svg");
+}
+
+.check:inconsistent:insensitive,
+.check row:selected:inconsistent:insensitive,
+.check row:selected:focused:inconsistent:insensitive {
+    background-image: url("assets/checkbox-mixed-insensitive.svg");
+}
+
+.radio,
+.radio row:selected,
+.radio row:selected:focused {
+    background-image: url("assets/radio-unselected.svg");
+}
+
+.radio:insensitive,
+.radio row:selected:insensitive,
+.radio row:selected:focused:insensitive {
+    background-image: url("assets/radio-unselected-insensitive.svg");
+}
+
+.radio:active,
+.radio row:selected:active,
+.radio row:selected:focused:active {
+    background-image: url("assets/radio-selected.svg");
+}
+
+.radio:active:insensitive,
+.radio row:selected:active:insensitive,
+.radio row:selected:focused:active:insensitive {
+    background-image: url("assets/radio-selected-insensitive.svg");
+}
+
+.radio:inconsistent,
+.radio row:selected:inconsistent,
+.radio row:selected:focused:inconsistent {
+    background-image: url("assets/radio-mixed.svg");
+}
+
+.radio:inconsistent:insensitive,
+.radio row:selected:inconsistent:insensitive,
+.radio row:selected:focused:inconsistent:insensitive {
+    background-image: url("assets/radio-mixed-insensitive.svg");
+}
+
+.sidebar .radio:active,
+.sidebar .radio:active:focused,
+.sidebar .radio:active:prelight {
+    background-image: url("assets/sidebar-radio-checked.svg");
+}
+
+.sidebar .radio:prelight {
+    background-image: url("assets/sidebar-radio-prelight.svg");
+}
+
+.sidebar .radio:active:selected,
+.sidebar .radio:active:selected:focused {
+    background-image: url("assets/sidebar-radio-selected.svg");
+}
+
+.sidebar .radio:selected:prelight,
+.sidebar .radio:selected:focused {
+    background-image: url("assets/sidebar-radio-selected-prelight.svg");    
+}
+
+.entry {
+    border-image: url("assets/entry-border-normal.svg") 2 / 2 stretch;
+}
+
+.entry:focused {
+  /*  border-image: url("assets/entry-border-focused.svg") 2 / 2 stretch;*/
+}
+
+.primary-toolbar GtkComboBox.combobox-entry .button,
+GtkComboBox.combobox-entry .button,
+.primary-toolbar GtkComboBox.combobox-entry .button:nth-child(last),
+GtkComboBox.combobox-entry .button:nth-child(last) {
+    border-image: url("assets/entry-border-normal.svg") 1 / 1 1 1 0 stretch;
+}
+
+.primary-toolbar GtkComboBox.combobox-entry .button:active,
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:active,
+GtkComboBox.combobox-entry .button:active,
+GtkComboBox.combobox-entry .button:hover:active,
+.primary-toolbar GtkComboBox.combobox-entry .button:active:nth-child(last),
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:active:nth-child(last),
+GtkComboBox.combobox-entry .button:active:nth-child(last),
+GtkComboBox.combobox-entry .button:hover:active:nth-child(last) {
+    /*border-image: url("assets/combobox-entry-border-active.svg") 1 / 1 1 1 0 stretch;*/
+}
+
+/* for RTL languages */
+.primary-toolbar GtkComboBox.combobox-entry .button:nth-child(first),
+GtkComboBox.combobox-entry .button:nth-child(first) {
+    border-image: url("assets/entry-border-normal.svg") 1 / 1 0 1 1 stretch;
+}
+
+.primary-toolbar GtkComboBox.combobox-entry .button:active:nth-child(first),
+.primary-toolbar GtkComboBox.combobox-entry .button:hover:active:nth-child(first),
+GtkComboBox.combobox-entry .button:active:nth-child(first),
+GtkComboBox.combobox-entry .button:hover:active:nth-child(first) {
+   /* border-image: url("assets/combobox-entry-border-active.svg") 1 / 1 0 1 1 stretch;*/
+}
+
+GtkScale.trough,
+GtkSwitch.trough,
+GtkScale.trough.horizontal {
+    /*border-image: url("assets/trough-border-horizontal.svg") 1 / 1 stretch;*/
+}
+
+GtkScale.trough.vertical {
+    /*border-image: url("assets/trough-border-vertical.svg") 1 / 1 stretch;*/
+}
+
+GtkSwitch.trough:active,
+GtkScale.progressbar.horizontal {
+    /*border-image: url("assets/trough-active-border-horizontal.svg") 0 / 0 stretch;*/
+}
+
+GtkScale.progressbar.vertical {
+    /*border-image: url("assets/trough-active-border-vertical.svg") 0 / 0 stretch;*/
+}
+
+GtkSwitch.slider {
+    /*border-image: url("assets/switch-slider-border.svg") 1 / 1 stretch;*/
+}
+
+GtkSwitch.slider:active {
+    /*border-image: url("assets/switch-slider-active-border.svg") 1 / 1 stretch;*/
+}
+
+.progressbar,
+.entry.progressbar,
+.progressbar row,
+.progressbar row:hover,
+.progressbar row:selected,
+.progressbar row:selected:focused {
+    /*border-image: url("assets/progressbar-border.svg") 0 / 0 stretch;*/
+}
+
+.progressbar.vertical {
+    /*border-image: url("assets/progressbar-border-vertical.svg") 0 / 0 stretch;*/
+}
+
+/*Slider images*/
+GtkScale.slider,
+GtkScale.slider.horizontal {
+    background-image: url("assets/scale-slider-horizontal.svg");
+}
+
+GtkScale.slider:insensitive,
+GtkScale.slider.horizontal:insensitive {
+    background-image: url("assets/scale-slider-horizontal-insensitive.svg")
+}
+
+GtkScale.slider.vertical {
+    background-image: url("assets/scale-slider-vertical.svg");
+}
+
+GtkScale.slider.vertical:insensitive {
+    background-image: url("assets/scale-slider-vertical-insensitive.svg");
+}
+
+GtkScale.scale-has-marks-above.slider.horizontal {
+    background-image: url("assets/scale-slider-marks-above-horizontal.svg");
+}
+
+GtkScale.scale-has-marks-above.slider.horizontal:insensitive {
+    background-image: url("assets/scale-slider-marks-above-horizontal-insensitive.svg");
+}
+
+GtkScale.scale-has-marks-above.slider.vertical {
+    background-image: url("assets/scale-slider-marks-above-vertical.svg");
+}
+
+GtkScale.scale-has-marks-above.slider.vertical:insensitive {
+    background-image: url("assets/scale-slider-marks-above-vertical-insensitive.svg");
+}
+
+GtkScale.scale-has-marks-below.slider.horizontal {
+    background-image: url("assets/scale-slider-marks-below-horizontal.svg");
+}
+
+GtkScale.scale-has-marks-below.slider.horizontal:insensitive {
+    background-image: url("assets/scale-slider-marks-below-horizontal-insensitive.svg");
+}
+
+GtkScale.scale-has-marks-below.slider.vertical {
+    background-image: url("assets/scale-slider-marks-below-vertical.svg");
+}
+
+GtkScale.scale-has-marks-below.slider.vertical:insensitive {
+    background-image: url("assets/scale-slider-marks-below-vertical-insensitive.svg");
+}
+
+.button {
+    border-image: url("assets/button-border.svg") 3 / 3 stretch;
+}
+
+.button:active,
+.toolbar .button:active,
+.button:hover:active,
+.toolbar .button:hover:active {
+    /*border-image: url("assets/button-active-border.svg") 3 / 3 stretch;*/
+}
+
+.button.default {
+    /*border-image: url("assets/button-default-border.svg") 4 / 4 stretch;*/
+}
+
+.primary-toolbar .toolbar .button:active,
+.primary-toolbar.toolbar .button:active,
+.primary-toolbar .toolbar .button:active:hover,
+.primary-toolbar.toolbar .button:active:hover {
+    /*border-image: url("assets/primary-toolbar-button-active-border.svg") 4 / 4 stretch;*/
+}
+
+.toolbar .raised .button,
+.toolbar .raised.button {
+    /*border-image: url("assets/primary-toolbar-raised-button-border.svg") 4 / 4 stretch;*/
+}
+
+/* nth-child for linked areas */
+.toolbar .raised.linked.button,
+.toolbar .raised.linked.button:active,
+.toolbar .raised.linked.button:active:hover,
+.toolbar .raised.linked .button,
+.toolbar .raised.linked .button:active,
+.toolbar .raised.linked .button:active:hover {
+    /*border-image: url("assets/primary-toolbar-raised-button-border.svg") 4 / 4 0 stretch;*/
+}
+
+.toolbar .raised.linked.button:nth-child(first) ,
+.toolbar .raised.linked.button:active:nth-child(first),
+.toolbar .raised.linked.button:active:hover:nth-child(first),
+.toolbar .raised.linked:nth-child(first) .button,
+.toolbar .raised.linked:nth-child(first) .button:active,
+.toolbar .raised.linked:nth-child(first) .button:active:hover {
+    /*border-image: url("assets/primary-toolbar-raised-button-border.svg") 4 / 4 0 4 4 stretch;*/
+}
+
+.toolbar .raised.linked.button:nth-child(last),
+.toolbar .raised.linked.button:active:nth-child(last),
+.toolbar .raised.linked.button:active:hover:nth-child(last),
+.toolbar .raised.linked:nth-child(last) .button,
+.toolbar .raised.linked:nth-child(last) .button:active,
+.toolbar .raised.linked:nth-child(last) .button:active:hover {
+    /*border-image: url("assets/primary-toolbar-raised-button-border.svg") 4 / 4 4 4 0 stretch;*/
+}

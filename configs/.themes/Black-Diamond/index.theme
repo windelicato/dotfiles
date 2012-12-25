@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Black-Diamond
+Type=X-GNOME-Metatheme
+Comment=
+
+[X-GNOME-Metatheme]
+GtkTheme=Black-Diamond
+MetacityTheme=Black-Diamond
+IconTheme=Simple
+CursorTheme=DMZ-Black
+CursorSize=24

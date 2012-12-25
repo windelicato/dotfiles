@@ -1,0 +1,9 @@
+/* Magnifier */
+
+.magnifier-zoom-region {
+    border: 2px solid rgba(128, 0, 0, 255);
+}
+
+.magnifier-zoom-region.full-screen {
+    border-width: 0px;
+}

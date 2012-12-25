@@ -1,0 +1,59 @@
+
+/* Workspace Switcher */
+.workspace-switcher-group {
+    padding: 12px;
+}
+
+.workspace-switcher-container {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(25,25,25,0.8);
+    background-gradient-end: rgba(0,0,0,0.8);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.workspace-switcher {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(0,0,0,0.8);
+    background-gradient-end: rgba(0,0,0,0.8);
+    border: 1px solid rgba(0,0,0,0.4);
+    border-radius: 4px;
+    box-shadow: inset 0px 1px 5px 0px rgba(0,0,0,0.6);
+    padding: 10px 20px 10px 20px;
+    padding: 4px;
+    spacing: 8px;
+}
+
+.ws-switcher-active-up {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(149,168,197,0.8);
+    background-gradient-end: rgba(104,122,148,0.8); 
+    /*background-image: url("img/ws-switch-arrow-up.svg") ;*/
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    color: rgba(255,255,255,0.9);
+    height: 100px;
+    -st-shadow: 0px -1px 5px 0px rgba(0,0,0,0.9);
+}
+
+.ws-switcher-active-down {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(149,168,197,0.8);
+    background-gradient-end: rgba(104,122,148,0.8); 
+    /*background-image: url("img/ws-switch-arrow-down.svg");*/
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 5px;
+    
+    color: rgba(255,255,255,0.9);
+    height: 100px;
+    -st-shadow: 0px -1px 5px 0px rgba(0,0,0,0.9);
+}
+
+.ws-switcher-box {
+    height: 96px;
+    background: rgba(255,255,255,0.25);
+    box-shadow: inset 0px 1px 6px 0px rgba(0,0,0,0.4);
+    border: 1px rgba(255,255,255,0.2);
+    border-radius: 5px;
+}

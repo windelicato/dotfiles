@@ -1,0 +1,52 @@
+#################### MENUBAR ###################
+
+
+style "menubar"		
+
+{
+  xthickness			= 1
+  ythickness			= 2
+
+	engine "pixmap"
+	{
+		image
+		{
+			function	= BOX
+			state = NORMAL
+			file		= "Others/null2.png"
+			border	= { 2, 2, 2, 2 }
+			stretch	= TRUE
+    		}
+
+		image
+		{
+			function	= BOX
+			state = ACTIVE
+			file		= "Others/null2.png"
+			border	= { 2, 2, 2, 2 }
+			stretch	= TRUE
+    		}
+
+		image
+		{
+			function	= BOX
+			state = INSENSITIVE
+			file		= "Others/null2.png"
+			border	= { 2, 2, 2, 2 }
+			stretch	= TRUE
+    		}
+
+    image
+    {
+      function			= BOX
+      recolorable		= TRUE
+			state = PRELIGHT
+     file				= "Menu-Menubar/menubar-item.png"
+
+      border			= { 4, 4, 4, 4 }
+      stretch			= TRUE
+    }
+
+ 	}
+}
+

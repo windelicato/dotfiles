@@ -1,0 +1,154 @@
+/* Dash */
+
+#dash {
+    border-image: url("img/dash.svg") 20 20;
+    padding: 5px 1px;
+    /*background-color: rgba(0,0,0,0.5);*/
+    border: 1px solid rgba(255,255,255,0.2);
+    border-left: 0px;
+    border-radius: 0px 5px 5px 0px; 
+}
+
+#dash:rtl {
+    border-left: 1px;
+    border-right: 0px;
+    border-radius: 4px 0px 0px 4px;
+}
+
+#dash:empty {
+    height: 100px;
+    width: 50px;
+}
+
+.dash-placeholder {
+    background-image: url("img/dash-placeholder.svg");
+    height: 27px;
+}
+
+#viewSelector {
+    spacing: 1em;
+    transition-duration: 0;
+}
+
+#viewSelectorTabBar {
+    padding: 1em;
+}
+
+#searchArea {
+    padding: 0px 24px;
+}
+
+
+#searchEntry {
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 2px;
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: outset 0px 1px 0px 0px rgba(0,0,0,0.5);
+    caret-color: rgba(255,255,255,0.8);
+    caret-size: 1px;
+    color: rgba(25,25,25,0.8);
+    font: 8pt;
+    height: 16px;
+    padding: 3px 3px;
+    width: 250px;
+}
+
+.search-entry-icon {
+    icon-size: 1.2em;
+}
+
+.search-entry-icon {
+    icon-size: 1.2em;
+}
+
+#searchResults {
+    padding: 20px 10px 10px 10px;
+    spacing: 18px;
+}
+
+#searchResultsContent {
+    padding-right: 20px;
+    spacing: 36px;
+}
+
+#searchResultsContent:rtl {
+    padding-right: 0px;
+    padding-left: 20px;
+}
+
+.search-statustext,
+.search-section-header {
+    padding: 4px 12px;
+    spacing: 4px;
+    color: #6f6f6f;
+    font-size: .8em;
+}
+
+.search-section-results {
+    color: #ffffff;
+    padding: 6px;
+}
+
+.search-section-list-results {
+    spacing: 4px;
+}
+
+.results-container {
+    spacing: 4px;
+}
+
+.search-providers-box {
+    spacing: 12px;
+}
+
+/* Text labels are an odd number of pixels tall. The uneven top and bottom
+ * padding compensates for this and ensures that the label is vertically
+ * centered */
+.dash-search-button {
+    width: 80px;
+}
+
+
+.dash-search-button:hover,
+.dash-search-button:selected{
+
+}
+
+.dash-search-button-label {
+
+}
+
+.view-tab-title {
+    color: #fff;
+    font: 9pt;
+    height: 23px;
+    font-weight: bold; 
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80px;
+}
+.view-tab-title:hover {
+    color: #FFF;
+}
+
+.view-tab-title:selected {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(168,182,204,0.7);
+    background-gradient-end: rgba(102,127,165,0.7);
+    color: #fff;
+    border-radius: 3px;
+    text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
+    transition-duration: 200;
+}
+
+.dash-label {
+    color: #fff;
+    font-size: 10pt;
+    padding: 4px;
+    background-color: rgba(13,13,13,0.6);
+    border: 1px solid rgba(0,0,0,0.7);
+    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.2);
+    border-radius: 4px;
+    text-align: center;
+    -x-offset: 2px;
+}

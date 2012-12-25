@@ -1,0 +1,68 @@
+################################################
+# PANELS (24px)
+################################################
+
+# Note: Uncommenting means to delete the "#" at the beginning of a line. Commenting out means to add a "#" at the beginning of a line. The "#" tells the theme wether to ignore the line or not.
+
+style "theme-panel"
+{
+	engine "clearlooks"{
+		radius = 1.1
+	}
+	bg[NORMAL]	= shade(0.20,@bg_color)
+	bg[ACTIVE]	= shade(0.25,@bg_color)
+	bg[PRELIGHT]	= shade(0.4,@bg_color)
+	bg[SELECTED]	= shade(0.60, @bg_color)
+	
+	fg[NORMAL]	= "#D0D0D0"
+	fg[ACTIVE]	= "#F0F0F0"
+	fg[PRELIGHT]	= "#FFFFFF"
+	fg[SELECTED]	= "#D0D0D0"
+
+	text[NORMAL]	= "#D0D0D0"
+	text[ACTIVE]	= "#F0F0F0"
+	text[PRELIGHT]	= "#FFFFFF"
+	text[SELECTED]	= "#D0D0D0"	
+}
+
+style "theme-panel2" = "theme-panel"
+{
+xthickness = 0
+ythickness = 0
+engine "clearlooks"{
+		radius = 1.1
+	}
+}
+
+style "theme-panel3" = "theme-panel"
+{
+xthickness = 0
+ythickness = 0
+
+fg[NORMAL] = @selected_fg_color
+
+engine "clearlooks"{
+		radius = 1.1
+	}
+}
+
+
+widget "*PanelWidget*"		style "theme-panel3"
+widget "*PanelApplet*"		style "theme-panel3"
+widget "*fast-user-switch*"	style "theme-panel3"
+widget "*CPUFreq*Applet*"	style "theme-panel3"
+class "PanelApp*"		style "theme-panel3"
+class "PanelToplevel*"		style "theme-panel3"
+#widget_class "*Mail*"		style "theme-panel3" #Evolution's scrollbars bug
+#class "*Panel*"			style "theme-panel3" # Disabled to fix bug.
+widget_class "*notif*"		style "theme-panel3"
+widget_class "*Notif*"		style "theme-panel3"
+widget_class "*Tray*"		style "theme-panel3" 
+widget_class "*tray*"		style "theme-panel3"
+widget_class "*Applet*Tomboy*"	style "theme-panel3"
+
+
+class "*Xfce*Panel*"		style "theme-panel2"
+widget "*Xfce*Panel*"		style "theme-panel2"
+
+

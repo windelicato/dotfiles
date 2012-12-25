@@ -1,0 +1,49 @@
+# ==============================================================================
+# UBUNTU ONE SPECIFIC SETTINGS
+# ==============================================================================
+
+style "ubuntuone-button"    = "button"  { engine "murrine" { border_shades = {0.3, 0.2} shadow_shades = {0.9,3.0} } }
+style "ubuntuone-sep"       = "dark"    { engine "murrine" { contrast = 1.4 } }
+style "ubuntuone-buttonfix" = "default" { GtkWidget ::focus-line-width = 0 fg[ACTIVE] = "#fff" }
+
+style "mode-button" {
+	engine "pixmap" { 
+        image { function = BOX state = PRELIGHT    file = "img/mode-center-prelight.png" border = { 3, 13, 3, 3 } stretch = TRUE }
+		image { function = BOX state = NORMAL      file = "img/mode-center-normal.png"   border = { 3, 13, 3, 3 } stretch = TRUE }
+		image { function = BOX state = ACTIVE      file = "img/mode-center-pressed.png"  border = { 3, 13, 3, 3 } stretch = TRUE }
+		image { function = BOX state = INSENSITIVE file = "img/mode-center-pressed.png"  border = { 3, 13, 3, 3 } stretch = TRUE } 
+		image { function = BOX state = SELECTED    file = "img/mode-center-pressed.png"  border = { 3, 13, 3, 3 } stretch = TRUE }
+	}
+}
+
+style "mode-left" {
+	engine "pixmap" { 
+        image { function = BOX state = PRELIGHT    file = "img/mode-left-prelight.png" border = { 3, 13, 3, 3 } stretch = TRUE }
+		image { function = BOX state = NORMAL      file = "img/mode-left-normal.png"   border = { 3, 13, 3, 3 } stretch = TRUE }
+		image { function = BOX state = ACTIVE      file = "img/mode-left-pressed.png"  border = { 3, 13, 3, 3 } stretch = TRUE }
+		image { function = BOX state = INSENSITIVE file = "img/mode-left-pressed.png"  border = { 3, 13, 3, 3 } stretch = TRUE } 
+		image { function = BOX state = SELECTED    file = "img/mode-left-pressed.png"  border = { 3, 13, 3, 3 } stretch = TRUE }
+	}
+}
+
+style "mode-right" {
+	engine "pixmap" { 
+        image { function = BOX state = PRELIGHT    file = "img/mode-right-prelight.png" border = { 3, 13, 3, 3 } stretch = TRUE }
+		image { function = BOX state = NORMAL      file = "img/mode-right-normal.png"   border = { 3, 13, 3, 3 } stretch = TRUE }
+		image { function = BOX state = ACTIVE      file = "img/mode-right-pressed.png"  border = { 3, 13, 3, 3 } stretch = TRUE }
+		image { function = BOX state = INSENSITIVE file = "img/mode-right-pressed.png"  border = { 3, 13, 3, 3 } stretch = TRUE } 
+		image { function = BOX state = SELECTED    file = "img/mode-right-pressed.png"  border = { 3, 13, 3, 3 } stretch = TRUE }
+	}
+}
+
+widget "*ManagementPanel.GtkVBox.GtkEventBox.GtkVBox.GtkHBox.GtkHBox*Button"  style "ubuntuone-button"
+widget "*ManagementPanel.GtkVBox.GtkEventBox.*GtkHButtonBox*Button"           style "mode-button"
+widget "*ManagementPanel.GtkVBox.GtkEventBox.*GtkHButtonBox*ModeLeft*"        style "mode-left"
+widget "*ManagementPanel.GtkVBox.GtkEventBox.*GtkHButtonBox*ModeRight*"       style "mode-right"
+widget "*ManagementPanel.GtkVBox.GtkEventBox.*GtkHButtonBox*"                 style:highest "ubuntuone-buttonfix"
+widget "*ManagementPanel.GtkVBox.GtkEventBox.GtkVBox.GtkHBox.GtkHSeparator"   style "ubuntuone-sep"
+widget "*ManagementPanel.GtkVBox.GtkNotebook.GtkVBox.GtkEventBox*"            style "dark"
+widget "*ManagementPanel*DevicesPanel.GtkEventBox*"                           style "dark"
+widget "*ManagementPanel.GtkVBox.GtkEventBox*"                                style "dark"
+widget "*OverviewPanel.GtkVBox.GtkEventBox*"                                  style "dark"
+

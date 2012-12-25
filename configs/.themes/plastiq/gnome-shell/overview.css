@@ -1,0 +1,63 @@
+
+/* Overview */
+
+#overview {
+    spacing: 12x;
+}
+
+.workspace-controls {
+    visible-width: 32px; /* Amount visible before hovering */
+}
+
+.workspace-thumbnails-background {
+    border-right:none;
+    spacing: 4px;
+    padding: 12px;
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 5px 0px 0px 5px;
+    border-right: 0px;
+}
+
+.workspace-thumbnails-background:rtl {
+    border-right: 1px;
+    border-left: 0px;
+    border-radius: 0px 4px 4px 0px;
+}
+
+.workspace-thumbnails {
+	spacing: 12px;
+}
+
+.workspace-thumbnail-indicator {
+	outline: 2px ridge #A9B6CC;
+	box-shadow: inset 0px 1px 0px 0px rgba(255,255,255,0.7);
+	border-radius: 4px;
+}
+
+.window-caption {
+    background-gradient-direction: vertical;
+    background-gradient-start: rgba(25,25,25,0.8);
+    background-gradient-end: rgba(0,0,0,0.5);
+    border-radius: 3px;
+    border: 1px solid rgba(255,255,255,0.3);
+    color: #fff;
+    font-size: 8.5pt;
+    font-weight: bold;
+    padding: 4px 12px;
+    text-align: center;
+    text-shadow: rgba(0,0,0,0.8) 0px 1px 0px;
+    -shell-caption-spacing: 10px;
+}
+
+.window-close {
+    background-image: url("img/close-window.svg");
+    height: 24px;
+    width: 24px;
+    -st-background-image-shadow: -2px 2px 6px rgba(0,0,0,0.5);
+    -shell-close-overlap: 12px;
+}
+
+.window-close:rtl {
+    -st-background-image-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}

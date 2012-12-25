@@ -1,0 +1,50 @@
+style "pcmanfm-sidebar" = "murrine-sidebar" {
+	font_name = "Regular"
+
+	GtkTreeView::odd_row_color	= @sidebar_color
+	GtkTreeView::even_row_color	= @sidebar_color
+
+	# these make the padding from left window edge a little more sane
+	GtkTreeView::vertical_separator		= 4
+	GtkTreeView::horizontal_separator	= 15
+	GtkTreeView::indent-expanders		= 1 # 1 means TRUE
+	GtkTreeView::expander-size		= 8
+	GtkExpander::expander_spacing		= 16
+	GtkButton::image_spacing		= 4
+
+	xthickness = 0
+	ythickness = 1
+}
+
+# For the thin gray line separating the sidepane and viewpane
+style "pcmanfm-handle"
+{
+	GtkPaned::handle-size = 1
+	
+	engine "pixmap" {
+		image {
+			function	= HANDLE
+			recolorable	= TRUE
+			file		= "Handles/handle-nautilus.png"
+			stretch		= TRUE
+			border 		= { 0, 0, 0, 0 }
+		}
+	}
+}
+
+style "pcmanfm-notebook" {
+	xthickness = 0
+	ythickness = 0
+}
+
+# A little more vertical padding on the toolbar
+style "pcman-padding" {	
+	xthickness = 3
+  	ythickness = 3
+}
+
+widget_class	"*FmMainWin*GtkToolbar*"	style "pcman-padding"
+widget_class	"*FmPlacesView*"		style "pcmanfm-sidebar"
+widget		"*FmMainWin*GtkHPaned"		style "pcmanfm-handle"
+widget		"*FmMainWin*GtkNotebook"	style "pcmanfm-notebook"
+

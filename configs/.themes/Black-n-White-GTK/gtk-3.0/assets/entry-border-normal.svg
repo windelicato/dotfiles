@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16px"
+   height="16px"
+   id="svg11633"
+   version="1.1"
+   inkscape:version="0.48.3 r9882"
+   sodipodi:docname="entry-border-normalold.svg">
+  <defs
+     id="defs11635">
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7879-7-3"
+       id="linearGradient6823"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.63117873,0,0,1.040154,-59.8156,-1080.0246)"
+       x1="404.67053"
+       y1="262.40231"
+       x2="404.67053"
+       y2="280.36218" />
+    <linearGradient
+       id="linearGradient7879-7-3">
+      <stop
+         id="stop7881-0-8"
+         offset="0"
+         style="stop-color:#babdb6;stop-opacity:1;" />
+      <stop
+         id="stop7883-8-6"
+         offset="1"
+         style="stop-color:#9a9d93;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient
+       y2="280.36218"
+       x2="404.67053"
+       y1="262.40231"
+       x1="404.67053"
+       gradientTransform="matrix(0.63117873,0,0,1.040154,-165.8156,-291.5998)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient12171"
+       xlink:href="#linearGradient7879-7-3"
+       inkscape:collect="always" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="26.24"
+     inkscape:cx="9.7029281"
+     inkscape:cy="7.542469"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="1440"
+     inkscape:window-height="856"
+     inkscape:window-x="0"
+     inkscape:window-y="19"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata11638">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <rect
+       transform="scale(1,-1)"
+       ry="2.2980974"
+       rx="2.2980974"
+       y="-15.5"
+       x="0.49999997"
+       height="15"
+       width="15.000001"
+       id="rect5760"
+       style="fill:none;stroke:#ffffff;stroke-width:0.99999988;stroke-linecap:butt;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;display:inline;enable-background:new"
+       inkscape:export-filename="/home/cosimoc/Sources/Checkouts/gnome-themes-standard/themes/Adwaita/gtk-3.0/assets/entry-normal-border.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <rect
+       y="-14"
+       x="1"
+       height="12"
+       width="1"
+       id="rect6040"
+       style="fill:#cccccc;fill-opacity:0.50196078;stroke:none;display:inline;enable-background:new"
+       transform="matrix(0,1,-1,0,0,0)"
+       inkscape:export-filename="/home/cosimoc/Sources/Checkouts/gnome-themes-standard/themes/Adwaita/gtk-3.0/assets/entry-normal-border.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>

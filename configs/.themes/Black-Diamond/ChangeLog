@@ -1,0 +1,29 @@
+2009-06-03 - 0.5
+	* Better support for gnome color schemes
+	* Panel background has been removed
+	* Toolbar now again made glassy
+	* Selected bg color now much lighter
+	* Added new color schemes (blue & gold)
+
+2009-06-01 - 0.4
+	* Black-Diamond metacity (based on Humanoid-OSX-Black)
+	* Flat menubar & toolbar
+	* Default icons changed to `Simple icon theme`
+	* Found it's home on Launchpad.net ;)
+
+2009-03-27 - 0.3
+	* Updated to Murrine svn r170
+	* Improved progressbar style
+	* Improved scrollbar style
+	* Gradient menubar
+	* and more...
+
+2008-12-25 - 0.2
+	* Somewhat lighter background color
+	* Greyish text/foreground color
+	* Better custom color scheme support
+	* Included sample custom color scheme
+
+2008-12-09 - 0.1
+	* Initial release
+
