@@ -1,0 +1,42 @@
+! vim:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+!
+! #########################################
+! BW ON WHITE
+! #########################################
+
+urxvt*background: #FFFFFF
+urxvt*foreground: #000000
+urxvt*colorUL: #4E4FFF
+
+!BLACK
+urxvt*color0:  #FFFFFF
+urxvt*color8:  #9A9A9A
+! RED
+urxvt*color1:               #121212
+urxvt*color9:               #1C1C1C
+
+! GREEN
+urxvt*color2:               #A5A5A5
+urxvt*color10:              #A4A4A4
+
+!YELLOW
+urxvt*color3:               #777777
+urxvt*color11:              #646464
+
+! BLUE
+urxvt*color4:               #999999
+urxvt*color12:              #7C7C7C
+
+! MAGENTA
+urxvt*color5:               #4C4C4C
+urxvt*color13:              #515151
+
+! CYAN
+urxvt*color6:               #2B2B2B
+urxvt*color14:              #322929
+
+!WHITE
+urxvt*color7:  #000000
+urxvt*color15: #101010
+
+

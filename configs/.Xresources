@@ -1,0 +1,32 @@
+#include "/home/sunn/.colors/blue"
+
+! #########################################
+
+urxvt*perl-lib:			/usr/lib/urxvt/perl
+urxvt*perl-ext-common:		default,matcher,clipboard
+urxvt*perl-matcher: 		1
+urxvt*urlLauncher:		/usr/bin/chromium
+urxvt*cursorUnderline: 1
+!urxvt*letterspace: -1
+urxvt*transparent: 		true
+urxvt*shading:			15
+urxvt*cursorBlink:		true
+urxvt*scrollBar:		false
+!urxvt*font: -*-terminus-medium-r-normal-*-17-*-*-*-*-*-*-*
+!!urxvt*font: -artwiz-cure-medium-r-normal-*-*-*-*-*-*-*-*-*
+urxvt*font: -artwiz-lime-medium-r-normal-*-10-*-*-*-*-*-*-*
+urxvt*boldFont: -artwiz-lime-medium-r-normal-*-10-*-*-*-*-*-*-*
+urxvt*italicFont: -artwiz-lime-medium-r-normal-*-10-*-*-*-*-*-*-*
+urxvt*bolditalicFont: -artwiz-lime-medium-r-normal-*-10-*-*-*-*-*-*-*
+!urxvt*font: -*-gohufont-medium-r-normal-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+
+Xft.dpi:	96
+Xft.rgba:	rgb
+Xft.antialias: 	true
+Xft.hinting: 	true
+Xft.autohint: 	false
+Xft.hintstyle: 	hintslight
+Xft.lcdfilter: 	lcddefault
