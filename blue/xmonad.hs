@@ -19,7 +19,6 @@ import XMonad.Hooks.DynamicLog hiding (xmobar, xmobarPP, xmobarColor, sjanssenPP
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.ManageHelpers
 import XMonad.Hooks.SetWMName
-import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.UrgencyHook
 import XMonad.Util.Dmenu
 --import XMonad.Hooks.FadeInactive
@@ -28,13 +27,14 @@ import System.IO (hPutStrLn)
 --import XMonad.Operations
 import XMonad.Util.Run (spawnPipe)
 import XMonad.Actions.CycleWS			-- nextWS, prevWS
+import Data.List			-- clickable workspaces
 
 
 
 
 
 defaultLayouts =	  onWorkspace (myWorkspaces !! 0) (avoidStruts (Circle ||| tiled ||| fullTile ||| fullTile3))
-			$ onWorkspace (myWorkspaces !! 1) (fullScreen ||| avoidStruts (tiled))
+			$ onWorkspace (myWorkspaces !! 1) (fullScreen ||| avoidStruts (borderlessTile))
 			$ onWorkspace (myWorkspaces !! 2) (avoidStruts simplestFloat)
 			$ avoidStruts ( tiled   ||| fullTile ||| fullTile3 ||| Circle ||| simplestFloat) ||| fullScreen 
 	where
@@ -43,6 +43,7 @@ defaultLayouts =	  onWorkspace (myWorkspaces !! 0) (avoidStruts (Circle ||| tile
 		fullScreen 	= noBorders(fullscreenFull Full)
 		fullTile 	= ResizableTall nmaster delta (1/3) [] 
 		fullTile3	=  ThreeColMid nmaster delta (1/3)
+		borderlessTile	= noBorders(fullTile)
 
 		-- Default number of windows in master pane
 		nmaster = 1
@@ -58,32 +59,56 @@ nobordersLayout = noBorders $ Full
 myLayout = defaultLayouts
 
 -- Declare workspaces and rules for applications
-myWorkspaces = 	[" ä "
-		," ê "
-		," í "
-		," å "
-		," é "]
 
 
+-- myWorkspaces = 	[" ä "
+-- 		," ê "
+-- 		," í "
+-- 		," á "
+-- 		," é "]
+
+
+--myWorkspaces = 	[" dev "
+--   		," www "
+--		," float "
+--		," doc "
+--		," rand "]
+--
+
+myWorkspaces = clickable $ ["^i(/home/sunn/.dzen/arch_10x10.xbm) shell"
+		,"^i(/home/sunn/.dzen/fs_01.xbm) web"	
+		,"^i(/home/sunn/.dzen/mouse_01.xbm) float"	
+		,"^i(/home/sunn/.dzen/diskette.xbm) docs"	
+		,"^i(/home/sunn/.dzen/info_03.xbm) irc"	
+		,"^i(/home/sunn/.dzen/mail.xbm) mail"	
+		,"^i(/home/sunn/.dzen/note.xbm) tunes"]
+
+  where clickable l     = [ "^ca(1,xdotool key alt+" ++ show (n) ++ ")" ++ ws ++ "^ca()" |
+                            (i,ws) <- zip [1..] l,
+                            let n = i ]
+			
 myManageHook = composeAll 	[ resource =? "dmenu" --> doFloat
 				, resource =? "skype" 	--> doFloat
 				, resource =? "mplayer"	--> doFloat
+				, className =? "docky"	--> doFloat
 				, resource =? "chromium"--> doShift (myWorkspaces !! 1)
 				]
 newManageHook = myManageHook <+> manageHook defaultConfig
 
 myLogHook h = dynamicLogWithPP ( defaultPP
 	{
-		  ppCurrent	= dzenColor background cyan1 . pad
-		, ppVisible	= dzenColor cyan1 background . pad
-		, ppHidden	= dzenColor cyan1 background . pad
-		, ppSep		= "  "
-		, ppLayout	= dzenColor foreground background .
+		  ppCurrent		= dzenColor foreground background . pad
+		, ppVisible		= dzenColor black1 background . pad
+		, ppHidden		= dzenColor green1 background . pad
+		, ppHiddenNoWindows	= dzenColor black1 background . pad
+		, ppWsSep		= ""
+		, ppSep			= "   "
+		, ppLayout		= dzenColor white1 background .
 				(\x -> case x of
 					"Full"				->	"^i(/home/sunn/.xmonad/dzen2/layout_full.xbm)"
 					"Spacing 30 ResizableTall"	->	"^i(/home/sunn/.xmonad/dzen2/layout_tall.xbm)"
 					"ResizableTall"			->	"^i(/home/sunn/.xmonad/dzen2/layout_tall.xbm)"
-					"SimplestFloat"			->	"^i(/home/sunn/.xmonad/dzen2/arch.xbm)"
+					"SimplestFloat"			->	"^i(/home/sunn/.xmonad/dzen2/mouse_01.xbm)"
 					"Circle"			->	"^i(/home/sunn/.xmonad/dzen2/full.xbm)"
 					_				->	"^i(/home/sunn/.xmonad/dzen2/grid.xbm)"
 				)
@@ -106,8 +131,12 @@ main = do
 		, focusedBorderColor  	= cyan1
 		, modMask 		= mod1Mask
 		, layoutHook 		= myLayout
+--		, layoutHook 		= avoidStruts  $  layoutHook defaultConfig
 		, workspaces 		= myWorkspaces
 		, manageHook		= newManageHook
+--		, manageHook 		= manageDocks <+> manageHook defaultConfig
+		, handleEventHook 	= fullscreenEventHook
+		, startupHook		= setWMName "LG3D"
 		, logHook		= myLogHook dzenLeftBar -- >> fadeInactiveLogHook 0xdddddddd
 		}
 		`additionalKeys`
@@ -116,14 +145,14 @@ main = do
 		,((mod1Mask  			, xK_n), spawn "urxvt")
 		,((mod1Mask  			, xK_z), spawn "zathura")
 		,((mod1Mask 			, xK_r), spawn "gmrun")
-		,((mod1Mask 			, xK_p), spawn "dmenu_run -b -fn '-*-lime-*-*-*-*-*-*-*-*-*-*-*-*'")
+		,((mod1Mask 			, xK_p), spawn "dmenu_run -b -nb '#000000' -nf '#FFFFFF' -sb '#556c85' -sf '#000000' -fn '-*-lime-*-*-*-*-*-*-*-*-*-*-*-*'")
+		,((mod1Mask			, xK_q), spawn "killall dzen2; killall conky" >> restart "xmonad" True)
 		,((mod1Mask .|. shiftMask	, xK_x), kill)
 		,((mod1Mask .|. shiftMask	, xK_c), return())
 		,((mod1Mask  			, xK_c), moveTo Next EmptyWS)
 		,((mod1Mask .|. shiftMask	, xK_l), sendMessage MirrorShrink)
 		,((mod1Mask .|. shiftMask	, xK_h), sendMessage MirrorExpand)
-		,((mod1Mask .|. shiftMask	, xK_h), sendMessage MirrorExpand)
-		,((mod1Mask .|. shiftMask	, xK_q), sendMessage MirrorExpand)
+--		,((mod1Mask .|. shiftMask	, xK_q), sendMessage MirrorExpand)
 		,((mod1Mask  			, xK_a), withFocused (keysMoveWindow (-20,0)))
 		,((mod1Mask  			, xK_s), withFocused (keysMoveWindow (0,-20)))
 		,((mod1Mask  			, xK_d), withFocused (keysMoveWindow (0,20)))
@@ -132,6 +161,7 @@ main = do
 		,((mod1Mask .|. shiftMask  	, xK_s), withFocused (keysResizeWindow (0,-20) (0,0)))
 		,((mod1Mask .|. shiftMask  	, xK_d), withFocused (keysResizeWindow (0,20) (0,0)))
 		,((mod1Mask .|. shiftMask  	, xK_f), withFocused (keysResizeWindow (20,0) (0,0)))
+		,((0				, xK_Super_L), spawn "/home/sunn/bin/scripts/lens")
 		,((0                     	, 0x1008FF11), spawn "amixer set Master 2-")
 		,((0                     	, 0x1008FF13), spawn "amixer set Master 2+")
 		,((0                     	, 0x1008FF12), spawn "amixer set Master toggle")
@@ -146,6 +176,8 @@ main = do
 		,((mod1Mask			, 7), (\_ -> moveTo Next NonEmptyWS))
 		,((mod1Mask			, 5), (\_ -> moveTo Next NonEmptyWS))
 		,((mod1Mask			, 4), (\_ -> moveTo Prev NonEmptyWS))
+		,((0				, 2), (\_ -> spawn "menu ~/.xmonad/apps"))
+		,((mod1Mask			, 2), (\_ -> spawn "menu ~/.xmonad/configs"))
 		]
 
 
@@ -154,27 +186,6 @@ main = do
 myTerminal 	= "urxvt"
 myBitmapsDir	= "~/.xmonad/dzen2/"
 myFont		= "-*-lime-*-*-*-*-*-*-*-*-*-*-*-*"
-
-
--- background= "#202020"
--- background= "#291D21"
--- foreground= "#ddccbb"
--- black0= "#222222"
--- black1= "#666666"
--- red0=  "#cc4747"
--- red1=  "#bf5858"
--- green0=  "#a0cf5d"
--- green1= "#b8d68c"
--- yellow0=  "#e0a524"
--- yellow1= "#edB85c"
--- blue0=  "#4194d9"
--- blue1= "#60aae6"
--- purple0=  "#cc2f6e"
--- purple1= "#db588c"
--- cyan0=  "#6d878d"
--- cyan1=  "#42717b"
--- white0=  "#dedede"
--- white1= "#f2f2f2"
 
 background= "#000000"
 foreground= "#ffffff"
@@ -198,7 +209,7 @@ purple0=  "#74636d"
 purple1= "#927d9e"
 
 cyan0=  "#556c85"
-cyan1=  "#6e98b8"
+cyan1= "#6e98b8"
 
 white0=  "#b2b2b2"
 white1= "#bdbdbd"
