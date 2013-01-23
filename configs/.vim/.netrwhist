@@ -1,8 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
-let g:netrw_dirhist_1='/home/sunn/.newsbeuter'
-let g:netrw_dirhist_2='/usr/share/slim/themes/mindlock'
-let g:netrw_dirhist_3='/home/sunn/documents/cs208/project/p5'
-let g:netrw_dirhist_4='/home/sunn/.config/awesome/themes'
-let g:netrw_dirhist_5='/home/sunn/.config/awesome'
-let g:netrw_dirhist_6='/home/sunn/.xmonad'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/sunn/.config/openbox'
+let g:netrw_dirhist_2='/media/data/Documents/CarlLab'
