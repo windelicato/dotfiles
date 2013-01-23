@@ -1,0 +1,9 @@
+background yes
+out_to_console yes
+out_to_x no
+# Update interval in seconds
+update_interval 1
+update_interval_on_battery 10
+ 
+TEXT
+$if_mpd_playing^fg(\#404040)^i(/home/sunn/.xmonad/dzen2/note.xbm) ^fg(\#bdbdbd)${mpd_smart}$endif     ^fg(\#404040)^i(/home/sunn/.xmonad/dzen2/bat_full_01.xbm) ^fg(\#bdbdbd)${battery_percent}% (${battery_time})     ^fg(\#404040)^i(/home/sunn/.xmonad/dzen2/cpu.xbm) ^fg(\#bdbdbd)${cpu cpu0}% ^fg(\#404040)^i(/home/sunn/.xmonad/dzen2/temp.xbm)^fg(\#bdbdbd) ${execi 30 sensors | grep "temp1" | cut -d'+' -f2 | head -c2}     ^fg(\#404040)^i(/home/sunn/.xmonad/dzen2/mem.xbm) ^fg(\#bdbdbd)${mem}^fg(\#404040)     ^i(/home/sunn/.xmonad/dzen2/spkr_01.xbm) ^fg(\#bdbdbd)${exec amixer get Master| egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}%     ^fg(\#404040)^i(/home/sunn/.xmonad/dzen2/clock.xbm) ^fg(\#bdbdbd)${time %m.%d.%Y}  ^fg(\#ffffff)${time %I:%M %P} 
