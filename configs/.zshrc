@@ -9,7 +9,7 @@ promptinit
 colors
 PROMPT="
 %{$fg[red]%} >  %{$reset_color%}"
-RPROMPT="%{$fg[black]%}%~%{$reset_color%}"
+RPROMPT="%{$fg[white]%}%~%{$reset_color%}"
 
 setopt completealiases
 
@@ -49,7 +49,7 @@ alias music='music'
 alias linuxremotefs='sshfs wei001@linuxremote1.eg.bucknell.edu: ~/bucknell'
 alias linuxremote='ssh wei001@linuxremote1.eg.bucknell.edu'
 alias netspace="lftp -u wei001 ftp.netspace.bucknell.edu"
-alias HUB="lftp -u wei001 134.82.224.17"
+alias HUB="lftp -u wei001 134.82.225.27"
 # HUB PW = SXPS16
 
 # Programs
@@ -127,3 +127,6 @@ HISTFILESIZE=2000
 
 # MUTT BG fix
 COLORFGBG="default;default"
+
+export EDITOR="vim"
+xseticon -id "$WINDOWID" /usr/share/icons/Faenza/apps/96/terminal.png
