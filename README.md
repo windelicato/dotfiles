@@ -5,3 +5,6 @@ THAW:
 
 BLUE:
 ![Alt text](https://raw.github.com/windelicato/dotfiles/master/blue_ss.png "BLUE")
+
+OPENBOX:
+![Alt text](https://raw.github.com/windelicato/dotfiles/master/openbox_blue_ss.png "OPENBOX")
