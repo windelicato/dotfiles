@@ -1,0 +1,24 @@
+! vim:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+!
+
+##### CHARLIE BROWN
+urxvt*background:#FFFFFF
+urxvt*foreground:#000000
+urxvt*color0: #CFEAFB
+urxvt*color8: #DEF6FE
+urxvt*color1: #EF3828
+urxvt*color9: #F16328
+urxvt*color2: #48A052
+urxvt*color10: #749077
+urxvt*color3: #C1A564
+urxvt*color11: #D6B075
+urxvt*color4: #448FBF
+urxvt*color12: #02A0D6
+urxvt*color5: #877EAA
+urxvt*color13: #B0BCE6
+!#D394B9
+urxvt*color6: #6AB7E2
+urxvt*color14: #A7D9F1
+urxvt*color7: #110102
+urxvt*color15: #26312A
+
