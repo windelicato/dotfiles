@@ -94,6 +94,7 @@ alias installed='~/bin/scripts/installed'
 #alias rm='rm -i'
 alias rmi='rm -i'
 #alias mv='mv -i'
+alias p='xsel -ib'
 alias emac='emacs -nw'
 alias h='history | tail'
 alias hg='history | grep '
@@ -121,9 +122,6 @@ alias tarbz2='tar -jxvf'
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 
 # Bookmarks
-alias cs208='cd ~/documents/cs208/'
-alias awesomecfg='vim ~/.config/awesome/rc.lua'
-alias awesometheme='vim ~/.config/awesome/themes/default/theme.lua'
 
 # enable color support of ls and also add handy aliases
 alias ls='ls --color=auto'

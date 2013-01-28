@@ -1,8 +1,9 @@
-hsetroot -fill /home/sunn/pics/thaw.png
-xcalib -d :0 /home/sunn/mythlogic.icm
 xrdb ~/.Xresources
 xset +fp /usr/share/fonts/local
 xset +fp /usr/share/fonts/artwiz-fonts
 xset fp rehash
+xcalib /home/sunn/x230.icm
 xsetroot -cursor_name left_ptr
-exec ck-launch-session dbus-launch xmonad
+xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape'
+#compton -cCfb -D 3.5
+exec dbus-launch xmonad

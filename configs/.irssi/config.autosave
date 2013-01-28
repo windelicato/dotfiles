@@ -225,15 +225,14 @@ settings = {
     real_name = "O)))";
     user_name = "earsplit";
     nick = "earspliT";
-    hostname = " ";
+    hostname = "null.exe";
   };
   "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "xchat"; };
+  "fe-common/core" = { theme = "xterm"; };
 };
 hilights = (
   { text = "nick"; nick = "yes"; word = "yes"; },
-  { text = "earsplit"; color = "red"; nick = "yes"; word = "yes"; },
-  { text = "zsh"; nick = "yes"; word = "yes"; }
+  { text = "earsplit"; color = "red"; nick = "yes"; word = "yes"; }
 );
 ignores = (
   { mask = "channel"; level = "JOINS QUITS"; },

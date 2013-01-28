@@ -1,0 +1,246 @@
+#------------------------------------------
+# file: ~/.irssi/miromiro.theme           
+# author: jason ryan http://jasonwryan.com/
+# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:   
+#------------------------------------------
+# Based on Pat Brisbin's theme
+
+# default foreground color (%N) - -1 is the "default terminal color"
+default_color = "-1";
+
+# print timestamp/servertag at the end of line, not at beginning
+info_eol = "false";
+
+# these characters are automatically replaced with specified color
+# (dark grey by default)
+replaces = { "[]" = "%g$*%n"; };
+
+abstracts = {
+
+  ############# generic ###############################
+  
+  # text to insert at the beginning of each non-message line
+  #line_start = "%g//%n ";
+  line_start = "";
+
+  # timestamp styling, nothing by default
+  timestamp = "%K$0-%n";
+
+  # any kind of text that needs hilighting, default is to bold
+  hilight = "%_$*%_";
+
+  # any kind of error message, default is bright red
+  error = "%R$*%n";
+
+  # channel name is printed
+  channel = "%_$*_%";
+
+  # nick is printed
+  nick = "%_$*%_";
+
+  # nick host is printed
+  nickhost = "%g$*";
+
+  # server name is printed
+  server = "%_$*%_";
+
+  # some kind of comment is printed
+  comment = "%n(%b\"$*\"%n);";
+
+  # reason for something is printed (part, quit, kick, ..)
+  reason = "{comment $*}";
+
+  # mode change is printed ([+o nick])
+  mode = "{comment $*}";
+
+  ## channel specific messages
+
+  # highlighted nick/host is printed (joins)
+  channick_hilight = "%g$*%N";
+  chanhost_hilight = "{nickhost $*}";
+
+  # nick/host is printed (parts, quits, etc.)
+  channick = "%g$*";
+  chanhost = "{nickhost $*}";
+
+  # highlighted channel name is printed
+  channelhilight = "%g$*%n";
+
+  # ban/ban exception/invite list mask is printed
+  ban = "$*";
+
+  ########### messages #################################
+
+  # the basic styling of how to print message, $0 = nick mode, $1 = nick
+  msgnick = "%K%n$0$1-%K%n: %|";
+
+  # $0 = nick mode, $1 = nick
+  ownmsgnick = "{msgnick $0 $1-}%M";
+  ownnick = "%w$*%n";
+
+  # public message in channel, $0 = nick mode, $1 = nick
+  pubmsgnick = "{msgnick $0 $1-}";
+  pubnick = "%N$*%n";
+
+  # public message in channel meant for me, $0 = nick mode, $1 = nick
+  pubmsgmenick = "{msgnick $0 $1-}";
+  menick = "%M$*%n";
+
+  # public highlighted message in channel
+  # $0 = highlight color, $1 = nick mode, $2 = nick
+  pubmsghinick = "{msgnick $1 $0$2-%n}";
+
+  # channel name is printed with message
+  msgchannel = "%K:%m$*%n";
+
+  # private message, $0 = nick, $1 = host
+  privmsg = "$0=%b\"$1-\"%n ";
+
+  # private message from you, $0 = "msg", $1 = target nick
+  ownprivmsg = "$0=%b\"$1-\"%n ";
+
+  # own private message in query
+  ownprivmsgnick = "{msgnick $*}";
+  ownprivnick = "$*";
+
+  # private message in query
+  privmsgnick = "{msgnick $*}";
+
+  ########## Actions (/ME stuff) #########################
+
+  # generic one that's used by most actions
+  action = "  %g$*  ";
+
+  # own action, both private/public
+  ownaction = "{action $*}";
+
+  # own action with target, both private/public
+  ownaction_target = "{action $*}";
+
+  # private action sent by others
+  pvtaction = "{action $*}";
+  pvtaction_query = "{action $*}";
+
+  # public action sent by others
+  pubaction = "{action $*}";
+
+
+  ########## other IRC events #############################
+
+  # whois
+  whois = "%#    $[8]0 = $1-;";
+
+  # notices
+  ownnotice = "%NNote n = %Mnew%n $0 ($1-) ";
+  notice = "%M$*%n ";
+  pubnotice_channel = " %N($*)";
+  pvtnotice_host = " %N($*)";
+  servernotice = " %N($*)";
+
+  # CTCPs
+  ownctcp = "%NCTCP c = %Mnew%n $0 ($1-) ";
+  ctcp = "%N$*%n";
+
+  # wallops
+  wallop = "%K$*%n: ";
+  wallop_nick = "%n$*";
+  wallop_action = "%K * $*%n ";
+
+  # netsplits
+  netsplit = "Netsplit nsplit = %b\"$*\"%n";
+  netjoin = "Netjoin njoin = %b\"$*\"%n";
+
+  # /names list
+  names_prefix = "";
+  names_nick = "%g[%n$0$1-%g]%n ";
+  names_nick_op = "{names_nick $*}";
+  names_nick_halfop = "{names_nick $*}";
+  names_nick_voice = "{names_nick $*}";
+  names_users = "%Mthis%n.chan = %Mnew%N Channel($1%n);";
+  names_channel = "\"%b$*\"%n";
+
+  # DCC
+  dcc = "%g$*%n";
+  dccfile = "%_$*%_";
+
+  # DCC chat, own msg/action
+  dccownmsg = "%g /* $0 ($1-) */";
+  dccownnick = "$*%n";
+  dccownquerynick = "$*%n";
+  dccownaction = "{action $*}";
+  dccownaction_target = "{action $*}";
+
+  # DCC chat, others
+  dccmsg = "%g/* $1- ($0) */";
+  dccquerynick = "%g$*%n";
+  dccaction = "{action $*}";
+
+  ######## statusbar/topicbar ############################
+
+  # default background for all statusbars. You can also give
+  # the default foreground color for statusbar items.
+  sb_background = "%n%0";
+
+  # default backround for "default" statusbar group
+  #sb_default_bg = "%4";
+  # background for prompt / input line
+  sb_prompt_bg = "%n";
+  # background for info statusbar
+  #sb_info_bg = "%8";
+  # background for topicbar (same default)
+  #sb_topic_bg = "%4";
+
+  # text at the beginning of statusbars. sb-item already puts
+  # space there,so we don't use anything by default.
+  sbstart = "";
+  # text at the end of statusbars. Use space so that it's never
+  # used for anything.
+  sbend = " ";
+
+  topicsbstart = "%BChannel: %b\"$*";
+  topicsbend = "$*%b\"";
+
+  prompt = "%c >> ";
+
+  sb = "%w[$*]";
+  sbmode = " mode=\"%g+%n$*\"";
+  sbaway = " %g/* zZzZ */%n";
+  sbservertag = ":$0";
+  sbnickmode = "$0";
+
+  # activity in statusbar
+
+  # ',' separator
+  sb_act_sep = "%w$* ";
+  # normal text
+  sb_act_text = "%c$*";
+  # public message
+  sb_act_msg = "%W$*";
+  # hilight
+  sb_act_hilight = "%M$*";
+  # hilight with specified color, $0 = color, $1 = text
+  sb_act_hilight_color = "$0$1-%n";
+};
+
+########################################################
+
+formats = {
+  "fe-common/core" = {
+    pubmsg = "{pubmsgnick {pubnick %Y$[-13]0}$2}$1";
+    own_msg = "{ownmsgnick {ownnick %M$[-13]0$2}}$1";
+    own_msg_channel = "{ownmsgnick {ownnick $[-13]0$3}{msgchannel $1}}$2";
+    own_msg_private_query = "{ownprivmsgnick {ownprivnick $[-13]2}}$1";
+    pubmsg_me = "{pubmsgmenick {menick $[-13]0}$2}$1";
+    pubmsg_me_channel = "{pubmsgmenick {menick $[-13]0$3}{msgchannel $1}}$2";
+    pubmsg_hilight = "{pubmsghinick $0 $0 $[-13]1$3%n}$2";
+    pubmsg_hilight_channel = "{pubmsghinick $0 $[-13]1$4{msgchannel $2}}$3";
+    pubmsg_channel = "{pubmsgnick {pubnick %M$[-13]0}$2}$1";
+    msg_private_query = "{privmsgnick $[-13]0}$2";
+  };
+  "fe-common/irc" = {
+    own_action = "{ownaction $[-11]0} $1";
+    action_private = "{pvtaction $[-11]0}$1";
+    action_private_query = "{pvtaction_query $[-11]0} $2";
+    action_public = "{pubaction $[-11]0}$1";
+  };
+};
