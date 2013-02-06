@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+<defs>
+<defs
+     id="defs4">
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+         d="M 3 7 L 3 42 L 23.34375 42 L 23.34375 43 C 22.742555 43.26641 22.240313 43.76024 22 44.375 L 2.84375 44.375 C 2.8125173 44.373534 2.7812328 44.373534 2.75 44.375 C 2.1977154 44.400889 1.7866117 44.885216 1.8125 45.4375 C 1.8383883 45.989785 2.2914653 46.400889 2.84375 46.375 L 22.09375 46.375 C 22.499998 47.206516 23.35652 47.781249 24.34375 47.78125 C 25.330981 47.781251 26.187502 47.206516 26.59375 46.375 L 45.8125 46.375 C 46.173137 46.380101 46.505693 46.186498 46.6875 45.875 C 46.869308 45.563502 46.869307 45.186498 46.6875 44.875 C 46.505694 44.563504 46.173136 44.3699 45.8125 44.375 L 26.6875 44.375 C 26.447187 43.76024 25.944945 43.26641 25.34375 43 L 25.34375 42 L 45 42 L 45 10.5 L 25.75 10.5 L 25.75 7 L 3 7 z M 4.75 8.75 L 24 8.75 L 24 12.25 L 43.25 12.25 L 43.25 15.75 L 20.5 15.75 L 20.5 12.25 L 4.75 12.25 L 4.75 8.75 z "
+       id="path-main" />
+  </g>
+</defs>
+<acyl-settings>
+<linearGradient
+     id="linearGradient4321">
+    <stop
+       style="stop-color:#FFFFFF;stop-opacity:1.0;"
+       offset="1.0"
+       id="stop1" />
+  </linearGradient>
+<linearGradient
+     inkscape:collect="always"
+     xlink:href="#linearGradient4321"
+     id="acyl_gradient"
+     x1="50.0%"
+     y1="0.0%"
+     x2="50.0%"
+     y2="100.0%" />
+<filter>
+    </filter>
+<use id="1" style="fill:url(#acyl_gradient);filter:url(#filter1111)" xlink:href="#path-main" />
+</acyl-settings>
+</svg>

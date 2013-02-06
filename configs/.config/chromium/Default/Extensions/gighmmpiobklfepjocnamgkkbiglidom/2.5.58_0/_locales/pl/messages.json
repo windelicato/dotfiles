@@ -1,0 +1,941 @@
+{
+   "adalreadyblocked": {
+      "message": "Nie musisz nic robi\u0107, poniewa\u017C reklama jest ju\u017C zablokowana."
+   },
+   "adblock_auto_removes_ads_thats_all": {
+      "message": " AdBlock automatycznie usuwa reklamy. Nie musisz nic robi\u0107."
+   },
+   "adblock_is_paused": {
+      "message": "Dzia\u0142anie AdBlocka jest wstrzymane. Ta strona nie mo\u017Ce by\u0107 u\u017Cywana. Wzn\u00F3w dzia\u0142anie AdBlocka i spr\u00F3buj ponownie."
+   },
+   "adblock_outdated_chrome": {
+      "message": "U\u017Cywasz starej wersji AdBlocka. Przejd\u017A na \u003Ca href='#'\u003Estron\u0119 rozszerze\u0144\u003C/a\u003E, w\u0142\u0105cz 'Tryb programisty' i kliknij 'Aktualizuj rozszerzenia'"
+   },
+   "adblock_wont_run_on_pages_matching": {
+      "message": "AdBlock nie b\u0119dzie dzia\u0142a\u0107 na \u017Cadnej stronie pasuj\u0105cej do:"
+   },
+   "adblockreportinganad": {
+      "message": "AdBlock - Zg\u0142aszanie reklam"
+   },
+   "addthisfilter": {
+      "message": "Dodaj ten filtr"
+   },
+   "adreport2": {
+      "message": "Zobaczy\u0142e\u015B jakie\u015B reklamy na stronie? Dobrze, pomog\u0119 Ci znale\u017A\u0107 miejsce gdzie b\u0119dziesz m\u00F3g\u0142 je zg\u0142osi\u0107!\u003Cbr/\u003E Pami\u0119taj: zg\u0142aszanie reklam jest dobrowolne. Je\u015Bli nie chcesz tego robi\u0107 po prostu zamknij t\u0105 kart\u0119 i zablokuj je tylko dla siebie, dodaj\u0105c w\u0142asny filtr w zak\u0142adce 'Dostosuj' na stronie opcji!"
+   },
+   "adsoneverysite": {
+      "message": "Widzisz reklamy na wi\u0119kszo\u015Bci stron, kt\u00F3re odwiedzasz (twoja strona startowa, strona twojego pracodawcy, etc.), ale gdy odwiedzisz te same strony na komputerze kolegi, reklam nie ma?"
+   },
+   "adstillappear": {
+      "message": "Czy reklama nadal si\u0119 wy\u015Bwietla?"
+   },
+   "advanced_options": {
+      "message": "Jestem zaawansowanym u\u017Cytkownikiem, pokazuj mi zaawansowane opcje."
+   },
+   "any_new_tabs_you_open_Will_be_automatically_ad_free": {
+      "message": "Wszystkie nowo otwarte karty b\u0119d\u0105 automatycznie wolne od reklam."
+   },
+   "anysite": {
+      "message": "Ka\u017Cda strona"
+   },
+   "appliedwhenbrowsing": {
+      "message": "Ten filtr b\u0119dzie stosowany podczas przegl\u0105dania:"
+   },
+   "betalabel": {
+      "message": "Beta"
+   },
+   "blacklistclickmessage": {
+      "message": "Kliknij w reklam\u0119 prawym przyciskiem myszy by j\u0105 zablokowa\u0107, lub zablokuj j\u0105 samodzielnie tutaj."
+   },
+   "blacklisterattrwillbe": {
+      "message": "$attribute$ b\u0119dzie ustawiony jako $value$",
+      "placeholders": {
+         "attribute": {
+            "content": "$1"
+         },
+         "value": {
+            "content": "$2"
+         }
+      }
+   },
+   "blacklisterblockedelement": {
+      "message": "Zablokuj element:"
+   },
+   "blacklisterblocksalloftype": {
+      "message": "Uwaga: ten filtr zablokuje wszystkie elementy $elementtype$ na tej stronie!",
+      "placeholders": {
+         "elementtype": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistereditfilter": {
+      "message": "Wpisz poni\u017Cej poprawny filtr i kliknij OK."
+   },
+   "blacklistereditinvalid1": {
+      "message": "Filtr jest niepoprawny: $exception$",
+      "placeholders": {
+         "exception": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistermatches": {
+      "message": "Ilo\u015B\u0107 element\u00F3w pasuj\u0105cych do filtru na tej stronie: $matchcount$.",
+      "placeholders": {
+         "matchcount": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklisternofilter": {
+      "message": "Nie okre\u015Blono \u017Cadnego filtru!"
+   },
+   "blacklisternotsure": {
+      "message": "\u003Cb\u003ENie jeste\u015B pewien?\u003C/b\u003E Po prostu kliknij 'Zablokuj!'."
+   },
+   "blacklisteroptions1": {
+      "message": "Co wed\u0142ug ciebie b\u0119dzie prawdziwe dla tej reklamy za ka\u017Cdym razem, gdy odwiedzasz t\u0119 stron\u0119?"
+   },
+   "blacklisteroptionstitle": {
+      "message": "Ostatni krok: Co sprawia, \u017Ce to reklama?"
+   },
+   "blacklistersinglematch": {
+      "message": "Ilo\u015B\u0107 element\u00F3w pasuj\u0105cych do filtru na tej stronie: \u003Cb\u003E1\u003C/b\u003E."
+   },
+   "blacklisterthefilter": {
+      "message": "Filtr kt\u00F3ry mo\u017Cna zmieni\u0107 na stronie opcji:"
+   },
+   "blacklistertype": {
+      "message": "Typ"
+   },
+   "blacklisterwarningnofilter": {
+      "message": "Ostrze\u017Cenie: nie okre\u015Blono \u017Cadnego filtru!"
+   },
+   "block_an_ad_on_this_page": {
+      "message": "Zablokuj reklam\u0119 na tej stronie"
+   },
+   "block_by_url_instead": {
+      "message": "Zaawansowane: blokowanie poprzez URL"
+   },
+   "block_this_ad": {
+      "message": "Zablokuj t\u0119 reklam\u0119"
+   },
+   "blockanadtitle": {
+      "message": "Zablokuj reklam\u0119"
+   },
+   "blockdomain": {
+      "message": "Zastosuj w domenie"
+   },
+   "blockeverycontaining": {
+      "message": "Zablokuj wszystkie elementy zawieraj\u0105ce:"
+   },
+   "blockmoreads": {
+      "message": "Zablokuj wi\u0119cej reklam:"
+   },
+   "blockurlwithtext": {
+      "message": "Blokuj adres URL zawieraj\u0105cy"
+   },
+   "buttonback": {
+      "message": "Wr\u00F3\u0107"
+   },
+   "buttonblockit": {
+      "message": "Zablokuj!"
+   },
+   "buttoncancel": {
+      "message": "Anuluj"
+   },
+   "buttonedit": {
+      "message": "Edytuj"
+   },
+   "buttonexclude": {
+      "message": "Wyklucz"
+   },
+   "buttonlooksgood": {
+      "message": "Wygl\u0105da dobrze"
+   },
+   "buttonok": {
+      "message": "OK!"
+   },
+   "cantblockflash": {
+      "message": "Nie mo\u017Cna jeszcze blokowa\u0107 reklam wewn\u0105trz Flasha oraz innych wtyczek."
+   },
+   "cantblockflashwarning": {
+      "message": "Reklama pojawia si\u0119 przed lub w trakcie filmu albo gry flash?"
+   },
+   "casesensitive": {
+      "message": "Ten filtr rozr\u00F3\u017Cnia wielko\u015B\u0107 liter:"
+   },
+   "changelabel": {
+      "message": "zmie\u0144"
+   },
+   "checkinfirefox_1": {
+      "message": "Zainstaluj Firefoksa $chrome$ je\u015Bli go nie masz.",
+      "placeholders": {
+         "chrome": {
+            "content": "$1lub Chrome$2"
+         }
+      }
+   },
+   "checkinfirefox_2": {
+      "message": "Zainstaluj Adblock Plus dla Firefoksa $chrome$ je\u015Bli go nie posiadasz.",
+      "placeholders": {
+         "chrome": {
+            "content": "$1lub AdBlockforChrome dla Chrome$2"
+         }
+      }
+   },
+   "checkinfirefox_3": {
+      "message": "W tej przegl\u0105darce subskrybuj te same filtry jak tu (z wyj\u0105tkiem niestandardowych filtr\u00F3w w Firefoksie)."
+   },
+   "checkinfirefox_4": {
+      "message": "Otw\u00F3rz w niej stron\u0119 na kt\u00F3rej widzisz reklam\u0119."
+   },
+   "checkinfirefox_5": {
+      "message": "Czy reklama wy\u015Bwietla si\u0119 te\u017C w tej przegl\u0105darce?"
+   },
+   "checkinfirefoxtitle": {
+      "message": "Sprawd\u017A w Firefoksie $chrome$",
+      "placeholders": {
+         "chrome": {
+            "content": "$1albo Chrome$2"
+         }
+      }
+   },
+   "chromebutton_how_to_hide2": {
+      "message": "Aby ukry\u0107 przycisk, kliknij prawym przyciskiem na ikonie AdBlocka a nast\u0119pnie wybierz 'Ukryj przycisk'.  Mo\u017Cesz ponownie w\u0142\u0105czy\u0107 pokazywanie go pod tym adresem - chrome://chrome/extensions ."
+   },
+   "cleanuplist": {
+      "message": "Wyczy\u015B\u0107 t\u0105 list\u0119:"
+   },
+   "clickthead": {
+      "message": "Kliknij w reklam\u0119, aby rozpocz\u0105\u0107 proces blokowania."
+   },
+   "clickupdatefilters": {
+      "message": "Kliknij: \u003Ca\u003EZaktualizuj filtry!\u003C/a\u003E"
+   },
+   "close": {
+      "message": "Zamknij"
+   },
+   "close_tab_begin_browsing": {
+      "message": "Mo\u017Cesz zamkn\u0105\u0107 t\u0105 kart\u0119 i rozpocz\u0105\u0107 przegl\u0105danie bez reklam. Mi\u0142ej zabawy!"
+   },
+   "correctfilters": {
+      "message": "W\u0142a\u015Bciwe filtry"
+   },
+   "csstomatch": {
+      "message": "CSS pasuj\u0105cy do"
+   },
+   "custompattern": {
+      "message": "W\u0142asny:"
+   },
+   "debuginlogoption": {
+      "message": "Pokazuj komunikaty debugowania w logach konsoli (spowalnia AdBlocka)"
+   },
+   "description2": {
+      "message": "Najpopularniejsze rozszerzenie Chrome, korzysta z niego ponad 10 milion\u00F3w u\u017Cytkownik\u00F3w. Blokuje reklamy w ca\u0142ej sieci."
+   },
+   "did_you_know_this_is_my_full_time_job": {
+      "message": "Czy wiesz, \u017Ce to moja praca na pe\u0142en etat?"
+   },
+   "disabled_by_filter_lists": {
+      "message": "AdBlock jest wy\u0142\u0105czony na tej stronie przez jedn\u0105 z list filtr\u00F3w."
+   },
+   "disabled_on_this_page": {
+      "message": "AdBlock jest wy\u0142\u0105czony na tej stronie."
+   },
+   "doesntmatchoriginal": {
+      "message": "Podany wz\u00F3r nie pasuje do elementu kt\u00F3ry pr\u00F3bowa\u0142e\u015B zablokowa\u0107! Kontynuowa\u0107?"
+   },
+   "done": {
+      "message": "zako\u0144czone."
+   },
+   "dont_run_on_pages_on_domain": {
+      "message": "Wstrzymaj blokowanie na stronach w tej domenie"
+   },
+   "dont_run_on_this_page": {
+      "message": "Wstrzymaj blokowanie na tej stronie"
+   },
+   "enable": {
+      "message": "w\u0142\u0105czone"
+   },
+   "excludedomainorurl": {
+      "message": "Domena lub URL gdzie AdBlock nie powinien niczego blokowa\u0107"
+   },
+   "excludefilterremoved": {
+      "message": "Filtr zosta\u0142 usuni\u0119ty. Od\u015Bwie\u017C oryginaln\u0105 stron\u0119, aby wygenerowa\u0107 list\u0119 element\u00F3w."
+   },
+   "failedtofetchfilter": {
+      "message": "Pobieranie listy filtr\u00F3w nie powiod\u0142o si\u0119!"
+   },
+   "faq": {
+      "message": "FAQ"
+   },
+   "fetchinglabel": {
+      "message": "Pobieram subskrypcj\u0119... prosz\u0119 czeka\u0107."
+   },
+   "filecleanerwarning": {
+      "message": "Je\u015Bli widzisz t\u0105 wiadomo\u015B\u0107 przy ka\u017Cdym uruchomieniu AdBlocka, upewnij si\u0119, \u017Ce nie korzystasz z czyszczenia plik\u00F3w, kt\u00F3re czy\u015Bci r\u00F3wnie\u017C 'localStorage'."
+   },
+   "filteradblock_custom": {
+      "message": "AdBlock custom filters (zalecane)"
+   },
+   "filterchinese": {
+      "message": " - dodatkowe Chi\u0144skie filtry"
+   },
+   "filterczech": {
+      "message": "Czeskie filtry"
+   },
+   "filterdanish": {
+      "message": "Du\u0144skie filtry"
+   },
+   "filterdutch": {
+      "message": " - dodatkowe Holenderskie filtry"
+   },
+   "filtereasylist": {
+      "message": "EasyList (zalecane)"
+   },
+   "filtereasylist_plun_korean": {
+      "message": "Korea\u0144skie filtry"
+   },
+   "filtereasylist_plus_bulgarian": {
+      "message": " - dodatkowe Bu\u0142garskie filtry"
+   },
+   "filtereasylist_plus_finnish": {
+      "message": " - dodatkowe Fi\u0144skie filtry"
+   },
+   "filtereasylist_plus_french": {
+      "message": " - dodatkowe Francuskie filtry"
+   },
+   "filtereasylist_plus_german": {
+      "message": " - dodatkowe Niemieckie filtry"
+   },
+   "filtereasylist_plus_greek": {
+      "message": " - dodatkowe Greckie filtry"
+   },
+   "filtereasylist_plus_polish": {
+      "message": " - dodatkowe Polskie filtry"
+   },
+   "filtereasylist_plus_romanian": {
+      "message": " - dodatkowe Rumu\u0144skie filtry"
+   },
+   "filtereasylist_plus_spanish": {
+      "message": "Hiszpa\u0144skie filtry"
+   },
+   "filtereasyprivacy": {
+      "message": "EasyPrivacy (ochrona prywatno\u015Bci)"
+   },
+   "filterhasbeenadded": {
+      "message": "Filtr zosta\u0142 dodany!\nOd\u015Bwie\u017C stron\u0119, aby zobaczy\u0107 rezultat!"
+   },
+   "filterhungarian": {
+      "message": "W\u0119gierskie filtry"
+   },
+   "filterisraeli": {
+      "message": "Izraelskie filtry"
+   },
+   "filteritalian": {
+      "message": "W\u0142oskie filtry"
+   },
+   "filterjapanese": {
+      "message": "Japo\u0144skie filtry"
+   },
+   "filterlistlink": {
+      "message": "Nie subskrybuj wi\u0119kszej ilo\u015Bci list ni\u017C potrzebujesz, ka\u017Cda troch\u0119 spowalnia przegl\u0105dark\u0119! Wi\u0119cej list mo\u017Cna znale\u017A\u0107 \u003Ca\u003Etutaj\u003C/a\u003E."
+   },
+   "filterlistsrock": {
+      "message": "Listy filtr\u00F3w blokuj\u0105 wi\u0119kszo\u015B\u0107 reklam.  Mo\u017Cesz r\u00F3wnie\u017C:"
+   },
+   "filterorigin": {
+      "message": "\u0179r\u00F3d\u0142o filtra:\n$list$",
+      "placeholders": {
+         "list": {
+            "content": "$1"
+         }
+      }
+   },
+   "filterrussian": {
+      "message": " - dodatkowe Rosyjskie i Ukrai\u0144skie filtry"
+   },
+   "filtersavewarning": {
+      "message": "Uwaga: je\u015Bli pope\u0142nisz b\u0142\u0105d, mo\u017Ce on zablokowa\u0107 inne filtry, tak\u017Ce te oficjalne!\u003Cbr/\u003EPrzeczytaj \u003Ca\u003Eporadnik tworzenia sk\u0142adni filtr\u00F3w\u003C/a\u003E aby nauczy\u0107 si\u0119 jak dodawa\u0107 zaawansowane wpisy do czarnej i bia\u0142ej listy filtr\u00F3w.."
+   },
+   "filterstabtitle": {
+      "message": "Listy filtr\u00F3w do subskrypcji"
+   },
+   "findingads": {
+      "message": "Wyszukuj\u0119 reklamy...\u003Cbr/\u003E\u003Cbr/\u003E\u003Ci\u003ETo potrwa tylko chwil\u0119.\u003C/i\u003E"
+   },
+   "firefox_explanation": {
+      "message": "Celem tego pytania jest ustalenie kto powinien otrzyma\u0107 tw\u00F3j raport. Je\u015Bli odpowiesz b\u0142\u0119dnie na to pytanie to raport zostanie wys\u0142any do niew\u0142a\u015Bciwych os\u00F3b, wi\u0119c mo\u017Ce zosta\u0107 zignorowany."
+   },
+   "fixityourself": {
+      "message": "OK, mo\u017Cesz zablokowa\u0107 reklam\u0119 tylko dla siebie na stronie opcji. Dzi\u0119ki!"
+   },
+   "flashads": {
+      "message": "Filmy i Flash"
+   },
+   "for_more_options_right_click": {
+      "message": "Aby uzyska\u0107 wi\u0119cej opcji, musisz klikn\u0105\u0107 prawym przyciskiem na stronie lub klikn\u0105\u0107 przycisk $img$ na pasku narz\u0119dzi.",
+      "placeholders": {
+         "img": {
+            "content": "\u003Cimg src=\"../../img/icon19.png\"/\u003E"
+         }
+      }
+   },
+   "format_site1_site2_site3": {
+      "message": "Format: ~site1.com|~site2.com|~news.site3.org"
+   },
+   "generaloptions": {
+      "message": "Opcje og\u00F3lne"
+   },
+   "googletextads": {
+      "message": "Lubi\u0119 reklamy tekstowe na li\u015Bcie wynik\u00F3w wyszukiwania Google, pokazuj mi je."
+   },
+   "headerfilter": {
+      "message": "Dobrany filtr"
+   },
+   "headerresource": {
+      "message": "Element"
+   },
+   "headertype": {
+      "message": "Typ"
+   },
+   "help": {
+      "message": "Pomoc"
+   },
+   "hide_this_button": {
+      "message": "Ukryj przycisk"
+   },
+   "how_to_use_adblock": {
+      "message": "Jak korzysta\u0107 z AdBlocka:"
+   },
+   "installedtitle": {
+      "message": "AdBlock zosta\u0142 zainstalowany!"
+   },
+   "installing_adblock": {
+      "message": "Instalowanie AdBlocka..."
+   },
+   "invalidListUrl": {
+      "message": "Nieprawid\u0142owy adres URL listy. Zostanie skasowany."
+   },
+   "labelshow": {
+      "message": "poka\u017C"
+   },
+   "lang_bulgarian": {
+      "message": "Bu\u0142garskim"
+   },
+   "lang_chinese": {
+      "message": "Chi\u0144skim"
+   },
+   "lang_czech": {
+      "message": "Czeskim"
+   },
+   "lang_danish": {
+      "message": "Du\u0144skim"
+   },
+   "lang_dutch": {
+      "message": "Holenderskim"
+   },
+   "lang_english": {
+      "message": "Angielskim"
+   },
+   "lang_finnish": {
+      "message": "Fi\u0144skim"
+   },
+   "lang_french": {
+      "message": "Francuskim"
+   },
+   "lang_german": {
+      "message": "Niemieckim"
+   },
+   "lang_greek": {
+      "message": "Greckim"
+   },
+   "lang_hungarian": {
+      "message": "W\u0119gierskim"
+   },
+   "lang_israeli": {
+      "message": "Izraelskim"
+   },
+   "lang_italian": {
+      "message": "W\u0142oskim"
+   },
+   "lang_japanese": {
+      "message": "Japo\u0144skim"
+   },
+   "lang_korean": {
+      "message": "Korea\u0144skim"
+   },
+   "lang_polish": {
+      "message": "Polskim"
+   },
+   "lang_romanian": {
+      "message": "Rumu\u0144skim"
+   },
+   "lang_russian": {
+      "message": "Rosyjskim"
+   },
+   "lang_spanish": {
+      "message": "Hiszpa\u0144skim"
+   },
+   "lang_ukranian": {
+      "message": "Ukrai\u0144skim"
+   },
+   "last_update_failed": {
+      "message": "Ostatnia aktualizacja nie powiod\u0142a si\u0119; "
+   },
+   "linkblockadbyurl": {
+      "message": "Zablokuj reklam\u0119 poprzez jej adres URL"
+   },
+   "linkhidesection": {
+      "message": "Ukryj cz\u0119\u015B\u0107 strony"
+   },
+   "linkunblock": {
+      "message": "Pokazuj reklamy na stronie lub domenie"
+   },
+   "loading": {
+      "message": "\u0141ADOWANIE..."
+   },
+   "manualfilteredit": {
+      "message": "R\u0119czna edycja w\u0142asnych filtr\u00F3w:"
+   },
+   "maybemalware": {
+      "message": "Nie wszystkie strony w sieci zawieraj\u0105 reklamy. Fakt, \u017Ce widzisz ich tak wiele mo\u017Ce oznacza\u0107, \u017Ce posiadasz na komputerze jakie\u015B niechciane oprogramowanie. Spr\u00F3buj wy\u0142\u0105czy\u0107 wszystkie rozszerzenia jedno po drugim, aby zobaczy\u0107 czy problem zniknie. Je\u015Bli nie, spr\u00F3buj uruchomi\u0107 skanowanie(pe\u0142ne) systemu aktualnym oprogramowaniem antywirusowym, poniewa\u017C mo\u017Ce to by\u0107 spowodowane przez malware."
+   },
+   "modifydomain": {
+      "message": "Domena:"
+   },
+   "modifypath": {
+      "message": "Strona:"
+   },
+   "multipledomainshint": {
+      "message": "Oddziel wiele domen z przecinkami lub spacjami"
+   },
+   "nextstep": {
+      "message": "Nast\u0119pny krok"
+   },
+   "no": {
+      "message": "Nie"
+   },
+   "nodefaultfilter1": {
+      "message": "Nie mamy domy\u015Blnej listy filtr\u00F3w dla tego j\u0119zyka.\u003Cbr/\u003ESpr\u00F3buj znale\u017A\u0107 odpowiedni\u0105 list\u0119 dla tego j\u0119zyka $link$ albo zablokuj t\u0105 reklam\u0119 dla siebie poprzez zak\u0142adk\u0119 'Dostosuj' na stronie opcji.",
+      "placeholders": {
+         "link": {
+            "content": "$1here$2"
+         }
+      }
+   },
+   "noresourcessend2": {
+      "message": "Co\u015B posz\u0142o nie tak. \u017Badne zasoby nie zosta\u0142y wys\u0142ane. Ta strona zostanie zamkni\u0119ta. Spr\u00F3buj za\u0142adowa\u0107 stron\u0119 ponownie."
+   },
+   "nosearchresults": {
+      "message": "Nie znaleziono element\u00F3w"
+   },
+   "novalidurlpattern": {
+      "message": "Prosz\u0119 wpisa\u0107 prawid\u0142owy URL pasuj\u0105cy do wzorca!"
+   },
+   "now_you_have_adblock_hooray": {
+      "message": "Masz teraz AdBlocka!"
+   },
+   "oneverysitetitle": {
+      "message": "Wsz\u0119dzie reklamy!"
+   },
+   "only_block_ads_on_these_sites": {
+      "message": "Blokuj reklamy tylko na tych stronach:"
+   },
+   "onlyondomains": {
+      "message": "TYLKO strony w tych domenach:"
+   },
+   "onlyresourcetypes": {
+      "message": "Filtr ma zastosowanie do tego typu element\u00F3w:"
+   },
+   "opera_120_install": {
+      "message": "W starszych wersjach Opery ni\u017C 12.10 niekt\u00F3re reklamy mog\u0105 nie by\u0107 zablokowane, poniewa\u017C nie jest mo\u017Cliwe analizowanie wszystkich zasad w tych wersjach. Problem zostanie rozwi\u0105zany po aktualizacji Opery do wersji 12.10. Od tego momentu wszystkie reklamy b\u0119d\u0105 poprawnie blokowane."
+   },
+   "opera_120_options": {
+      "message": "W starszych wersjach Opery ni\u017C 12.10 niekt\u00F3re opcje s\u0105 nieaktywne, poniewa\u017C nie s\u0105 obs\u0142ugiwane w tych wersjach."
+   },
+   "opera_allow_secure": {
+      "message": "Aby u\u017Cywa\u0107 AdBlocka na bezpiecznych stronach (stronach z ikon\u0105 k\u0142\u00F3dki na pasku narz\u0119dzi) musisz najpierw w\u0142\u0105czy\u0107 opcj\u0119, aby umo\u017Cliwi\u0107 rozszerzeniu dost\u0119p do bezpiecznych stron."
+   },
+   "opera_can_also_change_setting": {
+      "message": "Mo\u017Cesz r\u00F3wnie\u017C zwi\u0119kszy\u0107 warto\u015B\u0107\n $setting$",
+      "placeholders": {
+         "setting": {
+            "content": "$1"
+         }
+      }
+   },
+   "opera_donations_button": {
+      "message": "Podoba Ci si\u0119 to rozszerzenie? Je\u015Bli tak, prosz\u0119 rozwa\u017C dotacj\u0119 na stronie opcji!"
+   },
+   "opera_donations_install": {
+      "message": "Je\u015Bli naprawd\u0119 podoba Ci si\u0119 to rozszerzenie, prosz\u0119 rozwa\u017C dotacj\u0119 za po\u015Brednictwem strony opcji."
+   },
+   "opera_enabledin": {
+      "message": "W\u0142\u0105czono w $browserversion$",
+      "placeholders": {
+         "browserversion": {
+            "content": "$1"
+         }
+      }
+   },
+   "opera_excludedomainorurl": {
+      "message": "Domena na kt\u00F3rej AdBlock nie powinien niczego blokowa\u0107"
+   },
+   "opera_for_more_options": {
+      "message": "Aby zobaczy\u0107 wi\u0119cej opcji, mo\u017Cesz klikn\u0105\u0107 przycisk na pasku narz\u0119dzi lub otworzy\u0107 preferencje poprzez Opera &rArr; Rozszerzenia &rArr; Zarz\u0105dzaj Rozszerzeniami &rArr; ikona klucza &rArr; Preferencje"
+   },
+   "opera_linkunblock": {
+      "message": "Pokazuj reklamy w domenie"
+   },
+   "opera_reenable_button": {
+      "message": "Mo\u017Cesz ponownie w\u0142\u0105czy\u0107 przycisk w preferencjach rozszerzenia"
+   },
+   "opera_secure_pages": {
+      "message": "Bezpieczne strony"
+   },
+   "opera_secure_pages_enabled": {
+      "message": "Kliknij Rozszerzenia (w menu) &rArr; Zarz\u0105dzaj rozszerzeniami &rArr; sp\u00F3jrz na AdBlock i kliknij ikon\u0119 klucza obok niego &rArr; kliknij Prywatno\u015B\u0107.\u003Cbr/\u003EOpcja 'Zezwalaj na uruchamianie na stronach zabezpieczonych' jest w\u0142\u0105czona?"
+   },
+   "opera_show_toolbar_button": {
+      "message": "Poka\u017C przycisk na pasku narz\u0119dzi"
+   },
+   "options": {
+      "message": "Opcje"
+   },
+   "optionschangelog": {
+      "message": "Lista zmian"
+   },
+   "optionstitle": {
+      "message": "Opcje"
+   },
+   "optionsversion": {
+      "message": "Wersja $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "orenteraurl": {
+      "message": "Lub podaj adres URL:"
+   },
+   "other": {
+      "message": "Innym"
+   },
+   "pagelanguagecheck": {
+      "message": "W jakim j\u0119zyku jest napisana ta strona?"
+   },
+   "pause_adblock": {
+      "message": "Wstrzymaj blokowanie"
+   },
+   "project_home": {
+      "message": "Strona projektu"
+   },
+   "refusetocheck": {
+      "message": "Nie chc\u0119 tego sprawdza\u0107."
+   },
+   "reloadadpage": {
+      "message": "Od\u015Bwie\u017C stron\u0119 z reklam\u0105."
+   },
+   "removefromlist": {
+      "message": "Usu\u0144 list\u0119 filtr\u00F3w"
+   },
+   "removelabel": {
+      "message": "Usu\u0144"
+   },
+   "report_ad_on_page": {
+      "message": "Zg\u0142o\u015B reklam\u0119 na stronie"
+   },
+   "reportfilterlistproblem": {
+      "message": "To jest problem list filtr\u00F3w. Zg\u0142o\u015B go tutaj: $link$",
+      "placeholders": {
+         "link": {
+            "content": "$1"
+         }
+      }
+   },
+   "reportpubliclyavailable": {
+      "message": "Informacja: tw\u00F3j raport b\u0119dzie dost\u0119pny publicznie. Pami\u0119taj, \u017Ceby nie zamieszcza\u0107 w nim niczego prywatnego."
+   },
+   "reporttous2": {
+      "message": "Mo\u017Cesz zg\u0142osi\u0107 nam reklam\u0119 w \u003Ca\u003Esystemie \u015Bledzenia b\u0142\u0119d\u00F3w\u003C/a\u003E."
+   },
+   "resourceblocklegend1": {
+      "message": "Legenda:"
+   },
+   "resourceblocklegend2": {
+      "message": "zablokowane elementy"
+   },
+   "resourceblocklegend3": {
+      "message": "bia\u0142a lista element\u00F3w"
+   },
+   "resourceblocklegend4": {
+      "message": "element mo\u017Cliwy do zablokowania"
+   },
+   "resourceblocklegend5": {
+      "message": "regu\u0142y ukrywania"
+   },
+   "resourceblocktitle": {
+      "message": "Zablokuj element"
+   },
+   "resourcedomain": {
+      "message": "Za\u0142adowano na stronie z domeny:\n$domain$",
+      "placeholders": {
+         "domain": {
+            "content": "$1"
+         }
+      }
+   },
+   "resourceiswhitelisted": {
+      "message": "Wybrany element zosta\u0142 dodany do bia\u0142ej listy. Dlatego nie mo\u017Cesz go zablokowa\u0107."
+   },
+   "retryaftersubscribe": {
+      "message": "Subskrybuj t\u0119 list\u0119 filtr\u00F3w i spr\u00F3buj ponownie: $list_title$",
+      "placeholders": {
+         "list_title": {
+            "content": "$1"
+         }
+      }
+   },
+   "safari50_updatenotice": {
+      "message": "U\u017Cywasz starej wersji Safari. Pobierz najnowsz\u0105 wersj\u0119 Safari, aby m\u00F3c za pomoc\u0105 przycisku na pasku narz\u0119dzi wstrzyma\u0107 prac\u0119 AdBlocka, doda\u0107 stron\u0119 do bia\u0142ej listy i zg\u0142osi\u0107 napotkane reklamy. \u003Ca\u003EAktualizuj teraz\u003C/a\u003E."
+   },
+   "savebutton": {
+      "message": "Zapisz"
+   },
+   "savereminder": {
+      "message": "Nie zapomnij zapisa\u0107!"
+   },
+   "searchexplanation": {
+      "message": "U\u017Cyj * aby dopasowa\u0107 zero lub wi\u0119cej liter.  Dla przyk\u0142adu 'banner*.gif image' pasuje do obraz\u00F3w 'banner.gif', 'banner123.gif', i 'bannerxyz.gif'."
+   },
+   "searchplaceholder": {
+      "message": "Szukanie element\u00F3w..."
+   },
+   "seeing_this_every_time_you_start_your_browser": {
+      "message": "Widzisz to przy ka\u017Cdym uruchomieniu przegl\u0105darki?"
+   },
+   "selectresources": {
+      "message": "Wybierz element kt\u00F3ry chcesz zablokowa\u0107 lub odblokowa\u0107"
+   },
+   "show_ads_except_for": {
+      "message": "Pokazuj reklamy \u003Ci\u003Ewsz\u0119dzie\u003C/i\u003E z wyj\u0105tkiem tych domen..."
+   },
+   "show_resourcelist": {
+      "message": "Poka\u017C list\u0119 element\u00F3w"
+   },
+   "showcontextmenus": {
+      "message": "Dodaj pozycj\u0119 do menu pod prawym przyciskiem."
+   },
+   "showlinkstolists": {
+      "message": "Poka\u017C linki do list filtr\u00F3w:"
+   },
+   "sliderexplanation": {
+      "message": "Przeci\u0105gaj suwak dop\u00F3ki reklama nie zostanie w\u0142a\u015Bciwie zablokowana, a inne elementy witryny pozostan\u0105 nienaruszone."
+   },
+   "slidertitle": {
+      "message": "Krok 1: Okre\u015Bl co zablokowa\u0107"
+   },
+   "status_disabled": {
+      "message": "AdBlock nie mo\u017Ce dzia\u0142a\u0107 na tej domenie."
+   },
+   "status_paused": {
+      "message": "Blokowanie jest wstrzymane."
+   },
+   "stop_blocking_ads": {
+      "message": "Zatrzymaj blokowanie reklam:"
+   },
+   "storage_quota_exceeded": {
+      "message": "Przekroczono ilo\u015B\u0107 pami\u0119ci z jakiej AdBlock mo\u017Ce korzysta\u0107.. Prosz\u0119 anulowa\u0107 subskrypcje niekt\u00F3rych list filtr\u00F3w!"
+   },
+   "subscribe_unsubscribe_all": {
+      "message": "$subscribe$ wszystkie listy lub $unsubscribe$.",
+      "placeholders": {
+         "subscribe": {
+            "content": "\u003Ca href='#' id='subscribeAll'\u003ESubskrybuj\u003C/a\u003E"
+         },
+         "unsubscribe": {
+            "content": "\u003Ca href='#' id='unsubscribeAll'\u003Eanuluj wszystkie subskrypcje\u003C/a\u003E"
+         }
+      }
+   },
+   "subscribebutton": {
+      "message": "Subskrybuj"
+   },
+   "subscribingfailed": {
+      "message": "Niepowodzenie!"
+   },
+   "subscribingfinished": {
+      "message": "Zako\u0144czone!"
+   },
+   "subscribingtitle": {
+      "message": "Subskrybuj\u0119 list\u0119 filtr\u00F3w..."
+   },
+   "tabcustomize": {
+      "message": "Dostosuj"
+   },
+   "tabcustomizetitle": {
+      "message": "Dostosuj AdBlocka"
+   },
+   "tabfilterlists": {
+      "message": "Listy filtr\u00F3w"
+   },
+   "tabgeneral": {
+      "message": "Og\u00F3lne"
+   },
+   "thats_it": {
+      "message": "Gotowe!"
+   },
+   "thirdparty": {
+      "message": "zasoby zewn\u0119trzne"
+   },
+   "thirdpartycheckbox": {
+      "message": "Na ka\u017Cdej stronie OPR\u00D3CZ stron z domeny  $domain$",
+      "placeholders": {
+         "domain": {
+            "content": "$1"
+         }
+      }
+   },
+   "translator_credit": {
+      "message": "Przet\u0142umaczy\u0142: $translator_names$",
+      "placeholders": {
+         "translator_names": {
+            "content": "Izokrex(Andrzej W.)"
+         }
+      }
+   },
+   "typehiding": {
+      "message": "ukryj"
+   },
+   "typeimage": {
+      "message": "obraz"
+   },
+   "typemedia": {
+      "message": "audio/wideo"
+   },
+   "typeobject": {
+      "message": "obiekt interaktywny"
+   },
+   "typeobject_subrequest": {
+      "message": "object_subrequest"
+   },
+   "typeother": {
+      "message": "inne"
+   },
+   "typepage": {
+      "message": "strona"
+   },
+   "typepopup": {
+      "message": "popup"
+   },
+   "typescript": {
+      "message": "skrypt"
+   },
+   "typestylesheet": {
+      "message": "css"
+   },
+   "typesubdocument": {
+      "message": "ramka"
+   },
+   "typeunknown": {
+      "message": "nieznane"
+   },
+   "typexmlhttprequest": {
+      "message": "xmlhttprequest"
+   },
+   "undo_last_block": {
+      "message": "Odblokuj ostatni element"
+   },
+   "unpause": {
+      "message": "wzn\u00F3w blokowanie"
+   },
+   "unsubscribedlabel": {
+      "message": "Anulowano subskrypcje."
+   },
+   "updateddayago": {
+      "message": "zaktualizowano 1 dzie\u0144 temu"
+   },
+   "updateddaysago": {
+      "message": "ilo\u015B\u0107 dni od aktualizacji: $days$",
+      "placeholders": {
+         "days": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedhourago": {
+      "message": "zaktualizowano 1 godzin\u0119 temu"
+   },
+   "updatedhoursago": {
+      "message": "ilo\u015B\u0107 godzin od aktualizacji: $hours$",
+      "placeholders": {
+         "hours": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedminuteago": {
+      "message": "zaktualizowano 1 minut\u0119 temu"
+   },
+   "updatedminutesago": {
+      "message": "ilo\u015B\u0107 minut od aktualizacji: $minutes$",
+      "placeholders": {
+         "minutes": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedrightnow": {
+      "message": "W\u0142a\u015Bnie zaktualizowano"
+   },
+   "updatedsecondsago": {
+      "message": "ilo\u015B\u0107 sekund od aktualizacji: $seconds$",
+      "placeholders": {
+         "seconds": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatefromoldversion": {
+      "message": "Korzystasz ze starej wersji AdBlocka. Najpierw $updatelink$ go do najnowszej wersji",
+      "placeholders": {
+         "updatelink": {
+            "content": "$1zaktualizuj$2"
+         }
+      }
+   },
+   "updatenowmessage": {
+      "message": "Aktualizacje s\u0105 pobierane automatycznie; mo\u017Cesz r\u00F3wnie\u017C klikn\u0105\u0107 przycisk: \u003Ca\u003EAktualizuj\u003C/a\u003E."
+   },
+   "updateyourlists": {
+      "message": "Upewnij si\u0119, \u017Ce twoje listy filtr\u00F3w s\u0105 aktualne"
+   },
+   "warning_overrules_filters": {
+      "message": "Uwaga: na wszystkich innych stronach b\u0119dziesz widzie\u0107 reklamy!\u003Cbr\u003EUniewa\u017Cnia to wszystkie inne filtry dla tych stron."
+   },
+   "whitelistertitle2": {
+      "message": "Nie w\u0142\u0105czaj blokowania na..."
+   },
+   "whitelisteverycontaining": {
+      "message": "Nie blokuj \u017Cadnego elementu zawieraj\u0105cego:"
+   },
+   "wildcardhint": {
+      "message": "Uwaga: mo\u017Cesz u\u017Cy\u0107 tutaj * jako wieloznacznika"
+   },
+   "work_around_hulu_problems": {
+      "message": "Obej\u015Bcie problemu niedzia\u0142aj\u0105cych film\u00F3w na hulu.com (wymaga ponownego uruchomienia przegl\u0105darki)"
+   },
+   "yes": {
+      "message": "Tak"
+   },
+   "you_can_slide_to_change": {
+      "message": "Mo\u017Cesz przesun\u0105\u0107 poni\u017Cej, aby dok\u0142adnie okre\u015Bli\u0107 na jakich stronach AdBlock ma by\u0107 wy\u0142\u0105czony."
+   },
+   "you_know_thats_a_bad_idea_right": {
+      "message": "Zbyt wiele subskrybowanych list mo\u017Ce spowolni\u0107 prac\u0119 AdBlocka. Korzystanie ze zbyt wielu list mo\u017Ce doprowadzi\u0107 nawet do crashu przegl\u0105darki na niekt\u00F3rych stronach. Naci\u015Bnij przycisk OK aby mimo tego subskrybowa\u0107 t\u0105 list\u0119."
+   }
+}

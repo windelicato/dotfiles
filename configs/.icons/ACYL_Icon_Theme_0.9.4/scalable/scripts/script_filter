@@ -1,0 +1,746 @@
+#!/bin/bash
+
+#Funktions for returning the wood filter.
+#   $1 is the return parameter.
+function filter_wood {
+	temp='<filter
+     id="filter1111"
+       inkscape:label="wood"
+     height="1.7"
+     y="-0.30000001"
+     width="1.2"
+     x="-0.1"
+     color-interpolation-filters="sRGB">
+    <feGaussianBlur
+       id="feGaussianBlur2819"
+       result="result8"
+       stdDeviation="4" />
+    <feTurbulence
+       id="feTurbulence2821"
+       baseFrequency="0.015000000000000003 0.40000000000000002"
+       numOctaves="10"
+       type="fractalNoise"
+       result="result7"
+       seed="22" />
+    <feComposite
+       id="feComposite2823"
+       in2="result8"
+       operator="in"
+       in="SourceGraphic"
+       result="result6"
+       k1="0.25742574257425765" />
+    <feDisplacementMap
+       id="feDisplacementMap2825"
+       in2="result6"
+       result="result4"
+       scale="4"
+       yChannelSelector="A"
+       xChannelSelector="A"
+       in="result7" />
+    <feFlood
+       id="feFlood2827"
+       flood-color="rgb(230,211,138)"
+       flood-opacity="1"
+       in="result4"
+       result="result9" />
+    <feComposite
+       id="feComposite2829"
+       in2="result4"
+       operator="out"
+       result="result2" />
+    <feComposite
+       id="feComposite2831"
+       operator="atop"
+       in="result2"
+       result="result9"
+       in2="SourceGraphic" />
+    <feComposite
+       id="feComposite2839"
+       in2="result9"
+       operator="in"
+       result="result2" />
+    <feComposite
+       id="feComposite2841"
+       in2="result2"
+       k3="2.7755575615628914e-17"
+       k2="0.89999999999999991"
+       operator="arithmetic"
+       result="result4"
+       in="result9"
+       k1="0.30000000000000004"
+       k4="0" />
+  </filter>
+<use id="1" style="fill:url(#acyl_gradient);filter:url(#filter1111)" xlink:href="#path-main" />'
+	eval "$1='$temp'"
+}
+
+#Function for returning the glass filter.
+#   $1 is the return parameter.
+function filter_glass {
+	temp='<filter
+     x="-0.5"
+     y="-0.5"
+     width="2"
+     height="2"
+     color-interpolation-filters="sRGB"
+     id="filter1111"
+       inkscape:label="glass">
+    <feGaussianBlur
+       result="result1"
+       stdDeviation="1.5"
+       id="feGaussianBlur4501" />
+    <feGaussianBlur
+       result="result6"
+       stdDeviation="1.8"
+       id="feGaussianBlur4503"
+       in="SourceGraphic" />
+    <feComposite
+       in2="result1"
+       operator="atop"
+       in="result6"
+       result="result8"
+       id="feComposite4505" />
+    <feComposite
+       in2="result8"
+       operator="xor"
+       in="result6"
+       result="fbSourceGraphic"
+       id="feComposite4507" />
+    <feColorMatrix
+       values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 2 0 "
+       in="fbSourceGraphic"
+       result="fbSourceGraphicAlpha"
+       id="feColorMatrix4509" />
+    <feGaussianBlur
+       stdDeviation="1"
+       result="result0"
+       id="feGaussianBlur4511" />
+    <feSpecularLighting
+       in="result0"
+       result="result1"
+       lighting-color="#B7B7B7"
+       surfaceScale="-2"
+       specularConstant="1.5"
+       specularExponent="35"
+       id="feSpecularLighting4513">
+      <feDistantLight
+         elevation="60"
+         azimuth="230"
+         id="feDistantLight4515" />
+    </feSpecularLighting>
+    <feComposite
+       in2="fbSourceGraphicAlpha"
+       operator="in"
+       in="result1"
+       result="result2"
+       id="feComposite4517" />
+    <feComposite
+       in2="result2"
+       operator="arithmetic"
+       k1="0.4"
+       k2="0.5"
+       k3="0.6"
+       k4="0"
+       in="fbSourceGraphic"
+       result="result4"
+       id="feComposite4519" />
+    <feComposite
+       in2="result4"
+       operator="atop"
+       result="result91"
+       id="feComposite4521" />
+    <feBlend
+       in2="result91"
+       mode="normal"
+       id="feBlend4523"
+       result="result92" />
+    <feTurbulence
+       id="feTurbulence2856"
+       result="result93"
+       baseFrequency="0.1"
+       type="fractalNoise"
+       numOctaves="1"
+       seed="0"
+       in="SourceGraphic" />
+    <feOffset
+       dx="0"
+       dy="0"
+       id="feOffset2910"
+       in="SourceGraphic"
+       result="result96" />
+    <feComposite
+       id="feComposite2914"
+       in2="result93"
+       operator="arithmetic"
+       k1="0.20"
+       k2="0.15"
+       k3="0" />
+    <feComposite
+       id="feComposite2858"
+       result="result94"
+       operator="in"
+       in2="SourceGraphic" />
+    <feComposite
+       id="feComposite2868"
+       in2="result92"
+       result="result95"
+       operator="xor" />
+  </filter>
+<use id="1" style="fill:url(#acyl_gradient);filter:url(#filter1111)" xlink:href="#path-main" />'
+	eval "$1='$temp'"
+}
+
+#Function for returning the paper filter.
+#   $1 is the return parameter.
+#   $2 is the border color.
+#   $3 is the border opacity;
+function filter_paper {
+	temp='<filter
+       id="filter1111"
+       inkscape:label="paper"
+       y="-1"
+       height="3"
+       x="-1"
+       width="3"
+       color-interpolation-filters="sRGB">
+      <feTurbulence
+         id="feTurbulence3973"
+         type="fractalNoise"
+         baseFrequency="0.059060402684563765"
+         numOctaves="5"
+         seed="0"
+         result="result4" />
+      <feDisplacementMap
+         id="feDisplacementMap3975"
+         in2="result4"
+         in="SourceGraphic"
+         yChannelSelector="A"
+         xChannelSelector="A"
+         scale="4"
+         result="result3" />
+      <feDiffuseLighting
+         id="feDiffuseLighting3977"
+         lighting-color="rgb(233,230,215)"
+         diffuseConstant="1"
+         surfaceScale="2"
+         result="result1"
+         in="result4">
+        <feDistantLight
+           id="feDistantLight3979"
+           azimuth="190"
+           elevation="37" />
+      </feDiffuseLighting>
+      <feComposite
+         id="feComposite3981"
+         in2="result1"
+         operator="in"
+         in="result3"
+         result="result2" />
+      <feComposite
+         id="feComposite3983"
+         in2="result1"
+         result="result5"
+         operator="arithmetic"
+         k1="1.7" />
+      <feBlend
+         id="feBlend3985"
+         in2="result3"
+         in="result5"
+         mode="normal"
+         result="result7" />
+      <feMorphology
+         id="feMorphology3987"
+         in="result7"
+         result="result6"
+         radius="1"
+         operator="dilate" />
+      <feFlood
+         id="feFlood2831"
+         flood-color="'$2'"
+         flood-opacity="'$3'" />
+      <feComposite
+         id="feComposite2833"
+         operator="atop"
+         in2="result6" />
+      <feComposite
+         id="feComposite3989"
+         operator="atop"
+         in="result7"
+         result="result10" />
+      <feComposite
+         id="feComposite2831"
+         in="result10"
+         in2="result7"
+         operator="xor" />
+      <feColorMatrix
+         result="result8"
+         values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 "
+         id="feColorMatrix2833" />
+      <feComposite
+         id="feComposite2835"
+         in="result10"
+         in2="result8"
+         result="result11" />
+    </filter>
+<use id="1" style="fill:url(#acyl_gradient);filter:url(#filter1111)" xlink:href="#path-main" />'
+	eval "$1='$temp'"
+}
+
+#Function for returning the cutout filter.
+#   $1 is the return parameter.
+function filter_cutout {
+	temp='<filter
+     id="filter1111"
+     inkscape:label="Cutout"
+     color-interpolation-filters="sRGB"
+     x="-0.1"
+     y="-0.1"
+     width="1.2"
+     height="1.2">
+    <feGaussianBlur
+       id="feGaussianBlur2834"
+       stdDeviation="3.6"
+       in="SourceAlpha"
+       result="result94" />
+    <feOffset
+       id="feOffset2836"
+       dy="3"
+       dx="3"
+       result="result91" />
+    <feComposite
+       id="feComposite2838"
+       operator="out"
+       result="result93"
+       in2="result91"
+       in="SourceGraphic" />
+    <feMerge
+       id="feMerge2854">
+      <feMergeNode
+         inkscape:collect="always"
+         id="feMergeNode2856"
+         in="result93" />
+    </feMerge>
+  </filter>
+<use id="1" style="fill:url(#acyl_gradient);filter:url(#filter1111)" xlink:href="#path-main" />'
+	eval "$1='$temp'"
+}
+
+#Function for returning the burshed metal filter.
+#   $1 is the return parameter.
+function filter_brushed_metal {
+	temp='<filter
+     label="brushed metal"
+     id="filter1111"
+     color-interpolation-filters="sRGB">
+    <feDiffuseLighting
+       diffuseConstant="0.44843048"
+       result="result1"
+       surfaceScale="16.20000076"
+       id="feDiffuseLighting3017">
+      <fePointLight
+         z="10000"
+         y="-20000"
+         x="0"
+         id="fePointLight3019" />
+    </feDiffuseLighting>
+    <feSpecularLighting
+       kernelUnitLength="0.01"
+       lighting-color="#ffffff"
+       in="result1"
+       result="result2"
+       specularConstant="0"
+       specularExponent="123.09742737"
+       surfaceScale="-19.1972084"
+       id="feSpecularLighting3021">
+      <fePointLight
+         z="99999"
+         y="0"
+         x="0"
+         id="fePointLight3023" />
+    </feSpecularLighting>
+    <feComposite
+       in="result1"
+       in2="SourceAlpha"
+       operator="in"
+       result="result6"
+       id="feComposite3025" />
+    <feComposite
+       result="result7"
+       operator="atop"
+       id="feComposite3027"
+       in="result2"
+       in2="result6" />
+    <feMorphology
+       id="feMorphology3029"
+       radius="0.5"
+       operator="erode"
+       in="SourceGraphic"
+       result="result6" />
+    <feComposite
+       id="feComposite3031"
+       operator="arithmetic"
+       k1="0.93"
+       k2="0.54373522"
+       k3="0.6855792"
+       k4="-0.07"
+       result="result5"
+       stdDeviation="0.10000000000000001"
+       radius="1.5"
+       in="result7"
+       in2="SourceGraphic" />
+    <feTurbulence
+       result="result6"
+       numOctaves="3"
+       baseFrequency="0.0050000000000000001 0.250"
+       id="feTurbulence3033"
+       seed="0" />
+    <feColorMatrix
+       result="result6"
+       type="matrix"
+       id="feColorMatrix3035"
+       values="1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0.6 " />
+    <feComposite
+       result="result6"
+       in="result6"
+       operator="in"
+       in2="result5"
+       id="feComposite3037"
+       k1="1.8493150684931514"
+       k2="0.75342465753424648"
+       k3="2.4315068493150687"
+       k4="0.20547945205479579" />
+    <feMerge
+       id="feMerge3039"
+       result="result8">
+      <feMergeNode
+         in="result5"
+         id="feMergeNode3041"
+         collect="always" />
+      <feMergeNode
+         inkscape:collect="always"
+         id="feMergeNode2842"
+         in="result6" />
+    </feMerge>
+  </filter>
+<use id="1" style="fill:url(#acyl_gradient);filter:url(#filter1111)" xlink:href="#path-main" />'
+	eval "$1='$temp'"
+}
+
+#Function for returning the flame filter.
+#   $1 is the return parameter.
+function filter_flame {
+	temp='    <filter
+       id="filter1111">
+      <feTurbulence
+         result="result1"
+         numOctaves="1"
+         baseFrequency="0.2 0.06"
+         type="turbulence"
+         id="feTurbulence4362" />
+      <feGaussianBlur
+         in="SourceGraphic"
+         result="result3"
+         id="feGaussianBlur4364"
+         stdDeviation="1.8" />
+      <feComposite
+         result="result2"
+         k4="0"
+         k3="0"
+         k2="0.30000000000000004"
+         k1="2.7755575615628914e-17"
+         operator="out"
+         id="feComposite4366"
+         in2="result1" />
+    </filter>
+<use id="1" style="fill:url(#acyl_gradient);filter:url(#filter1111)" xlink:href="#path-main" />'
+	eval "$1='$temp'"
+}
+
+#Function for returning the bevel filter.
+#   $1 is the return parameter.
+function filter_bevel {
+	temp='<filter id="filter1111" x="-50%" y="-50%" width="200%" height="200%">
+<feGaussianBlur in="SourceAlpha" stdDeviation="1" result="blur"/>
+<feOffset in="blur" dy="1"/>
+<feComposite in2="SourceAlpha" operator="arithmetic"
+k2="-1" k3="1" result="hl"/>
+<feFlood flood-color="white" flood-opacity="0.2"/>
+<feComposite in2="hl" operator="in" result="hl"/>
+<feMorphology in="SourceAlpha" radius="0" operator="dilate"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="0 1" result="drop"/>
+<feFlood flood-color="black" flood-opacity="1"/>
+<feComposite in2="drop" operator="in" result="drop"/>
+<feMerge>
+<feMergeNode in="drop"/>
+<feMergeNode in="SourceGraphic"/>
+<feMergeNode in="hl"/>
+</feMerge>
+</filter>
+<use id="1" style="fill:url(#acyl_gradient);filter:url(#filter1111)" xlink:href="#path-main" />'
+	eval "$1='$temp'"
+}
+
+#Function for returning the outline filter.
+#   $1 is the return parameter.
+function filter_outline {
+	temp='<filter id="filter1111" x="-50%" y="-50%" width="200%" height="200%">
+	<feImage
+	id="feImage2"
+	xlink:href="#1"
+	result="result1" />
+	<feComposite
+	id="feComposite3633"
+	in="result1"
+	in2="SourceAlpha"
+	operator="out" />
+</filter>
+<defs>
+<use id="1" transform="translate(22.5,22.5) scale(1) translate(-22.5,-22.5)" style="stroke-opacity:1;stroke:url(#acyl_gradient);stroke-width:4" xlink:href="#path-main" />
+</defs>
+<use id="2" transform="translate(22.5,22.5) scale(1) translate(-22.5,-22.5)" style="fill:url(#acyl_gradient);filter:url(#filter1111)" xlink:href="#path-main" />'
+	eval "$1='$temp'"
+}
+
+#Function for returning the Quadratic filter.
+#   $1 is the return parameter.
+#   $2 is the secondary color.
+#   $3 is the secondary opacity;
+function filter_quadratic {
+	temp='<filter id="filter1111" x="-50%" y="-50%" width="200%" height="200%">
+	<feImage
+	id="feImage2"
+	xlink:href="#1"
+	result="result1" />
+	<feComposite
+	id="feComposite3633"
+	in="result1"
+	in2="SourceGraphic"
+	operator="xor" />
+</filter>
+	<rect
+	style="fill:'$2';fill-opacity:'$3';filter:url(#filter1111)"
+	id="rect2835"
+	width="48"
+	height="48"
+	x="0"
+	y="0"
+	rx="3.5"
+	ry="3.5" />
+	<rect
+	style="fill:url(#acyl_gradient);filter:url(#filter1111)"
+	id="rect2835"
+	width="44"
+	height="44"
+	x="2"
+	y="2"
+	rx="3.5"
+	ry="3.5" />
+<defs>
+<use id="1" transform="translate(22.5,22.5) scale(0.85) translate(-22.5,-22.5)" style="fill:#000000" xlink:href="#path-main" />
+</defs>
+	<use id="2" transform="translate(22.5,22.5) scale(0.85) translate(-22.5,-22.5)" style="fill:'$2';fill-opacity:'$3'" xlink:href="#path-main" />'
+	eval "$1='$temp'"
+}
+
+#Function for returning the Orb filter.
+#   $1 is the return parameter.
+#   $2 is the secondary color.
+#   $3 is the secondary opacity;
+function filter_orb {
+	temp='<linearGradient
+	id="linearGradient1">
+	<stop
+	style="stop-color:'$2';stop-opacity:'`echo 0.7*$3|bc`';"
+	offset="0"
+	id="stop1" />
+	<stop
+	style="stop-color:'$2';stop-opacity:0;"
+	offset="1"
+	id="stop2" />
+	</linearGradient>
+	<radialGradient
+	inkscape:collect="always"
+	xlink:href="#linearGradient1"
+	id="radialGradient1"
+	gradientUnits="userSpaceOnUse"
+	gradientTransform="translate(22.5,22.5) scale(1.6,1) translate(-22.5,-22.5)"
+	cx="24"
+	cy="40"
+	fx="24"
+	fy="40"
+	r="10" />
+	<radialGradient
+	inkscape:collect="always"
+	xlink:href="#linearGradient1"
+	id="radialGradient2"
+	gradientUnits="userSpaceOnUse"
+	gradientTransform="translate(22.5,22.5) scale(1.6,1) translate(-22.5,-22.5)"
+	cx="24"
+	cy="8"
+	fx="24"
+	fy="8"
+	r="12" />
+	<filter
+	id="filter1">
+	<feGaussianBlur
+	stdDeviation="4"
+	id="feGaussianBlur1" />
+	</filter>
+	<filter
+	id="filter2">
+	<feGaussianBlur
+	stdDeviation="0 1"
+	id="feGaussianBlur1" />
+	</filter>
+	<circle id="c" cx="24" cy="24" r="22" fill="none"/>
+	<use id="c1" transform="translate(22.5,22.5) scale(1) translate(-22.5,-21.5)" style="fill:'$2';fill-opacity:0.16;stroke:'$2';stroke-opacity:0.68;stroke-width:1;filter:url(#filter2)" xlink:href="#c" />
+	<use id="c2" transform="translate(22.5,22.5) scale(1) translate(-22.5,-21.5)" style="fill:url(#radialGradient1)" xlink:href="#c" />
+	<use id="c3" transform="translate(22.5,22.5) scale(1) translate(-22.5,-21.5)" style="fill:url(#radialGradient2)" xlink:href="#c" />
+	<use id="1" transform="translate(22.5,22.5) scale(0.6) translate(-22.5,-21.5)" style="fill:url(#acyl_gradient)" xlink:href="#path-main" />'
+	eval "$1='$temp'"
+}
+
+#Function for returning the Grungy filter.
+#   $1 is the return parameter.
+#   $2 is the secondary color.
+#   $3 is the secondary opacity;
+function filter_grungy {
+	temp='<filter id="filter1" x="-50%" y="-50%" width="200%" height="200%">
+<feTurbulence
+id="feTurbulence2927"
+baseFrequency="0.2"
+type="turbulence"
+result="result1"
+numOctaves="4" />
+<feColorMatrix
+id="feColorMatrix2931"
+type="luminanceToAlpha"
+result="result2" />
+<feMorphology
+id="feMorphology2947"
+radius="0 10"
+operator="dilate"
+result="result3" />
+<feColorMatrix
+values="1 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 1 -0.5 "
+type="matrix"
+id="feColorMatrix2953"
+result="result4" />
+<feFlood
+id="feFlood2967"
+in="SourceGraphic" />
+<feComposite
+id="feComposite2955"
+in2="result4"
+operator="in"
+result="result5" />
+<feColorMatrix
+result="result4"
+id="feColorMatrix2957"
+type="matrix"
+values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 10 10 10 10 0 " />
+<feDisplacementMap
+id="feDisplacementMap2969"
+scale="10"
+xChannelSelector="A"
+in2="result1" />
+<feComposite
+id="feComposite2961"
+in="SourceGraphic"
+operator="out"
+result="result6" />
+<feDisplacementMap
+id="feDisplacementMap2971"
+in2="result1"
+scale="2" />
+</filter>
+<use id="1" transform="translate(22.5,22.5) scale(1) translate(-22.5,-22.5) " style="fill:url(#acyl_gradient);fill-opacity:0.8;filter:url(#filter1)" xlink:href="#path-main" />'
+	eval "$1='$temp'"
+}
+
+
+#Function for returning the Splatter filter.
+#   $1 is the return parameter.
+#   $2 is the secondary color.
+#   $3 is the secondary opacity;
+function filter_splatter {
+	temp='<filter id="filter1" x="-50%" y="-50%" width="200%" height="200%">
+	<feTurbulence
+	result="result2"
+	seed="0"
+	numOctaves="2"
+	type="turbulence"
+	baseFrequency="0.8"
+	in="SourceGraphic"
+	id="feTurbulence3644" />
+	<feDisplacementMap
+	yChannelSelector="G"
+	result="result1"
+	scale="70"
+	in="SourceGraphic"
+	id="feDisplacementMap3646"
+	in2="result2" />
+	<feOffset
+	dx="-10"
+	dy="-10"
+	id="feOffset1"
+	result="result3" />
+	<feComposite
+	id="feComposite1"
+	in="result3"
+	in2="SourceGraphic"
+	operator="in" />
+	</filter>
+	<filter id="filter2" x="-50%" y="-50%" width="200%" height="200%">
+	<feMorphology
+	id="feMorphology2828"
+	operator="dilate"
+	radius="5"
+	result="result1" />
+	<feTurbulence
+	id="feTurbulence2857"
+	in="SourceGraphic"
+	baseFrequency="0.3"
+	type="fractalNoise"
+	numOctaves="2"
+	seed="0"
+	result="result2" />
+	<feDisplacementMap
+	id="feDisplacementMap2835"
+	in="result1"
+	scale="25"
+	result="result3"
+	yChannelSelector="A" />
+	<feOffset
+	dx="-7"
+	dy="-2"
+	id="feOffset1"
+	result="result3" />
+	<feImage
+	id="feImage1"
+	xlink:href="#1"
+	result="result4" />
+	<feComposite
+	id="feComposite1"
+	in="result3"
+	in2="result4"
+	operator="out" />
+	</filter>
+	<defs>
+	<use id="1" transform="translate(22.5,22.5) scale(0.9) translate(-22.5,-21.5)" style="fill:#FF0000" xlink:href="#path-main" />
+	</defs>
+	<use id="2" transform="translate(22.5,22.5) scale(0.7) translate(-22.5,-21.5)" style="fill:url(#acyl_gradient);filter:url(#filter2)" xlink:href="#path-main" />
+	<use id="3" transform="translate(22.5,22.5) scale(0.8) translate(-22.5,-21.5)" style="fill:url(#acyl_gradient);filter:url(#filter1)" xlink:href="#path-main" />'
+	eval "$1='$temp'"
+}
+
+
+#Function for returning the disabled filter.
+#   $1 is the return parameter.
+function filter_disabled {
+	temp='<filter>
+    </filter>
+<use id="1" style="fill:url(#acyl_gradient);filter:url(#filter1111)" xlink:href="#path-main" />'
+	eval "$1='$temp'"
+}

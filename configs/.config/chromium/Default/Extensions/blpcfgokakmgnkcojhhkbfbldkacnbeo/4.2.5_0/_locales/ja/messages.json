@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "App description.",
+      "message": "YouTube \u306F\u4E16\u754C\u3067\u6700\u3082\u4EBA\u6C17\u306E\u3042\u308B\u30AA\u30F3\u30E9\u30A4\u30F3\u52D5\u753B\u30B3\u30DF\u30E5\u30CB\u30C6\u30A3\u3067\u3059\u3002"
+   },
+   "appName": {
+      "description": "App name.",
+      "message": "YouTube"
+   }
+}

@@ -1,0 +1,159 @@
+/* Default color scheme */
+@define-color base_color #FFFFFF;
+@define-color bg_color #FFFFFF;
+@define-color tooltip_bg_color #222222;
+@define-color selected_bg_color #d1a960;
+@define-color text_color #606060;
+@define-color fg_color #606060;
+@define-color tooltip_fg_color #656565;
+@define-color selected_fg_color #000000;
+@define-color dark_bg_color #222222;
+@define-color dark_fg_color #656565;
+@define-color menu_text_color #656565;
+
+/* Colormap actually used by the theme, to be overridden in other css files */
+@define-color theme_base_color @base_color;
+@define-color theme_text_color @text_color;
+@define-color theme_bg_color @bg_color;
+@define-color theme_fg_color @fg_color;
+@define-color theme_tooltip_bg_color @tooltip_bg_color;
+@define-color theme_tooltip_fg_color @tooltip_fg_color;
+@define-color theme_selected_bg_color @selected_bg_color;
+@define-color theme_selected_fg_color @selected_fg_color;
+
+@define-color menu_bg_color #FFFFFF;
+@define-color menu_fg_color #656565;
+@define-color menu_controls_color shade (@theme_fg_color, 0.9);
+@define-color menu_combobox_border #3277bf;
+@define-color menu_separator mix (@menu_fg_color, @menu_bg_color, 0.9);
+
+@define-color link_color #d1a960;
+@define-color frame_color #D1D1D1;
+@define-color inactive_frame_color #D1D1D1;
+@define-color warning_color #f57900;
+@define-color error_color #cc0000;
+@define-color success_color #4e9a06;
+
+@define-color info_fg_color rgb (181, 171, 156);
+@define-color info_bg_color rgb (252, 252, 189);
+@define-color warning_fg_color rgb (173, 120, 41);
+@define-color warning_bg_color rgb (250, 173, 61);
+@define-color question_fg_color rgb (97, 122, 214);
+@define-color question_bg_color rgb (138, 173, 212);
+@define-color error_fg_color rgb (166, 38, 38);
+@define-color error_bg_color rgb (237, 54, 54);
+
+@define-color keyboard_focus_border_a #a2c9f1;
+@define-color keyboard_focus_border_b #6794cf;
+
+@define-color os_chrome_bg_color black;
+@define-color os_chrome_fg_color #ccc;
+@define-color os_chrome_selected_bg_color #333;
+@define-color os_chrome_selected_fg_color white;
+
+@define-color chrome_bg_color #1e1a17;
+@define-color chrome_fg_color #fff;
+
+@define-color focused_entry_border #d1a960;
+@define-color focused_entry_inset alpha (#d7e4f1, 0.50);
+
+@define-color button_gradient_color_a #f4f6f4;
+@define-color button_gradient_color_b #d7dad7;
+@define-color button_border #333333;
+
+@define-color button_active_gradient_color_a #a2a9a2;
+@define-color button_active_gradient_color_b shade (@button_active_gradient_color_a, 0.83);
+
+@define-color button_hover_gradient_color_a @theme_base_color;
+@define-color button_hover_gradient_color_b shade (@button_gradient_color_a, 0.94);
+
+@define-color button_raised_gradient_color_a @button_gradient_color_a;
+@define-color button_raised_gradient_color_b @button_gradient_color_b;
+@define-color button_raised_linked_shadow alpha(@theme_base_color, 0.70);
+
+@define-color button_raised_active_gradient_color_a @button_active_gradient_color_a;
+@define-color button_raised_active_gradient_color_b alpha(@button_active_gradient_color_b, 0.13);
+
+@define-color insensitive_bg_color #f4f4f2;
+@define-color insensitive_fg_color #a7aba7;
+@define-color insensitive_border_color shade (@internal_element_color, 1.37);
+
+@define-color trough_bg_color_a #bcbcb7;
+@define-color trough_bg_color_b #e0e0dd;
+
+@define-color active_switch_bg_color_a #509ae7;
+@define-color active_switch_bg_color_b #84b8ee;
+
+@define-color switch_slider_color #eeeeec;
+@define-color switch_slider_border #2a79cb;
+
+@define-color progressbar_background_a #111111;
+@define-color progressbar_background_b #111111;
+@define-color progressbar_pattern #000000;
+
+@define-color entry_text_color @theme_text_color;
+
+@define-color entry_background_a #111111;
+@define-color entry_background_b #111111;
+@define-color entry_background_c #111111;
+@define-color entry_background_d #111111;
+
+@define-color internal_element_color #777777;
+@define-color internal_element_prelight #d1a960;
+@define-color internal_element_insensitive #111111;
+
+@define-color scale_fill @insensitive_border_color;
+@define-color scale_border_a @internal_element_color;
+@define-color scale_border_b shade (@internal_element_color, 1.25);
+@define-color scale_progress_fill #2c85e2;
+@define-color scale_progress_border_a #1864b2;
+@define-color scale_progress_border_b #3e90e5;
+
+@define-color highlighted_border #8a8f8a;
+
+@define-color notebook_background #ecedee;
+@define-color notebook_border #c0c0c0;
+
+@define-color notebook_active_tab_border #c0c0c0;
+@define-color notebook_active_tab_background #ecedee;
+
+@define-color notebook_selected_tab_color @selected_bg_color;
+
+@define-color notebook_tab_background #111111;
+@define-color notebook_tab_border #000000;
+
+@define-color toolbar_border_top shade (@theme_bg_color, 0.56);
+@define-color toolbar_border_bottom shade (@theme_bg_color, 0.83);
+
+@define-color toolbar_active_button_color #777777;
+
+@define-color primary_toolbar_entry_bg #111111;
+@define-color primary_toolbar_entry_fg #777777;
+
+@define-color treeview_focus_border @progressbar_border;
+
+@define-color expander_row_selected_color #acccee;
+
+@define-color wm_highlight #ffffff;
+@define-color wm_title_highlight #ffffff;
+
+@define-color wm_bg_a shade (@bg_color, 1.1);
+@define-color wm_bg_b @bg_color;
+
+@define-color wm_button_bg_a shade (@bg_color, 1.0);
+@define-color wm_button_bg_b shade (@bg_color, 0.85);
+@define-color wm_button_bg_c shade (@bg_color, 0.8);
+@define-color wm_button_bg_d shade (@bg_color, 0.9);
+
+@define-color wm_button_bg_hover_a shade (@wm_button_bg_a, 1.1);
+@define-color wm_button_bg_hover_b shade (@wm_button_bg_b, 1.1);
+@define-color wm_button_bg_hover_c shade (@wm_button_bg_c, 1.1);
+@define-color wm_button_bg_hover_d shade (@wm_button_bg_d, 1.1);
+
+@define-color wm_button_bg_active_a shade (@bg_color, 0.7);
+@define-color wm_button_bg_active_b shade (@bg_color, 0.9);
+@define-color wm_button_bg_active_c shade (@bg_color, 0.9);
+
+@import url("gtk-widgets.css");
+@import url("gtk-widgets-assets.css");
+@import url("gnome-applications.css");

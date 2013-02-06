@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+<defs>
+  <path
+     d="M 24,2 C 11.851402,2 2,11.851402 2,24 2,36.1486 11.851402,46 24,46 36.148598,46 46,36.1486 46,24 46,11.851402 36.148598,2 24,2 z m 0.156129,5.563871 c 2.825494,7.064477 11.173727,9.951565 11.780645,18.153548 -4.535731,-7.654102 -5.479618,-4.899859 -8.629677,-6.954838 l 0,17.500649 c 0,2.28952 -3.389665,4.1729 -7.607742,4.1729 -4.218087,0 -7.636129,-1.88338 -7.636129,-4.1729 0,-2.28953 3.418042,-4.14452 7.636129,-4.14452 1.668353,0 3.200467,0.302145 4.456774,0.794838 l 0,-16.478709 0,-8.870968 z"
+     id="path-main"
+      />
+</defs>
+<acyl-settings>
+<linearGradient
+     id="linearGradient4321">
+    <stop
+       style="stop-color:#FFFFFF;stop-opacity:1.0;"
+       offset="1.0"
+       id="stop1" />
+  </linearGradient>
+<linearGradient
+     inkscape:collect="always"
+     xlink:href="#linearGradient4321"
+     id="acyl_gradient"
+     x1="50.0%"
+     y1="0.0%"
+     x2="50.0%"
+     y2="100.0%" />
+<filter>
+    </filter>
+<use id="1" style="fill:url(#acyl_gradient);filter:url(#filter1111)" xlink:href="#path-main" />
+</acyl-settings>
+</svg>

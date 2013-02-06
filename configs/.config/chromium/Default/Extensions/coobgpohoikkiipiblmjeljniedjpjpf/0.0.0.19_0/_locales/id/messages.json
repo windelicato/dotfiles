@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Cara kilat menelusuri info di web."
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "Google Penelusuran"
+   }
+}

@@ -1,0 +1,4 @@
+#define max_toggled_width 6
+#define max_toggled_height 6
+static unsigned char max_toggled_bits[] = {
+   0x03, 0x03, 0x00, 0x00, 0x33, 0x33 };

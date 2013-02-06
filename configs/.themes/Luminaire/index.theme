@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Luminaire
+Comment=Ubuntu Light theme adapted
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=Luminaire
+MetacityTheme=Luminaire
+IconTheme=elementary-mono-dark
+CursorTheme=DMZ-White
+ButtonLayout=:minimize,maximize,close

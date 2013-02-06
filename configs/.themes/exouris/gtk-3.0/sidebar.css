@@ -1,0 +1,91 @@
+/***********
+ * Sidebar *
+ ***********/
+
+.sidebar {
+    -GtkTreeView-horizontal-separator: 6px;
+    -GtkTreeView-vertical-separator: 1px;
+}
+
+.sidebar,
+.sidebar.view,
+.sidebar .view,
+.sidebar.view:prelight,
+.sidebar .view:prelight {
+    border-radius: 0px;
+    color:				@theme_fg_color;
+	text-shadow: 		0px 1px @theme_shadow_color;
+    background-color:	@sidebar_background;
+}
+
+.sidebar.view:selected,
+.sidebar.view *:selected,
+.sidebar .view:selected,
+.sidebar .view *:selected,
+.sidebar .view:selected:prelight {
+    border-style: solid;
+    border-width: 0px;
+    border-color: shade(@theme_selected_bg_color, 1.00);
+
+	background-image:none;
+	background-color: shade(@theme_selected_bg_color, 1.00);
+    color: @theme_selected_fg_color;    
+    text-shadow: 0px 1px @theme_selected_shadow_color;
+}
+
+
+.sidebar .radio,
+.sidebar .radio:focused,
+.sidebar .radio:selected {
+    background-image: none;
+    background-color: alpha(@theme_base_color, 0.0);
+}
+
+GtkHCollapsablePaned,
+SourceList.pane-separator {
+    border-width:            0px;
+    -GtkPaned-handle-size: 2px;
+}
+
+GtkHCollapsablePaned .pane-separator,
+GtkHCollapsablePaned .pane-separator:prelight,
+GtkHCollapsablePaned .pane-separator:selected {
+    background-image: none;
+    background-color: @sidebar_background;
+    border-width: 0px 1px 0px 0px;
+    border-style: solid;
+    border-color: shade (@sidebar_background, 1.00);
+}
+
+/* Marlin sidebar separator */
+VarkaWidgetsHCollapsiblePaned,
+VarkaWidgetsHCollapsiblePaned.pane-separator,
+VarkaWidgetsHCollapsiblePaned.pane-separator:prelight,
+VarkaWidgetsHCollapsiblePaned.pane-separator:selected {
+    border-width:		0px;
+	border-color:		shade(@sidebar_background, 1.00);
+    background-image: -gtk-gradient(linear,
+                                    left top, right top,
+                                    from(@sidebar_background),
+                                    color-stop(0.50, @sidebar_background),
+                                    to(@sidebar_background));
+}
+
+/*
+VarkaWidgetsHCollapsiblePaned {
+    border-width: 0px;
+    -GtkPaned-handle-size: 1px;
+}
+
+VarkaWidgetsHCollapsiblePaned.pane-separator,
+VarkaWidgetsHCollapsiblePaned.pane-separator:prelight,
+VarkaWidgetsHCollapsiblePaned.pane-separator:selected {
+    background-image: -gtk-gradient (linear,
+         left top,
+         right top,
+         from (shade (@bg_color, 1.30)),
+         to (shade (@bg_color, 0.55)));
+    background-color: alpha(#fff, 0.0);
+}
+
+*/

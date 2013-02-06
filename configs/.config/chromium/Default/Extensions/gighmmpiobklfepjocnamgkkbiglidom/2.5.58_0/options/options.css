@@ -1,0 +1,95 @@
+      body { 
+        font: 14px arial;
+        overflow-y: scroll;
+      }
+      h2 {
+        padding: 0px; 
+        margin: 0px;
+      }
+      #subscription_message {
+        height: 18px;
+      }
+      #subscription_message {
+        height: 18px;
+      }
+      .note {
+        font-size: 12px;
+      }
+      .ok_message {
+        color: green;
+      }
+      .error_message {
+        color: red;
+      }
+      .info {
+        background: #eeeeee;
+        border: 1px solid gray;
+        border-radius: 5px;
+        margin-left: 40px;
+        margin-bottom: 15px;
+        padding: 5px;
+        width: 460px;
+      }
+      .section { 
+        border: 1px solid #666666;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 20px;
+        background-color: #f8faff;
+      }
+      .ui-tabs-panel { 
+        background: #f8faff !important;
+        margin: 10px;
+      }
+      .box {
+        border: 1px solid black;
+        padding: 5px;
+        margin: 5px;
+      }
+      .footnote {
+        font-size: small;
+        font-style: italic;
+        margin-left: 10px;
+      }
+      .warning {
+        color: red;
+        font-style: italic;
+        font-weight: bold;
+        padding-left:30px;
+      }
+      .icon {
+        background: url('../img/icon32.png') no-repeat;
+        padding-left:45px;
+      }
+      .subscription_info {
+        padding-left: 3em;
+        color: gray;
+      }
+      label {
+        cursor: pointer;
+      }
+      #tabpages {
+        display: none;
+      }
+      [i18n="betalabel"] {
+        font-style: italic;
+        color: red;
+      }
+      .forDebug, .forDebug * {
+        color: gray !important;
+      }
+      .link {
+        text-decoration: underline;
+        color: blue;
+        cursor: pointer;
+      }
+      .notice {
+        padding: 0.5em;
+        background-color: #FFFF95;
+        margin: 0.5em auto;
+        width: 50em;
+        max-width: 60%;
+        border: 1px solid black;
+        border-radius: 5px;
+        display: none;
+      }

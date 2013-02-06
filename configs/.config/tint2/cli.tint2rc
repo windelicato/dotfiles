@@ -1,0 +1,158 @@
+##tint2 configuration
+
+#lazy, minimal 
+#by digztytwo (dgz)
+
+# Background definitions
+# ID 1
+rounded = 0
+border_width = 0
+background_color = #000000 100
+border_color = #000000 100
+
+# ID 2 - task active
+rounded = 1
+border_width = 0
+background_color = #222222 100
+border_color = #d8d8d8 100
+
+# ID 3 - task
+rounded = 1
+border_width = 0
+background_color = #000000 100
+border_color = #000000 100
+
+# ID 4
+rounded = 1
+border_width = 1
+background_color = #888888 100
+border_color = #ED2323 60
+
+# ID 5 - taskbar
+rounded = 0
+border_width = 1
+background_color = #000000 100
+border_color = #000000 100
+
+# ID 6 - active taskbar
+rounded = 0
+border_width = 1
+background_color = #0f0f0f 100
+border_color = #0f0f0f 100
+
+# ID 7 - tooltip
+rounded = 3
+border_width = 0
+background_color = #222222 75
+border_color = #222222 75
+
+# ID 8
+rounded = 1
+border_width = 1
+background_color = #888888 100
+border_color = #888888 100
+
+# Panel
+panel_monitor = all
+panel_position = top center horizontal
+panel_items = TC
+panel_size = 100% 15
+panel_margin = 0 -1
+panel_padding = 0 0
+panel_dock = 0
+wm_menu = 1
+panel_layer = bottom
+panel_background_id = 1
+
+# Panel Autohide
+autohide = 0
+autohide_show_timeout = 0.3
+autohide_hide_timeout = 1.5
+autohide_height = 6
+strut_policy = follow_size
+
+# Taskbar
+taskbar_mode = multi_desktop
+taskbar_padding = 6 0 6
+taskbar_background_id = 5
+taskbar_active_background_id = 6
+taskbar_name = 1
+taskbar_name_background_id = 0
+taskbar_name_active_background_id = 0
+taskbar_name_font = terminus 8
+taskbar_name_font_color = #828282 100
+taskbar_name_active_font_color = #828282 100
+
+# Tasks
+urgent_nb_of_blink = 20
+task_icon = 0
+task_text = 1
+task_centered = 0
+task_maximum_size = 125 125
+task_padding = 2 2
+task_background_id = 3
+task_active_background_id = 2
+task_urgent_background_id = 4
+task_iconified_background_id = 3
+
+# Task Icons
+task_icon_asb = 80 0 0
+task_active_icon_asb = 100 0 0
+task_urgent_icon_asb = 100 0 0
+task_iconified_icon_asb = 80 0 0
+
+# Fonts
+task_font = terminus 8
+task_font_color = #929292 60
+task_active_font_color = #929292 100
+task_urgent_font_color = #FFFFFF 100
+task_iconified_font_color = #d8d8d8 60
+font_shadow = 0
+
+# Launcher
+launcher_padding = 8 4 4
+launcher_background_id = 0
+launcher_icon_size = 24
+launcher_icon_asb = 50 50 50
+# Specify icon theme names with launcher_icon_theme. 
+# if you have an XSETTINGS manager running (like xfsettingsd), tint2 will follow your current theme.
+launcher_icon_theme = gnome-colors-statler
+# Each launcher_item_app must be a full path to a .desktop file
+launcher_item_app = /usr/share/applications/terminator.desktop
+launcher_item_app = /usr/share/applications/iceweasel.desktop
+
+# System Tray
+systray = 0
+#systray_padding = 4 2 3
+#systray_sort = ascending
+#systray_background_id = 0
+#systray_icon_size = 24
+#systray_icon_asb = 100 0 0
+
+# Clock
+time1_format = %H:%M:%S
+time1_font = terminus 8
+#time2_format = %A %d %B
+#time2_font = Liberation Sans 6
+clock_font_color = #828282 100
+clock_padding = 12 4
+clock_background_id = 0 
+clock_lclick_command = gsimplecal
+clock_rclick_command = gsimplecal
+
+# Tooltips
+tooltip = 1
+tooltip_padding = 2 2
+tooltip_show_timeout = 0.0
+tooltip_hide_timeout = 0.0
+tooltip_background_id = 7
+tooltip_font_color = #d8d8d8 100
+tooltip_font = terminus 8
+
+# Mouse
+mouse_middle = none
+mouse_right = toggle
+mouse_scroll_up = toggle
+mouse_scroll_down = iconify
+
+# End of config

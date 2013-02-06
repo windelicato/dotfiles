@@ -1,0 +1,302 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-13 18:00+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Alberto 'Duma' Verdoja <pimpmylinux@email.it>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gui.glade.h:1
+msgid "<b>Color</b>"
+msgstr "<b>Colore</b>"
+
+#: gui.glade.h:2
+msgid "<b>Filter</b>"
+msgstr "<b>Filtro</b>"
+
+#: gui.glade.h:3
+msgid "<b>Folder</b>"
+msgstr "<b>Cartella</b>"
+
+#: gui.glade.h:4
+msgid "<b>Gradient</b>"
+msgstr "<b>Sfumatura</b>"
+
+#: gui.glade.h:5
+msgid "<b>Logo</b>"
+msgstr "<b>Logo</b>"
+
+#: gui.glade.h:6
+msgid "<b>Preview</b>"
+msgstr "<b>Anteprima</b>"
+
+#: gui.glade.h:7
+msgid ""
+"<b>This action requiers root previleges.</b>\n"
+"Please enter your password."
+msgstr "<b>Questa azione richiede i privilegi di amministratore</b>\n"
+"Inserire la propria password"
+
+#: gui.glade.h:9
+msgid "<b>Warning</b>: Changing this code might break the icons."
+msgstr "<b>Attenzione</b>: Modificare questo codice potrebbe non far funzionare correttamente il tema "
+
+#: gui.glade.h:10
+msgid ""
+"ACYL 1 (default)\n"
+"ACYL 2\n"
+"ACYL 3\n"
+"ACYL 4\n"
+"ACYL 5\n"
+"AllBlack\n"
+"Tok-Tok\n"
+"Moblin"
+msgstr ""
+"ACYL 1 (predefinito)\n"
+"ACYL 2\n"
+"ACYL 3\n"
+"ACYL 4\n"
+"ACYL 5\n"
+"AllBlack\n"
+"Tok-Tok\n"
+"Moblin"
+
+#: gui.glade.h:18
+msgid ""
+"All\n"
+"Action\n"
+"Emblems\n"
+"Panel\n"
+"All (excluding others)"
+msgstr ""
+"Tutte\n"
+"Azioni\n"
+"Simboli\n"
+"Pannello\n"
+"Tutto (tranne altri)"
+
+#: gui.glade.h:23
+#, python-format
+msgid ""
+"All values are in % relative to the icon. (0,0 is top left corner), "
+"(100,100 bottom right)"
+msgstr ""
+"Tutti i valori sono in % relativa per l'icona (0.0 è l'angolo in alto a sinistra), "
+"(100,100 in basso a destra)"
+#: gui.glade.h:24
+msgid "Any Color You Like"
+msgstr "Any Color You Like"
+
+#: gui.glade.h:25
+msgid "Apply To:"
+msgstr "Applica a:"
+
+#: gui.glade.h:26
+msgid ""
+"Arch\n"
+"Debian\n"
+"Fedora\n"
+"Gnome\n"
+"Ubuntu\n"
+"Zenwalk\n"
+"Gentoo\n"
+"Custom"
+msgstr ""
+"Arch\n"
+"Debian\n"
+"Fedora\n"
+"Gnome\n"
+"Ubuntu\n"
+"Zenwalk\n"
+"Gentoo\n"
+"Personalizzato"
+
+#: gui.glade.h:33
+msgid ""
+"By Switzak\n"
+"\n"
+"A iconset that have a script to change\n"
+" the color and other stuff easily."
+msgstr ""
+"Da Switzak\n"
+"\n"
+"Un tema di icone con uno script per cambiare\n"
+" facilmente il colore ed altre proprietà."
+
+
+#: gui.glade.h:37
+msgid "Center Point"
+msgstr "Punto iniziale"
+
+#: gui.glade.h:38
+msgid "Code View"
+msgstr "Vista a codice"
+
+#: gui.glade.h:39
+msgid "Color:"
+msgstr "Colore:"
+
+#: gui.glade.h:40
+msgid "Copy icon theme to root user:"
+msgstr "Applica il tema di icone all'utente amministratore"
+
+#: gui.glade.h:41
+msgid "Create menu icon and terminal command to run this application:"
+msgstr "Crea il lanciatore nel menu e il comando da terminale per questa applicazione"
+
+#: gui.glade.h:42
+msgid ""
+"Disabled\n"
+"Wood\n"
+"Glass\n"
+"Paper\n"
+"Cutout\n"
+"Brushed Metal\n"
+"Flames"
+msgstr ""
+"Disabilitato\n"
+"Legno\n"
+"Vetro\n"
+"Carta\n"
+"Scavato\n"
+"Metallo satinato\n"
+"Fiamme"
+
+
+#: gui.glade.h:48
+msgid "End Point"
+msgstr "Punto Finale"
+
+#: gui.glade.h:49
+msgid "Enter password here:"
+msgstr "Inserire la password qui:"
+
+#: gui.glade.h:50
+msgid "Focus Point"
+msgstr "Punto di Focus"
+
+#: gui.glade.h:51
+msgid "Gradient"
+msgstr "Sfumatura"
+
+#: gui.glade.h:52
+msgid "Graphic View"
+msgstr "Vista grafica"
+
+#: gui.glade.h:53
+msgid "Import"
+msgstr "Importa"
+
+#: gui.glade.h:54
+msgid "Import settings from Graphic View:"
+msgstr "Importa configurazione dalla Vista grafica"
+
+#: gui.glade.h:55
+msgid ""
+"Linear\n"
+"Radial"
+msgstr ""
+"Lineare\n"
+"Radiale"
+
+#: gui.glade.h:57
+msgid "Offset:"
+msgstr "Sfasamento"
+
+#: gui.glade.h:58
+msgid "Ok"
+msgstr "Ok"
+
+#: gui.glade.h:59
+msgid "Other"
+msgstr "Altro"
+
+#: gui.glade.h:60
+msgid "Overwrite application specific icons:"
+msgstr "Applica il tema ad una specifica applicazione"
+
+#: gui.glade.h:61
+msgid "<b>Navigation</b>"
+msgstr "<b>Navigazione</b>"
+
+#: gui.glade.h:62
+msgid ""
+"ACYL (default)\n"
+"Moblin\n"
+"Minimal"
+msgstr ""
+"ACYL (predefinito)\n"
+"Moblin\n"
+"Minimal"
+
+#: gui.glade.h:65
+msgid "Presets"
+msgstr "Predefiniti"
+
+#: gui.glade.h:66
+msgid "Radius"
+msgstr "Raggio"
+
+#: gui.glade.h:67
+msgid "Start Point"
+msgstr "Punto iniziale"
+
+#: gui.glade.h:68
+msgid "Switch Icons"
+msgstr "Cambia l'icona"
+
+#: gui.glade.h:69
+msgid ""
+"Vertical\n"
+"Horisontal\n"
+"Diagonal"
+msgstr ""
+"Verticale\n"
+"Orizzontale\n"
+"Diagonale"
+
+#: gui.glade.h:72
+msgid "X-coordinate"
+msgstr "Coordinate X"
+
+#: gui.glade.h:73
+msgid "Y-coordinate"
+msgstr "Coordinate Y"
+
+#: gui.glade.h:74
+msgid "_About"
+msgstr "I_nformazioni"
+
+#: gui.glade.h:75
+msgid "_Export current settings"
+msgstr "_Esporta settaggi correnti"
+
+#: gui.glade.h:76
+msgid "_File"
+msgstr "_File"
+
+#: gui.glade.h:77
+msgid "_Help"
+msgstr "_Aiuto"
+
+#: gui.glade.h:78
+msgid "_Import settings"
+msgstr "_Importa settaggi"
+
+#: gui.glade.h:79
+msgid "_Quit"
+msgstr "_Esci"
+
+#: gui.glade.h:80
+msgid "_Restore default settings"
+msgstr "_Ripristina configurazione di default"

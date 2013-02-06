@@ -1,0 +1,67 @@
+<html>
+  <head>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      #vimiumPopup { width: 300px; }
+
+      #excludeControls {
+        padding: 10px;
+      }
+
+      #popupInput {
+        width: 160px;
+      }
+
+      #excludeConfirm {
+        display: inline-block;
+        width: 18px;
+        height: 13px;
+        background: url(icons/check.png) 3px 2px no-repeat;
+        display: none;
+      }
+
+      #popupButton { margin-left: 10px; }
+
+      #popupMenu ul {
+        list-style: none;
+      }
+
+      #popupMenu a, #popupMenu a:active, #popupMenu a:visited {
+        color: #3F6EC2;
+        display: block;
+        border-top: 1px solid #DDDDDD;
+        padding: 3px;
+        padding-left: 10px;
+      }
+
+      #popupMenu a:hover {
+        background: #EEEEEE;
+      }
+
+      #optionsLink {
+        font-family : "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+        font-size: 12px;
+      }
+    </style>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="vimiumPopup">
+      <div id="excludeControls">
+        <input id="popupInput" type="text" />
+        <input id="popupButton" type="button" value="Exclude URL" />
+        <span id="excludeConfirm"></span>
+      </div>
+
+      <div id="popupMenu">
+        <ul>
+          <li><a id="optionsLink" target="_blank">Options</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

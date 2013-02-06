@@ -1,25 +1,4 @@
 g:default
--20 http://nlss.fr/ Nlss
--19 https://github.com/abarisain abarisain
--18 https://github.com/abarisain/dmix abarisain/dmix
--17 https://github.com/login?return_to=%2Fabarisain%2Fdmix Sign
--16 https://github.com/abarisain/dmix abarisain/dmix
--15 https://github.com/windelicato windelicato
--14 https://github.com/windelicato/scripts 
--13 https://github.com/windelicato/scripts/blob/master/menu scripts/menu
--12 http://www.google.com/search?hl=en&biw=1366&bih=748&sclient=psy-ab&q=msata%20ssd&oq=&gs_l=&pbx=1 msata
--11 http://www.google.com/webhp?hl=en&tab=ww Google
--10 http://news.ycombinator.com/ Hacker
--9 http://news.ycombinator.com/item?id=4966347 Ideas
--8 http://hackaday.com/2012/11/01/one-button-audiobook-player-made-from-a-raspberry-pi/ One-button
--7 http://hackaday.com/ Hack
--6 http://news.ycombinator.com/item?id=4966347 Ideas
--5 http://pingbin.com/2012/12/30-cool-ideas-raspberry-pi-project/ 30
--4 http://www.penguintutor.com/linux/raspberrypi-webserver Creating
--3 http://www.penguintutor.com/linux/light-webserver Running
--2 http://www.penguintutor.com/linux/introduction-creating-website Introduction
--1 http://www.google.com/search?hl=en&biw=1366&bih=748&sclient=psy-ab&q=dwb%20vs%20luakit&oq=&gs_l=&pbx=1 dwb
-0|0 http://www.google.com/search?hl=en&biw=1366&bih=748&sclient=psy-ab&q=dwb%20vs%20luakit&oq=&gs_l=&pbx=1#hl=en&tbo=d&sclient=psy-ab&q=dwb+vs+luakit&oq=dwb+vs+luakit&gs_l=serp.5...0.0.0.87454.0.0.0.0.0.0.0.0..0.0.les%3B..0.0...1c.l7ABf2yFHfQ&pbx=1&fp=1&bpcl=40096503&biw=1366&bih=733&cad=b&sei=8fLZUIbiCo7O0QGK34DABg&bav=on.2,or.r_gc.r_pw.r_qf.&sei=bPPZUIPNOqvV0gG7hIHoBA dwb vs luakit - Google Search
--1 http://www.google.com/search?hl=en&biw=1366&bih=748&sclient=psy-ab&q=dwb%20adblock&oq=&gs_l=&pbx=1 dwb
-0|0 https://bbs.archlinux.org/viewtopic.php?pid=901280 dwb - a webkit web browser (Page 9) / Community Contributions / Arch Linux Forums
-0|0 http://slashdot.org/ Slashdot: News for nerds, stuff that matters
+-2 https://bbs.archlinux.org/ Arch Linux Forums
+-1 https://www.archlinux.org/ Arch Linux
+0|0 https://bbs.archlinux.org/ Arch Linux Forums

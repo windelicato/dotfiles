@@ -1,0 +1,118 @@
+/* Don't let page CSS bleed into our modals. */
+
+/* The dialog itself, and common elements on every dialog page (like the title bar) */
+.ui-dialog a[href] {
+  text-decoration: underline !important;
+}
+.ui-dialog * {
+  font-size: 12px !important;
+  font-family: Verdana, Arial, sans-serif !important;
+  color: #222;
+}
+.ui-dialog span.ui-dialog-title {
+  color: white !important;
+}
+.ui-dialog .ui-dialog-titlebar {
+  display: block !important;
+  padding-left: 38px !important;
+  background: #2191C0 url(../../img/icon24.png) center left no-repeat !important;
+  width: auto !important;
+}
+.ui-dialog  .ui-dialog-content {
+  display: block !important;
+  background: white;
+  text-align: left;
+}
+.ui-dialog button {
+  color: white !important;
+  margin: 2px !important;
+  padding: 0px 6px !important;
+  height: 20px !important;
+  display: inline-block !important;
+  text-indent: 0px !important;
+}
+.ui-dialog:not(.ui-state-hover) button {
+  background: #0078AE !important;
+}
+.ui-dialog.ui-state-hover button {
+  background: #79C9EC !important;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+  background-image: none !important;
+}
+.ui-dialog .ui-dialog-content div {
+  display: block;
+}
+.ui-dialog br {
+  display: inline !important;
+}
+.ui-dialog input[type="range"] {
+  outline: none;
+  margin: 10px;
+  vertical-align: middle;
+  height: 16px !important;
+  background-image: none !important;
+}
+.ui-dialog label {
+  cursor: pointer;
+}
+.ui-dialog .ui-dialog-buttonpane { 
+  display: block !important; 
+}
+.ui-icon.ui-icon-closethick {
+  background-position: -96px -128px !important;
+  height: auto !important;
+  width: auto !important;
+}
+
+
+/* Specific parts of the pages */
+.ui-dialog #block_by_url_link {
+  font-size: 11px !important;
+  display: none;
+}
+.ui-dialog #adblock-details input {
+  min-width: 13px !important;
+  margin-left: 15px;
+}
+.ui-dialog i#pathpart {
+  font-size: medium !important;
+  color: grey;
+}
+.ui-dialog i#domainpart {
+  font-size: medium !important;
+}
+.ui-dialog #count {
+  background: #eeeeee;
+  border: 1px solid #dddddd;
+  padding: 3px;
+}
+.ui-dialog #selected_data {
+  font-size: smaller;
+  height: 7em;
+}
+.ui-dialog #pathslider, .ui-dialog #domainslider {
+  width: 100px;
+}
+.ui-dialog #slider {
+  width: 364px;
+}
+.ui-dialog #filter_warning {
+  font-weight: bold;
+  color: red;
+}
+
+
+/* Things outside of the UI, but on the page */
+.adblock-highlight-node {
+  background-color: rgba(130, 180, 230, 0.5);
+  outline: solid 1px #0F4D9A;
+  box-sizing: border-box;
+  position: absolute;
+  display: none;
+}
+.adblock-killme-overlay {
+  background-color: transparent !important;
+  position: absolute;
+  z-index: 1000000;
+}

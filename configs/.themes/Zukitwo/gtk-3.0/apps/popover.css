@@ -1,0 +1,50 @@
+GraniteWidgetsPopOver {
+	-GraniteWidgetsPopOver-arrow-width: 24;
+	-GraniteWidgetsPopOver-arrow-height: 12;
+	-GraniteWidgetsPopOver-border-radius: 6;
+	-GraniteWidgetsPopOver-border-width: 1;
+	-GraniteWidgetsPopOver-shadow-size: 18;
+	
+	border-style: solid;
+	border-color: shade (@bg_color, 0.50);
+	background-color: @bg_color;
+	margin: 0;
+}
+
+GraniteWidgetsPopOver * {
+	background-color: @bg_color;
+}
+
+GraniteWidgetsPopOver .sidebar.view {
+	background-color: @bg_color;
+}
+
+GraniteWidgetsPopOver .button {
+	background-image: none;
+	background-color: alpha (#fff, 0.0);
+}
+
+GraniteWidgetsPopOver .button:active,
+GraniteWidgetsPopOver .button:hover:active {
+	background-image: none;
+	background-color: alpha (#000, 0.05);
+}
+
+GraniteWidgetsPopOver .entry {
+	background-image: -gtk-gradient (linear,
+		left top,
+		left bottom,
+		from (shade (@base_color, 0.88)),
+		color-stop (0.20, shade (@base_color, 0.94)),
+		to (shade (@base_color, 0.96)));
+}
+
+.button.app {
+	border-width: 0;
+	border-radius: 5px;
+}
+
+.app:hover,
+.app:focus {
+	background-color: alpha (#000, 0.15);
+}

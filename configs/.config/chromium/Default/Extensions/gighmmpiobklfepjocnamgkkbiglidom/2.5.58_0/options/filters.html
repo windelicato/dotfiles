@@ -1,0 +1,27 @@
+  <!doctype html><!-- required to help Safari not get confused when injecting this fragment -->
+  <div>
+    <h2 i18n="filterstabtitle"></h2>
+    <p class="footnote" i18n="filterlistlink" i18n_replacement_el="footnotelink"></p>
+    <a id="footnotelink" href="https://adblockplus.org/en/subscriptions"
+       target="_blank"></a>
+    <span i18n="updatenowmessage" i18n_replacement_el="btnUpdateNow"></span>
+    <input type="button" id="btnUpdateNow" />
+    <div>
+      <div id="subscription_message" class="ok_message"></div>
+      <div id="filter_subscriptions" style="padding-left:30px;">
+      </div>
+      <div style="padding-left:34px;">
+        <span i18n="orenteraurl"></span>
+        <input id="txtNewSubscriptionUrl" style="width:300px;" type="text" />
+        <input type="button" id="btnNewSubscriptionUrl" i18n_value="subscribebutton" />
+      </div>
+    </div>
+
+    <p style="margin-bottom:0px;" class="advanced">
+      <span i18n="showlinkstolists"></span>
+      <input type="button" id="btnShowLinks" i18n_value="buttonok" />
+    </p>
+
+    <p class="forDebug advanced" style="margin-top:0px;" i18n="subscribe_unsubscribe_all">
+    </p>
+  </div>

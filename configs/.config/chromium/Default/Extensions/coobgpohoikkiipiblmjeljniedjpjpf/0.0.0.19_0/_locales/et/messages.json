@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Kiireim viis veebist otsimiseks."
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "Google'i otsing"
+   }
+}

@@ -1,0 +1,110 @@
+::-webkit-scrollbar {
+  width:8px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 2px rgba(155,155,155,0.9);
+  -webkit-border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.6);
+  -webkit-border-radius:5px;
+  background: rgba(155,155,155,0.8);
+}
+
+p {
+  -webkit-margin-after: 0.5em;
+}
+
+html,body {
+padding:0;
+margin:0;
+height:100%;
+}
+
+blockquote {
+  padding: 0 0 0 1em;
+  border-left: 5px solid grey;
+  margin: 4px 0;
+}
+
+body {
+  min-width:560px;
+  color: rgba(10,10,10,0.7);
+  font-family: sans-serif;
+  background-color: rgba(250,250,250,1);
+  overflow-x:hidden;
+}
+
+h2 {
+  font-size:1.2em;
+  margin-bottom:3px;
+}
+
+a {
+  color: rgba(0,0,255,0.7);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(0,0,255,0.8);
+  text-decoration: underline;
+}
+
+
+a[rel=publisher] {
+  padding-top:3px;
+  float:right;
+  text-decoration:none;
+  display:inline-block;
+  color:#333;
+  text-align: center;
+  font:13px/16px arial,sans-serif;
+  white-space:nowrap;
+}
+
+a[rel=publisher] span {
+  display:inline-block;
+  vertical-align:top;
+  margin-right:5px;
+  margin-top:8px;
+}
+
+a[rel=publisher] span.name {
+  font-weight: bold;
+}
+
+a[rel=publisher] img {
+  border:0;
+  width:32px;
+  height:32px;
+}
+
+.in {
+  display:inline;
+}
+
+.front { z-index: 9999; }
+.back { z-index: 1000; }
+
+.pretty-links {
+  margin: 0.2em 0.4em;
+}
+
+.ghost { opacity: 0.1 !important; }
+
+.github-icon {
+  padding-left:33px;
+  background: url(images/github_32.png) no-repeat left center;
+}
+
+.twitter-icon {
+  padding-left:33px;
+  background: url(images/twitter_32.png) no-repeat left center;
+}
+
+.google-icon {
+  padding-left:33px;
+  background: url(images/google_32.png) no-repeat left center;
+}

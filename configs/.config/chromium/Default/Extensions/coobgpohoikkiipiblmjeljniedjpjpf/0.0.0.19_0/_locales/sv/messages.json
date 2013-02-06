@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Den snabbaste s\u00F6kningen p\u00E5 webben"
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "S\u00F6k p\u00E5 Google"
+   }
+}

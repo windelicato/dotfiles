@@ -1,0 +1,26 @@
+This is the instruction for how to translate the GUI for the any color you like script. 
+If you want to submit your translation, contact me via gnome-look.org (switzak) or deviantart.com (pobtott).
+
+First go to this directory:
+	~/.icons/ACYL_Icon_Theme_(VERSION)/scalable/scripts/locale/
+
+There you run "create_empty_pot"
+
+This will create a file named "lang.pot". The file should contain several strings looking like this:
+	msgid "TEXT"
+	msgstr ""
+The "msgid" line is the original text and should not be changed, the "msgtr" is where you write your tanslation.
+
+After having translated the document you need to name the file after your language and set the correct charset. To find the current language and charset of your computer type "locale" in a terminal. The output should be in this format:
+LANG=language.charset
+
+Name the pot file after the language. For example for swedish the pot file should be named "sv_SE.pot". For Italian it would be "it_IT.pot".
+
+Configuer the charset value. It is located close to the top of the file.
+
+Move your potfile to the "pots" directory.
+
+Run the "import_translation" script.
+
+Now it sould all be working. Start the acyl script the ususal way and enjoy using it in the language of your choice.
+

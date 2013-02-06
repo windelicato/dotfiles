@@ -1,0 +1,160 @@
+style "theme-panel"
+{
+	xthickness = 4 # The spacing (padding) inside and between applets. Add a lower value for a more compact look.
+	ythickness = 0
+
+	#bg_pixmap[NORMAL] = "/Panel/panel-bg.png" # Disable for normal panel backgrounds.
+
+	fg[NORMAL]	= "#f5f5f5"
+	fg[PRELIGHT]	= "#ffffff"
+	fg[ACTIVE]	= "#f5f5f5"
+	text[NORMAL]	= "#f5f5f5"
+	text[PRELIGHT]	= "#ffffff"
+	text[ACTIVE]	= "#f5f5f5"
+	
+	engine "pixmap" {
+		image {
+			function	= BOX
+			recolorable	= TRUE
+			state		= NORMAL
+		}
+		image {
+			function	= BOX
+			recolorable	= TRUE
+			state		= PRELIGHT
+			file		= "Panel/panel-button-hover.png"
+			border		= { 4, 4, 1, 1 }
+			stretch		= TRUE
+		}
+		image {
+			function	= BOX
+			recolorable	= TRUE
+			state		= ACTIVE
+			file		= "Panel/panel-button-active.png"
+			border		= { 4, 4, 1, 1 }
+			stretch		= TRUE
+		}
+		image {
+			function	= BOX
+			recolorable	= TRUE
+			state		= SELECTED
+			file		= "Panel/panel-button-active.png"
+			border		= { 4, 4, 1, 1 }
+			stretch		= TRUE
+		}
+		image {
+			function	= BOX
+			recolorable	= TRUE
+			state		= INSENSITIVE
+		}
+		image {
+			function	= ARROW
+			recolorable	= TRUE
+			arrow_direction	= DOWN
+		}
+	}
+}
+
+style "theme-panel-light"
+{
+	xthickness = 1
+	ythickness = 0
+
+	fg[NORMAL] = @fg_color
+
+	engine "murrine" {
+		textstyle = 0
+		roundness = 0
+	}
+}
+
+style "theme-panel-text"
+{
+	fg[NORMAL]	= "#f5f5f5"
+	fg[PRELIGHT]	= "#ffffff"
+	fg[ACTIVE]	= "#f5f5f5"
+	text[NORMAL]	= "#f5f5f5"
+	text[PRELIGHT]	= "#ffffff"
+	text[ACTIVE]	= "#f5f5f5"
+}
+
+style "theme-main-menu-text" = "theme-panel-text"
+{
+	fg[PRELIGHT]	= "#ffffff"
+	text[PRELIGHT]	= "#ffffff"
+}
+
+style "theme-panel-handle" 
+{
+	engine "pixmap" {    
+		image {
+			function = HANDLE
+		}    
+		image {
+			function = HANDLE
+		}
+	}
+}
+
+widget "*PanelWidget*"			style "theme-panel"
+widget "*PanelApplet*"			style "theme-panel"
+widget "*fast-user-switch*"		style "theme-panel"
+widget "*CPUFreq*Applet*"		style "theme-panel"
+widget "*indicator-applet*"		style "theme-panel"
+class "PanelApp*"			style "theme-panel"
+class "PanelToplevel*"			style "theme-panel"
+widget_class "*PanelToplevel*"		style "theme-panel"
+widget_class "*notif*"			style "theme-panel"
+widget_class "*Notif*"			style "theme-panel"
+widget_class "*Tray*"			style "theme-panel" 
+widget_class "*tray*"			style "theme-panel"
+widget_class "*computertemp*"		style "theme-panel"
+widget_class "*Applet*Tomboy*"		style "theme-panel"
+widget_class "*Applet*Netstatus*"	style "theme-panel"
+
+# Fixes for tooltip text in some apps.
+widget_class "*Notif*Beagle*"	style "theme-panel-light"
+widget_class "*Notif*Brasero*"	style "theme-panel-light"
+
+# XFCE panel theming.
+widget "*Xfce*Panel*"	style "theme-panel"
+class "*Xfce*Panel*"	style "theme-panel"
+
+# lxpanel and fbpanel
+widget "*.tclock.*"		style "theme-panel"
+widget "*.taskbar.*"		style "theme-panel"
+widget_class "*GtkBgbox*"	style "theme-panel"
+
+# Make sure panel text color doesn't change
+widget_class "*Panel*MenuBar*"		style "theme-main-menu-text"
+widget_class "*Panel*<GtkMenuBar>*"	style "theme-main-menu-text"
+widget "*.clock-applet-button.*"	style "theme-panel-text"
+widget "*PanelApplet*"			style "theme-panel-text"
+
+# Hide ugly handle
+class "PanelAppletFrame" style:highest "theme-panel-handle"
+
+# The following removes the arrows from the panel
+
+style "panel-arrow-remove" {
+engine "pixmap" {
+	image {
+		function	= ARROW
+		recolorable	= TRUE
+		overlay_file	= "Panel/arrow-blank.png"
+		overlay_border	= {2,2,2,2}
+		overlay_stretch	= FALSE
+		arrow_direction	= UP
+		}
+	image {
+		function	= ARROW
+		recolorable	= TRUE
+		overlay_file	= "Panel/arrow-blank.png"
+		overlay_border	= {2,2,2,2}
+		overlay_stretch	= FALSE
+		arrow_direction	= DOWN
+		}
+	}
+}
+
+widget_class "*PanelToplevel*" style "panel-arrow-remove"

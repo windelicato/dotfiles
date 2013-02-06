@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "App description.",
+      "message": "Serviciu de e-mail rapid, \u00EEn care se pot efectua c\u0103ut\u0103ri, cu mai pu\u0163ine mesaje spam."
+   },
+   "appName": {
+      "description": "App name.",
+      "message": "Gmail"
+   }
+}

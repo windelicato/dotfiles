@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16"
+   height="16"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.48.1 r9760"
+   version="1.0"
+   sodipodi:docname="battery-full-charging-symbolic.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   style="display:inline">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#fd0000"
+     borderopacity="1"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="15.810166"
+     inkscape:cx="-18.12203"
+     inkscape:cy="1.4258958"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:showpageshadow="false"
+     showguides="false"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1920"
+     inkscape:window-height="1028"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1">
+    <sodipodi:guide
+       orientation="1,0"
+       position="0,112"
+       id="guide2383" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="26.278146,128"
+       id="guide2385" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="128,54.082119"
+       id="guide2387" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="78.156291,0"
+       id="guide2389" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="60.863576,64.084768"
+       id="guide2391" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid3672"
+       visible="true"
+       enabled="true"
+       empspacing="8"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Icon"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(0,-6)">
+    <path
+       style="fill:#bebebe;fill-opacity:1;stroke:none;display:inline"
+       d="M 0,20.75 C 0,21.4425 0.5575,22 1.25,22 l 8.5,0 C 10.4425,22 11,21.4425 11,20.75 L 11,19.0625 9,15.6875 9,19.25 C 9,19.6655 8.6655,20 8.25,20 l -5.5,0 C 2.3345,20 2,19.6655 2,19.25 l 0,-8.5 C 2,10.3345 2.3345,10 2.75,10 l 5.5,0 C 8.6655,10 9,10.3345 9,10.75 L 9,14 9.90625,14 A 1.0121545,1.0121545 0 0 1 10,14 l 1,-0.03125 0,-3.875 L 11,9.9375 11,9.25 C 11,8.5575 10.4425,8 9.75,8 L 8,8 8,7 8,6.5 C 8,6.223 7.777,6 7.5,6 L 7,6 4,6 3.5,6 C 3.223,6 3,6.223 3,6.5 L 3,7 3,8 1.25,8 C 0.5575,8 0,8.5575 0,9.25 l 0,11.5 z"
+       id="path4255"
+       inkscape:connector-curvature="0" />
+    <path
+       sodipodi:nodetypes="ccccccc"
+       inkscape:connector-curvature="0"
+       id="path3773"
+       d="M 14,22 10,15 12.458476,15 12,10 l 4,7 -2.526167,0 z"
+       style="fill:#bebebe;fill-opacity:1;stroke:none;display:inline" />
+    <rect
+       style="color:#000000;fill:#bebebe;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.50000000000000000;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;opacity:0.45"
+       id="rect2999"
+       width="7"
+       height="10"
+       x="2"
+       y="4"
+       transform="translate(0,6)"
+       rx="0.5" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:#bebebe;fill-opacity:1;stroke:none;display:inline"
+       d="M 2,40.75 C 2,41.4425 2.5575,42 3.25,42 l 8.5,0 C 12.4425,42 13,41.4425 13,40.75 l 0,-11.5 C 13,28.5575 12.4425,28 11.75,28 L 10,28 10,27 10,26.5 C 10,26.223 9.777,26 9.5,26 L 9,26 6,26 5.5,26 C 5.223,26 5,26.223 5,26.5 L 5,27 5,28 3.25,28 C 2.5575,28 2,28.5575 2,29.25 l 0,11.5 z m 2,-1.5 0,-8.5 C 4,30.3345 4.3345,30 4.75,30 l 5.5,0 c 0.4155,0 0.75,0.3345 0.75,0.75 l 0,8.5 C 11,39.6655 10.6655,40 10.25,40 l -5.5,0 C 4.3345,40 4,39.6655 4,39.25 z"
+       id="path3775" />
+  </g>
+</svg>

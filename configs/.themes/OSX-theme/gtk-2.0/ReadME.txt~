@@ -1,0 +1,3 @@
+Panel skinning:
+
+If you don't need the skinned panel comment out the 1262th line in gtkrc!!!

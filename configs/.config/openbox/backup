@@ -1,0 +1,24 @@
+${image ~/.config/openbox/osx_panel.png -p -4,0}\
+${if_match ${exec amixer get Master| egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"} <= 100}\
+${if_match ${exec amixer get Master| egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"} >= 75}\
+${image ~/.config/openbox/icons/audio-volume-high.png -p 1000,0}\
+${endif}\
+${endif}\
+${if_match ${exec amixer get Master| egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"} <= 74}\
+${if_match ${exec amixer get Master| egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"} >= 50}\
+${image ~/.config/openbox/icons/audio-volume-medium.png -p 1000,0}\
+${endif}\
+${endif}\
+${if_match ${exec amixer get Master| egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"} <= 49}\
+${if_match ${exec amixer get Master| egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"} >= 25}\
+${image ~/.config/openbox/icons/audio-volume-low.png -p 1000,0}\
+${endif}\
+${endif}\
+${if_match ${exec amixer get Master| egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"} <= 25}\
+${if_match ${exec amixer get Master| egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"} >= 1}\
+${image ~/.config/openbox/icons/audio-volume-off.png -p 1000,0}\
+${endif}\
+${endif}\
+${if_match "${exec amixer get Master| egrep -o 'off'}" == "off"}\
+${image ~/.config/openbox/icons/audio-volume-muted.png -p 1000,0}\
+${endif}\

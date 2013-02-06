@@ -1,0 +1,30 @@
+UnityPanelWidget,
+.unity-panel {
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@bg_color, 1.15)),
+		to (shade (@bg_color, 1.0)));
+	border-top-color: shade (@bg_color, 1.6);
+	border-style: solid;
+	border-width: 0;
+}
+
+.unity-panel.menubar,
+.unity-panel .menubar {
+	color: @fg_color;
+	text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
+}
+
+.unity-panel.menuitem,
+.unity-panel .menuitem {
+	border-width: 1px 1px 0 1px;
+	text-shadow: 0 1px alpha (shade (@button_bg_color, 1.25), 0.4);
+}
+
+.unity-panel.menubar.menuitem:hover,
+.unity-panel.menubar .menuitem *:hover {
+	background-image: -gtk-gradient (linear, left top, left bottom,
+		from (shade (@selected_bg_color, 0.96)),
+		to (shade (@selected_bg_color, 1.15)));
+
+	color: @selected_fg_color;
+}

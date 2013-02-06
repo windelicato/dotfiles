@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Ang pinakamabilis na paraan upang maghanap sa web."
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "Paghahanap sa Google"
+   }
+}

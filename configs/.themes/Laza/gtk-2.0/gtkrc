@@ -1,0 +1,248 @@
+#Laza By lyrae | thrynk.deviantart.com
+
+gtk-icon-sizes = "panel-menu=24,24:panel=24,24:gtk-button=16,16:gtk-large-toolbar=24,24"
+gtk-button-images = 0
+gtk-menu-images = 0
+
+style "default"
+{
+	GtkWidget::focus-line-width                  = 1
+    GtkWidget::focus_padding                     = 4
+    GtkWidget::interior_focus                    = 5
+    GtkWidget::internal_padding                  = 4
+    GtkButton::default_border                    = {0, 0, 0, 0}
+    GtkButton::default_outside_border            = {0, 0, 0, 0}
+    GtkButton::child_displacement_x              = 0
+    GtkButton::child_displacement_y              = 1
+    GtkButton::default_spacing                   = 5
+    GtkButton::focus-padding                     = 1
+    GtkCheckButton::indicator_size               = 12
+    GtkMenuItem::selected_shadow_type            = etched-in
+    GtkMenuItem::internal_padding                = 5
+    GtkPaned::handle_full_size                   = 1
+    GtkPaned::handle_size                        = 7
+    GtkRadioButton::indicator_size               = 15
+    GtkRange::slider_width                       = 6
+    GtkRange::stepper_size                       = 1
+    GtkRange::stepper_spacing                    = 0
+    GtkRange::trough_border                      = 2
+    GtkScrollbar::has_backward_stepper           = 1
+    GtkScrollbar::min_slider_length              = 20
+    ExoIconBar::focus_padding                    = 2 
+    GtkEntry::cursor_aspect_ratio			= 0.1
+    GtkEntry::cursor_color				= "#A7A196"
+    GtkEntry::secondary_cursor_color		= "#A7A196"
+    GtkTextView::cursor_color			= "#A7A196"
+    GtkTextView::secondary_cursor_color		= "#A7A196"
+
+	xthickness					= 1
+	ythickness					= 1
+
+	base[NORMAL]					= "#272521" # Background, most
+	base[PRELIGHT]					= "#272521" # Mouseover menu
+	base[ACTIVE]					= "#302e29" # Menu active item in inactive window
+	base[SELECTED]					= "#302e29" # Menu active item in active window
+	base[INSENSITIVE]				= "#403d36" # Background, insensitive
+
+	text[NORMAL]					= "#A7A196" # Text in window
+	text[PRELIGHT]					= "#A7A196" # Text on Mouseover
+	text[ACTIVE]					= "#786e5b" # Active text in inactive window
+	text[SELECTED]					= "#786e5b" # Active text in active window
+	text[INSENSITIVE]				= "#A7A196" # Unknown
+
+	bg[NORMAL]					= "#272521" # Normal Background, inactive Metacity bar, buttons
+	bg[PRELIGHT]					= "#302e29" # Mouseover buttons
+	bg[ACTIVE]					= "#24221e" # Mouseclicking, Tabs, active window list
+	bg[SELECTED]					= "#24221e" # Metacity Bar
+	bg[INSENSITIVE]					= "#24221e" # Insensitive buttons
+
+	fg[ACTIVE]					= "#A7A196"
+	fg[INSENSITIVE]					= "#505050"
+	fg[NORMAL]					= "#A7A196"
+	fg[PRELIGHT]					= "#786e5b"
+	fg[SELECTED]					= "#A7A196"
+
+	engine "xfce"
+	{
+		smooth_edge = true
+
+		boxfill
+		{
+			fill_style = plain
+		}
+	}
+}
+
+widget_class "*" style "default"
+
+style "menustyle" = "default"
+{
+	xthickness = 2
+	ythickness = 0
+
+		engine "xfce"
+	{
+		smooth_edge = true
+		grip_style = none
+
+		boxfill
+		{
+			fill_style = gradient
+			orientation = vertical
+			shade_start = 1.02
+			shade_end = 1.00
+		}
+	}
+}
+
+widget_class "*BonoboDockItem"	style "menustyle"
+class "*BonoboDockItem"		style "menustyle"
+widget_class "*ToolBar"		style "menustyle"
+class "*ToolBar"		style "menustyle"
+widget_class "*MenuBar"		style "menustyle"
+class "*MenuBar"		style "menustyle"
+
+class "GtkWidget"          style "default"
+
+
+style "inactivetext2"
+{
+
+engine "mist"
+ 	{
+	}
+}
+
+widget_class "*.<GtkMenuItem>.*" style "inactivetext2"
+
+
+
+style "button" = "default"
+{
+	xthickness = 2
+	ythickness = 2
+	
+			engine "xfce"
+	{
+		smooth_edge = true
+		grip_style = none
+
+		boxfill
+		{
+			fill_style = gradient
+			orientation = vertical
+			shade_start = 1.05
+			shade_end = 1.00
+		}
+	}
+}
+
+widget_class "*Button*"		style "button"
+class "*Button*"		style "button"
+widget_class "*button*"		style "button"
+class "*button*"		style "button"
+widget_class "*OptionMenu*"	style "button"
+class "*OptionMenu*"		style "button"
+
+style "sbstyle" = "default"
+{
+	xthickness = 3
+	ythickness = 3
+
+	engine "xfce"
+	{
+		smooth_edge = true
+		grip_style = none
+		boxfill
+		{
+			fill_style = gradient
+			orientation = automatic
+			shade_start = 1.0
+			shade_end = 1.0
+		}
+	}
+}
+
+style "progress" = "gradient"
+{
+    xthickness = 0
+    ythickness = 0
+
+    engine "xfce"
+    {
+        smooth_edge = true
+        grip_style = none
+        boxfill
+        {
+            fill_style = gradient
+            orientation = automatic
+            shade_start = 1.10
+            shade_end = 0.95
+        }
+    }
+}
+
+
+widget_class "*Scrollbar*"	style "sbstyle"
+class "*Scrollbar*"		style "sbstyle"
+widget_class "*GtkScale*"	style "sbstyle"
+class "*GtkScale*"		style "sbstyle"
+widget_class "*GtkProgress*"	style "sbstyle"
+class "*GtkProgress*"		style "sbstyle"
+
+style "fsstyle"
+{
+	fg[NORMAL] = "#786e5b"
+	fg[ACTIVE] = "#A7A196"
+	
+}
+
+widget_class "*List"		style "fsstyle"
+class "*List"			style "fsstyle"
+widget_class "*Button"		style "fsstyle"
+class "*Button"			style "fsstyle"
+widget_class "*Tree"		style "fsstyle"
+class "*Tree"			style "fsstyle"
+
+style "menuitem" = "default"
+{
+	xthickness = 1
+	ythickness = 2
+}
+
+widget_class "*MenuItem*"	style "menuitem"
+class "*MenuItem*"		style "menuitem"
+
+style "flat" = "default"
+{
+	xthickness = 2
+	ythickness = 2
+
+	engine "xfce" 
+	{
+		smooth_edge = true
+		grip_style = none
+		
+		boxfill
+		{
+			fill_style = gradient
+			orientation = vertical
+			shade_start = 1.00
+			shade_end = 1.00
+		}
+	}
+}
+
+# This is for the window borders (xfwm4 & metacity)
+# 
+style "titlebar" = "default"
+{
+    bg[SELECTED]      = "#302e29"
+    fg[SELECTED]      = "#786e5b"
+    bg[INSENSITIVE]   = "#272521"
+    fg[INSENSITIVE]   = "#A7A196"
+}
+
+widget "xfwm"			style "titlebar"
+widget_class "MetaFrames"	style "titlebar"
+class "MetaFrames"		style "titlebar"

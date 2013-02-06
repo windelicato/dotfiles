@@ -10,7 +10,7 @@
 # be disabled and audio files will only be accepted over ipc socket (using
 # file:// protocol) or streaming files over an accepted protocol.
 #
-music_directory		"~/music"
+music_directory		"~/Music"
 #
 # This setting sets the MPD internal playlist directory. The purpose of this
 # directory is storage for playlists created by MPD. The server will use 
@@ -211,9 +211,9 @@ audio_output {
 
 # For visualizer
 #audio_output {
-	#type		"fifo"
-	#name		"my_fifo"
-	#path		"/tmp/mpd.fifo"
+#       type		"fifo"
+#       name		"my_fifo"
+#       path		"/tmp/mpd.fifo"
 #}
 	
 #

@@ -1,0 +1,944 @@
+{
+   "adalreadyblocked": {
+      "message": "Ne trebate ni\u0161ta poduzeti jer je reklama ve\u0107 blokirana"
+   },
+   "adblock_auto_removes_ads_thats_all": {
+      "message": "AdBlock automatski uklanja reklame.  I to je najjednostavnije obja\u0161njenje."
+   },
+   "adblock_is_paused": {
+      "message": "AdBlock je pauziran. Zbog toga nijedan resurs nije uhva\u0107en pa se ova stranica ne mo\u017Ee koristiti. Prvo odpauzirajte Adblock pa probajte ponovno."
+   },
+   "adblock_outdated_chrome": {
+      "message": "Koristite staru verziju AdBlock-a. Molim Vas posjetite \u003Ca href='#'\u003Estranicu pro\u0161irenja\u003C/a\u003E, omogu\u0107ite 'Na\u010Din za razvojne programere' i kliknite 'A\u017Euriraj pro\u0161irenja sada'."
+   },
+   "adblock_wont_run_on_pages_matching": {
+      "message": "AdBlock ne\u0107e raditi na nijednoj stranici koja odgovara slijede\u0107em:"
+   },
+   "adblockreportinganad": {
+      "message": "AdBlock - Prijavljivanje reklame"
+   },
+   "addthisfilter": {
+      "message": "Dodaj ovaj filter"
+   },
+   "adreport2": {
+      "message": "Upravo ste prona\u0161li reklamu na web stranici? Ja \u0107u Vam pomo\u0107i da je prijavite na pravo mjesto!\u003Cbr/\u003E Zapamtite: prijavljivanje reklama je volontiranje. Ako ne \u017Eelite to napraviti, mo\u017Eete je blokirati samo za sebe tako da dodate njezin filter u kartici 'Prilagodi' u postavkama!"
+   },
+   "adsoneverysite": {
+      "message": "Vidite li reklame na ve\u0107ini stranica koje posje\u0107ujete (va\u0161a po\u010Detna stranica, stranica sa vijestima, itd.), ali kada posjetite iste stranice na prijateljevom ra\u010Dunalu reklama nema?"
+   },
+   "adstillappear": {
+      "message": "Da li se reklama jo\u0161 pojavljuje?"
+   },
+   "advanced_options": {
+      "message": "Ja sam napredni korisnik, prika\u017Ei mi napredne postavke."
+   },
+   "any_new_tabs_you_open_Will_be_automatically_ad_free": {
+      "message": "Sve nove kartice koje otvorite bit \u0107e automatski bez reklama."
+   },
+   "anysite": {
+      "message": "Bilo koja stranica"
+   },
+   "appliedwhenbrowsing": {
+      "message": "Ovaj filter \u0107e biti primjenjen kada budete pregledavali internet:"
+   },
+   "betalabel": {
+      "message": "Beta"
+   },
+   "blacklistclickmessage": {
+      "message": "Desni klik na stranici na reklami za blokiranje -- ili ovdje blokiraj ru\u010Dno."
+   },
+   "blacklisterattrwillbe": {
+      "message": "$attribute$ \u0107e biti $value$",
+      "placeholders": {
+         "attribute": {
+            "content": "$1"
+         },
+         "value": {
+            "content": "$2"
+         }
+      }
+   },
+   "blacklisterblockedelement": {
+      "message": "Blokirani element:"
+   },
+   "blacklisterblocksalloftype": {
+      "message": "Oprez: Ovaj filter blokira sve $elementtype$ elemente na stranici!",
+      "placeholders": {
+         "elementtype": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistereditfilter": {
+      "message": "Molim Vas da ispravite filter ispod i kliknete OK"
+   },
+   "blacklistereditinvalid1": {
+      "message": "Filter je neispravan: $exception$",
+      "placeholders": {
+         "exception": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistermatches": {
+      "message": "Ovo odgovara $matchcount$ stavki na ovoj stranici.",
+      "placeholders": {
+         "matchcount": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklisternofilter": {
+      "message": "Filter nije unesen!"
+   },
+   "blacklisternotsure": {
+      "message": "\u003Cb\u003ENiste sigurni?\u003C/b\u003E samo kliknite 'Blokiraj!' ispod."
+   },
+   "blacklisteroptions1": {
+      "message": "\u0160to mislite da \u0107e biti istinito oko ove reklame svaki puta kad posjetite ovu stranicu?"
+   },
+   "blacklisteroptionstitle": {
+      "message": "Posljednji korak: \u0160to ovo \u010Dini reklamom"
+   },
+   "blacklistersinglematch": {
+      "message": "Ovo odgovara \u003Cb\u003E1\u003C/b\u003E stavci na ovoj stranici."
+   },
+   "blacklisterthefilter": {
+      "message": "Filter, mo\u017Ee se promjeniti u Postavkama:"
+   },
+   "blacklistertype": {
+      "message": "Tip"
+   },
+   "blacklisterwarningnofilter": {
+      "message": "Upozorenje: filter nije unesen!"
+   },
+   "block_an_ad_on_this_page": {
+      "message": "Blokiraj reklamu na ovoj stranici"
+   },
+   "block_by_url_instead": {
+      "message": "Napredno: blokiraj po URL-u"
+   },
+   "block_this_ad": {
+      "message": "Blokiraj ovu reklamu"
+   },
+   "blockanadtitle": {
+      "message": "Blokiraj reklamu"
+   },
+   "blockdomain": {
+      "message": "Domena stranice na koju \u017Eelite primijeniti"
+   },
+   "blockeverycontaining": {
+      "message": "Blokiraj svaki resurs koji sadr\u017Ei:"
+   },
+   "blockmoreads": {
+      "message": "Blokirati jo\u0161 reklama:"
+   },
+   "blockurlwithtext": {
+      "message": "Blokirati URL-ove koji sadr\u017Eavaju ovaj tekst"
+   },
+   "buttonback": {
+      "message": "Nazad"
+   },
+   "buttonblockit": {
+      "message": "Blokiraj!"
+   },
+   "buttoncancel": {
+      "message": "Odustani"
+   },
+   "buttonedit": {
+      "message": "Promjeni"
+   },
+   "buttonexclude": {
+      "message": "Isklju\u010Diti"
+   },
+   "buttonlooksgood": {
+      "message": "Izgleda u redu"
+   },
+   "buttonok": {
+      "message": "U redu!"
+   },
+   "cantblockflash": {
+      "message": "Jo\u0161 ne mo\u017Eemo blokirati reklame unutar Flash ili drugih dodataka. \u010Cekamo da to podr\u017Ee preglednik ili WebKit."
+   },
+   "cantblockflashwarning": {
+      "message": "Da li se reklama pojvljuje u ili prije filma odnosno drugih dodataka kao Flash igre?"
+   },
+   "casesensitive": {
+      "message": "Ovaj filter je osjetljiv na veli\u010Dinu slova:"
+   },
+   "changelabel": {
+      "message": "promjeni"
+   },
+   "checkinfirefox_1": {
+      "message": "Instalirajte Firefox $chrome$ ako ga nemate.",
+      "placeholders": {
+         "chrome": {
+            "content": "$1ili Chrome$2"
+         }
+      }
+   },
+   "checkinfirefox_2": {
+      "message": "Instalirajte Adblock Plus za Firefox $chrome$ ako ga nemate.",
+      "placeholders": {
+         "chrome": {
+            "content": "$1ili AdBlockforChrome za Chrome$2"
+         }
+      }
+   },
+   "checkinfirefox_3": {
+      "message": "U tom pregledniku, pretplatite se na iste liste filtera kao i ovdje (osim AdBlock prilago\u0111enih filtera u FireFox-u)."
+   },
+   "checkinfirefox_4": {
+      "message": "U tom pregledniku pokrenite stranicu sa reklamom."
+   },
+   "checkinfirefox_5": {
+      "message": "Da li se reklama pojavljuje i u tom pregledniku?"
+   },
+   "checkinfirefoxtitle": {
+      "message": "Provjerite u Firefox $chrome$",
+      "placeholders": {
+         "chrome": {
+            "content": "$1ili Chrome$2"
+         }
+      }
+   },
+   "chromebutton_how_to_hide2": {
+      "message": "Sakrijte gumb tako da ga desnim klikom mi\u0161a kliknete i odaberte Sakrij gumb. Mo\u017Eete gumb vratiti nazad u opcijama pro\u0161irenja: chrome://chrome/extensions."
+   },
+   "cleanuplist": {
+      "message": "Optimiraj filtere u ovoj listi:"
+   },
+   "clickthead": {
+      "message": "Kliknite reklamu i ja \u0107u Vas voditi kroz blokiranje."
+   },
+   "clickupdatefilters": {
+      "message": "Klikni ovo: \u003Ca\u003EA\u017Euriraj moje filtere!\u003C/a\u003E"
+   },
+   "close": {
+      "message": "Zatvori"
+   },
+   "close_tab_begin_browsing": {
+      "message": "Mo\u017Eete zatvoriti ovu karticu i zapo\u010Deti pregledavati internet bez reklama. U\u017Eivajte!"
+   },
+   "correctfilters": {
+      "message": "Ispravni filteri"
+   },
+   "csstomatch": {
+      "message": "Da odgovara CSS-u"
+   },
+   "custompattern": {
+      "message": "Prilago\u0111eno:"
+   },
+   "debuginlogoption": {
+      "message": "Prika\u017Ei izjave uklanjanja pogre\u0161ke u zapisu konzole (usporava Adblock)"
+   },
+   "description2": {
+      "message": "Najpopularnije Chrome pro\u0161irenje, sa preko 10 milijuna korisnika! Blokira reklame na cijelom internetu."
+   },
+   "did_you_know_this_is_my_full_time_job": {
+      "message": "Jeste li znali da mi je ovo redovni posao?"
+   },
+   "disabled_by_filter_lists": {
+      "message": "Isprika, Adblock je onemogu\u0107en na ovoj stranici zbog neke od va\u0161ih lista filtera."
+   },
+   "disabled_on_this_page": {
+      "message": "AdBlock je onemogu\u0107en na ovoj stranici."
+   },
+   "doesntmatchoriginal": {
+      "message": "Uzorak koji ste unijeli ne odgovora resursu koji ste poku\u0161ali blokirati! Svejedno nastavite?"
+   },
+   "done": {
+      "message": "gotovo."
+   },
+   "dont_run_on_pages_on_domain": {
+      "message": "Onemogu\u0107i pokretanje na stranicima ove domene"
+   },
+   "dont_run_on_this_page": {
+      "message": "Nemoj pokretati na ovoj stranici"
+   },
+   "enable": {
+      "message": "omogu\u0107i"
+   },
+   "excludedomainorurl": {
+      "message": "Domena ili URL gdje Adblock ne bi trebao blokirati ni\u0161ta"
+   },
+   "excludefilterremoved": {
+      "message": "Filter je uklonjen. Molim Vas da ponovno pokrenete originalnu stranicu za generiranje liste resursa."
+   },
+   "failedtofetchfilter": {
+      "message": "Neuspjelo dobavljanje ovog filtera!"
+   },
+   "faq": {
+      "message": "Pitanja i odgovori"
+   },
+   "fetchinglabel": {
+      "message": "Dobavljam... molim pri\u010Dekajte."
+   },
+   "filecleanerwarning": {
+      "message": "Ako vidite ovu poruku svaki puta kad pokrenete Adblock, molimo provjerite da ne koristite \u010Dista\u010D datoteka koji tako\u0111er \u010Disti i 'localstorage' datoteke."
+   },
+   "filteradblock_custom": {
+      "message": "AdBlock prilagodljivi filteri (preporu\u010Deno)"
+   },
+   "filterchinese": {
+      "message": "- dodatni kineski filteri"
+   },
+   "filterczech": {
+      "message": "\u010Ce\u0161ki filteri"
+   },
+   "filterdanish": {
+      "message": "Danski filteri"
+   },
+   "filterdutch": {
+      "message": "- dodatni nizozemski filteri"
+   },
+   "filtereasylist": {
+      "message": "EasyList (preporu\u010Deno)"
+   },
+   "filtereasylist_plun_korean": {
+      "message": "Korejski filteri"
+   },
+   "filtereasylist_plus_bulgarian": {
+      "message": "- dodatni bugarski filteri"
+   },
+   "filtereasylist_plus_finnish": {
+      "message": "- dodatni finski filteri"
+   },
+   "filtereasylist_plus_french": {
+      "message": "- dodatni francuski filteri"
+   },
+   "filtereasylist_plus_german": {
+      "message": "- dodatni njema\u010Dki filteri"
+   },
+   "filtereasylist_plus_greek": {
+      "message": "- dodatni gr\u010Dki filteri"
+   },
+   "filtereasylist_plus_polish": {
+      "message": "- dodatni poljski filteri"
+   },
+   "filtereasylist_plus_romanian": {
+      "message": "- dodatni rumunjski filteri"
+   },
+   "filtereasylist_plus_spanish": {
+      "message": "\u0160panjolski filteri"
+   },
+   "filtereasyprivacy": {
+      "message": "EasyPrivacy (za\u0161tita privatnosti)"
+   },
+   "filterhasbeenadded": {
+      "message": "Filter je upje\u0161no dodan!\nPonovno pokrenite stranicu da vidite rezultate!"
+   },
+   "filterhungarian": {
+      "message": "Ma\u0111arski filteri"
+   },
+   "filterisraeli": {
+      "message": "Izraelski filteri"
+   },
+   "filteritalian": {
+      "message": "Talijanski filteri"
+   },
+   "filterjapanese": {
+      "message": "Japanski filteri"
+   },
+   "filterlistlink": {
+      "message": "Nemojte se prijavljivati na vi\u0161e nego Vam je potrebno -- svaka stavka dodatno usporava Adblock! Impresum i ostale liste mo\u017Eete prona\u0107i \u003Ca\u003Eovdje\u003C/a\u003E."
+   },
+   "filterlistsrock": {
+      "message": "Liste filtera blokiraju ve\u010Dinu reklama na internetu. Mo\u017Eete tako\u0111er:"
+   },
+   "filterorigin": {
+      "message": "Podrijetlo filtera:\n$list$",
+      "placeholders": {
+         "list": {
+            "content": "$1"
+         }
+      }
+   },
+   "filterrussian": {
+      "message": "- dodatni ruski i ukrajinski filteri"
+   },
+   "filtersavewarning": {
+      "message": "Budite oprezni: ako ovdje napravite pogre\u0161ku mnogo drugih filtera, uklju\u010Duju\u0107i slu\u017Ebene, se mo\u017Ee pokvariti!\u003Cbr/\u003EPro\u010Ditajte \u003Ca\u003Esintaksni vodi\u010D za filtere\u003C/a\u003E kako bi nau\u010Dili dodavati napredne filtere zabranjuju\u0107ih i dopu\u0161taju\u0107ih lista."
+   },
+   "filterstabtitle": {
+      "message": "Prijava na listu filtera"
+   },
+   "findingads": {
+      "message": "Tra\u017Eenje reklama...\u003Cbr/\u003E\u003Cbr/\u003E\u003Ci\u003EOvo \u0107e potrajati trenutak.\u003C/i\u003E"
+   },
+   "firefox_explanation": {
+      "message": "Svrha ovog pitanja je da se utvrdi tko bi trebao primiti va\u0161 izvje\u0161taj. Ako odgovorite neto\u010Dno, izvje\u0161taj \u0107e biti poslan krivim ljudima pa tako mo\u017Eda i zanemaren."
+   },
+   "fixityourself": {
+      "message": "U redu, jo\u0161 mo\u017Eete blokirati ovu reklamu samo za sebe u Postavkama. Hvala!"
+   },
+   "flashads": {
+      "message": "Video i Flash"
+   },
+   "for_more_options_right_click": {
+      "message": "Za vi\u0161e opcija, mo\u017Eete kliknuti desni klik na stranicama ili kliknite $img$ dugme alatne trake.",
+      "placeholders": {
+         "img": {
+            "content": "\u003Cimg src=\"../../img/icon19.png\"/\u003E"
+         }
+      }
+   },
+   "format_site1_site2_site3": {
+      "message": "Format: ~site1.com|~site2.com|~vijesti.site3.org"
+   },
+   "generaloptions": {
+      "message": "Op\u0107e postavke"
+   },
+   "googletextads": {
+      "message": "\u017Delim da mi se prika\u017Eu tekstualne reklame kod pretra\u017Eivanja Google-a."
+   },
+   "headerfilter": {
+      "message": "Odgovaraju\u0107i filter"
+   },
+   "headerresource": {
+      "message": "Resurs"
+   },
+   "headertype": {
+      "message": "Tip"
+   },
+   "help": {
+      "message": "Pomo\u0107"
+   },
+   "hide_this_button": {
+      "message": "Sakrij dugme"
+   },
+   "how_to_use_adblock": {
+      "message": "Kako koristiti AdBlock:"
+   },
+   "installedtitle": {
+      "message": "AdBlock je instaliran!"
+   },
+   "installing_adblock": {
+      "message": "Instaliranje AdBlock-a..."
+   },
+   "invalidListUrl": {
+      "message": "Nepravilna lista URL. Bit \u0107e obrisana."
+   },
+   "labelshow": {
+      "message": "prika\u017Ei"
+   },
+   "lang_bulgarian": {
+      "message": "Bugarski"
+   },
+   "lang_chinese": {
+      "message": "Kineski"
+   },
+   "lang_czech": {
+      "message": "\u010Ce\u0161ki"
+   },
+   "lang_danish": {
+      "message": "Danski"
+   },
+   "lang_dutch": {
+      "message": "Nizozemski"
+   },
+   "lang_english": {
+      "message": "Engleski"
+   },
+   "lang_finnish": {
+      "message": "Finski"
+   },
+   "lang_french": {
+      "message": "Francuski"
+   },
+   "lang_german": {
+      "message": "Njema\u010Dki"
+   },
+   "lang_greek": {
+      "message": "Gr\u010Dki"
+   },
+   "lang_hungarian": {
+      "message": "Ma\u0111arski"
+   },
+   "lang_israeli": {
+      "message": "Izraelski"
+   },
+   "lang_italian": {
+      "message": "Talijanski"
+   },
+   "lang_japanese": {
+      "message": "Japanski"
+   },
+   "lang_korean": {
+      "message": "Korejski"
+   },
+   "lang_polish": {
+      "message": "Poljski"
+   },
+   "lang_romanian": {
+      "message": "Rumunjski"
+   },
+   "lang_russian": {
+      "message": "Ruski"
+   },
+   "lang_spanish": {
+      "message": "\u0160panjolski"
+   },
+   "lang_ukranian": {
+      "message": "Ukrajinski"
+   },
+   "last_update_failed": {
+      "message": "Posljednje a\u017Euriranje je neuspjelo;"
+   },
+   "linkblockadbyurl": {
+      "message": "Blokirati reklamu po njezinom URL-u"
+   },
+   "linkhidesection": {
+      "message": "Sakriti dio stranice"
+   },
+   "linkunblock": {
+      "message": "Prikazati reklame na stranici ili domeni"
+   },
+   "loading": {
+      "message": "POKRETANJE..."
+   },
+   "manualfilteredit": {
+      "message": "Ru\u010Dno urediti svoje filtere:"
+   },
+   "maybemalware": {
+      "message": "Ne sadr\u017Ee sve stranice na internetu reklame. To \u0161to ih Vi vidite mnogo mo\u017Eda je zbog toga \u0161to na kompjuteru imate neki ne\u017Eeljeni softver. Poku\u0161ajte onemogu\u0107iti sva pro\u0161irenja jedno po jedno da vidite je li problem nestao. Ako nije, pokrenite (potpuno) skeniranje sustava sa a\u017Euriranim antivirusnim softverom jer mogu\u0107e je da je uzrok u zlonamjernom softveru."
+   },
+   "modifydomain": {
+      "message": "Lokacija:"
+   },
+   "modifypath": {
+      "message": "Stranica:"
+   },
+   "multipledomainshint": {
+      "message": "Odvoji razli\u010Dite domene sa zarezima ili razmacima"
+   },
+   "nextstep": {
+      "message": "Slijede\u0107i korak"
+   },
+   "no": {
+      "message": "Ne"
+   },
+   "nodefaultfilter1": {
+      "message": "Nemamo zadanu listu filtera za taj jezik.\u003Cbr/\u003EMolim prona\u0111ite odgovaraju\u0107u listu koja podr\u017Eava ovaj jezik $link$ ili blokirajte reklamu samo za sebe na kartici 'Prilagodi'.",
+      "placeholders": {
+         "link": {
+            "content": "$1ovdje$2"
+         }
+      }
+   },
+   "noresourcessend2": {
+      "message": "Ne\u0161to je po\u0161lo krivo. Resursi nisu poslani. Stranica \u0107e se sada zatvoriti. Poku\u0161ajte ponovno pokrenuti stranicu."
+   },
+   "nosearchresults": {
+      "message": "Resursi nisu prona\u0111eni"
+   },
+   "novalidurlpattern": {
+      "message": "Molim unesite valjani URL uzorak za podudaranje!"
+   },
+   "now_you_have_adblock_hooray": {
+      "message": "Sada imate AdBlock! Hura!"
+   },
+   "oneverysitetitle": {
+      "message": "Posvuda reklame!"
+   },
+   "only_block_ads_on_these_sites": {
+      "message": "Blokiraj reklame samo na slijede\u0107im stranicama:"
+   },
+   "onlyondomains": {
+      "message": "SAMO stranice na ovoj domeni:"
+   },
+   "onlyresourcetypes": {
+      "message": "Ovaj filter se odnosi na resurs ovih tipova:"
+   },
+   "opera_120_install": {
+      "message": "U verzijama Opere prije verzije 12.10, neke reklame se mo\u017Eda ne\u0107e uspje\u0161no blokirati jer nije mogu\u0107e ra\u0161\u010Dlaniti sva pravila u tim verzijama. Ovo \u0107e biti ispravljeno ako a\u017Eurirate Operu na verziju 12.10. Tada \u0107e se sve reklame blokirati ispravno."
+   },
+   "opera_120_options": {
+      "message": "U verzijama Opere prije verzije 12.10, neke opcije su zasivljene, zato \u0161to nisu podr\u017Eane u tim verzijama preglednika."
+   },
+   "opera_allow_secure": {
+      "message": "Ako \u017Eelite koristiti AdBlock na sigurnim stranicama (stranicama koje imaju ikonu brave u alatnoj traci) morate prvo omogu\u0107iti opciju da dopustite pristup sigurnim stranicama."
+   },
+   "opera_can_also_change_setting": {
+      "message": "Mo\u017Eete tako\u0111er pove\u0107ati vrijednost\n$setting$",
+      "placeholders": {
+         "setting": {
+            "content": "$1"
+         }
+      }
+   },
+   "opera_donations_button": {
+      "message": "Svi\u0111a Vam se pro\u0161irenje? Ako da, molim razmislite o doniranju. Nalazi se u opcijama!"
+   },
+   "opera_donations_install": {
+      "message": "Ako stvarno volite ovo pro\u0161irenje, molim razmislite o doniranju. Nalazi se u opcijama!"
+   },
+   "opera_enabledin": {
+      "message": "Omogu\u0107eno u $browserversion$",
+      "placeholders": {
+         "browserversion": {
+            "content": "$1"
+         }
+      }
+   },
+   "opera_excludedomainorurl": {
+      "message": "Domena gdje AdBlock ne bi trebao ni\u0161ta blokirati."
+   },
+   "opera_for_more_options": {
+      "message": "Za vi\u0161e postavki mo\u017Eete kliknuti gumb na alatnoj traci ili otvoriti postavke, Opera &rArr; Ekstenzije &rArr; Upravljanje ekstenzijama... &rArr; ikona klju\u010Da &rArr; Postavke"
+   },
+   "opera_linkunblock": {
+      "message": "Prika\u017Ei reklame na domeni"
+   },
+   "opera_reenable_button": {
+      "message": "Mo\u017Eete omogu\u0107iti gumb u postavkama ovog pro\u0161irenja"
+   },
+   "opera_secure_pages": {
+      "message": "Sigurne stranice"
+   },
+   "opera_secure_pages_enabled": {
+      "message": "Kliknite Ekstenzije (u izborniku) &rArr; Upravljanje ekstenzijama... &rArr; potra\u017Eite AdBlock i kliknite ikonu klju\u010Da odmah pokraj &rArr; kliknite Privatnost. \u003Cbr/\u003EJe li opcija da omogu\u0107ite pristup sigurnim stranicama uklju\u010Dena?"
+   },
+   "opera_show_toolbar_button": {
+      "message": "Prika\u017Ei gumb na alatnoj traci"
+   },
+   "options": {
+      "message": "Postavke"
+   },
+   "optionschangelog": {
+      "message": "Zapis promjena"
+   },
+   "optionstitle": {
+      "message": "AdBlock postavke"
+   },
+   "optionsversion": {
+      "message": "Verzija $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "orenteraurl": {
+      "message": "Ili unesite URL:"
+   },
+   "other": {
+      "message": "Drugi"
+   },
+   "pagelanguagecheck": {
+      "message": "Na kojem je jeziku stranica napisana?"
+   },
+   "pause_adblock": {
+      "message": "Pauziraj AdBlock"
+   },
+   "project_home": {
+      "message": "Stranica projekta"
+   },
+   "refusetocheck": {
+      "message": "Ne \u017Eelim ovo provjeravati"
+   },
+   "reloadadpage": {
+      "message": "Ponovno pokreni stranicu sa reklamom."
+   },
+   "removefromlist": {
+      "message": "Uklanjanje iz liste"
+   },
+   "removelabel": {
+      "message": "Ukloni"
+   },
+   "report_ad_on_page": {
+      "message": "Prijavi reklamu na ovoj stranici"
+   },
+   "reportfilterlistproblem": {
+      "message": "Ovo je problem sa listom filtera. Prijavi ga ovdje: $link$",
+      "placeholders": {
+         "link": {
+            "content": "$1"
+         }
+      }
+   },
+   "reportpubliclyavailable": {
+      "message": "Napomena: Va\u0161e izvje\u0161\u0107e mo\u017Ee biti javno dostupno. Imajte to na umu prije nego \u0107ete staviti ne\u0161to privatno."
+   },
+   "reporttous2": {
+      "message": "Ako govorite engleski mo\u017Eete prijaviti reklamu nama \u003Ca\u003Eu pratitelju pogre\u0161aka\u003C/a\u003E."
+   },
+   "resourceblocklegend1": {
+      "message": "Legenda:"
+   },
+   "resourceblocklegend2": {
+      "message": "blokirani resursi"
+   },
+   "resourceblocklegend3": {
+      "message": "popis isklju\u010Denih resursa"
+   },
+   "resourceblocklegend4": {
+      "message": "resursi za blokiranje"
+   },
+   "resourceblocklegend5": {
+      "message": "primijenjena pravila skrivanja"
+   },
+   "resourceblocktitle": {
+      "message": "Blokiraj resurs"
+   },
+   "resourcedomain": {
+      "message": "Pokrenuto na stranici s domenom:\n$domain$",
+      "placeholders": {
+         "domain": {
+            "content": "$1"
+         }
+      }
+   },
+   "resourceiswhitelisted": {
+      "message": "Obilje\u017Eeni resurs je dodan na popis isklju\u010Denih. Zbog toga ga ne mo\u017Eete blokirati."
+   },
+   "retryaftersubscribe": {
+      "message": "Prijavite se na ovu listu filtera, pa ponovno poku\u0161ajte: $list_title$",
+      "placeholders": {
+         "list_title": {
+            "content": "$1"
+         }
+      }
+   },
+   "safari50_updatenotice": {
+      "message": "Koristite staru verziju preglednika Safari. Nabavite zadnju verziju da biste mogi koristiti AdBlock dugme alatne trake za pauziranje Ablock-a, da onemogu\u0107ite Adblock-a na nekim web stranicama ili prijavite reklame. \u003Ca\u003EA\u017Eurirajte sad\u003C/a\u003E."
+   },
+   "savebutton": {
+      "message": "Spremi"
+   },
+   "savereminder": {
+      "message": "Ne zaboravite spremiti!"
+   },
+   "searchexplanation": {
+      "message": "Koristite * da bi ste zamijenili nula i vi\u0161e slova. Npr. 'banner*.gif' slika odgovara slikama 'banner.gif', 'banner123.gif' i 'bannerxyz.gif'."
+   },
+   "searchplaceholder": {
+      "message": "Pretra\u017Eite resurse..."
+   },
+   "seeing_this_every_time_you_start_your_browser": {
+      "message": "Vidite ovo svaki puta kada pokrenete preglednik?"
+   },
+   "selectresources": {
+      "message": "Obilje\u017Eite resurs koji \u017Eelite blokirati ili odblokirati"
+   },
+   "show_ads_except_for": {
+      "message": "Prika\u017Ei reklame \u003Ci\u003Ebilo gdje\u003C/i\u003E osim na slijede\u0107im domenama..."
+   },
+   "show_resourcelist": {
+      "message": "Prika\u017Ei listu resursa"
+   },
+   "showcontextmenus": {
+      "message": "Dodaj stavke na izbornik desnog klika."
+   },
+   "showlinkstolists": {
+      "message": "Prika\u017Ei linkove na liste filtera:"
+   },
+   "sliderexplanation": {
+      "message": "Pomaknite kliza\u010D dok reklama nije blokirana ispravno na stranici te blokirani element ne izgleda upotrebljivo."
+   },
+   "slidertitle": {
+      "message": "Korak 1: \u0160to blokirati?"
+   },
+   "status_disabled": {
+      "message": "AdBlock se ne mo\u017Ee pokrenuti na ovoj domeni."
+   },
+   "status_paused": {
+      "message": "AdBlock je pauziran."
+   },
+   "stop_blocking_ads": {
+      "message": "Zaustavi blokiranje reklama:"
+   },
+   "storage_quota_exceeded": {
+      "message": "Pre\u0161li ste preko omogu\u0107ene memorije koje AdBlock koristi. Molim Vas da se odjavite od nekih listi filtera!"
+   },
+   "subscribe_unsubscribe_all": {
+      "message": "$subscribe$ se ili $unsubscribe$ iz svih lista.",
+      "placeholders": {
+         "subscribe": {
+            "content": "\u003Ca href='#' id='subscribeAll'\u003EPrijavi\u003C/a\u003E"
+         },
+         "unsubscribe": {
+            "content": "\u003Ca href='#' id='unsubscribeAll'\u003Eodjavi\u003C/a\u003E"
+         }
+      }
+   },
+   "subscribebutton": {
+      "message": "Prijavi"
+   },
+   "subscribingfailed": {
+      "message": "Neuspjelo!"
+   },
+   "subscribingfinished": {
+      "message": "Zavr\u0161eno!"
+   },
+   "subscribingtitle": {
+      "message": "Pretplata na listu filtera..."
+   },
+   "tabcustomize": {
+      "message": "Prilagodi"
+   },
+   "tabcustomizetitle": {
+      "message": "Prilagodi AdBlock"
+   },
+   "tabfilterlists": {
+      "message": "Liste filtera"
+   },
+   "tabgeneral": {
+      "message": "Op\u0107enito"
+   },
+   "thats_it": {
+      "message": "To je to!"
+   },
+   "thirdparty": {
+      "message": "Tre\u0107e-strane"
+   },
+   "thirdpartycheckbox": {
+      "message": "Sve stranice OSIM stranica na domeni $domain$",
+      "placeholders": {
+         "domain": {
+            "content": "$1"
+         }
+      }
+   },
+   "translator_credit": {
+      "message": "Zasluga za prijevod: $translator_names$",
+      "placeholders": {
+         "translator_names": {
+            "content": "Stjepan Treger"
+         }
+      }
+   },
+   "typehiding": {
+      "message": "skrivanje"
+   },
+   "typeimage": {
+      "message": "slika"
+   },
+   "typemedia": {
+      "message": "audio/video"
+   },
+   "typeobject": {
+      "message": "interakivni objekt"
+   },
+   "typeobject_subrequest": {
+      "message": "objektni podzahtjev"
+   },
+   "typeother": {
+      "message": "ostalo"
+   },
+   "typepage": {
+      "message": "stranica"
+   },
+   "typepopup": {
+      "message": "sko\u010Dni prozor\u010Di\u0107"
+   },
+   "typescript": {
+      "message": "skripta"
+   },
+   "typestylesheet": {
+      "message": "definicija stila"
+   },
+   "typesubdocument": {
+      "message": "okvir"
+   },
+   "typeunknown": {
+      "message": "nepoznato"
+   },
+   "typexmlhttprequest": {
+      "message": "xmlhttp zahtjev"
+   },
+   "undo_last_block": {
+      "message": "Poni\u0161ti zadnji blok"
+   },
+   "unpause": {
+      "message": "odpauziraj"
+   },
+   "unsubscribedlabel": {
+      "message": "Odjavljeno."
+   },
+   "updateddayago": {
+      "message": "a\u017Eurirano prije 1 dan"
+   },
+   "updateddaysago": {
+      "message": "a\u017Eurirano prije $days$ dana",
+      "placeholders": {
+         "days": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedhourago": {
+      "message": "a\u017Eurirano prije 1 sat"
+   },
+   "updatedhoursago": {
+      "message": "a\u017Eurirano prije $hours$ sati",
+      "placeholders": {
+         "hours": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedminuteago": {
+      "message": "a\u017Eurirano prije 1 minutu"
+   },
+   "updatedminutesago": {
+      "message": "a\u017Eurirano prije $minutes$ minuta",
+      "placeholders": {
+         "minutes": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedrightnow": {
+      "message": "upravo a\u017Eurirano"
+   },
+   "updatedsecondsago": {
+      "message": "a\u017Eurirano prije $seconds$ sekundi",
+      "placeholders": {
+         "seconds": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatefromoldversion": {
+      "message": "Koristite stariju verziju Adblock-a. Molimo prvo $updatelink$ na najnoviju verziju Adblock-a",
+      "placeholders": {
+         "updatelink": {
+            "content": "$1a\u017Eurirajte$2"
+         }
+      }
+   },
+   "updatenowmessage": {
+      "message": "A\u017Euriranja \u0107e se preuzimati automatski; tako\u0111er mo\u017Eete \u003Ca\u003Ea\u017Eurirati sada\u003C/a\u003E."
+   },
+   "updateyourlists": {
+      "message": "Provjerite da li su Vam liste a\u017Eurirane"
+   },
+   "use_experimental_feature_to_speed_up_adblock": {
+      "message": "Ubrzajte Adblock koriste\u0107i eksperimentalnu mogu\u0107nost u Safariju."
+   },
+   "warning_overrules_filters": {
+      "message": "Upozoranje: na svim drugim stranicama \u0107ete vidjeti reklame!\u003Cbr\u003EOvo nadilazi sve druge filtere za te stranice."
+   },
+   "whitelistertitle2": {
+      "message": "Nemoj pokretati AdBlock na..."
+   },
+   "whitelisteverycontaining": {
+      "message": "Dopusti svaki resurs koji sadr\u017Ei:"
+   },
+   "wildcardhint": {
+      "message": "Opaska: mo\u017Eete koristiti * kao vi\u0161ezna\u010Dnik"
+   },
+   "work_around_hulu_problems": {
+      "message": "Zaobilazno rje\u0161enje problema sa Hulu.com kad video ne radi (zahtijeva da se preglednik ponovno pokrene)"
+   },
+   "yes": {
+      "message": "Da"
+   },
+   "you_can_slide_to_change": {
+      "message": "Mo\u017Eete pomaknuti kliza\u010D ispod kako biste promjenili to\u010Dno gdje \u017Eelite da se AdBlock ne pokre\u0107e."
+   },
+   "you_know_thats_a_bad_idea_right": {
+      "message": "\u0160to vi\u0161e lista fitera koristite, sporiji \u0107e biti AdBlock. Kori\u0161tenje previ\u0161e lista mo\u017Ee \u010Dak sru\u0161iti Va\u0161 preglednik na nekim stranicama. Pritisnite U redu da se ipak prijavite na ovu listu."
+   }
+}

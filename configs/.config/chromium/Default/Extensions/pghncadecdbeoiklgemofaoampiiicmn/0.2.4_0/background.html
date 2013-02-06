@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>background</title>
+		<script>
+			Antisocial = {};
+			Antisocial.enabled = 1;
+			
+			chrome.extension.onRequest.addListener(
+				function(request, sender, sendResponse) {
+					if (request.getSetting == "enabled") {
+						sendResponse({result: Antisocial.enabled});
+					} else if (request.clearBlocked == 1) {
+						// change icon
+						chrome.browserAction.setIcon({
+							"path" : "icons/19x19.png"
+						});
+					} else if (request.showBlocked == 1) {
+						// change icon
+						chrome.browserAction.setIcon({
+							"path" : "icons/19x19_blocked.png"
+						});
+					} else {
+						sendResponse({});
+					}
+				}
+			);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

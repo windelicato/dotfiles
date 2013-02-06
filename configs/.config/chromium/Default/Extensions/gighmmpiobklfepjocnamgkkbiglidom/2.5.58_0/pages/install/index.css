@@ -1,0 +1,137 @@
+html {
+  height: 100%
+}
+body {
+  font-family: verdana, sans-serif;
+  width: 800px;
+  margin: auto;
+  background: -webkit-gradient(linear, left top, left bottom, from(#bbf), to(#fff), color-stop(.5, #fff))
+              no-repeat;
+}
+.header {
+  display: none;
+  background: url('../../img/icon48.png') no-repeat;
+  padding: 5px 0 0 55px; /* Shift header text to make room for icon */
+  margin: 5px 0 25px 0; /* Whitespace around header */
+}
+h1 {
+  margin: 0;
+  padding-bottom: 5px;
+}
+h2 {
+  margin-top: 0px;
+}
+.card {
+  /* works in Safari (Windows at least) */
+  background: -webkit-gradient(radial, 15% 25%, 20, 15% 25%, 700, from(#fff), to(#ddf));
+  /* even better in Chrome, get 100% spread instead of a fixed pixel value */
+  background: -webkit-radial-gradient(15% 25%, circle, #fff 20px, #ddf 100%);
+  padding: 20px 40px;
+  border-radius: 30px;
+  border: 1px solid white;
+  -webkit-box-shadow: 2px 2px 5px gray;
+  display: none; /* we show each one as it arrives */
+}
+.nav {
+  float: right;
+  clear:both;
+  margin: 5px auto;
+}
+.nav a {
+  border: 1px solid gray;
+  border-radius: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ccf));
+  -webkit-box-shadow: 1px 1px 5px #AAA;
+  padding: 5px 10px;
+  float:left;
+  margin-left: 45px;
+  font-size: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Georgia;
+  color: #33D;
+}
+.nav a:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddf));
+}
+.nav a:active {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#aad));
+}
+#safari-loading-progress {
+  width: 0%;
+  height: 100%;
+  background-color: rgb(64, 141, 248);
+}
+#loading-wrapper {
+  top: 50px; /* not in same place as other cards */
+  left: 170px;
+  position: relative;
+}
+#loading-wrapper #cleaner-warning {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+#loading-wrapper #cleaner-warning a {
+  font-size: small;
+  color: #999;
+  font-style: italic;
+}
+#loading.card {
+  display:block; /* its wrapper is hidden, not it */
+  width: 280px;
+}
+#loading.card progress {
+  width: 100%;
+}
+#loading-delayed.card {
+  position: relative;
+  top: 50px;
+  left: 225px;
+  width: 150px;
+  font-style:italic;
+}
+#later.card {
+  width: 650px;
+}
+#last-step.card {
+  width: 750px;
+}
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  12% {
+    -webkit-transform: rotate(45deg);
+  }
+  25% {
+    -webkit-transform: rotate(90deg);
+  }
+  38% {
+    -webkit-transform: rotate(135deg);
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+  }
+  63% {
+    -webkit-transform: rotate(225deg);
+  }
+  75% {
+    -webkit-transform: rotate(270deg);
+  }
+  87% {
+    -webkit-transform: rotate(315deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+#spinner {
+  -webkit-animation-name: rotate;
+  -webkit-animation-delay: 0.6s;
+  -webkit-animation-duration: 2.8s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: step-start;
+}
+ul.links li {
+  margin-bottom: .3em;
+}

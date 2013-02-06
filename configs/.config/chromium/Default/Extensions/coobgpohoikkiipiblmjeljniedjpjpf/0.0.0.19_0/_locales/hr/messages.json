@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Najbr\u017Ei na\u010Din pretra\u017Eivanja weba."
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "Google pretra\u017Eivanje"
+   }
+}

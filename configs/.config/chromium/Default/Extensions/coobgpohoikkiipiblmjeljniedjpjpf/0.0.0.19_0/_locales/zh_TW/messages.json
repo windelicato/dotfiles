@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "\u641C\u7D22\u7F51\u9875\u7684\u6700\u5FEB\u65B9\u6CD5\u3002"
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "Google \u641C\u5C0B"
+   }
+}

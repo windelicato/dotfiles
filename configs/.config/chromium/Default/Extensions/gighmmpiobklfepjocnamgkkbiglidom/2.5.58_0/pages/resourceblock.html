@@ -1,0 +1,207 @@
+<html>
+  <head>
+    <title i18n="resourceblocktitle"></title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="../options/options.css" />
+    <script src="../jquery/jquery.min.js" type="text/javascript"></script>
+    <script src="../port.js" type="text/javascript"></script>
+    <script src="../functions.js" type="text/javascript"></script>
+    <script src="../filtering/domainset.js" type="text/javascript"></script>
+    <script src="../filtering/filteroptions.js" type="text/javascript"></script>
+    <script src="../filtering/filtertypes.js" type="text/javascript"></script>
+    <script src="../filtering/fifocache.js" type="text/javascript"></script>
+    <script src="../filtering/filterset.js" type="text/javascript"></script>
+    <script src="../filtering/filternormalizer.js" type="text/javascript"></script>
+    <script src="../filtering/myfilters.js" type="text/javascript"></script>
+    <style type="text/css">
+      .icon {
+        background-image: url('../img/icon32.png');
+      }
+      input:disabled + label {
+        cursor: default;
+      }
+      .noSearchMatch {
+        display: none;
+      }
+      #resourceslist {
+        text-align: left;
+        cursor: default;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+      #resourceslist td, #selectblockableurl :not(#confirmUrl):not(b) {
+        font-size: 12px;
+        padding: 0px;
+        padding-right: 5px;
+      }
+      .sorter {
+        display: none;
+      }
+      .blocked {
+        color: red;
+      }
+      .whitelisted {
+        color: green;
+      }
+      #legend {
+        font-size: 12px;
+        background-color: white;
+        position:fixed;
+        top: 25px;
+        right: 10px;
+        padding: 5px;
+        display: none;
+        opacity: 0.85;
+        border: 1px solid #EEE;
+        border-radius: 4px;
+      }
+      #choosedifferentresource {
+        font-size: 12px;
+        background-color: white;
+        padding-left: 5px;
+        display: none;
+        font-style: italic;
+      }
+      .hiding {
+        color: blue;
+      }
+      .clickableRow {
+        cursor: pointer;
+      }
+      .deleterule {
+        cursor: pointer;
+        background-image: url(../img/delete.gif);
+        background-repeat: no-repeat;
+        background-position: center left;
+        width: 9px;
+      }
+      #selectblockableurl #suggestions label {
+        margin-left: 4px;
+      }
+      #filterpreview {
+        font-size: 12px;
+        font-style: italic;
+      }
+      .onlyifdebug {
+        display: none;
+      }
+      #addthefilter {
+        font-weight: bold;
+        font-size: 15px;
+      }
+      #loading td {
+        text-align: center;
+        color: blue;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      #types input, #types label {
+        position: absolute;
+      }
+      #types label {
+        margin-left: 20px;
+      }
+      #types input:nth-of-type(4n+1), #types label:nth-of-type(4n+1) {
+        left: 20px;
+      }
+      #types input:nth-of-type(4n+2), #types label:nth-of-type(4n+2) {
+        left: 246px;
+      }
+      #types input:nth-of-type(4n+3), #types label:nth-of-type(4n+3) {
+        left: 468px;
+      }
+      #types input:nth-of-type(4n+4), #types label:nth-of-type(4n+4) {
+        left: 690px;
+      }
+      #search {
+        width: 100%;
+      }
+      #nosearchresults {
+        text-align: center;
+        font-style: italic;
+        color: red;
+        line-height: 40px;
+      }
+      #customurl {
+        margin-left: 5px;
+      }
+    </style>
+    <script src="resourceblock.js"></script>
+  </head>
+  <body>
+    <h1 class="icon">AdBlock</h1>
+    <b i18n="selectresources"></b>
+    <a href="#" id="choosedifferentresource" i18n="changelabel"></a>
+    <table id="resourceslist">
+      <thead><tr>
+        <th></th>
+        <th i18n="headerresource" data-column="url"></th>
+        <th i18n="headertype" data-column="type"></th>
+        <th i18n="headerfilter" data-column="filter"></th>
+        <th i18n="thirdparty" data-column="thirdparty"></th>
+        <th></th>
+      </tr></thead>
+      <tbody><tr id="loading"><td i18n="loading" colspan="6"></td></tr></tbody>
+    </table>
+
+    <div id="legend"><b i18n="resourceblocklegend1"></b>
+      <i style='color:red' i18n="resourceblocklegend2"></i>,
+      <i style='color:green' i18n="resourceblocklegend3"></i> &amp;
+      <i i18n="resourceblocklegend4"></i><span class='onlyifdebug'>;
+      <i style='color:blue' i18n="resourceblocklegend5"></i></span>.&nbsp;&nbsp;
+      <a href='#' i18n_title="close">(x)</a><br/>
+      <input type="search" id="search" i18n_placeholder="searchplaceholder" i18n_title="searchexplanation" incremental="incremental"/>
+    </div>
+
+    <form id="selectblockableurl" style="display:none;">
+      <b></b>
+      <div id="suggestions"></div>
+      <input type='radio' name='urloption' id='custom' />
+      <label for='custom' i18n="custompattern"></label><br/>
+      <input type='button' style='margin-left:22px;' i18n_value='nextstep' id='confirmUrl' />
+    </form>
+
+    <form id="chooseoptions" style="display:none;">
+      <b i18n="appliedwhenbrowsing"></b><br/>
+      <input type="radio" name="domainoptions" value="" checked="checked" id="onEverySite" />
+      <label for="onEverySite" i18n="anysite"></label><br/>
+      <input type="radio" name="domainoptions" id="thirdparty" value="third-party" />
+      <label for="thirdparty"></label><br/>
+      <input type="radio" name="domainoptions" id="domainis" />
+      <label for="domainis" i18n="onlyondomains"></label>
+      <input type="text" size="30" id="domainlist" i18n_title="multipledomainshint"/><br/><br/>
+      <b i18n="casesensitive"></b><br/>
+      <input type="radio" name="caseoption" value="match-case" id='matchcaseYes'/>
+      <label for="matchcaseYes" i18n="yes"></label>
+      <input type="radio" name="caseoption" value="" checked="checked" id='matchcaseNo'/>
+      <label for="matchcaseNo" i18n="no"></label><br/><br/>
+      <b i18n="onlyresourcetypes"></b><br/>
+      <div id="types">
+        <input type="checkbox" value="media" checked="checked" id="typemed"/>
+        <label for='typemed' i18n="typemedia"></label>
+        <input type="checkbox" value="subdocument" checked="checked" id="typesub" />
+        <label for='typesub' i18n="typesubdocument"></label>
+        <input type="checkbox" value="object" checked="checked" id="typeobj" />
+        <label for='typeobj' i18n="typeobject"></label>
+        <input type="checkbox" value="image" checked="checked" id="typeimg"/>
+        <label for='typeimg' i18n="typeimage"></label><br/>
+        <input type="checkbox" value="script" checked="checked" id='typescr'/>
+        <label for='typescr' i18n="typescript"></label>
+        <input type="checkbox" value="stylesheet" checked="checked" id='typesty'/>
+        <label for='typesty' i18n="typestylesheet"></label>
+        <input type="checkbox" value="xmlhttprequest" checked="checked" id='typexml'/>
+        <label for='typexml' i18n="typexmlhttprequest"></label>
+        <!--TODO: when crbug 93542 is fixed, uncomment this-->
+        <!--input type="checkbox" value="object_subrequest" checked="checked" id='typesubreq'/>
+        <label for='typesubreq' i18n="typeobject_subrequest"></label-->
+        <!--TODO: when crbug 80230 is fixed, uncomment this-->
+        <!--input type="checkbox" value="other" checked="checked" id='typeother'/>
+        <label for='typeother' i18n="typeother"></label-->
+        <input type="checkbox" value="popup" id='typepopup' class='implicitType'/>
+        <label for='typepopup' i18n="typepopup"></label><br/><br/>
+      </div>
+      <input type="button" id="addthefilter" i18n_value="addthisfilter"/>
+      <span id="filterpreview"></span>
+    </form>
+  </body>
+</html>

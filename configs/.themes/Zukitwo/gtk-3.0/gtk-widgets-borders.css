@@ -1,0 +1,36 @@
+/******************
+ * Borders *
+ ******************/
+/* borders */
+.button {
+	border-image: url("borders/button.png") 10 12 10 12 / 10px 12px 10px 12px stretch; /* 10 12 10 12 / 10px 12px 10px 12px stretch; */
+}
+
+.button.default,
+.button:focus {
+	border-image: url("borders/button-focus.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
+	outline-color: transparent;
+}
+
+.button:insensitive {
+	border-image: url("borders/button.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
+}
+
+.primary-toolbar .button:active,
+.primary-toolbar .button:active:hover,
+.button:active {
+	border-image: url("borders/button-active.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
+}
+
+.button:active:focus {
+	border-image: url("borders/button-active-focus.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
+}
+
+.button:active:insensitive {
+	border-image: url("borders/button.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
+}
+
+.primary-toolbar .button:hover {
+	border-image: url("borders/button.png") 10 12 10 12 / 10px 12px 10px 12px stretch;
+	background-color: transparent;
+}

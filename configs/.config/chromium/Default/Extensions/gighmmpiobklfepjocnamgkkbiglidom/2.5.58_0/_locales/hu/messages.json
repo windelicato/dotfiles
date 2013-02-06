@@ -1,0 +1,768 @@
+{
+   "adalreadyblocked": {
+      "message": "Nincs mit tennie, mivel a rekl\u00E1m m\u00E1r blokkolva van"
+   },
+   "adblock_auto_removes_ads_thats_all": {
+      "message": " AdBlock automatikusan elt\u00E1vol\u00EDtja a rekl\u00E1mokat.  Ez minden amit tudni kell r\u00F3la."
+   },
+   "adblock_is_paused": {
+      "message": "Az AdBlock megvan \u00E1ll\u00EDtva. Ez\u00E9rt semmilyen forr\u00E1s nincs sz\u0171rve, ez\u00E9rt ez az oldal nem haszn\u00E1lhat\u00F3. Folytassa az AdBlockot el\u0151sz\u00F6r, \u00E9s pr\u00F3b\u00E1lkozzon \u00FAjra."
+   },
+   "adblock_wont_run_on_pages_matching": {
+      "message": "Az AdBlock nem fog futni az al\u00E1bbi oldalakon:"
+   },
+   "adblockreportinganad": {
+      "message": "AdBlock - Rekl\u00E1m jelent\u00E9se"
+   },
+   "addthisfilter": {
+      "message": "Sz\u0171r\u0151 hozz\u00E1ad\u00E1sa"
+   },
+   "adreport2": {
+      "message": "Teh\u00E1t tal\u00E1lt egy rekl\u00E1mot egy oldalon? Seg\u00EDtek \u00D6nnek, hogy jelenthesse!\u003Cbr/\u003E Eml\u00E9keztet\u0151: rekl\u00E1mok jelent\u00E9se \u00F6nk\u00E9ntes. Ha nem k\u00EDv\u00E1nja megtenni, csak z\u00E1rja be ezt az ablakot, \u00E9s blokkolja mag\u00E1nak az 'Egy\u00E9ni' f\u00FCl\u00F6n a Be\u00E1ll\u00EDt\u00E1sokn\u00E1l!"
+   },
+   "adstillappear": {
+      "message": "M\u00E9g mindig megjelenik a rekl\u00E1m?"
+   },
+   "advanced_options": {
+      "message": "Halad\u00F3 felhaszn\u00E1l\u00F3 vagyok, mutasson halad\u00F3 be\u00E1ll\u00EDt\u00E1sokat."
+   },
+   "any_new_tabs_you_open_Will_be_automatically_ad_free": {
+      "message": "A mostant\u00F3l megny\u00EDl\u00F3 lapok m\u00E1r rekl\u00E1m mentesek lesznek."
+   },
+   "anysite": {
+      "message": "B\u00E1rmely weboldal"
+   },
+   "appliedwhenbrowsing": {
+      "message": "Ez a sz\u0171r\u0151 enged\u00E9lyezve lesz, ha a k\u00F6vetkez\u0151t b\u00F6ng\u00E9szi:"
+   },
+   "betalabel": {
+      "message": "B\u00E9ta"
+   },
+   "blacklistclickmessage": {
+      "message": "Kattintson jobb gombbal a rekl\u00E1mra az oldalon -- vagy blokkolja itt manu\u00E1lisan."
+   },
+   "blacklisterattrwillbe": {
+      "message": "A(z) $attribute$ $value$ lesz",
+      "placeholders": {
+         "attribute": {
+            "content": "$1"
+         },
+         "value": {
+            "content": "$2"
+         }
+      }
+   },
+   "blacklisterblockedelement": {
+      "message": "Blokkolt elem:"
+   },
+   "blacklisterblocksalloftype": {
+      "message": "Legyen \u00F3vatos: ez a sz\u0171r\u0151 minden $elementtype$ elemet blokkol az oldalon!",
+      "placeholders": {
+         "elementtype": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistereditfilter": {
+      "message": "\u00CDrja be a megfelel\u0151 sz\u0171r\u0151t, \u00E9s nyomjon OK-ot"
+   },
+   "blacklistereditinvalid1": {
+      "message": "A sz\u0171r\u0151 \u00E9rv\u00E9nytelen: $exception$",
+      "placeholders": {
+         "exception": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistermatches": {
+      "message": "Ez $matchcount$ elemmel egyezik az oldalon.",
+      "placeholders": {
+         "matchcount": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklisternofilter": {
+      "message": "Nem lett sz\u0171r\u0151 meghat\u00E1rozva!"
+   },
+   "blacklisternotsure": {
+      "message": "\u003Cb\u003ENem biztos?\u003C/b\u003E nyomja meg a 'Blokkol\u00E1s' gombot lent."
+   },
+   "blacklisteroptions1": {
+      "message": "Mit gondol, mi lesz igaz erre a rekl\u00E1mra, mikor megl\u00E1togatja az oldalt?"
+   },
+   "blacklisteroptionstitle": {
+      "message": "Utols\u00F3 l\u00E9p\u00E9s: Mi teszi rekl\u00E1mm\u00E1?"
+   },
+   "blacklistersinglematch": {
+      "message": "Ez \u003Cb\u003E1\u003C/b\u003E elemmel egyezik az oldalon."
+   },
+   "blacklisterthefilter": {
+      "message": "A sz\u0171r\u0151, ami megv\u00E1ltoztathat\u00F3 a Be\u00E1ll\u00EDt\u00E1sok oldalon:"
+   },
+   "blacklistertype": {
+      "message": "T\u00EDpus"
+   },
+   "blacklisterwarningnofilter": {
+      "message": "Figyelem: nem lett sz\u0171r\u0151 meghat\u00E1rozva!"
+   },
+   "block_an_ad_on_this_page": {
+      "message": "Egy rekl\u00E1m blokkol\u00E1sa az oldalon"
+   },
+   "block_by_url_instead": {
+      "message": "Halad\u00F3: blokkol\u00E1s URL alapj\u00E1n"
+   },
+   "block_this_ad": {
+      "message": "Blokkolja ezt a rekl\u00E1mot"
+   },
+   "blockanadtitle": {
+      "message": "Rekl\u00E1m blokkol\u00E1sa az oldalon"
+   },
+   "blockdomain": {
+      "message": "Oldal domainje ahol alkalmazand\u00F3"
+   },
+   "blockeverycontaining": {
+      "message": "Blokkoljon minden forr\u00E1st ami tartalmazza a k\u00F6vetkez\u0151t:"
+   },
+   "blockmoreads": {
+      "message": "Tov\u00E1bbi rekl\u00E1mokat blokkolni:"
+   },
+   "blockurlwithtext": {
+      "message": "URL-ek blokkol\u00E1sa amik tartalmazz\u00E1k ezt a sz\u00F6veget"
+   },
+   "buttonback": {
+      "message": "Vissza"
+   },
+   "buttonblockit": {
+      "message": "Blokkol\u00E1s"
+   },
+   "buttoncancel": {
+      "message": "M\u00E9gse"
+   },
+   "buttonedit": {
+      "message": "Szerkeszt\u00E9s"
+   },
+   "buttonexclude": {
+      "message": "Kiz\u00E1r\u00E1s"
+   },
+   "buttonlooksgood": {
+      "message": "J\u00F3l n\u00E9z ki"
+   },
+   "buttonok": {
+      "message": "OK"
+   },
+   "cantblockflash": {
+      "message": "M\u00E9g nemtudunk rekl\u00E1mokat blokkolni Flash-ben \u00E9s m\u00E1s kieg\u00E9sz\u00EDt\u0151kben. T\u00E1mogat\u00E1sra v\u00E1runk a b\u00F6ng\u00E9sz\u0151t\u0151l, \u00E9s a WebKit-t\u0151l."
+   },
+   "cantblockflashwarning": {
+      "message": "Hol l\u00E1that\u00F3 a rekl\u00E1m? Egy filmben, el\u0151tte; vagy m\u00E1s kieg\u00E9sz\u00EDt\u0151ben, p\u00E9ld\u00E1ul Flash j\u00E1t\u00E9k?"
+   },
+   "casesensitive": {
+      "message": "Ez a sz\u0171r\u0151 kis \u00E9s nagy karaktereket megk\u00FCl\u00F6nb\u00F6ztet:"
+   },
+   "changelabel": {
+      "message": "v\u00E1ltoztat\u00E1s"
+   },
+   "cleanuplist": {
+      "message": "Sz\u0171r\u0151k optimiz\u00E1l\u00E1sa a list\u00E1n:"
+   },
+   "clickthead": {
+      "message": "Kattintson a rekl\u00E1mra, \u00E9s v\u00E9gig vezetem \u00D6nt a blokkol\u00E1s menet\u00E9n."
+   },
+   "clickupdatefilters": {
+      "message": "Kattintson ide: \u003Ca\u003EFriss\u00EDtse a sz\u0171r\u0151imet!\u003C/a\u003E"
+   },
+   "close": {
+      "message": "Bez\u00E1r\u00E1s"
+   },
+   "correctfilters": {
+      "message": "Correct filters"
+   },
+   "csstomatch": {
+      "message": "Egyezend\u0151 val\u00F3 CSS"
+   },
+   "debuginlogoption": {
+      "message": "Mutassa a hibakeres\u00E9si adatokat a Console Log-ban (ami lelass\u00EDtja az AdBlock-ot)"
+   },
+   "description2": {
+      "message": "A legn\u00E9pszer\u0171bb Chrome kieg\u00E9sz\u00EDt\u0151, t\u00F6bb mint 10 milli\u00F3 felhaszn\u00E1l\u00F3val!  Rekl\u00E1mokat blokkol az eg\u00E9sz weben."
+   },
+   "did_you_know_this_is_my_full_time_job": {
+      "message": "Tudta-e \u00D6n, hogy ez a teljes munkaid\u0151s munk\u00E1m?"
+   },
+   "disabled_by_filter_lists": {
+      "message": "Sajn\u00E1lom, az AdBlock tiltva van ezen az oldalon az egyik sz\u0171r\u0151 list\u00E1ja \u00E1ltal."
+   },
+   "disabled_on_this_page": {
+      "message": "Az AdBlock tiltva van ezen az oldalon."
+   },
+   "done": {
+      "message": "k\u00E9sz."
+   },
+   "dont_run_on_pages_on_domain": {
+      "message": "Ne fusson ennek a domainnek az oldalain"
+   },
+   "dont_run_on_this_page": {
+      "message": "Ne fusson ezen az oldalon"
+   },
+   "enable": {
+      "message": "enged\u00E9lyez\u00E9s"
+   },
+   "excludedomainorurl": {
+      "message": "A domain vagy URL ahol az AdBlock-nak nem k\u00E9ne blokkolnia semmit"
+   },
+   "excludefilterremoved": {
+      "message": "A sz\u0171r\u0151 elt\u00E1vol\u00EDt\u00E1sra ker\u00FClt. K\u00E9rem t\u00F6ltse \u00FAjra az eredeti oldalt a forr\u00E1s lista gener\u00E1l\u00E1s\u00E1hoz."
+   },
+   "failedtofetchfilter": {
+      "message": "Nem siker\u00FClt lek\u00E9rni ezt a sz\u0171r\u0151t!"
+   },
+   "faq": {
+      "message": "GYIK"
+   },
+   "fetchinglabel": {
+      "message": "Lek\u00E9r\u00E9s... k\u00E9rem v\u00E1rjon."
+   },
+   "filecleanerwarning": {
+      "message": "Ha megjelenik ez az oldal minden alkalommal, mikor az AdBlockot elind\u00EDtja, gy\u0151z\u0151dj\u00F6n meg r\u00F3la, hogy nem haszn\u00E1l egy f\u00E1jl tiszt\u00EDt\u00F3t, ami t\u00F6rli a 'localStorage' f\u00E1jlokat is."
+   },
+   "filteradblock_custom": {
+      "message": "AdBlock egy\u00E9ni sz\u0171r\u0151k (aj\u00E1nlott)"
+   },
+   "filterchinese": {
+      "message": " - tov\u00E1bbi k\u00EDnai sz\u0171r\u0151k"
+   },
+   "filterczech": {
+      "message": "Cseh sz\u0171r\u0151k"
+   },
+   "filterdanish": {
+      "message": "D\u00E1n sz\u0171r\u0151k"
+   },
+   "filterdutch": {
+      "message": " - tov\u00E1bbi holland sz\u0171r\u0151k"
+   },
+   "filtereasylist": {
+      "message": "EasyList (aj\u00E1nlott)"
+   },
+   "filtereasylist_plun_korean": {
+      "message": "Koreai sz\u0171r\u0151k"
+   },
+   "filtereasylist_plus_bulgarian": {
+      "message": " - tov\u00E1bbi bolg\u00E1r sz\u0171r\u0151k"
+   },
+   "filtereasylist_plus_finnish": {
+      "message": " - tov\u00E1bbi finn sz\u0171r\u0151k"
+   },
+   "filtereasylist_plus_french": {
+      "message": " - tov\u00E1bbi francia sz\u0171r\u0151k"
+   },
+   "filtereasylist_plus_german": {
+      "message": " - tov\u00E1bbi n\u00E9met sz\u0171r\u0151k"
+   },
+   "filtereasylist_plus_greek": {
+      "message": " - tov\u00E1bbi g\u00F6r\u00F6g sz\u0171r\u0151k"
+   },
+   "filtereasylist_plus_polish": {
+      "message": " - tov\u00E1bbi lengyel sz\u0171r\u0151k"
+   },
+   "filtereasylist_plus_romanian": {
+      "message": " - tov\u00E1bbi rom\u00E1n sz\u0171r\u0151k"
+   },
+   "filtereasylist_plus_spanish": {
+      "message": "Spanyol sz\u0171r\u0151k"
+   },
+   "filtereasyprivacy": {
+      "message": "EasyPrivacy (mag\u00E1n\u00E9let v\u00E9delem)"
+   },
+   "filterhasbeenadded": {
+      "message": "Sz\u0171r\u0151 sikeresen hozz\u00E1adva!\nFriss\u00EDtse az oldalt, hogy \u00E9letbe l\u00E9pjenek a v\u00E1ltoz\u00E1sok!"
+   },
+   "filterhungarian": {
+      "message": "Magyar sz\u0171r\u0151k (aj\u00E1nlott)"
+   },
+   "filterisraeli": {
+      "message": "Izraeli sz\u0171r\u0151k"
+   },
+   "filteritalian": {
+      "message": "Olasz sz\u0171r\u0151k"
+   },
+   "filterjapanese": {
+      "message": "Jap\u00E1n sz\u0171r\u0151k"
+   },
+   "filterlistlink": {
+      "message": "Ne iratkozzon fel t\u00F6bbre, mint amennyire sz\u00FCks\u00E9g van -- mindegyik lelass\u00EDtja egy kicsit! K\u00F6zrem\u0171k\u00F6d\u0151k \u00E9s egy\u00E9b list\u00E1k el\u00E9rhet\u0151ek \u003Ca\u003Eitt\u003C/a\u003E."
+   },
+   "filterlistsrock": {
+      "message": "A sz\u0171r\u0151 list\u00E1k blokkolj\u00E1k a rekl\u00E1mok nagy r\u00E9sz\u00E9t a weben.  Tud tov\u00E1bb\u00E1:"
+   },
+   "filtersavewarning": {
+      "message": "Legyen \u00F3vatos: ha hib\u00E1zik, sok sz\u0171r\u0151, bele\u00E9rtve a hivatalos sz\u0171r\u0151ket, elromolhatnak!\u003Cbr/\u003EOlvassa el a \u003Ca\u003Esz\u0171r\u0151 szintaxis seg\u00E9dletet\u003Ca\u003E, hogy megtanulja, hogyan kell \u00F6sszetett feketelista, \u00E9s feh\u00E9rlista sz\u0171r\u0151ket hozz\u00E1adni."
+   },
+   "filterstabtitle": {
+      "message": "Feliratkoz\u00E1s sz\u0171r\u0151 list\u00E1kra"
+   },
+   "findingads": {
+      "message": "Rekl\u00E1mok keres\u00E9se...\u003Cbr/\u003E\u003Cbr/\u003E\u003Ci\u003ECsak egy p\u00E1r pillanatig tart\u003C/i\u003E"
+   },
+   "fixityourself": {
+      "message": "OK, a Be\u00E1ll\u00EDt\u00E1sok oldalon manu\u00E1lisan is blokkolhatja a rekl\u00E1mot. K\u00F6sz\u00F6nj\u00FCk!"
+   },
+   "flashads": {
+      "message": "Vide\u00F3k \u00E9s Flash"
+   },
+   "for_more_options_right_click": {
+      "message": "Tov\u00E1bbi be\u00E1ll\u00EDt\u00E1sokhoz, kattintson jobb gombbal az oldalon, vagy az $img$ eszk\u00F6zt\u00E1r gombra.",
+      "placeholders": {
+         "img": {
+            "content": "\u003Cimg src=\"../../img/icon19.png\"/\u003E"
+         }
+      }
+   },
+   "format_site1_site2_site3": {
+      "message": "Form\u00E1tum: ~oldal.hu|~oldal.com|~forum.oldal.org"
+   },
+   "generaloptions": {
+      "message": "\u00C1ltal\u00E1nos be\u00E1ll\u00EDt\u00E1sok"
+   },
+   "googletextads": {
+      "message": "Szeretem a sz\u00F6veges hirdet\u00E9seket a Google-\u00F6n, mutassa ezeket."
+   },
+   "headerfilter": {
+      "message": "Egyez\u0151 sz\u0171r\u0151"
+   },
+   "headerresource": {
+      "message": "Forr\u00E1s"
+   },
+   "headertype": {
+      "message": "T\u00EDpus"
+   },
+   "help": {
+      "message": "S\u00FAg\u00F3"
+   },
+   "hide_this_button": {
+      "message": "Gomb eljrejt\u00E9se"
+   },
+   "how_to_use_adblock": {
+      "message": "AdBlock haszn\u00E1lata:"
+   },
+   "installedtitle": {
+      "message": "Az AdBlock most m\u00E1r telep\u00EDtve van!"
+   },
+   "installing_adblock": {
+      "message": "AdBlock telep\u00EDt\u00E9se..."
+   },
+   "invalidListUrl": {
+      "message": "\u00C9rv\u00E9nytelen lista URL. T\u00F6rl\u00E9sre fog ker\u00FClni."
+   },
+   "labelshow": {
+      "message": "mutassa"
+   },
+   "lang_bulgarian": {
+      "message": "Bolg\u00E1r"
+   },
+   "lang_chinese": {
+      "message": "K\u00EDnai"
+   },
+   "lang_czech": {
+      "message": "Cseh"
+   },
+   "lang_danish": {
+      "message": "D\u00E1n"
+   },
+   "lang_dutch": {
+      "message": "Holland"
+   },
+   "lang_english": {
+      "message": "Angol"
+   },
+   "lang_finnish": {
+      "message": "Finn"
+   },
+   "lang_french": {
+      "message": "Francia"
+   },
+   "lang_german": {
+      "message": "N\u00E9met"
+   },
+   "lang_greek": {
+      "message": "G\u00F6r\u00F6g"
+   },
+   "lang_hungarian": {
+      "message": "Magyar"
+   },
+   "lang_israeli": {
+      "message": "Izraeli"
+   },
+   "lang_italian": {
+      "message": "Olasz"
+   },
+   "lang_japanese": {
+      "message": "Jap\u00E1n"
+   },
+   "lang_korean": {
+      "message": "Koreai"
+   },
+   "lang_polish": {
+      "message": "Lengyel"
+   },
+   "lang_romanian": {
+      "message": "Rom\u00E1n"
+   },
+   "lang_russian": {
+      "message": "Orosz"
+   },
+   "lang_spanish": {
+      "message": "Spanyol"
+   },
+   "lang_ukranian": {
+      "message": "Ukr\u00E1n"
+   },
+   "last_update_failed": {
+      "message": "Utols\u00F3 friss\u00EDt\u00E9s sikertelen; "
+   },
+   "linkblockadbyurl": {
+      "message": "Rekl\u00E1m blokkol\u00E1sa az URL-je alapj\u00E1n"
+   },
+   "linkhidesection": {
+      "message": "Egy weboldal r\u00E9sz\u00E9nek elrejt\u00E9se"
+   },
+   "linkunblock": {
+      "message": "Mutassa a rekl\u00E1mokat egy weboldalon vagy domainen"
+   },
+   "loading": {
+      "message": "BET\u00D6LT\u00C9S..."
+   },
+   "manualfilteredit": {
+      "message": "Sz\u0171r\u0151k manu\u00E1lis m\u00F3dos\u00EDt\u00E1sa:"
+   },
+   "modifydomain": {
+      "message": "Webhely:"
+   },
+   "modifypath": {
+      "message": "Oldal:"
+   },
+   "multipledomainshint": {
+      "message": "T\u00F6bb domain vessz\u0151vel, vagy sz\u00F3k\u00F6zzel elv\u00E1laszva"
+   },
+   "nextstep": {
+      "message": "K\u00F6vetkez\u0151 l\u00E9p\u00E9s"
+   },
+   "no": {
+      "message": "Nem"
+   },
+   "nodefaultfilter1": {
+      "message": "Nincs \u00E1ltal\u00E1nos sz\u0171r\u0151 list\u00E1nk ehhez a nyelvhez.\u003Cbr/\u003EK\u00E9rem pr\u00F3b\u00E1ljon tal\u00E1lni egy megfelel\u0151 sz\u0171r\u0151 list\u00E1t $link$, vagy blokkolja mag\u00E1nak az 'Egy\u00E9ni' f\u00FCl\u00F6n a Be\u00E1ll\u00EDt\u00E1sokn\u00E1l.",
+      "placeholders": {
+         "link": {
+            "content": "$1itt$2"
+         }
+      }
+   },
+   "novalidurlpattern": {
+      "message": "K\u00E9rem adjon meg egy egyez\u0151 URL mint\u00E1t!"
+   },
+   "now_you_have_adblock_hooray": {
+      "message": "Mostm\u00E1r telep\u00EDtve van az AdBlock!  Hurr\u00E1!"
+   },
+   "only_block_ads_on_these_sites": {
+      "message": "Csak ezeken az oldalakon blokkolja a rekl\u00E1mokat:"
+   },
+   "onlyondomains": {
+      "message": "Oldalak CSAK ezen a domainen: "
+   },
+   "onlyresourcetypes": {
+      "message": "Ez a sz\u0171r\u0151 a k\u00F6vetkez\u0151 forr\u00E1sokra lesz alkalmazva:"
+   },
+   "options": {
+      "message": "Be\u00E1ll\u00EDt\u00E1sok"
+   },
+   "optionschangelog": {
+      "message": "v\u00E1ltoz\u00E1sok list\u00E1ja"
+   },
+   "optionstitle": {
+      "message": "AdBlock Be\u00E1ll\u00EDt\u00E1sok"
+   },
+   "optionsversion": {
+      "message": "Verzi\u00F3: $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "orenteraurl": {
+      "message": "Vagy adjon meg egy URL-t:"
+   },
+   "other": {
+      "message": "Egy\u00E9b"
+   },
+   "pagelanguagecheck": {
+      "message": "Milyen nyelven van \u00EDrva az oldal?"
+   },
+   "pause_adblock": {
+      "message": "Az AdBlock meg\u00E1ll\u00EDt\u00E1sa"
+   },
+   "project_home": {
+      "message": "Projekt honlap"
+   },
+   "refusetocheck": {
+      "message": "Nem k\u00EDv\u00E1nom megn\u00E9zni"
+   },
+   "reloadadpage": {
+      "message": "Friss\u00EDtse az oldalt amin a rekl\u00E1m van."
+   },
+   "removefromlist": {
+      "message": "Elt\u00E1vol\u00EDt\u00E1s a list\u00E1r\u00F3l"
+   },
+   "removelabel": {
+      "message": "Elt\u00E1vol\u00EDt\u00E1s"
+   },
+   "report_ad_on_page": {
+      "message": "Rekl\u00E1m jelent\u00E9se ezen az oldalon"
+   },
+   "reportfilterlistproblem": {
+      "message": "Ez egy sz\u0171r\u0151 lista hiba. Jelentse itt: $link$",
+      "placeholders": {
+         "link": {
+            "content": "$1"
+         }
+      }
+   },
+   "reporttous2": {
+      "message": "Ha tud angolul, jelentheti nek\u00FCnk a rekl\u00E1mot a \u003Ca\u003Ehibajelent\u00E9si oldalon\u003C/a\u003E."
+   },
+   "resourceblocklegend1": {
+      "message": "El\u0151zm\u00E9nyek:"
+   },
+   "resourceblocklegend2": {
+      "message": "blokkolt forr\u00E1sok"
+   },
+   "resourceblocklegend3": {
+      "message": "enged\u00E9lyezett forr\u00E1sok"
+   },
+   "resourceblocklegend4": {
+      "message": "blokkolhat\u00F3 forr\u00E1sok"
+   },
+   "resourceblocklegend5": {
+      "message": "elrejt\u00E9si szab\u00E1lyok alkalmazva"
+   },
+   "resourceblocktitle": {
+      "message": "Forr\u00E1s blokkol\u00E1sa"
+   },
+   "resourceiswhitelisted": {
+      "message": "A kiv\u00E1lasztott forr\u00E1s enged\u00E9lyezve van. \u00CDgy nem blokkolhatja azt."
+   },
+   "retryaftersubscribe": {
+      "message": "Iratkozzon fel az al\u00E1bbi list\u00E1ra, majd pr\u00F3b\u00E1lkozzon \u00FAjra: $list_title$",
+      "placeholders": {
+         "list_title": {
+            "content": "$1"
+         }
+      }
+   },
+   "savebutton": {
+      "message": "Ment\u00E9s"
+   },
+   "savereminder": {
+      "message": "Ne felejtsen menteni!"
+   },
+   "seeing_this_every_time_you_start_your_browser": {
+      "message": "Ezt l\u00E1tja minden alkalommal mikor elind\u00EDtja a b\u00F6ng\u00E9sz\u0151t?"
+   },
+   "selectresources": {
+      "message": "V\u00E1lassza ki az enged\u00E9lyezend\u0151 vagy blokkoland\u00F3 forr\u00E1st"
+   },
+   "show_ads_except_for": {
+      "message": "Rekl\u00E1mok megjelen\u00EDt\u00E9se \u003Ci\u003Emindenhol\u003C/i\u003E, kiv\u00E9ve ezeken a domaineken..."
+   },
+   "show_resourcelist": {
+      "message": "Forr\u00E1s lista megjelen\u00EDt\u00E9se"
+   },
+   "showcontextmenus": {
+      "message": "Elemek hozz\u00E1ad\u00E1sa a k\u00F6rnyezeti men\u00FCh\u00F6z."
+   },
+   "showlinkstolists": {
+      "message": "Linkek mutat\u00E1sa a sz\u0171r\u0151 list\u00E1khoz:"
+   },
+   "sliderexplanation": {
+      "message": "H\u00FAzza a cs\u00FAszk\u00E1t, m\u00EDg a rekl\u00E1m nincs megfelel\u0151en blokkolva, \u00E9s a blokkolt elem haszn\u00E1lhat\u00F3nak n\u00E9z ki."
+   },
+   "slidertitle": {
+      "message": "1. l\u00E9p\u00E9s: Blokkoland\u00F3 elem meghat\u00E1roz\u00E1sa"
+   },
+   "status_disabled": {
+      "message": "Az AdBlock nem futtathat\u00F3 ezen a domainen."
+   },
+   "status_paused": {
+      "message": "Az AdBlock megvan \u00E1ll\u00EDtva."
+   },
+   "stop_blocking_ads": {
+      "message": "Rekl\u00E1mok blokkol\u00E1s\u00E1nak felold\u00E1sa:"
+   },
+   "storage_quota_exceeded": {
+      "message": "Az \u00D6n t\u00E1rhely\u00E9nek m\u00E9rete meghaladta az AdBlock \u00E1ltal haszn\u00E1lhat\u00F3t. K\u00E9rem, iratkozzon le n\u00E9h\u00E1ny list\u00E1r\u00F3l!"
+   },
+   "subscribe_unsubscribe_all": {
+      "message": "$subscribe$ vagy $unsubscribe$ minden list\u00E1r\u00F3l.",
+      "placeholders": {
+         "subscribe": {
+            "content": "\u003Ca href='#' id='subscribeAll'\u003EFeliratkoz\u00E1s\u003C/a\u003E"
+         },
+         "unsubscribe": {
+            "content": "\u003Ca href='#' id='unsubscribeAll'\u003Eleiratkoz\u00E1s\u003C/a\u003E"
+         }
+      }
+   },
+   "subscribebutton": {
+      "message": "Feliratkoz\u00E1s"
+   },
+   "subscribingfailed": {
+      "message": "Sikertelen!"
+   },
+   "subscribingfinished": {
+      "message": "K\u00E9sz!"
+   },
+   "subscribingtitle": {
+      "message": "Feliratkoz\u00E1s a sz\u0171r\u0151 list\u00E1ra..."
+   },
+   "tabcustomize": {
+      "message": "Egy\u00E9ni"
+   },
+   "tabcustomizetitle": {
+      "message": "Egy\u00E9ni"
+   },
+   "tabfilterlists": {
+      "message": "Sz\u0171r\u0151k"
+   },
+   "tabgeneral": {
+      "message": "\u00C1ltal\u00E1nos"
+   },
+   "thirdpartycheckbox": {
+      "message": "B\u00E1rmely weboldal KIV\u00C9VE weboldalak ezen a domainen $domain$",
+      "placeholders": {
+         "domain": {
+            "content": "$1"
+         }
+      }
+   },
+   "translator_credit": {
+      "message": "Ford\u00EDtotta: $translator_names$",
+      "placeholders": {
+         "translator_names": {
+            "content": "iScream, Ofalvai"
+         }
+      }
+   },
+   "typehiding": {
+      "message": "elrejt\u00E9s"
+   },
+   "typeimage": {
+      "message": "k\u00E9p"
+   },
+   "typemedia": {
+      "message": "hang/vide\u00F3"
+   },
+   "typeobject": {
+      "message": "interakt\u00EDv objektum"
+   },
+   "typepage": {
+      "message": "oldal"
+   },
+   "typescript": {
+      "message": "szkript"
+   },
+   "typestylesheet": {
+      "message": "st\u00EDlus defin\u00EDci\u00F3"
+   },
+   "typesubdocument": {
+      "message": "fr\u00E9m"
+   },
+   "typeunknown": {
+      "message": "ismeretlen"
+   },
+   "unpause": {
+      "message": "folytat\u00E1s"
+   },
+   "unsubscribedlabel": {
+      "message": "Leiratkozva."
+   },
+   "updateddayago": {
+      "message": "1 napja friss\u00EDtve"
+   },
+   "updateddaysago": {
+      "message": "$days$ napja friss\u00EDtve",
+      "placeholders": {
+         "days": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedhourago": {
+      "message": "1 \u00F3r\u00E1ja friss\u00EDtve"
+   },
+   "updatedhoursago": {
+      "message": "$hours$ \u00F3r\u00E1ja friss\u00EDtve",
+      "placeholders": {
+         "hours": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedminuteago": {
+      "message": "1 perce friss\u00EDtve"
+   },
+   "updatedminutesago": {
+      "message": "$minutes$ perce friss\u00EDtve",
+      "placeholders": {
+         "minutes": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedrightnow": {
+      "message": "most friss\u00EDtve"
+   },
+   "updatedsecondsago": {
+      "message": "$seconds$ m\u00E1sodperce friss\u00EDtve",
+      "placeholders": {
+         "seconds": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatefromoldversion": {
+      "message": "\u00D6n az AdBlock egy r\u00E9gebbi verzi\u00F3j\u00E1t haszn\u00E1lja. K\u00E9rem $updatelink$ az AdBlock leg\u00FAjabb verzi\u00F3j\u00E1ra.",
+      "placeholders": {
+         "updatelink": {
+            "content": "$1friss\u00EDtsen$2"
+         }
+      }
+   },
+   "updatenowmessage": {
+      "message": "Automatikusan lefogom t\u00F6lteni a friss\u00EDt\u00E9seket; tov\u00E1bb\u00E1 tud \u003Ca\u003Emost friss\u00EDteni\u003C/a\u003E."
+   },
+   "updateyourlists": {
+      "message": "Make sure your filter lists are up to date"
+   },
+   "warning_overrules_filters": {
+      "message": "Figyelem: az \u00F6sszes t\u00F6bbi oldalon rekl\u00E1mokat fog l\u00E1tni!\u003Cbr\u003EEz fel\u00FClb\u00EDr\u00E1lja azokhoz az oldalakhoz a t\u00F6bbi sz\u0171r\u0151t."
+   },
+   "whitelistertitle2": {
+      "message": "Ne futtassa az AdBlockot..."
+   },
+   "whitelisteverycontaining": {
+      "message": "Enged\u00E9lyezzen minden forr\u00E1st ami tartalmazza a k\u00F6vetkez\u0151t:"
+   },
+   "wildcardhint": {
+      "message": "Megjegyz\u00E9s: itt haszn\u00E1lhatja a * helyettes\u00EDt\u0151 karaktert"
+   },
+   "yes": {
+      "message": "Igen"
+   },
+   "you_can_slide_to_change": {
+      "message": "A cs\u00FAszka cs\u00FAsztat\u00E1s\u00E1val adhatja meg, pontosan mely oldalakon ne fusson az AdBlock."
+   },
+   "you_know_thats_a_bad_idea_right": {
+      "message": "Min\u00E9l t\u00F6bb sz\u0171r\u0151 list\u00E1t haszn\u00E1l, ann\u00E1l lassabb lesz az AdBlock. T\u00FAl sok lista haszn\u00E1lata egyes weboldalakon ak\u00E1r a b\u00F6ng\u00E9sz\u0151 \u00F6sszeoml\u00E1s\u00E1hoz is vezethet. Nyomja meg az OK-t, ha mindenk\u00E9pp fel akar iratkozni a list\u00E1ra."
+   }
+}

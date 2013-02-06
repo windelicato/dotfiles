@@ -1,0 +1,4 @@
+WebBrowser=chromium
+TerminalEmulator=urxvt
+MailReader=mutt
+

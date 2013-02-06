@@ -77,7 +77,7 @@ alias compton='compton -cCGfF -o 0.38 -O 200 -I 200 -t 0.02 -l 0.02 -r 3.2 -D2 -
 alias scrot="scrot -q100  -cd 5"
 alias alsamixer="alsamixer -g"
 alias equalizer="alsamixer -D equal"
-alias matlab="/home/sunn/Bin/matlab/bin/matlab -nodesktop -nosplash"
+#alias matlab="/home/sunn/Bin/matlab/bin/matlab -nodesktop -nosplash"
 
 # Scripts
 alias temps='~/bin/scripts/temps.sh'
@@ -162,3 +162,5 @@ export PERL_MB_OPT="--install_base /home/sunn/perl5";
 export PERL_MM_OPT="INSTALL_BASE=/home/sunn/perl5";
 export PERL5LIB="/home/sunn/perl5/lib/perl5/x86_64-linux-gnu-thread-multi:/home/sunn/perl5/lib/perl5";
 export PATH="/home/sunn/perl5/bin:$PATH";
+export EDITOR="vim"
+alias motorcontrol='mono /home/sunn/Documents/CarlLab/ZaberCSDemo/bin/ScriptRunner.exe /port /dev/ttyS0 /device 1 /home/sunn/Documents/CarlLab/ZaberCSDemo/bin/MotorCtl.cs'

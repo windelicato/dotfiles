@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Az internetes keres\u00E9s leggyorsabb m\u00F3dja."
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "Google-keres\u00E9s"
+   }
+}

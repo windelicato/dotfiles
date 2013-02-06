@@ -1,0 +1,85 @@
+* 0.9.4 2011-08-27
+- 3 new filters: Orb, Grungy and Splatter.
+- A few more icons.
+- Bodhi logo added.
+- New trash icon.
+- Minor bugfix.
+- Icons should now work with the qt svg renderer.
+
+* 0.9.3 2011-01-15
+- 150+ new icons, most from clarity.
+- Folders from web0.
+- 3 new filters: Quadratic, Bevel and Outline.
+- Text based interface dropped.
+- Some GUI changes.
+- Automatic offset option.
+- Some changes to the svg structure.
+- Checkboxes for apply settings.
+- One or two bugs fixed.
+- Included instructions for translation.
+
+* 0.9.2 2010-09-05
+-A few more icons.
+-Option to change navigation icons.
+-Moblin folders.
+-Some gui improvements.
+-The gui is now translatable.
+-A new flame filter.
+-Gentoo logo icon.
+-Wicd icons.
+-Ability to apply settings to all icons except the actions/emblems/panel.
+
+* 0.9.1 2010-08-30
+-Fixed a problem with the gui not running in non gnome DEs.
+-A few more icons.
+
+* 0.9 2010-08-17
+-More icons!
+-A shiny new grapical interface.
+-Special fixes can now be applied to dropbox and emesene.(dropbox requiers "rsvg-convert")
+-Allblack-like folder icons added.
+-Tok-Tok-like folder icons added.
+-Ability to apply settings to panel icons. (Beta)
+-Support for importing/exporting settings to a file.
+
+* 0.8.2 2010-03-29
+-200+ new icons, thanks to those of you who have contributed, and a special gold star to simmesimme just for the sheer amount of icons he has sent in. =D
+-Major rewrite of the code.
+-Some changes to the structure of the svg's.
+-Special fixes can now be applied to pidgin and sonata tray icons.
+-Zenwalk logo added.
+
+* 0.8.1 2010-01-30
+-39 new icons, thanks to Duma and simmesimme for your contributions!
+-1 new filter: paper.
+-Minor changes to the script.
+-Fixed some typos in the script.
+
+* 0.8 2010-01-21
+-Filter effects.
+-3 icons from Duma.
+
+* 0.7.1 2010-01-13
+-Small bugs corrected.
+
+* 0.7 2009-12-30
+-Some more icons.
+-Folder selection.
+-More options to radial gradient.
+-Theme size reduced to 3.3 MB from 10.8 MB.
+-Smal part of the script have been reworked to speed things up a little.
+
+* 0.6.1 2009-07-10
+-Fixed a major bug where the theme would break gnome-panel.
+
+* 0.6 2009-07-10
+-Added an option to set gradient.
+-Opacity is now fully supported.
+-Made symlinks for identical icons.
+-Rewrote large parts of the script.
+
+* 0.5 2009-06-04
+-Added, reworked and reused a total of 80 icons.
+-Colordialog for choosing colors.
+-Filedialog for choosing files.
+-Option to "fix" applications that don't follow the icon theme.

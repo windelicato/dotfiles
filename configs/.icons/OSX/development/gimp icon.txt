@@ -1,0 +1,32 @@
+* Now talking on #gimp
+* Topic for #gimp is: Don't ask if you can ask. Just ask.
+* Topic for #gimp set by rocktest at Sun Sep 25 11:56:18 2005
+nekohayo does someone know why I have never seen any icon theme being able to change gimp's icon in the gnome menu? I'm trying to do so myself
+* brion (~brion@adsl-69-230-205-209.dsl.irvnca.pacbell.net) has joined #gimp
+carol nekohayo: they cache icons now
+nekohayo what do you mean? (sorry I'm new at theming)
+carol oh you are making a theme?
+nekohayo yes, a gnome icon theme
+nekohayo but gimp won't budge. I tried icon-gimp.png, gnome-gimp, gimp, and even gimp-remove-2.2
+nekohayo remote*
+carol well, i dunno if what i was going to say would have helped
+drc nekohayo: The GIMP icon is set in the gimp.desktop -file.
+nekohayo why didn't they leave that "up to the theme" ?
+drc Because then every theme would have to come with a GIMP icon.
+nekohayo there is no way to get a default fallback to, say, the gnome icons?
+nekohayo and I've seen lots of themes carrying gimp icons but they just don't show... I was wondering
+drc Well you can override it, atleast with Fedora packages.
+drc Don't know how, though.
+drc You should ask in #gnome.
+nekohayo thanks for the info :) at least now I have some clue
+nekohayo (afaik though, gimp is the only app I've seen doing that)
+drc Well you're quite wrong.
+nekohayo other examples?
+carol xfce used a different icon
+carol for gimp
+drc Any app that has an icon.
+carol i had to wrestle some to get the icon i wanted back
+nekohayo well, I've seen blender, epiphany, etc get the theme icons.. to me gimp really is the only one.. I must have misunderstood something
+nekohayo ...hey actually you're right, audacity does the same though
+drc Well GIMP get's a theme icon with Fedora's default theme.
+* ender (ychat@84.52.165.220) has joined #gimp

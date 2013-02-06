@@ -56,7 +56,11 @@ chatnets = {
 channels = (
   { name = "#crunchbang"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#xubuntu"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ubuntu"; chatnet = "Ubuntu"; autojoin = "yes"; },
+  { name = "#ubuntu"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#xmonad"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#haskell"; chatnet = "freenode"; autojoin = "yes"; }
 );
 
 aliases = {

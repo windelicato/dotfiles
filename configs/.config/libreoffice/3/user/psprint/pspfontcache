@@ -1,0 +1,640 @@
+LibreOffice PspFontCacheFile format 5
+FontCacheDirectory:1359564162:/usr/lib/libreoffice/share/fonts/truetype
+File:opens___.ttf
+2;1
+OpenSymbol
+0;OpenSymbol;0;5;5;2;65535;799;200;-1;0;1262;999;1262;999;0;0;0;8;Regular
+
+FontCacheDirectory:1358718612:/usr/share/fonts/Type1
+FontCacheDirectory:1358612555:/usr/share/fonts/TTF
+File:verdanab.ttf
+2;1
+Verdana
+0;Verdana-Bold;0;8;5;2;65535;1005;209;214;0;1780;1214;1780;1214;0;0;0;0;Bold
+
+File:verdanai.ttf
+2;1
+Verdana
+0;Verdana-Italic;2;5;5;2;65535;1005;209;214;0;1591;1214;1591;1214;0;0;0;0;Italic
+
+File:arialbi.ttf
+2;1
+Arial
+0;Arial-BoldItalicMT;2;8;5;2;65535;905;211;116;0;1715;1116;1715;1116;0;0;0;0;Bold Italic
+
+File:DroidNaskh-Regular.ttf
+2;1
+Droid Arabic Naskh
+0;DroidArabicNaskh;0;5;5;2;65535;1208;701;909;0;2205;1909;2205;1909;0;0;0;8;Regular
+
+File:trebuc.ttf
+2;1
+Trebuchet MS
+0;TrebuchetMS;0;5;5;2;65535;938;222;160;0;1167;1160;1167;1160;0;0;0;8;Regular
+
+File:DroidSansTamil-Bold.ttf
+2;1
+Droid Sans Tamil
+0;DroidSansTamil-Bold;0;8;5;2;65535;870;370;240;0;3001;1240;3001;1240;0;0;0;8;Bold
+
+File:DroidSansArabic.ttf
+2;1
+Droid Sans Arabic
+0;DroidSansArabic;0;5;5;2;65535;1030;387;417;0;1392;1417;1392;1417;0;0;0;8;Regular
+
+File:courbi.ttf
+2;1
+Courier New
+0;CourierNewPS-BoldItalicMT;2;8;5;1;65535;832;300;132;0;938;1132;938;1132;0;0;0;0;Bold Italic
+
+File:timesbi.ttf
+2;1
+Times New Roman
+0;TimesNewRomanPS-BoldItalicMT;2;8;5;2;65535;891;216;107;0;1753;1107;1753;1107;0;0;0;0;Bold Italic
+
+File:DroidSansFallbackFull.ttf
+2;1
+Droid Sans Fallback
+0;DroidSansFallback;0;5;5;2;65535;1042;265;307;1;1425;1307;1425;1307;0;0;0;8;Regular
+
+File:LiberationSans-Regular.ttf
+2;1
+Liberation Sans
+0;LiberationSans;0;5;5;2;65535;905;211;116;0;1844;1116;1844;1116;0;0;0;0;Regular
+
+File:georgiab.ttf
+2;1
+Georgia
+0;Georgia-Bold;0;8;5;2;65535;916;219;135;0;1485;1135;1485;1135;0;0;0;0;Bold
+
+File:georgiai.ttf
+2;1
+Georgia
+0;Georgia-Italic;2;5;5;2;65535;916;219;135;0;1391;1135;1391;1135;0;0;0;0;Italic
+
+File:Ubuntu-LI.ttf
+2;1
+Ubuntu Light
+0;Ubuntu-LightItalic;2;3;5;2;65535;932;189;121;0;3731;1121;3731;1121;0;0;0;0;Light Italic
+
+File:DejaVuSansCondensed-Oblique.ttf
+2;1
+DejaVu Sans Condensed
+0;DejaVuSansCondensed-Oblique;1;5;4;2;65535;928;235;163;0;2407;1163;2407;1163;0;0;0;0;Condensed Oblique
+
+File:FreeSansOblique.ttf
+2;1
+FreeSans
+0;FreeSansOblique;2;5;5;2;65535;900;300;200;0;2738;1200;2738;1200;0;0;0;0;Oblique
+
+File:DejaVuSerif.ttf
+2;1
+DejaVu Serif
+0;DejaVuSerif;0;5;5;2;65535;928;235;163;0;2448;1163;2448;1163;0;0;0;0;Book
+
+File:DroidSans.ttf
+2;1
+Droid Sans
+0;DroidSans;0;5;5;2;65535;928;235;163;0;1726;1163;1726;1163;0;0;0;8;Regular
+
+File:arialbd.ttf
+2;1
+Arial
+0;Arial-BoldMT;0;8;5;2;65535;905;211;116;0;2660;1116;2660;1116;0;0;0;0;Bold
+
+File:DejaVuSans-Oblique.ttf
+2;1
+DejaVu Sans
+0;DejaVuSans-Oblique;1;5;5;2;65535;928;235;163;0;2674;1163;2674;1163;0;0;0;0;Oblique
+
+File:courbd.ttf
+2;1
+Courier New
+0;CourierNewPS-BoldMT;0;8;5;1;65535;832;300;132;0;747;1132;747;1132;0;0;0;0;Bold
+
+File:DroidSerif-BoldItalic.ttf
+2;1
+Droid Serif
+0;DroidSerif-BoldItalic;2;8;5;2;65535;928;235;163;0;1829;1163;1829;1163;0;0;0;8;Bold Italic
+
+File:FreeSerifBoldItalic.ttf
+2;1
+FreeSerif
+0;FreeSerifBoldItalic;2;8;5;2;65535;900;300;200;0;2519;1200;2519;1200;0;0;0;0;Bold Italic
+
+File:timesbd.ttf
+2;1
+Times New Roman
+0;TimesNewRomanPS-BoldMT;0;8;5;2;65535;891;216;107;0;2591;1107;2591;1107;0;0;0;0;Bold
+
+File:FreeSansBoldOblique.ttf
+2;1
+FreeSans
+0;FreeSansBoldOblique;2;7;5;2;65535;900;300;200;0;2499;1200;2499;1200;0;0;0;0;Bold Oblique
+
+File:LiberationSerif-Bold.ttf
+2;1
+Liberation Serif
+0;LiberationSerif-Bold;0;8;5;2;65535;891;216;107;0;1887;1107;1887;1107;0;0;0;0;Bold
+
+File:DroidSerif-Italic.ttf
+2;1
+Droid Serif
+0;DroidSerif-Italic;2;5;5;2;65535;928;235;163;0;1736;1163;1736;1163;0;0;0;8;Italic
+
+File:LiberationMono-BoldItalic.ttf
+2;1
+Liberation Mono
+0;LiberationMono-BoldItalic;2;8;5;1;65535;832;300;132;0;1272;1132;1272;1132;0;0;0;0;Bold Italic
+
+File:Ubuntu-C.ttf
+2;1
+Ubuntu Condensed
+0;UbuntuCondensed-Regular;0;5;5;2;65535;932;189;121;0;1442;1121;1442;1121;0;0;0;0;Regular
+
+File:DejaVuSerif-BoldItalic.ttf
+2;1
+DejaVu Serif
+0;DejaVuSerif-BoldItalic;2;8;5;2;65535;938;235;173;0;2658;1173;2658;1173;0;0;0;0;Bold Italic
+
+File:lucon.ttf
+2;1
+Lucida Console
+0;LucidaConsole;0;5;4;1;65535;789;210;-1;0;602;999;602;999;0;0;0;8;Regular
+
+File:AppleGaramond-LightItalic.ttf
+2;1
+Apple Garamond Light
+0;AppleGaramondLight-Italic;2;5;5;2;65535;908;236;144;0;1094;1144;1094;1144;0;0;0;0;Italic
+
+File:FreeMonoBoldOblique.ttf
+2;1
+FreeMono
+0;FreeMonoBoldOblique;2;8;5;1;65535;800;200;150;0;1476;1000;1476;1000;0;0;0;0;Bold Oblique
+
+File:Ubuntu-BI.ttf
+2;1
+Ubuntu
+0;Ubuntu-BoldItalic;2;8;5;2;65535;932;189;121;0;3774;1121;3774;1121;0;0;0;0;Bold Italic
+
+File:trebucbi.ttf
+2;1
+Trebuchet MS
+0;Trebuchet-BoldItalic;2;8;5;2;65535;938;222;160;0;1262;1160;1262;1160;0;0;0;8;Bold Italic
+
+File:comicbd.ttf
+2;1
+Comic Sans MS
+0;ComicSansMS-Bold;0;8;5;2;65535;1102;291;393;0;1340;1393;1340;1393;0;0;0;0;Bold
+
+File:DejaVuSansMono-BoldOblique.ttf
+2;1
+DejaVu Sans Mono
+0;DejaVuSansMono-BoldOblique;1;8;5;1;65535;928;235;163;0;1232;1163;1232;1163;0;0;0;0;Bold Oblique
+
+File:AppleGaramond-Bold.ttf
+2;1
+Apple Garamond
+0;AppleGaramond-Bold;0;8;5;2;65535;879;236;115;0;1057;1115;1057;1115;0;0;0;0;Bold
+
+File:DejaVuSansCondensed-Bold.ttf
+2;1
+DejaVu Sans Condensed
+0;DejaVuSansCondensed-Bold;0;8;4;2;65535;928;235;163;0;2739;1163;2739;1163;0;0;0;0;Condensed Bold
+
+File:DejaVuSans-Bold.ttf
+2;1
+DejaVu Sans
+0;DejaVuSans-Bold;0;8;5;2;65535;928;235;163;0;3044;1163;3044;1163;0;0;0;0;Bold
+
+File:FreeSerifItalic.ttf
+2;1
+FreeSerif
+0;FreeSerifItalic;2;5;5;2;65535;900;300;200;0;2437;1200;2437;1200;0;0;0;0;Italic
+
+File:arial.ttf
+2;1
+Arial
+0;ArialMT;0;5;5;2;65535;905;211;116;0;2692;1116;2692;1116;0;0;0;0;Regular
+
+File:FreeSerifBold.ttf
+2;1
+FreeSerif
+0;FreeSerifBold;0;8;5;2;65535;900;300;200;0;2653;1200;2653;1200;0;0;0;0;Bold
+
+File:FreeMonoBold.ttf
+2;1
+FreeMono
+0;FreeMonoBold;0;8;5;1;65535;800;200;150;0;1336;1000;1336;1000;0;0;0;0;Bold
+
+File:times.ttf
+2;1
+Times New Roman
+0;TimesNewRomanPSMT;0;5;5;2;65535;891;216;107;0;2596;1107;2596;1107;0;0;0;0;Regular
+
+File:FreeSans.ttf
+2;1
+FreeSans
+0;FreeSans;0;5;5;2;65535;900;300;200;0;3426;1200;3426;1200;0;0;0;0;Regular
+
+File:DroidSansTamil-Regular.ttf
+2;1
+Droid Sans Tamil
+0;DroidSansTamil;0;5;5;2;65535;870;370;240;0;2617;1240;2617;1240;0;0;0;8;Regular
+
+File:AppleGaramond-Italic.ttf
+2;1
+Apple Garamond
+0;AppleGaramond-Italic;2;5;5;2;65535;904;236;140;0;1100;1140;1100;1140;0;0;0;0;Italic
+
+File:micross.ttf
+2;1
+Microsoft Sans Serif
+0;MicrosoftSansSerif;0;5;5;2;65535;921;209;130;0;1780;1130;1780;1130;0;0;0;8;Regular
+
+File:FreeSerif.ttf
+2;1
+FreeSerif
+0;FreeSerif;0;5;5;2;65535;900;300;200;0;2646;1200;2646;1200;0;0;0;0;Regular
+
+File:UbuntuMono-RI.ttf
+2;1
+Ubuntu Mono
+0;UbuntuMono-Italic;2;5;5;1;65535;830;170;150;0;890;1000;890;1000;0;0;0;0;Italic
+
+File:FreeMonoOblique.ttf
+2;1
+FreeMono
+0;FreeMonoOblique;2;5;5;1;65535;800;200;150;0;1460;1000;1460;1000;0;0;0;0;Oblique
+
+File:DejaVuSerifCondensed-BoldItalic.ttf
+2;1
+DejaVu Serif Condensed
+0;DejaVuSerifCondensed-BoldItalic;2;8;4;2;65535;938;235;173;0;2393;1173;2393;1173;0;0;0;0;Condensed Bold Italic
+
+File:l_10646.ttf
+2;1
+Lucida Sans Unicode
+0;LucidaSansUnicode;0;5;5;2;65535;1096;439;535;0;1998;1535;1998;1535;0;0;0;8;Regular
+
+File:Ubuntu-L.ttf
+2;1
+Ubuntu Light
+0;Ubuntu-Light;0;3;5;2;65535;932;189;121;0;3678;1121;3678;1121;0;0;0;0;Light
+
+File:DejaVuSerifCondensed-Italic.ttf
+2;1
+DejaVu Serif Condensed
+0;DejaVuSerifCondensed-Italic;2;5;4;2;65535;928;235;163;0;2235;1163;2235;1163;0;0;0;0;Condensed Italic
+
+File:trebucbd.ttf
+2;1
+Trebuchet MS
+0;TrebuchetMS-Bold;0;8;5;2;65535;938;222;160;0;1229;1160;1229;1160;0;0;0;8;Bold
+
+File:DroidNaskh-Bold.ttf
+2;1
+Droid Arabic Naskh
+0;DroidArabicNaskh-Bold;0;8;5;2;65535;1208;701;909;0;2256;1909;2256;1909;0;0;0;8;Bold
+
+File:DroidSansEthiopic-Regular.ttf
+2;1
+Droid Sans Ethiopic
+0;DroidSansEthiopic;0;5;5;2;65535;963;240;203;0;1671;1203;1671;1203;0;0;0;8;Regular
+
+File:DejaVuSansCondensed-BoldOblique.ttf
+2;1
+DejaVu Sans Condensed
+0;DejaVuSansCondensed-BoldOblique;1;8;4;2;65535;928;235;163;0;2758;1163;2758;1163;0;0;0;0;Condensed Bold Oblique
+
+File:couri.ttf
+2;1
+Courier New
+0;CourierNewPS-ItalicMT;2;5;5;1;65535;832;300;132;0;867;1132;867;1132;0;0;0;0;Italic
+
+File:AppleGaramond-Light.ttf
+2;1
+Apple Garamond Light
+0;AppleGaramondLight;0;5;5;2;65535;908;236;144;0;1082;1144;1082;1144;0;0;0;0;Regular
+
+File:UbuntuMono-B.ttf
+2;1
+Ubuntu Mono
+0;UbuntuMono-Bold;0;8;5;1;65535;830;170;150;0;1051;1000;1051;1000;0;0;0;0;Bold
+
+File:DejaVuSerifCondensed.ttf
+2;1
+DejaVu Serif Condensed
+0;DejaVuSerifCondensed;0;5;4;2;65535;928;235;163;0;2203;1163;2203;1163;0;0;0;0;Condensed
+
+File:ariali.ttf
+2;1
+Arial
+0;Arial-ItalicMT;2;5;5;2;65535;905;211;116;0;1598;1116;1598;1116;0;0;0;0;Italic
+
+File:DejaVuSansMono.ttf
+2;1
+DejaVu Sans Mono
+0;DejaVuSansMono;0;5;5;1;65535;928;235;163;0;1274;1163;1274;1163;0;0;0;0;Book
+
+File:impact.ttf
+2;1
+Impact
+0;Impact;0;5;3;2;65535;1008;210;218;0;1390;1218;1390;1218;0;0;0;0;Regular
+
+File:DroidSansGeorgian.ttf
+2;1
+Droid Sans Georgian
+0;DroidSansGeorgian;0;5;5;2;65535;912;243;155;0;1059;1155;1059;1155;0;0;0;8;Regular
+
+File:LiberationMono-Regular.ttf
+2;1
+Liberation Mono
+0;LiberationMono;0;5;5;1;65535;832;300;132;0;1223;1132;1223;1132;0;0;0;0;Regular
+
+File:ariblk.ttf
+2;1
+Arial Black
+0;Arial-Black;0;5;5;2;65535;1100;309;409;0;1880;1409;1880;1409;0;0;0;0;Regular
+
+File:DroidSansJapanese.ttf
+2;1
+Droid Sans Japanese
+0;DroidSansJapanese;0;5;5;2;65535;1042;265;307;0;996;1307;996;1307;0;0;0;8;Regular
+
+File:DejaVuSansMono-Oblique.ttf
+2;1
+DejaVu Sans Mono
+0;DejaVuSansMono-Oblique;1;5;5;1;65535;928;235;163;0;1148;1163;1148;1163;0;0;0;0;Oblique
+
+File:timesi.ttf
+2;1
+Times New Roman
+0;TimesNewRomanPS-ItalicMT;2;5;5;2;65535;891;216;107;0;1617;1107;1617;1107;0;0;0;0;Italic
+
+File:DroidNaskh-Regular-SystemUI.ttf
+2;1
+Droid Naskh Shift Alt
+0;DroidNaskhShiftAlt;0;5;5;2;65535;1047;270;317;0;2205;1317;2205;1317;0;0;0;8;Regular
+
+File:Lucida Grande Bold.ttf
+2;1
+Lucida Grande
+0;LucidaGrande-Bold;0;8;5;2;65535;1070;335;405;0;2465;1405;2465;1405;0;0;0;0;Bold
+
+File:DroidSans-Bold.ttf
+2;1
+Droid Sans
+0;DroidSans-Bold;0;8;5;2;65535;928;235;163;0;1877;1163;1877;1163;0;0;0;8;Bold
+
+File:DejaVuSerifCondensed-Bold.ttf
+2;1
+DejaVu Serif Condensed
+0;DejaVuSerifCondensed-Bold;0;8;4;2;65535;938;235;173;0;2368;1173;2368;1173;0;0;0;0;Condensed Bold
+
+File:comic.ttf
+2;1
+Comic Sans MS
+0;ComicSansMS;0;5;5;2;65535;1102;291;393;0;1278;1393;1278;1393;0;0;0;0;Regular
+
+File:DroidKufi-Bold.ttf
+2;1
+Droid Arabic Kufi
+0;DroidArabicKufi-Bold;0;8;5;2;65535;1281;615;896;0;2070;1896;2070;1896;0;0;0;8;Bold
+
+File:UbuntuMono-R.ttf
+2;1
+Ubuntu Mono
+0;UbuntuMono-Regular;0;5;5;1;65535;830;170;150;0;981;1000;981;1000;0;0;0;0;Regular
+
+File:Aquabase.ttf
+2;1
+AquaBase
+0;AquaBase;0;6;5;2;65535;945;211;156;0;2389;1156;2389;1156;0;0;0;0;Regular
+
+File:Monaco_Linux.ttf
+2;1
+Monaco_Linux
+0;Monaco;0;5;5;1;65535;1000;250;83;0;890;1250;890;1250;0;0;0;0;Regular
+
+File:DroidSerif-Regular.ttf
+2;1
+Droid Serif
+0;DroidSerif;0;5;5;2;65535;928;235;163;0;1804;1163;1804;1163;0;0;0;8;Regular
+
+File:AppleGaramond.ttf
+2;1
+Apple Garamond
+0;AppleGaramond;0;5;5;2;65535;916;236;152;0;1050;1152;1050;1152;0;0;0;0;Regular
+
+File:Ubuntu-B.ttf
+2;1
+Ubuntu
+0;Ubuntu-Bold;0;8;5;2;65535;932;189;121;0;3645;1121;3645;1121;0;0;0;0;Bold
+
+File:DroidSansArmenian.ttf
+2;1
+Droid Sans Armenian
+0;DroidSansArmenian;0;5;5;2;65535;770;240;10;0;1406;1010;1406;1010;0;0;0;8;Regular
+
+File:LiberationSans-Italic.ttf
+2;1
+Liberation Sans
+0;LiberationSans-Italic;2;5;5;2;65535;905;211;116;0;2024;1116;2024;1116;0;0;0;0;Italic
+
+File:LiberationSans-Bold.ttf
+2;1
+Liberation Sans
+0;LiberationSans-Bold;0;8;5;2;65535;905;211;116;0;1785;1116;1785;1116;0;0;0;0;Bold
+
+File:georgia.ttf
+2;1
+Georgia
+0;Georgia;0;5;5;2;65535;916;219;135;0;1339;1135;1339;1135;0;0;0;0;Regular
+
+File:LiberationSans-BoldItalic.ttf
+2;1
+Liberation Sans
+0;LiberationSans-BoldItalic;2;8;5;2;65535;905;211;116;0;1834;1116;1834;1116;0;0;0;0;Bold Italic
+
+File:DroidSansHebrew-Regular.ttf
+2;1
+Droid Sans Hebrew
+0;DroidSansHebrew;0;5;5;2;65535;979;203;182;0;1052;1182;1052;1182;0;0;0;8;Regular
+
+File:LiberationMono-Bold.ttf
+2;1
+Liberation Mono
+0;LiberationMono-Bold;0;8;5;1;65535;832;300;132;0;1177;1132;1177;1132;0;0;0;0;Bold
+
+File:Lucida Grande.ttf
+2;1
+Lucida Grande
+0;LucidaGrande;0;5;5;2;65535;966;210;176;0;2388;1176;2388;1176;0;0;0;0;Regular
+
+File:verdanaz.ttf
+2;1
+Verdana
+0;Verdana-BoldItalic;2;8;5;2;65535;1005;209;214;0;1870;1214;1870;1214;0;0;0;0;Bold Italic
+
+File:DejaVuSans-ExtraLight.ttf
+2;1
+DejaVu Sans Light
+0;DejaVuSans-ExtraLight;0;2;5;2;65535;928;235;163;0;2391;1163;2391;1163;0;0;0;0;ExtraLight
+
+File:ttf-inconsolata.otf
+2;1
+Inconsolata
+0;Inconsolata;0;6;5;1;65535;834;176;10;0;509;1010;509;1010;0;0;0;65544;Medium
+
+File:webdings.ttf
+2;1
+Webdings
+0;Webdings;0;5;5;1;10;799;200;-1;0;4001;999;4001;999;0;0;0;0;Regular
+
+File:DejaVuSansCondensed.ttf
+2;1
+DejaVu Sans Condensed
+0;DejaVuSansCondensed;0;5;4;2;65535;928;235;163;0;2430;1163;2430;1163;0;0;0;0;Condensed
+
+File:Ubuntu-RI.ttf
+2;1
+Ubuntu
+0;Ubuntu-Italic;2;5;5;2;65535;932;189;121;0;3752;1121;3752;1121;0;0;0;0;Italic
+
+File:DroidSansHebrew-Bold.ttf
+2;1
+Droid Sans Hebrew
+0;DroidSansHebrew-Bold;0;7;5;2;65535;979;203;182;0;1086;1182;1086;1182;0;0;0;8;Bold
+
+File:DroidSansDevanagari-Regular.ttf
+2;1
+Droid Sans Devanagari
+0;DroidSansDevanagari;0;5;5;2;65535;896;408;304;0;1893;1304;1893;1304;0;0;0;8;Regular
+
+File:DejaVuSansMono-Bold.ttf
+2;1
+DejaVu Sans Mono
+0;DejaVuSansMono-Bold;0;8;5;1;65535;928;235;163;0;1176;1163;1176;1163;0;0;0;0;Bold
+
+File:georgiaz.ttf
+2;1
+Georgia
+0;Georgia-BoldItalic;2;8;5;2;65535;916;219;135;0;1596;1135;1596;1135;0;0;0;0;Bold Italic
+
+File:Ubuntu-R.ttf
+2;1
+Ubuntu
+0;Ubuntu;0;5;5;2;65535;932;189;121;0;3647;1121;3647;1121;0;0;0;0;Regular
+
+File:FreeMono.ttf
+2;1
+FreeMono
+0;FreeMono;0;5;5;1;65535;800;200;150;0;1492;1000;1492;1000;0;0;0;0;Regular
+
+File:DroidSansFallbackLegacy.ttf
+2;1
+Droid Sans Fallback
+0;DroidSansFallback;0;5;5;2;65535;1042;265;307;0;1210;1307;1210;1307;0;0;0;8;Regular
+
+File:trebucit.ttf
+2;1
+Trebuchet MS
+0;TrebuchetMS-Italic;2;5;5;2;65535;938;222;160;0;1216;1160;1216;1160;0;0;0;8;Italic
+
+File:AppleGaramond-BoldItalic.ttf
+2;1
+Apple Garamond
+0;AppleGaramond-BoldItalic;2;8;5;2;65535;927;236;163;0;1125;1163;1125;1163;0;0;0;0;Bold Italic
+
+File:DroidSansThai.ttf
+2;1
+Droid Sans Thai
+0;DroidSansThai;0;5;5;2;65535;1116;255;371;0;1443;1371;1443;1371;0;0;0;8;Regular
+
+File:DejaVuSans.ttf
+2;1
+DejaVu Sans
+0;DejaVuSans;0;5;5;2;65535;928;235;163;0;2700;1163;2700;1163;0;0;0;0;Book
+
+File:andalemo.ttf
+2;1
+Andale Mono
+0;AndaleMono;0;5;5;1;65535;907;217;124;0;600;1124;600;1124;0;0;0;8;Regular
+
+File:DejaVuSerif-Italic.ttf
+2;1
+DejaVu Serif
+0;DejaVuSerif-Italic;2;5;5;2;65535;928;235;163;0;2483;1163;2483;1163;0;0;0;0;Italic
+
+File:DejaVuSerif-Bold.ttf
+2;1
+DejaVu Serif
+0;DejaVuSerif-Bold;0;8;5;2;65535;938;235;173;0;2630;1173;2630;1173;0;0;0;0;Bold
+
+File:LiberationMono-Italic.ttf
+2;1
+Liberation Mono
+0;LiberationMono-Italic;2;5;5;1;65535;832;300;132;0;1304;1132;1304;1132;0;0;0;0;Italic
+
+File:LiberationSerif-BoldItalic.ttf
+2;1
+Liberation Serif
+0;LiberationSerif-BoldItalic;2;8;5;2;65535;891;216;107;0;1850;1107;1850;1107;0;0;0;0;Bold Italic
+
+File:UbuntuMono-BI.ttf
+2;1
+Ubuntu Mono
+0;UbuntuMono-BoldItalic;2;8;5;1;65535;830;170;150;0;976;1000;976;1000;0;0;0;0;Bold Italic
+
+File:DroidKufi-Regular.ttf
+2;1
+Droid Arabic Kufi
+0;DroidArabicKufi;0;5;5;2;65535;1281;615;896;0;1752;1896;1752;1896;0;0;0;8;Regular
+
+File:cour.ttf
+2;1
+Courier New
+0;CourierNewPSMT;0;5;5;1;65535;832;300;132;0;658;1132;658;1132;0;0;0;0;Regular
+
+File:DroidSansMono.ttf
+2;1
+Droid Sans Mono
+0;DroidSansMono;0;5;5;1;65535;928;235;163;0;794;1163;794;1163;0;0;0;8;Regular
+
+File:DroidSansEthiopic-Bold.ttf
+2;1
+Droid Sans Ethiopic
+0;DroidSansEthiopic-Bold;0;8;5;2;65535;963;240;203;0;1816;1203;1816;1203;0;0;0;8;Bold
+
+File:verdana.ttf
+2;1
+Verdana
+0;Verdana;0;5;5;2;65535;1005;209;214;0;1495;1214;1495;1214;0;0;0;0;Regular
+
+File:FreeSansBold.ttf
+2;1
+FreeSans
+0;FreeSansBold;0;7;5;2;65535;900;300;200;0;2524;1200;2524;1200;0;0;0;0;Bold
+
+File:LiberationSerif-Italic.ttf
+2;1
+Liberation Serif
+0;LiberationSerif-Italic;2;5;5;2;65535;891;216;107;0;1829;1107;1829;1107;0;0;0;0;Italic
+
+File:LiberationSerif-Regular.ttf
+2;1
+Liberation Serif
+0;LiberationSerif;0;5;5;2;65535;891;216;107;0;1821;1107;1821;1107;0;0;0;0;Regular
+
+File:DejaVuSans-BoldOblique.ttf
+2;1
+DejaVu Sans
+0;DejaVuSans-BoldOblique;1;8;5;2;65535;928;235;163;0;3064;1163;3064;1163;0;0;0;0;Bold Oblique
+
+File:DroidSerif-Bold.ttf
+2;1
+Droid Serif
+0;DroidSerif-Bold;0;8;5;2;65535;928;235;163;0;1865;1163;1865;1163;0;0;0;8;Bold
+
+EmptyFontCacheDirectory:1350232219:/home/sunn/.config/libreoffice/3/user/psprint/fontmetric

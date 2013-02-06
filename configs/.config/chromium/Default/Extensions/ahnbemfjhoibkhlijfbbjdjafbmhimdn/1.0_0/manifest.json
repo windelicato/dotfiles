@@ -1,0 +1,20 @@
+{
+   "background_page": "background.htm",
+   "content_scripts": [ {
+      "all_frames": true,
+      "css": [ "css/scroll-bars.css" ],
+      "matches": [ "\u003Call_urls\u003E" ],
+      "run_at": "document_start"
+   } ],
+   "description": "Remove the scroll bars and increase the screen space. Scroll feature works normal using middle mouse buttons and keyboard arrow keys",
+   "homepage_url": "http://tejji.com/",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDUvOdW6UTVJFIdaCq3xoHR1r6UxTrB8lrMy0xzcIasH9l07+PPkZ+IcSQ5hhyG4gAaasgoVkqFh4AhyZihKKwL5/RAQJPDD0GvvqBwO7tF6noaI2xcGS9g11WqvqkS5Er46638vpX0ekTbq3PqUfoXNUqEVbjzFQGQMk9IpDb9NwIDAQAB",
+   "name": "No Scroll Bars Please!",
+   "omnibox": {
+      "keyword": "t"
+   },
+   "options_page": "options.htm",
+   "permissions": [ "*://*/*", "contextMenus", "unlimitedStorage", "notifications", "tabs" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}

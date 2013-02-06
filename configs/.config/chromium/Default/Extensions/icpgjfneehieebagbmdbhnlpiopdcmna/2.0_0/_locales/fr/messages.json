@@ -1,0 +1,122 @@
+{
+   "btnCancel": {
+      "description": "Text displayed on a cancel button",
+      "message": "Annuler"
+   },
+   "btnSave": {
+      "description": "Text displayed on a save button",
+      "message": "Enregistrer"
+   },
+   "clickHere": {
+      "description": "Text displayed in redirect message's link text",
+      "message": "cliquez ici"
+   },
+   "desc": {
+      "message": "D\u00E9finit une URL personnalis\u00E9e \u00E0 charger dans les nouveaux onglets. Choisissez une page \"about:\" de Google Chrome, *Nouvel onglet, Extensions, T\u00E9l\u00E9chargements, Historique*, une URL populaire ou l'URL de votre choix. Votre onglet personnalis\u00E9 peut \u00E9galement \u00EAtre un fichier local, ce qui vous permet de cr\u00E9er votre propre page Nouvel onglet. Si vous n'enregistrez pas de texte, votre nouvel onglet sera une page \"about:blank\".\n\nLes noms des fichiers peuvent commencer par\u00A0: fichier:\\\\, fichier:// et fichier:///\n\nImportant\u00A0: Cela ne remplace pas votre page d'accueil, mais seulement les nouveaux onglets. Si votre navigateur est configur\u00E9 de mani\u00E8re \u00E0 charger la page Nouvel onglet comme page d'accueil, les cons\u00E9quences peuvent \u00EAtre surprenantes.\n\nPour obtenir le journal des modifications ou les coordonn\u00E9es du d\u00E9veloppeur, veuillez vous rendre sur son site en cliquant sur le lien ci-dessous.\n\n*********\n  Remarque\n********* \nJ'ai jug\u00E9 bon d'expliquer l'absence de mise en surbrillance de l'Omnibox dans la description plut\u00F4t que dans les commentaires. Les extensions Google\u00A0Chrome ne peuvent actuellement pas interagir avec l'Omnibox pour la mise en surbrillance une fois la nouvelle page cr\u00E9\u00E9e. Une API exp\u00E9rimentale r\u00E9cup\u00E8re les valeurs et d\u00E9tecte la saisie de l'utilisateur dans l'Omnibox, mais elle ne permet pas aux extensions de mettre le texte en surbrillance. J'ai test\u00E9 la version\u00A01.0.1 de New Tab Redirect! sur de nombreux builds de d\u00E9veloppeurs, et le curseur ne se retrouve qu'occasionnellement \u00E0 la fin de l'Omnibox. Ceci est n\u00E9anmoins g\u00E9r\u00E9 par Google\u00A0Chrome et ne peut pas \u00EAtre modifi\u00E9 par les extensions. D\u00E8s que Google\u00A0Chrome proposera cette fonctionnalit\u00E9, je la mettrai en place. En attendant, vous pouvez utiliser CTRL+L pour mettre rapidement l'Omnibox en surbrillance.\n\nN'oubliez pas de consulter le WIKI pour tout autre probl\u00E8me et pour obtenir des conseils\u00A0: https://github.com/jimschubert/NewTab-Redirect/wiki\n\nSi vous aimez cette extension et souhaitez faire un don, vous pouvez le faire \u00E0 l'adresse\u00A0: http://pledgie.com/campaigns/15715\n\nInformations l\u00E9gales\u00A0:\n\nJe ne suis pas affili\u00E9 \u00E0 Google ni \u00E0 Google\u00A0Chrome.\nGoogle\u00A0Chrome est une marque d\u00E9pos\u00E9e de Google,\u00A0Inc.\n\nLes \"Pages populaires\" sont extraites du site www.alexa.com/topsites. Je ne suis pas affili\u00E9 \u00E0 Google, Facebook, Twitter, Yahoo, Wikip\u00E9dia, Digg, Delicio.us, Slashdot, MySpace ni \u00E0 aucun autre site mentionn\u00E9 ici. Ceux-ci sont fournis \u00E0 titre informatif aux utilisateurs de cette extension. L'utilisation de ces pages ou de toute autre en remplacement de votre page Nouvel onglet ne vous d\u00E9gage aucunement des responsabilit\u00E9s qui d\u00E9coulent du contrat que vous auriez conclu avec le site ou le service concern\u00E9."
+   },
+   "extDesc": {
+      "description": "Extension Description",
+      "message": "D\u00E9finit une URL sp\u00E9cifi\u00E9e par l'utilisateur \u00E0 charger dans les nouveaux onglets."
+   },
+   "extName": {
+      "description": "Extension Name",
+      "message": "New Tab Redirect!"
+   },
+   "options_aboutPages": {
+      "description": "The text displayed above the about: or chrome:// pages links",
+      "message": "Pages \"about:\"\u00A0:"
+   },
+   "options_anyQuestions": {
+      "description": "Footer message linking to the wiki",
+      "message": "Si vous avez des questions, n'oubliez pas de consulter le $WIKI$ pour obtenir des r\u00E9ponses et des conseils.",
+      "placeholders": {
+         "wiki": {
+            "content": "$1"
+         }
+      }
+   },
+   "options_chromePages": {
+      "description": "The text displayed above the original chrome pages links",
+      "message": "Pages Google\u00A0Chrome d'origine\u00A0:"
+   },
+   "options_createdBy": {
+      "description": "Message preceding the copyright link and email address in the footer",
+      "message": "Auteur"
+   },
+   "options_donate_headingLarge": {
+      "description": "The main heading for the donate section",
+      "message": "Faites un don !"
+   },
+   "options_donate_headingSmall": {
+      "description": "The helper text for the donate section",
+      "message": "exprimez votre soutien !"
+   },
+   "options_footerPlea": {
+      "description": "Message in footer asking if the user wants to engage in community activities for the extension",
+      "message": "Vous souhaitez participer, faire un don, signaler un probl\u00E8me, etc.\u00A0?"
+   },
+   "options_githubTitle": {
+      "description": "Title displayed on github link",
+      "message": "Retrouvez-moi sur GitHub\u00A0!"
+   },
+   "options_heading": {
+      "description": "Options page header displayed next to icon at the top of the page.",
+      "message": "Options $NAME$",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "New Tab Redirect!"
+         }
+      }
+   },
+   "options_hide_hint": {
+      "description": "Hint following checkbox, indicating redirect.html text should be hidden",
+      "message": "Masquer l'indication \"Redirection en cours\""
+   },
+   "options_localFiles_hint": {
+      "description": "A note indicating that file:// should be used when accessing local file locations",
+      "message": "Remarque\u00A0: Utilisez fichier:// pour les fichiers locaux (par exemple, fichier://C:\\exemple.html)."
+   },
+   "options_popularPages": {
+      "description": "The text displayed above the popular pages links",
+      "message": "Pages populaires\u00A0:"
+   },
+   "options_quickSave_headingLarge": {
+      "description": "The main heading for the one-click links",
+      "message": "Enregistrement rapide\u2026"
+   },
+   "options_quickSave_headingSmall": {
+      "description": "The helper text in the Quick Save heading",
+      "message": "cliquez sur un bouton ci-dessous\u00A0!"
+   },
+   "options_status": {
+      "description": "Options saved message",
+      "message": "Options enregistr\u00E9es !!"
+   },
+   "options_subheading": {
+      "description": "Message displayed in the blue bar below the heading of the options page.",
+      "message": "Ces param\u00E8tres remplaceront votre page Nouvel onglet."
+   },
+   "options_title": {
+      "description": "Options page title displayed within the tab, i.e. html title.",
+      "message": "$NAME$ | Options",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "New Tab Redirect!"
+         }
+      }
+   },
+   "options_url_label": {
+      "description": "An instructional message displayed before the text box on the options page",
+      "message": "Ma page Nouvel onglet devrait afficher cette URL\u00A0:"
+   },
+   "redirectMsg": {
+      "description": "Instructional text preceding the 'click here' link for failed or slow redirects",
+      "message": "Si vous n'avez pas \u00E9t\u00E9 redirig\u00E9 au bout de cinq\u00A0secondes\u00A0:"
+   },
+   "redirectText": {
+      "description": "Placeholder text in redirect.html which can optionally be hidden by the user",
+      "message": "Redirection en cours..."
+   }
+}

@@ -1,0 +1,347 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-01-14 19:45+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../gui.glade.h:1
+msgid "<b>Color</b>"
+msgstr "Färg"
+
+#: ../gui.glade.h:2
+msgid "<b>Filter</b>"
+msgstr "Filter"
+
+#: ../gui.glade.h:3
+msgid "<b>Folder</b>"
+msgstr "Mapp"
+
+#: ../gui.glade.h:4
+msgid "<b>Gradient</b>"
+msgstr "Gradient"
+
+#: ../gui.glade.h:5
+msgid "<b>Logo</b>"
+msgstr "Logotyp"
+
+#: ../gui.glade.h:6
+msgid "<b>Navigation</b>"
+msgstr "Navigation"
+
+#: ../gui.glade.h:7
+msgid "<b>Preview</b>"
+msgstr "Granskning"
+
+#: ../gui.glade.h:8
+msgid "<b>Settings</b>"
+msgstr "Inställningar"
+
+#: ../gui.glade.h:9
+msgid ""
+"<b>This action requiers root previleges.</b>\n"
+"Please enter your password."
+msgstr "<b>Denna funktion kräver administratörsprevilegier.</b>\n"
+"Var vänlig skriv in ditt lösenord."
+
+#: ../gui.glade.h:11
+msgid "<b>Warning</b>: Changing this code might break the icons."
+msgstr "<b>Varning</b>: Att ändra i denna kod kan göra ikonerena obrukbara."
+
+#: ../gui.glade.h:12
+msgid ""
+"ACYL (default)\n"
+"Moblin\n"
+"Minimal"
+msgstr ""
+"ACYL (standard)\n"
+"Moblin\n"
+"Minimal"
+
+#: ../gui.glade.h:15
+msgid ""
+"ACYL 1 (default)\n"
+"ACYL 2\n"
+"ACYL 3\n"
+"ACYL 4\n"
+"ACYL 5\n"
+"AllBlack\n"
+"Tok-Tok\n"
+"Moblin\n"
+"Web0"
+msgstr ""
+"ACYL 1 (standard)\n"
+"ACYL 2\n"
+"ACYL 3\n"
+"ACYL 4\n"
+"ACYL 5\n"
+"AllBlack\n"
+"Tok-Tok\n"
+"Moblin\n"
+"Web0"
+
+#: ../gui.glade.h:24
+msgid "Actions"
+msgstr ""
+
+#: ../gui.glade.h:25
+msgid ""
+"All\n"
+"Custom"
+msgstr ""
+"Alla\n"
+"Anpassad"
+
+#: ../gui.glade.h:28
+#, python-format
+msgid ""
+"All values are in % relative to the icon. (0,0 is top left corner), (100,100 "
+"bottom right)"
+msgstr ""
+"Alla värden är representerade i % relativt till ikonen. (0,0 är övre vänster hörn),"
+"(100,100 är nedre högger)"
+
+#: ../gui.glade.h:29
+msgid "Any Color You Like"
+msgstr "Any Color You Like"
+
+#: ../gui.glade.h:30
+msgid "Apply"
+msgstr "Verkställ"
+
+#: ../gui.glade.h:31
+msgid "Apply To:"
+msgstr "Verkställ för:"
+
+#: ../gui.glade.h:32
+msgid "Apps"
+msgstr ""
+
+#: ../gui.glade.h:33
+msgid ""
+"Arch\n"
+"Debian\n"
+"Fedora\n"
+"Gnome\n"
+"Ubuntu\n"
+"Zenwalk\n"
+"Gentoo\n"
+"Custom"
+msgstr ""
+"Arch\n"
+"Debian\n"
+"Fedora\n"
+"Gnome\n"
+"Ubuntu\n"
+"Zenwalk\n"
+"Gentoo\n"
+"Egen"
+
+#: ../gui.glade.h:41
+msgid "Auto Offest"
+msgstr "Auto-avstånd"
+
+#: ../gui.glade.h:42
+msgid ""
+"By Switzak\n"
+"\n"
+"A iconset that have a script to change\n"
+" the color and other stuff easily."
+msgstr ""
+"Av Switzak\n"
+"\n"
+"Ett ikontema som har ett script förr att\n"
+"ändra färg och andra saker på ett enkelt sätt."
+
+#: ../gui.glade.h:46
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ../gui.glade.h:47
+msgid "Center Point"
+msgstr "Mittpunkt"
+
+#: ../gui.glade.h:48
+msgid "Code View"
+msgstr "Kodvy"
+
+#: ../gui.glade.h:49
+msgid "Color:"
+msgstr "Färg:"
+
+#: ../gui.glade.h:50
+msgid "Copy icon theme to root user:"
+msgstr "Kopiera ikontema till root:"
+
+#: ../gui.glade.h:51
+msgid "Create menu icon and terminal command to run this application:"
+msgstr "Skapa menyikon och kommando för att starta denna application:"
+
+#: ../gui.glade.h:52
+msgid ""
+"Disabled\n"
+"Wood\n"
+"Glass\n"
+"Paper\n"
+"Cutout\n"
+"Brushed Metal\n"
+"Flames\n"
+"Quadratic\n"
+"Bevled\n"
+"Outline"
+msgstr ""
+"Ingen\n"
+"Trä\n"
+"Glas\n"
+"Papper\n"
+"Utskärning\n"
+"Borstad metall\n"
+"Eldflammor\n"
+"Kvadratisk\n"
+"Avfasad kant\n"
+"Kontur"
+
+#: ../gui.glade.h:62
+msgid "Emblems"
+msgstr ""
+
+#: ../gui.glade.h:63
+msgid "End Point"
+msgstr "Slutpunkt"
+
+#: ../gui.glade.h:64
+msgid "Enter password here:"
+msgstr "Skriv lösenord här"
+
+#: ../gui.glade.h:65
+msgid "Focus Point"
+msgstr "Fokuspunkt"
+
+#: ../gui.glade.h:66
+msgid "Gradient"
+msgstr "Gradient"
+
+#: ../gui.glade.h:67
+msgid "Graphic View"
+msgstr "Grafisk vy"
+
+#: ../gui.glade.h:68
+msgid "Import"
+msgstr "Importera"
+
+#: ../gui.glade.h:69
+msgid "Import settings from Graphic View:"
+msgstr "Importera inställningar från den grafiska vyn:"
+
+#: ../gui.glade.h:70
+msgid ""
+"Linear\n"
+"Radial"
+msgstr ""
+"Linjär\n"
+"Cirkulär"
+
+#: ../gui.glade.h:72
+msgid "Mimetypes"
+msgstr ""
+
+#: ../gui.glade.h:73
+msgid "Offset:"
+msgstr ""
+
+#: ../gui.glade.h:74
+msgid "Ok"
+msgstr ""
+
+#: ../gui.glade.h:75
+msgid "Other"
+msgstr ""
+
+#: ../gui.glade.h:76
+msgid "Overwrite application specific icons:"
+msgstr "Skriv över apllications specefika ikoner:"
+
+#: ../gui.glade.h:77
+msgid "Places"
+msgstr ""
+
+#: ../gui.glade.h:78
+msgid "Presets"
+msgstr "Förinställningar"
+
+#: ../gui.glade.h:79
+msgid "Radius"
+msgstr "Radius"
+
+#: ../gui.glade.h:80
+msgid "Start Point"
+msgstr "Startpunkt"
+
+#: ../gui.glade.h:81
+msgid "Status"
+msgstr "Status"
+
+#: ../gui.glade.h:82
+msgid "Switch Icons"
+msgstr "Byt ikoners"
+
+#: ../gui.glade.h:83
+msgid "The Rest / Other"
+msgstr "Resten / Andra"
+
+#: ../gui.glade.h:84
+msgid ""
+"Vertical\n"
+"Horisontal\n"
+"Diagonal"
+msgstr ""
+"Vertical\n"
+"Horisontell\n"
+"Diagonal"
+
+#: ../gui.glade.h:87
+msgid "X-coordinate"
+msgstr "X-kordinat"
+
+#: ../gui.glade.h:88
+msgid "Y-coordinate"
+msgstr "Y-kordinat"
+
+#: ../gui.glade.h:89
+msgid "_About"
+msgstr "_Om"
+
+#: ../gui.glade.h:90
+msgid "_Export current settings"
+msgstr "_Exportera nuvarande inställningar"
+
+#: ../gui.glade.h:91
+msgid "_File"
+msgstr "_Arkiv"
+
+#: ../gui.glade.h:92
+msgid "_Help"
+msgstr "_Hjälp"
+
+#: ../gui.glade.h:93
+msgid "_Import settings"
+msgstr "_Importera inställningar"
+
+#: ../gui.glade.h:94
+msgid "_Quit"
+msgstr "_Avsluta"
+
+#: ../gui.glade.h:95
+msgid "_Restore default settings"
+msgstr "_Återställ standard inställningar"

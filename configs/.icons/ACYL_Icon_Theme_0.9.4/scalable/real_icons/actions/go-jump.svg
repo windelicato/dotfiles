@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+<defs>
+<defs
+   id="defs17">
+</defs>
+	<path
+   d="M 23.870334,2 C 15.090389,2 7.5060095,7.0877419 3.9305828,14.460937 c 0.038115,-0.0041 0.1208971,-0.02865 0.1440734,-0.02865 l 12.0445318,-0.34375 0,-9.2812503 c 0,0 0.0081,-0.6027083 0.893255,0.057292 L 32.399476,20.361979 c 0.442594,0.439999 0.331945,0.672604 0,1.002604 L 17.012443,36.747396 c -0.110649,0.11 -0.893255,0.04812 -0.893255,-0.171875 l 0,-9.28125 -12.0445318,0.229166 C 3.8159344,27.523438 2.5463708,27.541665 2,27.4375 3.6593563,37.953175 12.829116,46 23.870334,46 36.08591,46 46,36.143999 46,24 46,11.856 36.085909,2 23.870334,2 z"
+   id="path-main"
+    />
+	
+</defs>
+<acyl-settings>
+<linearGradient
+     id="linearGradient4321">
+    <stop
+       style="stop-color:#FFFFFF;stop-opacity:1.0;"
+       offset="1.0"
+       id="stop1" />
+  </linearGradient>
+<linearGradient
+     inkscape:collect="always"
+     xlink:href="#linearGradient4321"
+     id="acyl_gradient"
+     x1="50.0%"
+     y1="0.0%"
+     x2="50.0%"
+     y2="100.0%" />
+<filter>
+    </filter>
+<use id="1" style="fill:url(#acyl_gradient);filter:url(#filter1111)" xlink:href="#path-main" />
+</acyl-settings>
+</svg>

@@ -1,0 +1,8 @@
+#!/bin/bash
+cd ./pots
+for f in *
+do 
+	temp=`echo $f | cut -d \. -f 1`
+	echo $temp; mkdir -p ../$temp/LC_MESSAGES/
+	msgfmt $f -o ../$temp/LC_MESSAGES/acyl.mo
+done

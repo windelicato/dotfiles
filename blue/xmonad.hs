@@ -34,7 +34,7 @@ import Data.List			-- clickable workspaces
 
 
 defaultLayouts =	  onWorkspace (myWorkspaces !! 0) (avoidStruts (Circle ||| tiled ||| fullTile ||| fullTile3))
-			$ onWorkspace (myWorkspaces !! 1) (fullScreen ||| avoidStruts (borderlessTile))
+			$ onWorkspace (myWorkspaces !! 1) (fullScreen ||| avoidStruts (borderlessTile ||| Circle))
 			$ onWorkspace (myWorkspaces !! 2) (avoidStruts simplestFloat)
 			$ avoidStruts ( tiled   ||| fullTile ||| fullTile3 ||| Circle ||| simplestFloat) ||| fullScreen 
 	where
@@ -83,16 +83,21 @@ myWorkspaces = clickable $ ["^i(/home/sunn/.dzen/arch_10x10.xbm) shell"
 		,"^i(/home/sunn/.dzen/mail.xbm) mail"	
 		,"^i(/home/sunn/.dzen/note.xbm) tunes"]
 
-  where clickable l     = [ "^ca(1,xdotool key alt+" ++ show (n) ++ ")" ++ ws ++ "^ca()" |
+	where clickable l     = [ "^ca(1,xdotool key alt+" ++ show (n) ++ ")" ++ ws ++ "^ca()" |
                             (i,ws) <- zip [1..] l,
                             let n = i ]
 			
 myManageHook = composeAll 	[ resource =? "dmenu" --> doFloat
 				, resource =? "skype" 	--> doFloat
+				, resource =? "java" 	--> doFloat
 				, resource =? "mplayer"	--> doFloat
-				, className =? "docky"	--> doFloat
+--				, className =? "docky"	--> doFloat
+				, className =? "docky"	--> doIgnore
 				, resource =? "chromium"--> doShift (myWorkspaces !! 1)
-				]
+				, resource =? "lowriter"--> doShift (myWorkspaces !! 3)
+				, resource =? "localc"--> doShift (myWorkspaces !! 3)
+				, resource =? "loimpress"--> doShift (myWorkspaces !! 3)
+				, manageDocks]
 newManageHook = myManageHook <+> manageHook defaultConfig
 
 myLogHook h = dynamicLogWithPP ( defaultPP
@@ -102,7 +107,7 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 		, ppHidden		= dzenColor green1 background . pad
 		, ppHiddenNoWindows	= dzenColor black1 background . pad
 		, ppWsSep		= ""
-		, ppSep			= "   "
+		, ppSep			= "  "
 		, ppLayout		= dzenColor white1 background .
 				(\x -> case x of
 					"Full"				->	"^i(/home/sunn/.xmonad/dzen2/layout_full.xbm)"
@@ -112,13 +117,13 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 					"Circle"			->	"^i(/home/sunn/.xmonad/dzen2/full.xbm)"
 					_				->	"^i(/home/sunn/.xmonad/dzen2/grid.xbm)"
 				)
---		, ppTitle	=   (" " ++) . dzenColor "#d0d0d0" "#170F0D" . dzenEscape
+	--	, ppTitle	=   ("" ++) . dzenColor green1 background . dzenEscape
 		, ppOrder	=  \(ws:t:_:_) -> [ws,t]
 		, ppOutput	=   hPutStrLn h
 	} )
 
-myXmonadBar = "dzen2 -x '0' -y '0' -h '15' -w '500' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
-myStatusBar = "conky -c /home/sunn/.xmonad/.conky_dzen | dzen2 -x '500' -w '866' -h '15' -ta 'r' -bg '"++background++"' -fg '"++foreground++"' -y '0' -fn "++myFont
+myXmonadBar = "dzen2 -x '0' -y '0' -h '15' -w '750' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
+myStatusBar = "conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '750' -w '616' -h '15' -ta 'r' -bg '"++background++"' -fg '"++foreground++"' -y '0' -fn "++myFont
 
 
 main = do
@@ -127,8 +132,8 @@ main = do
 	xmonad $ defaultConfig
 		{ terminal		= myTerminal
 		, borderWidth		= 2
-		, normalBorderColor 	= black0
-		, focusedBorderColor  	= cyan1
+		, normalBorderColor 	= background
+		, focusedBorderColor  	= black1
 		, modMask 		= mod1Mask
 		, layoutHook 		= myLayout
 --		, layoutHook 		= avoidStruts  $  layoutHook defaultConfig
@@ -142,11 +147,12 @@ main = do
 		`additionalKeys`
 		[((mod1Mask .|. shiftMask	, xK_b), spawn "chromium")
 		,((mod1Mask  			, xK_b), spawn "dwb")
-		,((mod1Mask  			, xK_n), spawn "urxvt")
+		,((mod1Mask  			, xK_n), spawn "urxvtd")
+		,((mod1Mask .|. shiftMask  	, xK_t), spawn "urxvtc -e tmux")
 		,((mod1Mask  			, xK_z), spawn "zathura")
 		,((mod1Mask 			, xK_r), spawn "gmrun")
-		,((mod1Mask 			, xK_p), spawn "dmenu_run -b -nb '#000000' -nf '#FFFFFF' -sb '#556c85' -sf '#000000' -fn '-*-lime-*-*-*-*-*-*-*-*-*-*-*-*'")
-		,((mod1Mask			, xK_q), spawn "killall dzen2; killall conky" >> restart "xmonad" True)
+		,((mod1Mask 			, xK_p), spawn "dmenu_run -nb '#000000' -nf '#404040' -sb '#000000' -sf '#FFFFFF' -fn '-*-lime-*-*-*-*-*-*-*-*-*-*-*-*'")
+		,((mod1Mask			, xK_q), spawn "killall dzen2; killall conky; cd ~/.xmonad; ghc -threaded xmonad.hs; mv xmonad xmonad-x86_64-linux; xmonad --restart" )
 		,((mod1Mask .|. shiftMask	, xK_x), kill)
 		,((mod1Mask .|. shiftMask	, xK_c), return())
 		,((mod1Mask  			, xK_c), moveTo Next EmptyWS)
@@ -161,14 +167,14 @@ main = do
 		,((mod1Mask .|. shiftMask  	, xK_s), withFocused (keysResizeWindow (0,-20) (0,0)))
 		,((mod1Mask .|. shiftMask  	, xK_d), withFocused (keysResizeWindow (0,20) (0,0)))
 		,((mod1Mask .|. shiftMask  	, xK_f), withFocused (keysResizeWindow (20,0) (0,0)))
-		,((0				, xK_Super_L), spawn "/home/sunn/bin/scripts/lens")
+		,((0				, xK_Super_L), spawn "/home/sunn/scripts/lens")
 		,((0                     	, 0x1008FF11), spawn "amixer set Master 2-")
 		,((0                     	, 0x1008FF13), spawn "amixer set Master 2+")
 		,((0                     	, 0x1008FF12), spawn "amixer set Master toggle")
 		,((0                     	, 0x1008FF59), spawn "xrandr --output VGA1 --mode 1366x768")
 		,((0                     	, 0x1008FF59), spawn "pm-suspend")
 		,((0                     	, 0x1008FF14), spawn "ncmpcpp toggle")
-		,((0                     	, 0x1008FF17), spawn "ncmpcpp next")
+		,((0                     	, 0x1008FF18), spawn "ncmpcpp next")
 		,((0                     	, 0x1008FF16), spawn "ncmpcpp prev")
 		]
 		`additionalMouseBindings`
@@ -183,9 +189,13 @@ main = do
 
 
 
-myTerminal 	= "urxvt"
+
+myTerminal 	= "urxvtc"
 myBitmapsDir	= "~/.xmonad/dzen2/"
+--myFont		= "-*-tamsyn-medium-*-normal-*-12-*-*-*-*-*-*-*"
 myFont		= "-*-lime-*-*-*-*-*-*-*-*-*-*-*-*"
+--myFont		= "xft:inconsolata:size=11"
+--myFont		= "-*-cure-*-*-*-*-*-*-*-*-*-*-*-*"
 
 background= "#000000"
 foreground= "#ffffff"

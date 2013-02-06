@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://openbox.org/                 file:///usr/share/openbox/menu.xsd">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="run">
+			<action name="Execute">
+				<execute>
+					gmrun
+				</execute>
+			</action>
+		</item>
+		<item label="urxvt">
+			<action name="Execute">
+				<execute>
+					urxvt
+				</execute>
+			</action>
+		</item>
+		<item label="dwb">
+			<action name="Execute">
+				<execute/>
+			</action>
+		</item>
+		<item label="pdf">
+			<action name="Execute">
+				<execute>
+					zathura
+				</execute>
+			</action>
+		</item>
+		<menu id="/Debian"/>
+		<!-- This requires the presence of the 'menu' package to work -->
+		<separator/>
+		<item label="matlab">
+			<action name="Execute">
+				<execute>
+					matlab
+				</execute>
+			</action>
+		</item>
+		<item label="ise">
+			<action name="Execute">
+				<execute>
+					ise
+				</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="root-menu-04641" label="config">
+			<item label="conf">
+				<action name="Execute">
+					<execute>
+						obconf
+					</execute>
+				</action>
+			</item>
+			<item label="menu">
+				<action name="Execute">
+					<execute>
+						obmenu
+					</execute>
+				</action>
+			</item>
+			<item label="panel">
+				<action name="Execute">
+					<execute>
+						tint2conf
+					</execute>
+				</action>
+			</item>
+			<item label="restart">
+				<action name="Restart"/>
+			</item>
+			<item label="reconf">
+				<action name="Reconfigure"/>
+			</item>
+		</menu>
+		<menu id="root-menu-6490" label="power">
+			<item label="logout">
+				<action name="Exit"/>
+			</item>
+			<item label="reboot">
+				<action name="Execute">
+					<execute>
+						systemctl reboot
+					</execute>
+				</action>
+			</item>
+			<item label="shutdown">
+				<action name="Execute">
+					<execute>
+						systemctl poweroff
+					</execute>
+				</action>
+			</item>
+		</menu>
+	</menu>
+</openbox_menu>

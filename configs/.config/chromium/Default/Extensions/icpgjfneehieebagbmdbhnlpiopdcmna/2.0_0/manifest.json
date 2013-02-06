@@ -1,0 +1,25 @@
+{
+   "background": {
+      "persistent": false,
+      "scripts": [ "background.js" ]
+   },
+   "chrome_url_overrides": {
+      "newtab": "redirect.html"
+   },
+   "default_locale": "en",
+   "description": "__MSG_extDesc__",
+   "icons": {
+      "128": "icon128.png",
+      "19": "icon19.png",
+      "200": "icon200.png"
+   },
+   "incognito": "split",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC0Us6fHwvmddAcwc7lVO+6WxSwTeTolzLmk6G30Xh30a1iK8GjFo9Sr9ypdQzl2nbz3/gtV/PkWXaJyeyswvK2lIrwz03BniX1v1r+3k0nO/WhDakka1PBN8sGSO7SGQ1zjZObUgdjfnkgPvLDxfCU7hIhOElQARVNAey9bjhgvwIDAQAB",
+   "manifest_version": 2,
+   "minimum_chrome_version": "22",
+   "name": "__MSG_extName__",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "storage" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.0"
+}

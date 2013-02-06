@@ -1,0 +1,747 @@
+{
+   "adalreadyblocked": {
+      "message": "Anda tidak perlu berbuat apa apa karena iklannya sudah terblokir"
+   },
+   "adblock_auto_removes_ads_thats_all": {
+      "message": " AdBlock secara otomatis menghilangkan iklan. Semua ada disana untuk itu."
+   },
+   "adblock_is_paused": {
+      "message": "AdBlock dibekukan. Maka tidak ada sumber yang tertangkap, jadi halaman ini tidak bisa digunakan. Lanjutkan AdBlock dulu dab coba lagi."
+   },
+   "adblock_wont_run_on_pages_matching": {
+      "message": "AdBlock tidak akan berjalan pada halaman yang sama dengan:"
+   },
+   "adblockreportinganad": {
+      "message": "AdBlock - Laporkan sebuah iklan"
+   },
+   "addthisfilter": {
+      "message": "Tambahkan filter ini"
+   },
+   "adreport2": {
+      "message": "Anda menemukan sebuah iklan di sebuah halaman web? Saya akan membantu anda untuk menemukan tempat yang tepat untuk melaporkannya!\u003Cbr/\u003E Ingat: melaporkan iklan adalah sukarela. Jika anda tidak ingin melakukan hal ini anda dapat menutup jendela ini dan blokir iklan tersebut hanya untuk anda sendiri dengan menambahkan filterny pada tab 'Penyesuaian' di halaman Pilihan!"
+   },
+   "adstillappear": {
+      "message": "Apa iklannya masih muncul?"
+   },
+   "advanced_options": {
+      "message": "Saya adalah pengguna yang pintar, perlihatkan pilihan lebih jauh."
+   },
+   "any_new_tabs_you_open_Will_be_automatically_ad_free": {
+      "message": "Setiap tab baru yang anda buka akan otomatis bebas dari iklan."
+   },
+   "anysite": {
+      "message": "Website manapun"
+   },
+   "appliedwhenbrowsing": {
+      "message": "Filter ini akan dijalankan ketika anda menjelajah:"
+   },
+   "betalabel": {
+      "message": "Beta"
+   },
+   "blacklistclickmessage": {
+      "message": "Klik kanan sebuah iklan pada halaman untuk memblokirnya -- atau blokir secara manual disini."
+   },
+   "blacklisterattrwillbe": {
+      "message": "$attribute$ adalah $value$",
+      "placeholders": {
+         "attribute": {
+            "content": "$1"
+         },
+         "value": {
+            "content": "$2"
+         }
+      }
+   },
+   "blacklisterblockedelement": {
+      "message": "Elemen terblokir:"
+   },
+   "blacklisterblocksalloftype": {
+      "message": "Hati hati: Filter ini memblokir semua $elementtype$ elemen yang ada di halaman!",
+      "placeholders": {
+         "elementtype": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistereditfilter": {
+      "message": "Silahkan ketik filter yang benar di bawah ini dan tekan OK"
+   },
+   "blacklistereditinvalid1": {
+      "message": "Filter ini tidak sah: $exception$",
+      "placeholders": {
+         "exception": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistermatches": {
+      "message": "$matchcount$ item yang sama pada halaman ini.",
+      "placeholders": {
+         "matchcount": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklisternofilter": {
+      "message": "Tidak ada filter yang ditentukan!"
+   },
+   "blacklisternotsure": {
+      "message": "\u003Cb\u003ETidak yakin?\u003C/b\u003E tekan saja 'Tutup!' dibawah."
+   },
+   "blacklisteroptions1": {
+      "message": "Apa yang anda fikir benar tentang iklan ini setiap anda mengunjungi halaman ini?"
+   },
+   "blacklisteroptionstitle": {
+      "message": "Langkah terakhir: Apa yang membuat hal ini sebagai iklan?"
+   },
+   "blacklistersinglematch": {
+      "message": "\u003Cb\u003E1\u003C/b\u003E item yang sama pada halaman ini."
+   },
+   "blacklisterthefilter": {
+      "message": "Filter, yang bisa diubah di halaman pengaturan:"
+   },
+   "blacklistertype": {
+      "message": "Tipe"
+   },
+   "blacklisterwarningnofilter": {
+      "message": "Perhatian: tidak ada filter yang ditentukan!"
+   },
+   "block_an_ad_on_this_page": {
+      "message": "Blok sebuah iklan pada halaman ini"
+   },
+   "block_by_url_instead": {
+      "message": "Lebih jauh: blokir menggunakan URL"
+   },
+   "block_this_ad": {
+      "message": "Blokir iklan ini"
+   },
+   "blockanadtitle": {
+      "message": "Blokir sebuah iklan"
+   },
+   "blockdomain": {
+      "message": "Domain dari halaman untuk diterapkan"
+   },
+   "blockeverycontaining": {
+      "message": "Blokir setiap sumber yang mengandung:"
+   },
+   "blockmoreads": {
+      "message": "Blokir lebih banyak iklan:"
+   },
+   "blockurlwithtext": {
+      "message": "Blok URL yang mengandung teks ini"
+   },
+   "buttonback": {
+      "message": "Kembali"
+   },
+   "buttonblockit": {
+      "message": "Tutup!"
+   },
+   "buttoncancel": {
+      "message": "Batal"
+   },
+   "buttonedit": {
+      "message": "Edit"
+   },
+   "buttonexclude": {
+      "message": "Jangan sertakan"
+   },
+   "buttonlooksgood": {
+      "message": "Terlihat bagus"
+   },
+   "buttonok": {
+      "message": "OK!"
+   },
+   "cantblockflash": {
+      "message": "Kami belum bisa memblokir iklan iklan didalam Flash dan plugin lainnya. Kami menunggu dukungan dari browser dan WebKit."
+   },
+   "cantblockflashwarning": {
+      "message": "Apakah iklannya muncul didalam atau sebelum film atau plugin lainnya seperti game Flash?"
+   },
+   "casesensitive": {
+      "message": "Filter ini terpengaruh oleh penggunaan huruf besar dan kecil:"
+   },
+   "changelabel": {
+      "message": "ganti"
+   },
+   "cleanuplist": {
+      "message": "Optimalkan filter-filter pada daftar ini:"
+   },
+   "clickthead": {
+      "message": "Klik iklannya, dan saya akan menuntun anda memblokirnya."
+   },
+   "clickupdatefilters": {
+      "message": "Klik ini: \u003Ca\u003EPerbaharui filter saya!\u003C/a\u003E"
+   },
+   "close": {
+      "message": "Tutup"
+   },
+   "correctfilters": {
+      "message": "Filter yang benar"
+   },
+   "csstomatch": {
+      "message": "CSS untuk dicari"
+   },
+   "debuginlogoption": {
+      "message": "Perlihatkan pernyataan debug pada Console Log (akan memperlambat AdBlock)"
+   },
+   "description2": {
+      "message": "Ekstensi Chrome paling populer, dengan lebih dari 10 juta pengguna!  Blokir iklan di seluruh web."
+   },
+   "did_you_know_this_is_my_full_time_job": {
+      "message": "Tahukah anda jika ini adalah pekerjaan saya?"
+   },
+   "disabled_by_filter_lists": {
+      "message": "Maaf, AdBlock dimatikan pada halaman ini oleh salah satu daftar filter anda."
+   },
+   "disabled_on_this_page": {
+      "message": "AdBlock dimatikan pada halaman ini."
+   },
+   "done": {
+      "message": "selesai."
+   },
+   "dont_run_on_pages_on_domain": {
+      "message": "Jangan jalankan pada halaman-halaman di domain ini"
+   },
+   "dont_run_on_this_page": {
+      "message": "Jangan jalankan pada halama ini"
+   },
+   "enable": {
+      "message": "hidup"
+   },
+   "excludedomainorurl": {
+      "message": "Domain atau URL dimana AdBlock tidak boleh memblokir apapun"
+   },
+   "excludefilterremoved": {
+      "message": "Filter telah dihapus. Silahkan muat ulang halaman untuk membuat daftar dengan sumber."
+   },
+   "failedtofetchfilter": {
+      "message": "Gagal mengambil filter ini!"
+   },
+   "faq": {
+      "message": "FAQ"
+   },
+   "fetchinglabel": {
+      "message": "Mengambil... Silahkan tunggu."
+   },
+   "filecleanerwarning": {
+      "message": "Jika anda melihat pesan ini setiap kali anda memulai AdBlock, pastikan anda tidak menggunakan sebuah pembersih file yang juga membersihkan file file di 'localStorage'."
+   },
+   "filteradblock_custom": {
+      "message": "filter AdBlock yang diinginkan (dianjurkan)"
+   },
+   "filterczech": {
+      "message": "Filter bahasa Ceko"
+   },
+   "filterdanish": {
+      "message": "Filter bahasa Denmark"
+   },
+   "filterdutch": {
+      "message": " - filter tambahan bahasa Belanda"
+   },
+   "filtereasylist": {
+      "message": "EasyList (dianjurkan)"
+   },
+   "filtereasylist_plun_korean": {
+      "message": "Filter bahasa Korea"
+   },
+   "filtereasylist_plus_bulgarian": {
+      "message": " - filter tambahan bahasa Bulgari"
+   },
+   "filtereasylist_plus_finnish": {
+      "message": " - filter tambahan bahasa Finlandia"
+   },
+   "filtereasylist_plus_french": {
+      "message": " - filter tambahan bahasa Prancis"
+   },
+   "filtereasylist_plus_german": {
+      "message": " - filter tambahan bahasa Jerman"
+   },
+   "filtereasylist_plus_polish": {
+      "message": " - filter tambahan bahasa Polandia"
+   },
+   "filtereasylist_plus_romanian": {
+      "message": " - filter tambahan bahasa Romania"
+   },
+   "filtereasylist_plus_spanish": {
+      "message": "Filter bahasa Spanyol"
+   },
+   "filterhasbeenadded": {
+      "message": "Filter berhasil ditambahkan!\nMuat ulang halaman untuk melihat hasilnya!"
+   },
+   "filterhungarian": {
+      "message": "Filter bahasa Hungaria"
+   },
+   "filterisraeli": {
+      "message": "Filter bahasa Israel"
+   },
+   "filteritalian": {
+      "message": "Filter bahasa Italia"
+   },
+   "filterjapanese": {
+      "message": "Filter bahasa Jepang"
+   },
+   "filterlistlink": {
+      "message": "Jangan berangganan lebih dari yang anda butuhkan -- setiap satunya akan sedikit memperlambat anda! Kredit dan lebih banyak daftar dapat ditemukan \u003Ca\u003EDisini\u003C/a\u003E."
+   },
+   "filterlistsrock": {
+      "message": "Daftar filter memblokir banyak iklan di web. Anda juga bisa:"
+   },
+   "filtersavewarning": {
+      "message": "Hati hati: jika anda membuat kesalahan disini banyak filter, termasuk filter resmi juga akan rusak!\u003Cbr/\u003EBaca \u003Ca\u003EPanduan filter syntax\u003C/a\u003E untuk belajar bagaimana menambah filter daftar hitam dan daftar putih yang lebih maju."
+   },
+   "filterstabtitle": {
+      "message": "Berlangganan pada daftar filter"
+   },
+   "findingads": {
+      "message": "Mencari iklan...\u003Cbr/\u003E\u003Cbr/\u003E\u003Ci\u003Ehanya sebentar saja.\u003C/i\u003E"
+   },
+   "fixityourself": {
+      "message": "OK, anda tetap bisa memblokir iklan ini untuk anda sendiri pada halaman pengaturan, Terima kasih!"
+   },
+   "flashads": {
+      "message": "Video dan Flash"
+   },
+   "for_more_options_right_click": {
+      "message": "Untuk pilihan lebih banyak, anda dapat mengklik kanan halaman web atau klik tombol $img$ pada toolbar.",
+      "placeholders": {
+         "img": {
+            "content": "\u003Cimg src=\"../../img/icon19.png\"/\u003E"
+         }
+      }
+   },
+   "format_site1_site2_site3": {
+      "message": "Format: ~site1.com|~site2.com|~news.site3.org"
+   },
+   "generaloptions": {
+      "message": "Pengaturan Umum"
+   },
+   "googletextads": {
+      "message": "Saya ingin iklan teks pada hasil pencarian Google; perlihatkan mereka."
+   },
+   "headerfilter": {
+      "message": "Filter yang sama"
+   },
+   "headerresource": {
+      "message": "Sumber"
+   },
+   "headertype": {
+      "message": "Jenis"
+   },
+   "help": {
+      "message": "Bantuan"
+   },
+   "hide_this_button": {
+      "message": "Sembunyikan tombol ini"
+   },
+   "how_to_use_adblock": {
+      "message": "Bagaimana cara menggunakan AdBlock:"
+   },
+   "installedtitle": {
+      "message": "AdBlock sekarang sudah terpasang!"
+   },
+   "installing_adblock": {
+      "message": "Memasang AdBlock..."
+   },
+   "labelshow": {
+      "message": "perlihatkan"
+   },
+   "lang_bulgarian": {
+      "message": "Bulgaria"
+   },
+   "lang_chinese": {
+      "message": "China"
+   },
+   "lang_czech": {
+      "message": "Ceko"
+   },
+   "lang_danish": {
+      "message": "Denmark"
+   },
+   "lang_dutch": {
+      "message": "Belanda"
+   },
+   "lang_english": {
+      "message": "Inggris"
+   },
+   "lang_finnish": {
+      "message": "Finlandia"
+   },
+   "lang_french": {
+      "message": "Prancis"
+   },
+   "lang_german": {
+      "message": "Jerman"
+   },
+   "lang_hungarian": {
+      "message": "Hungaria"
+   },
+   "lang_israeli": {
+      "message": "Israel"
+   },
+   "lang_italian": {
+      "message": "Italia"
+   },
+   "lang_japanese": {
+      "message": "Jepang"
+   },
+   "lang_korean": {
+      "message": "Korea"
+   },
+   "lang_polish": {
+      "message": "Polandia"
+   },
+   "lang_romanian": {
+      "message": "Romania"
+   },
+   "lang_russian": {
+      "message": "Rusia"
+   },
+   "lang_spanish": {
+      "message": "Spanyol"
+   },
+   "lang_ukranian": {
+      "message": "Ukrania"
+   },
+   "linkblockadbyurl": {
+      "message": "Blok sebuah iklan oleh URLnya"
+   },
+   "linkhidesection": {
+      "message": "Sembunyikan sebagian dari halaman Web"
+   },
+   "linkunblock": {
+      "message": "Perlihatkan iklan pada sebuah halama atau domain"
+   },
+   "loading": {
+      "message": "MEMUAT..."
+   },
+   "manualfilteredit": {
+      "message": "Edit secara Manual filter anda:"
+   },
+   "modifydomain": {
+      "message": "Situs:"
+   },
+   "modifypath": {
+      "message": "Halaman:"
+   },
+   "multipledomainshint": {
+      "message": "Pisahkan nama domain dengan koma atau spasi"
+   },
+   "nextstep": {
+      "message": "Langkah selanjutnya"
+   },
+   "no": {
+      "message": "Tidak"
+   },
+   "nodefaultfilter1": {
+      "message": "Kami tidak memiliki filter baku untuk bahasa tersebut.\u003Cbr/\u003ESilahkan mencari daftar yang cocok yang mendukung bahasa ini $link$ atau or blokir iklan ini untuk anda sendiri pada tab 'Penyesuaian'.",
+      "placeholders": {
+         "link": {
+            "content": "$1here$2"
+         }
+      }
+   },
+   "novalidurlpattern": {
+      "message": "Silahkan masukan sebuah pola URL yang berlaku untuk disamakan!"
+   },
+   "now_you_have_adblock_hooray": {
+      "message": "Sekarang anda memiliki AdBlock! Horee!"
+   },
+   "only_block_ads_on_these_sites": {
+      "message": "Hanya blokir iklan di situs-situs ini:"
+   },
+   "onlyondomains": {
+      "message": "HANYA halaman pada domain-domain ini: "
+   },
+   "onlyresourcetypes": {
+      "message": "Filter ini berlaku untuk sumber dengan jenis ini:"
+   },
+   "options": {
+      "message": "Pilihan"
+   },
+   "optionschangelog": {
+      "message": "Perubahan"
+   },
+   "optionstitle": {
+      "message": "Pengaturan AdBlock"
+   },
+   "optionsversion": {
+      "message": "Versi $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "orenteraurl": {
+      "message": "Atau masukan sebuah URL:"
+   },
+   "other": {
+      "message": "Yang lain"
+   },
+   "pagelanguagecheck": {
+      "message": "Ditulis dalam bahasa apa halaman itu?"
+   },
+   "pause_adblock": {
+      "message": "Bekukan AdBlock"
+   },
+   "project_home": {
+      "message": "Project home"
+   },
+   "refusetocheck": {
+      "message": "Saya tidak ingin memeriksa hal ini"
+   },
+   "reloadadpage": {
+      "message": "Muat ulang halaman yang ada iklannya."
+   },
+   "removefromlist": {
+      "message": "Dihapus dari daftar"
+   },
+   "removelabel": {
+      "message": "Hapus"
+   },
+   "report_ad_on_page": {
+      "message": "Laporkan sebuah iklan pada halaman ini"
+   },
+   "reportfilterlistproblem": {
+      "message": "Ini adalah sebuah masalah daftar filter. Laporkan disini: $link$",
+      "placeholders": {
+         "link": {
+            "content": "$1"
+         }
+      }
+   },
+   "reporttous2": {
+      "message": "Jika anda dapat berbahasa Inggris, anda dapat melaporkan sebuah iklan kepada kami \u003Ca\u003Ein the issue tracker\u003C/a\u003E."
+   },
+   "resourceblocklegend1": {
+      "message": "Keterangan:"
+   },
+   "resourceblocklegend2": {
+      "message": "Sumber terblokir"
+   },
+   "resourceblocklegend3": {
+      "message": "Sumber dalam daftar putih"
+   },
+   "resourceblocklegend4": {
+      "message": "Sumber yang bisa diblokir"
+   },
+   "resourceblocklegend5": {
+      "message": "penyembunyian telah diberlakukan"
+   },
+   "resourceblocktitle": {
+      "message": "Blokir sebuah sumber"
+   },
+   "resourceiswhitelisted": {
+      "message": "Sumber terpilih telah dimasukkan kedalam daftar putih. Jadi anda tidak bisa memblokirnya."
+   },
+   "retryaftersubscribe": {
+      "message": "Berlangganan pada daftar filter ini, lalu coba lagi: $list_title$",
+      "placeholders": {
+         "list_title": {
+            "content": "$1"
+         }
+      }
+   },
+   "savebutton": {
+      "message": "Simpan"
+   },
+   "savereminder": {
+      "message": "Jangan lupa untuk menyimpan!"
+   },
+   "seeing_this_every_time_you_start_your_browser": {
+      "message": "Melihat ini setiap kali anda memulai browser anda?"
+   },
+   "selectresources": {
+      "message": "Pilih sumber yang ingin anda blokir atau buka"
+   },
+   "show_ads_except_for": {
+      "message": "Perlihatkan iklan \u003Ci\u003Edimanapun\u003C/i\u003E kecuali pada domain-domain ini..."
+   },
+   "show_resourcelist": {
+      "message": "Perlihatkan daftar sumber"
+   },
+   "showcontextmenus": {
+      "message": "Tambahkan item pada menu klik kanan."
+   },
+   "showlinkstolists": {
+      "message": "Perlihatkan link ke daftar filter:"
+   },
+   "sliderexplanation": {
+      "message": "Geser pengatur hingga iklan terblokir dengan benar pada halaman, dan elemen yang terblokir tidak terlihat."
+   },
+   "slidertitle": {
+      "message": "Langkah 1: Tentukan apa yang akan diblokir"
+   },
+   "status_disabled": {
+      "message": "AdBlock tidak dapat berjalan pada domain ini."
+   },
+   "status_paused": {
+      "message": "AdBlock sedang dibekukan."
+   },
+   "stop_blocking_ads": {
+      "message": "Berhenti memblokir iklan:"
+   },
+   "subscribe_unsubscribe_all": {
+      "message": "$subscribe$ ke atau $unsubscribe$ dari semua daftar.",
+      "placeholders": {
+         "subscribe": {
+            "content": "\u003Ca href='#' id='subscribeAll'\u003ELangganan\u003C/a\u003E"
+         },
+         "unsubscribe": {
+            "content": "\u003Ca href='#' id='unsubscribeAll'\u003Eberhenti langganan\u003C/a\u003E"
+         }
+      }
+   },
+   "subscribebutton": {
+      "message": "Berlangganan"
+   },
+   "subscribingfailed": {
+      "message": "Gagal!"
+   },
+   "subscribingfinished": {
+      "message": "Selesai!"
+   },
+   "subscribingtitle": {
+      "message": "Berlangganan daftar filter..."
+   },
+   "tabcustomize": {
+      "message": "Penyesuaian"
+   },
+   "tabcustomizetitle": {
+      "message": "Sesuaikan AdBlock"
+   },
+   "tabfilterlists": {
+      "message": "Daftar Filter"
+   },
+   "tabgeneral": {
+      "message": "Umum"
+   },
+   "thirdpartycheckbox": {
+      "message": "Semua situs web KECUALI situs-situs web pada domain $domain$",
+      "placeholders": {
+         "domain": {
+            "content": "$1"
+         }
+      }
+   },
+   "translator_credit": {
+      "message": "Diterjemahkan oleh: $translator_names$",
+      "placeholders": {
+         "translator_names": {
+            "content": "Ghie2lo"
+         }
+      }
+   },
+   "typehiding": {
+      "message": "sembunyikan"
+   },
+   "typeimage": {
+      "message": "gambar"
+   },
+   "typemedia": {
+      "message": "audio/video"
+   },
+   "typeobject": {
+      "message": "objek interaktif"
+   },
+   "typepage": {
+      "message": "halaman"
+   },
+   "typescript": {
+      "message": "skrip"
+   },
+   "typestylesheet": {
+      "message": "definisi style"
+   },
+   "typesubdocument": {
+      "message": "frame"
+   },
+   "typeunknown": {
+      "message": "tidak diketahui"
+   },
+   "unpause": {
+      "message": "lanjutkan"
+   },
+   "unsubscribedlabel": {
+      "message": "Tidak berlangganan."
+   },
+   "updateddayago": {
+      "message": "diperbaharui 1 hari lalu"
+   },
+   "updateddaysago": {
+      "message": "diperbaharui $days$ hari lalu",
+      "placeholders": {
+         "days": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedhourago": {
+      "message": "diperbaharui 1 jam lalu"
+   },
+   "updatedhoursago": {
+      "message": "diperbaharui $hours$ jam lalu",
+      "placeholders": {
+         "hours": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedminuteago": {
+      "message": "diperbaharui 1 menit lalu"
+   },
+   "updatedminutesago": {
+      "message": "diperbaharui $minutes$ menit lalu",
+      "placeholders": {
+         "minutes": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedrightnow": {
+      "message": "diperbaharui sekarang"
+   },
+   "updatedsecondsago": {
+      "message": "diperbaharui $seconds$ detik yang lalu",
+      "placeholders": {
+         "seconds": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatefromoldversion": {
+      "message": "Anda menggunakan AdBlock versi lama. Silahkan pertama-tama $updatelink$ ke AdBlock versi yang lebih baru",
+      "placeholders": {
+         "updatelink": {
+            "content": "$1perbaharui$2"
+         }
+      }
+   },
+   "updatenowmessage": {
+      "message": "Saya akan mengambil pembaharuan secara otomatis; anda juga dapat \u003Ca\u003Ememperbaharui sekarang\u003C/a\u003E."
+   },
+   "updateyourlists": {
+      "message": "Yakinkan daftar filter anda sudah diperbaharui"
+   },
+   "warning_overrules_filters": {
+      "message": "Peringatan: pada semua situs lain anda akan melihat iklan!\u003Cbr\u003EHal ini mengesampingkan semua filter lain untuk situs-situs tersebut."
+   },
+   "whitelistertitle2": {
+      "message": "Jangan jalankan AdBlock pada..."
+   },
+   "whitelisteverycontaining": {
+      "message": "Masukkan kedalam daftar putih setiap sumber yang mengandung:"
+   },
+   "wildcardhint": {
+      "message": "Catatan: anda dapat menggunakan * sebagai pengganti bebas disini"
+   },
+   "yes": {
+      "message": "Ya"
+   },
+   "you_can_slide_to_change": {
+      "message": "Anda dapat menggeser yang dibawah ini untuk mengganti secara tepat pada halaman apa AdBlock tidak akan berjalan."
+   },
+   "you_know_thats_a_bad_idea_right": {
+      "message": "Semakin banyak daftar filter yang anda gunakan, semakinlambat AdBlock bekerja. Menggunakan terlalu banyak daftar bahkan dapat membuat browser anda berhenti bekerja pada beberapa situs. Tekan OK untuk tetap berlangganan pada daftar ini."
+   }
+}

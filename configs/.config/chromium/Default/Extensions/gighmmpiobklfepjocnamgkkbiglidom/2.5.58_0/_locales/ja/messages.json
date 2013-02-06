@@ -1,0 +1,816 @@
+{
+   "adalreadyblocked": {
+      "message": "\u5E83\u544A\u3092\u65E2\u306B\u30D6\u30ED\u30C3\u30AF\u3057\u3066\u3044\u308B\u305F\u3081\u3001\u4F55\u3082\u3059\u308B\u5FC5\u8981\u306F\u3042\u308A\u307E\u305B\u3093\u3002"
+   },
+   "adblock_auto_removes_ads_thats_all": {
+      "message": " AdBlock\u306F\u81EA\u52D5\u7684\u306B\u5E83\u544A\u3092\u6392\u9664\u3057\u3066\u304F\u308C\u307E\u3059\u3002"
+   },
+   "adblock_is_paused": {
+      "message": "AdBlock\u306F\u4E00\u6642\u505C\u6B62\u3057\u3066\u3044\u307E\u3059\u3002\u3053\u306E\u30DA\u30FC\u30B8\u5185\u306E\u8981\u7D20\u3092\u6355\u307E\u3048\u308B\u3053\u3068\u304C\u3067\u304D\u307E\u305B\u3093\u3067\u3057\u305F\u3002\u4E00\u6642\u505C\u6B62\u3092\u89E3\u9664\u3057\u3001\u3082\u3046\u4E00\u5EA6\u304A\u8A66\u3057\u304F\u3060\u3055\u3044\u3002"
+   },
+   "adblock_wont_run_on_pages_matching": {
+      "message": "AdBlock won't run on any page matching:"
+   },
+   "adblockreportinganad": {
+      "message": "AdBlock - \u5E83\u544A\u3092\u5831\u544A"
+   },
+   "addthisfilter": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u3092\u8FFD\u52A0"
+   },
+   "adreport2": {
+      "message": "\u30A6\u30A7\u30D6\u30DA\u30FC\u30B8\u5185\u3067\u5E83\u544A\u3092\u898B\u3064\u3051\u307E\u3057\u305F\u304B\uFF1F\u5E83\u544A\u306E\u5831\u544A\u65B9\u6CD5\u3092\u6559\u3048\u3057\u307E\u3059\u3002\u003Cbr/\u003E\u5E83\u544A\u306E\u5831\u544A\u306F\u30DC\u30E9\u30F3\u30C6\u30A3\u30A2\u3067\u3059\u3002\u30DC\u30E9\u30F3\u30C6\u30A3\u30A2\u306B\u8208\u5473\u304C\u306A\u3044\u5834\u5408\u306F\u3053\u306E\u30A6\u30A3\u30F3\u30C9\u30A6\u3092\u3053\u306E\u307E\u307E\u9589\u3058\u3001\u3054\u81EA\u5206\u3067\u8A2D\u5B9A\u30DA\u30FC\u30B8\u306B\u3042\u308B\u300C\u30AB\u30B9\u30BF\u30DE\u30A4\u30BA\u300D\u3067\u30D5\u30A3\u30EB\u30BF\u30FC\u306B\u8FFD\u52A0\u304C\u3067\u304D\u307E\u3059\uFF01"
+   },
+   "adstillappear": {
+      "message": "\u5E83\u544A\u306F\u307E\u3060\u8868\u793A\u3055\u308C\u307E\u3059\u304B\uFF1F"
+   },
+   "advanced_options": {
+      "message": "\u79C1\u306F\u4E0A\u7D1A\u8005\u30E6\u30FC\u30B6\u30FC\u3067\u3059\u3002\u8A73\u7D30\u8A2D\u5B9A\u3092\u898B\u305B\u3066\u304F\u3060\u3055\u3044\u3002"
+   },
+   "any_new_tabs_you_open_Will_be_automatically_ad_free": {
+      "message": "\u65B0\u3057\u3044\u30BF\u30D6\u306F\u5168\u3066\u81EA\u52D5\u7684\u306B\u5E83\u544A\u304C\u30D6\u30ED\u30C3\u30AF\u3055\u308C\u307E\u3059\u3002"
+   },
+   "anysite": {
+      "message": "\u5168\u30B5\u30A4\u30C8"
+   },
+   "appliedwhenbrowsing": {
+      "message": "\u3053\u306E\u30D5\u30A3\u30EB\u30BF\u30FC\u306F\u3042\u306A\u305F\u304C\u30D6\u30E9\u30A6\u30B8\u30F3\u30B0\u4E2D\u306B\u9069\u7528\u3055\u308C\u307E\u3059\uFF1A"
+   },
+   "betalabel": {
+      "message": "\u30D9\u30FC\u30BF"
+   },
+   "blacklistclickmessage": {
+      "message": "\u30DA\u30FC\u30B8\u5185\u306B\u3042\u308B\u5E83\u544A\u3092\u53F3\u30AF\u30EA\u30C3\u30AF\u3057\u3001\u30D6\u30ED\u30C3\u30AF\u3092\u3057\u3066\u304F\u3060\u3055\u3044\u3002\u307E\u305F\u306F\u3001\u3053\u3061\u3089\u3067\u30DE\u30CB\u30E5\u30A2\u30EB\u3067\u30D6\u30ED\u30C3\u30AF\u3002"
+   },
+   "blacklisterattrwillbe": {
+      "message": "$attribute$ will be $value$",
+      "placeholders": {
+         "attribute": {
+            "content": "$1"
+         },
+         "value": {
+            "content": "$2"
+         }
+      }
+   },
+   "blacklisterblockedelement": {
+      "message": "\u30D6\u30ED\u30C3\u30AF\u3055\u308C\u3066\u3044\u308B\u8981\u7D20\uFF1A"
+   },
+   "blacklisterblocksalloftype": {
+      "message": "\u8B66\u544A\uFF1A \u6307\u5B9A\u3055\u308C\u305F\u30D5\u30A3\u30EB\u30BF\u30FC\u306F\u30DA\u30FC\u30B8\u306E$elementtype$\u8981\u7D20\u3092\u3059\u3079\u3066\u30D6\u30ED\u30C3\u30AF\u3057\u307E\u3059\uFF01",
+      "placeholders": {
+         "elementtype": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistereditfilter": {
+      "message": "\u624B\u52D5\u3067\u30D5\u30A3\u30EB\u30BF\u30FC\u3092\u5165\u529B\u3057\u3066\u3001OK\u3092\u62BC\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+   },
+   "blacklistereditinvalid1": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u304C\u7121\u52B9\uFF1A $exception$",
+      "placeholders": {
+         "exception": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistermatches": {
+      "message": "$matchcount$\u500B\u306E\u30A2\u30A4\u30C6\u30E0\u3092\u767A\u898B\u3057\u307E\u3057\u305F\u3002",
+      "placeholders": {
+         "matchcount": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklisternofilter": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u304C\u6307\u5B9A\u3055\u308C\u3066\u3044\u307E\u305B\u3093\uFF01"
+   },
+   "blacklisternotsure": {
+      "message": "\u003Cb\u003E\u3088\u304F\u5206\u304B\u308A\u307E\u305B\u3093\u304B\uFF1F\u003C/b\u003E\u3068\u308A\u3042\u3048\u305A\u3001\u300C\u30D6\u30ED\u30C3\u30AF\uFF01\u300D\u3092\u62BC\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+   },
+   "blacklisteroptions1": {
+      "message": "\u3053\u306E\u30DA\u30FC\u30B8\u306B\u30A2\u30AF\u30BB\u30B9\u3059\u308B\u5EA6\u306B\u8868\u793A\u3055\u308C\u308B\u8981\u7D20\u306B\u3064\u3044\u3066\u3001\u3069\u308C\u304C\u8A72\u5F53\u3059\u308B\u3068\u601D\u3044\u307E\u3059\u304B\uFF1F"
+   },
+   "blacklisteroptionstitle": {
+      "message": "\u6700\u7D42\u30B9\u30C6\u30C3\u30D7\uFF1A \u4F55\u6545\u3053\u308C\u306F\u5E83\u544A\u306B\u306A\u308B\u306E\u3067\u3057\u3087\u3046\u304B\uFF1F"
+   },
+   "blacklistersinglematch": {
+      "message": "\u003Cb\u003E1\u003C/b\u003E\u500B\u306E\u30A2\u30A4\u30C6\u30E0\u3092\u767A\u898B\u3057\u307E\u3057\u305F\u3002"
+   },
+   "blacklisterthefilter": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u306F\u8A2D\u5B9A\u30DA\u30FC\u30B8\u3067\u5909\u66F4\u53EF\u80FD\uFF1A"
+   },
+   "blacklistertype": {
+      "message": "Type"
+   },
+   "blacklisterwarningnofilter": {
+      "message": "\u6CE8\u610F\uFF1A \u30D5\u30A3\u30EB\u30BF\u30FC\u304C\u6307\u5B9A\u3055\u308C\u3066\u3044\u307E\u305B\u3093\uFF01"
+   },
+   "block_an_ad_on_this_page": {
+      "message": "\u3053\u306E\u30DA\u30FC\u30B8\u306B\u3042\u308B\u5E83\u544A\u3092\u30D6\u30ED\u30C3\u30AF"
+   },
+   "block_by_url_instead": {
+      "message": "\u8A73\u7D30\u8A2D\u5B9A\uFF1A URL\u3067\u30D6\u30ED\u30C3\u30AF"
+   },
+   "block_this_ad": {
+      "message": "\u3053\u306E\u5E83\u544A\u3092\u30D6\u30ED\u30C3\u30AF"
+   },
+   "blockanadtitle": {
+      "message": "\u5E83\u544A\u3092\u30D6\u30ED\u30C3\u30AF"
+   },
+   "blockdomain": {
+      "message": "\u9069\u7528\u3059\u308B\u30C9\u30E1\u30A4\u30F3\u3092\u5165\u529B"
+   },
+   "blockeverycontaining": {
+      "message": "\u4EE5\u4E0B\u3092\u542B\u3080\u8981\u7D20\u3092\u5168\u3066\u30D6\u30ED\u30C3\u30AF\uFF1A"
+   },
+   "blockmoreads": {
+      "message": "\u3082\u3063\u3068\u5E83\u544A\u3092\u30D6\u30ED\u30C3\u30AF\uFF1A"
+   },
+   "blockurlwithtext": {
+      "message": "\u5165\u529B\u3055\u308C\u305F\u30C6\u30AD\u30B9\u30C8\u3092\u542B\u3080URL\u3092\u30D6\u30ED\u30C3\u30AF"
+   },
+   "buttonback": {
+      "message": "\u623B\u308B"
+   },
+   "buttonblockit": {
+      "message": "\u30D6\u30ED\u30C3\u30AF\uFF01"
+   },
+   "buttoncancel": {
+      "message": "\u30AD\u30E3\u30F3\u30BB\u30EB"
+   },
+   "buttonedit": {
+      "message": "\u7DE8\u96C6"
+   },
+   "buttonexclude": {
+      "message": "\u9664\u5916"
+   },
+   "buttonlooksgood": {
+      "message": "\u6C7A\u5B9A"
+   },
+   "buttonok": {
+      "message": "OK\uFF01"
+   },
+   "cantblockflash": {
+      "message": "\u307E\u3060\u3001\u30D5\u30E9\u30C3\u30B7\u30E5\u5185\u3068\u30D7\u30E9\u30B0\u30A4\u30F3\u306B\u3088\u308A\u51FA\u3066\u304F\u308B\u5E83\u544A\u306F\u30D6\u30ED\u30C3\u30AF\u304C\u3067\u304D\u307E\u305B\u3093\u3002\u3053\u308C\u3089\u306E\u5E83\u544A\u306E\u5BFE\u51E6\u3064\u3044\u3066\u306F\u30D6\u30E9\u30A6\u30B6\u306E\u30B5\u30DD\u30FC\u30C8\u3068WebKit\u306E\u5BFE\u5FDC\u5F85\u3061\u3067\u3059\u3002"
+   },
+   "cantblockflashwarning": {
+      "message": "Does the ad appear in or before a film or any other plugin like a Flash game?"
+   },
+   "casesensitive": {
+      "message": "\u3053\u306E\u30D5\u30A3\u30EB\u30BF\u30FC\u306F\u5927\u6587\u5B57\u3068\u5C0F\u6587\u5B57\u306B\u654F\u611F\u3067\u3059\uFF1A"
+   },
+   "changelabel": {
+      "message": "\u5909\u66F4"
+   },
+   "checkinfirefox_1": {
+      "message": "Firefox\u3092\u304A\u6301\u3061\u3067\u306F\u306A\u3044\u5834\u5408\u306F $chrome$ \u30A4\u30F3\u30B9\u30C8\u30FC\u30EB\u3057\u3066\u304F\u3060\u3055\u3044\u3002",
+      "placeholders": {
+         "chrome": {
+            "content": "$1or Chrome$2"
+         }
+      }
+   },
+   "checkinfirefox_2": {
+      "message": "Firefox\u7528 Adblock Plus\u3092\u304A\u6301\u3061\u3067\u306A\u3044\u5834\u5408\u306F $chrome$ \u30A4\u30F3\u30B9\u30C8\u30FC\u30EB\u3057\u3066\u304F\u3060\u3055\u3044\u3002",
+      "placeholders": {
+         "chrome": {
+            "content": "$1or AdBlockforChrome for Chrome$2"
+         }
+      }
+   },
+   "checkinfirefox_3": {
+      "message": "Firefox\u306BChrome\u306EAdBlock\u3068\u540C\u3058\u30D5\u30A3\u30EB\u30BF\u30FC\u30EA\u30B9\u30C8\u3092\u767B\u9332\u3057\u3066\u304F\u3060\u3055\u3044\u3002( AdBlock\u30AB\u30B9\u30BF\u30E0\u30D5\u30A3\u30EB\u30BF\u30FC\u306F\u9664\u304D\u307E\u3059)"
+   },
+   "checkinfirefox_4": {
+      "message": "\uFF26\uFF49\uFF52\uFF45\uFF46\uFF4F\uFF58d\u3067\u5E83\u544A\u306E\u3042\u308B\u30DA\u30FC\u30B8\u3092\u8AAD\u307F\u8FBC\u307F\u304F\u3060\u3055\u3044\u3002"
+   },
+   "checkinfirefox_5": {
+      "message": "Firefox\u3067\u3082\u5E83\u544A\u306F\u8868\u793A\u3055\u308C\u307E\u3059\u304B\uFF1F"
+   },
+   "checkinfirefoxtitle": {
+      "message": "Firefox\u3067\u3082\u8868\u793A\u3055\u308C\u308B\u304B\u3069\u3046\u304B\u3092\u30C1\u30A7\u30C3\u30AF\u3057\u3066\u304F\u3060\u3055\u3044 $chrome$",
+      "placeholders": {
+         "chrome": {
+            "content": "$1or Chrome$2"
+         }
+      }
+   },
+   "cleanuplist": {
+      "message": "\u3053\u306E\u30EA\u30B9\u30C8\u3092\u6383\u9664:"
+   },
+   "clickthead": {
+      "message": "\u30D6\u30ED\u30C3\u30AF\u3059\u308B\u5E83\u544A\u3092\u30AF\u30EA\u30C3\u30AF\u3057\u3066\u4E0B\u3055\u3044\u3002\u30A6\u30A3\u30B6\u30FC\u30C9\u3067\u3054\u6848\u5185\u3057\u307E\u3059\u3002"
+   },
+   "clickupdatefilters": {
+      "message": "\u3053\u3061\u3089\u3092\u30AF\u30EA\u30C3\u30AF\uFF1A \u003Ca\u003E\u30D5\u30A3\u30EB\u30BF\u30FC\u3092\u30A2\u30C3\u30D7\u30C7\u30FC\u30C8\uFF01\u003C/a\u003E"
+   },
+   "close": {
+      "message": "\u9589\u3058\u308B"
+   },
+   "correctfilters": {
+      "message": "\u6B63\u3057\u3044\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "csstomatch": {
+      "message": "CSS\u6307\u5B9A"
+   },
+   "debuginlogoption": {
+      "message": "\u30C7\u30D0\u30C3\u30AF\u60C5\u5831\u3092\u66F4\u65B0\u5C65\u6B74\u306B\u8868\u793A(AdBlock\u306E\u52D5\u4F5C\u304C\u91CD\u304F\u306A\u308A\u307E\u3059)"
+   },
+   "did_you_know_this_is_my_full_time_job": {
+      "message": "\u5B9F\u3092\u8A00\u3046\u3068\u3001\u3053\u308C\u306F\u79C1\u306E\u30D5\u30EB\u30BF\u30A4\u30E0\u306E\u4ED5\u4E8B\u3067\u3059\u3002"
+   },
+   "disabled_by_filter_lists": {
+      "message": "\u7533\u3057\u8A33\u3042\u308A\u307E\u305B\u3093\u304C\u3001\u3042\u306A\u305F\u304C\u8A2D\u5B9A\u3057\u305F\u30D5\u30A3\u30EB\u30BF\u30FC\u30EA\u30B9\u30C8\u306B\u3088\u3063\u3066AdBlock\u304C\u3053\u306E\u30DA\u30FC\u30B8\u3067\u7121\u52B9\u3068\u306A\u3063\u3066\u3044\u307E\u3059\u3002"
+   },
+   "disabled_on_this_page": {
+      "message": "AdBlock\u306F\u3053\u306E\u30DA\u30FC\u30B8\u3067\u306F\u7121\u52B9\u306B\u306A\u3063\u3066\u3044\u307E\u3059\u3002"
+   },
+   "done": {
+      "message": "\u5B8C\u4E86\u3002"
+   },
+   "dont_run_on_pages_on_domain": {
+      "message": "\u3053\u306E\u30C9\u30E1\u30A4\u30F3\u4E0A\u306E\u30DA\u30FC\u30B8\u3067\u7A3C\u52D5\u3055\u305B\u306A\u3044"
+   },
+   "dont_run_on_this_page": {
+      "message": "\u3053\u306E\u30DA\u30FC\u30B8\u3067\u306F\u5B9F\u884C\u3057\u306A\u3044"
+   },
+   "enable": {
+      "message": "\u6709\u52B9"
+   },
+   "excludedomainorurl": {
+      "message": "\u30D6\u30ED\u30C3\u30AF\u3057\u306A\u3044\u30C9\u30E1\u30A4\u30F3\u3084URL\u3092\u6307\u5B9A"
+   },
+   "excludefilterremoved": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u306F\u524A\u9664\u3055\u308C\u307E\u3057\u305F\u3002\u8981\u7D20\u304C\u3042\u308B\u72B6\u614B\u3067\u751F\u6210\u3059\u308B\u305F\u3081\u306B\u306F\u5143\u306E\u30DA\u30FC\u30B8\u3092\u30EA\u30ED\u30FC\u30C9\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+   },
+   "failedtofetchfilter": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u306E\u53D6\u5F97\u306B\u5931\u6557\u3057\u307E\u3057\u305F\uFF01"
+   },
+   "faq": {
+      "message": "FAQ"
+   },
+   "fetchinglabel": {
+      "message": "\u53D6\u5F97\u4E2D\u30FB\u30FB\u30FB\u3057\u3070\u3089\u304F\u304A\u5F85\u3061\u304F\u3060\u3055\u3044\u3002"
+   },
+   "filecleanerwarning": {
+      "message": "\u6BCE\u56DE\u3001\u3053\u306E\u30E1\u30C3\u30BB\u30FC\u30B8\u304C\u8868\u793A\u3055\u308C\u308B\u5834\u5408\u306F\u3001\u300ClocalStorage\u300D\u5185\u306E\u30D5\u30A1\u30A4\u30EB\u3092\u6383\u9664\u3059\u308B\u30D5\u30A1\u30A4\u30EB\u30AF\u30EA\u30FC\u30CA\u30FC\u3092\u4F7F\u3063\u3066\u3044\u306A\u3044\u304B\u3092\u3054\u78BA\u8A8D\u304F\u3060\u3055\u3044\u3002"
+   },
+   "filteradblock_custom": {
+      "message": "AdBlock\u30AB\u30B9\u30BF\u30E0\u30D5\u30A3\u30EB\u30BF\u30FC (\u63A8\u5968)"
+   },
+   "filterchinese": {
+      "message": " - \u8FFD\u52A0\u4E2D\u56FD\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filterczech": {
+      "message": "\u30C1\u30A7\u30B3\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filterdanish": {
+      "message": "\u30C7\u30F3\u30DE\u30FC\u30AF\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filterdutch": {
+      "message": " - \u8FFD\u52A0\u30AA\u30E9\u30F3\u30C0\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filtereasylist": {
+      "message": "EasyList (\u63A8\u5968)"
+   },
+   "filtereasylist_plun_korean": {
+      "message": "\u97D3\u56FD\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filtereasylist_plus_bulgarian": {
+      "message": " - \u8FFD\u52A0\u30D6\u30EB\u30AC\u30EA\u30A2\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filtereasylist_plus_finnish": {
+      "message": " - \u8FFD\u52A0\u30D5\u30A3\u30F3\u30E9\u30F3\u30C9\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filtereasylist_plus_french": {
+      "message": " - \u8FFD\u52A0\u30D5\u30E9\u30F3\u30B9\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filtereasylist_plus_german": {
+      "message": " - \u8FFD\u52A0\u30C9\u30A4\u30C4\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filtereasylist_plus_greek": {
+      "message": " - \u8FFD\u52A0\u30AE\u30EA\u30B7\u30E3\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filtereasylist_plus_polish": {
+      "message": " - \u8FFD\u52A0\u30DD\u30FC\u30E9\u30F3\u30C9\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filtereasylist_plus_romanian": {
+      "message": " - \u8FFD\u52A0\u30EB\u30FC\u30DE\u30CB\u30A2\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filtereasylist_plus_spanish": {
+      "message": "\u30B9\u30DA\u30A4\u30F3\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filtereasyprivacy": {
+      "message": "EasyPrivacy (\u30D7\u30E9\u30A4\u30D0\u30B7\u30FC\u4FDD\u8B77)"
+   },
+   "filterhasbeenadded": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u304C\u7121\u4E8B\u306B\u8FFD\u52A0\u3055\u308C\u307E\u3057\u305F\uFF01\n\u7D50\u679C\u3092\u898B\u308B\u5834\u5408\u306F\u66F4\u65B0\u3057\u3066\u304F\u3060\u3055\u3044\uFF01"
+   },
+   "filterhungarian": {
+      "message": "\u30CF\u30F3\u30AC\u30EA\u30FC\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filterisraeli": {
+      "message": "\u30A4\u30B9\u30E9\u30A8\u30EB\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filteritalian": {
+      "message": "\u30A4\u30BF\u30EA\u30A2\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filterjapanese": {
+      "message": "\u65E5\u672C\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC (\u63A8\u5968)"
+   },
+   "filterlistlink": {
+      "message": "\u5FC5\u8981\u4EE5\u4E0A\u306B\u767B\u9332\u3092\u3057\u306A\u3044\u3067\u304F\u3060\u3055\u3044\u3002\u8FFD\u52A0\u3059\u308B\u5EA6\u306B\u91CD\u304F\u306A\u308A\u307E\u3059\u306E\u3067\uFF01\u30EA\u30B9\u30C8\u306E\u4F5C\u6210\u8005\u3001\u305D\u306E\u4ED6\u306E\u30EA\u30B9\u30C8\u306F\u003Ca\u003E\u3053\u3061\u3089\u003C/a\u003E\u3002"
+   },
+   "filterlistsrock": {
+      "message": "\u307B\u3068\u3093\u3069\u306E\u5E83\u544A\u306F\u30D5\u30A3\u30EB\u30BF\u30FC\u30EA\u30B9\u30C8\u3067\u30D6\u30ED\u30C3\u30AF\u3055\u308C\u307E\u3059\u3002\u30AA\u30D7\u30B7\u30E7\u30F3\u3068\u3057\u3066\u66F4\u306B\uFF1A"
+   },
+   "filterrussian": {
+      "message": " - \u8FFD\u52A0\u30ED\u30B7\u30A2\u8A9E\u3068\u30A6\u30AF\u30E9\u30A4\u30CA\u8A9E\u30D5\u30A3\u30EB\u30BF\u30FC"
+   },
+   "filtersavewarning": {
+      "message": "\u8B66\u544A\uFF1A \u3053\u3053\u3067\u4F5C\u6210\u3057\u305F\u30D5\u30A3\u30EB\u30BF\u30FC\u306B\u554F\u984C\u304C\u3042\u308B\u5834\u5408\u3001\u516C\u5F0F\u30D5\u30A3\u30EB\u30BF\u30FC\u3092\u542B\u3080\u4ED6\u306E\u30D5\u30A3\u30EB\u30BF\u30FC\u304C\u7834\u640D\u3059\u308B\u5834\u5408\u304C\u3042\u308A\u307E\u3059\u3002\u003Cbr/\u003E\u30D6\u30E9\u30C3\u30AF\u30EA\u30B9\u30C8\u3001\u30DB\u30EF\u30A4\u30C8\u30EA\u30B9\u30C8\u306E\u8A73\u7D30\u306A\u8A18\u6CD5\u306F\u003Ca\u003E\u3053\u3061\u3089\uFF08\u82F1\u8A9E\uFF09\u003C/a\u003E\u3067\u3059\u3002"
+   },
+   "filterstabtitle": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u30EA\u30B9\u30C8\u306E\u767B\u9332"
+   },
+   "findingads": {
+      "message": "\u5E83\u544A\u3092\u691C\u7D22\u4E2D\u30FB\u30FB\u30FB\u003Cbr/\u003E\u003Cbr/\u003E\u003Ci\u003E\u5C11\u3005\u304A\u5F85\u3061\u304F\u3060\u3055\u3044\u3002\u003C/i\u003E"
+   },
+   "fixityourself": {
+      "message": "\u8A2D\u5B9A\u30DA\u30FC\u30B8\u3092\u4F7F\u3063\u3066\u81EA\u5206\u3067\u5E83\u544A\u3092\u30D6\u30ED\u30C3\u30AF\u3057\u307E\u3059\uFF01"
+   },
+   "flashads": {
+      "message": "\u52D5\u753B\u3068\u30D5\u30E9\u30C3\u30B7\u30E5"
+   },
+   "for_more_options_right_click": {
+      "message": "\u30A6\u30A7\u30D6\u30DA\u30FC\u30B8\u3001\u307E\u305F\u306F$img$\u30C4\u30FC\u30EB\u30D0\u30FC\u30DC\u30BF\u30F3\u3092\u53F3\u30AF\u30EA\u30C3\u30AF\u3059\u308B\u3053\u3068\u306B\u3088\u3063\u3066\u66F4\u306A\u308B\u8A2D\u5B9A\u304C\u51FA\u3066\u304D\u307E\u3059\u3002",
+      "placeholders": {
+         "img": {
+            "content": "\u003Cimg src=\"../../img/icon19.png\"/\u003E"
+         }
+      }
+   },
+   "format_site1_site2_site3": {
+      "message": "\u4F8B\uFF1A ~site1.com|~site2.com|~news.site3.org"
+   },
+   "generaloptions": {
+      "message": "\u4E00\u822C\u8A2D\u5B9A"
+   },
+   "googletextads": {
+      "message": "Google\u691C\u7D22\u306B\u51FA\u3066\u304F\u308B\u30C6\u30AD\u30B9\u30C8\u5E83\u544A\u304C\u6C17\u306B\u5165\u3063\u3066\u3044\u308B\u306E\u3067\u898B\u305B\u3066\u304F\u3060\u3055\u3044\u3002"
+   },
+   "headerfilter": {
+      "message": "Matched filter"
+   },
+   "headerresource": {
+      "message": "\u8981\u7D20"
+   },
+   "headertype": {
+      "message": "\u30BF\u30A4\u30D7"
+   },
+   "help": {
+      "message": "\u30D8\u30EB\u30D7"
+   },
+   "hide_this_button": {
+      "message": "\u30DC\u30BF\u30F3\u3092\u96A0\u3059"
+   },
+   "how_to_use_adblock": {
+      "message": "AdBlock\u306E\u4F7F\u3044\u65B9\uFF1A"
+   },
+   "installedtitle": {
+      "message": "AdBlock\u304C\u7121\u4E8B\u30A4\u30F3\u30B9\u30C8\u30FC\u30EB\u3055\u308C\u307E\u3057\u305F\uFF01"
+   },
+   "installing_adblock": {
+      "message": "AdBlock\u3092\u30A4\u30F3\u30B9\u30C8\u30FC\u30EB\u4E2D\u30FB\u30FB\u30FB"
+   },
+   "invalidListUrl": {
+      "message": "URL\u306E\u30EA\u30B9\u30C8\u304C\u7121\u52B9\u3067\u3059\u3002\u81EA\u52D5\u7684\u306B\u524A\u9664\u3055\u308C\u307E\u3059\u3002"
+   },
+   "labelshow": {
+      "message": "\u8868\u793A"
+   },
+   "lang_bulgarian": {
+      "message": "\u30D6\u30EB\u30AC\u30EA\u30A2\u8A9E"
+   },
+   "lang_chinese": {
+      "message": "\u4E2D\u56FD\u8A9E"
+   },
+   "lang_czech": {
+      "message": "\u30C1\u30A7\u30B3\u8A9E"
+   },
+   "lang_danish": {
+      "message": "\u30C7\u30F3\u30DE\u30FC\u30AF\u8A9E"
+   },
+   "lang_dutch": {
+      "message": "\u30AA\u30E9\u30F3\u30C0\u8A9E"
+   },
+   "lang_english": {
+      "message": "\u82F1\u8A9E"
+   },
+   "lang_finnish": {
+      "message": "\u30D5\u30A3\u30F3\u30E9\u30F3\u30C9\u8A9E"
+   },
+   "lang_french": {
+      "message": "\u30D5\u30E9\u30F3\u30B9\u8A9E"
+   },
+   "lang_german": {
+      "message": "\u30C9\u30A4\u30C4\u8A9E"
+   },
+   "lang_greek": {
+      "message": "\u30AE\u30EA\u30B7\u30E3\u8A9E"
+   },
+   "lang_hungarian": {
+      "message": "\u30CF\u30F3\u30AC\u30EA\u30FC\u8A9E"
+   },
+   "lang_israeli": {
+      "message": "\u30D8\u30D6\u30E9\u30A4\u8A9E"
+   },
+   "lang_italian": {
+      "message": "\u30A4\u30BF\u30EA\u30A2\u8A9E"
+   },
+   "lang_japanese": {
+      "message": "\u65E5\u672C\u8A9E"
+   },
+   "lang_korean": {
+      "message": "\u97D3\u56FD\u8A9E"
+   },
+   "lang_polish": {
+      "message": "\u30DD\u30FC\u30E9\u30F3\u30C9\u8A9E"
+   },
+   "lang_romanian": {
+      "message": "\u30EB\u30FC\u30DE\u30CB\u30A2\u8A9E"
+   },
+   "lang_russian": {
+      "message": "\u30ED\u30B7\u30A2\u8A9E"
+   },
+   "lang_spanish": {
+      "message": "\u30B9\u30DA\u30A4\u30F3\u8A9E"
+   },
+   "lang_ukranian": {
+      "message": "\u30A6\u30AF\u30E9\u30A4\u30CA\u8A9E"
+   },
+   "last_update_failed": {
+      "message": "Last update failed; "
+   },
+   "linkblockadbyurl": {
+      "message": "URL\u3067\u5E83\u544A\u3092\u30D6\u30ED\u30C3\u30AF"
+   },
+   "linkhidesection": {
+      "message": "\u30A6\u30A7\u30D6\u30DA\u30FC\u30B8\u306E\u4E00\u90E8\u3092\u96A0\u3059"
+   },
+   "linkunblock": {
+      "message": "\u30A6\u30A7\u30D6\u30DA\u30FC\u30B8\u3068\u30C9\u30E1\u30A4\u30F3\u306B\u3042\u308B\u5E83\u544A\u3092\u8868\u793A"
+   },
+   "loading": {
+      "message": "\u8AAD\u307F\u8FBC\u307F\u4E2D\u30FB\u30FB\u30FB"
+   },
+   "manualfilteredit": {
+      "message": "\u624B\u52D5\u3067\u30D5\u30A3\u30EB\u30BF\u30FC\u3092\u7DE8\u96C6\uFF1A"
+   },
+   "modifydomain": {
+      "message": "\u30B5\u30A4\u30C8\uFF1A"
+   },
+   "modifypath": {
+      "message": "\u30DA\u30FC\u30B8\uFF1A"
+   },
+   "multipledomainshint": {
+      "message": "\u8907\u6570\u306E\u30C9\u30E1\u30A4\u30F3\u3092\u30AB\u30F3\u30DE\u3084\u30B9\u30DA\u30FC\u30B9\u3067\u533A\u5207\u3063\u3066\u304F\u3060\u3055\u3044"
+   },
+   "nextstep": {
+      "message": "\u6B21\u306E\u30B9\u30C6\u30C3\u30D7"
+   },
+   "no": {
+      "message": "\u3044\u3044\u3048"
+   },
+   "nodefaultfilter1": {
+      "message": "\u6307\u5B9A\u3055\u308C\u305F\u8A00\u8A9E\u306E\u30D5\u30A3\u30EB\u30BF\u30FC\u30EA\u30B9\u30C8\u304C\u3042\u308A\u307E\u305B\u3093\u3002\u003Cbr/\u003E\u3053\u306E\u8A00\u8A9E\u3092\u30B5\u30DD\u30FC\u30C8\u3059\u308B\u9069\u5207\u306A\u30EA\u30B9\u30C8\u3092\u3002$link$ \u3082\u3057\u304F\u306F\u3053\u306E\u8981\u7D20\u3092\u30D6\u30ED\u30C3\u30AF\u3059\u308B\u3088\u3046\u306B\u30D6\u30E9\u30C3\u30AF\u30EA\u30B9\u30C8\u3092\u7DE8\u96C6\u3057\u3066\u304F\u3060\u3055\u3044\u3002",
+      "placeholders": {
+         "link": {
+            "content": "$1here$2"
+         }
+      }
+   },
+   "novalidurlpattern": {
+      "message": "\u6B63\u3057\u3044URL\u3092\u5165\u529B\u3057\u3066\u304F\u3060\u3055\u3044\uFF01"
+   },
+   "now_you_have_adblock_hooray": {
+      "message": "AdBlock\u304C\u7121\u4E8B\u306B\u30A4\u30F3\u30B9\u30C8\u30FC\u30EB\u51FA\u6765\u307E\u3057\u305F\uFF01\u30A4\u30A8\u30A4\uFF01"
+   },
+   "only_block_ads_on_these_sites": {
+      "message": "\u3053\u308C\u3089\u306E\u30B5\u30A4\u30C8\u306E\u5E83\u544A\u3092\u30D6\u30ED\u30C3\u30AF\u3059\u308B\uFF1A"
+   },
+   "onlyondomains": {
+      "message": "ONLY pages on these domains: "
+   },
+   "onlyresourcetypes": {
+      "message": "\u3053\u306E\u30D5\u30A3\u30EB\u30BF\u30FC\u306F\u4EE5\u4E0B\u306E\u30BF\u30A4\u30D7\u306E\u8981\u7D20\u306B\u9069\u7528\u3055\u308C\u307E\u3059\uFF1A"
+   },
+   "options": {
+      "message": "\u8A2D\u5B9A"
+   },
+   "optionschangelog": {
+      "message": "\u66F4\u65B0\u5C65\u6B74"
+   },
+   "optionstitle": {
+      "message": "AdBlock\u8A2D\u5B9A"
+   },
+   "optionsversion": {
+      "message": "\u30D0\u30FC\u30B8\u30E7\u30F3 $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "orenteraurl": {
+      "message": "URL\u76F4\u63A5\u6307\u5B9A\uFF1A"
+   },
+   "other": {
+      "message": "\u305D\u306E\u4ED6"
+   },
+   "pagelanguagecheck": {
+      "message": "\u3069\u306E\u8A00\u8A9E\u3067\u30DA\u30FC\u30B8\u306F\u66F8\u304B\u308C\u3066\u3044\u307E\u3059\u304B\uFF1F"
+   },
+   "pause_adblock": {
+      "message": "AdBlock\u3092\u4E00\u6642\u505C\u6B62"
+   },
+   "project_home": {
+      "message": "\u30D7\u30ED\u30B8\u30A7\u30AF\u30C8\u30DB\u30FC\u30E0"
+   },
+   "refusetocheck": {
+      "message": "Firefox(Adblock Plus)\u3092\u30A4\u30F3\u30B9\u30C8\u30FC\u30EB\u3057\u305F\u304F\u3042\u308A\u307E\u305B\u3093\u3002"
+   },
+   "reloadadpage": {
+      "message": "\u5E83\u544A\u306E\u3042\u308B\u30DA\u30FC\u30B8\u3092\u66F4\u65B0\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+   },
+   "removefromlist": {
+      "message": "\u30EA\u30B9\u30C8\u304B\u3089\u524A\u9664"
+   },
+   "removelabel": {
+      "message": "\u524A\u9664"
+   },
+   "report_ad_on_page": {
+      "message": "\u3053\u306E\u30DA\u30FC\u30B8\u306B\u3042\u308B\u5E83\u544A\u3092\u30EC\u30DD\u30FC\u30C8"
+   },
+   "reportfilterlistproblem": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u30EA\u30B9\u30C8\u306E\u554F\u984C\u3067\u3059\u3002\u5831\u544A\u306F\u3053\u3061\u3089\uFF1A $link$",
+      "placeholders": {
+         "link": {
+            "content": "$1"
+         }
+      }
+   },
+   "reporttous2": {
+      "message": "\u82F1\u8A9E\u3092\u8A71\u305B\u308B\u5834\u5408\u306F\u003Ca\u003Eissue tracker\u003C/a\u003E\u5185\u3067\u554F\u984C\u3092\u5831\u544A\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+   },
+   "resourceblocklegend1": {
+      "message": "\u51E1\u4F8B\uFF1A"
+   },
+   "resourceblocklegend2": {
+      "message": "\u30D6\u30ED\u30C3\u30AF\u6E08\u307F\u8981\u7D20"
+   },
+   "resourceblocklegend3": {
+      "message": "\u30DB\u30EF\u30A4\u30C8\u30EA\u30B9\u30C8\u6E08\u307F\u8981\u7D20"
+   },
+   "resourceblocklegend4": {
+      "message": "\u30D6\u30ED\u30C3\u30AF\u53EF\u80FD\u8981\u7D20"
+   },
+   "resourceblocklegend5": {
+      "message": "\u975E\u8868\u793A\u30EB\u30FC\u30EB\u306E\u9069\u7528"
+   },
+   "resourceblocktitle": {
+      "message": "\u8981\u7D20\u3092\u30D6\u30ED\u30C3\u30AF"
+   },
+   "resourceiswhitelisted": {
+      "message": "\u9078\u629E\u3055\u308C\u305F\u8981\u7D20\u306F\u30DB\u30EF\u30A4\u30C8\u30EA\u30B9\u30C8\u5316\u3057\u307E\u3057\u305F\u3002\u305D\u306E\u305F\u3081\u3001\u30D6\u30ED\u30C3\u30AF\u306F\u51FA\u6765\u307E\u305B\u3093\u3002"
+   },
+   "retryaftersubscribe": {
+      "message": "\u3053\u306E\u30D5\u30A3\u30EB\u30BF\u30FC\u30EA\u30B9\u30C8\u3092\u9069\u7528\u3057\u3001\u30DA\u30FC\u30B8\u3092\u66F4\u65B0\u3057\u3066\u8981\u7D20\u304C\u6D88\u53BB\u3067\u304D\u305F\u304B\u78BA\u8A8D\u3057\u3066\u304F\u3060\u3055\u3044\u3002 $list_title$",
+      "placeholders": {
+         "list_title": {
+            "content": "$1"
+         }
+      }
+   },
+   "safari50_updatenotice": {
+      "message": "\u3042\u306A\u305F\u306F\u53E4\u3044\u30D0\u30FC\u30B8\u30E7\u30F3\u306ESafari\u3092\u4F7F\u7528\u3057\u3066\u3044\u307E\u3059\u3002AdBlock\u306E\u5168\u6A5F\u80FD\u3092\u5229\u7528\u3057\u3066\u3044\u305F\u3060\u304F\u306B\u306F\u6700\u65B0\u30D0\u30FC\u30B8\u30E7\u30F3\u304C\u5FC5\u8981\u3067\u3059\u3002\u003Ca\u003E\u4ECA\u3059\u3050\u30A2\u30C3\u30D7\u30C7\u30FC\u30C8\u003C/a\u003E."
+   },
+   "savebutton": {
+      "message": "\u4FDD\u5B58"
+   },
+   "savereminder": {
+      "message": "\u4FDD\u5B58\u3092\u5FD8\u308C\u305A\u306B\uFF01"
+   },
+   "seeing_this_every_time_you_start_your_browser": {
+      "message": "Seeing this every time you start your browser?"
+   },
+   "selectresources": {
+      "message": "\u30D6\u30ED\u30C3\u30AF\u307E\u305F\u306F\u975E\u30D6\u30ED\u30C3\u30AF\u3057\u305F\u3044\u8981\u7D20\u3092\u9078\u3093\u3067\u304F\u3060\u3055\u3044\u3002"
+   },
+   "show_ads_except_for": {
+      "message": "Show ads \u003Ci\u003Eeverywhere\u003C/i\u003E except for these domains..."
+   },
+   "show_resourcelist": {
+      "message": "\u8981\u7D20\u30EA\u30B9\u30C8\u3092\u8868\u793A"
+   },
+   "showcontextmenus": {
+      "message": "\u53F3\u30AF\u30EA\u30C3\u30AF\u30E1\u30CB\u30E5\u30FC\u306BAdBlock\u30E1\u30CB\u30E5\u30FC\u3092\u8FFD\u52A0\u3059\u308B\u3002"
+   },
+   "showlinkstolists": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u30EA\u30B9\u30C8\u3078\u306E\u30EA\u30F3\u30AF\u3092\u8868\u793A\u3059\u308B\uFF1A"
+   },
+   "sliderexplanation": {
+      "message": "\u30B9\u30E9\u30A4\u30C0\u30FC\u3092\u5E83\u544A\u304C\u898B\u3048\u306A\u304F\u306A\u308B\u307E\u3067\u30B9\u30E9\u30A4\u30C9\u3092\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+   },
+   "slidertitle": {
+      "message": "\u30B9\u30C6\u30C3\u30D71\uFF1A \u30D6\u30ED\u30C3\u30AF\u5BFE\u8C61\u306E\u6307\u5B9A"
+   },
+   "status_disabled": {
+      "message": "AdBlock\u306F\u3053\u306E\u30C9\u30E1\u30A4\u30F3\u4E0A\u3067\u306F\u7A3C\u52D5\u3067\u304D\u307E\u305B\u3093\u3002"
+   },
+   "status_paused": {
+      "message": "AdBlock\u306F\u4E00\u6642\u505C\u6B62\u3057\u3066\u3044\u307E\u3059\u3002"
+   },
+   "stop_blocking_ads": {
+      "message": "\u5E83\u544A\u30D6\u30ED\u30C3\u30AF\u3092\u3084\u3081\u308B\uFF1A"
+   },
+   "storage_quota_exceeded": {
+      "message": "AdBlock\u3067\u4F7F\u7528\u3067\u304D\u308B\u5BB9\u91CF\u3092\u8D85\u3048\u307E\u3057\u305F\u3002\u30D5\u30A3\u30EB\u30BF\u30FC\u30EA\u30B9\u30C8\u306B\u3042\u308B\u30D5\u30A3\u30EB\u30BF\u30FC\u3092\u5E7E\u3064\u304B\u9664\u5916\u3057\u3066\u304F\u3060\u3055\u3044\uFF01"
+   },
+   "subscribe_unsubscribe_all": {
+      "message": "$subscribe$ to or $unsubscribe$ from every list.",
+      "placeholders": {
+         "subscribe": {
+            "content": "\u003Ca href='#' id='subscribeAll'\u003ESubscribe\u003C/a\u003E"
+         },
+         "unsubscribe": {
+            "content": "\u003Ca href='#' id='unsubscribeAll'\u003Eunsubscribe\u003C/a\u003E"
+         }
+      }
+   },
+   "subscribebutton": {
+      "message": "\u767B\u9332"
+   },
+   "subscribingfailed": {
+      "message": "\u5931\u6557\uFF01"
+   },
+   "subscribingfinished": {
+      "message": "\u5B8C\u4E86\uFF01"
+   },
+   "subscribingtitle": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u30EA\u30B9\u30C8\u306B\u767B\u9332\u30FB\u30FB\u30FB"
+   },
+   "tabcustomize": {
+      "message": "\u30AB\u30B9\u30BF\u30DE\u30A4\u30BA"
+   },
+   "tabcustomizetitle": {
+      "message": "AdBlock\u3092\u30AB\u30B9\u30BF\u30DE\u30A4\u30BA"
+   },
+   "tabfilterlists": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u30EA\u30B9\u30C8"
+   },
+   "tabgeneral": {
+      "message": "\u4E00\u822C"
+   },
+   "thirdpartycheckbox": {
+      "message": "Any website EXCEPT websites on domain $domain$",
+      "placeholders": {
+         "domain": {
+            "content": "$1"
+         }
+      }
+   },
+   "translator_credit": {
+      "message": "\u7FFB\u8A33\u8005\uFF1A $translator_names$",
+      "placeholders": {
+         "translator_names": {
+            "content": "Yujin Takayanagi, minami1983"
+         }
+      }
+   },
+   "typehiding": {
+      "message": "hiding"
+   },
+   "typeimage": {
+      "message": "image"
+   },
+   "typemedia": {
+      "message": "audio/video"
+   },
+   "typeobject": {
+      "message": "interactive object"
+   },
+   "typeobject_subrequest": {
+      "message": "object_subrequest"
+   },
+   "typeother": {
+      "message": "others"
+   },
+   "typepage": {
+      "message": "page"
+   },
+   "typepopup": {
+      "message": "popup"
+   },
+   "typescript": {
+      "message": "script"
+   },
+   "typestylesheet": {
+      "message": "style definition"
+   },
+   "typesubdocument": {
+      "message": "frame"
+   },
+   "typeunknown": {
+      "message": "unknown"
+   },
+   "typexmlhttprequest": {
+      "message": "xmlhttprequest"
+   },
+   "unpause": {
+      "message": "\u4E00\u6642\u505C\u6B62\u3092\u89E3\u9664"
+   },
+   "unsubscribedlabel": {
+      "message": "\u7121\u52B9\u306B\u3057\u307E\u3057\u305F\u3002"
+   },
+   "updateddayago": {
+      "message": "1\u65E5\u524D\u30A2\u30C3\u30D7\u30C7\u30FC\u30C8\u3057\u307E\u3057\u305F"
+   },
+   "updateddaysago": {
+      "message": "$days$\u65E5\u524D\u306B\u30A2\u30C3\u30D7\u30C7\u30FC\u30C8\u3057\u307E\u3057\u305F",
+      "placeholders": {
+         "days": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedhourago": {
+      "message": "1\u6642\u9593\u524D\u30A2\u30C3\u30D7\u30C7\u30FC\u30C8\u3057\u307E\u3057\u305F"
+   },
+   "updatedhoursago": {
+      "message": "$hours$\u6642\u9593\u524D\u306B\u30A2\u30C3\u30D7\u30C7\u30FC\u30C8\u3057\u307E\u3057\u305F",
+      "placeholders": {
+         "hours": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedminuteago": {
+      "message": "1\u5206\u524D\u30A2\u30C3\u30D7\u30C7\u30FC\u30C8\u3057\u307E\u3057\u305F"
+   },
+   "updatedminutesago": {
+      "message": "$minutes$\u5206\u524D\u306B\u30A2\u30C3\u30D7\u30C7\u30FC\u30C8\u3057\u307E\u3057\u305F",
+      "placeholders": {
+         "minutes": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedrightnow": {
+      "message": "\u30A2\u30C3\u30D7\u30C7\u30FC\u30C8\u3055\u308C\u307E\u3057\u305F"
+   },
+   "updatedsecondsago": {
+      "message": "$seconds$\u79D2\u524D\u306B\u30A2\u30C3\u30D7\u30C7\u30FC\u30C8\u3057\u307E\u3057\u305F",
+      "placeholders": {
+         "seconds": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatefromoldversion": {
+      "message": "\u53E4\u3044\u30D0\u30FC\u30B8\u30E7\u30F3\u306EAdBlock\u3092\u4F7F\u7528\u3057\u3066\u3044\u307E\u3059\u3002\u6700\u65B0\u30D0\u30FC\u30B8\u30E7\u30F3\u306B$updatelink$\u3057\u3066\u304F\u3060\u3055\u3044\u3002",
+      "placeholders": {
+         "updatelink": {
+            "content": "$1update$2"
+         }
+      }
+   },
+   "updatenowmessage": {
+      "message": "\u81EA\u52D5\u7684\u306B\u30A2\u30C3\u30D7\u30C7\u30FC\u30C8\u3057\u307E\u3059\u3002\u307E\u305F\u306F\u624B\u52D5\u3067\u003Ca\u003E\u4ECA\u3059\u3050\u30A2\u30C3\u30D7\u30C7\u30FC\u30C8\u003C/a\u003E\u3002"
+   },
+   "updateyourlists": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u306E\u30EA\u30B9\u30C8\u304C\u6700\u65B0\u304B\u3069\u3046\u304B\u3092\u3054\u78BA\u8A8D\u304F\u3060\u3055\u3044"
+   },
+   "warning_overrules_filters": {
+      "message": "\u6CE8\u610F\uFF1A on all other sites you will see ads!\u003Cbr\u003EThis overrules all other filters for those sites."
+   },
+   "whitelistertitle2": {
+      "message": "Don't run AdBlock on..."
+   },
+   "whitelisteverycontaining": {
+      "message": "\u4EE5\u4E0B\u3092\u542B\u3080\u8981\u7D20\u3092\u5168\u3066\u30DB\u30EF\u30A4\u30C8\u30EA\u30B9\u30C8\u5316\uFF1A"
+   },
+   "wildcardhint": {
+      "message": "\u8FFD\u8A18\uFF1A *\u3092\u3053\u3053\u3067\u30EF\u30A4\u30EB\u30C9\u30AB\u30FC\u30C9\u3068\u3057\u3066\u4F7F\u3048\u307E\u3059"
+   },
+   "yes": {
+      "message": "\u306F\u3044"
+   },
+   "you_can_slide_to_change": {
+      "message": "You can slide below to change exactly what pages AdBlock won't run on."
+   },
+   "you_know_thats_a_bad_idea_right": {
+      "message": "\u30D5\u30A3\u30EB\u30BF\u30FC\u30EA\u30B9\u30C8\u306E\u4F7F\u7528\u983B\u5EA6\u304C\u9AD8\u304F\u306A\u308B\u306B\u3064\u308C\u3001AdBlock\u306E\u52D5\u4F5C\u304C\u91CD\u304F\u306A\u308A\u307E\u3059\u3002\u305F\u304F\u3055\u3093\u306E\u30D5\u30A3\u30EB\u30BF\u30FC\u30EA\u30B9\u30C8\u306F\u30D6\u30E9\u30A6\u30B6\u304C\u30AF\u30E9\u30C3\u30B7\u30E5\u3059\u308B\u539F\u56E0\u3068\u306A\u308A\u3048\u307E\u3059\u3002\u305D\u308C\u3067\u3082\u8FFD\u52A0\u3059\u308B\u5834\u5408\u306FOK\u3092\u62BC\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+   }
+}

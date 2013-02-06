@@ -1,0 +1,230 @@
+style "panel"
+{
+
+xthickness = 0
+ythickness = 0
+
+  fg[NORMAL]        = "#ffffff"
+  fg[PRELIGHT]      = "#6c9eab"
+  fg[ACTIVE]        = "#e04613"
+  fg[SELECTED]      = "#ffffff"
+  fg[INSENSITIVE]   = "#ffffff"
+  
+  text[NORMAL]             = "#ffffff"
+ 
+  bg[NORMAL]               = "#262729"
+  bg[SELECTED]             = "#262729"
+ 
+  	bg_pixmap[NORMAL] 		= "Panel/panel-bg.png"
+#	bg_pixmap[ACTIVE] 		= "Panel/panel-bg.png"
+#	bg_pixmap[SELECTED] 		= "Panel/panel-bg.png"
+#	bg_pixmap[INSENSITIVE] 		= "Panel/panel-bg.png"
+#	bg_pixmap[PRELIGHT] 		= "Panel/panel-bg.png"
+}
+
+#############################################################
+
+
+style "panelbar"
+{
+engine "pixmap"
+{
+	image
+	{
+		function	= BOX
+		state		= NORMAL
+		file		= "Panel/panel-bg.png"
+		border		= { 0 , 0 , 0 , 0}
+		stretch		= FALSE
+	}
+
+	
+	image
+	{
+		function	= BOX
+		state		= ACTIVE
+		file		= "Panel/panel-bg.png"
+		border		= { 0 , 0 , 0 , 0}
+		stretch		= FALSE
+	}
+
+	
+	image
+	{
+		function	= BOX
+		state		= INSENSITIVE
+		file		= "Panel/panel-bg.png"
+		border		= { 0 , 0 , 0 , 0}
+		stretch		= FALSE
+	}
+
+	
+	image
+	{
+		function	= BOX
+		state		= PRELIGHT
+		recolorable	= TRUE
+		file		= "Menu-Menubar/menubar-item.png"
+		border		= { 4 , 4 , 4 , 4}
+		stretch		= TRUE
+	}
+
+}
+
+}
+
+widget_class "*Panel*MenuBar*" style "panelbar"
+
+#############################################################
+
+style "panelbuttons"
+{
+
+ xthickness            			= 2
+ ythickness            			= 1
+
+	GtkWidget::focus_padding = 2
+
+	engine "pixmap" {
+      
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state			= NORMAL
+			file            	= "Panel/panelbutton1.png"
+			border          	= { 4, 4, 4, 4 }
+			stretch         	= TRUE
+		}
+		
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state			= PRELIGHT
+			file            	= "Panel/panelbutton2.png"
+			border          	= { 4, 4, 4, 4 }
+			stretch         	= TRUE
+		}
+
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			shadow			= OUT
+			state			= PRELIGHT
+			file            	= "Panel/panelbutton1.png"
+			border          	= { 4, 4, 4, 4 }
+			stretch         	= TRUE
+			#overlay_file   	= "panelbutton1.png"
+			#overlay_border		= { 4, 4, 4, 4 }
+			#overlay_stretch	= TRUE
+		}
+		
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			shadow			= IN
+			state			= PRELIGHT
+			file            	= "Panel/panelbutton3.png"
+			border          	= { 4, 4, 4, 4 }
+			stretch         	= TRUE
+			#overlay_file     	= "panelbutton1.png"
+			#overlay_border		= { 4, 4, 4, 4 }
+			#overlay_stretch	= TRUE
+		}
+		
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state			= ACTIVE
+			file            	= "Panel/panelbutton3.png"
+			border          	= { 4, 4, 4, 4 }
+			stretch         	= TRUE
+		}  
+		image
+		{
+			function        	= BOX
+			recolorable     	= TRUE
+			state			= INSENSITIVE
+			file            	= "Panel/panelbutton2.png"
+			border          	= { 4, 4, 4, 4 }
+			stretch         	= TRUE
+		}  
+    		image
+    		{
+      		function			= HANDLE
+      		recolorable			= TRUE
+      		overlay_file			= "Panel/handle-v.png"
+      		overlay_stretch	= FALSE
+      		orientation			= VERTICAL
+    		}
+    		image
+    		{
+      		function			= HANDLE
+      		overlay_file			= "Panel/handle-h.png"
+      		overlay_stretch 		= FALSE
+     		orientation			= HORIZONTAL
+   		}
+
+	}
+
+}
+
+#############################################################
+
+#class "*Mail*" 				style "panel"
+class "*notif*" 			style "panel"
+class "*Notif*" 			style "panel"
+class "*Tray*" 				style "panel"
+class "*tray*" 				style "panel"
+#widget_class "*Mail*" 			style "panel"
+widget_class "*notif*" 			style "panel"
+widget_class "*Notif*" 			style "panel"
+widget_class "*Tray*" 			style "panel"
+widget_class "*tray*" 			style "panel"
+#widget "*TrayIcon*" 			style "panel"
+class "*Panel*Applet*" 			style "panel"
+widget_class "*Panel*GtkToggleButton" 	style "panel"
+widget_class "*Panel*GtkButton" 	style "panel"
+widget_class "*.Panel*Button*GtkLabel" 	style "panel"
+widget_class "*.Panel*GtkLabel" 	style "panel"
+widget "*PanelWidget*" 			style "panel"
+widget "*PanelApplet*" 			style "panel"
+
+
+
+widget_class "*Netstatus*" 		style "panel"
+widget_class "*Tomboy*Tray*" 		style "panel"
+widget "*fast-user-switch*" 		style "panel"
+widget_class "*PanelToplevel*" 		style "panel"
+class "Xfce*Panel*" 			style "panel"
+widget_class "*Xfce*Panel*" 		style "panel"
+widget_class "*PanelApplet*" 		style "panel"
+widget_class "*PanelWidget*" 		style "panel"
+
+
+widget_class "*Panel*GtkToggleButton" 		style "panelbuttons"
+widget "*.tasklist-button" 			style "panelbuttons"
+
+widget_class "*PanelToplevel*Button" 		style "panelbuttons"
+widget_class "*Xfce*Panel*.GtkToggleButton" 	style "panelbuttons"
+widget_class "*Xfce*NetkTasklist*GtkToggleButton" style "panelbuttons"
+
+#############################################################
+#FIXES THE STANDARD SHUTDOWN-DIALOG ON GNOME
+#############################################################
+
+style "fix"
+{
+xthickness = 0
+ythickness = 0
+
+ bg[NORMAL]		= "#ffffff"
+}
+
+class "*Panel*" style "fix"
+
+#############################################################

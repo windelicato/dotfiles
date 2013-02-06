@@ -1,0 +1,938 @@
+{
+   "adalreadyblocked": {
+      "message": "Du beh\u00F8ver ikke g\u00F8re noget, da reklamen allerede er blokeret"
+   },
+   "adblock_auto_removes_ads_thats_all": {
+      "message": "AdBlock fjerner automatisk reklamer. Mere er der som s\u00E5dan ikke til det."
+   },
+   "adblock_is_paused": {
+      "message": "AdBlock er midlertidigt afbrudt. Der bliver derfor ikke blokeret noget, s\u00E5 denne side kan ikke bruges. Genaktiver AdBlock og pr\u00F8v igen."
+   },
+   "adblock_outdated_chrome": {
+      "message": "Du bruger en gammel version af AdBlock. G\u00E5 venligst til \u003Ca href='#'\u003Esiden for udvidelser\u003C/a\u003E, aktiver 'Udviklertilstand' og klik p\u00E5 'Opdater udvidelser nu'"
+   },
+   "adblock_wont_run_on_pages_matching": {
+      "message": "AdBlock vil ikke k\u00F8re p\u00E5 nogen sider der passer med:"
+   },
+   "adblockreportinganad": {
+      "message": "AdBlock - Raporter en reklame"
+   },
+   "addthisfilter": {
+      "message": "Tilf\u00F8j dette filter"
+   },
+   "adreport2": {
+      "message": "Okay, s\u00E5 du har fundet en reklame p\u00E5 en hjemmeside? N\u00E5, men jeg vil hj\u00E6lpe med og finde det rette sted og raportere den!\u003Cbr/\u003E Husk: rapportering af reklamer er frivilligt. Hvis du ikke \u00F8nsker at g\u00F8re det, kan du blot lukke dette vindue og n\u00F8jes med at blokere den for kun dig, ved at tilf\u00F8je den under 'Tilpas' tabben under Indstillinger!"
+   },
+   "adsoneverysite": {
+      "message": "Ser du reklamer p\u00E5 de fleste sider du bes\u00F8ger (din startside, firmaets intranet sider mv.), men n\u00E5r du ser de samme sider p\u00E5 en andens computer, er der ingen reklamer?"
+   },
+   "adstillappear": {
+      "message": "Vises reklamen stadig?"
+   },
+   "advanced_options": {
+      "message": "Jeg er erfaren bruger, vis mig de avancerede indstillinger."
+   },
+   "any_new_tabs_you_open_Will_be_automatically_ad_free": {
+      "message": "Alle nye tabs du \u00E5bner vil automatisk v\u00E6re reklame-fri."
+   },
+   "anysite": {
+      "message": "Enhver hjemmeside"
+   },
+   "appliedwhenbrowsing": {
+      "message": "Dette filter vil blive benyttet n\u00E5r du browser:"
+   },
+   "betalabel": {
+      "message": "Beta"
+   },
+   "blacklistclickmessage": {
+      "message": "H\u00F8jreklik p\u00E5 en reklame p\u00E5 en side for at blokere den -- eller bloker den manuelt her."
+   },
+   "blacklisterattrwillbe": {
+      "message": "$attribute$ vil v\u00E6re $value$",
+      "placeholders": {
+         "attribute": {
+            "content": "$1"
+         },
+         "value": {
+            "content": "$2"
+         }
+      }
+   },
+   "blacklisterblockedelement": {
+      "message": "Blokeret element:"
+   },
+   "blacklisterblocksalloftype": {
+      "message": "Pas p\u00E5: dette filter blokerer alle $elementtype$ elementer p\u00E5 siden!",
+      "placeholders": {
+         "elementtype": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistereditfilter": {
+      "message": "V\u00E6lg venligst det korrekte filter nedenfor, og klik OK"
+   },
+   "blacklistereditinvalid1": {
+      "message": "Filteret er ugyldigt: $exception$",
+      "placeholders": {
+         "exception": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistermatches": {
+      "message": "Det blev fundet $matchcount$ gange p\u00E5 denne side.",
+      "placeholders": {
+         "matchcount": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklisternofilter": {
+      "message": "Intet filter valgt!"
+   },
+   "blacklisternotsure": {
+      "message": "\u003Cb\u003EIkke sikker??\u003C/b\u003E bare klik 'Bloker!' nedenfor."
+   },
+   "blacklisteroptions1": {
+      "message": "Hvad tror du vil v\u00E6re sandt om denne reklame, hver gang du bes\u00F8ger denne side?"
+   },
+   "blacklisteroptionstitle": {
+      "message": "Sidste trin: Hvad g\u00F8r dette til en reklame?"
+   },
+   "blacklistersinglematch": {
+      "message": "Det blev kun fundet \u003Cb\u003E1\u003C/b\u003E gang p\u00E5 siden."
+   },
+   "blacklisterthefilter": {
+      "message": "Filteret, som kan \u00E6ndres under Indstillinger:"
+   },
+   "blacklistertype": {
+      "message": "Type"
+   },
+   "blacklisterwarningnofilter": {
+      "message": "Advarsel: der er ikke angivet noget filter!"
+   },
+   "block_an_ad_on_this_page": {
+      "message": "Bloker en reklame p\u00E5 denne side"
+   },
+   "block_by_url_instead": {
+      "message": "Avanceret: bloker ud fra URL istedet"
+   },
+   "block_this_ad": {
+      "message": "Bloker denne reklame"
+   },
+   "blockanadtitle": {
+      "message": "Bloker en reklame"
+   },
+   "blockdomain": {
+      "message": "Dom\u00E6ne for side hvor blokeringen skal virke"
+   },
+   "blockeverycontaining": {
+      "message": "Bloker enhver ressource indeholdende:"
+   },
+   "blockmoreads": {
+      "message": "Bloker flere reklamer:"
+   },
+   "blockurlwithtext": {
+      "message": "Bloker URLer der indeholder denne tekst"
+   },
+   "buttonback": {
+      "message": "Tilbage"
+   },
+   "buttonblockit": {
+      "message": "Bloker!"
+   },
+   "buttoncancel": {
+      "message": "Annuller"
+   },
+   "buttonedit": {
+      "message": "Rediger"
+   },
+   "buttonexclude": {
+      "message": "Udeluk"
+   },
+   "buttonlooksgood": {
+      "message": "Det ser godt ud"
+   },
+   "buttonok": {
+      "message": "OK!"
+   },
+   "cantblockflash": {
+      "message": "Vi kan desv\u00E6rre ikke blokere reklamer i Flash og andre plugins endnu. Vi afventer at dette underst\u00F8ttes af browseren og WebKit."
+   },
+   "cantblockflashwarning": {
+      "message": "Vises reklamen i eller f\u00F8r film, eller et andet plugin, s\u00E5som et Flash spil?"
+   },
+   "casesensitive": {
+      "message": "Dette filter skelner mellem sore og sm\u00E5 bogstaver:"
+   },
+   "changelabel": {
+      "message": "skift"
+   },
+   "checkinfirefox_1": {
+      "message": "Installere Firefox $chrome$ hvis du ikke har det.",
+      "placeholders": {
+         "chrome": {
+            "content": "$1eller Chrome$2"
+         }
+      }
+   },
+   "checkinfirefox_2": {
+      "message": "Installere Adblock Plus til Firefox $chrome$ hvis du ikke har det.",
+      "placeholders": {
+         "chrome": {
+            "content": "$1eller AdblockforChrome for Chrome$2"
+         }
+      }
+   },
+   "checkinfirefox_3": {
+      "message": "I den browser, skal du abonner p\u00E5 de samme filtre som du har her (bortset fra de manuelle AdBlock filtre i Firefox)."
+   },
+   "checkinfirefox_4": {
+      "message": "I den browser skal du indl\u00E6se siden med reklamen."
+   },
+   "checkinfirefox_5": {
+      "message": "Vises reklamen ogs\u00E5 i den browser?"
+   },
+   "checkinfirefoxtitle": {
+      "message": "Tjek i Firefox $chrome$",
+      "placeholders": {
+         "chrome": {
+            "content": "$1eller Chrome$2"
+         }
+      }
+   },
+   "chromebutton_how_to_hide2": {
+      "message": "For at skjule knappen skal du h\u00F8jreklikke p\u00E5 den og v\u00E6lge Skjul knap. Du kan f\u00E5 den frem igen ved at g\u00E5 til chrome://chrome/extensions."
+   },
+   "cleanuplist": {
+      "message": "Rens denne liste:"
+   },
+   "clickthead": {
+      "message": "Klik p\u00E5 reklamen, og s\u00E5 vil jeg guide dig igennem blokeringen af den."
+   },
+   "clickupdatefilters": {
+      "message": "Klik p\u00E5 denne: \u003Ca\u003EOpdater mine filtre!\u003C/a\u003E"
+   },
+   "close": {
+      "message": "Luk"
+   },
+   "close_tab_begin_browsing": {
+      "message": "Du kan nu lukke denne fane og begynde at surfe internettet uden reklamer. God forn\u00F8jelse!"
+   },
+   "correctfilters": {
+      "message": "Ret filtre"
+   },
+   "csstomatch": {
+      "message": "CSS der skal skjules"
+   },
+   "custompattern": {
+      "message": "Brugerdefineret:"
+   },
+   "debuginlogoption": {
+      "message": "Vis debug informationer i Console Log (vil g\u00F8re AdBlock langsomere)"
+   },
+   "description2": {
+      "message": "Den mest popul\u00E6re udvidelse til Chrome, med over 10 millioner brugere! Blokerer reklamer overalt p\u00E5 internettet."
+   },
+   "did_you_know_this_is_my_full_time_job": {
+      "message": "Var du klar over, at dette er mit fuldtidsjob ?"
+   },
+   "disabled_by_filter_lists": {
+      "message": "Beklager, AdBlock er sl\u00E5et fra p\u00E5 denne side via et af dine filter lister."
+   },
+   "disabled_on_this_page": {
+      "message": "AdBlock er sl\u00E5et fra p\u00E5 denne side."
+   },
+   "doesntmatchoriginal": {
+      "message": "M\u00F8nsteret passer ikke med det element du pr\u00F8ver at skjule! Skal vi forts\u00E6tte alligevel?"
+   },
+   "done": {
+      "message": "f\u00E6rdig."
+   },
+   "dont_run_on_pages_on_domain": {
+      "message": "K\u00F8r ikke p\u00E5 sider, p\u00E5 dette dom\u00E6ne"
+   },
+   "dont_run_on_this_page": {
+      "message": "Benyt ikke p\u00E5 denne side"
+   },
+   "enable": {
+      "message": "aktiver"
+   },
+   "excludedomainorurl": {
+      "message": "Dom\u00E6net eller url hvor AdBlock ikke skal blokere noget"
+   },
+   "excludefilterremoved": {
+      "message": "Filteret blev fjernet. Venligst genindl\u00E6s siden for at generer listen over elementer."
+   },
+   "failedtofetchfilter": {
+      "message": "Fejlede ved hentning af filter.!"
+   },
+   "faq": {
+      "message": "FAQ"
+   },
+   "fetchinglabel": {
+      "message": "Henter... vent venligst."
+   },
+   "filecleanerwarning": {
+      "message": "Hvis du ser denne besked hver gang du starter AdBlock b\u00F8r du s\u00F8ger for, at du ikke bruger en filrenser der ogs\u00E5 renser 'localStorage' filer."
+   },
+   "filteradblock_custom": {
+      "message": "AdBlock tilpassede filtre (anbefalet)"
+   },
+   "filterchinese": {
+      "message": "- yderligere Kinesiske filtre"
+   },
+   "filterczech": {
+      "message": "Tjekkiske filtre"
+   },
+   "filterdanish": {
+      "message": "Danske filtre"
+   },
+   "filterdutch": {
+      "message": "- yderligere Hollandske filtre"
+   },
+   "filtereasylist": {
+      "message": "EasyList (anbefalet)"
+   },
+   "filtereasylist_plun_korean": {
+      "message": "Koreanske filtre"
+   },
+   "filtereasylist_plus_bulgarian": {
+      "message": "- yderligere Bulgarske filtre"
+   },
+   "filtereasylist_plus_finnish": {
+      "message": "- yderligere Finske filtre"
+   },
+   "filtereasylist_plus_french": {
+      "message": "- yderligere Franske filtre"
+   },
+   "filtereasylist_plus_german": {
+      "message": "- yderligere Tyske filtre"
+   },
+   "filtereasylist_plus_greek": {
+      "message": "- yderligere Gr\u00E6ske filtre"
+   },
+   "filtereasylist_plus_polish": {
+      "message": "- yderligere Polske filtre"
+   },
+   "filtereasylist_plus_romanian": {
+      "message": "- yderligere Rom\u00E6nske filtre"
+   },
+   "filtereasylist_plus_spanish": {
+      "message": "Spanske filtre"
+   },
+   "filtereasyprivacy": {
+      "message": "EasyPrivacy (beskyttelse af privatliv)"
+   },
+   "filterhasbeenadded": {
+      "message": "Filtret blev tilf\u00F8jet!\nGenindl\u00E6s siden for og se resultatet!"
+   },
+   "filterhungarian": {
+      "message": "Ungarske filtre"
+   },
+   "filterisraeli": {
+      "message": "Israelske filtre"
+   },
+   "filteritalian": {
+      "message": "Italienske filtre"
+   },
+   "filterjapanese": {
+      "message": "Japanske filtre"
+   },
+   "filterlistlink": {
+      "message": "Abonner ikke p\u00E5 flere end du beh\u00F8ver -- hvert abonnement sl\u00F8ver en lille bitte smule. Credits og flere lister kan findes \u003Ca\u003Eher (Engelsk)\u003C/a\u003E."
+   },
+   "filterlistsrock": {
+      "message": "Filter listerne blokerer de fleste reklamer p\u00E5 nettet. Du kan ogs\u00E5:"
+   },
+   "filterorigin": {
+      "message": "Oprindelige filter:\n$list$",
+      "placeholders": {
+         "list": {
+            "content": "$1"
+         }
+      }
+   },
+   "filterrussian": {
+      "message": "- yderligere Rusiske og Ukrainske filtre"
+   },
+   "filtersavewarning": {
+      "message": "V\u00E6r varsom: hvis du laver en fejl her, kan en stor del af disse og de officielle filtre blive ubrugelige!\u003Cbr/\u003EL\u00E6s \u003Ca\u003Efilter syntax guide (Engelsk)\u003C/a\u003E for at l\u00E6re hvordan man tilf\u00F8jer avancerede blacklist og whitelist filtre."
+   },
+   "filterstabtitle": {
+      "message": "Abonner p\u00E5 lister"
+   },
+   "findingads": {
+      "message": "Finder reklamer...\u003Cbr/\u003E\u003Cbr/\u003E\u003Ci\u003EDet tager kun et \u00F8jeblik.\u003C/i\u003E"
+   },
+   "firefox_explanation": {
+      "message": "Form\u00E5let med dette sp\u00F8rgsm\u00E5l er for at fastsl\u00E5, hvem der b\u00F8r modtage din rapportering. Hvis du besvarer sp\u00F8rgsm\u00E5let forkert vil rapporten blive sendt til de forkerte folk, og m\u00E5ske blive ignoreret."
+   },
+   "fixityourself": {
+      "message": "OK, du kan stadig blokere reklamen for dig selv p\u00E5 siden Indstillinger. Tak!"
+   },
+   "flashads": {
+      "message": "Videoer og Flash"
+   },
+   "for_more_options_right_click": {
+      "message": "For flere muligheder kan du h\u00F8jreklikke p\u00E5 hjemmesider, og klikke p\u00E5 $img$.",
+      "placeholders": {
+         "img": {
+            "content": "\u003Cimg src=\"../../img/icon19.png\"/\u003E"
+         }
+      }
+   },
+   "format_site1_site2_site3": {
+      "message": "Format: ~side1.dk|~side2.dk|~nyheder.side3.org"
+   },
+   "generaloptions": {
+      "message": "Generelle indstillinger"
+   },
+   "googletextads": {
+      "message": "Jeg kan godt lide tekst reklamerne p\u00E5 Google; bare vis mig dem."
+   },
+   "headerfilter": {
+      "message": "Matchende filtre"
+   },
+   "headerresource": {
+      "message": "Element"
+   },
+   "headertype": {
+      "message": "Type"
+   },
+   "help": {
+      "message": "Hj\u00E6lp"
+   },
+   "hide_this_button": {
+      "message": "Skjul denne kanp"
+   },
+   "how_to_use_adblock": {
+      "message": "Hvordan bruges AdBlock:"
+   },
+   "installedtitle": {
+      "message": "AdBlock er nu installeret!"
+   },
+   "installing_adblock": {
+      "message": "Installerer AdBlock..."
+   },
+   "invalidListUrl": {
+      "message": "Ugyldig URL til liste. Den vli blive slettet."
+   },
+   "labelshow": {
+      "message": "vis"
+   },
+   "lang_bulgarian": {
+      "message": "Bulgarsk"
+   },
+   "lang_chinese": {
+      "message": "Kinesisk"
+   },
+   "lang_czech": {
+      "message": "Tjekkisk"
+   },
+   "lang_danish": {
+      "message": "Dansk"
+   },
+   "lang_dutch": {
+      "message": "Hollandsk"
+   },
+   "lang_english": {
+      "message": "Engelsk"
+   },
+   "lang_finnish": {
+      "message": "Finsk"
+   },
+   "lang_french": {
+      "message": "Fransk"
+   },
+   "lang_german": {
+      "message": "Tysk"
+   },
+   "lang_greek": {
+      "message": "Gr\u00E6sk"
+   },
+   "lang_hungarian": {
+      "message": "Ungarsk"
+   },
+   "lang_israeli": {
+      "message": "Israelsk"
+   },
+   "lang_italian": {
+      "message": "Italliensk"
+   },
+   "lang_japanese": {
+      "message": "Japansk"
+   },
+   "lang_korean": {
+      "message": "Koreansk"
+   },
+   "lang_polish": {
+      "message": "Polsk"
+   },
+   "lang_romanian": {
+      "message": "Rom\u00E6nsk"
+   },
+   "lang_russian": {
+      "message": "Russisk"
+   },
+   "lang_spanish": {
+      "message": "Spansk"
+   },
+   "lang_ukranian": {
+      "message": "Ukrainsk"
+   },
+   "last_update_failed": {
+      "message": "Sidste opdatering fejlede;"
+   },
+   "linkblockadbyurl": {
+      "message": "Bloker en reklame ud fra dens URL"
+   },
+   "linkhidesection": {
+      "message": "Skjul en sektion af en hjemmeside"
+   },
+   "linkunblock": {
+      "message": "Vis reklamer p\u00E5 en hjemmeside eller et dom\u00E6ne"
+   },
+   "loading": {
+      "message": "INDL\u00C6SER..."
+   },
+   "manualfilteredit": {
+      "message": "Rediger dine filtre manuelt:"
+   },
+   "maybemalware": {
+      "message": "Ikke alle sider p\u00E5 internettet indeholder reklamer. En af \u00E5rsagerne til, at du ser mange reklamer, kan v\u00E6re at din computer indeholder noget u\u00F8nsket software. Pr\u00F8v at sl\u00E5 alle udvidelser fra, \u00E9n efter \u00E9n, og se om problemet forsvinder. Hvis ikke kan du pr\u00F8ve at lave en komplet scanning af din computer, med opdateret antivirus software, da dette kan skyldes malware p\u00E5 din pc."
+   },
+   "modifydomain": {
+      "message": "Dom\u00E6ne:"
+   },
+   "modifypath": {
+      "message": "Side:"
+   },
+   "multipledomainshint": {
+      "message": "Adskil flere dom\u00E6ner med komma eller mellemrum"
+   },
+   "nextstep": {
+      "message": "N\u00E6ste trin"
+   },
+   "no": {
+      "message": "Nej"
+   },
+   "nodefaultfilter1": {
+      "message": "Vi har i \u00F8jeblikket ikke et standard filter for det valgte sprog.\u003Cbr/\u003EVenligst pr\u00F8v at finde en passende liste der underst\u00F8tter sproget $link$ eller bloker reklamen bare for dig selv under 'Tilpas' tab.",
+      "placeholders": {
+         "link": {
+            "content": "$1her$2"
+         }
+      }
+   },
+   "noresourcessend2": {
+      "message": "Et eller andet gik helt galt. Der er ikke kommet nogen elementer frem. Siden vil nu lukke, men du skulle pr\u00F8ve at genindl\u00E6se siden."
+   },
+   "nosearchresults": {
+      "message": "Ingen elementer blev fundet"
+   },
+   "novalidurlpattern": {
+      "message": "Venligst indtast et gyldigt URL m\u00F8nster der skal findes!"
+   },
+   "now_you_have_adblock_hooray": {
+      "message": "Nu har du AdBlock!  Wehee!"
+   },
+   "oneverysitetitle": {
+      "message": "Reklamer overalt!"
+   },
+   "only_block_ads_on_these_sites": {
+      "message": "Bloker kun reklamer p\u00E5 disse dom\u00E6ner:"
+   },
+   "onlyondomains": {
+      "message": "KUN sider p\u00E5 disse dom\u00E6ner:"
+   },
+   "onlyresourcetypes": {
+      "message": "Dette filter g\u00E6lder for f\u00F8lgende element typer:"
+   },
+   "opera_120_install": {
+      "message": "I Opera versioner f\u00F8r version 12.10, kan det forekomme at nogle reklamer ikke bliver fjernet, da nogle af scannings reglerne ikke virker i denne version. Problemet er l\u00F8st i version 12.10 af Opera. N\u00E5r opdateringen finder sted, vil alle reklamer blive blokeret."
+   },
+   "opera_120_options": {
+      "message": "I Opera versioner f\u00F8r version 12.10, kan nogle muligheder v\u00E6re deaktiveret. Dette fordi de ikke er underst\u00F8ttet i disse \u00E6ldre versioner af Opera."
+   },
+   "opera_allow_secure": {
+      "message": "Hvis du vil benytte AdBlock p\u00E5 sikrede sider (sider der har en h\u00E6ngel\u00E5s i v\u00E6rkt\u00F8jslinjen), skal du f\u00F8rst sl\u00E5 muligheden til under Indstillinger for AdBlock."
+   },
+   "opera_can_also_change_setting": {
+      "message": "Du kan ogs\u00E5 \u00F8ge v\u00E6rdien af\n$setting$",
+      "placeholders": {
+         "setting": {
+            "content": "$1"
+         }
+      }
+   },
+   "opera_donations_button": {
+      "message": "Er du vild med udvidelsen? Hvis du er, vil jeg blive glad hvis du vil overveje at give en donation. Find mere information under 'Valgmuligheder'"
+   },
+   "opera_donations_install": {
+      "message": "Hvis du virkelig er vild med denne udvidelse, vil jeg blive glad hvis du ville overveje at give en donation via"
+   },
+   "opera_enabledin": {
+      "message": "Aktiveret i $browserversion$",
+      "placeholders": {
+         "browserversion": {
+            "content": "$1"
+         }
+      }
+   },
+   "opera_excludedomainorurl": {
+      "message": "Dom\u00E6net hvor AdBlock ikke skal blokere noget"
+   },
+   "opera_for_more_options": {
+      "message": "For flere muligheder, kan du klikke p\u00E5 ikonet i v\u00E6rkt\u00F8jslinien, eller \u00E5bne indstillinger via Opera &rArr; Udvidelser &rArr; Administrer udvidelser &rArr; skruen\u00F8gle ikon &rArr; Indstillinger"
+   },
+   "opera_linkunblock": {
+      "message": "Vis reklamer p\u00E5 et dom\u00E6ne"
+   },
+   "opera_reenable_button": {
+      "message": "Du genaktivere knappen under indstillinger for denne udvidelse"
+   },
+   "opera_secure_pages": {
+      "message": "Sikrede sider"
+   },
+   "opera_secure_pages_enabled": {
+      "message": "Klik p\u00E5 Udvidelser (i menuen) &rArr; Administrer Udvidelser &rArr; kig efter AdBlock og klik p\u00E5 skruen\u00F8gle-ikonet &rArr; Klik Privatliv.\u003Cbr/\u003EEr muligheden for at tillade adgang til sikrede sider tilvalgt?"
+   },
+   "opera_show_toolbar_button": {
+      "message": "Vis knap i v\u00E6rkt\u00F8jslinien"
+   },
+   "options": {
+      "message": "Indstillinger"
+   },
+   "optionschangelog": {
+      "message": "changelog"
+   },
+   "optionstitle": {
+      "message": "AdBlock Indstillinger"
+   },
+   "optionsversion": {
+      "message": "Version $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "orenteraurl": {
+      "message": "Eller indtast en URL:"
+   },
+   "other": {
+      "message": "Andet"
+   },
+   "pagelanguagecheck": {
+      "message": "Hvilket sprog er siden i?"
+   },
+   "pause_adblock": {
+      "message": "Afbryd AdBlock midlertidigt"
+   },
+   "project_home": {
+      "message": "Project hjem"
+   },
+   "refusetocheck": {
+      "message": "Jeg \u00F8nsker ikke at unders\u00F8ge dette"
+   },
+   "reloadadpage": {
+      "message": "Genindl\u00E6s siden med reklamen."
+   },
+   "removefromlist": {
+      "message": "Fjern fra liste"
+   },
+   "removelabel": {
+      "message": "Fjern"
+   },
+   "report_ad_on_page": {
+      "message": "Raporter en reklame p\u00E5 denne side"
+   },
+   "reportfilterlistproblem": {
+      "message": "Dette er et filter liste problem. Rapporter det her: $link$",
+      "placeholders": {
+         "link": {
+            "content": "$1"
+         }
+      }
+   },
+   "reportpubliclyavailable": {
+      "message": "Bem\u00E6rk: din rapport kan blive offentligt tilg\u00E6ngelig. Hav det i tankerne, inden du inkluderer personlige informationer."
+   },
+   "reporttous2": {
+      "message": "Du kan rapportere reklamen til os \u003Ca\u003Ei issue trackereren (Engelsk)\u003C/a\u003E."
+   },
+   "resourceblocklegend1": {
+      "message": "Forklaring:"
+   },
+   "resourceblocklegend2": {
+      "message": "blokerede elementer"
+   },
+   "resourceblocklegend3": {
+      "message": "godkendte elementer"
+   },
+   "resourceblocklegend4": {
+      "message": "elementer der kan blokeres"
+   },
+   "resourceblocklegend5": {
+      "message": "skjul-regler aktiveret"
+   },
+   "resourceblocktitle": {
+      "message": "Bloker et element"
+   },
+   "resourcedomain": {
+      "message": "Indl\u00E6st p\u00E5 sider under dom\u00E6ne:\n$domain$",
+      "placeholders": {
+         "domain": {
+            "content": "$1"
+         }
+      }
+   },
+   "resourceiswhitelisted": {
+      "message": "Det valgte element er blevet godkendt, og kan derfor ikke blokeres."
+   },
+   "retryaftersubscribe": {
+      "message": "Abonner til denne filter liste, og pr\u00F8v s\u00E5 igen: $list_title$",
+      "placeholders": {
+         "list_title": {
+            "content": "$1"
+         }
+      }
+   },
+   "safari50_updatenotice": {
+      "message": "Du benytter en gammel version af Safari. Hent den seneste version for og benytte AdBlock v\u00E6rkt\u00F8jslinien, for at afbryde AdBlock midlertidigt, godkende hjemmesider, og raportere reklamer. \u003Ca\u003EOpdater nu\u003C/a\u003E."
+   },
+   "savebutton": {
+      "message": "Gem"
+   },
+   "savereminder": {
+      "message": "Husk at gemme!"
+   },
+   "searchexplanation": {
+      "message": "Brug * til at matche nul eller flere bogstaver. For eksempel, 'banner*.gif image' matcher billederne 'banner.gif', 'banner123.gif', og 'bannerxyz.gif'."
+   },
+   "searchplaceholder": {
+      "message": "S\u00F8g elementer..."
+   },
+   "seeing_this_every_time_you_start_your_browser": {
+      "message": "Ser du dette hver gang du starter din browser?"
+   },
+   "selectresources": {
+      "message": "V\u00E6lg elementet du \u00F8nsker at blokere eller fjerne blokering fra"
+   },
+   "show_ads_except_for": {
+      "message": "Vis rekamer \u003Ci\u003Eoveralt\u003C/i\u003E undtagen disse dom\u00E6ner..."
+   },
+   "show_resourcelist": {
+      "message": "Vis element listen"
+   },
+   "showcontextmenus": {
+      "message": "Tilf\u00F8j muligheder til h\u00F8jre kliks menuen."
+   },
+   "showlinkstolists": {
+      "message": "Vis links til filter listerne:"
+   },
+   "sliderexplanation": {
+      "message": "Skyd glideren indtil reklamen er skjult korrekt p\u00E5 siden, og det blokerede element ser brugbart ud."
+   },
+   "slidertitle": {
+      "message": "Trin 1: Find ud af hvad der skal blokeres"
+   },
+   "status_disabled": {
+      "message": "AdBlock kan ikke benyttes p\u00E5 dette dom\u00E6ne."
+   },
+   "status_paused": {
+      "message": "AdBlock er midlertidigt afbrudt."
+   },
+   "stop_blocking_ads": {
+      "message": "Stop blokeringen af reklamer:"
+   },
+   "storage_quota_exceeded": {
+      "message": "Du har overskredet den plads som AdBlock har til r\u00E5dighed. Venligst fjern abonnement fra nogle af filter listerne!"
+   },
+   "subscribe_unsubscribe_all": {
+      "message": "$subscribe$ p\u00E5 eller $unsubscribe$ alle lister.",
+      "placeholders": {
+         "subscribe": {
+            "content": "\u003Ca href='#' id='subscribeAll'\u003EAbonner\u003C/a\u003E"
+         },
+         "unsubscribe": {
+            "content": "\u003Ca href='#' id='unsubscribeAll'\u003Efjern abonnement fra\u003C/a\u003E"
+         }
+      }
+   },
+   "subscribebutton": {
+      "message": "Abonner"
+   },
+   "subscribingfailed": {
+      "message": "Fejl!"
+   },
+   "subscribingfinished": {
+      "message": "F\u00E6rdig!"
+   },
+   "subscribingtitle": {
+      "message": "Abboner p\u00E5 filter liste..."
+   },
+   "tabcustomize": {
+      "message": "Tilpas"
+   },
+   "tabcustomizetitle": {
+      "message": "Tilpas AdBlock"
+   },
+   "tabfilterlists": {
+      "message": "Filter lister"
+   },
+   "tabgeneral": {
+      "message": "Generelt"
+   },
+   "thats_it": {
+      "message": "Det var det!"
+   },
+   "thirdparty": {
+      "message": "Tredieparts"
+   },
+   "thirdpartycheckbox": {
+      "message": "Enhver hjemmeside UNDTAGET hjemmesider p\u00E5 dom\u00E6net $domain$",
+      "placeholders": {
+         "domain": {
+            "content": "$1"
+         }
+      }
+   },
+   "translator_credit": {
+      "message": "Tak for overs\u00E6ttelsen til: $translator_names$",
+      "placeholders": {
+         "translator_names": {
+            "content": "stallemanden"
+         }
+      }
+   },
+   "typehiding": {
+      "message": "skjuler"
+   },
+   "typeimage": {
+      "message": "billede"
+   },
+   "typemedia": {
+      "message": "audio/video"
+   },
+   "typeobject": {
+      "message": "interaktivt objekt"
+   },
+   "typeobject_subrequest": {
+      "message": "object_subrequest"
+   },
+   "typeother": {
+      "message": "adnet"
+   },
+   "typepage": {
+      "message": "side"
+   },
+   "typepopup": {
+      "message": "popup"
+   },
+   "typescript": {
+      "message": "script"
+   },
+   "typestylesheet": {
+      "message": "stil definition"
+   },
+   "typesubdocument": {
+      "message": "frame"
+   },
+   "typeunknown": {
+      "message": "ukendt"
+   },
+   "typexmlhttprequest": {
+      "message": "xmlhttprequest"
+   },
+   "undo_last_block": {
+      "message": "Fortryd seneste blokering."
+   },
+   "unpause": {
+      "message": "genoptag"
+   },
+   "unsubscribedlabel": {
+      "message": "Fjern abonnement."
+   },
+   "updateddayago": {
+      "message": "opdateret for 1 dag siden"
+   },
+   "updateddaysago": {
+      "message": "opdateret for $days$ dage siden",
+      "placeholders": {
+         "days": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedhourago": {
+      "message": "opdateret for 1 time siden"
+   },
+   "updatedhoursago": {
+      "message": "opdateret for $hours$ timer siden",
+      "placeholders": {
+         "hours": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedminuteago": {
+      "message": "opdateret for 1 minut siden"
+   },
+   "updatedminutesago": {
+      "message": "opdateret for $minutes$ minutter siden",
+      "placeholders": {
+         "minutes": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedrightnow": {
+      "message": "opdateret"
+   },
+   "updatedsecondsago": {
+      "message": "opdateret for $seconds$ sekunder siden",
+      "placeholders": {
+         "seconds": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatefromoldversion": {
+      "message": "Du benytter en gammel version af AdBlock. Venligst $updatelink$ f\u00F8rst for og f\u00E5 den nyeste version af AdBlock",
+      "placeholders": {
+         "updatelink": {
+            "content": "$1opdater$2"
+         }
+      }
+   },
+   "updatenowmessage": {
+      "message": "Jeg henter automatisk opdateringer; du kan ogs\u00E5 \u003Ca\u003Eopdatere nu\u003C/a\u003E."
+   },
+   "updateyourlists": {
+      "message": "Sikre at dine filtre er opdateret"
+   },
+   "warning_overrules_filters": {
+      "message": "Advarsel: p\u00E5 alle andre sider vil reklamer blive vist!\u003Cbr\u003EDette overskriver alle andre filtre for disse sider."
+   },
+   "whitelistertitle2": {
+      "message": "Benyt ikke AdBlock p\u00E5..."
+   },
+   "whitelisteverycontaining": {
+      "message": "Godkende enhver ressource indeholdende:"
+   },
+   "wildcardhint": {
+      "message": "Note: du kan bruge * som wildcard her"
+   },
+   "yes": {
+      "message": "Ja"
+   },
+   "you_can_slide_to_change": {
+      "message": "Du kan bruge skyderen(e) nedenfor til og bestemme n\u00F8jagtig hvilke sider AdBlock ikke skal benyttes  p\u00E5."
+   },
+   "you_know_thats_a_bad_idea_right": {
+      "message": "Jo flere lister du v\u00E6lger, des langsommere k\u00F8rer AdBlock. Bruger du for mange filtre kan browseren endda stoppe med at fungere p\u00E5 nogle sider. Klik OK for at abonnere p\u00E5 denne liste alligevel."
+   }
+}

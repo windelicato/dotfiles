@@ -1,0 +1,46 @@
+############################
+#      HOW TO INSTALL      #
+############################
+
+To use this theme you'll need the LATEST stable versions of the following software:
+
+- GTK 3.6
+- The package gnome-themes-standard installed. (Usually installed by default in most distros.)
+- The Murrine GTK2 engine 0.98.1.1 or later. (Package name varies between distributions. This engine should be installed by default in Ubuntu.)
+- The Pixbuf GTK2 engine (Package name varies between distributions. This engine should be installed by default in Ubuntu. In arch, fedora and some other non-debian distributions it's included in the gtk2-engines or gtk-engines package. In Debian based distros it's called gtk2-engines-pixbuf.)
+- gnome-tweak-tool (If you're using Gnome 3.)
+- Gnome-shell-extension-user-theme (To enable 3rd party themes in gnome-shell.)
+
+## INSTALLING THE GTK2 THEME ##
+
+Unzip the included folder(s) to 1 of the following locations:
+/usr/share/themes
+/home/your username/.themes
+
+Open your desktop environment's customization settings.
+Select the theme(s) from the menus there.
+
+Note: The /.themes folder is only for your user. If you for example open Synaptic or any other administrative application it will not be styled.
+
+## INSTALLING THE GTK3 & GNOME-SHELL THEME ##
+
+Unzip the included folder(s) to 1 of the following locations:
+/usr/share/themes
+/home/your username/.themes
+
+You also need to copy the window border (mutter) theme to:
+/home/your username/.local/share/themes or /usr/share/themes
+For example: .local/share/themes/Zukitwo/metacity-1
+
+Note: The /.themes folder is only for your user. If you for example use an application as root it will not be styled.
+
+Open gnome-tweak-tool.
+In gnome-tweak-tool you can select the Gnome-shell theme, GTK theme and Mutter window theme.
+
+To use the GNOME-Shell theme you need to install the user theme extension.
+Availble here - https://extensions.gnome.org/
+
+If changes doesn't take place after selecting the themes you can try to log out and back in. If you're in Gnome-shell you can just press ALT+F2 and type r to restart the shell.
+
+## USING A TRANSPARENT PANEL BACKGROUND IN XFCE ##
+Rightclick on your XFCE panel and go to the background settings. Select the custom background image provided with this theme. (Needs composition effects enabled.)

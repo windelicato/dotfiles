@@ -1,0 +1,4 @@
+#!/bin/bash
+intltool-extract --type=gettext/glade ../gui.glade
+xgettext --language=Python --keyword=_ --keyword=N_ --output=lang.pot ../script_gui.py ../gui.glade.h
+rm ../gui.glade.h

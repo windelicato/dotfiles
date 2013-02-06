@@ -1,0 +1,113 @@
+@define-color nautilus_cluebar_color @theme_selected_bg_color;
+
+/****************
+ * Applications *
+ ****************/
+ApDocView, /* Abiword */
+EogScrollView, /* Eog */
+CheeseThumbView /* Cheese */
+{
+    background-color: @chrome_bg_color;
+    -EogScrollView-shadow-type: none;
+}
+
+/* gnome-terminal */
+TerminalScreen {
+    background-color: @theme_base_color;
+    color: @theme_fg_color;
+    -TerminalScreen-background-darkness: 0.95;
+}
+
+/* nautilus */
+.nautilus-canvas-item {
+    border-radius: 0;
+}
+
+.nautilus-desktop.nautilus-canvas-item {
+    color: @theme_bg_color;
+    text-shadow: 1 1 black;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active {
+    color: @theme_text_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+    color: @theme_selected_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:selected {
+    text-shadow: none;
+}
+
+NautilusTrashBar.info,
+NautilusXContentBar.info,
+NautilusSearchBar.info,
+NautilusQueryEditor.info {
+    background-color: @nautilus_cluebar_color;
+    border-color: darker (@nautilus_cluebar_color);
+
+    border-radius: 0;
+    border-width: 1 0;
+    border-style: solid;
+}
+
+NautilusSearchBar .entry {
+    border-image: none;
+    border-color: @nautilus_cluebar_color;
+
+    -GtkEntry-inner-border: 3;
+}
+
+NautilusSearchBar .entry.image {
+    color: @nautilus_cluebar_color;
+}
+
+.nautilus-cluebar-label {
+    font: bold;
+    color: @theme_base_color;
+}
+
+#nautilus-search-button *:active,
+#nautilus-search-button *:active:prelight {
+    color: darker (@nautilus_cluebar_color);
+}
+
+NautilusFloatingBar {
+    background-image: -gtk-gradient (linear,
+                                     left top, left bottom,
+                                     from (shade (@notebook_tab_gradient_a, 0.97)),
+                                     to (shade (@notebook_tab_gradient_b, 0.90)));
+
+    border-color: shade (@notebook_tab_gradient_b, 0.80);
+
+    border-radius: 3 3 0 0;
+    border-width: 1;
+    border-style: solid;
+}
+
+NautilusFloatingBar .button {
+    background-color: alpha (@theme_base_color, 0.0);
+    background-image: none;
+
+    border-style: none;
+    border-image: none;
+
+    -GtkButton-image-spacing: 0;
+    -GtkButton-inner-border: 0;
+}
+
+NautilusWindow .sidebar .frame {
+    border-width: 0 0 0 0;
+    border-style: solid;
+    border-color: shade (@theme_bg_color, 0.66);
+    border-radius: 0;
+}
+
+NautilusWindow > GtkTable > .pane-separator {
+    border-width: 1 1 0 0;
+    border-style: solid;
+    border-color: shade (@theme_bg_color, 0.66);
+}

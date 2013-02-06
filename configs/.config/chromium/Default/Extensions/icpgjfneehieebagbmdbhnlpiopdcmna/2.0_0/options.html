@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New Tab Redirect! | Options</title>
+    <script type="text/javascript" src="options.js"></script>
+    <link rel="stylesheet" href="common.css" type="text/css"/>
+    <link rel="stylesheet" href="options.css" type="text/css"/>
+</head>
+<body>
+<div id="status">
+    <span id="options_status">Options saved.</span>
+</div>
+
+<div id="header">
+    <h1 id="options_heading">New Tab Redirect! Options</h1>
+</div>
+<div class="section-header first">
+    <em id="options_subheading">These settings will replace your 'new tab' page.</em>
+</div>
+
+<p>
+    <span id="options_url_label" class="desc-text">My new tab page should show this URL:</span> <input type="text" id="custom-url">
+
+    <button id="btnSave" style="font-weight:bold">Save</button>
+    <button id="btnCancel">Cancel</button>
+</p>
+
+<em id="options_localFiles_hint">Note:  Use file:// for local files (e.g. file://C:\example.html)</em>
+
+<p>
+  <input type="checkbox" id="chkSync"/><label for="chkSync" id="options_chkSync">Sync Options</label>
+  <input type="checkbox" id="chkShowWelcome"/><label for="chkShowWelcome" id="options_chkShowWelcome">Show Welcome on upgrade</label>
+</p>
+
+<h2>
+    <span id="options_quickSave_headingLarge">Quick Save&hellip;</span>
+    <small id="options_quickSave_headingSmall">click a button below!</small>
+</h2>
+<p id="options_chromePages" class="quick-links">Original Chrome Pages:</p>
+<ul id="chromes" class="horizontal-links"></ul>
+
+<p id="options_aboutPages" class="fix quick-links">About Pages:</p>
+<ul id="abouts" class="horizontal-links"></ul>
+
+<p id="options_popularPages" class="fix quick-links">Popular Pages:</p>
+<ul id="popular" class="horizontal-links"></ul>
+
+<h2 class="fix">
+    <span id="options_donate_headingLarge">Donate!</span>
+    <small id="options_donate_headingSmall">show support!</small>
+</h2>
+<p class="fix">
+<a href="http://pledgie.com/campaigns/15715" target="_blank"><img src="http://pledgie.com/campaigns/15715.png" alt="pledgie banner" /></a>
+</p>
+<p class="fix">
+    <a href="http://flattr.com/thing/459170/New-Tab-Redirect" target="_blank">
+    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+</p>
+
+<div id="footer" class="fix">
+  <div id="answers" class="fix">
+    <p id="options_anyQuestions" class="q">
+    If you have questions, be sure to check out the <a href="https://github.com/jimschubert/newtab-redirect/wiki" target="_blank">wiki</a> for answers and tips.
+    </p>
+  </div>
+
+<em><span id="options_createdBy">Created by</span> <a href="http://www.ipreferjim.com">James Schubert, 2009-2011</a>.  james.schubert@gmail.com</em><br />
+<em><span id="options_footerPlea">Want to contribute, donate, report an issue, etc?</span> <a href="http://github.com/jimschubert/newtab-redirect" target="_blank"><span id="options_githubTitle">Find me on GitHub!</span></a></em>
+</div>
+<a id="original-newtab">Apps</a>
+</body>
+</html>

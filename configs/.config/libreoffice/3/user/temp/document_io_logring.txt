@@ -1,0 +1,50 @@
+360m1(Build:2)
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2206: 
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2551: Rethrow
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2639: 
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2725: Rethrow
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2639: 
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2725: Rethrow
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2206: 
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2551: Rethrow
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2206: 
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2551: Rethrow
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1085: Begin
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2639: 
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2725: Rethrow
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1287: SaveAs/Export
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1300: Locking
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1354: Storing in own format.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1404: Save as own format.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1420: Thumbnail creation.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1435: Preserve versions.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1640: Medium commit.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1649: Storing is successful.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/sfxbasemodel.cxx:2917: Storing succeeded!
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1085: Begin
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1287: SaveAs/Export
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1300: Locking
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1354: Storing in own format.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1404: Save as own format.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1420: Thumbnail creation.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1435: Preserve versions.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1640: Medium commit.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1649: Storing is successful.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/sfxbasemodel.cxx:2917: Storing succeeded!
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/sfxbasemodel.cxx:1646: storeSelf
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1085: Begin
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1172: Save
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1217: Save: Own to Own
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1300: Locking
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1354: Storing in own format.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1404: Save as own format.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1420: Thumbnail creation.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1435: Preserve versions.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1640: Medium commit.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/objstor.cxx:1649: Storing is successful.
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2206: 
+/build/src/libreoffice-core-3.6.3.2/package/source/xstor/xstorage.cxx:2551: Rethrow
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/sfxbasemodel.cxx:1700: successful saving.
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/sfxbasemodel.cxx:1742: storeAsURL
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/sfxbasemodel.cxx:1646: storeSelf
+/build/src/libreoffice-core-3.6.3.2/sfx2/source/doc/sfxbasemodel.cxx:1655: unexpected parameter for storeSelf, might be no problem if SaveAs is executed.

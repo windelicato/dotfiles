@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Web'de arama yapman\u0131n en h\u0131zl\u0131 yolu."
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "Google Arama"
+   }
+}

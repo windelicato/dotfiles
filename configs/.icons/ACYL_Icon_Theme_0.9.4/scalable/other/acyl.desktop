@@ -1,0 +1,10 @@
+
+[Desktop Entry]
+Encoding=UTF-8
+Name=Any Color You Like
+Exec=acyl
+Icon=colors
+Terminal=false
+Type=Application
+Categories=GNOME;Settings;
+Comment=A script for changing colors for the acyl icon-theme.

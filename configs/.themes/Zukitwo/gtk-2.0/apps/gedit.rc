@@ -1,0 +1,24 @@
+### Styles gedit. Removes the ugly frame etc. ###
+
+style "gedit-frame" {	
+	engine "pixmap" {
+ 		image {
+			function = SHADOW
+		}
+	}
+}
+
+style "gedit-statusbar" {	
+	ythickness = 0
+}
+
+style "gedit-notebook" = "murrine-notebook-bg" {
+	xthickness = 0 # Width of tabs and notebook borders.
+	ythickness = 1 # Height of tabs and notebook borders.
+}
+
+widget_class "*Gedit*.<GtkFrame>*"		style "gedit-frame"
+widget_class "*Gedit*.<GtkScrolledWindow>"	style "murrine-thin"
+widget_class "*Gedit*.<GtkNotebook>"		style "gedit-notebook"
+widget_class "*Gedit*.<GtkArrow>*"		style:highest "murrine-default"
+widget_class "*Gedit*.<GtkStatusbar>*"		style "gedit-statusbar"

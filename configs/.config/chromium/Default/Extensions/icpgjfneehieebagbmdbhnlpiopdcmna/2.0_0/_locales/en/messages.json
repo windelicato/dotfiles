@@ -1,0 +1,127 @@
+{
+   "btnCancel": {
+      "description": "Text displayed on a cancel button",
+      "message": "Cancel"
+   },
+   "btnSave": {
+      "description": "Text displayed on a save button",
+      "message": "Save"
+   },
+   "clickHere": {
+      "description": "Text displayed in redirect message's link text",
+      "message": "click here"
+   },
+   "extDesc": {
+      "description": "Extension Description",
+      "message": "Sets a user-specified URL to load in new tabs."
+   },
+   "extName": {
+      "description": "Extension Name",
+      "message": "New Tab Redirect!"
+   },
+   "options_aboutPages": {
+      "description": "The text displayed above the about: or chrome:// pages links",
+      "message": "About Pages:"
+   },
+   "options_anyQuestions": {
+      "description": "Footer message linking to the wiki",
+      "message": "If you have any questions, be sure to check out the $WIKI$ for answers and tips",
+      "placeholders": {
+         "wiki": {
+            "content": "$1"
+         }
+      }
+   },
+   "options_chkShowWelcome": {
+      "description": "Labels the checkbox indicating the Welcome Page will be displayed when the extension is upgraded",
+      "message": "Show Welcome on upgrade"
+   },
+   "options_chkSync": {
+      "description": "Labels the checkbox indicating options will be saved via Google Chrome Sync",
+      "message": "Sync Options"
+   },
+   "options_chromePages": {
+      "description": "The text displayed above the original chrome pages links",
+      "message": "Original Chrome Pages:"
+   },
+   "options_createdBy": {
+      "description": "Message preceding the copyright link and email address in the footer",
+      "message": "Created by"
+   },
+   "options_donate_headingLarge": {
+      "description": "The main heading for the donate section",
+      "message": "Donate!"
+   },
+   "options_donate_headingSmall": {
+      "description": "The helper text for the donate section",
+      "message": "show support!"
+   },
+   "options_footerPlea": {
+      "description": "Message in footer asking if the user wants to engage in community activities for the extension",
+      "message": "Want to contribute, donate, report an issue, etc?"
+   },
+   "options_githubTitle": {
+      "description": "Title displayed on github link",
+      "message": "Find me on GitHub!"
+   },
+   "options_heading": {
+      "description": "Options page header displayed next to icon at the top of the page.",
+      "message": "$NAME$ Options",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "New Tab Redirect!"
+         }
+      }
+   },
+   "options_hide_hint": {
+      "description": "Hint following checkbox, indicating redirect.html text should be hidden",
+      "message": "Hide \"Redirecting...\" hint"
+   },
+   "options_localFiles_hint": {
+      "description": "A note indicating that file:// should be used when accessing local file locations",
+      "message": "Note: Use file:// for local files (e.g. file://C:\\example.html)"
+   },
+   "options_popularPages": {
+      "description": "The text displayed above the popular pages links",
+      "message": "Popular Pages:"
+   },
+   "options_quickSave_headingLarge": {
+      "description": "The main heading for the one-click links",
+      "message": "Quick Save..."
+   },
+   "options_quickSave_headingSmall": {
+      "description": "The helper text in the Quick Save heading",
+      "message": "click a button below!"
+   },
+   "options_status": {
+      "description": "Options saved message",
+      "message": "Options saved!!"
+   },
+   "options_subheading": {
+      "description": "Message displayed in the blue bar below the heading of the options page.",
+      "message": "These settings will replace your 'new tab' page."
+   },
+   "options_title": {
+      "description": "Options page title displayed within the tab, i.e. html title.",
+      "message": "$NAME$ | Options",
+      "placeholders": {
+         "name": {
+            "content": "$1",
+            "example": "New Tab Redirect!"
+         }
+      }
+   },
+   "options_url_label": {
+      "description": "An instructional message displayed before the text box on the options page",
+      "message": "My new tab page should show this URL:"
+   },
+   "redirectMsg": {
+      "description": "Instructional text preceding the 'click here' link for failed or slow redirects",
+      "message": "If your page does not redirect in 5 seconds:"
+   },
+   "redirectText": {
+      "description": "Placeholder text in redirect.html which can optionally be hidden by the user",
+      "message": "Redirecting..."
+   }
+}

@@ -1,0 +1,91 @@
+### This file styles Nautilus. nautilus-e.rc is for Nautilus elementary. ###
+
+style "nautilus-window-base" { bg[NORMAL] = @base_color }
+
+style "nautilus-sidebar" = "murrine-sidebar" {
+	GtkTreeView::horizontal_separator = 15
+	GtkTreeView::vertical_separator = 2
+}
+
+style "nautilus-view" {
+	xthickness = 0
+	ythickness = 0
+}
+
+style "nautilus-handle" {
+	GtkPaned::handle-size = 1
+	
+	engine "pixmap" {
+		# for the thin gray line separating the sidepane and viewpane
+		image {
+			function	= HANDLE
+			recolorable	= TRUE
+			file		= "Handles/handle-nautilus.png"
+			stretch		= TRUE
+			border		= { 0, 0, 0, 0 }
+		}
+	}
+}
+
+style "nautilus-statusbar"
+{
+	bg[NORMAL] = @base_color
+	base[NORMAL] = @base_color
+	fg[NORMAL] = shade (1.2, @fg_color)
+
+	engine "murrine" {}
+}
+
+style "nautilus-location"
+{
+
+	xthickness = 0
+	ythickness = 0
+
+	bg[NORMAL] = @base_color
+
+	engine "pixmap" {
+		image
+		{
+		function        = FLAT_BOX
+		recolorable     = TRUE
+		file            = "Nautilus/extra-widget.png"
+		state           = NORMAL
+		stretch         = TRUE
+		border          = { 0, 0, 1, 0 }
+		}
+	}
+}
+
+style "nautilus-pathbar"
+{	
+	#bg[NORMAL] = @bg_color
+}
+
+############################################
+# NAUTILUS
+# Order of assignment is important
+#############################################
+
+widget_class "*NautilusSidePane.*"                 style "nautilus-sidebar"
+widget_class "*Nautilus*Places*Sidebar*"           style "nautilus-sidebar"
+widget_class "*Nautilus*Side*.GtkWidget"           style "nautilus-sidebar"
+widget_class "*Nautilus*Side*Title*"               style "nautilus-sidebar"
+
+#widget "*NautilusNavigationWindow"                 style "nautilus-window-base"
+
+widget_class "*Nautilus*Scrollbar"                 style "murrine-scrollbar"
+widget_class "*NautilusSidePane.*Scrollbar"        style:highest "murrine-scrollbar"	
+widget_class "*Nautilus*Statusbar*"                style "nautilus-statusbar"
+
+widget "*Nautilus*Splitter"                        style "nautilus-handle"
+widget_class "*Nautilus*View*"                     style "nautilus-view"
+widget_class "*Nautilus*Notebook"                  style "murrine-notebook"
+
+widget_class "*Nautilus*<GtkTreeView>.<GtkButton>" style "murrine-treeview-header"
+widget_class "*Nautilus*<GtkCTree>.<GtkButton>"    style "murrine-treeview-header"
+widget_class "*Nautilus*<GtkList>.<GtkButton>"     style "murrine-treeview-header"
+widget_class "*Nautilus*<GtkCList>.<GtkButton>"    style "murrine-treeview-header"
+
+widget_class "*NautilusPathBar*"                   style "nautilus-pathbar" 
+widget "*.nautilus-extra-view-widget"              style "nautilus-location"

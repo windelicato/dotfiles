@@ -5,7 +5,8 @@
 ! #########################################
 urxvt*cursorColor: #2f468e
 urxvt*colorUL:	#FFFFFF
-urxvt*colorIT: #FFFFFF
+urxvt*colorIT:  #6e98b8
+urxvt*colorBD:  #7791e0
 urxvt*background: #000000
 urxvt*foreground: #FFFFFF
 

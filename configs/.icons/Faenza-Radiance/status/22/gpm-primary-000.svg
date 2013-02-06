@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.0"
+   width="22"
+   height="22"
+   id="svg2"
+   style="display:inline">
+  <defs
+     id="defs4">
+    <linearGradient
+       x1="10.761708"
+       y1="3.9999998"
+       x2="10.761708"
+       y2="18.011395"
+       id="SpecificGradient"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         id="stop3292"
+         style="stop-color:#ad0707;stop-opacity:1"
+         offset="0" />
+      <stop
+         id="stop3294"
+         style="stop-color:#f75535;stop-opacity:1"
+         offset="1" />
+    </linearGradient>
+    <linearGradient
+       x1="67"
+       y1="5"
+       x2="67"
+       y2="17"
+       id="linearGradient4199-4"
+       xlink:href="#SpecificGradient"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-60,0)" />
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     style="display:inline">
+    <path
+       d="M 3.5,3.96875 C 2.1205745,3.96875 0.96875,5.1205745 0.96875,6.5 l 0,9 c 0,1.379425 1.1518245,2.53125 2.53125,2.53125 l 13,0 c 1.379425,0 2.53125,-1.151825 2.53125,-2.53125 l 0,-1.46875 c 1.088759,-0.01685 2,-0.939061 2,-2.03125 l 0,-2 c 0,-1.092189 -0.911241,-2.0143971 -2,-2.03125 l 0,-1.46875 c 0,-1.3794255 -1.151825,-2.53125 -2.53125,-2.53125 l -13,0 z M 3.5,5 16.5,5 C 17.331,5 18,5.669 18,6.5 l 0,2.5 1,0 c 0.554,0 1,0.446 1,1 l 0,2 c 0,0.554 -0.446,1 -1,1 l -1,0 0,2.5 c 0,0.831 -0.669,1.5 -1.5,1.5 l -13,0 C 2.669,17 2,16.331 2,15.5 l 0,-9 C 2,5.669 2.669,5 3.5,5 z M 5,7 C 4.446,7 4,7.446 4,8 l 0,6 c 0,0.554 0.446,1 1,1 l 10,0 c 0.554,0 1,-0.446 1,-1 l 0,-2 0,-2 0,-2 C 16,7.446 15.554,7 15,7 L 5,7 z m 0.03125,1.03125 9.9375,0 0,1.96875 0,2 0,1.96875 -9.9375,0 0,-5.9375 z"
+       inkscape:connector-curvature="0"
+       id="path6517"
+       style="opacity:0.15;fill:#ffffff;fill-opacity:1;stroke:none;display:inline" />
+    <path
+       d="M 3.5,5 C 2.669,5 2,5.669 2,6.5 l 0,9 C 2,16.331 2.669,17 3.5,17 l 13,0 c 0.831,0 1.5,-0.669 1.5,-1.5 l 0,-2.5 1,0 c 0.554,0 1,-0.446 1,-1 l 0,-2 C 20,9.446 19.554,9 19,9 L 18,9 18,6.5 C 18,5.669 17.331,5 16.5,5 L 3.5,5 z M 5,7 15,7 c 0.554,0 1,0.446 1,1 l 0,2 0,2 0,2 c 0,0.554 -0.446,1 -1,1 L 5,15 C 4.446,15 4,14.554 4,14 L 4,8 C 4,7.446 4.446,7 5,7 z"
+       inkscape:connector-curvature="0"
+       id="path4523"
+       style="fill:url(#linearGradient4199-4);fill-opacity:1;stroke:none;display:inline" />
+    <path
+       d="M 3.5,5 C 2.669,5 2,5.669 2,6.5 l 0,1 C 2,6.669 2.669,6 3.5,6 l 13,0 C 17.331,6 18,6.669 18,7.5 l 0,-1 C 18,5.669 17.331,5 16.5,5 l -13,0 z m 14.5,4 0,1 1,0 c 0.554,0 1,0.446 1,1 l 0,-1 C 20,9.446 19.554,9 19,9 l -1,0 z m -14,5 0,1 c 0,0.554 0.446,1 1,1 l 10,0 c 0.554,0 1,-0.446 1,-1 l 0,-1 c 0,0.554 -0.446,1 -1,1 L 5,15 C 4.446,15 4,14.554 4,14 z"
+       inkscape:connector-curvature="0"
+       id="path4525"
+       style="opacity:0.5;fill:#2b0000;fill-opacity:1;stroke:none;display:inline" />
+    <path
+       d="M 5,7 C 4.446,7 4,7.446 4,8 L 4,9 C 4,8.446 4.446,8 5,8 l 10,0 c 0.554,0 1,0.446 1,1 L 16,8 C 16,7.446 15.554,7 15,7 L 5,7 z m 15,5 c 0,0.554 -0.446,1 -1,1 l -1,0 0,1 1,0 c 0.554,0 1,-0.446 1,-1 l 0,-1 z m -18,3.5 0,1 C 2,17.331 2.669,18 3.5,18 l 13,0 c 0.831,0 1.5,-0.669 1.5,-1.5 l 0,-1 c 0,0.831 -0.669,1.5 -1.5,1.5 l -13,0 C 2.669,17 2,16.331 2,15.5 z"
+       inkscape:connector-curvature="0"
+       id="path4088"
+       style="opacity:0.3;fill:#ffffff;fill-opacity:1;stroke:none;display:inline" />
+  </g>
+</svg>

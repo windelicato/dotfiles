@@ -1,0 +1,233 @@
+#!/bin/bash
+source ./script_filter
+
+#Function for retriving filters.
+#   $1 is the return parameter.
+#   $2 is the target filter.
+#   $3 -> $9 is optional parameters for specific filters.
+function get_filter {
+	filter_$2 filter $3 $4 $5 $6 $7 $8 $9
+	eval "$1='$filter'"
+}
+
+#Function for changing folder.
+#   $1 is the target folder.
+function folder_change {
+	cp -R ../alternative_icons/folders/$1/* ../real_icons
+}
+
+#Function for changing navigation icons.
+#   $1 is the target navigation.
+function navigation_change {
+	cp -R ../alternative_icons/navigation/$1/* ../real_icons/actions
+}
+
+#Function for changing logo.
+#   $1 is the target logo.
+function logo_change {
+	cp -r ../alternative_icons/logos/$1 ../real_icons/apps/checkbox-gtk.svg
+	cp -r ../alternative_icons/logos/$1 ../real_icons/places/distributor-logo.svg
+	cp -r ../alternative_icons/logos/$1 ../real_icons/apps/start-here.svg
+}
+
+#Function for setting a custom logo.
+#   $1 is the target file to be the new logo.
+function set_custom_logo {
+	cp "$1" ../alternative_icons/logos/custom
+	sleep 1
+	logo_change custom
+}
+
+#Function for copying the sonata icons to "/usr/share/pixamps/".
+#   $1 is the required password.
+function sonata_copy {
+	if [ -d /usr/share/pixmaps/sonata_backup ]
+	then
+		echo $1 | sudo -S -p "" cp -r ../specific_applications/sonata/* /usr/share/pixmaps/
+	else
+		echo $1 | sudo -S -p "" mkdir /usr/share/pixmaps/sonata_backup
+		echo $1 | sudo -S -p "" cp -r /usr/share/pixmaps/sonata*.png /usr/share/pixmaps/sonata_backup/
+		echo $1 | sudo -S -p "" cp -r ../specific_applications/sonata/* /usr/share/pixmaps/
+		
+	fi
+}
+
+#Function for copying the pidgin icons to "/usr/share/pixamps/".
+#   $1 is the required password.
+function pidgin_copy {
+	if [ -d /usr/share/pixmaps/pidgin_backup ]
+	then
+		echo $1 | sudo -S -p "" cp -R ../specific_applications/pidgin /usr/share/pixmaps/
+	else
+		echo $1 | sudo -S -p "" mkdir /usr/share/pixmaps/pidgin_backup
+		echo $1 | sudo -S -p "" cp -R /usr/share/pixmaps/pidgin /usr/share/pixmaps/pidgin_backup
+		echo $1 | sudo -S -p ""  cp -R ../specific_applications/pidgin /usr/share/pixmaps/
+	fi
+}
+
+#Function for copying the pidgin icons to "/usr/share/pixamps/".
+#   $1 is the required password.
+function emesene_copy {
+	if [ -d /usr/share/emesene/themes/default_backup ]
+	then
+		echo $1 | sudo -S -p "" cp -R ../specific_applications/emesene/default /usr/share/emesene/themes/
+	else
+		echo $1 | sudo -S -p "" mkdir /usr/share/emesene/themes/default_backup
+		echo $1 | sudo -S -p "" cp -R /usr/share/emesene/themes/default /usr/share/emesene/themes/default_backup
+		echo $1 | sudo -S -p "" cp -R ../specific_applications/emesene/default /usr/share/emesene/themes/
+	fi
+}
+
+#Function for copying the wicd icons to "/usr/share/pixmaps/wicd/".
+#   $1 is the required password.
+function wicd_copy {
+	if [ -d /usr/share/pixmaps/wicd/icons_backup ]
+	then
+		cd ../specific_applications/wicd/
+		mkdir converted
+		for f in *.png; do rsvg-convert --width=22 --height=22 $f -o ./converted/$f; done
+		cp wired-gui.svg ./converted/wired-gui.svg
+		cd ./converted/
+		echo $1 | sudo -S -p "" mv -f ./ /usr/share/pixmaps/wicd/
+		cd ../
+		rm -r converted
+		cd ../../scripts/
+	else
+		echo $1 | sudo -S -p "" cp -R /usr/share/pixmaps/wicd /usr/share/pixmaps/wicd_backup
+		cd ../specific_applications/wicd/
+		mkdir converted
+		for f in *.png; do rsvg-convert --width=22 --height=22 $f -o ./converted/$f; done
+		cp wired-gui.svg ./converted/wired-gui.svg
+		cd ./converted/
+		echo $1 | sudo -S -p "" cp -R ./ /usr/share/pixmaps/wicd/
+		cd ../
+		rm -r converted
+		cd ../../scripts/
+	fi
+}
+
+#Function for copying the theme to root user.
+#   $1 is the required password.
+function root_copy {
+	cuver=`bash current_state/current_version`
+	echo $1 | sudo -S -p "" cp -r ../../ /usr/share/icons/$cuver
+}
+
+#Function for making the script executable trough the terminal and creating a menu-item.
+#   $1 is the required password.
+function make_exec {
+	echo $1 | sudo -S -p "" cp ../other/acyl /usr/bin/acyl
+	echo $1 | sudo -S -p "" cp ../other/acyl.desktop /usr/share/applications/acyl.desktop
+}
+
+#Function for appying settings to action icons.
+#   $1 is the filter.
+#   $2 is the color-settings.
+#   $3 is the gradient settings.
+function apply_actions {
+
+	eval "set='<acyl-settings>\n$1\n$2\n$3\n</acyl-settings>'"
+
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../real_icons/actions/*.svg
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../alternative_icons/navigation/*/*.svg
+}
+
+#Function for appying settings to emblem icons.
+#   $1 is the filter.
+#   $2 is the color-settings.
+#   $3 is the gradient settings.
+function apply_emblems {
+
+	eval "set='<acyl-settings>\n$1\n$2\n$3\n</acyl-settings>'"
+
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../real_icons/emblems/*.svg
+}
+
+#Function for appying settings to mimitype icons.
+#   $1 is the filter.
+#   $2 is the color-settings.
+#   $3 is the gradient settings.
+function apply_mimetype {
+
+	eval "set='<acyl-settings>\n$1\n$2\n$3\n</acyl-settings>'"
+
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../real_icons/mimetypes/*.svg
+}
+
+#Function for appying settings to satus icons.
+#   $1 is the filter.
+#   $2 is the color-settings.
+#   $3 is the gradient settings.
+function apply_status {
+
+	eval "set='<acyl-settings>\n$1\n$2\n$3\n</acyl-settings>'"
+
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../real_icons/status/*.svg
+}
+
+#Function for appying settings to apps icons.
+#   $1 is the filter.
+#   $2 is the color-settings.
+#   $3 is the gradient settings.
+function apply_apps {
+
+	eval "set='<acyl-settings>\n$1\n$2\n$3\n</acyl-settings>'"
+
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../real_icons/apps/*.svg
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../specific_applications/emesene/default/*
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../specific_applications/sonata/*
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../specific_applications/pidgin/*/*/*
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../specific_applications/wicd/*
+}
+
+#Function for appying settings to places icons.
+#   $1 is the filter.
+#   $2 is the color-settings.
+#   $3 is the gradient settings.
+function apply_places {
+
+	eval "set='<acyl-settings>\n$1\n$2\n$3\n</acyl-settings>'"
+
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../real_icons/places/*.svg
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../alternative_icons/folders/*/*/*
+}
+
+#Function for appying settings to the other icons.
+#   $1 is the filter.
+#   $2 is the color-settings.
+#   $3 is the gradient settings.
+function apply_except {
+
+	eval "set='<acyl-settings>\n$1\n$2\n$3\n</acyl-settings>'"
+
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../real_icons/animations/*.svg
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../real_icons/categories/*.svg
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../real_icons/devices/*.svg
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../real_icons/stock/*.svg
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ../alternative_icons/logos/*
+}
+
+#Function for appying settings to all icons.
+#   $1 is the color-settings.
+#   $2 is the gradient settings.
+#   $3 is the filter.
+function apply_all {	
+	apply_actions "$1" "$2" "$3"
+	apply_emblems "$1" "$2" "$3"
+	apply_except "$1" "$2" "$3"
+	apply_mimetype "$1" "$2" "$3"
+	apply_status "$1" "$2" "$3"
+	apply_apps "$1" "$2" "$3"
+	apply_places "$1" "$2" "$3"
+}
+
+#Function for appying settings to preview icons.
+#   $1 is the filter.
+#   $2 is the color-settings.
+#   $3 is the gradient settings.
+function apply_preview {
+
+	eval "set='<acyl-settings>\n$1\n$2\n$3\n</acyl-settings>'"
+
+	perl -i -pe 'BEGIN{undef $/;} s+<acyl-settings>.*</acyl-settings>+'"$set"'+smg' ./preview_icons/*.svg
+}

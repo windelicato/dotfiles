@@ -1,0 +1,72 @@
+/*******
+ * OSD *
+ *******/
+@define-color osd_highlight #ffffff;
+@define-color osd_lowlight #525252;
+@define-color osd_base #212526;
+
+@define-color osd_fg #ededed;
+@define-color osd_bg alpha(@osd_base, 0.80);
+
+@define-color osd_bg_backdrop alpha(shade(@osd_base, 1.40), 0.90);
+
+@define-color osd_text_shadow alpha(black, 0.75);
+
+@define-color osd_toolbar_bg_a alpha(@osd_base, 0.80);
+@define-color osd_toolbar_bg_b alpha(#101010, 0.80);
+@define-color osd_toolbar_bg_c alpha(shade(@osd_base, 1.02), 0.80);
+
+@define-color osd_button_bg_a alpha(@osd_highlight, 0.16);
+@define-color osd_button_bg_b alpha(@osd_lowlight, 0.05);
+@define-color osd_button_bg_c alpha(@osd_highlight, 0.12);
+
+@define-color osd_button_bg_insensitive alpha(@osd_highlight, 0.25);
+@define-color osd_button_bg_insensitive_active alpha(@osd_highlight, 0.16);
+
+@define-color osd_button_bg_hover_a alpha(@osd_highlight, 0.28);
+@define-color osd_button_bg_hover_b alpha(@osd_lowlight, 0.14);
+@define-color osd_button_bg_hover_c alpha(@osd_highlight, 0.14);
+
+@define-color osd_button_bg_active_a alpha(@osd_lowlight, 0.18);
+@define-color osd_button_bg_active_b alpha(@osd_highlight, 0.23);
+@define-color osd_button_bg_active_c alpha(@osd_lowlight, 0.17);
+
+@define-color osd_button_bg_backdrop alpha(@osd_highlight, 0.18);
+@define-color osd_button_bg_backdrop_hover alpha(@osd_highlight, 0.25);
+@define-color osd_button_bg_backdrop_active alpha(@osd_highlight, 0.35);
+@define-color osd_button_bg_backdrop_insensitive alpha(@osd_highlight, 0.08);
+
+@define-color osd_button_fg_backdrop shade(@osd_fg, 0.70);
+@define-color osd_button_fg_backdrop_active shade(@osd_fg, 0.95);
+
+@define-color osd_button_fg shade(@osd_fg, 0.80);
+@define-color osd_button_fg_hover shade(@osd_fg, 0.96);
+@define-color osd_button_fg_active shade(@osd_fg, 1.10);
+@define-color osd_button_fg_insensitive shade(@osd_fg, 0.70);
+
+@define-color osd_button_border alpha(@osd_highlight, 0.40);
+@define-color osd_button_inset shade(@osd_fg, 0.67);
+@define-color osd_button_shadow alpha(black, 0.35);
+
+@define-color osd_trough_bg alpha(@osd_button_fg, 0.10);
+
+/*********************
+ * Error/Warning/... *
+ *********************/
+@define-color link_color #4a90d9;
+@define-color warning_color #f57900;
+@define-color error_color #cc0000;
+@define-color success_color #4e9a06;
+
+@define-color info_fg_color black;
+@define-color info_text_shadow alpha(black, 0.1);
+@define-color info_bg_color rgb (252, 252, 189);
+@define-color warning_fg_color black;
+@define-color warning_text_shadow alpha(black, 0.1);
+@define-color warning_bg_color rgb (250, 173, 61);
+@define-color question_fg_color white;
+@define-color question_text_shadow alpha(black, 0.3);
+@define-color question_bg_color rgb (138, 173, 212);
+@define-color error_fg_color white;
+@define-color error_text_shadow alpha(black, 0.5);
+@define-color error_bg_color rgb (237, 54, 54);

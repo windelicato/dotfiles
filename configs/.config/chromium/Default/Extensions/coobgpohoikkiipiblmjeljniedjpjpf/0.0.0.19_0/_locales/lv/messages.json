@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "Vis\u0101tr\u0101kais mekl\u0113\u0161anas veids t\u012Bmekl\u012B."
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "Google mekl\u0113\u0161ana"
+   }
+}

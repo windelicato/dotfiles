@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "App description.",
+      "message": "\u5FEB\u6377\u7684\u7535\u5B50\u90AE\u4EF6\u670D\u52A1\uFF0C\u53EF\u4EE5\u641C\u7D22\u90AE\u4EF6\u4E14\u6709\u6548\u51CF\u5C11\u4E86\u5783\u573E\u90AE\u4EF6\u3002"
+   },
+   "appName": {
+      "description": "App name.",
+      "message": "Gmail"
+   }
+}

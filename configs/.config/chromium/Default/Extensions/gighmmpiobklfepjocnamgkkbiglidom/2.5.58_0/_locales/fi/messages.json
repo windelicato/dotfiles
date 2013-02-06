@@ -1,0 +1,819 @@
+{
+   "adalreadyblocked": {
+      "message": "Sinun  ei tarvitse tehd\u00E4 mit\u00E4\u00E4n, jos mainos on jo estettyn\u00E4"
+   },
+   "adblock_auto_removes_ads_thats_all": {
+      "message": "AdBlock est\u00E4\u00E4 kaikki mainokset automaattisesti. Siin\u00E4 kaikki."
+   },
+   "adblock_is_paused": {
+      "message": "AdBlockin toiminta on keskeytetty. T\u00E4m\u00E4n takia mainoksia ei estet\u00E4, joten t\u00E4t\u00E4 sivua ei voi k\u00E4ytt\u00E4\u00E4. Ota AdBlockin toiminta uudelleen k\u00E4ytt\u00F6\u00F6n ensin ja yrit\u00E4 sitten uudelleen."
+   },
+   "adblock_wont_run_on_pages_matching": {
+      "message": "AdBlock ei ole k\u00E4yt\u00F6ss\u00E4 sivuilla, jotka vastaavat n\u00E4it\u00E4 ehtoja:"
+   },
+   "adblockreportinganad": {
+      "message": "AdBlock - Mainoksen ilmoittaminen"
+   },
+   "addthisfilter": {
+      "message": "Lis\u00E4\u00E4 t\u00E4m\u00E4 suodatin"
+   },
+   "adreport2": {
+      "message": "L\u00F6ysitk\u00F6 siis mainoksen joltain verkkosivulta? Nyt l\u00F6yd\u00E4t oikean paikan siit\u00E4 ilmoittamiseen!\u003Cbr/\u003E Muista: mainosten ilmoittaminen on vapaaehtoista. Jos et halua tehd\u00E4 t\u00E4t\u00E4, voit sulkea t\u00E4m\u00E4n ikkunan ja est\u00E4\u00E4 mainoksen vain omalla tietokoneellasi 'Mukauta' -v\u00E4lilehden avulla asetussivulla!"
+   },
+   "adstillappear": {
+      "message": "N\u00E4kyyk\u00F6 mainos edelleen?"
+   },
+   "advanced_options": {
+      "message": "Olen edistynyt k\u00E4ytt\u00E4j\u00E4, n\u00E4yt\u00E4 edistyneet asetukset."
+   },
+   "any_new_tabs_you_open_Will_be_automatically_ad_free": {
+      "message": "Jokainen uusi v\u00E4lilehti jonka avaat on automaattisesti mainosvapaa."
+   },
+   "anysite": {
+      "message": "Mik\u00E4 tahansa verkkosivusto"
+   },
+   "appliedwhenbrowsing": {
+      "message": "T\u00E4m\u00E4 suodatin otetaan k\u00E4ytt\u00F6\u00F6n kun selaat:"
+   },
+   "betalabel": {
+      "message": "Beta"
+   },
+   "blacklistclickmessage": {
+      "message": "Napsauta mainosta hiiren oikealla n\u00E4pp\u00E4imell\u00E4 sivulla -- tai est\u00E4 se t\u00E4ss\u00E4 manuaalisesti."
+   },
+   "blacklisterattrwillbe": {
+      "message": "$attribute$ arvossa $value$",
+      "placeholders": {
+         "attribute": {
+            "content": "$1"
+         },
+         "value": {
+            "content": "$2"
+         }
+      }
+   },
+   "blacklisterblockedelement": {
+      "message": "Estetty kohde:"
+   },
+   "blacklisterblocksalloftype": {
+      "message": "Varoitus: t\u00E4m\u00E4 suodatin est\u00E4\u00E4 kaikki tyypin $elementtype$ kohteet t\u00E4ll\u00E4 sivulla!",
+      "placeholders": {
+         "elementtype": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistereditfilter": {
+      "message": "Kirjoita oikea suodatin alle ja napsauta OK"
+   },
+   "blacklistereditinvalid1": {
+      "message": "Suodatin ei kelpaa: $exception$",
+      "placeholders": {
+         "exception": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistermatches": {
+      "message": "Suodatin vastaa $matchcount$ kohdetta t\u00E4ll\u00E4 sivulla.",
+      "placeholders": {
+         "matchcount": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklisternofilter": {
+      "message": "Suodatinta ei m\u00E4\u00E4ritetty!"
+   },
+   "blacklisternotsure": {
+      "message": "\u003Cb\u003EEtk\u00F6 ole varma?\u003C/b\u003E Paina vain 'Est\u00E4!'-painiketta."
+   },
+   "blacklisteroptions1": {
+      "message": "Mitk\u00E4 ehdot pit\u00E4\u00E4 mielest\u00E4si t\u00E4ytty\u00E4 joka kerta t\u00E4ll\u00E4 sivustolla k\u00E4yt\u00E4ess\u00E4?"
+   },
+   "blacklisteroptionstitle": {
+      "message": "Viimeinen vaihe: mik\u00E4 tekee t\u00E4st\u00E4 mainoksen?"
+   },
+   "blacklistersinglematch": {
+      "message": "Suodatin vastaa \u003Cb\u003E1\u003C/b\u003E kohdetta t\u00E4ll\u00E4 sivulla."
+   },
+   "blacklisterthefilter": {
+      "message": "Suodatin, jota voidaan muuttaa asetussivulla:"
+   },
+   "blacklistertype": {
+      "message": "Tyyppi"
+   },
+   "blacklisterwarningnofilter": {
+      "message": "Varoitus: suodatinta ei m\u00E4\u00E4ritetty!"
+   },
+   "block_an_ad_on_this_page": {
+      "message": "Est\u00E4 mainos t\u00E4ll\u00E4 sivulla"
+   },
+   "block_by_url_instead": {
+      "message": "Kehittyneet k\u00E4ytt\u00E4j\u00E4t: est\u00E4 osoitteen avulla"
+   },
+   "block_this_ad": {
+      "message": "Est\u00E4 t\u00E4m\u00E4 mainos"
+   },
+   "blockanadtitle": {
+      "message": "Est\u00E4 mainos"
+   },
+   "blockdomain": {
+      "message": "Sivun verkkotunnus, jossa k\u00E4ytet\u00E4\u00E4n"
+   },
+   "blockeverycontaining": {
+      "message": "Est\u00E4 kaikki kohteet, jotka sis\u00E4lt\u00E4v\u00E4t:"
+   },
+   "blockmoreads": {
+      "message": "Est\u00E4 lis\u00E4\u00E4 mainoksia:"
+   },
+   "blockurlwithtext": {
+      "message": "Est\u00E4 osoitteet, jotka sis\u00E4lt\u00E4v\u00E4t t\u00E4m\u00E4n tekstin"
+   },
+   "buttonback": {
+      "message": "Edellinen"
+   },
+   "buttonblockit": {
+      "message": "Est\u00E4!"
+   },
+   "buttoncancel": {
+      "message": "Peruuta"
+   },
+   "buttonedit": {
+      "message": "Muokkaa"
+   },
+   "buttonexclude": {
+      "message": "Poista k\u00E4yt\u00F6st\u00E4"
+   },
+   "buttonlooksgood": {
+      "message": "N\u00E4ytt\u00E4\u00E4 hyv\u00E4lt\u00E4"
+   },
+   "buttonok": {
+      "message": "OK"
+   },
+   "cantblockflash": {
+      "message": "Mainosten est\u00E4minen Flash- ja muiden lis\u00E4osien sis\u00E4ll\u00E4 ei viel\u00E4 ole mahdollista. Odotamme tukea selaimelta ja WebKitilt\u00E4."
+   },
+   "cantblockflashwarning": {
+      "message": "N\u00E4kyyk\u00F6 mains videossa tai jossakin muussa vastaavassa, kuten Flash-peliss\u00E4 tai ennen sit\u00E4?"
+   },
+   "casesensitive": {
+      "message": "T\u00E4m\u00E4 suodatin on kirjainten koosta riippuvainen:"
+   },
+   "changelabel": {
+      "message": "muuta"
+   },
+   "checkinfirefox_1": {
+      "message": "Asenna Firefox $chrome$ jos sinulla ei ole sit\u00E4.",
+      "placeholders": {
+         "chrome": {
+            "content": "$1tai Chrome$2"
+         }
+      }
+   },
+   "checkinfirefox_2": {
+      "message": "Asenna AdBlock Plus Firefoxille $chrome$ jos sinulla ei ole sit\u00E4.",
+      "placeholders": {
+         "chrome": {
+            "content": "$1tai AdBlockforChrome Chromelle$2"
+         }
+      }
+   },
+   "checkinfirefox_3": {
+      "message": "Liity siin\u00E4 selaimessa samoihin suodatinlistoihin kuin nyt (paitsi AdBlockin mukautetut suodattimet Firefoxissa)."
+   },
+   "checkinfirefox_4": {
+      "message": "Lataa sivu, jolla on mainos, sill\u00E4 selaimella."
+   },
+   "checkinfirefox_5": {
+      "message": "N\u00E4kyyk\u00F6 mainos my\u00F6s siin\u00E4 selaimessa?"
+   },
+   "checkinfirefoxtitle": {
+      "message": "Tarkista Firefoxissa $chrome$",
+      "placeholders": {
+         "chrome": {
+            "content": "$1tai Chromessa$2"
+         }
+      }
+   },
+   "cleanuplist": {
+      "message": "Optimoi listan suodattimet:"
+   },
+   "clickthead": {
+      "message": "Napsauta mainosta est\u00E4\u00E4ksesi sen."
+   },
+   "clickupdatefilters": {
+      "message": "Napsauta t\u00E4st\u00E4: \u003Ca\u003EP\u00E4ivit\u00E4 suodattimeni!\u003C/a\u003E"
+   },
+   "close": {
+      "message": "Sulje"
+   },
+   "correctfilters": {
+      "message": "Korjaa suodattimia"
+   },
+   "csstomatch": {
+      "message": "Vastaava CSS"
+   },
+   "debuginlogoption": {
+      "message": "N\u00E4yt\u00E4 virheilmoitukset Virhekonsolissa (hidastaa AdBlockin toimintaa)"
+   },
+   "description2": {
+      "message": "Chromen suosituin lis\u00E4osa. Sit\u00E4 k\u00E4ytt\u00E4\u00E4 yli 10 miljoonaa k\u00E4ytt\u00E4j\u00E4\u00E4! Est\u00E4\u00E4 kaikki mainokset."
+   },
+   "did_you_know_this_is_my_full_time_job": {
+      "message": "Tiesitk\u00F6, ett\u00E4 t\u00E4m\u00E4 on kokop\u00E4iv\u00E4ty\u00F6ni?"
+   },
+   "disabled_by_filter_lists": {
+      "message": "AdBlock on poistettu k\u00E4yt\u00F6st\u00E4 t\u00E4ll\u00E4 sivulla (suodatinlistojen perusteella)."
+   },
+   "disabled_on_this_page": {
+      "message": "AdBlock on pois k\u00E4yt\u00F6st\u00E4 t\u00E4ll\u00E4 sivulla."
+   },
+   "done": {
+      "message": "Valmis!"
+   },
+   "dont_run_on_pages_on_domain": {
+      "message": "\u00C4l\u00E4 k\u00E4yt\u00E4 t\u00E4m\u00E4n verkkotunnuksen sivuilla"
+   },
+   "dont_run_on_this_page": {
+      "message": "\u00C4l\u00E4 k\u00E4yt\u00E4 t\u00E4ll\u00E4 sivulla"
+   },
+   "enable": {
+      "message": "ota k\u00E4ytt\u00F6\u00F6n"
+   },
+   "excludedomainorurl": {
+      "message": "Osoite tai verkkotunnus, jossa AdBlockin ei pit\u00E4isi est\u00E4\u00E4 mit\u00E4\u00E4n"
+   },
+   "excludefilterremoved": {
+      "message": "Suodatin poistettiin. P\u00E4ivit\u00E4 alkuper\u00E4inen sivu luodaksesi listan resursseista."
+   },
+   "failedtofetchfilter": {
+      "message": "Suodattimen haku ep\u00E4onnistui!"
+   },
+   "faq": {
+      "message": "UKK"
+   },
+   "fetchinglabel": {
+      "message": "Haetaan... odota hetki."
+   },
+   "filecleanerwarning": {
+      "message": "Jos n\u00E4et t\u00E4m\u00E4n viestin joka kerta k\u00E4ynnist\u00E4ess\u00E4si AdBlockin, varmista, ett\u00E4 et k\u00E4yt\u00E4 tiedostojen poisto-ohjelmaa, joka poistaa my\u00F6s 'localStorage' -tiedostot."
+   },
+   "filteradblock_custom": {
+      "message": "AdBlockin mukautetut listat (suositeltu)"
+   },
+   "filterchinese": {
+      "message": "- lis\u00E4suodattimet: kiina"
+   },
+   "filterczech": {
+      "message": "T\u0161ekki-suodattimet"
+   },
+   "filterdanish": {
+      "message": "Tanska-suodattimet"
+   },
+   "filterdutch": {
+      "message": "- Hollanti-suodattimet"
+   },
+   "filtereasylist": {
+      "message": "EasyList (suositeltu)"
+   },
+   "filtereasylist_plun_korean": {
+      "message": "Korea-suodattimet"
+   },
+   "filtereasylist_plus_bulgarian": {
+      "message": "- Bulgaria-suodattimet"
+   },
+   "filtereasylist_plus_finnish": {
+      "message": "- Suomi-suodattimet (suositeltu)"
+   },
+   "filtereasylist_plus_french": {
+      "message": "- Ranska-suodattimet"
+   },
+   "filtereasylist_plus_german": {
+      "message": "- Saksa-suodattimet"
+   },
+   "filtereasylist_plus_greek": {
+      "message": "- lis\u00E4suodattimet: kreikka"
+   },
+   "filtereasylist_plus_polish": {
+      "message": "- Puola-suodattimet"
+   },
+   "filtereasylist_plus_romanian": {
+      "message": "- Romania-suodattimet"
+   },
+   "filtereasylist_plus_spanish": {
+      "message": "Espanja-suodattimet"
+   },
+   "filtereasyprivacy": {
+      "message": "EasyPrivacy (yksityisyydensuoja)"
+   },
+   "filterhasbeenadded": {
+      "message": "Suodatin lis\u00E4ttiin onnistuneesti!\nP\u00E4ivit\u00E4 sivu n\u00E4hd\u00E4ksesi tuloksen!"
+   },
+   "filterhungarian": {
+      "message": "Unkari-suodattimet"
+   },
+   "filterisraeli": {
+      "message": "Israel-suodattimet"
+   },
+   "filteritalian": {
+      "message": "Italia-suodattimet"
+   },
+   "filterjapanese": {
+      "message": "Japani-suodattimet"
+   },
+   "filterlistlink": {
+      "message": "\u00C4l\u00E4 ota k\u00E4ytt\u00F6\u00F6n liian monta suodatinta -- jokainen hidastaa v\u00E4h\u00E4n lis\u00E4\u00E4! Tekij\u00F6iden tiedot ja lis\u00E4listoja l\u00F6ytyy \u003Ca\u003Et\u00E4\u00E4lt\u00E4\u003C/a\u003E."
+   },
+   "filterlistsrock": {
+      "message": "Suodatinlistat est\u00E4v\u00E4t suurimman osan mainoksista.  Voit my\u00F6s:"
+   },
+   "filterrussian": {
+      "message": "- lis\u00E4suodattimet: ven\u00E4j\u00E4 ja ukraina"
+   },
+   "filtersavewarning": {
+      "message": "Ole varovainen: jos teet virheen t\u00E4ss\u00E4, my\u00F6s viralliset suodattimet voivat lakata toimimasta!\u003Cbr/\u003ELue \u003Ca\u003Esuodattimen syntaksiopas\u003C/a\u003E saadaksesi lis\u00E4tietoja suodattimien muokkauksesta."
+   },
+   "filterstabtitle": {
+      "message": "Ota suodatinlistoja k\u00E4ytt\u00F6\u00F6n"
+   },
+   "findingads": {
+      "message": "Etsit\u00E4\u00E4n mainoksia...\u003Cbr/\u003E\u003Cbr/\u003E\u003Ci\u003ET\u00E4m\u00E4 kest\u00E4\u00E4 hetken.\u003C/i\u003E"
+   },
+   "fixityourself": {
+      "message": "OK, voit edelleen est\u00E4\u00E4 mainoksen vain itsellesi Asetukset-sivulla. Kiitos!"
+   },
+   "flashads": {
+      "message": "Videot ja Flash"
+   },
+   "for_more_options_right_click": {
+      "message": "Lis\u00E4asetuksia varten, voit klikata oikeaa nappia nettisivuissa tai klikata $img$ -nappia ty\u00F6kalurivist\u00E4.",
+      "placeholders": {
+         "img": {
+            "content": "\u003Cimg src=\"../../img/icon19.png\"/\u003E"
+         }
+      }
+   },
+   "format_site1_site2_site3": {
+      "message": "Muoto: ~sivu1.com|~sivu2.com|~uutiset.sivu3.org"
+   },
+   "generaloptions": {
+      "message": "Yleiset asetukset"
+   },
+   "googletextads": {
+      "message": "Pid\u00E4n Google-haun tekstimainoksista; n\u00E4yt\u00E4 ne minulle."
+   },
+   "headerfilter": {
+      "message": "Vastaava suodatin"
+   },
+   "headerresource": {
+      "message": "Kohde"
+   },
+   "headertype": {
+      "message": "Tyyppi"
+   },
+   "help": {
+      "message": "Ohje"
+   },
+   "hide_this_button": {
+      "message": "Piilota t\u00E4m\u00E4 painike"
+   },
+   "how_to_use_adblock": {
+      "message": "Kuinka k\u00E4ytt\u00E4\u00E4 AdBlockia:"
+   },
+   "installedtitle": {
+      "message": "AdBlock on nyt asennettu!"
+   },
+   "installing_adblock": {
+      "message": "Asennetaan AdBlockia..."
+   },
+   "invalidListUrl": {
+      "message": "Listan osoite ei kelpaa. Se poistetaan."
+   },
+   "labelshow": {
+      "message": "n\u00E4yt\u00E4"
+   },
+   "lang_bulgarian": {
+      "message": "bulgaria"
+   },
+   "lang_chinese": {
+      "message": "kiina"
+   },
+   "lang_czech": {
+      "message": "t\u0161ekki"
+   },
+   "lang_danish": {
+      "message": "tanska"
+   },
+   "lang_dutch": {
+      "message": "hollanti"
+   },
+   "lang_english": {
+      "message": "englanti"
+   },
+   "lang_finnish": {
+      "message": "suomi"
+   },
+   "lang_french": {
+      "message": "ranska"
+   },
+   "lang_german": {
+      "message": "saksa"
+   },
+   "lang_greek": {
+      "message": "kreikka"
+   },
+   "lang_hungarian": {
+      "message": "unkari"
+   },
+   "lang_israeli": {
+      "message": "israel"
+   },
+   "lang_italian": {
+      "message": "italia"
+   },
+   "lang_japanese": {
+      "message": "japani"
+   },
+   "lang_korean": {
+      "message": "korea"
+   },
+   "lang_polish": {
+      "message": "puola"
+   },
+   "lang_romanian": {
+      "message": "romania"
+   },
+   "lang_russian": {
+      "message": "ven\u00E4j\u00E4"
+   },
+   "lang_spanish": {
+      "message": "espanja"
+   },
+   "lang_ukranian": {
+      "message": "ukraina"
+   },
+   "last_update_failed": {
+      "message": "Viimeisin p\u00E4ivitys ep\u00E4onnistui;"
+   },
+   "linkblockadbyurl": {
+      "message": "Est\u00E4 mainos sen osoitteen avulla"
+   },
+   "linkhidesection": {
+      "message": "Piilota verkkosivun kohta"
+   },
+   "linkunblock": {
+      "message": "N\u00E4yt\u00E4 mainokset verkko-osoitteessa tai verkkotunnuksessa"
+   },
+   "loading": {
+      "message": "LADATAAN..."
+   },
+   "manualfilteredit": {
+      "message": "Muokkaa suodattimia manuaalisesti:"
+   },
+   "modifydomain": {
+      "message": "Sivusto:"
+   },
+   "modifypath": {
+      "message": "Sivu:"
+   },
+   "multipledomainshint": {
+      "message": "Erottele useat verkkotunnukset pilkuilla tai v\u00E4lily\u00F6nneill\u00E4"
+   },
+   "nextstep": {
+      "message": "Seuraava vaihe"
+   },
+   "no": {
+      "message": "Ei"
+   },
+   "nodefaultfilter1": {
+      "message": "T\u00E4lle kielelle ei ole oletussuodatinlistaa.\u003Cbr/\u003EYrit\u00E4 l\u00F6yt\u00E4\u00E4 sopiva lista t\u00E4lle kielelle  $link$ tai est\u00E4 t\u00E4m\u00E4 mainos itse 'Mukauta' -v\u00E4lilehdell\u00E4.",
+      "placeholders": {
+         "link": {
+            "content": "$1t\u00E4st\u00E4$2"
+         }
+      }
+   },
+   "novalidurlpattern": {
+      "message": "Sy\u00F6t\u00E4 kelvollinen osoitemalli!"
+   },
+   "now_you_have_adblock_hooray": {
+      "message": "Nyt sinulla on AdBlock! Hurraa!"
+   },
+   "only_block_ads_on_these_sites": {
+      "message": "Est\u00E4 mainokset vain n\u00E4ill\u00E4 sivuilla:"
+   },
+   "onlyondomains": {
+      "message": "VAIN n\u00E4iden verkkotunnuksien sivut:"
+   },
+   "onlyresourcetypes": {
+      "message": "T\u00E4m\u00E4 suodatin vaikuttaa t\u00E4m\u00E4ntyyppisiin kohteisiin:"
+   },
+   "options": {
+      "message": "Asetukset"
+   },
+   "optionschangelog": {
+      "message": "muutosloki"
+   },
+   "optionstitle": {
+      "message": "AdBlockin asetukset"
+   },
+   "optionsversion": {
+      "message": "Versio $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "orenteraurl": {
+      "message": "Tai sy\u00F6t\u00E4 osoite:"
+   },
+   "other": {
+      "message": "Muu"
+   },
+   "pagelanguagecheck": {
+      "message": "Mill\u00E4 kielell\u00E4 sivu on kirjoitettu?"
+   },
+   "pause_adblock": {
+      "message": "Pys\u00E4yt\u00E4 AdBlock"
+   },
+   "project_home": {
+      "message": "Projektin kotisivu"
+   },
+   "refusetocheck": {
+      "message": "En halua tarkistaa t\u00E4t\u00E4"
+   },
+   "reloadadpage": {
+      "message": "P\u00E4ivit\u00E4 sivu, joka sis\u00E4lt\u00E4\u00E4 mainoksen."
+   },
+   "removefromlist": {
+      "message": "Poista listalta"
+   },
+   "removelabel": {
+      "message": "Poista"
+   },
+   "report_ad_on_page": {
+      "message": "Raportoi mainoksesta t\u00E4ll\u00E4 sivulla"
+   },
+   "reportfilterlistproblem": {
+      "message": "T\u00E4m\u00E4 on suodatinlistan ongelma. Ilmoita se t\u00E4st\u00E4: $link$",
+      "placeholders": {
+         "link": {
+            "content": "$1"
+         }
+      }
+   },
+   "reporttous2": {
+      "message": "Voit ilmoittaa mainoksen meille \u003Ca\u003Eongelmien tarkkailussa\u003C/a\u003E (vain englanniksi)."
+   },
+   "resourceblocklegend1": {
+      "message": "Selite:"
+   },
+   "resourceblocklegend2": {
+      "message": "estetyt kohteet"
+   },
+   "resourceblocklegend3": {
+      "message": "sallitut kohteet"
+   },
+   "resourceblocklegend4": {
+      "message": "estett\u00E4v\u00E4t kohteet"
+   },
+   "resourceblocklegend5": {
+      "message": "piilotuss\u00E4\u00E4nn\u00F6t k\u00E4ytetty"
+   },
+   "resourceblocktitle": {
+      "message": "Est\u00E4 kohde"
+   },
+   "resourceiswhitelisted": {
+      "message": "Valittu kohde on sallittu. T\u00E4m\u00E4n takia et voi est\u00E4\u00E4 sit\u00E4."
+   },
+   "retryaftersubscribe": {
+      "message": "Ota suodatinlista k\u00E4ytt\u00F6\u00F6n, ja yrit\u00E4 sitten uudestaan: $list_title$",
+      "placeholders": {
+         "list_title": {
+            "content": "$1"
+         }
+      }
+   },
+   "safari50_updatenotice": {
+      "message": "K\u00E4yt\u00E4t Safarin vanhaa versiota. Lataa uusin versio k\u00E4ytt\u00E4\u00E4ksesi AdBlockin ty\u00F6kalurivin painiketta AdBlockin toiminnan keskeytt\u00E4miseen, verkkosivujen mainosteneston k\u00E4yt\u00F6st\u00E4 poistoon, ja mainoksista ilmoittamiseen. \u003Ca\u003EP\u00E4ivit\u00E4 nyt\u003C/a\u003E."
+   },
+   "savebutton": {
+      "message": "Tallenna"
+   },
+   "savereminder": {
+      "message": "Muista tallentaa!"
+   },
+   "seeing_this_every_time_you_start_your_browser": {
+      "message": "N\u00E4etk\u00F6 t\u00E4m\u00E4n joka kerta kun avaat selaimesi?"
+   },
+   "selectresources": {
+      "message": "Valitse kohde, jonka haluat est\u00E4\u00E4 tai sallia"
+   },
+   "show_ads_except_for": {
+      "message": "N\u00E4yt\u00E4 mainokset \u003Ci\u003Ekaikkialla\u003C/i\u003E paitsi n\u00E4iss\u00E4 domaineissa..."
+   },
+   "show_resourcelist": {
+      "message": "N\u00E4yt\u00E4 l\u00E4hdelista"
+   },
+   "showcontextmenus": {
+      "message": "\u00C4l\u00E4 n\u00E4yt\u00E4 AdBlock-valintaa oikean klikkauksen valikoissa."
+   },
+   "showlinkstolists": {
+      "message": "N\u00E4yt\u00E4 linkit suodatinlistoille:"
+   },
+   "sliderexplanation": {
+      "message": "Raahaa s\u00E4\u00E4dint\u00E4 oikealle niin kauan, ett\u00E4 mainos h\u00E4vi\u00E4\u00E4 n\u00E4kyvist\u00E4 ja sivu n\u00E4ytt\u00E4\u00E4 hyv\u00E4lt\u00E4."
+   },
+   "slidertitle": {
+      "message": "Vaihe 1: m\u00E4\u00E4rit\u00E4, mit\u00E4 estet\u00E4\u00E4n"
+   },
+   "status_disabled": {
+      "message": "AdBlock ei voi toimia t\u00E4ss\u00E4 verkkotunnuksessa."
+   },
+   "status_paused": {
+      "message": "AdBlock on pys\u00E4ytetty."
+   },
+   "stop_blocking_ads": {
+      "message": "Lopeta mainosten est\u00E4minen:"
+   },
+   "storage_quota_exceeded": {
+      "message": "AdBlock k\u00E4ytt\u00E4\u00E4 t\u00E4ll\u00E4 hetkell\u00E4 liikaa tilaa, koska suodattimia on k\u00E4yt\u00F6ss\u00E4 liian paljon. Poista osa suodattimista k\u00E4yt\u00F6st\u00E4!"
+   },
+   "subscribe_unsubscribe_all": {
+      "message": "$subscribe$ tai $unsubscribe$ jokainen lista.",
+      "placeholders": {
+         "subscribe": {
+            "content": "\u003Ca href='#' id='subscribeAll'\u003ETilaa\u003C/a\u003E"
+         },
+         "unsubscribe": {
+            "content": "\u003Ca href='#' id='unsubscribeAll'\u003Eirtisano\u003C/a\u003E"
+         }
+      }
+   },
+   "subscribebutton": {
+      "message": "Ota k\u00E4ytt\u00F6\u00F6n"
+   },
+   "subscribingfailed": {
+      "message": "Virhe!"
+   },
+   "subscribingfinished": {
+      "message": "Valmis!"
+   },
+   "subscribingtitle": {
+      "message": "Otetaan suodatinlistaa k\u00E4ytt\u00F6\u00F6n..."
+   },
+   "tabcustomize": {
+      "message": "Mukauta"
+   },
+   "tabcustomizetitle": {
+      "message": "Mukauta AdBlockia"
+   },
+   "tabfilterlists": {
+      "message": "Suodatinlistat"
+   },
+   "tabgeneral": {
+      "message": "Yleiset"
+   },
+   "thirdpartycheckbox": {
+      "message": "Mik\u00E4 tahansa verkkosivusto PAITSI verkkosivustot verkkotunnuksessa $domain$",
+      "placeholders": {
+         "domain": {
+            "content": "$1"
+         }
+      }
+   },
+   "translator_credit": {
+      "message": "Kiitokset k\u00E4\u00E4nn\u00F6ksest\u00E4 seuraaville: $translator_names$",
+      "placeholders": {
+         "translator_names": {
+            "content": "Jesse J\u00E4rvi sek\u00E4 ollinpos"
+         }
+      }
+   },
+   "typehiding": {
+      "message": "piilottaminen"
+   },
+   "typeimage": {
+      "message": "kuva"
+   },
+   "typemedia": {
+      "message": "\u00E4\u00E4ni tai video"
+   },
+   "typeobject": {
+      "message": "interaktiivinen objekti"
+   },
+   "typeobject_subrequest": {
+      "message": "object_subrequest"
+   },
+   "typeother": {
+      "message": "muu"
+   },
+   "typepage": {
+      "message": "sivu"
+   },
+   "typepopup": {
+      "message": "ponnahdusikkuna"
+   },
+   "typescript": {
+      "message": "komentosarja"
+   },
+   "typestylesheet": {
+      "message": "tyylim\u00E4\u00E4ritelm\u00E4"
+   },
+   "typesubdocument": {
+      "message": "kehys"
+   },
+   "typeunknown": {
+      "message": "tuntematon"
+   },
+   "typexmlhttprequest": {
+      "message": "xmlhttprequest"
+   },
+   "unpause": {
+      "message": "k\u00E4ynnist\u00E4"
+   },
+   "unsubscribedlabel": {
+      "message": "Poistettu k\u00E4yt\u00F6st\u00E4."
+   },
+   "updateddayago": {
+      "message": "p\u00E4ivitetty p\u00E4iv\u00E4 sitten"
+   },
+   "updateddaysago": {
+      "message": "p\u00E4ivitetty $days$ p\u00E4iv\u00E4\u00E4 sitten",
+      "placeholders": {
+         "days": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedhourago": {
+      "message": "p\u00E4ivitetty tunti sitten"
+   },
+   "updatedhoursago": {
+      "message": "p\u00E4ivitetty $hours$ tuntia sitten",
+      "placeholders": {
+         "hours": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedminuteago": {
+      "message": "p\u00E4ivitetty minuutti sitten"
+   },
+   "updatedminutesago": {
+      "message": "p\u00E4ivitetty $minutes$ minuuttia sitten",
+      "placeholders": {
+         "minutes": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedrightnow": {
+      "message": "p\u00E4ivitetty juuri nyt"
+   },
+   "updatedsecondsago": {
+      "message": "p\u00E4ivitetty $seconds$ sekuntia sitten",
+      "placeholders": {
+         "seconds": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatefromoldversion": {
+      "message": "K\u00E4yt\u00E4t vanhaa versiota AdBlockista. $updatelink$ ensin AdBlockin uusimpaan versioon",
+      "placeholders": {
+         "updatelink": {
+            "content": "$1P\u00E4ivit\u00E4$2"
+         }
+      }
+   },
+   "updatenowmessage": {
+      "message": "Automaattiset p\u00E4ivitykset ovat k\u00E4yt\u00F6ss\u00E4; voit my\u00F6s \u003Ca\u003Ep\u00E4ivitt\u00E4\u00E4 nyt\u003C/a\u003E."
+   },
+   "updateyourlists": {
+      "message": "Varmista, ett\u00E4 suodatinlistasi ovat ajan tasalla"
+   },
+   "warning_overrules_filters": {
+      "message": "Varoitus: n\u00E4et kaikissa muissa sivustoissa mainoksia!\u003Cbr\u003ET\u00E4m\u00E4 ohittaa kaikki filtterit muissa sivustoissa."
+   },
+   "whitelistertitle2": {
+      "message": "\u00C4l\u00E4 k\u00E4yt\u00E4 AdBlockia..."
+   },
+   "whitelisteverycontaining": {
+      "message": "N\u00E4yt\u00E4 kaikki kohteet, jotka sis\u00E4lt\u00E4v\u00E4t:"
+   },
+   "wildcardhint": {
+      "message": "Huomautus: voit k\u00E4ytt\u00E4\u00E4 merkki\u00E4 * jokerimerkkin\u00E4"
+   },
+   "yes": {
+      "message": "Kyll\u00E4"
+   },
+   "you_can_slide_to_change": {
+      "message": "Voit raahata allaolevaa palkkia/palkkeja m\u00E4\u00E4ritt\u00E4\u00E4ksesi sivut, joilla AdBlock ei ole k\u00E4yt\u00F6ss\u00E4."
+   },
+   "you_know_thats_a_bad_idea_right": {
+      "message": "Mit\u00E4 enemm\u00E4n suodatinlistoja sinulla on k\u00E4yt\u00F6ss\u00E4, sit\u00E4 hitaammin AdBlock toimii. Jos k\u00E4yt\u00E4t liian paljon listoja, selaimesi saattaa jopa kaatua joillakin verkkosivuilla. Paina OK liitty\u00E4ksesi listalle varoituksesta huolimatta."
+   }
+}

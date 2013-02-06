@@ -1,4 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/sunn/.config/openbox'
 let g:netrw_dirhist_2='/media/data/Documents/CarlLab'
+let g:netrw_dirhist_3='/home/sunn/.config/openbox'
+let g:netrw_dirhist_4='/media/data/Documents/cs367'
+let g:netrw_dirhist_5='/home/sunn/.config/gtk-3.0'
+let g:netrw_dirhist_6='/home/sunn/.config'
+let g:netrw_dirhist_7='/home/sunn/dwm'
+let g:netrw_dirhist_8='/media/data/Documents/cs315/Lab/Lab3'
+let g:netrw_dirhist_9='/media/data/Downloads/homepage.py'

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: PDFTron PDF2SVG Converter (DEMO VERSION) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svgRoot"
+   version="1.0"
+   viewBox="0 0 22 22"
+   xml:space="preserve"
+   inkscape:version="0.48.1 r9760"
+   width="100%"
+   height="100%"
+   sodipodi:docname="user-available-panel.svg"><metadata
+   id="metadata56"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="1024"
+   inkscape:window-height="547"
+   id="namedview54"
+   showgrid="false"
+   inkscape:zoom="10.28125"
+   inkscape:cx="10"
+   inkscape:cy="9.9452888"
+   inkscape:window-x="0"
+   inkscape:window-y="24"
+   inkscape:window-maximized="1"
+   inkscape:current-layer="svgRoot" />
+<defs
+   id="defs3">
+<font
+   horiz-adv-x="0"
+   id="font5"
+   horiz-origin-x="0"
+   horiz-origin-y="0"
+   vert-origin-x="45"
+   vert-origin-y="90"
+   vert-adv-y="90"><font-face
+   font-family="fnt0"
+   units-per-em="2048"
+   ascent="927"
+   descent="-218"
+   id="font-face7" />
+<missing-glyph
+   horiz-adv-x="0"
+   id="missing-glyph9" />
+<glyph
+   unicode="."
+   horiz-adv-x="569"
+   d="M178,217L392,217L392,-0L178,-0 Z"
+   id="glyph11" />
+<glyph
+   unicode="c"
+   horiz-adv-x="1024"
+   d="M977,385L977,385Q949,183,834,77Q719,-29,528,-29Q315,-29,188,124Q61,277,61,536Q61,795,192,948Q324,1102,546,1102Q739,1102,854,996Q969,891,977,706L977,706L804,706L804,706Q793,821,724,884Q655,947,540,947Q404,947,326,837Q249,728,249,536Q249,332,321,229Q393,126,535,126Q640,126,710,193Q781,261,804,385L804,385 Z"
+   id="glyph13" />
+<glyph
+   unicode="d"
+   horiz-adv-x="1138"
+   d="M541,-29Q326,-29,199,131Q72,292,72,565Q72,806,195,954Q318,1102,516,1102Q713,1102,828,935L842,915L842,915L842,1470L842,1470L932,1470L1022,1470L1022,1470L1022,-0L1022,-0L939,-0L855,-0L855,-0L855,146L855,146L832,113Q721,-29,541,-29 ZM551,940Q400,940,330,843Q260,747,260,537Q260,339,335,232Q411,125,551,125Q682,125,762,223Q842,322,842,484Q842,703,766,821Q691,940,551,940 Z"
+   id="glyph15" />
+<glyph
+   unicode="f"
+   horiz-adv-x="569"
+   d="M357,921L357,921L357,-0L357,-0L267,-0L177,-0L177,-0L177,921L177,921L29,921L29,1070L177,1070L177,1070L177,1252Q177,1371,247,1431Q317,1491,457,1491L536,1488L536,1326L465,1329Q413,1329,385,1295Q357,1262,357,1200L357,1070L357,1070L536,1070L536,921 Z"
+   id="glyph17" />
+<glyph
+   unicode="m"
+   horiz-adv-x="1705"
+   d="M133,-0L133,1070L133,1070L218,1070L304,1070L304,1070L304,911L304,911L304,911L341,959Q462,1102,630,1102Q774,1102,859,1017Q897,979,918,930L918,930L947,967Q1063,1102,1224,1102Q1392,1102,1483,1010Q1575,919,1575,751L1575,-0L1575,-0L1485,-0L1395,-0L1395,-0L1395,690Q1395,812,1345,875Q1295,938,1199,938Q1082,938,1013,847Q944,756,944,601L944,601L944,-0L944,-0L854,-0L764,-0L764,-0L764,733Q764,833,718,885Q673,938,586,938Q466,938,389,836Q313,734,313,573L313,573L313,-0L313,-0L223,-0L133,-0 Z"
+   id="glyph19" />
+<glyph
+   unicode="n"
+   horiz-adv-x="1138"
+   d="M133,-0L133,1070L133,1070L218,1070L304,1070L304,1070L304,912L304,912L304,912L344,965Q461,1102,637,1102Q814,1102,910,1006Q1006,910,1006,733L1006,-0L1006,-0L916,-0L826,-0L826,-0L826,672Q826,813,771,875Q717,938,595,938Q465,938,389,839Q313,741,313,573L313,573L313,-0L313,-0L223,-0L133,-0 Z"
+   id="glyph21" />
+<glyph
+   unicode="o"
+   horiz-adv-x="1138"
+   d="M569,-29Q347,-29,209,127Q72,283,72,536Q72,790,209,946Q347,1102,569,1102Q793,1102,930,946Q1067,790,1067,536Q1067,283,930,127Q793,-29,569,-29 ZM569,126Q711,126,795,237Q879,348,879,536Q879,724,795,835Q711,947,569,947Q427,947,343,835Q260,724,260,536Q260,348,343,237Q427,126,569,126 Z"
+   id="glyph23" />
+<glyph
+   unicode="p"
+   horiz-adv-x="1138"
+   d="M119,1070L119,1070L204,1070L290,1070L290,1070L290,918L290,918L299,931Q415,1102,604,1102Q814,1102,936,957Q1059,813,1059,567Q1059,288,935,129Q812,-29,593,-29Q412,-29,305,110L299,118L299,118L299,-423L299,-423L209,-423L119,-423L119,-423 ZM584,127Q725,127,798,233Q871,340,871,544Q871,745,801,841Q731,938,585,938Q436,938,367,829Q299,720,299,484L299,484L299,484L299,484Q299,313,373,220Q447,127,584,127 Z"
+   id="glyph25" />
+<glyph
+   unicode="r"
+   horiz-adv-x="681"
+   d="M158,-0L158,1070L158,1070L243,1070L329,1070L329,1070L329,887L329,887L329,887Q352,930,378,965Q480,1102,629,1102Q654,1102,680,1093L680,909L643,910Q497,910,417,822Q338,735,338,573L338,573L338,-0L338,-0L248,-0L158,-0 Z"
+   id="glyph27" />
+<glyph
+   unicode="t"
+   horiz-adv-x="569"
+   d="M526,1Q434,-13,392,-13Q274,-13,225,39Q177,91,177,218L177,923L177,923L29,923L29,1070L177,1070L177,1070L177,1370L357,1370L357,1070L357,1070L526,1070L526,923L357,923L357,923L357,218Q357,182,385,161Q414,140,462,140L526,140 Z"
+   id="glyph29" />
+<glyph
+   unicode="w"
+   horiz-adv-x="1478"
+   d="M333,-0L29,1070L29,1070L128,1070L227,1070L227,1070L432,218L432,218L432,218L641,1070L741,1070L841,1070L1056,212L1056,212L1056,212L1273,1070L1273,1070L1362,1070L1452,1070L1452,1070L1149,-0L1053,-0L956,-0L735,836L735,836L735,836L526,-0L430,-0 Z"
+   id="glyph31" />
+</font>
+</defs>
+<style
+   type="text/css"
+   id="style33">
+
+.ps02 { stroke:#97B3FC;fill:none; }
+.ps01 { stroke:none;fill:#000000;fill-rule:nonzero; }
+.ps00 { stroke:none;fill:none; }
+.ps10 { stroke-width:0.000001; }
+.ps20 { 
+letter-spacing:0px;word-spacing:0;font-family:fnt0;font-size:12.947px; }
+
+</style>
+<clipPath
+   id="clp1"
+   clip-rule="nonzero">
+<rect
+   x="0"
+   y="0"
+   width="20"
+   height="16"
+   id="rect36" />
+</clipPath>
+<g
+   clip-path="url(#clp1)"
+   transform="matrix(1,0,0,-1,0.94526543,19.5)"
+   id="g38">
+<g
+   id="q1"
+   class="">
+<clipPath
+   id="clp2"
+   clip-rule="nonzero">
+<path
+   d="M 0,16 20,16 20,0 0,0 z"
+   id="path42"
+   inkscape:connector-curvature="0" />
+</clipPath>
+<g
+   clip-path="url(#clp2)"
+   id="g44">
+<path
+   d="m 11.006,2.809 c -1.551,0 -3.033,0.395 -4.29,1.143 L 6.081,4.329 5.371,4.117 C 4.899,3.975 4.356,3.938 3.828,3.889 4.055,4.248 4.291,4.597 4.448,5.045 L 4.687,5.722 4.355,6.36 C 4.002,7.043 3.823,7.763 3.823,8.5 c 0,3.138 3.222,5.691 7.183,5.691 3.96,0 7.182,-2.553 7.182,-5.691 0,-3.139 -3.222,-5.691 -7.182,-5.691 m 0,13.05 c -4.893,0 -8.86,-3.295 -8.86,-7.359 0,-1.032 0.259,-2.013 0.72,-2.904 C 2.198,3.693 0.354,2.875 0.354,2.875 1.859,1.754 4.521,2.119 5.856,2.52 7.308,1.656 9.083,1.141 11.006,1.141 c 4.892,0 8.858,3.295 8.858,7.359 0,4.064 -3.966,7.359 -8.858,7.359"
+   class="ps01"
+   id="path46"
+   inkscape:connector-curvature="0"
+   style="fill:#000000;fill-rule:nonzero;stroke:none" />
+</g>
+</g>
+<g
+   id="xfrm2"
+   transform="scale(20,16)">
+<g
+   id="frm3"
+   transform="scale(0.01,0.01)">
+<text
+   transform="matrix(1,0,0,-1,0,43.5267)"
+   id="text50"><tspan
+     x="0 9.3474998 18.695 28.042999 31.642 38.84 46.037998 49.638 53.237 57.548 64.746002 71.945 75.543999 82.016998 89.216003"
+     y="-0"
+     class="ps02 ps10 ps20"
+     id="tspan52"
+     style="font-size:12.94699955px;letter-spacing:0px;word-spacing:0;fill:none;stroke:#97b3fc;stroke-width:0.000001;font-family:fnt0">www.pdftron.com</tspan></text>
+
+
+</g>
+</g>
+</g>
+<path
+   inkscape:connector-curvature="0"
+   style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+   d="M 14.1875,7.4999993 12,9.7499993 9.7499996,7.5312493 8.5,8.8124993 10.75,10.999999 8.53125,13.25 9.8124996,14.5 12,12.25 l 2.25,2.21875 1.25,-1.28125 -2.25,-2.187501 2.21875,-2.2499997 -1.28125,-1.25 z"
+   id="path2396" /></svg>

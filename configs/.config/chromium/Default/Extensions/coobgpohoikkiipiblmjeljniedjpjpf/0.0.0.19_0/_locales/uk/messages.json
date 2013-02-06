@@ -1,0 +1,10 @@
+{
+   "appDesc": {
+      "description": "The description of the application, displayed in the web store.",
+      "message": "\u041D\u0430\u0439\u0448\u0432\u0438\u0434\u0448\u0438\u0439 \u0441\u043F\u043E\u0441\u0456\u0431 \u043F\u043E\u0448\u0443\u043A\u0443 \u0432 \u0406\u043D\u0442\u0435\u0440\u043D\u0435\u0442\u0456."
+   },
+   "appName": {
+      "description": "The title of the application, displayed in the web store.",
+      "message": "\u041F\u043E\u0448\u0443\u043A Google"
+   }
+}

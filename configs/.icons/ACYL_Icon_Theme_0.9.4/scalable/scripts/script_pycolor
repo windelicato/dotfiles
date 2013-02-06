@@ -1,0 +1,27 @@
+#!/usr/bin/python
+
+import gtk
+
+class colorpicker(gtk.Window): 
+    def __init__(self):
+
+        colordialog = gtk.ColorSelectionDialog("Select color")
+        colorsel = colordialog.colorsel
+        colorsel.set_has_opacity_control(True)
+
+	if colordialog.run() == gtk.RESPONSE_OK:
+                color = colorsel.get_current_color()
+                alpha = colorsel.get_current_alpha()
+                red=color.red*255/65535
+                green=color.green*255/65535
+                blue=color.blue*255/65535
+                red="%X" % red
+                green="%X" % green
+                blue="%X" % blue
+                alpha=alpha/65535.0
+                print red, green, blue, alpha
+        colordialog.destroy()
+	exit()
+
+colorpicker()
+gtk.main()

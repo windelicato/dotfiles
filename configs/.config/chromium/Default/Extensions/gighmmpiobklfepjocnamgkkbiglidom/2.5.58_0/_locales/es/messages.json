@@ -1,0 +1,703 @@
+{
+   "adalreadyblocked": {
+      "message": "No tienes que hacer nada ya que el anuncio ya est\u00E1 bloqueado"
+   },
+   "adblock_auto_removes_ads_thats_all": {
+      "message": "AbBlock oculta los anuncios autom\u00E1ticamente. No tienes que hacer nada m\u00E1s."
+   },
+   "adblock_wont_run_on_pages_matching": {
+      "message": "AdBlock no actuar\u00E1 en ninguna de estas p\u00E1ginas:"
+   },
+   "adblockreportinganad": {
+      "message": "AdBlock - Informar de un anuncio"
+   },
+   "addthisfilter": {
+      "message": "A\u00F1adir este filtro"
+   },
+   "adreport2": {
+      "message": "\u00BFAs\u00ED que acabas de encontrar un anuncio en una p\u00E1gina web? \u00A1Bien, voy a ayudarte a encontrar el lugar correcto para informar de \u00E9l!\u003Cbr/\u003E Recuerda: Informar sobre un anuncio es voluntario. \u00A1Si no deseas hacerlo simplemente cierra esta ventana y bloqu\u00E9alo solo para ti a\u00F1adi\u00E9ndolo en la pesta\u00F1a de \"Personalizar\" en las opciones!"
+   },
+   "adstillappear": {
+      "message": "\u00BFSigue apareciendo el anuncio?"
+   },
+   "advanced_options": {
+      "message": "Soy un usuario avanzado, mu\u00E9strame las opciones avanzadas."
+   },
+   "any_new_tabs_you_open_Will_be_automatically_ad_free": {
+      "message": "Cualquier pesta\u00F1a nueva que abras estar\u00E1 autom\u00E1ticamente libre de anuncios."
+   },
+   "anysite": {
+      "message": "Cualquier sitio web"
+   },
+   "appliedwhenbrowsing": {
+      "message": "Este filtro funcionar\u00E1 cuando est\u00E9s navegando en:"
+   },
+   "betalabel": {
+      "message": "Beta"
+   },
+   "blacklistclickmessage": {
+      "message": "Haz clic derecho en un anuncio de la p\u00E1gina para bloquearlo -- o bloqu\u00E9alo aqu\u00ED manualmente."
+   },
+   "blacklisterattrwillbe": {
+      "message": "$attribute$ ser\u00E1 $value$",
+      "placeholders": {
+         "attribute": {
+            "content": "$1"
+         },
+         "value": {
+            "content": "$2"
+         }
+      }
+   },
+   "blacklisterblockedelement": {
+      "message": "Elemento bloqueado:"
+   },
+   "blacklisterblocksalloftype": {
+      "message": "Ten cuidado: \u00A1Esto bloquear\u00E1 todos los elementos de tipo $elementtype$ de la p\u00E1gina!",
+      "placeholders": {
+         "elementtype": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistereditfilter": {
+      "message": "Por favor escribe el filtro correcto debajo y pulsa Aceptar"
+   },
+   "blacklistereditinvalid1": {
+      "message": "El filtro es inv\u00E1lido: $exception$",
+      "placeholders": {
+         "exception": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistermatches": {
+      "message": "Eso incluye $matchcount$ elementos en la p\u00E1gina.",
+      "placeholders": {
+         "matchcount": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklisternofilter": {
+      "message": "\u00A1No se ha especificado un filtro!"
+   },
+   "blacklisternotsure": {
+      "message": "\u003Cb\u003E\u00BFNo est\u00E1s seguro?\u003C/b\u003E Tan solo pulsa '\u00A1Bloqu\u00E9alo!' debajo."
+   },
+   "blacklisteroptions1": {
+      "message": "\u00BFQu\u00E9 crees que es correcto sobre este anuncio cada vez que visitas la p\u00E1gina?"
+   },
+   "blacklisteroptionstitle": {
+      "message": "\u00DAltimo paso: \u00BFQu\u00E9 hace esto un anuncio?"
+   },
+   "blacklistersinglematch": {
+      "message": "Eso incluye \u003Cb\u003E1\u003C/b\u003E elemento en la p\u00E1gina."
+   },
+   "blacklisterthefilter": {
+      "message": "El filtro, que puede cambiarse en la p\u00E1gina de opciones:"
+   },
+   "blacklistertype": {
+      "message": "Tipo"
+   },
+   "blacklisterwarningnofilter": {
+      "message": "Aviso: \u00A1No se ha especificado un filtro!"
+   },
+   "block_an_ad_on_this_page": {
+      "message": "Bloquear un anuncio en esta p\u00E1gina"
+   },
+   "block_by_url_instead": {
+      "message": "Avanzado: bloquear por URL"
+   },
+   "block_this_ad": {
+      "message": "Bloquear este anuncio"
+   },
+   "blockanadtitle": {
+      "message": "Bloquear un anuncio"
+   },
+   "blockdomain": {
+      "message": "Dominio de la p\u00E1gina que bloquear"
+   },
+   "blockeverycontaining": {
+      "message": "Boquear todos los recursos que contengan:"
+   },
+   "blockmoreads": {
+      "message": "Bloquear m\u00E1s anuncios:"
+   },
+   "blockurlwithtext": {
+      "message": "Bloquear las URLs que contengan este texto"
+   },
+   "buttonback": {
+      "message": "Atr\u00E1s"
+   },
+   "buttonblockit": {
+      "message": "\u00A1Bloqu\u00E9alo!"
+   },
+   "buttoncancel": {
+      "message": "Cancelar"
+   },
+   "buttonedit": {
+      "message": "Editar"
+   },
+   "buttonexclude": {
+      "message": "Excluir"
+   },
+   "buttonlooksgood": {
+      "message": "Se ve bien"
+   },
+   "buttonok": {
+      "message": "Aceptar"
+   },
+   "cantblockflash": {
+      "message": "No podemos bloquear por el momento anuncios dentro de aplicaciones Flash u otros plugins. Estamos esperando apoyo del navegador y de WebKit."
+   },
+   "cantblockflashwarning": {
+      "message": "\u00BFEl anuncio aparece antes del v\u00EDdeo o plugin (como un juego en Flash), o aparece en \u00E9l?"
+   },
+   "changelabel": {
+      "message": "cambiar"
+   },
+   "checkinfirefox_1": {
+      "message": "Instalar Firefox $chrome$ si no lo tienes.",
+      "placeholders": {
+         "chrome": {
+            "content": "$1or Chrome$2"
+         }
+      }
+   },
+   "checkinfirefox_2": {
+      "message": "Instala Adblock Plus para Firefox $chrome$ si no lo tienes.",
+      "placeholders": {
+         "chrome": {
+            "content": "$1or AdBlockforChrome para Chrome$2"
+         }
+      }
+   },
+   "checkinfirefox_5": {
+      "message": "\u00BFAparece el anuncio tambi\u00E9n en ese navegador?"
+   },
+   "clickthead": {
+      "message": "Haz clic en el anuncio, y te guiar\u00E9 para bloquearlo."
+   },
+   "clickupdatefilters": {
+      "message": "Haz clic aqu\u00ED: \u003Ca\u003E\u00A1Actualizar mis filtros!\u003C/a\u003E"
+   },
+   "close": {
+      "message": "Cerrar"
+   },
+   "correctfilters": {
+      "message": "Filtros correctos"
+   },
+   "csstomatch": {
+      "message": "CSS que bloquear"
+   },
+   "debuginlogoption": {
+      "message": "Mostrar datos debug en la consola (lo que ralentiza Adblock)"
+   },
+   "description2": {
+      "message": "\u00A1La extensi\u00F3n m\u00E1s popular de Chrome, con m\u00E1s de 10 millones de usuarios! Bloquea anuncios de todo internet."
+   },
+   "did_you_know_this_is_my_full_time_job": {
+      "message": "\u00BFSab\u00EDas que este es mi trabajo a jornada completa?"
+   },
+   "disabled_by_filter_lists": {
+      "message": "Lo siento, AdBlock est\u00E1 desactivado en esta p\u00E1gina por una de tus listas de filtros."
+   },
+   "disabled_on_this_page": {
+      "message": "AdBlock est\u00E1 desactivado en esta p\u00E1gina."
+   },
+   "done": {
+      "message": "Hecho."
+   },
+   "dont_run_on_pages_on_domain": {
+      "message": "No actuar en p\u00E1ginas de este dominio"
+   },
+   "dont_run_on_this_page": {
+      "message": "No actuar en esta p\u00E1gina"
+   },
+   "enable": {
+      "message": "activar"
+   },
+   "failedtofetchfilter": {
+      "message": "\u00A1Fallo al recibir esta lista!"
+   },
+   "faq": {
+      "message": "FAQ"
+   },
+   "fetchinglabel": {
+      "message": "Recibiendo... Por favor, espera."
+   },
+   "filteradblock_custom": {
+      "message": "Filtros personalizados de Adblock (recomendado)"
+   },
+   "filterchinese": {
+      "message": "- filtros chinos adicionales"
+   },
+   "filterczech": {
+      "message": "Filtros checos"
+   },
+   "filterdanish": {
+      "message": "Filtros daneses"
+   },
+   "filterdutch": {
+      "message": "- Filtros neerlandeses adicionales"
+   },
+   "filtereasylist": {
+      "message": "EasyList (recomendado)"
+   },
+   "filtereasylist_plun_korean": {
+      "message": "Filtros coreanos"
+   },
+   "filtereasylist_plus_bulgarian": {
+      "message": "- filtros b\u00FAlgaros adicionales"
+   },
+   "filtereasylist_plus_finnish": {
+      "message": "- filtros finlandeses adicionales"
+   },
+   "filtereasylist_plus_french": {
+      "message": "- filtros franceses adicionales"
+   },
+   "filtereasylist_plus_german": {
+      "message": "- filtros alemanes adicionales"
+   },
+   "filtereasylist_plus_greek": {
+      "message": "- filtros griegos adicionales"
+   },
+   "filtereasylist_plus_polish": {
+      "message": "- filtros polacos adicionales"
+   },
+   "filtereasylist_plus_romanian": {
+      "message": "- filtros rumanos adicionales"
+   },
+   "filtereasylist_plus_spanish": {
+      "message": "Filtros espa\u00F1oles"
+   },
+   "filtereasyprivacy": {
+      "message": "EasyPrivacy (protecci\u00F3n de la privacidad)"
+   },
+   "filterhasbeenadded": {
+      "message": "\u00A1El filtro se a\u00F1adi\u00F3 con exito!\n\u00A1Recarga la p\u00E1gina para ver el resultado!"
+   },
+   "filterhungarian": {
+      "message": "Filtros h\u00FAngaros"
+   },
+   "filterisraeli": {
+      "message": "Filtros israelitas"
+   },
+   "filteritalian": {
+      "message": "Filtros italianos"
+   },
+   "filterjapanese": {
+      "message": "Filtros japoneses"
+   },
+   "filterlistlink": {
+      "message": "No te sucribas a m\u00E1s de los que necesitas, \u00A1cada uno ralentiza un poquito tu navegaci\u00F3n! Los cr\u00E9ditos y otras listas las puedes encontrar \u003Ca\u003Eaqu\u00ED\u003C/a\u003E."
+   },
+   "filterrussian": {
+      "message": "- filtros rusos y ucranianos adicionales"
+   },
+   "filtersavewarning": {
+      "message": "Ten cuidado: \u00A1si cometes un error muchos filtros, incluyendo los oficiales, podr\u00EDan estropearse tambi\u00E9n!\u003Cbr/\u003ELee el \u003Ca\u003Etutorial de la sintaxis de filtros\u003C/a\u003E para aprender como a\u00F1adir filtros avanzados a la lista negra y blanca."
+   },
+   "filterstabtitle": {
+      "message": "Suscribirse a listas de filtros"
+   },
+   "findingads": {
+      "message": "Encontrando anuncios...\u003Cbr/\u003E\u003Cbr/\u003E\u003Ci\u003EEsto solo tardar\u00E1 un momento.\u003C/i\u003E"
+   },
+   "fixityourself": {
+      "message": "Vale, puedes seguir bloqueando el anuncio t\u00FA mismo en la p\u00E1gina de opciones. \u00A1Gracias!"
+   },
+   "flashads": {
+      "message": "V\u00EDdeos y Flash"
+   },
+   "format_site1_site2_site3": {
+      "message": "Formato: ~sitio1.com|~sitio2.com|~noticias.sitio3.org"
+   },
+   "generaloptions": {
+      "message": "Opciones generales"
+   },
+   "googletextads": {
+      "message": "Me gustan los anuncios de texto en las b\u00FAsquedas de Google; ens\u00E9\u00F1amelos."
+   },
+   "headerresource": {
+      "message": "Recurso"
+   },
+   "headertype": {
+      "message": "Tipo"
+   },
+   "help": {
+      "message": "Ayuda"
+   },
+   "hide_this_button": {
+      "message": "Ocultar este bot\u00F3n"
+   },
+   "how_to_use_adblock": {
+      "message": "C\u00F3mo usar AdBlock:"
+   },
+   "installedtitle": {
+      "message": "\u00A1Adblock se ha instalado!"
+   },
+   "installing_adblock": {
+      "message": "Instalado AdBlock..."
+   },
+   "invalidListUrl": {
+      "message": "URL de lista inv\u00E1lida. Ser\u00E1 eliminada."
+   },
+   "labelshow": {
+      "message": "mostrar"
+   },
+   "lang_bulgarian": {
+      "message": "B\u00FAlgaro"
+   },
+   "lang_chinese": {
+      "message": "Chino"
+   },
+   "lang_czech": {
+      "message": "Checho"
+   },
+   "lang_danish": {
+      "message": "Dan\u00E9s"
+   },
+   "lang_dutch": {
+      "message": "Holand\u00E9s"
+   },
+   "lang_english": {
+      "message": "Ingl\u00E9s"
+   },
+   "lang_finnish": {
+      "message": "Finland\u00E9s"
+   },
+   "lang_french": {
+      "message": "Franc\u00E9s"
+   },
+   "lang_german": {
+      "message": "Alem\u00E1n"
+   },
+   "lang_greek": {
+      "message": "Griego"
+   },
+   "lang_hungarian": {
+      "message": "H\u00FAngaro"
+   },
+   "lang_israeli": {
+      "message": "Israel\u00ED"
+   },
+   "lang_italian": {
+      "message": "Italiano"
+   },
+   "lang_japanese": {
+      "message": "Japon\u00E9s"
+   },
+   "lang_korean": {
+      "message": "Coreano"
+   },
+   "lang_polish": {
+      "message": "Polaco"
+   },
+   "lang_romanian": {
+      "message": "Rumano"
+   },
+   "lang_russian": {
+      "message": "Ruso"
+   },
+   "lang_spanish": {
+      "message": "Espa\u00F1ol"
+   },
+   "lang_ukranian": {
+      "message": "Ucraniano"
+   },
+   "last_update_failed": {
+      "message": "La \u00FAltima actualizaci\u00F3n fall\u00F3;"
+   },
+   "linkblockadbyurl": {
+      "message": "Bloquear un anuncio por su URL"
+   },
+   "linkhidesection": {
+      "message": "Ocultar una secci\u00F3n de la p\u00E1gina"
+   },
+   "linkunblock": {
+      "message": "Mostrar anuncios en una web o dominio"
+   },
+   "loading": {
+      "message": "CARGANDO..."
+   },
+   "manualfilteredit": {
+      "message": "Editar manualmente tus filtros:"
+   },
+   "modifydomain": {
+      "message": "Sitio:"
+   },
+   "modifypath": {
+      "message": "P\u00E1gina:"
+   },
+   "multipledomainshint": {
+      "message": "Separa los dominios con comas o espacios"
+   },
+   "nextstep": {
+      "message": "Siguiente paso"
+   },
+   "no": {
+      "message": "No"
+   },
+   "nodefaultfilter1": {
+      "message": "No tenemos un filtro determinado para ese idioma.\u003Cbr/\u003EPor favor, busca un link con este idioma $link$ o bloquea este anuncio por ti mismo en la pesta\u00F1a de 'Personalizar'.",
+      "placeholders": {
+         "link": {
+            "content": "$aqu\u00ED$2"
+         }
+      }
+   },
+   "now_you_have_adblock_hooray": {
+      "message": "\u00A1Ahora tienes AdBlock! \u00A1Hurra!"
+   },
+   "only_block_ads_on_these_sites": {
+      "message": "Bloquear anuncios solo en estos sitios:"
+   },
+   "onlyondomains": {
+      "message": "SOLO p\u00E1ginas en este dominio"
+   },
+   "onlyresourcetypes": {
+      "message": "Este filtro solo funciona con filtros de estos tipos:"
+   },
+   "options": {
+      "message": "Opciones"
+   },
+   "optionschangelog": {
+      "message": "Lista de cambios"
+   },
+   "optionstitle": {
+      "message": "Opciones de Adblock"
+   },
+   "optionsversion": {
+      "message": "Versi\u00F3n $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "orenteraurl": {
+      "message": "O introduce una URL:"
+   },
+   "other": {
+      "message": "Otro"
+   },
+   "pagelanguagecheck": {
+      "message": "\u00BFEn que idioma est\u00E1 escrita esa p\u00E1gina?"
+   },
+   "pause_adblock": {
+      "message": "Pausar AdBlock"
+   },
+   "project_home": {
+      "message": "P\u00E1gina web del proyecto"
+   },
+   "refusetocheck": {
+      "message": "No quiero comprobar esto"
+   },
+   "reloadadpage": {
+      "message": "Recarga la p\u00E1gina con el anuncio."
+   },
+   "removefromlist": {
+      "message": "Borrar de la lista"
+   },
+   "removelabel": {
+      "message": "Borrar"
+   },
+   "report_ad_on_page": {
+      "message": "Informar de un anuncio en esta p\u00E1gina"
+   },
+   "reportfilterlistproblem": {
+      "message": "Hay un problema de la lista de filtros. Informa de \u00E9l aqu\u00ED: $link$",
+      "placeholders": {
+         "link": {
+            "content": "$1"
+         }
+      }
+   },
+   "reporttous2": {
+      "message": "Si sabes hablar ing\u00E9s, puedes reportarnos el problema \u003Ca\u003Ein the issue tracker\u003C/a\u003E."
+   },
+   "resourceblocklegend1": {
+      "message": "Leyenda:"
+   },
+   "resourceblocklegend2": {
+      "message": "recursos bloqueados"
+   },
+   "resourceblocklegend3": {
+      "message": "recursos en la lista blanca"
+   },
+   "resourceblocktitle": {
+      "message": "Bloquear un recurso"
+   },
+   "retryaftersubscribe": {
+      "message": "Suscr\u00EDbete a ese filtro, y vuelve a intentarlo: $list_title$",
+      "placeholders": {
+         "list_title": {
+            "content": "$1"
+         }
+      }
+   },
+   "safari50_updatenotice": {
+      "message": "Est\u00E1s utilizando una versi\u00F3n antigua de Safari. Consigue la \u00FAltima versi\u00F3n para utilizar el bot\u00F3n de AdBlock de la barra para pausar AdBlock, a\u00F1adir p\u00E1ginas a la lista blanca, e informar de anuncios. \u003Ca\u003EActualizar ahora\u003C/a\u003E."
+   },
+   "savebutton": {
+      "message": "Guardar"
+   },
+   "savereminder": {
+      "message": "\u00A1No te olvides de guardar!"
+   },
+   "seeing_this_every_time_you_start_your_browser": {
+      "message": "\u00BFVes esto cada vez que abres el navegador?"
+   },
+   "selectresources": {
+      "message": "Selecciona el recurso que quiere bloquear o desbloquear"
+   },
+   "show_resourcelist": {
+      "message": "Mostrar la lista de recursos"
+   },
+   "showcontextmenus": {
+      "message": "A\u00F1adir elementos al men\u00FA de click derecho."
+   },
+   "showlinkstolists": {
+      "message": "Mostar enlace a las listas de filtros:"
+   },
+   "sliderexplanation": {
+      "message": "Mueve la barra hasta que el anuncio est\u00E9 correctamente bloqueado, y se vea bien."
+   },
+   "slidertitle": {
+      "message": "Paso 1: Averigua que bloquear"
+   },
+   "status_paused": {
+      "message": "AdBlock est\u00E1 pausado."
+   },
+   "stop_blocking_ads": {
+      "message": "Para de bloquear anuncios:"
+   },
+   "subscribebutton": {
+      "message": "Suscribirse"
+   },
+   "subscribingfailed": {
+      "message": "\u00A1Fall\u00F3!"
+   },
+   "subscribingfinished": {
+      "message": "\u00A1Completado!"
+   },
+   "subscribingtitle": {
+      "message": "Subscribi\u00E9ndose a la lista de filtros..."
+   },
+   "tabcustomize": {
+      "message": "Personalizar"
+   },
+   "tabcustomizetitle": {
+      "message": "Personalizar AdBlock"
+   },
+   "tabfilterlists": {
+      "message": "Listas de filtros"
+   },
+   "tabgeneral": {
+      "message": "General"
+   },
+   "translator_credit": {
+      "message": "Los cr\u00E9ditos por la traducci\u00F3n son de: $translator_names$",
+      "placeholders": {
+         "translator_names": {
+            "content": "Dani de elASDFblog"
+         }
+      }
+   },
+   "typehiding": {
+      "message": "ocultando"
+   },
+   "typeimage": {
+      "message": "imagen"
+   },
+   "typemedia": {
+      "message": "audio/v\u00EDdeo"
+   },
+   "typeobject": {
+      "message": "objeto interactivo"
+   },
+   "typeother": {
+      "message": "otro"
+   },
+   "typepage": {
+      "message": "p\u00E1gina"
+   },
+   "typepopup": {
+      "message": "ventana emergente"
+   },
+   "typeunknown": {
+      "message": "desconocido"
+   },
+   "unpause": {
+      "message": "reanudar"
+   },
+   "unsubscribedlabel": {
+      "message": "Subscripci\u00F3n desactivada."
+   },
+   "updateddayago": {
+      "message": "Actualizado hace un d\u00EDa"
+   },
+   "updateddaysago": {
+      "message": "Actualizado hace $days$ d\u00EDas",
+      "placeholders": {
+         "days": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedhourago": {
+      "message": "Actualizado hace una hora"
+   },
+   "updatedhoursago": {
+      "message": "Actualizado hace $hours$ horas",
+      "placeholders": {
+         "hours": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedminuteago": {
+      "message": "Actualizado hace un minuto"
+   },
+   "updatedminutesago": {
+      "message": "Actualizado hace $minutes$ minutos",
+      "placeholders": {
+         "minutes": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedrightnow": {
+      "message": "Actualizado ahora mismo"
+   },
+   "updatedsecondsago": {
+      "message": "Actualizado hace $seconds$ segundos",
+      "placeholders": {
+         "seconds": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatefromoldversion": {
+      "message": "Est\u00E1s usando una versi\u00F3n antigua de AdBlock. Por favor $updatelink$ a la nueva versi\u00F3n de Firefox",
+      "placeholders": {
+         "updatelink": {
+            "content": "$1actualiza$2"
+         }
+      }
+   },
+   "updatenowmessage": {
+      "message": "Recibir\u00E9 actualizaciones autom\u00E1ticamente; aunque tambi\u00E9n puedes \u003Ca\u003Eactualizar ahora\u003C/a\u003E."
+   },
+   "updateyourlists": {
+      "message": "\u00A1Aseg\u00FArate de que tus filtros est\u00E9n actualizados!"
+   },
+   "whitelistertitle2": {
+      "message": "No utilizar AdBlock en..."
+   },
+   "yes": {
+      "message": "S\u00ED"
+   }
+}

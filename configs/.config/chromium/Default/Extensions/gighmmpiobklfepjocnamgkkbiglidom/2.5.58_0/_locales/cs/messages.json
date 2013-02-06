@@ -1,0 +1,944 @@
+{
+   "adalreadyblocked": {
+      "message": "Nemus\u00EDte d\u011Blat nic, proto\u017Ee reklama je ji\u017E blokov\u00E1na"
+   },
+   "adblock_auto_removes_ads_thats_all": {
+      "message": "AdBlock automaticky odstra\u0148uje reklamy. To je v\u0161e, k \u010Demu slou\u017E\u00ED."
+   },
+   "adblock_is_paused": {
+      "message": "AdBlock je pozastaven. Proto\u017Ee nebyly zachyceny \u017E\u00E1dn\u00E9 prvky, nen\u00ED mo\u017En\u00E9 tuto str\u00E1nku pou\u017E\u00EDt. Nejprve spus\u0165te AdBlock a pak to zkuste znovu."
+   },
+   "adblock_outdated_chrome": {
+      "message": "Pou\u017E\u00EDv\u00E1te starou verzi AdBlock. Pros\u00EDm, jd\u011Bte na str\u00E1nku \u003Ca href='#'\u003ERoz\u0161\u00ED\u0159en\u00ED\u003C/a\u003E, povolte 'Re\u017Eim pro v\u00FDvoj\u00E1\u0159e' a klikn\u011Bte na 'Aktualizovat roz\u0161\u00ED\u0159en\u00ED'"
+   },
+   "adblock_wont_run_on_pages_matching": {
+      "message": "AdBlock se nebude spou\u0161t\u011Bt na \u017E\u00E1dn\u00E9 str\u00E1nce odpov\u00EDdaj\u00EDc\u00ED:"
+   },
+   "adblockreportinganad": {
+      "message": "AdBlock - Nahl\u00E1\u0161en\u00ED reklamy"
+   },
+   "addthisfilter": {
+      "message": "P\u0159idat tento filtr"
+   },
+   "adreport2": {
+      "message": "Na\u0161li jste reklamu na webov\u00E9 str\u00E1nce? Dobr\u00E1, pomohu v\u00E1m naj\u00EDt spr\u00E1vn\u00E9 m\u00EDsto, kde ji nahl\u00E1sit!\u003Cbr/\u003E Pamatujte: Nahl\u00E1\u0161en\u00ED reklamy je dobrovoln\u00E9. Pokud si ji nep\u0159ejete nahl\u00E1sit, m\u016F\u017Eete zav\u0159\u00EDt toto okno a zablokovat ji pouze pro sebe t\u00EDm, \u017Ee p\u0159id\u00E1te jej\u00ED filtr na z\u00E1lo\u017Ece 'Prizp\u016Fsoben\u00ED' na str\u00E1nce s nastaven\u00EDm!"
+   },
+   "adsoneverysite": {
+      "message": "Vid\u00EDte reklamy na v\u011Bt\u0161in\u011B str\u00E1nek, kter\u00E9 nav\u0161t\u00EDv\u00EDte (na va\u0161\u00ED \u00FAvodn\u00ED str\u00E1nce, na str\u00E1nce zam\u011Bstnavatele, atd.), ale kdy\u017E n\u00E1v\u0161t\u00EDv\u00EDte tyt\u00E9\u017E str\u00E1nky na jin\u00E9m po\u010D\u00EDta\u010Di, jsou reklamy pry\u010D?"
+   },
+   "adstillappear": {
+      "message": "Zobrazuje se st\u00E1le tato reklama?"
+   },
+   "advanced_options": {
+      "message": "Jsem zku\u0161en\u00FD u\u017Eivatel, uka\u017E mi pokro\u010Dil\u00E9 mo\u017Enosti."
+   },
+   "any_new_tabs_you_open_Will_be_automatically_ad_free": {
+      "message": "Jak\u00E9koliv nov\u011B otev\u0159en\u00E9 z\u00E1lo\u017Eky budou automaticky bez reklam."
+   },
+   "anysite": {
+      "message": "Jak\u00E1koliv webov\u00E1 str\u00E1nka"
+   },
+   "appliedwhenbrowsing": {
+      "message": "Tento filtr se pou\u017Eije p\u0159i prohl\u00ED\u017Een\u00ED:"
+   },
+   "betalabel": {
+      "message": "Beta"
+   },
+   "blacklistclickmessage": {
+      "message": "Klikn\u011Bte prav\u00FDm tla\u010D\u00EDtkem my\u0161i na reklamu pro jej\u00ED zablokov\u00E1n\u00ED -- nebo ji zablokujte ru\u010Dn\u011B zde."
+   },
+   "blacklisterattrwillbe": {
+      "message": "$attribute$ bude $value$",
+      "placeholders": {
+         "attribute": {
+            "content": "$1"
+         },
+         "value": {
+            "content": "$2"
+         }
+      }
+   },
+   "blacklisterblockedelement": {
+      "message": "Blokovan\u00FD element:"
+   },
+   "blacklisterblocksalloftype": {
+      "message": "Bu\u010Fte opatrn\u00ED: tento filtr blokuje v\u0161echny $elementtype$ elementy na str\u00E1nce!",
+      "placeholders": {
+         "elementtype": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistereditfilter": {
+      "message": "Pros\u00EDm, zadejte spr\u00E1vn\u00FD filtr a stiskn\u011Bte OK"
+   },
+   "blacklistereditinvalid1": {
+      "message": "Tento filtr je neplatn\u00FD: $exception$",
+      "placeholders": {
+         "exception": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklistermatches": {
+      "message": "Toto odpov\u00EDd\u00E1 $matchcount$ polo\u017Ek\u00E1m na t\u00E9to str\u00E1nce.",
+      "placeholders": {
+         "matchcount": {
+            "content": "$1"
+         }
+      }
+   },
+   "blacklisternofilter": {
+      "message": "Nen\u00ED vybr\u00E1n \u017E\u00E1dn\u00FD filtr!"
+   },
+   "blacklisternotsure": {
+      "message": "\u003Cb\u003ENejste si jisti?\u003C/b\u003E Tak pouze stiskn\u011Bte tla\u010D\u00EDtko 'Blokovat!' n\u00ED\u017Ee."
+   },
+   "blacklisteroptions1": {
+      "message": "Co si mysl\u00EDte, \u017Ee bude platit pro tuto reklamu poka\u017Ed\u00E9, kdy\u017E nav\u0161t\u00EDv\u00EDte tuto str\u00E1nku?"
+   },
+   "blacklisteroptionstitle": {
+      "message": "Posledn\u00ED krok: Dle \u010Deho rozpoznat reklamu?"
+   },
+   "blacklistersinglematch": {
+      "message": "Toto odpov\u00EDd\u00E1 \u003Cb\u003E1\u003C/b\u003E polo\u017Ece na t\u00E9to str\u00E1nce."
+   },
+   "blacklisterthefilter": {
+      "message": "Filtr, kter\u00FD lze pozd\u011Bji zm\u011Bnit v Nastaven\u00ED na z\u00E1lo\u017Ece Vlastn\u00ED filtr:"
+   },
+   "blacklistertype": {
+      "message": "Typ"
+   },
+   "blacklisterwarningnofilter": {
+      "message": "Upozorn\u011Bn\u00ED: Nen\u00ED vybr\u00E1n \u017E\u00E1dn\u00FD filtr!"
+   },
+   "block_an_ad_on_this_page": {
+      "message": "Blokovat reklamu na t\u00E9to str\u00E1nce"
+   },
+   "block_by_url_instead": {
+      "message": "Pro zku\u0161en\u00E9: Blokovat podle URL m\u00EDsto tohoto"
+   },
+   "block_this_ad": {
+      "message": "Blokovat tuto reklamu"
+   },
+   "blockanadtitle": {
+      "message": "Blokov\u00E1n\u00ED reklamy"
+   },
+   "blockdomain": {
+      "message": "Pou\u017E\u00EDvat na str\u00E1nk\u00E1ch dom\u00E9ny"
+   },
+   "blockeverycontaining": {
+      "message": "Blokovat ka\u017Ed\u00FD prvek obsahuj\u00EDc\u00ED:"
+   },
+   "blockmoreads": {
+      "message": "Blokovat v\u00EDce reklam:"
+   },
+   "blockurlwithtext": {
+      "message": "Blokovat URL obsahuj\u00EDc\u00ED tento text"
+   },
+   "buttonback": {
+      "message": "Zp\u011Bt"
+   },
+   "buttonblockit": {
+      "message": "Blokovat!"
+   },
+   "buttoncancel": {
+      "message": "Storno"
+   },
+   "buttonedit": {
+      "message": "Upravit"
+   },
+   "buttonexclude": {
+      "message": "Ulo\u017Eit"
+   },
+   "buttonlooksgood": {
+      "message": "Pokra\u010Dovat"
+   },
+   "buttonok": {
+      "message": "OK!"
+   },
+   "cantblockflash": {
+      "message": "Nem\u016F\u017Eeme zat\u00EDm blokovat reklamy uvnit\u0159 objekt\u016F Flash nebo v jin\u00FDch dopl\u0148c\u00EDch. \u010Cek\u00E1me na podporu od prohl\u00ED\u017Ee\u010De a WebKitu."
+   },
+   "cantblockflashwarning": {
+      "message": "Objevuje se reklama ve filmu nebo p\u0159ed n\u00EDm nebo v jak\u00E9mkoli jin\u00E9m dopl\u0148ku, nap\u0159. ve Flashov\u00E9 h\u0159e?"
+   },
+   "casesensitive": {
+      "message": "Tento filtr rozli\u0161uje mal\u00E1 a velk\u00E1 p\u00EDsmena:"
+   },
+   "changelabel": {
+      "message": "zm\u011Bnit"
+   },
+   "checkinfirefox_1": {
+      "message": "Nainstalujte prohl\u00ED\u017Ee\u010D Firefox $chrome$, pokud jej nem\u00E1te.",
+      "placeholders": {
+         "chrome": {
+            "content": "$1nebo Chrome$2"
+         }
+      }
+   },
+   "checkinfirefox_2": {
+      "message": "Nainstalujte Adblock Plus pro Firefox $chrome$, pokud jej nem\u00E1te.",
+      "placeholders": {
+         "chrome": {
+            "content": "$1nebo AdBlockforChrome pro Chrome$2"
+         }
+      }
+   },
+   "checkinfirefox_3": {
+      "message": "V uveden\u00E9m prohl\u00ED\u017Ee\u010Di se p\u0159ihlaste k odb\u011Bru stejn\u00FDch seznam\u016F filtr\u016F, jako m\u00E1te zde (mimo AdBlock vlastn\u00ED filtry v prohl\u00ED\u017Ee\u010Di Firefox)."
+   },
+   "checkinfirefox_4": {
+      "message": "V uveden\u00E9m prohl\u00ED\u017Ee\u010Di na\u010Dt\u011Bte str\u00E1nku s reklamou."
+   },
+   "checkinfirefox_5": {
+      "message": "Zobrazuje se reklama tak\u00E9 v uveden\u00E9m prohl\u00ED\u017Ee\u010Di?"
+   },
+   "checkinfirefoxtitle": {
+      "message": "Kontrola v prohl\u00ED\u017Ee\u010Di Firefox $chrome$",
+      "placeholders": {
+         "chrome": {
+            "content": "$1nebo Chrome$2"
+         }
+      }
+   },
+   "chromebutton_how_to_hide2": {
+      "message": "Chcete-li skr\u00FDt tla\u010D\u00EDtko, klikn\u011Bte na n\u011Bj prav\u00FDm tla\u010D\u00EDtkem my\u0161i a vyberte p\u0159\u00EDkaz Skr\u00FDt tla\u010D\u00EDtko. M\u016F\u017Eete jej op\u011Bt zobrazit zde chrome://chrome/extensions."
+   },
+   "cleanuplist": {
+      "message": "Optimalizovat filtry v tomto seznamu:"
+   },
+   "clickthead": {
+      "message": "Klikn\u011Bte na reklamu, a j\u00E1m v\u00E1m ji pomohu zablokovat."
+   },
+   "clickupdatefilters": {
+      "message": "Klikn\u011Bte zde: \u003Ca\u003EAktualizovat filtry!\u003C/a\u003E"
+   },
+   "close": {
+      "message": "Zav\u0159\u00EDt"
+   },
+   "close_tab_begin_browsing": {
+      "message": "M\u016F\u017Eete zav\u0159\u00EDt tuto kartu a za\u010D\u00EDt proch\u00E1zen\u00ED bez reklam. Dobrou z\u00E1bavu!"
+   },
+   "correctfilters": {
+      "message": "Opravit filtry"
+   },
+   "csstomatch": {
+      "message": "CSS obsahuje"
+   },
+   "custompattern": {
+      "message": "Vlastn\u00ED:"
+   },
+   "debuginlogoption": {
+      "message": "Zobrazovat debug zpr\u00E1vy v Console Log (tohle zpomaluje AdBlock)"
+   },
+   "description2": {
+      "message": "Nejobl\u00EDben\u011Bj\u0161\u00ED roz\u0161\u00ED\u0159en\u00ED pro Chrome s v\u00EDce ne\u017E 10 miliony u\u017Eivatel\u016F! Blokuje reklamy na cel\u00E9m webu."
+   },
+   "did_you_know_this_is_my_full_time_job": {
+      "message": "V\u011Bd\u011Bli jste, \u017Ee toto je moje zam\u011Bstn\u00E1n\u00ED?"
+   },
+   "disabled_by_filter_lists": {
+      "message": "Promi\u0148te, ale AdBlock je na t\u00E9to str\u00E1nce zak\u00E1z\u00E1n jedn\u00EDm z va\u0161ich seznam\u016F filtr\u016F."
+   },
+   "disabled_on_this_page": {
+      "message": "AdBlock je zak\u00E1z\u00E1n na t\u00E9to str\u00E1nce."
+   },
+   "doesntmatchoriginal": {
+      "message": "Vzor, kter\u00FD jste zadali, neodpov\u00EDd\u00E1 prvku, kter\u00FD se pokou\u0161\u00EDte zablokovat! Chcete p\u0159esto pokra\u010Dovat?"
+   },
+   "done": {
+      "message": "hotovo."
+   },
+   "dont_run_on_pages_on_domain": {
+      "message": "Nespou\u0161t\u011Bt na str\u00E1nk\u00E1ch na t\u00E9to dom\u00E9n\u011B"
+   },
+   "dont_run_on_this_page": {
+      "message": "Nepou\u017E\u00EDvat na t\u00E9to str\u00E1nce"
+   },
+   "enable": {
+      "message": "povolit"
+   },
+   "excludedomainorurl": {
+      "message": "Dom\u00E9na nebo url, kde AdBlock nesm\u00ED nic blokovat"
+   },
+   "excludefilterremoved": {
+      "message": "Filtr byl odstran\u011Bn. Pros\u00EDm, obnovte p\u016Fvodn\u00ED str\u00E1nku pro vytvo\u0159en\u00ED seznamu prvk\u016F."
+   },
+   "failedtofetchfilter": {
+      "message": "Nepoda\u0159ilo se na\u010D\u00EDst tento filtr!"
+   },
+   "faq": {
+      "message": "\u010Cast\u00E9 dotazy"
+   },
+   "fetchinglabel": {
+      "message": "Na\u010D\u00EDt\u00E1m... Pros\u00EDm, \u010Dekejte."
+   },
+   "filecleanerwarning": {
+      "message": "Pokud vid\u00EDte tuto zpr\u00E1vu p\u0159i ka\u017Ed\u00E9m spu\u0161t\u011Bn\u00ED AdBlock, ujist\u011Bte se, \u017Ee nepou\u017E\u00EDv\u00E1te souborov\u00FD \u010Disti\u010D, kter\u00FD tak\u00E9 \u010Dist\u00ED 'LocalStorage' soubory."
+   },
+   "filteradblock_custom": {
+      "message": "AdBlock filtry (doporu\u010Deno)"
+   },
+   "filterchinese": {
+      "message": " - dodate\u010Dn\u00E9 \u010D\u00EDnsk\u00E9 filtry"
+   },
+   "filterczech": {
+      "message": "\u010Cesk\u00E9 filtry (doporu\u010Deno)"
+   },
+   "filterdanish": {
+      "message": "D\u00E1nsk\u00E9 filtry"
+   },
+   "filterdutch": {
+      "message": " - dodate\u010Dn\u00E9 holandsk\u00E9 filtry"
+   },
+   "filtereasylist": {
+      "message": "EasyList (doporu\u010Deno)"
+   },
+   "filtereasylist_plun_korean": {
+      "message": "Korejsk\u00E9 filtry"
+   },
+   "filtereasylist_plus_bulgarian": {
+      "message": " - dodate\u010Dn\u00E9 bulharsk\u00E9 filtry"
+   },
+   "filtereasylist_plus_finnish": {
+      "message": " - dodate\u010Dn\u00E9 finsk\u00E9 filtry"
+   },
+   "filtereasylist_plus_french": {
+      "message": " - dodate\u010Dn\u00E9 francouzsk\u00E9 filtry"
+   },
+   "filtereasylist_plus_german": {
+      "message": " - dodate\u010Dn\u00E9 n\u011Bmeck\u00E9 filtry"
+   },
+   "filtereasylist_plus_greek": {
+      "message": " - dodate\u010Dn\u00E9 \u0159eck\u00E9 filtry"
+   },
+   "filtereasylist_plus_polish": {
+      "message": " - dodate\u010Dn\u00E9 polsk\u00E9 filtry"
+   },
+   "filtereasylist_plus_romanian": {
+      "message": " - dodate\u010Dn\u00E9 rumunsk\u00E9 filtry"
+   },
+   "filtereasylist_plus_spanish": {
+      "message": "\u0160pan\u011Blsk\u00E9 filtry"
+   },
+   "filtereasyprivacy": {
+      "message": "EasyPrivacy (ochrana soukrom\u00ED)"
+   },
+   "filterhasbeenadded": {
+      "message": "Filtr byl \u00FAsp\u011B\u0161n\u011B p\u0159id\u00E1n!\nNa\u010Dt\u011Bte znovu str\u00E1nku pro zobrazen\u00ED v\u00FDsledku!"
+   },
+   "filterhungarian": {
+      "message": "Ma\u010Farsk\u00E9 filtry"
+   },
+   "filterisraeli": {
+      "message": "Izraelsk\u00E9 filtry"
+   },
+   "filteritalian": {
+      "message": "Italsk\u00E9 filtry"
+   },
+   "filterjapanese": {
+      "message": "Japonsk\u00E9 filtry"
+   },
+   "filterlistlink": {
+      "message": "Nep\u0159ihla\u0161ujte k odb\u011Bru v\u00EDce ne\u017E pot\u0159ebujete -- ka\u017Ed\u00FD filtr nav\u00EDc zp\u016Fsob\u00ED drobn\u00E9 zpomalen\u00ED! Pod\u011Bkov\u00E1n\u00ED a dal\u0161\u00ED seznamy lze nal\u00E9zt \u003Ca\u003Ezde\u003C/a\u003E."
+   },
+   "filterlistsrock": {
+      "message": "Seznamy filtr\u016F blokuj\u00ED v\u011Bt\u0161inu reklam na webu. M\u016F\u017Eete tak\u00E9:"
+   },
+   "filterorigin": {
+      "message": "P\u016Fvod filtrov\u00E1n\u00ED:\n$list$",
+      "placeholders": {
+         "list": {
+            "content": "$1"
+         }
+      }
+   },
+   "filterrussian": {
+      "message": " - dodate\u010Dn\u00E9 rusk\u00E9 a ukrajinsk\u00E9 filtry"
+   },
+   "filtersavewarning": {
+      "message": "Bu\u010Fte opatrn\u00ED: Pokud zde ud\u011Bl\u00E1te chybu, spousta jin\u00FDch filtr\u016F, v\u010Detn\u011B t\u011Bch ofici\u00E1ln\u00EDch, m\u016F\u017Ee b\u00FDt tak\u00E9 po\u0161kozena!\u003Cbr/\u003EP\u0159e\u010Dt\u011Bte si \u003Ca\u003Efilter syntax tutorial (anglicky)\u003C/a\u003E, kde se dozv\u00EDte, jak p\u0159id\u00E1vat pokro\u010Dil\u00E9 vlastn\u00ED filtry a v\u00FDjimky."
+   },
+   "filterstabtitle": {
+      "message": "Seznamy filtr\u016F"
+   },
+   "findingads": {
+      "message": "Hled\u00E1n\u00ED reklam...\u003Cbr/\u003E\u003Cbr/\u003E\u003Ci\u003EBude to trvat pouze chvilku.\u003C/i\u003E"
+   },
+   "firefox_explanation": {
+      "message": "Smyslem t\u00E9to ot\u00E1zky je ur\u010Dit, kdo by m\u011Bl dostat va\u0161e hl\u00E1\u0161en\u00ED. Pokud odpov\u00EDte na tuto ot\u00E1zku chybn\u011B, m\u016F\u017Ee b\u00FDt zpr\u00E1va zasl\u00E1na nespr\u00E1vn\u00FDm lidem a pak m\u016F\u017Ee b\u00FDt ignorov\u00E1na."
+   },
+   "fixityourself": {
+      "message": "OK, m\u016F\u017Eete si zablokovat tuto reklamu pouze pro sebe v Nastaven\u00ED na z\u00E1lo\u017Ece Vlastn\u00ED filtr. D\u00EDky!"
+   },
+   "flashads": {
+      "message": "Videa a Flash"
+   },
+   "for_more_options_right_click": {
+      "message": "Pro v\u00EDce mo\u017Enost\u00ED, klikn\u011Bte prav\u00FDm tla\u010D\u00EDtkem na webov\u00E9 str\u00E1nce nebo klikn\u011Bte na $img$ tla\u010D\u00EDtko na panelu n\u00E1stroj\u016F.",
+      "placeholders": {
+         "img": {
+            "content": "\u003Cimg src=\"../../img/icon19.png\"/\u003E"
+         }
+      }
+   },
+   "format_site1_site2_site3": {
+      "message": "Form\u00E1t: ~stranka1.cz|~stranka2.cz|~zpravy.stranka3.cz"
+   },
+   "generaloptions": {
+      "message": "Obecn\u00E9 nastaven\u00ED"
+   },
+   "googletextads": {
+      "message": "L\u00EDb\u00ED se mi textov\u00E9 reklamy ve v\u00FDsledc\u00EDch vyhled\u00E1v\u00E1n\u00ED Google, zobrazuj je."
+   },
+   "headerfilter": {
+      "message": "Odpov\u00EDdaj\u00EDc\u00ED filtr"
+   },
+   "headerresource": {
+      "message": "Prvek"
+   },
+   "headertype": {
+      "message": "Typ"
+   },
+   "help": {
+      "message": "N\u00E1pov\u011Bda a pomoc"
+   },
+   "hide_this_button": {
+      "message": "Skr\u00FDt toto tla\u010D\u00EDtko"
+   },
+   "how_to_use_adblock": {
+      "message": "Jak pou\u017E\u00EDvat AdBlock:"
+   },
+   "installedtitle": {
+      "message": "AdBlock je nyn\u00ED nainstalov\u00E1n!"
+   },
+   "installing_adblock": {
+      "message": "Instaluji AdBlock..."
+   },
+   "invalidListUrl": {
+      "message": "Neplatn\u00FD seznam URL. Bude smaz\u00E1n."
+   },
+   "labelshow": {
+      "message": "uk\u00E1zat"
+   },
+   "lang_bulgarian": {
+      "message": "Bulhar\u0161tina"
+   },
+   "lang_chinese": {
+      "message": "\u010C\u00EDn\u0161tina"
+   },
+   "lang_czech": {
+      "message": "\u010Ce\u0161tina"
+   },
+   "lang_danish": {
+      "message": "D\u00E1n\u0161tina"
+   },
+   "lang_dutch": {
+      "message": "Holand\u0161tina"
+   },
+   "lang_english": {
+      "message": "Angli\u010Dtina"
+   },
+   "lang_finnish": {
+      "message": "Fin\u0161tina"
+   },
+   "lang_french": {
+      "message": "Francouz\u0161tina"
+   },
+   "lang_german": {
+      "message": "N\u011Bm\u010Dina"
+   },
+   "lang_greek": {
+      "message": "\u0158e\u010Dtina"
+   },
+   "lang_hungarian": {
+      "message": "Ma\u010Far\u0161tina"
+   },
+   "lang_israeli": {
+      "message": "Izrael\u0161tina"
+   },
+   "lang_italian": {
+      "message": "Ital\u0161tina"
+   },
+   "lang_japanese": {
+      "message": "Japon\u0161tina"
+   },
+   "lang_korean": {
+      "message": "Korej\u0161tina"
+   },
+   "lang_polish": {
+      "message": "Pol\u0161tina"
+   },
+   "lang_romanian": {
+      "message": "Rumun\u0161tina"
+   },
+   "lang_russian": {
+      "message": "Ru\u0161tina"
+   },
+   "lang_spanish": {
+      "message": "\u0160pan\u011Bl\u0161tina"
+   },
+   "lang_ukranian": {
+      "message": "Ukrajin\u0161tina"
+   },
+   "last_update_failed": {
+      "message": "Posledn\u00ED aktualizace se nezda\u0159ila; "
+   },
+   "linkblockadbyurl": {
+      "message": "Blokovat reklamu dle jej\u00ED URL"
+   },
+   "linkhidesection": {
+      "message": "Skr\u00FDvat \u010D\u00E1st webov\u00E9 str\u00E1nky"
+   },
+   "linkunblock": {
+      "message": "Zobrazovat reklamy na webov\u00E9 str\u00E1nce nebo dom\u00E9n\u011B"
+   },
+   "loading": {
+      "message": "NA\u010C\u00CDT\u00C1M..."
+   },
+   "manualfilteredit": {
+      "message": "Ru\u010Dn\u011B upravit vlastn\u00ED filtry:"
+   },
+   "maybemalware": {
+      "message": "Ne v\u0161echny str\u00E1nky na internetu obsahuj\u00ED reklamy. Pokud vid\u00EDte tolik reklam, m\u016F\u017Ee to znamenat, \u017Ee v\u00E1\u0161 po\u010D\u00EDta\u010D obsahuje n\u011Bjak\u00FD ne\u017E\u00E1douc\u00ED software. Zkuste vypnout v\u0161echna roz\u0161\u00ED\u0159en\u00ED jednoho po druh\u00E9m, abyste zjistili, zda probl\u00E9m zmiz\u00ED. Pokud ne, zkuste (\u00FAplnou) kontrolu syst\u00E9mu s aktualizovan\u00FDm antivirov\u00FDm softwarem, proto\u017Ee to m\u016F\u017Ee b\u00FDt zp\u016Fsobeno n\u011Bjak\u00FDm malwarem."
+   },
+   "modifydomain": {
+      "message": "Dom\u00E9na:"
+   },
+   "modifypath": {
+      "message": "Str\u00E1nka:"
+   },
+   "multipledomainshint": {
+      "message": "Odd\u011Blte v\u00EDce dom\u00E9n \u010D\u00E1rkami nebo mezerami"
+   },
+   "nextstep": {
+      "message": "Dal\u0161\u00ED krok"
+   },
+   "no": {
+      "message": "Ne"
+   },
+   "nodefaultfilter1": {
+      "message": "Nem\u00E1me v\u00FDchoz\u00ED seznam filtr\u016F pro dan\u00FD jazyk.\u003Cbr/\u003EPros\u00EDm, zkuste naj\u00EDt vhodn\u00FD seznam pro tento jazyk $link$ nebo si tuto reklamu zablokujte pouze pro sebe na z\u00E1lo\u017Ece 'P\u0159izp\u016Fsoben\u00ED'.",
+      "placeholders": {
+         "link": {
+            "content": "$1zde$2"
+         }
+      }
+   },
+   "noresourcessend2": {
+      "message": "N\u011Bco se pokazilo. \u017D\u00E1dn\u00E9 prvky nebyly p\u0159eposl\u00E1ny. Tato str\u00E1nka se nyn\u00ED zav\u0159e. Zkuste webovou str\u00E1nku na\u010D\u00EDst znovu."
+   },
+   "nosearchresults": {
+      "message": "Nebyly nalezeny \u017E\u00E1dn\u00E9 prvky"
+   },
+   "novalidurlpattern": {
+      "message": "Pros\u00EDm zadejte platnou vzorovou adresu URL!"
+   },
+   "now_you_have_adblock_hooray": {
+      "message": "Nyn\u00ED m\u00E1te AdBlock! Hur\u00E1\u00E1\u00E1!"
+   },
+   "oneverysitetitle": {
+      "message": "Reklamy jsou v\u0161ude!"
+   },
+   "only_block_ads_on_these_sites": {
+      "message": "Blokovat reklamy pouze na t\u011Bchto str\u00E1nk\u00E1ch:"
+   },
+   "onlyondomains": {
+      "message": "POUZE str\u00E1nky na t\u011Bchto dom\u00E9n\u00E1ch: "
+   },
+   "onlyresourcetypes": {
+      "message": "Tento filtr se vztahuje na prvky t\u011Bchto typ\u016F:"
+   },
+   "opera_120_install": {
+      "message": "V Ope\u0159e p\u0159ed verz\u00ED 12.10, nebudou n\u011Bkter\u00E9 reklamy blokov\u00E1ny, proto\u017Ee nen\u00ED mo\u017En\u00E9 analyzovat v\u0161echna pravidla. To lze napravit aktualizac\u00ED Opery na verzi 12.10. Od tohoto okam\u017Eiku budou v\u0161echny reklamy blokov\u00E1ny spr\u00E1vn\u011B."
+   },
+   "opera_120_options": {
+      "message": "V Ope\u0159e p\u0159ed verz\u00ED 12.10, jsou n\u011Bkter\u00E9 mo\u017Enosti za\u0161ediv\u011Bl\u00E9, proto\u017Ee nejsou ve star\u0161\u00EDch verz\u00EDch podporov\u00E1ny."
+   },
+   "opera_allow_secure": {
+      "message": "Pokud chcete pou\u017E\u00EDvat AdBlock na zabezpe\u010Den\u00FDch str\u00E1nk\u00E1ch (str\u00E1nky s ikonou z\u00E1mku v panelu n\u00E1stroj\u016F), mus\u00EDte nejprve povolit mo\u017Enost pro p\u0159\u00EDstupu k zabezpe\u010Den\u00FDm str\u00E1nk\u00E1m."
+   },
+   "opera_can_also_change_setting": {
+      "message": "M\u016F\u017Eete tak\u00E9 zv\u00FD\u0161it hodnotu\n$setting$",
+      "placeholders": {
+         "setting": {
+            "content": "$1"
+         }
+      }
+   },
+   "opera_donations_button": {
+      "message": "L\u00EDb\u00ED se v\u00E1m toto roz\u0161\u00ED\u0159en\u00ED? Pokud ano, pros\u00EDm zva\u017Ete posl\u00E1n\u00ED daru pomoc\u00ED nab\u00EDdky na str\u00E1nce v nastaven\u00ED!"
+   },
+   "opera_donations_install": {
+      "message": "Pokud se v\u00E1m l\u00EDb\u00ED toto roz\u0161\u00ED\u0159en\u00ED, pros\u00EDm zva\u017Ete poslan\u00ED daru prost\u0159ednictv\u00EDm nab\u00EDdky na str\u00E1nce v nastaven\u00ED."
+   },
+   "opera_enabledin": {
+      "message": "Aktivn\u00ED v $browserversion$",
+      "placeholders": {
+         "browserversion": {
+            "content": "$1"
+         }
+      }
+   },
+   "opera_excludedomainorurl": {
+      "message": "Dom\u00E9na, kde by AdBlock nem\u011Bl nic blokovat"
+   },
+   "opera_for_more_options": {
+      "message": "Pro v\u00EDce mo\u017Enost\u00ED, m\u016F\u017Eete kliknout na tla\u010D\u00EDtko panelu n\u00E1stroj\u016F nebo otev\u0159ete p\u0159edvolby p\u0159es Opera &rArr; Roz\u0161\u00ED\u0159en\u00ED &rArr; Spravovat roz\u0161\u00ED\u0159en\u00ED &rArr; ikona kl\u00ED\u010De &rArr; P\u0159edvolby"
+   },
+   "opera_linkunblock": {
+      "message": "Zobrazit reklamy na dom\u00E9n\u011B"
+   },
+   "opera_reenable_button": {
+      "message": "Tla\u010D\u00EDtko m\u016F\u017Eete znovu povolit v nastaven\u00ED tohoto roz\u0161\u00ED\u0159en\u00ED"
+   },
+   "opera_secure_pages": {
+      "message": "Zabezpe\u010Den\u00E9 str\u00E1nky"
+   },
+   "opera_secure_pages_enabled": {
+      "message": "Klikn\u011Bte na Extensions (v menu) &rArr; Manage Extensions &rArr; vyhledejte AdBlock a klikn\u011Bte na ikonu kl\u00ED\u010De vedle n\u011Bj &rArr; klikn\u011Bte na Privacy.\u003Cbr/\u003EJe povolena mo\u017Enost p\u0159\u00EDstupu k zabezpe\u010Den\u00FDm str\u00E1nk\u00E1m?"
+   },
+   "opera_show_toolbar_button": {
+      "message": "Zobrazit tla\u010D\u00EDtko panelu n\u00E1stroj\u016F"
+   },
+   "options": {
+      "message": "Nastaven\u00ED"
+   },
+   "optionschangelog": {
+      "message": "seznam zm\u011Bn"
+   },
+   "optionstitle": {
+      "message": "AdBlock Nastaven\u00ED"
+   },
+   "optionsversion": {
+      "message": "Verze $version$",
+      "placeholders": {
+         "version": {
+            "content": "$1"
+         }
+      }
+   },
+   "orenteraurl": {
+      "message": "Nebo zadejte URL:"
+   },
+   "other": {
+      "message": "Jin\u00FD"
+   },
+   "pagelanguagecheck": {
+      "message": "V jak\u00E9m jazyce je str\u00E1nka naps\u00E1na?"
+   },
+   "pause_adblock": {
+      "message": "Pozastavit AdBlock"
+   },
+   "project_home": {
+      "message": "Hlavn\u00ED str\u00E1nka projektu"
+   },
+   "refusetocheck": {
+      "message": "Nechci to takhle kontrolovat"
+   },
+   "reloadadpage": {
+      "message": "Na\u010Dt\u011Bte znovu str\u00E1nku s reklamou."
+   },
+   "removefromlist": {
+      "message": "Odstranit ze seznamu"
+   },
+   "removelabel": {
+      "message": "Odstranit"
+   },
+   "report_ad_on_page": {
+      "message": "Nahl\u00E1sit reklamu na t\u00E9to str\u00E1nce"
+   },
+   "reportfilterlistproblem": {
+      "message": "Toto je chyba seznamu filtr\u016F. Nahla\u0161te ji zde: $link$",
+      "placeholders": {
+         "link": {
+            "content": "$1"
+         }
+      }
+   },
+   "reportpubliclyavailable": {
+      "message": "Pozn\u00E1mka: va\u0161e hl\u00E1\u0161en\u00ED m\u016F\u017Ee b\u00FDt ve\u0159ejn\u011B dostupn\u00E9. M\u011Bjte to na pam\u011Bti p\u0159edt\u00EDm, ne\u017E vlo\u017E\u00EDte cokoli soukrom\u00E9ho."
+   },
+   "reporttous2": {
+      "message": "Pokud um\u00EDte anglicky, m\u016F\u017Eete n\u00E1m reklamu nahl\u00E1sit \u003Ca\u003Ena seznam probl\u00E9m\u016F\u003C/a\u003E."
+   },
+   "resourceblocklegend1": {
+      "message": "Legenda:"
+   },
+   "resourceblocklegend2": {
+      "message": "blokovan\u00E9 prvky"
+   },
+   "resourceblocklegend3": {
+      "message": "povolen\u00E9 prvky"
+   },
+   "resourceblocklegend4": {
+      "message": "prvky, kter\u00E9 je mo\u017En\u00E9 blokovat"
+   },
+   "resourceblocklegend5": {
+      "message": "uplat\u0148ovan\u00E1 pravidla"
+   },
+   "resourceblocktitle": {
+      "message": "Blokovat prvek"
+   },
+   "resourcedomain": {
+      "message": "Na\u010Dteno na str\u00E1nce s dom\u00E9nou:\n$domain$",
+      "placeholders": {
+         "domain": {
+            "content": "$1"
+         }
+      }
+   },
+   "resourceiswhitelisted": {
+      "message": "Vybran\u00FD prvek je na seznamu povolen\u00FDch. Proto ho nem\u016F\u017Eete blokovat."
+   },
+   "retryaftersubscribe": {
+      "message": "P\u0159ihlaste se k odb\u011Bru tohoto seznamu filtr\u016F a zkuste to znovu: $list_title$",
+      "placeholders": {
+         "list_title": {
+            "content": "$1"
+         }
+      }
+   },
+   "safari50_updatenotice": {
+      "message": "Pou\u017E\u00EDv\u00E1te starou verzi Safari. Z\u00EDskejte nejnov\u011Bj\u0161\u00ED verzi, abyste mohli pou\u017E\u00EDvat tla\u010D\u00EDtko AdBlock na panelu n\u00E1stroj\u016F pro pozastaven\u00ED AdBlock, spravovat chov\u00E1n\u00ED na webov\u00FDch str\u00E1nk\u00E1ch a nahla\u0161ovat reklamy. \u003Ca\u003EAktualizovat nyn\u00ED\u003C/a\u003E."
+   },
+   "savebutton": {
+      "message": "Ulo\u017Eit"
+   },
+   "savereminder": {
+      "message": "Nezapome\u0148te ulo\u017Eit!"
+   },
+   "searchexplanation": {
+      "message": "Pou\u017Eijte * pro \u017E\u00E1dn\u00FD nebo v\u00EDce znak\u016F.  Nap\u0159\u00EDklad 'banner*.gif image' odpov\u00EDd\u00E1 obr\u00E1zk\u016Fm 'banner.gif', 'banner123.gif' a 'bannerxyz.gif'."
+   },
+   "searchplaceholder": {
+      "message": "Hled\u00E1m prvky..."
+   },
+   "seeing_this_every_time_you_start_your_browser": {
+      "message": "Vid\u00EDte tohle p\u0159i ka\u017Ed\u00E9m spu\u0161t\u011Bn\u00ED prohl\u00ED\u017Ee\u010De?"
+   },
+   "selectresources": {
+      "message": "Vyberte prvek, kter\u00FD chcete blokovat nebo povolit"
+   },
+   "show_ads_except_for": {
+      "message": "Zobrazovat reklamy \u003Ci\u003Ev\u0161ude\u003C/i\u003E krom\u011B t\u011Bchto dom\u00E9n..."
+   },
+   "show_resourcelist": {
+      "message": "Zobrazit seznam prvk\u016F"
+   },
+   "showcontextmenus": {
+      "message": "P\u0159idat polo\u017Eky do nab\u00EDdky po kliknut\u00ED prav\u00FDm tla\u010D\u00EDtkem my\u0161i."
+   },
+   "showlinkstolists": {
+      "message": "Odkazy pro zobrazen\u00ED seznamu filtr\u016F:"
+   },
+   "sliderexplanation": {
+      "message": "Nastavte posuvn\u00EDk tak, aby reklama na str\u00E1nce byla blokov\u00E1na a zbytek str\u00E1nky st\u00E1le vypadal uspokojiv\u011B."
+   },
+   "slidertitle": {
+      "message": "Krok 1: Ur\u010Dete, co se bude blokovat"
+   },
+   "status_disabled": {
+      "message": "AdBlock nelze spustit na t\u00E9to dom\u00E9n\u011B."
+   },
+   "status_paused": {
+      "message": "AdBlock je pozastaven."
+   },
+   "stop_blocking_ads": {
+      "message": "Zru\u0161it blokov\u00E1n\u00ED reklam:"
+   },
+   "storage_quota_exceeded": {
+      "message": "P\u0159ekro\u010Dili jste ukl\u00E1dac\u00ED prostor, kter\u00FD AdBlock m\u016F\u017Ee pou\u017E\u00EDt. Pros\u00EDm, odhlaste odb\u011Br n\u011Bkter\u00FDch seznam\u016F filtr\u016F!"
+   },
+   "subscribe_unsubscribe_all": {
+      "message": "$subscribe$ nebo $unsubscribe$ v\u0161echny seznamy.",
+      "placeholders": {
+         "subscribe": {
+            "content": "\u003Ca href='#' id='subscribeAll'\u003EP\u0159ihl\u00E1sit\u003C/a\u003E"
+         },
+         "unsubscribe": {
+            "content": "\u003Ca href='#' id='unsubscribeAll'\u003Eodhl\u00E1sit\u003C/a\u003E"
+         }
+      }
+   },
+   "subscribebutton": {
+      "message": "P\u0159idat"
+   },
+   "subscribingfailed": {
+      "message": "Ne\u00FAsp\u011B\u0161n\u00E9!"
+   },
+   "subscribingfinished": {
+      "message": "Dokon\u010Deno!"
+   },
+   "subscribingtitle": {
+      "message": "P\u0159ihla\u0161ov\u00E1n\u00ED k odb\u011Bru seznamu filtr\u016F..."
+   },
+   "tabcustomize": {
+      "message": "P\u0159izp\u016Fsoben\u00ED"
+   },
+   "tabcustomizetitle": {
+      "message": "P\u0159izp\u016Fsobte si AdBlock"
+   },
+   "tabfilterlists": {
+      "message": "Seznamy filtr\u016F"
+   },
+   "tabgeneral": {
+      "message": "Obecn\u00E9"
+   },
+   "thats_it": {
+      "message": "A je to!"
+   },
+   "thirdparty": {
+      "message": "Od jinud"
+   },
+   "thirdpartycheckbox": {
+      "message": "Jak\u00E9koliv webov\u00E9 str\u00E1nky, s v\u00FDjimkou str\u00E1nek na dom\u00E9n\u011B $domain$",
+      "placeholders": {
+         "domain": {
+            "content": "$1"
+         }
+      }
+   },
+   "translator_credit": {
+      "message": "Autorem p\u0159ekladu je: $translator_names$",
+      "placeholders": {
+         "translator_names": {
+            "content": "Petr C\u00EDzl"
+         }
+      }
+   },
+   "typehiding": {
+      "message": "skryt\u00FD"
+   },
+   "typeimage": {
+      "message": "obr\u00E1zek"
+   },
+   "typemedia": {
+      "message": "audio/video"
+   },
+   "typeobject": {
+      "message": "interaktivn\u00ED objekt"
+   },
+   "typeobject_subrequest": {
+      "message": "object_subrequest"
+   },
+   "typeother": {
+      "message": "jin\u00FD"
+   },
+   "typepage": {
+      "message": "str\u00E1nka"
+   },
+   "typepopup": {
+      "message": "popup"
+   },
+   "typescript": {
+      "message": "skript"
+   },
+   "typestylesheet": {
+      "message": "definice stylu"
+   },
+   "typesubdocument": {
+      "message": "r\u00E1mec"
+   },
+   "typeunknown": {
+      "message": "nezn\u00E1m\u00FD"
+   },
+   "typexmlhttprequest": {
+      "message": "xmlhttprequest"
+   },
+   "undo_last_block": {
+      "message": "Vr\u00E1tit zp\u011Bt posledn\u00ED blok"
+   },
+   "unpause": {
+      "message": "spustit"
+   },
+   "unsubscribedlabel": {
+      "message": "Odhl\u00E1\u0161eno."
+   },
+   "updateddayago": {
+      "message": "aktualizov\u00E1no p\u0159ed 1 dnem"
+   },
+   "updateddaysago": {
+      "message": "aktualizov\u00E1no p\u0159ed $days$ dny",
+      "placeholders": {
+         "days": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedhourago": {
+      "message": "aktualizov\u00E1no p\u0159ed 1 hodinou"
+   },
+   "updatedhoursago": {
+      "message": "aktualizov\u00E1no p\u0159ed $hours$ hodinami",
+      "placeholders": {
+         "hours": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedminuteago": {
+      "message": "aktualizov\u00E1no p\u0159ed 1 minutou"
+   },
+   "updatedminutesago": {
+      "message": "aktualizov\u00E1no p\u0159ed $minutes$ minutami",
+      "placeholders": {
+         "minutes": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatedrightnow": {
+      "message": "aktualizov\u00E1no pr\u00E1v\u011B te\u010F"
+   },
+   "updatedsecondsago": {
+      "message": "aktualizov\u00E1no p\u0159ed $seconds$ sekundami",
+      "placeholders": {
+         "seconds": {
+            "content": "$1"
+         }
+      }
+   },
+   "updatefromoldversion": {
+      "message": "Pou\u017E\u00EDv\u00E1te zastaralou verzi AdBlock. Pros\u00EDm, nejprve $updatelink$ AdBlock na nejnov\u011Bj\u0161\u00ED verzi",
+      "placeholders": {
+         "updatelink": {
+            "content": "$1aktualizujte$2"
+         }
+      }
+   },
+   "updatenowmessage": {
+      "message": "Aktualizace jsou prov\u00E1d\u011Bny automaticky; nicm\u00E9n\u011B m\u016F\u017Eete seznamy \u003Ca\u003EAktualizovat nyn\u00ED\u003C/a\u003E."
+   },
+   "updateyourlists": {
+      "message": "Ujist\u011Bte se, \u017Ee seznamy filtr\u016F jsou aktu\u00E1ln\u00ED"
+   },
+   "use_experimental_feature_to_speed_up_adblock": {
+      "message": "Zrychlit Adblock pomoc\u00ED experiment\u00E1ln\u00ED funkce v prohl\u00ED\u017Ee\u010Di Safari."
+   },
+   "warning_overrules_filters": {
+      "message": "Upozorn\u011Bn\u00ED: Na v\u0161ech ostatn\u00EDch str\u00E1nk\u00E1ch uvid\u00EDte reklamy!\u003Cbr\u003EToto m\u00E1 p\u0159ednost p\u0159ed v\u0161emi ostatn\u00EDmi filtry pro tyto str\u00E1nky."
+   },
+   "whitelistertitle2": {
+      "message": "Nespou\u0161t\u011Bt AdBlock na..."
+   },
+   "whitelisteverycontaining": {
+      "message": "Povolit ka\u017Ed\u00FD prvek obsahuj\u00EDc\u00ED:"
+   },
+   "wildcardhint": {
+      "message": "Pozn.: zde m\u016F\u017Eete pou\u017E\u00EDt * jako z\u00E1stupn\u00FD znak"
+   },
+   "work_around_hulu_problems": {
+      "message": "Z\u00E1stupn\u00E9 \u0159e\u0161en\u00ED pro nefunk\u010Dn\u00ED video na Hulu.com (vy\u017Eaduje restartov\u00E1n\u00ED prohl\u00ED\u017Ee\u010De)"
+   },
+   "yes": {
+      "message": "Ano"
+   },
+   "you_can_slide_to_change": {
+      "message": "Nastaven\u00EDm posuvn\u00EDku n\u00ED\u017Ee vyberte p\u0159esn\u011B ty str\u00E1nky, kde se AdBlock nebude spou\u0161t\u011Bt."
+   },
+   "you_know_thats_a_bad_idea_right": {
+      "message": "\u010C\u00EDm v\u00EDce seznam\u016F filtr\u016F si p\u0159ihl\u00E1s\u00EDte, t\u00EDm pomaleji AdBlock pob\u011B\u017E\u00ED. Pou\u017Eit\u00ED p\u0159\u00EDli\u0161 mnoha seznam\u016F dokonce m\u016F\u017Ee m\u00EDt za n\u00E1sledek p\u00E1d prohl\u00ED\u017Ee\u010De na n\u011Bkter\u00FDch webov\u00FDch str\u00E1nk\u00E1ch. Pro potvrzen\u00ED p\u0159ihl\u00E1\u0161en\u00ED stiskn\u011Bte tla\u010D\u00EDtko OK."
+   }
+}

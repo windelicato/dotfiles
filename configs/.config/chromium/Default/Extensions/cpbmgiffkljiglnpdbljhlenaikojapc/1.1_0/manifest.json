@@ -1,0 +1,13 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "AlwaysClearDownloads.png",
+      "default_title": "Always Clear Downloads"
+   },
+   "description": "A Google Chrome Extension to always clear the downloads list of all completed downloads.",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDxJq3ghdZgJ2Wlo2p9ZhQA/E6PIf3Wo9aODDL5cXJscJVshZaB+cb7ikNmdtkkBY296tNIRUE+GtT1CRAYD7i2UvVhcC/H8gCmEYygCZu1c59O5xm+ATtPuA9yxLv3l3dUL5noDD2Yiim1b/suzb1Vum9+3iBArAyvhqrZVWQfwQIDAQAB",
+   "name": "Always Clear Downloads",
+   "permissions": [ "browsingData" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.1"
+}

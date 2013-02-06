@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="no"?>
+<ario-radios>
+  <radio url="http://213.205.96.91:9907">France Bleu - Ile de France</radio>
+  <radio url="http://213.205.96.91:9927">France Vivace</radio>
+  <radio url="http://213.205.96.91:9923">Le Mouv</radio>
+  <radio url="http://audio-ogg.ibiblio.org:8000/wcpe.ogg">WCPE, Wake Forest, NC</radio>
+  <radio url="http://streaming.radio.funradio.fr:80/fun-1-44-128">Fun Radio</radio>
+  <radio url="http://mp3.live.tv-radio.com/kissfm/all/kissfm-128k.mp3">Kiss FM</radio>
+  <radio url="http://broadcast.infomaniak.net/ouifm-high.mp3">Oui FM</radio>
+  <radio url="http://campus.abeille.com:8000/campus.ogg">Radio Campus Clermont-Ferrand</radio>
+  <radio url="http://broadcast.infomaniak.net:80/radionova-high.mp3">Radio Nova</radio>
+  <radio url="http://mp3.live.tv-radio.com/scooplyon/all/scooplyon-128k.mp3">Radio Scoop</radio>
+  <radio url="http://broadcast.infomaniak.ch/rsr-la1ere-high.mp3">RSR - la premi&#xE8;re</radio>
+  <radio url="http://broadcast.infomaniak.ch/rsr-espace2-high.mp3">RSR - Espace 2</radio>
+  <radio url="http://broadcast.infomaniak.ch/rsr-couleur3-high.mp3">RSR - Couleur 3</radio>
+  <radio url="http://broadcast.infomaniak.ch/rsr-optionmusique-high.mp3">RSR - Option Musique</radio>
+  <radio url="http://streaming.radio.funradio.fr/rtl2-1-44-96">RTL2</radio>
+  <radio url="http://w02-sw01.akadostream.ru:8000/europaplus128.mp3">Europa Plus</radio>
+  <radio url="http://mp3.live.tv-radio.com/fip/all/fiphautdebit.mp3">Fip</radio>
+  <radio url="http://mp3.live.tv-radio.com/franceculture/all/franceculturehautdebit.mp3">France Culture</radio>
+  <radio url="http://str2.creacast.com/france_info_64">France Info</radio>
+  <radio url="http://mp3.live.tv-radio.com/franceinter/all/franceinterhautdebit.mp3">France Inter</radio>
+  <radio url="http://mp3.live.tv-radio.com/francemusique/all/francemusiquehautdebit.mp3">France Musique</radio>
+  <radio url="http://radiosibir.ru:8090/liveradio">Radio Sibir</radio>
+  <radio url="http://broadcast.infomaniak.net/tsfjazz-high.mp3">Tsf Jazz</radio>
+  <radio url="http://213.218.147.9:80">Hotmixradio Rock - La radio Happy et Rock (Paris France) http://www.hotmixradiorock.fr</radio>
+  <radio url="http://91.121.14.16:9070">Hotmixradio Metal - La radio Metal et Hard Rock (Paris France) http://www.hotmixradiometal.fr</radio>
+  <radio url="http://91.121.14.16:9050">Hotmixradio Frenchy - La radio chansons francaises (Paris France) http://www.hotmixradiofrenchy.fr</radio>
+  <radio url="http://91.121.14.16:9060">Hotmixradio Japan - La radio J-Music (Paris France) http://www.hotmixradiojapan.fr</radio>
+  <radio url="http://91.121.14.16:9090">Hot Mix Radio 90s - La radio 100% annee 90 (Paris France) - http://www.hotmixradio90.fr</radio>
+  <radio url="http://91.121.14.16:9100">Hotmixradio VIP - La radio que vous programmez (Paris France) http://www.hotmixradiovip.fr</radio>
+  <radio url="http://91.121.14.16:9030">Hot Mix Radio Funkyhotmix - La radio Disco Funk (Paris France) - http://www.funkyhotmix.fr</radio>
+  <radio url="http://91.121.14.16:9080">Hot Mix Radio 80s - La radio 100% annee 80 (Paris France) - http://www.hotmixradio80.fr</radio>
+</ario-radios>

@@ -1,0 +1,111 @@
+
+
+##################### PANEL BACKGROUND ###############################
+
+
+
+style "panelbg"
+{
+  xthickness            			= 0
+  ythickness            			= 0
+ bg_pixmap[NORMAL]					= "Panel/panel-bg.png"
+ 
+
+
+}
+class "*Panel*" style "panelbg"
+
+widget_class "*Mail*" style "panelbg"
+
+#widget_class "*applet*" style "panelbg"
+#widget_class "*Applet*" style "panelbg"
+#widget_class "*manager*" style "panelbg"
+
+##################### PANEL BUTTONS ###############################
+
+style "panelbuttons" = "default"
+{
+
+
+ 
+ xthickness            			= 2
+  ythickness            			= 1
+
+	GtkWidget::focus_padding = 2
+
+	engine "pixmap" {
+      
+		image
+		{
+			function        			= BOX
+			recolorable     		= TRUE
+			state										= NORMAL
+			file            						= "Panel/panelbutton1.png"
+			border          			= { 10, 10, 10, 10 }
+			stretch         				= TRUE
+		}
+		
+image
+		{
+			function        			= BOX
+			recolorable     		= TRUE
+			state										= PRELIGHT
+			file            						= "Panel/panelbutton2.png"
+			border          			= { 10, 10, 10, 10 }
+			stretch         				= TRUE
+		}
+
+		image
+		{
+			function        			= BOX
+			recolorable     		= TRUE
+			shadow							= OUT
+			state										= PRELIGHT
+			file            						= "Panel/panelbutton1.png"
+			border          			= { 10, 10, 10, 10 }
+			stretch         				= TRUE
+			#overlay_file   			= "panelbutton2.png"
+			#overlay_border	= { 4, 4, 4, 4 }
+			#overlay_stretch	= TRUE
+		}
+		
+		image
+		{
+			function        			= BOX
+			recolorable     		= TRUE
+			shadow							= IN
+			state										= PRELIGHT
+			file            						= "Panel/panelbutton3.png"
+			border          			= { 10, 10, 10, 10 }
+			stretch         				= TRUE
+			#overlay_file     		= "panelbutton2.png"
+			#overlay_border	= { 4, 4, 4, 4 }
+			#overlay_stretch	= TRUE
+		}
+		
+		image
+		{
+			function        			= BOX
+			recolorable     		= TRUE
+			state										= ACTIVE
+			file            						= "Panel/panelbutton3.png"
+			border          			= { 10, 10, 10, 10 }
+			stretch         				= TRUE
+		}  
+image
+		{
+			function        			= BOX
+			recolorable     		= TRUE
+			state										= INSENSITIVE
+			file            						= "Panel/panelbutton2.png"
+			border          			= { 10, 10, 10, 10 }
+			stretch         				= TRUE
+		}  
+
+	}
+
+}
+widget_class "*Panel*GtkToggleButton" style "panelbuttons"
+widget_class "*Panel*GtkButton" style "panelbuttons"
+
+
