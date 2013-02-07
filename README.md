@@ -1,5 +1,8 @@
 Arch Linux configuration files for programs and Xmonad
 
+ALPS:
+![Alt text](https://raw.github.com/windelicato/dotfiles/master/alps_ss.png "ALPS")
+
 THAW:
 ![Alt text](https://raw.github.com/windelicato/dotfiles/master/thaw_ss.png "THAW")
 
