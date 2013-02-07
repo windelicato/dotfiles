@@ -1,0 +1,18 @@
+# GTK2.0 Config
+#gtk-theme-name = "Black-n-White-GTK"
+#gtk-theme-name = "BlackWhite"
+#gtk-theme-name = "termGTK"
+#gtk-theme-name = "Simple"
+#gtk-theme-name = "FlatStudioDark"
+#gtk-theme-name = "Luminaire"
+#gtk-theme-name = "Zukitwo"
+gtk-theme-name = "Faience"
+gtk-font-name = "Lucida Grande 8"
+#gtk-font-name = "Lime 9"
+#gtk-icon-theme-name = "ACYL_Icon_Theme_0.9.4"
+gtk-icon-theme-name = "Faenza-Darkest"
+#gtk-icon-theme-name = "OSX"
+#gtk-xft-antialias = 1
+#gtk-xft-hinting = 2
+#gtk-xft-hintstyle = hintslight
+#gtk-xft-rgba = rgb

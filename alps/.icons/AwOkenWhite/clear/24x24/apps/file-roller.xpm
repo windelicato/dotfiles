@@ -1,0 +1,38 @@
+/* XPM */
+static char *file_roller[] = {
+/* columns rows colors chars-per-pixel */
+"24 24 8 1",
+"  c #FA1DFA1DFA19",
+". c #FAC4FAC4FABB",
+"X c #FC36FC36FC34",
+"o c #FCCFFCCFFCCC",
+"O c #FE0EFE0EFE0D",
+"+ c #FF00FF00FEFF",
+"@ c #FFAAFFAAFFAA",
+"# c None",
+/* pixels */
+"########################",
+"##########++++++########",
+"########+++++++++++#####",
+"#####++++++++++++++++###",
+"##+++++++++++++++++++++#",
+"+++++XX+++++++++++++++++",
+"+++++XX+++++++++++++++++",
+"+++++++X++++++++++++++X+",
+"++++++++++++++++++XX+XX+",
+"+X++++X+++++++++XXX+XX+X",
+"X++++++++X++XXXXXXXX+XX+",
+"+XX++X+X+++XXXXXXXXXXXXo",
+"+X+XX+++X+++XXXXXXXX+XXX",
+"X+++++X+++XX+XXXXXXXXXXX",
+"+XX+X++++X++XXXXXXXXXXXX",
+"X+X+++XX++XXXXXXX+XXXXX+",
+"#++++X++++XXXXXXXXXXXXX#",
+"###++++Xo+++XXXXooXXX###",
+"#####++++o+XXXoX+XXX####",
+"######X+++++oX+XXX######",
+"########+++++XXX########",
+"##########++XX##########",
+"########################",
+"########################"
+};

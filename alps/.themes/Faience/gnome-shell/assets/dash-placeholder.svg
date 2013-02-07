@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg id="svg11252" xmlns="http://www.w3.org/2000/svg" height="27" width="76" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs id="defs11254">
+  <radialGradient id="radialGradient68155-2-3" gradientUnits="userSpaceOnUse" cy="488" cx="49" gradientTransform="matrix(1 0 0 .34868 0 317.84)" r="38">
+   <stop id="stop39565-1-4" style="stop-color:#fff" offset="0"/>
+   <stop id="stop39567-7-9" style="stop-color:#fff;stop-opacity:0" offset="1"/>
+  </radialGradient>
+  <radialGradient id="radialGradient68157-0-8" gradientUnits="userSpaceOnUse" cy="487.5" cx="50.5" r="10.5">
+   <stop id="stop39575-5-6" style="stop-color:#fff" offset="0"/>
+   <stop id="stop39577-1-2" style="stop-color:#fff;stop-opacity:0" offset="1"/>
+  </radialGradient>
+ </defs>
+ <g id="layer1" transform="translate(-337 -518.86)">
+  <g id="g99967" transform="translate(326 44.862)">
+   <rect id="rect99969" style="opacity:.49375;color:#000000;fill:url(#radialGradient68155-2-3)" rx="0" ry="0" height="2" width="76" y="487" x="11"/>
+   <path id="path99971" style="opacity:.43125;color:#000000;fill:url(#radialGradient68157-0-8)" transform="matrix(1.2857 0 0 1.2857 -14.429 -139.29)" d="m61 487.5c0 5.8-4.701 10.5-10.5 10.5s-10.5-4.7-10.5-10.5 4.701-10.5 10.5-10.5 10.5 4.701 10.5 10.5z"/>
+   <path id="path99973" style="color:#000000;fill:#fff" transform="matrix(.43590 0 0 .43590 28.487 275)" d="m61 487.5c0 5.8-4.701 10.5-10.5 10.5s-10.5-4.7-10.5-10.5 4.701-10.5 10.5-10.5 10.5 4.701 10.5 10.5z"/>
+  </g>
+ </g>
+</svg>

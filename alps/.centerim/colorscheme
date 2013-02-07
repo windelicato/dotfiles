@@ -1,0 +1,32 @@
+status	white/black
+dialog_text	black/white
+dialog_menu	black/white
+dialog_selected	white/transparent	bold
+dialog_highlight	red/white
+dialog_frame	blue/white
+main_text	transparent/transparent
+main_menu	green/transparent
+main_selected	black/white
+main_highlight	yellow/transparent	bold
+main_frame	green/transparent	bold
+main_history_incoming	transparent/transparent
+main_history_outgoing	white/transparent bold
+clist_icq	green/transparent
+clist_yahoo	magenta/transparent
+clist_infocard	white/transparent
+clist_msn	cyan/transparent
+clist_aim	yellow/transparent
+clist_irc	blue/transparent
+clist_jabber	red/transparent
+clist_rss	white/transparent	bold
+clist_lj	cyan/transparent	bold
+clist_gg	blue/transparent	bold
+clist_online	red/transparent	bold
+clist_offline	black/transparent	bold
+clist_away	green/transparent	bold
+clist_dnd	cyan/transparent	bold
+clist_na	blue/transparent	bold
+clist_free_for_chat	green/transparent	bold
+clist_invisible	        grey/transparent	bold
+clist_not_in_list	white/transparent	bold
+clist_unread	red/transparent	bold

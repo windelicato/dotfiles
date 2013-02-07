@@ -1,0 +1,15 @@
+
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=Faience
+Comment=Faience GTK2 / GTK3 theme
+Encoding=UTF-8
+
+Name[en]=index.theme
+
+[X-GNOME-Metatheme]
+GtkTheme=Faience
+MetacityTheme=Faience
+IconTheme=Faience
+CursorTheme=DMZ-Black
+ButtonLayout=close,minimize,maximize:menu
