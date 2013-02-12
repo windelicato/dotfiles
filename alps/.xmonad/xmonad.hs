@@ -9,11 +9,13 @@ import XMonad.Layout.ThreeColumns
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.Circle
 
+import XMonad.Actions.GridSelect
 -- WINDOW RULES
 import XMonad.ManageHook
 -- KEYBOARD & MOUSE CONFIG
 import XMonad.Util.EZConfig
 import XMonad.Actions.FloatKeys
+import Graphics.X11.ExtraTypes.XF86
 -- STATUS BAR
 import XMonad.Hooks.DynamicLog hiding (xmobar, xmobarPP, xmobarColor, sjanssenPP, byorgeyPP)
 import XMonad.Hooks.ManageDocks
@@ -29,10 +31,21 @@ import XMonad.Util.Run (spawnPipe)
 import XMonad.Actions.CycleWS			-- nextWS, prevWS
 import Data.List			-- clickable workspaces
 
+gsconfig colorizer = (buildDefaultGSConfig myColorizer) 
+	{ gs_cellheight = 30
+	, gs_cellwidth = 100
+	, gs_cellpadding = 10
+	, gs_font = myFont
+	}
 
-
-
-
+-- | A green monochrome colorizer based on window class
+myColorizer = colorRangeFromClassName
+	(0x00,0x00,0x00) -- lowest inactive bg
+	(0x60,0xA0,0xC0) -- highest inactive bg
+	(0x34,0x75,0xAA) -- active bg
+	(0xBB,0xBB,0xBB) -- inactive fg
+	(0x00,0x00,0x00) -- active fg
+ 
 defaultLayouts =	  onWorkspace (myWorkspaces !! 0) (avoidStruts (Circle ||| tiled) ||| fullTile ||| fullTile3)
 			$ onWorkspace (myWorkspaces !! 1) (fullScreen ||| avoidStruts (tiled ||| Circle))
 			$ onWorkspace (myWorkspaces !! 2) (avoidStruts simplestFloat)
@@ -75,7 +88,9 @@ myWorkspaces = clickable $ ["^i(/home/sunn/.dzen/arch_10x10.xbm) shell"
 myManageHook = composeAll 	[ resource =? "dmenu" --> doFloat
 				, resource =? "skype" 	--> doFloat
 				, resource =? "java" 	--> doFloat
+				, resource =? "./a.out" --> doFloat
 				, resource =? "mplayer"	--> doFloat
+				, resource =? "feh"	--> doFloat
 				, className =? "tint2"	--> doIgnore
 				, resource =? "chromium"--> doShift (myWorkspaces !! 1)
 				, resource =? "lowriter"--> doShift (myWorkspaces !! 3)
@@ -106,8 +121,8 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 		, ppOutput	=   hPutStrLn h
 	} )
 
-myXmonadBar = "dzen2 -x '0' -y '0' -h '15' -w '750' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
-myStatusBar = "conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '750' -w '616' -h '15' -ta 'r' -bg '"++background++"' -fg '"++foreground++"' -y '0' -fn "++myFont
+myXmonadBar = "dzen2 -x '0' -y '0' -h '15' -w '400' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
+myStatusBar = "conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '400' -w '966' -h '15' -ta 'r' -bg '"++background++"' -fg '"++foreground++"' -y '0' -fn "++myFont
 
 
 main = do
@@ -135,11 +150,14 @@ main = do
 		,((mod1Mask  			, xK_n), spawn "urxvtd")
 		,((mod1Mask .|. shiftMask  	, xK_t), spawn "urxvtc -e tmux")
 		,((mod1Mask  			, xK_z), spawn "zathura")
-		,((mod1Mask 			, xK_r), spawn "gmrun")
-		,((mod1Mask 			, xK_p), spawn "dmenu_run -nb '#000000' -nf '#404040' -sb '#000000' -sf '#FFFFFF' -fn '-*-lime-*-*-*-*-*-*-*-*-*-*-*-*'")
+		,((mod1Mask 			, xK_r), spawn "GTK_RC_FILES=/home/sunn/.gtkdocky /home/sunn/scripts/lens")
+		,((mod1Mask .|. shiftMask	, xK_r), spawn "dmenu_run -nb '#000000' -nf '#404040' -sb '#000000' -sf '#FFFFFF' -fn '-*-lime-*-*-*-*-*-*-*-*-*-*-*-*'")
 		,((mod1Mask			, xK_q), spawn "killall dzen2; killall conky; cd ~/.xmonad; ghc -threaded xmonad.hs; mv xmonad xmonad-x86_64-linux; xmonad --restart" )
+		,((mod1Mask  			, xK_g), goToSelected $ gsconfig myColorizer)
 		,((mod1Mask .|. shiftMask	, xK_x), kill)
 		,((mod1Mask .|. shiftMask	, xK_c), return())
+		,((mod1Mask  			, xK_p), prevWS)
+		,((mod1Mask  			, xK_n), nextWS)
 		,((mod1Mask  			, xK_c), moveTo Next EmptyWS)
 		,((mod1Mask .|. shiftMask	, xK_l), sendMessage MirrorShrink)
 		,((mod1Mask .|. shiftMask	, xK_h), sendMessage MirrorExpand)
@@ -152,23 +170,22 @@ main = do
 		,((mod1Mask .|. shiftMask  	, xK_s), withFocused (keysResizeWindow (0,-20) (0,0)))
 		,((mod1Mask .|. shiftMask  	, xK_d), withFocused (keysResizeWindow (0,20) (0,0)))
 		,((mod1Mask .|. shiftMask  	, xK_f), withFocused (keysResizeWindow (20,0) (0,0)))
-		,((0				, xK_Super_L), spawn "/home/sunn/scripts/lens")
-		,((0                     	, 0x1008FF11), spawn "amixer set Master 2-")
-		,((0                     	, 0x1008FF13), spawn "amixer set Master 2+")
-		,((0                     	, 0x1008FF12), spawn "amixer set Master toggle")
-		,((0                     	, 0x1008FF59), spawn "xrandr --output VGA1 --mode 1366x768")
-		,((0                     	, 0x1008FF59), spawn "pm-suspend")
-		,((0                     	, 0x1008FF14), spawn "ncmpcpp toggle")
-		,((0                     	, 0x1008FF18), spawn "ncmpcpp next")
-		,((0                     	, 0x1008FF16), spawn "ncmpcpp prev")
+		,((0				, xK_Super_L), spawn "menu ~/.xmonad/apps")
+		,((mod1Mask			, xK_Super_L), spawn "menu ~/.xmonad/configs")
+		,((0                     	, xF86XK_AudioLowerVolume), spawn "amixer set Master 2-")
+		,((0                     	, xF86XK_AudioRaiseVolume), spawn "amixer set Master 2+")
+		,((0                     	, xF86XK_AudioMute), spawn "amixer set Master toggle")
+		,((0                     	, xF86XK_Display), spawn "xrandr --output VGA1 --mode 1366x768")
+		,((0                     	, xF86XK_Sleep), spawn "pm-suspend")
+		,((0                     	, xF86XK_AudioPause), spawn "ncmpcpp toggle")
+		,((0                     	, xF86XK_AudioNext), spawn "ncmpcpp next")
+		,((0                     	, xF86XK_AudioPrev), spawn "ncmpcpp prev")
 		]
 		`additionalMouseBindings`
 		[((mod1Mask			, 6), (\_ -> moveTo Prev NonEmptyWS))
 		,((mod1Mask			, 7), (\_ -> moveTo Next NonEmptyWS))
 		,((mod1Mask			, 5), (\_ -> moveTo Next NonEmptyWS))
 		,((mod1Mask			, 4), (\_ -> moveTo Prev NonEmptyWS))
-		,((0				, 2), (\_ -> spawn "menu ~/.xmonad/apps"))
-		,((mod1Mask			, 2), (\_ -> spawn "menu ~/.xmonad/configs"))
 		]
 
 
