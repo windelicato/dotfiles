@@ -21,15 +21,15 @@ XPOS=$(xdotool getmouselocation | awk -F " " '{print $1}' | cut -d ":" -f 2)
 YPOS="14"
 HEIGHT="15"
 WIDTH="250"
-LINES="12"
+LINES="15"
 
 playing=$(mpc current)
 stats=$(mpc stats)
 #playlist=$(mpc playlist | sed "s/$playing/> $playing/")
-playlistcurrent=$(mpc playlist | grep -n "$playing" | cut -d ":" -f 1)
+playlistcurrent=$(mpc playlist | grep -n "$playing" | cut -d ":" -f 1 | head -n1)
 nextnum=$(( $playlistcurrent + 1 ))
 prevnum=$(( $playlistcurrent - 1 ))
 next=$(mpc playlist | sed -n ""$nextnum"p")
 prev=$(mpc playlist | sed -n ""$prevnum"p")
 
-(echo "^fg($white)Music"; echo "Playing: ^fg($white)$playing"; echo "Next: ^fg($white)$next"; echo "Previous: ^fg($white)$prev"; echo " "; echo "$stats"; sleep 3) | dzen2 -bg $background -fn $FONT -x $XPOS -y $YPOS -w $WIDTH -l $LINES -e 'onstart=uncollapse,hide;button1=exit;button3=exit'
+(echo "^fg($foreground)Music"; echo "Playing: ^fg($foreground)$playing"; echo " "; echo "             ^ca(1, ncmpcpp prev)  ^fg(#556c85)^i(/home/sunn/.xmonad/dzen2/prev.xbm) ^ca()  ^ca(1, ncmpcpp pause) ^i(/home/sunn/.xmonad/dzen2/pause.xbm) ^ca()  ^ca(1, ncmpcpp play) ^i(/home/sunn/.xmonad/dzen2/play.xbm) ^ca()   ^ca(1, ncmpcpp next) ^i(/home/sunn/.xmonad/dzen2/next.xbm) ^ca()"; echo " "; echo "Next: ^fg($foreground)$next"; echo "Prev: ^fg($foreground)$prev"; echo " ";  echo "$stats"; sleep 15) | dzen2 -bg $background -fn $FONT -x $XPOS -y $YPOS -w $WIDTH -l $LINES -e 'onstart=uncollapse,hide;button1=exit;button3=exit'

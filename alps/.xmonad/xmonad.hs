@@ -73,7 +73,7 @@ myLayout = defaultLayouts
 
 -- Declare workspaces and rules for applications
 
-myWorkspaces = clickable $ ["^i(/home/sunn/.dzen/arch_10x10.xbm) shell"
+myWorkspaces = clickable $ ["^i(/home/sunn/.dzen/full.xbm) shell"
 		,"^i(/home/sunn/.dzen/fs_01.xbm) web"	
 		,"^i(/home/sunn/.dzen/mouse_01.xbm) float"	
 		,"^i(/home/sunn/.dzen/diskette.xbm) docs"	
@@ -121,13 +121,14 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 		, ppOutput	=   hPutStrLn h
 	} )
 
-myXmonadBar = "dzen2 -x '0' -y '0' -h '15' -w '400' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
+myXmonadBar = "dzen2 -x '70' -y '0' -h '15' -w '330' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
 myStatusBar = "conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '400' -w '966' -h '15' -ta 'r' -bg '"++background++"' -fg '"++foreground++"' -y '0' -fn "++myFont
-
+myStartMenu = "/home/sunn/.xmonad/start /home/sunn/.xmonad/start_apps"
 
 main = do
 	dzenLeftBar 	<- spawnPipe myXmonadBar
 	dzenRightBar	<- spawnPipe myStatusBar
+	dzenStartMenu	<- spawnPipe myStartMenu
     	xmproc <- spawnPipe "GTK2_RC_FILES=/home/sunn/.gtkdocky /usr/bin/docky"
 	xmonad $ defaultConfig
 		{ terminal		= myTerminal

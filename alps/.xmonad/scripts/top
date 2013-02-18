@@ -1,0 +1,12 @@
+short_units yes
+background yes
+out_to_console yes
+out_to_x no
+# Update interval in seconds
+total_run_times 2
+ 
+TEXT
+Process           PID      CPU 
+${top name 1} $alignr ${top pid 1} ${top cpu 1} 
+${top name 2} $alignr ${top pid 2} ${top cpu 2}
+${top name 3} $alignr ${top pid 3} ${top cpu 3}
