@@ -1,1 +1,0 @@
-*:not(.container):not(.backButton):not(.imageZoomCaptionBackwardButton):not(#leftNav):not(#ContentContainer):not(.ignoreAnimate):not(#forwardHistory){transition:none!important;-webkit-transition:none!important;-moz-transition:none!important;-webkit-transform:none!important}

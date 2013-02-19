@@ -1,4 +1,0 @@
-audio-flags=15
-audio-input=HDA Intel PCH, ALC269VC Analog - Default Audio Device
-audio-output=
-known-audio-flags=63

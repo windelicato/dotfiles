@@ -1,4 +1,0 @@
-<?xml version="1.0"?>
-<ario-profiles>
-  <profile host="localhost" port="6600" timeout="5000" local="true" current="true" type="0">Default</profile>
-</ario-profiles>
