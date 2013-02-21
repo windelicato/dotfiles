@@ -17,7 +17,9 @@ grey="#848484"
 pink="#FFA4E5"
 
 FONT="-*-lime-*-*-*-*-*-*-*-*-*-*-*-*"
-XPOS=$(xdotool getmouselocation | awk -F " " '{print $1}' | cut -d ":" -f 2)
+#XPOS=$(xdotool getmouselocation | awk -F " " '{print $1}' | cut -d ":" -f 2)
+#echo $XPOS
+XPOS=866
 YPOS="14"
 HEIGHT="44"
 WIDTH="500"

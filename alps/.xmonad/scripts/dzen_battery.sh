@@ -17,10 +17,11 @@ grey="#848484"
 pink="#FFA4E5"
 
 FONT="-*-lime-*-*-*-*-*-*-*-*-*-*-*-*"
-XPOS=$(xdotool getmouselocation | awk -F " " '{print $1}' | cut -d ":" -f 2)
+#XPOS=$(xdotool getmouselocation | awk -F " " '{print $1}' | cut -d ":" -f 2)
+XPOS=1040
 YPOS="14"
 HEIGHT="15"
-WIDTH="70"
+WIDTH="75"
 LINES="2"
 
 
@@ -28,4 +29,4 @@ battime=$(acpi -b | sed -n "1p" | awk -F " " '{print $5}')
 batperc=$(acpi -b | sed -n "1p" | awk -F " " '{print $4}' | head -c3)
 batstatus=$(acpi -b | cut -d',' -f1 | awk -F " " '{print $3}')
 
-(echo " ^fg($foreground)Battery"; echo "^fg()$batstatus"; echo "^fg($foreground)$battime ^fg()left"; sleep 15) | dzen2 -bg  $background -fn $FONT -x $XPOS -y $YPOS -w $WIDTH -l $LINES -e 'onstart=uncollapse,hide;button1=exit;button3=exit'
+(echo " ^fg($foreground)Battery"; echo " ^fg()$batstatus"; echo " ^fg($foreground)$battime ^fg()left"; sleep 15) | dzen2 -bg  $background -fn $FONT -x $XPOS -y $YPOS -w $WIDTH -l $LINES -e 'onstart=uncollapse,hide;button1=exit;button3=exit'

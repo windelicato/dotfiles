@@ -8,6 +8,7 @@ import XMonad.Layout.SimplestFloat
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.Circle
+import XMonad.Layout.Spiral
 
 import XMonad.Actions.GridSelect
 -- WINDOW RULES
@@ -31,33 +32,21 @@ import XMonad.Util.Run (spawnPipe)
 import XMonad.Actions.CycleWS			-- nextWS, prevWS
 import Data.List			-- clickable workspaces
 
-gsconfig colorizer = (buildDefaultGSConfig myColorizer) 
-	{ gs_cellheight = 30
-	, gs_cellwidth = 100
-	, gs_cellpadding = 10
-	, gs_font = myFont
-	}
 
--- | A green monochrome colorizer based on window class
-myColorizer = colorRangeFromClassName
-	(0x00,0x00,0x00) -- lowest inactive bg
-	(0x60,0xA0,0xC0) -- highest inactive bg
-	(0x34,0x75,0xAA) -- active bg
-	(0xBB,0xBB,0xBB) -- inactive fg
-	(0x00,0x00,0x00) -- active fg
- 
-defaultLayouts =	  onWorkspace (myWorkspaces !! 0) (avoidStruts (Circle ||| tiled) ||| fullTile ||| fullTile3)
-			$ onWorkspace (myWorkspaces !! 1) (fullScreen ||| avoidStruts (tiled ||| Circle))
+defaultLayouts =	  onWorkspace (myWorkspaces !! 0) (avoidStruts (Circle ||| tiled) ||| fullTile)
+			$ onWorkspace (myWorkspaces !! 1) (avoidStruts (Circle ||| noBorders (fullTile)) ||| fullScreen)
 			$ onWorkspace (myWorkspaces !! 2) (avoidStruts simplestFloat)
-			$ avoidStruts ( tiled   ||| fullTile ||| fullTile3 ||| Circle ||| simplestFloat) ||| fullScreen 
+			$ avoidStruts ( tiledSpace  ||| tiled ||| fullTile ) ||| fullScreen
 	where
-		tiled  		= spacing 30 $ ResizableTall nmaster delta (1/3) [] 
-		tile3		= spacing 30 $ ThreeColMid nmaster delta (1/3)
+		tiled  		= spacing 10 $ ResizableTall nmaster delta ratio [] 
+		tiledSpace  	= spacing 60 $ ResizableTall nmaster delta ratio [] 
+		tile3		= spacing 10 $ ThreeColMid nmaster delta ratio
 		fullScreen 	= noBorders(fullscreenFull Full)
-		fullTile 	= ResizableTall nmaster delta (1/3) [] 
-		fullTile3	=  ThreeColMid nmaster delta (1/3)
+		fullTile 	= ResizableTall nmaster delta ratio [] 
+		fullTile3	=  ThreeColMid nmaster delta ratio
 		borderlessTile	= noBorders(fullTile)
-
+		fullGoldenSpiral 	= spiral ratio
+		goldenSpiral 	= spacing 5 $ spiral ratio
 		-- Default number of windows in master pane
 		nmaster = 1
 		-- Percent of the screen to increment when resizing
@@ -73,7 +62,7 @@ myLayout = defaultLayouts
 
 -- Declare workspaces and rules for applications
 
-myWorkspaces = clickable $ ["^i(/home/sunn/.dzen/full.xbm) shell"
+myWorkspaces = clickable $ ["^i(/home/sunn/.dzen/term.xbm) shell"
 		,"^i(/home/sunn/.dzen/fs_01.xbm) web"	
 		,"^i(/home/sunn/.dzen/mouse_01.xbm) float"	
 		,"^i(/home/sunn/.dzen/diskette.xbm) docs"	
@@ -87,8 +76,6 @@ myWorkspaces = clickable $ ["^i(/home/sunn/.dzen/full.xbm) shell"
 			
 myManageHook = composeAll 	[ resource =? "dmenu" --> doFloat
 				, resource =? "skype" 	--> doFloat
-				, resource =? "java" 	--> doFloat
-				, resource =? "./a.out" --> doFloat
 				, resource =? "mplayer"	--> doFloat
 				, resource =? "feh"	--> doFloat
 				, className =? "tint2"	--> doIgnore
@@ -129,10 +116,10 @@ main = do
 	dzenLeftBar 	<- spawnPipe myXmonadBar
 	dzenRightBar	<- spawnPipe myStatusBar
 	dzenStartMenu	<- spawnPipe myStartMenu
-    	xmproc <- spawnPipe "GTK2_RC_FILES=/home/sunn/.gtkdocky /usr/bin/docky"
+--	xmproc <- spawnPipe "GTK2_RC_FILES=/home/sunn/.gtkdocky /usr/bin/docky"
 	xmonad $ defaultConfig
 		{ terminal		= myTerminal
-		, borderWidth		= 2
+		, borderWidth		= 1
 		, normalBorderColor 	= black0
 		, focusedBorderColor  	= purple0
 		, modMask 		= mod1Mask
@@ -148,13 +135,13 @@ main = do
 		`additionalKeys`
 		[((mod1Mask .|. shiftMask	, xK_b), spawn "chromium")
 		,((mod1Mask  			, xK_b), spawn "dwb")
-		,((mod1Mask  			, xK_n), spawn "urxvtd")
+		,((mod1Mask .|. shiftMask	, xK_n), spawn "urxvtc -fn '-*-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*' -fb '-*-terminus-bold-r-normal-*-12-*-*-*-*-*-*-*' -fi '-*-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*'")
 		,((mod1Mask .|. shiftMask  	, xK_t), spawn "urxvtc -e tmux")
 		,((mod1Mask  			, xK_z), spawn "zathura")
 		,((mod1Mask 			, xK_r), spawn "GTK_RC_FILES=/home/sunn/.gtkdocky /home/sunn/scripts/lens")
-		,((mod1Mask .|. shiftMask	, xK_r), spawn "dmenu_run -nb '#000000' -nf '#404040' -sb '#000000' -sf '#FFFFFF' -fn '-*-lime-*-*-*-*-*-*-*-*-*-*-*-*'")
+--		,((mod1Mask .|. shiftMask	, xK_r), spawn "dmenu_run -nb '#000000' -nf '#404040' -sb '#000000' -sf '#FFFFFF' -fn '-*-lime-*-*-*-*-*-*-*-*-*-*-*-*'")
+		,((mod1Mask .|. shiftMask	, xK_r), spawn "/home/sunn/scripts/dmenu/spotlight")
 		,((mod1Mask			, xK_q), spawn "killall dzen2; killall conky; cd ~/.xmonad; ghc -threaded xmonad.hs; mv xmonad xmonad-x86_64-linux; xmonad --restart" )
-		,((mod1Mask  			, xK_g), goToSelected $ gsconfig myColorizer)
 		,((mod1Mask .|. shiftMask	, xK_x), kill)
 		,((mod1Mask .|. shiftMask	, xK_c), return())
 		,((mod1Mask  			, xK_p), prevWS)
@@ -173,20 +160,28 @@ main = do
 		,((mod1Mask .|. shiftMask  	, xK_f), withFocused (keysResizeWindow (20,0) (0,0)))
 		,((0				, xK_Super_L), spawn "menu ~/.xmonad/apps")
 		,((mod1Mask			, xK_Super_L), spawn "menu ~/.xmonad/configs")
+		,((mod1Mask  			, xK_F1), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_music.sh")
+		,((mod1Mask  			, xK_F2), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_vol.sh")
+		,((mod1Mask  			, xK_F3), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_network.sh")
+		,((mod1Mask  			, xK_F4), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_battery.sh")
+		,((mod1Mask  			, xK_F5), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_hardware.sh")
+		,((mod1Mask  			, xK_F6), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_pacman.sh")
+		,((mod1Mask  			, xK_F7), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_date.sh")
+		,((mod1Mask  			, xK_F8), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_log.sh")
 		,((0                     	, xF86XK_AudioLowerVolume), spawn "amixer set Master 2-")
 		,((0                     	, xF86XK_AudioRaiseVolume), spawn "amixer set Master 2+")
 		,((0                     	, xF86XK_AudioMute), spawn "amixer set Master toggle")
 		,((0                     	, xF86XK_Display), spawn "xrandr --output VGA1 --mode 1366x768")
 		,((0                     	, xF86XK_Sleep), spawn "pm-suspend")
-		,((0                     	, xF86XK_AudioPause), spawn "ncmpcpp toggle")
+		,((0                     	, xF86XK_AudioPlay), spawn "ncmpcpp toggle")
 		,((0                     	, xF86XK_AudioNext), spawn "ncmpcpp next")
 		,((0                     	, xF86XK_AudioPrev), spawn "ncmpcpp prev")
 		]
 		`additionalMouseBindings`
-		[((mod1Mask			, 6), (\_ -> moveTo Prev NonEmptyWS))
-		,((mod1Mask			, 7), (\_ -> moveTo Next NonEmptyWS))
-		,((mod1Mask			, 5), (\_ -> moveTo Next NonEmptyWS))
-		,((mod1Mask			, 4), (\_ -> moveTo Prev NonEmptyWS))
+		[((mod1Mask			, 6), (\_ -> moveTo Next NonEmptyWS))
+		,((mod1Mask			, 7), (\_ -> moveTo Prev NonEmptyWS))
+		,((mod1Mask			, 5), (\_ -> moveTo Prev NonEmptyWS))
+		,((mod1Mask			, 4), (\_ -> moveTo Next NonEmptyWS))
 		]
 
 
