@@ -5,13 +5,14 @@ xset fp rehash
 xcalib /home/sunn/x230.icm &
 xsetroot -cursor_name left_ptr &
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
+hsetroot -fill /home/sunn/Pictures/spring3_DESKTOP.jpg
+unclutter -grab -noevents -root &
+compton -cbC
 urxvtd &
 
 DEFAULT_SESSION=xmonad
 case $1 in
 xmonad)
-hsetroot -fill /home/sunn/Pictures/spring3_DESKTOP.jpg
-compton -cbC
 exec dbus-launch xmonad
 ;;
 dwm)
@@ -30,10 +31,6 @@ icewm)
 exec dbus-launch icewm
 ;;
 *)
-hsetroot -fill /home/sunn/Pictures/haskellred.jpg &
-compton -cCb &
-docky &
-unclutter -grab -noevents -root &
 exec dbus-launch  $DEFAULT_SESSION
 ;;
 esac
