@@ -1,0 +1,69 @@
+#!/bin/sh
+# Script for importing .Xdefaults into a Gnome Terminal profile
+#	Input name of profile followed by .Xdefaults or .Xresources path	 
+
+echo "Name for profile to import to.  See Edit>Profiles for names"
+echo -n " > "
+read name;
+echo "Enter path of .Xresources or .Xdefaults file to read"
+echo "	   or leave blank to enter colors one at a time"
+echo -n " > "
+read xdefaults
+
+
+# Find the location of the profile
+
+dir=~/.gconf/apps/gnome-terminal/profiles
+last=`ls $dir | grep "Profile" | cut -d'e' -f2 | tail -n1`
+if [ $name = Default ]
+then
+	n="Default"
+else
+	for i in `seq 0 $last` 
+	do
+		if [ 0 -ne `grep -c $name $dir/Profile$i/%gconf.xml` ]; then
+			n=Profile$i
+			echo "Profile found. Loading colors"
+		fi
+	done
+fi
+
+
+# Read in color string in proper order
+
+l=`seq 8 15`
+l="$l `seq 0 7`"
+for i in $l
+do
+	if [ -z $xdefaults ]; then
+		echo -n "rxvt*color$i:  #"
+		read hex
+	else
+		hex=`grep "*color$i:" $xdefaults | cut -d# -f2 | head -n1`
+
+	fi
+	if [ $i -eq 8 ]; then
+		colors=$colors"#$hex"
+	else
+		colors=$colors":#$hex"
+	fi
+done
+if [ -z $xdefaults ]; then
+	echo -n "rxvt*foreground:  #"
+	read fg
+	echo -n "rxvt*background:  #"
+	read bg
+else
+	fg=`grep "*foreground:" $xdefaults | cut -d# -f2 | head -n1`
+	bg=`grep "*background:" $xdefaults | cut -d# -f2 | head -n1`
+
+fi
+
+
+# Set color values
+
+gconftool-2 --set "/apps/gnome-terminal/profiles/$n/use_theme_background" --type bool false
+gconftool-2 --set "/apps/gnome-terminal/profiles/$n/use_theme_colors" --type bool false
+gconftool-2 --set "/apps/gnome-terminal/profiles/$n/palette" --type string $colors
+gconftool-2 --set "/apps/gnome-terminal/profiles/$n/background_color" --type string "#"$bg 
+gconftool-2 --set "/apps/gnome-terminal/profiles/$n/foreground_color" --type string "#"$fg

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+tag=$1
+
+while true
+do
+	for j in ~/Pictures/$1*.*
+	do
+		hsetroot -fill $j
+		sleep 60
+	done
+done

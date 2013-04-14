@@ -1,0 +1,58 @@
+#!/bin/bash
+
+URL="http://www.departments.bucknell.edu/music/courses/musc"
+COURSE="$1/music/"
+CODE="$2-T"
+ADDRESS="$URL$COURSE$CODE"
+TRACK=("01" "02" "03" "04" "05" "06" "07" "08" "09" "10" "11" "12" "13" "14" "15" "16" "17" "18" "19" "20" "21" "22" "23")
+i=0
+
+echo "Enter artist name"
+read artist
+echo "Enter record name"
+read record
+
+cd ~/Music/
+
+if [ ! -d "$artist" ]; then
+	mkdir "$artist"
+fi
+cd "$artist"
+mkdir "$record"
+cd "$record"
+
+
+for j in "" 1 2 3 4
+do
+	wget -q "$ADDRESS$j${TRACK[$i]}.rm"
+
+	while [ $? -eq 0 ]
+	do
+	       echo 'CONVERTING RM FORMAT TO WAV'
+	       inputfile="$2-T${j}${TRACK[$i]}.rm"
+	       outputfile="$j${TRACK[$i]}.mp3"
+	       mplayer -really-quiet $inputfile -ao pcm	&> /dev/null
+	       echo 'CONVERTING WAV FORMAT TO MP3'
+	       lame -h -b 256 --quiet audiodump.wav $outputfile
+
+
+	       i=$(($i+1))
+	       id3v2 -a "$artist" -A "$record" -T $i $outputfile
+	       rm -f audiodump.wav
+	       rm -f $inputfile
+
+	       echo "DOWNLOADING TRACK $(($i+1))"
+	       wget -q  "$ADDRESS${TRACK[$i]}.rm"
+	done
+
+	i=0;
+done
+
+for f in *.mp3
+do
+	echo "Song title for $f"
+	read title
+	id3v2 -t "$title" $f
+done
+
+exit

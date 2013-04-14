@@ -1,0 +1,25 @@
+#!/usr/bin/perl
+
+my $filename = $ARGV[0];
+my $read;
+my $char;
+
+open(FILE, $filename)
+	or die "Invalid file $filename\n";
+
+print "<pre class=\"prettyprint\">\n";
+while ($read = read FILE, $char, 1)
+{
+	if($char eq "<") {
+		print "<";
+	}
+	elsif($char eq ">") {
+		print ">";
+	}
+	else {
+		print $char;
+	}
+}
+print "</pre>\n<p></p>";
+
+close(FILE);

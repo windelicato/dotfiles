@@ -1,0 +1,13 @@
+#!/bin/bash
+
+res=$(cvt 1366 768 | tail -n1 | cut -d' ' -f2- | tr -d '\n')
+mode=$(cvt 1366 768 | tail -n1 | cut -d'"' -f2 | tr -d '\n')
+
+#echo $res
+#echo $mode
+
+xrandr --newmode $res
+sleep 1
+xrandr --addmode VGA1 $mode 
+sleep 1
+xrandr --output VGA1 --mode $mode
