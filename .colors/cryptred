@@ -1,0 +1,32 @@
+! TERMINAL COLOURS
+URxvt*cursorColor: #A80036
+URxvt*colorIT: #666666
+URxvt*colorUL: #FFFFFF
+URxvt*colorBD: #A80036
+
+URxvt*foreground: #D3D3D3
+URxvt*background: #111111
+!black
+URxvt*color0: #181818
+URxvt*color8: #181818
+!red
+URxvt*color1: #D7D7D7
+URxvt*color9: #D7D7D7
+!green
+URxvt*color2: #A80036
+URxvt*color10: #A80036
+!yellow
+URxvt*color3: #666666
+URxvt*color11: #666666
+!blue
+URxvt*color4: #FFFFFF
+URxvt*color12: #FFFFFF
+!magenta
+URxvt*color5: #740629
+URxvt*color13: #740629
+!cyan
+URxvt*color6: #D4D4D4
+URxvt*color14: #D4D4D4
+!white
+URxvt*color7: #D3D3D3
+URxvt*color15: #D3D3D3

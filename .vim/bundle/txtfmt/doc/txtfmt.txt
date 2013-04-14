@@ -1,0 +1,2908 @@
+*txtfmt.txt*	Syntax/Filetype plugin for formatting plain text
+
+Author:  Brett Pershing Stahlman  <brettstahlman@comcast.net>
+Version: 2.4
+
+==============================================================================
+1. Contents					*txtfmt* *txtfmt-contents*
+
+  1. Contents....................................: |txtfmt-contents|
+  2. Motivation..................................: |txtfmt-motivation|
+  3. Overview....................................: |txtfmt-overview|
+  4. Installation................................: |txtfmt-installation|
+     Distributed files...........................: |txtfmt-dist-files|
+     Detecting/setting Txtfmt filetype...........: |txtfmt-filetype|
+     Combining with other filetypes..............: |txtfmt-combining|
+       Nesting Txtfmt regions....................: |txtfmt-nesting|
+         Using Txtfmt within C comments..........: |txtfmt-nesting-c-example|
+         Using Txtfmt within .otl (TVO) files....: |txtfmt-nesting-tvo-example|
+         Using Txtfmt within 'Notes' plugin......: |txtfmt-nesting-notes-example|
+     Loading.....................................: |txtfmt-loading|
+  5. Configuration...............................: |txtfmt-configuration|
+     Options.....................................: |txtfmt-options|
+       Option types..............................: |txtfmt-opt-types|
+       Option naming convention..................: |txtfmt-opt-names|
+       Number format.............................: |txtfmt-opt-num-fmt|
+       Txtfmt modelines..........................: |txtfmt-modeline|
+	 Txtfmt modeline format..................: |txtfmt-modeline-fmt|
+       Refreshing display after option changes...: |txtfmt-opt-refresh|
+	 :Refresh command........................: |txtfmt-:Refresh|
+       Option list...............................: |txtfmt-opt-list|
+     Txtfmt "conceal" feature considerations.....: |txtfmt-conceal-notes|
+     Choosing a token range......................: |txtfmt-choosing-token-range|
+     Colors......................................: |txtfmt-color-config|
+       Color defaults............................: |txtfmt-color-defaults|
+       Colorscheme considerations................: |txtfmt-colorschemes|
+         Achieving "colorscheme-independence"....: |txtfmt-hl-color-names|
+     Color terminal pitfalls.....................: |txtfmt-cterm-pitfalls|
+     Customizing the default maps................: |txtfmt-map-config|
+       Handling conflicts and ambiguities........: |txtfmt-map-conflict|
+  6. User interface..............................: |txtfmt-user-interface|
+     Inserting tokens............................: |txtfmt-ins-tok|
+       Fmt spec..................................: |txtfmt-fmt-spec|
+       Clr spec..................................: |txtfmt-clr-spec|
+       Fmt/clr spec list.........................: |txtfmt-fmt-clr-spec-list|
+       Mapping overview..........................: |txtfmt-ins-tok-maps|
+       Mappings..................................: |txtfmt-ins-tok-map-list|
+     Jumping to tokens...........................: |txtfmt-jump-to-tok|
+       Mappings..................................: |txtfmt-jump-to-tok-maps|
+     Building complex mappings from primitives...: |txtfmt-user-maps|
+       txtfmtUsermap{} element format............: |txtfmt-user-map-fmt|
+       User-map expansion macros.................: |txtfmt-user-map-expansion|
+       User-map examples.........................: |txtfmt-user-map-examples|
+       Using buf-local sets......................: |txtfmt-buflocal-user-map|
+     Creating token strings......................: |txtfmt-create-tok-str||
+       Txtfmt_GetTokStr()........................: |txtfmt-GetTokStr()|
+     Querying token type.........................: |txtfmt-query-tok-type|
+       Format of token description string........: |txtfmt-tok-descriptor|
+       \ga.......................................: |txtfmt-get-tok-info|
+       :GetTokInfo...............................: |txtfmt-:GetTokInfo|
+       Txtfmt_GetTokInfo()....!!!DEPRECATED!!!...: |txtfmt-GetTokInfo()|
+     Viewing token map...........................: |txtfmt-view-tok-map|
+       :ShowTokenMap.............................: |txtfmt-:ShowTokenMap|
+     Testing current settings....................: |txtfmt-test-cur-settings|
+       :MakeTestPage.............................: |txtfmt-:MakeTestPage|
+     Moving the current token range..............: |txtfmt-move-tok-range|
+       :MoveStartTok.............................: |txtfmt-:MoveStartTok|
+  7. File structure..............................: |txtfmt-files|
+  8. Detailed theory of operation................: |txtfmt-detailed-theory|
+
+==============================================================================
+2. Motivation						*txtfmt-motivation*
+
+In addition to using Vim to edit C code, I sometimes use it to write notes of
+various kinds. Sometimes these notes are temporary in nature, and sometimes
+they are meant to be more permanent; for example, a document describing
+various subsystems in a large programming project. For a task of this nature,
+Vim offers many advantages over a typical word processor. Features like word
+completion, multiple text registers, tags, cscope, etc.  are very useful when
+documenting source code. However, there was always one advantage that a word
+processor had when it came to creating non source code documents: formatted
+text. The ability to set certain regions of text to an arbitrary foreground or
+background color, or to make them stand out with attributes such as bold,
+italic and underline can make a document much more readable, and hence, more
+useful.
+
+I realize that there are a number of very powerful formatting languages and
+utilities, which may be used to create such documents. What I wanted, however,
+was something very lightweight, something that depended only upon Vim. In
+other words, I didn't want to create a file, which could be operated upon by a
+tool, to create a file for viewing. I wanted only 1 file, the one I edited
+with Vim, which could be viewed "on-the-fly," as each editing change was made.
+The Txtfmt plugin is my solution for creating formatted documents with Vim,
+to be viewed within Vim.
+
+==============================================================================
+3. Overview						*txtfmt-overview*
+
+Txtfmt's formatting is accomplished through the use of single-character
+"tokens" (chosen from ranges not normally used in text files), which are used
+to define highlight attributes for subsequent text. The tokens themselves are
+concealed by Txtfmt's syntax file, so that each appears as a single space (or
+not at all if your version of Vim was compiled with "conceal" support - see
+|txtfmt-'conceal'|)
+Note: See section |txtfmt-cterm-ignore-issue| if you notice that tokens are
+not hidden on your system.
+
+Txtfmt requires 9 of the aforementioned tokens for foreground color regions,
+and an additional 9 tokens if background colors are enabled (see
+txtfmt-'tokrange' ). The |txtfmt-'tokrange'| option setting also determines
+the number of tokens required for format regions. If the tokrange suffix is
+'S' (short formats) or 'X' (extended), then the only formatting attributes in
+use are bold, underline and italic. All possible permutations of these
+attributes may be represented with only 8 tokens. If, on the other hand, the
+tokrange suffix is 'L' (long formats), the set of available format attributes
+expands to include standout, reverse and (for Vim versions >= 7.0) undercurl.
+In this case, Txtfmt will require either 32 or 64 format tokens, depending
+upon whether the version of Vim supports undercurl.
+
+There are 3 types of Txtfmt marker token: format, foreground color and
+background color. The 3 types of regions begun by these 3 types of tokens are
+"orthogonal"; i.e., the presence of one has no effect upon any others that
+happen to be active at that point in the buffer. For example, suppose you have
+begun a green color region by inserting the appropriate token (with one of
+Txtfmt's mappings, to be discussed later). You now wish to emphasize a word or
+phrase by formatting it in italics, but you do not wish to change the color.
+In this case, you would simply insert the format token denoting "italic", and
+subsequently typed text would be green italic. If you later wished to switch
+back to un-italicized (normal) green text, you would simply insert the format
+token corresponding to "no format". Note that format and color tokens may be
+freely interspersed with one another in any order.
+
+The tokens described above are simply characters belonging to the character
+set in use (e.g. latin1, utf-8, etc...), so it would be theoretically possible
+to accomplish the highlighting with a syntax file alone, by simply inserting
+the marker characters with CTRL-V or something similar. However, this would
+require you to memorize the character codes corresponding to 8 colors and all
+combinations of underline, bold, italic, etc... Thus, in addition to a syntax
+file, Txtfmt provides a filetype plugin (ftplugin), which provides mappings
+and functions to facilitate working with the format/color tokens. Inserting
+tokens, finding (jumping to) tokens, and querying token type, are a few of the
+operations that can be performed with mappings and/or functions defined in the
+ftplugin.
+
+==============================================================================
+4. Installation					*txtfmt-installation*
+
+DISTRIBUTED FILES				*txtfmt-dist-files*
+
+The Txtfmt distribution comprises the following 4 files:
+
+doc/txtfmt.txt		Txtfmt help file (this file)
+ftplugin/txtfmt.vim	Txtfmt filetype plugin (contains mappings for working
+			with Txtfmt tokens)
+syntax/txtfmt.vim	Txtfmt syntax file (defines the Txtfmt syntax
+			highlighting)
+plugin/txtfmt.vim	Txtfmt common configuration code (contains
+			configuration script needed by both the filetype and
+			syntax plugins)
+indent_patch.txt	Bram Moolenaar's patch to fix indent.vim's handling of
+			dot-separated lists in 'filetype' option values
+			(required only if your version of Vim is older than
+			7.2 and you plan to "nest" Txtfmt within other
+			filetypes)
+			For details, see |txtfmt-combining|.
+
+All of the txtfmt.vim files should be placed in their respective parent
+directories, somewhere in your 'runtimepath'. If you need the patch files, you
+may place them wherever you like.
+
+IMPORTANT NOTE: To make Txtfmt help topics visible to Vim's :help command, you
+must run :helptags, passing the path to the doc folder where you unpacked
+txtfmt.txt as an argument.
+
+DETECTING OR SETTING TXTFMT FILETYPE		*txtfmt-filetype*
+
+Once you have copied the Txtfmt files to the appropriate directories in
+'runtimepath', you can always use the Txtfmt syntax and mappings by manually
+setting the 'filetype' option. (I am assuming, of course, that you have
+enabled syntax at some point, most likely in your .vimrc. If you are not sure
+about this, see |syntax-enable|.) The 'filetype' option may be set on the
+command line: e.g. >
+    :set ft=txtfmt
+
+A better approach for a file designed to be viewed with Txtfmt highlighting
+would be to set the filetype in a Vim modeline: e.g. >
+    vim:ft=txtfmt
+
+While the manual approach may be appropriate for some uses, if you find
+yourself always using Txtfmt with certain types of files, it probably makes
+sense to set up automatic detection via one of the methods discussed in the
+section |new-filetype| in the Vim help. The simplest approach is to create
+your own filetype.vim (assuming you haven't done so already) in a directory
+that comes before $VIMRUNTIME in 'runtimepath'. Within this script, you should
+define an autocommand that will :setfiletype to txtfmt for any file with an
+appropriate extension.
+
+Example: >
+    " Set up detection for Txtfmt files
+    au! filetypedetect BufRead,BufNewFile *.txt    setfiletype txtfmt
+
+COMBINING TXTFMT WITH OTHER FILETYPES		*txtfmt-combining*
+
+It is possible to use the Txtfmt plugins with the plugins of other filetypes.
+This feature is useful when you wish to take advantage of Txtfmt's arbitrary
+formatting capabilities in a file that would otherwise support only static
+formatting. The simplest way to accomplish this is to set 'filetype' to a
+dot-separated list of filetype names: e.g. "c.txtfmt". When you do this, Vim
+will load the corresponding filetype and syntax files in the order in which
+they appear in the list.
+
+WARNING: Txtfmt's filetype plugin is designed to be used in this way; some of
+the standard plugins, however, will skip loading if a plugin that sets
+b:did_ftplugin has already been sourced. Thus, it is best to put Txtfmt last
+in the list of filetypes.
+
+The method just described is useful when you wish to use Txtfmt in conjunction
+with an existing filetype. It is possible, however, that you simply wish to
+extend Txtfmt by adding a few predefined formatting regions. As an example,
+suppose you find yourself highlighting things like "TODO" and "IMPORTANT NOTE"
+quite often in your Txtfmt files. You can always highlight them manually by
+using Txtfmt markers; it would be more efficient, however, to define syntax
+highlighting that handles these special cases automatically. You could do this
+in a special Txtfmt syntax file, which you create in an "after" directory in
+your 'runtimepath'. (See |after-directory|.)
+
+Nesting Txtfmt regions				*txtfmt-nesting*
+
+Whether you are combining Txtfmt with an existing filetype, or simply
+extending Txtfmt's highlighting with predefined regions of your own, it is
+possible that you will want to use Txtfmt's highlighting within non-txtfmt
+syntax regions. If, for example, you are using Txtfmt in combination with C
+syntax, you may wish to create Txtfmt regions within C comments. This is
+possible, but only if you have set the |txtfmt-'nested'| option. If you are
+nesting Txtfmt regions within non-Txtfmt regions, you should generally
+terminate the Txtfmt regions explicitly, rather than relying upon the
+containing region to terminate it. A containing region without a "keepend"
+argument will not be able to terminate the Txtfmt region. A containing region
+with "keepend" will terminate the Txtfmt region, but the containing region's
+end marker may not be formatted correctly unless a "matchgroup" was used to
+define it.
+
+A few practical examples follow...
+
+C source file nesting example:			*txtfmt-nesting-c-example*
+
+Here is how you could use Txtfmt to format your C-language comments...
+
+Put the following within your user "filetype.vim"
+(e.g. $VIM/vimfiles/filetype.vim) >
+    " Allow Txtfmt regions to be nested within C comments
+    augroup filetypedetect
+	au! BufRead,BufNewFile *.c    let b:txtfmtNested = 1
+	au  BufRead,BufNewFile *.c    setf c.txtfmt
+    augroup END
+
+Now, you may use Txtfmt mappings to add color and formatting regions to your C
+comments! (Technically, of course, you can format anything in the file, but
+I'm assuming you want the source file to compile.)
+
+						*indent_patch.txt*
+IMPORTANT NOTE: Prior to Vim 7.2, the distributed version of "indent.vim" was
+not aware of the dot-separated filetype name convention. Thus, if you're using
+an older version of Vim, C-indenting will not work properly if you set
+filetype to "c.txtfmt". Bram's patch for this issue is packaged along with the
+Txtfmt files. If you have not yet upgraded to the latest version of Vim, and
+you do not wish to apply the patch, you could work around the issue with an
+alternative approach such as this: >
+    " Allow Txtfmt regions to be nested within C comments without losing
+    " cindent capability in pre-7.2 Vim.
+    augroup filetypedetect
+	" Set filetype to c
+	au! BufRead,BufNewFile *.c    setf c
+	" Make sure Txtfmt regions can nest within comments
+	au  BufRead,BufNewFile *.c    let b:txtfmtNested = 1
+	" Manually source the Txtfmt filetype and syntax plugin files...
+	au  BufRead,BufNewFile *.c    runtime syntax/txtfmt.vim
+	au  BufRead,BufNewFile *.c    runtime ftplugin/txtfmt.vim
+    augroup END
+
+Of course, it's probably easier just to upgrade Vim;-)
+
+TVO nesting example:				*txtfmt-nesting-tvo-example*
+
+Here is how you could use Txtfmt to format the ordinary text within .otl files
+created with TVO (The Vim Outliner plugin written by Ned Konz)...
+
+Put the following within the ftdetect/otl.vim file distributed with the TVO
+plugin: >
+	" This sets up *.otl files to be outlined
+	au  BufRead,BufNewFile *.otl    setf otl.txtfmt
+
+Important Note: Because the TVO plugin was not designed to work with the
+"dot-separated" filetype syntax, it is important that your .otl files DO NOT
+set 'filetype' within a Vim modeline; i.e., the set of 'filetype' to
+otl.txtfmt should occur exclusively within the autocommand as shown above.
+
+'Notes' nesting example:			*txtfmt-nesting-notes-example*
+
+Here is how you could use Txtfmt to format the ordinary text within files
+created with 'Notes' (the lightweight notes management plugin written by Hari
+Krishna Dara)...
+
+In your .vimrc, set the g:notesFileType option as follows: >
+	let g:notesFileType = 'txtfmt'
+
+This instructs the 'Notes' plugin to set 'filetype' to txtfmt for all notes
+files it creates.
+
+LOADING						*txtfmt-loading*
+
+Note: This section is provided for informational purposes only; the average
+user can safely skip.
+
+The Txtfmt plugin is actually several plugins working in concert: a syntax
+plugin implementing token based highlighting, and a filetype plugin
+facilitating working with the tokens. There are a significant number of
+options permitting customization of various aspects of both plugins. Due to
+the tightly integrated nature of the syntax and filetype plugins, most of the
+options used to customize Txtfmt's behavior have implications for both
+filetype and syntax plugins. Problems can result when the filetype and syntax
+plugins see different values for the shared options. Since most Txtfmt options
+are used only when the plugin is sourced, option values can get out of sync if
+the filetype and syntax plugins are sourced at different times with
+intervening option changes. The best protection against this is to have the
+plugins loaded in the standard manner, via :setfiletype or assignment to
+'filetype' option, as previously described.
+
+Just as many of the options are common to both filetype and syntax plugins, so
+is much of the option processing and attendant configuration code. It would be
+highly inefficient (and dangerous from a maintainability standpoint) to
+maintain large blocks of identical Vim script in two different script files.
+Accordingly, I have segregated the option/configuration processing, which is
+common to both filetype and syntax, and located it in a separate file, which
+is intended to be installed in the user's plugin directory:
+($VIM/plugin/txtfmt.vim). Very little of the script in this file is actually
+executed at Vim startup. Most of it is executed only upon demand by either the
+filetype or syntax plugin (whichever happens to be sourced first when Txtfmt
+is loaded). When the common configuration script is executed, it processes the
+various options (|txtfmt-modeline|, buffer-local and global), and saves the
+resulting configuration to buffer-local variables, where it may be accessed by
+both the filetype and syntax plugins.
+
+Although the details will vary according to the user's setup, it generally
+works something like this...
+
+-FileType set to txtfmt
+--Txtfmt syntax file is sourced
+---Txtfmt syntax file invokes common configuration code in
+   $VIM/plugin/txtfmt.vim
+--Txtfmt filetype plugin is sourced
+
+==============================================================================
+5. Configuration				*txtfmt-configuration*
+
+OPTIONS						*txtfmt-options*
+
+There are 3 ways for the Txtfmt user to set most Txtfmt options. The 3 methods
+are listed below in order of highest to lowest priority.
+
+    1. in a Txtfmt modeline
+    2. with a buffer-local option variable
+    3. with a global option variable
+
+Note: Some options do not support all 3 mechanisms. The help for a specific
+option indicates which mechanisms may be used to set it.
+
+Txtfmt will attempt to determine the value of an option from the highest
+priority mechanism employed by the user.
+Note: If the option value obtained in this manner is invalid, Txtfmt will not
+consider lower-priority mechanisms. (In other words, the decision about which
+user setting to use is made before the option value is validated.)
+
+Although different strategies may be conceived by the Txtfmt user, the
+intended use of the 3 mechanisms is as follows:
+
+Txtfmt modelines
+	Used to associate options with a particular file
+buffer-local
+	Used to set options automatically for a particular buffer or filetype.
+	Hint: Set buffer-local options in your local filetype.vim just before
+	calling :setfiletype
+global
+	Used to set defaults for options not overridden by one of the
+	preceding 2 methods
+
+Buffer-local and global option variables are set just like any other such
+variables in Vim.
+
+Examples: >
+	:let b:txtfmtEscape = 'bslash'
+	:let g:txtfmtNested = 1
+
+For details on setting options via Txtfmt modelines, see |txtfmt-modeline|.
+
+Option naming convention			*txtfmt-opt-names*
+
+Since the buffer-local and global Txtfmt options share a namespace with other
+Vim global variables, the "txtfmt" prefix is prepended to these option names.
+The option name itself is capitalized. Since a |txtfmt-modeline| is processed
+only by Txtfmt, the "txtfmt" prefix is omitted from a |txtfmt-modeline| option
+name. The modeline form of the option name is all lowercase, and just as with
+Vim options, a short form of the option name is provided. In the option list
+below, both the buflocal/global and modeline forms of each option are shown.
+
+
+Option types					*txtfmt-opt-types*
+
+Txtfmt options fall into one of three categories:
+
+1. String options
+2. Number options
+3. Boolean options
+
+In most cases, the rhs of the assignment used to set the option's value is
+identical for all set mechanisms (txtfmt modelines, buffer-local and global),
+except of course that string options are not quoted in a Txtfmt modeline.
+Boolean options are a special case, however. Setting and clearing boolean
+options in a Txtfmt modeline is accomplished in the same manner as it is for a
+Vim modeline: by including the bare option name in the modeline to turn the
+option on, or by prepending "no" to the bare option name to turn it off.
+
+Examples: >
+	" Txtfmt modeline that turns nesting ON
+	txtfmt:nested
+	" Txtfmt modeline that turns nesting OFF
+	txtfmt:nonested
+
+Number format					*txtfmt-opt-num-fmt*
+
+Unless otherwise specified, a Txtfmt numeric option (represented with {number}
+in this document) may be specified in either decimal or hexadecimal format:
+e.g.
+    0, 1000, 0x8f, 0x1F1F
+are all valid values for numeric options.
+
+Txtfmt modelines					*txtfmt-modeline*
+
+Since a Txtfmt file should generally be viewed with the same set of options
+that were in effect when it was created, Txtfmt provides a way to associate
+certain option values with the file itself. Vim users should be familiar with
+the concept of a modeline. Txtfmt extends this concept to a "Txtfmt-modeline",
+which may be used to set various Txtfmt-specific options, described later. As
+a general rule, an option that may be set from a Txtfmt-modeline may also be
+set buffer-locally and/or globally, using the corresponding buffer-local or
+global option variable.
+Note: Txtfmt will search the first and last |txtfmtModelines| lines of a file
+looking for a Txtfmt-modeline. All valid Txtfmt-modelines found will be used;
+however, the search for valid modelines stops as soon as an invalid modeline
+is encountered. (This is consistent with Vim's modeline processing.)
+
+Format of a Txtfmt-modeline			*txtfmt-modeline-fmt*
+	Txtfmt modelines are based upon the 1st Vim modeline format
+	       [text]{white}txtfmt:[white]{options}
+
+	where {options} is a comma or whitespace separated list of Txtfmt
+	option settings. For a description of the various {options}, see
+	|txtfmt-opt-list|.
+
+	Note: Since Vim will not choke on a trailing ':' (probably because a
+	trailing ':' may be viewed as introducing an empty option field),
+	neither will I.
+
+	Examples: >
+		txtfmt:tokrange=180X:escape=bslash
+		txtfmt:rng=0xE000L esc=self nested
+
+Refreshing display after option changes		*txtfmt-opt-refresh*
+
+As mentioned in the section on "Loading" (|txtfmt-loading|), option values are
+generally taken into account only at the instant the plugin using them is
+sourced. Thus, changes to one of the Txtfmt options discussed below will have
+no immediate effect upon a Txtfmt buffer that has already been loaded. If you
+have changed option settings and wish to have those changes applied to a
+loaded Txtfmt buffer, you have a choice of three methods:
+
+    1) :e[dit]
+    This is probably the simplest method. It relies upon a buffer-local
+    BufReadPre autocmd, whose job is to ensure that all options will be
+    re-processed when the filetype/syntax plugins are reloaded in response to
+    the BufRead event.
+
+						*txtfmt-:Refresh*
+    2) :Refresh
+    :Refresh is a buffer-local command, which may be invoked from any loaded
+    Txtfmt buffer. For most practical purposes, this method yields the same
+    results as ":e[dit]", although the implementation is significantly
+    different (and more complex). In particular, :Refresh does not actually
+    re-edit the file, so the various BufRead autocommands will not be
+    triggered. It works via assignments to 'filetype' and/or 'syntax', as
+    appropriate.
+
+    3) :bd[elete] (followed by re-edit of the file)
+    This is arguably the safest method, since a :bdelete unlets all
+    buffer-local variables, thus wiping out all "memory" of any previous
+    Txtfmt plugin load for the current buffer. Of course, you shouldn't use
+    this method if you don't want to lose other (non-Txtfmt) buffer-local
+    variables.
+
+
+Option List					*txtfmt-opt-list*
+
+The following is a comprehensive list of Txtfmt options. In the list below,
+the option name as it would appear in a |txtfmt-modeline| is given within
+single quotes (''). The variable name used for global or buffer-local
+assignments is listed without the leading "g:" or "b:", but is accompanied by
+a string such as "global" or "global or buffer-local" to indicate how it may
+be set.
+
+						*txtfmtColor{}*
+						*txtfmtBgcolor{}*
+txtfmtColor{1..8}
+txtfmtBgcolor{1..8}	old-style array of strings
+			(default: See |txtfmt-color-defaults|)
+			global or buffer-local
+	These old-style Vim "arrays" allow you to override the default colors
+	corresponding to the 8 foreground and 8 background color tokens. It is
+	possible to override none, some, or all of the colors. The
+	txtfmtBgcolor{} array may be used to configure background colors
+	differently from foreground colors. The txtfmtColor{} array applies
+	not only to foreground colors, but also to background colors for which
+	the corresponding entry in txtfmtBgcolor{} has not been defined.
+	Txtfmt considers each color index independently of all others; thus,
+	it is possible to set only those elements whose default color you wish
+	to override. Note that for a foreground color, "default" in this
+	context refers to the default color definition provided by the Txtfmt
+	plugin; for a background color, it could also refer to the default
+	provided by the txtfmtColor{} array. In other words, you can provide
+	overrides for both foreground and background colors in txtfmtColor{},
+	then use txtfmtBgcolor{} to override only the subset of background
+	colors you wish to differ from their corresponding foreground colors.
+	For details on the format of the strings, see |txtfmt-color-config|.
+
+			*txtfmt-'conceal'* *txtfmt-'cncl'* *txtfmtConceal*
+'conceal' 'cncl'
+txtfmtConceal		boolean (default on when has('conceal') == 1)
+			global or buffer-local
+			*** New in version 2.0 ***
+	This option determines whether Txtfmt will attempt to use the
+	concealment capability provided either by the "conceal" feature (Vim
+	versions >= 7.3) or by Vince Negri's "conceal / ownsyntax" patch
+	(available for older versions of Vim). Note that this option is
+	ignored when has("conceal") returns 0.
+	Note: You can check to see whether your version of Vim supports the
+	"conceal" feature either by executing has('conceal'), or by searching
+	the output of :version for the applicable feature string:
+		+conceal (enabled)
+		-conceal (disabled)
+
+	The ideal Txtfmt token is zero-width, affecting the highlighting of
+	subsequent text without taking up any visible space in the Txtfmt
+	buffer. Such "zero-width" Txtfmt tokens are the default in versions of
+	Vim >= 7.3. In older versions of Vim, zero-width tokens were possible
+	only for users who built a custom version of Vim with Vince Negri's
+	"conceal / ownsyntax" patch. When the "conceal" feature is enabled,
+	Txtfmt will attempt to conceal completely all tokens not in the cursor
+	line. (Whether or not tokens in the cursor line are concealed depends
+	upon the |txtfmt-'concealcursor'| option setting.)
+
+	When the "conceal" feature is disabled (either by this option or by
+	lack of support in Vim), Txtfmt attempts to conceal the special
+	formatting tokens by making each appear as a single space character,
+	each of which consumes a single column of screen width. Although this
+	is typically not an issue when the tokens can be placed at the end of
+	a line or on a line by themselves, it can be a source of annoyance in
+	certain scenarios. Consider, for example, the case in which you want
+	to highlight a single word in red bold. You would need to insert both
+	a red fg color and a bold format token prior to the word, and both the
+	'no format' and 'no fg color' tokens immediately after the word. Since
+	each token appears as a single space, the highlighted word will appear
+	to be surrounded by more whitespace than usual. This becomes even more
+	of an issue in the unlikely event you wish to highlight only part of a
+	particular word. For this reason, Txtfmt will always use the "conceal"
+	feature whenever it is available.
+
+	*txtfmt-conceal-notes* *txtfmt-conceal-history*
+	*txtfmt-conceal-backwards-compatibility*
+	Prior to Vim 7.3, the default setting of the |txtfmt-'conceal'| option
+	was "off", even when has("conceal") indicated that the feature was
+	enabled in Vim (i.e., because the user had applied Vince Negri's
+	"conceal" patch). This design choice was made, in spite of the fact
+	that use of the "conceal" feature is optimal, primarily for reasons of
+	backwards-compatibility. In particular, as annoying as non-zero-width
+	tokens might be, many users were sure to have created files that
+	relied upon the tokens' width to achieve proper indenting. A 4 space
+	leading indent, for instance, might have been realized with a bold
+	format token followed by 3 spaces. Suddenly concealing the bold format
+	token would break the alignment.
+
+	Although this rationale is still valid, it is no longer sufficient (in
+	my judgment) to justify disabling the "conceal" feature by default,
+	now that the feature has been incorporated into Vim itself. First-time
+	Txtfmt users who begin using the plugin with Vim 7.3 will naturally
+	expect the plugin to take advantage of the "conceal" feature without
+	any explicit action on their part. Such users might not even be aware
+	of the existence of this option. Presenting Txtfmt in a sub-optimal
+	light (i.e., without "conceal" functionality) would increase the
+	probability that such users would abandon use of the plugin before
+	becoming sufficiently familiar with its documentation to learn that
+	they had the power to enable the "conceal" feature with a simple
+	option setting.
+
+	*txtfmt-viewing-old-files-without-conceal*
+	If you have legacy files that are best viewed without the "conceal"
+	feature, but you're using a version of Vim with compiled-in support
+	for "conceal", you may wish to view the old files with "noconceal",
+	and view all newly-created Txtfmt files with "conceal". This is easily
+	accomplished as follows...
+
+	1. Set txtfmtConceal true globally, either by leaving the option at
+	   its default, or setting it explicitly in your vimrc. E.g.,
+		let g:txtfmtConceal = 1
+
+	2. Use Txtfmt modelines in your old files to disable the "conceal"
+	   feature for those files only. E.g.,
+		txtfmt:noconceal
+
+	Note: If you have many old files, you might wish to automate the
+	addition of the modelines with a simple sed or awk script: E.g.,
+
+	find . -iname '*.txtfmt' | xargs sed -i -e '$a\' -e 'txtfmt:noconceal'
+
+	Explanation: Adds a Txtfmt-modeline disabling "conceal" on the last
+	line of all .txtfmt files recursively under the current directory.
+	Note: Txtfmt will process up to |txtfmtModelines| modelines at the
+	beginning or end of a file; thus, the command above simply adds a new
+	modeline without bothering to check for an existing one.
+
+	Of course, the strategy outlined above is merely a suggestion. You can
+	use a combination of Txtfmt modeline and buffer-local / global option
+	settings to achieve whatever behavior you desire.
+
+		*txtfmt-'concealcursor'* *txtfmt-'cocu'* *txtfmtConcealcursor*
+'concealcursor' 'cocu'
+txtfmtConcealcursor	string (default: "nvic")
+			global or buffer-local
+			*** New in version 2.4 ***
+	Important Note: The default value of this option may change in a
+	future version of Txtfmt. If you care about its value, you should set
+	it explicitly.
+
+	Note: This option is ignored when the "conceal" feature is disabled
+	(via the |txtfmt-'conceal'| option) or is not supported by the running
+	Vim instance.
+
+	This option determines whether Txtfmt tokens in the line containing
+	the cursor are concealed. Its value is a string of single character
+	flags indicating the modes for which tokens in the cursor line should
+	be concealed. The flags are defined as follows in the Vim help:
+
+	  n		Normal mode
+	  v		Visual mode
+	  i		Insert mode
+	  c		Command line editing, for 'incsearch'
+		
+	For detailed descriptions, see Vim help on 'concealcursor'...
+
+	Note: Some new users might be disconcerted by the fact that with the
+	default setting of this option, the tokens disappear as soon as they
+	are entered. (After all, he might wish to delete them at some point.)
+	This will not be a concern at all once visual maps (targeted for next
+	release) have been added. These maps will automate addition/removal of
+	tokens completely, such that the user needn't even be aware of the
+	tokens' existence. In the meantime, however, the best way to locate
+	existing tokens does not require you to see them: it involves use of
+	the |txtfmt-jump-to-tok| maps, which facilitate locating Txtfmt tokens
+	by their types; additionally, the |\ga| map (|txtfmt-get-tok-info|)
+	may be used to learn the nature of the token under the cursor, even
+	when the token is completely concealed (i.e., occupying zero width).
+
+				*txtfmt-'escape'* *txtfmt-'esc'* *txtfmtEscape*
+'escape' 'esc'
+txtfmtEscape		string (default: "none")
+			global or buffer-local
+	This option determines how (if at all) the special format/color tokens
+	may be escaped in a Txtfmt buffer. Escaping would be necessary only in
+	the unlikely event that you needed to use the special tokens in a file
+	for a non-Txtfmt purpose. Hopefully, you have chosen a value for
+	|txtfmt-'tokrange'| that renders this unnecessary. If so, it is safe
+	to leave this option at its default value: "none". The following
+	values are possible:
+		bslash	Escape a format/color token with backslash ('\')
+		self	Escape a format/color token with itself (i.e., by
+			doubling the special chars)
+		none	No escaping of format/color tokens
+	Note: Escaping characters themselves may be escaped, but only when
+	they appear in an unbroken sequence immediately preceding a Txtfmt
+	token. Examples for both the "bslash" and "self" cases are shown
+	below...
+
+	--bslash--
+	\<fb>             Escaped bold format token
+	\\<fb>            Backslash followed by bold format token
+	\\\<fb>           Backslash followed by escaped bold format token
+	--self--
+	<fb><fb>          Escaped bold format token
+	<fb><fb><fb>      Escaped bold format token followed by bold format token
+	<fb><fb><fb><fb>  Escaped bold format token followed by escaped bold
+	                  format token
+	Note: When a Txtfmt token is escaped, the escaping character will be
+	hidden, and the escaped character should be highlighted just like the
+	surrounding text.
+
+		    *txtfmt-'fgcolormask'* *txtfmt-'fcm'* *txtfmtFgcolormask*
+		    *txtfmt-'bgcolormask'* *txtfmt-'bcm'* *txtfmtBgcolormask*
+'fgcolormask' 'fcm'
+txtfmtFgcolormask	string (default: "11111111")
+			global or buffer-local
+			*** New in version 2.0 ***
+'bgcolormask' 'bcm'
+txtfmtBgcolormask	string (default: "01101000")
+			global or buffer-local
+			*** New in version 2.0 ***
+
+	These options permit you to deactivate colors you do not wish to view
+	in your Txtfmt buffer. Typically, colors are deactivated for
+	performance reasons. (See |txtfmt-performance-considerations|.) Each
+	option is a string containing exactly 8 characters. Each of the 8
+	characters corresponds to one of the 8 possible colors in the
+	corresponding color definition array. (For information on color
+	definition arrays, see help on |txtfmtColor{}|.) The first character
+	in the string corresponds to the first element in the color array. The
+	meaning of the mask characters is as follows:
+	"1"	activates the color
+	"0"	deactivates the color
+
+	Consider the bgcolormask default as an example: 01101000
+	This mask enables the colors corresponding to indices 2, 3 and 5 in
+	the background color definition array. In the default color definition
+	arrays, these indices correspond to blue, green and red, respectively.
+	For performance reasons, I enable only these 3 most commonly used
+	background colors by default. Feel free to enable an entirely
+	different set of colors if you like. For backward-compatibility
+	reasons, the default fgcolormask enables all foreground colors.
+	However, if you notice there are foreground colors that you never use,
+	you can deactivate them to speed up the syntax redrawing.
+
+	Note: Deactivating a color does not alter a Txtfmt buffer in any way.
+	The character code corresponding to the deactivated color continues to
+	be reserved within the Txtfmt token range; it simply has no effect on
+	highlighting.
+
+						*txtfmtJumptoinactive*
+txtfmtJumptoinactive	boolean (default off)
+			global or buffer-local
+	This option determines whether the |txtfmt-jump-to-tok| maps will
+	treat an inactive (masked) fg or bg color token as the target of a
+	jump. By default, only tokens that affect the highlighting of the
+	Txtfmt buffer will be considered as potential jump targets.
+	Note: Currently, this option may be set at any time; i.e., a change
+	will take effect even after the plugin has loaded. This behavior is
+	subject to change.
+
+						*txtfmtMapwarn*
+txtfmtMapwarn		string (default: "mMoOcC")
+			global
+	This option determines what the Txtfmt filetype plugin does when one
+	of its default 1st level maps is either ambiguous or conflicting with
+	an existing map. For an explanation of 1st and 2nd level maps, see
+	|txtfmt-map-config|. For a description of the character flags
+	comprising the option value, see |txtfmt-map-conflict|.
+
+						*txtfmtModelines*
+txtfmtModelines		number (default: 5)
+			global or buffer-local
+	This option is analogous to Vim's 'modelines' option. It determines
+	how many (if any) lines at the beginning and end of a file will be
+	searched for a |txtfmt-modeline|. For (hopefully) obvious reasons, it
+	cannot be set from a txtfmt-modeline.
+
+			*txtfmt-'nested'* *txtfmt-'nst'* *txtfmtNested*
+'nested' 'nst'
+txtfmtNested		boolean (default on)
+			global or buffer-local
+	This option determines whether Txtfmt regions can be nested within
+	non-txtfmt regions. If you are not sure what this means, see
+	|txtfmt-nesting|.
+
+			*txtfmt-'pack'* *txtfmt-'pck'* *txtfmtPack*
+'pack' 'pck'
+txtfmtPack		boolean (default on)
+			global or buffer-local
+			*** New in version 2.0 ***
+	This option determines the offset within the Txtfmt token range where
+	the background color tokens are located. By default, the background
+	color tokens are "packed" up against the end of the format token
+	range. In other words, space within the range is not reserved for the
+	inactive "long" format tokens. Currently, there is little reason to
+	reserve space for inactive "long" format tokens: you cannot have both
+	"long" formats and background colors in the same buffer. Moreover,
+	there are backward-compatibility concerns that dictate the packing of
+	background color tokens. There are, however, several reasons you might
+	wish to leave space for "long" format tokens, even if you're not
+	currently using them. It is recommended that you read the following
+	section for details: |txtfmt-upgrading-to-extended-long-formats|
+
+	Note: This option is meaningful only if the tokrange suffix is 'X'
+	(extended).
+
+						*txtfmt-'sync'* *txtfmtSync*
+'sync'
+txtfmtSync		string or number (default: 250)
+			global or buffer-local
+	This option determines the method used to perform syntax
+	synchronization on a Txtfmt buffer. (For an overview of syntax
+	synchronization, see |:syn-sync|.)
+
+	Possible values:
+	    fromstart	Syncing always starts at the beginning of the Txtfmt
+			buffer. This is the most accurate, but least efficient
+			method.
+	    none	Syncing is not performed at all. This method is
+			extremely fast, but may produce incorrect highlighting
+			for Txtfmt regions that begin prior to the first
+			visible screen line.
+	    {number}	Works as though a "minlines={number}" argument has
+			been supplied to Vim's |:syn-sync| command.
+			(See |:syn-sync-minlines|for more information.)
+
+	Set examples: >
+	    let g:txtfmtSync = "fromstart"
+	    let g:txtfmtSync = 500
+
+	    " In a modeline...
+	    txtfmt:sync=none
+	    txtfmt:sync=100
+<
+
+			*txtfmt-'tokrange'* *txtfmt-'rng'* *txtfmtTokrange*
+			*txtfmt-starttok* *txtfmt-formats*
+'tokrange' 'rng'
+txtfmtTokrange		string or Vim expression evaluating to string
+			(default:
+				1 byte encoding: "180X"
+				2 byte encoding: "180X"
+				unicode:         "0xE000X")
+			format: {number}[{formats}]
+			global or buffer-local
+	This option allows the user to specify both the location of the range
+	of characters dedicated to Txtfmt and the types of highlighting
+	regions that may be created: {number} specifies the character code of
+	the first character in the range; {formats}, if specified, is a single
+	letter indicating the types of regions supported. The following values
+	are supported:
+	    'S' ("short" formats)
+	    'L' ("long" formats)
+	    'X' ("extended")
+	All 3 modes suppport up to 8 foreground colors. Short format mode
+	supports only the bold, underline and italic format attributes,
+	whereas long formats adds to this basic set the standout and reverse
+	(inverse) attributes, and if the version of Vim in use supports it,
+	the undercurl attribute. Extended mode is equivalent to short formats
+	with the addition of up to 8 background colors. Note that for
+	performance reasons, you are currently not permitted to enable both
+	long formats and background colors. If you wish to know why (and
+	whether this restriction will ever be lifted), see
+	|txtfmt-upgrading-to-extended-long-formats|.
+
+	The table below provides a convenient illustration of the effect each
+	{formats} value has on the set of supported highlight attributes.
+
+                       {--{formats}--}
+        +-------------------------------+          
+        |              S      L      X  |  
+        +-------------------------------+
+        |underline     Y      Y      Y  |
+        |bold          Y      Y      Y  |
+        |italic        Y      Y      Y  |
+        |standout      -      Y      -  |
+        |reverse*      -      Y      -  |
+        |undercurl     -      Y*     -  |
+        +-------------------------------+
+        |fg_clrs     <=8    <=8    <=8  |
+        |bg_clrs       -      -    <=8* |
+        +-------------------------------+
+
+	*Note: "Reverse" is another name for "inverse".
+        *Note: Versions of Vim prior to 7.0 did not support the undercurl
+	attribute; thus, Txtfmt will automatically disable undercurl if it
+	detects a Vim version < 7.0.
+	*Note: By default, only 3 background colors are enabled. You may
+	enable more with the |txtfmt-'bgcolormask'| option.
+
+	If you omit the optional {formats} suffix, Txtfmt assumes the default
+	of 'X'. The suffixes are all case-insensitive.
+
+						*txtfmt-'tokrange'-expr*
+	Note: If the option string is not a valid 'tokrange' string, Txtfmt
+	will attempt to evaluate the option string as a Vim expression. If
+	this evaluation produces a valid 'tokrange' value, Txtfmt will use it;
+	otherwise, Txtfmt will display error and use a default setting. This
+	feature permits you to defer the choice of 'tokrange' until a
+	particular file is being loaded. (Alternatively, you could defer
+	choosing 'tokrange' by performing buf-local sets within autocommands
+	or by using a |txtfmt-modeline|.) >
+	Example:
+		let g:txtfmtTokrange = 'MyTokrangeChooser()'
+		let g:txtfmtTokrange = '&enc == "utf-8" ? "0xE000X" : "180X"' 
+<
+
+	If you do not specify this option, either in a |txtfmt-modeline| or
+	via the txtfmtTokrange option variable, Txtfmt will attempt to choose
+	a suitable default. However, you should probably not let Txtfmt choose
+	a default for an option as important as this one. It is recommended
+	that you read |txtfmt-choosing-token-range| before setting this
+	option. Moreover, it is recommended that you use the :MakeTestPage
+	command to test whatever setting you ultimately choose. (See
+	|txtfmt-:MakeTestPage|.)
+
+			*txtfmt-'undercurl'* *txtfmt-'uc'* *txtfmtUndercurl*
+'undercurl' 'uc'
+txtfmtUndercurl		boolean (default on if running Vim supports undercurl)
+			global or buffer-local
+			*** New in version 2.0 ***
+	Txtfmt disables use of the undercurl attribute automatically for
+	versions of Vim that don't support it (i.e., Vim versions older than
+	7.0). Turning this option off prevents the creation of undercurl
+	regions, even when the running version of Vim does support it. You
+	might wish to do this for performance reasons if you use "long"
+	formats but rarely if ever use undercurl. Disabling undercurl cuts the
+	number of format tokens in the Txtfmt token range in half. Of course,
+	the token reduction is not as significant as the associated runtime
+	performance improvement, especially if you're using Unicode, in which
+	character codes are plentiful. For a more detailed look at performance
+	considerations, read |txtfmt-performance-considerations|.
+
+	As is the case with color masks, setting or clearing this option does
+	not alter a Txtfmt buffer in any way; it merely alters its syntax
+	highlighting. Thus, there is nothing to prevent you from disabling
+	undercurl until you find you have need of it. Suppose, for example,
+	you have recently upgraded to the current version of Vim from a
+	pre-7.0 version (i.e., one that doesn't support undercurl). Suppose
+	further that you've been managing without undercurl, and you're not
+	sure you really need it. You could put a line such as... >
+	let g:txtfmtUndercurl = 0
+<
+	...in your vimrc to disable undercurl globally until you decide you're
+	ready to use it. Alternatively, you may decide you want to use
+	undercurl right away, but you have a number of legacy files, created
+	under the old version of Vim, which do not have undercurl regions and
+	probably never will. To avoid paying a performance penalty when
+	viewing these legacy files, you could add the following Txtfmt
+	modeline to the legacy files: >
+		txtfmt:nouc
+<
+	Caveat: For backward-compatibility reasons, disabled undercurl tokens
+	are not considered to be part of the Txtfmt token range in the same
+	way that disabled color tokens are. This fact has implications for the
+	|txtfmt-:MoveStartTok| command, which will not attempt to translate
+	characters corresponding to disabled undercurl tokens. Another
+	implication of this fact is that you will not be warned if you choose
+	a |txtfmt-'tokrange'| setting that does not leave room for undercurl
+	tokens at the end of the range. Of course, this is not really an
+	issue, since if you did eventually decide to enable undercurl in such
+	a case, you could simply run the :MoveStartTok command to translate
+	the entire token range leftward, thereby making room for the undercurl
+	tokens.
+	
+						*txtfmtUsermap{}*
+txtfmtUsermap{}		old-style array of strings
+			(default: none)
+			global or buffer-local
+	This old-style Vim "array" allows you to build your own complex
+	mappings from Txtfmt primitives, by using a powerful mechanism known
+	as "Txtfmt user-maps". The user-map mechanism is described in detail
+	in section |txtfmt-user-maps|.
+	Note: First element of the array is at index 1.
+
+						*txtfmtUsermaplimit*
+txtfmtUsermaplimit	number (default: 25)
+			global or buffer-local
+	Defines the number of elements of txtfmtUsermap{} (described above)
+	that will be tested for valid user-map definitions.
+
+CHOOSING A TOKEN RANGE				*txtfmt-choosing-token-range*
+
+						*txtfmt-encoding*
+Before choosing a value for the |txtfmt-'tokrange'| option, you should
+consider what character encoding you will be using. Because of the sheer
+number of available character codes, utf-8 is perhaps the ideal encoding for
+use with Txtfmt.
+
+						*'short'/'long'-formats*
+The number of character codes that must be dedicated to Txtfmt usage depends
+upon the setting of txtfmt-'tokrange'. The number of tokens required for
+format attributes is given by 2^N, where "N" is the number of format
+attributes (e.g., bold, underline, etc...). As mentioned in the help for the
+|txtfmt-'tokrange'| option, N will be 3 if "short" or "extended" formats are
+selected and either 5 or 6 if "long" formats are used. All tokrange settings
+require exactly 9 tokens to be reserved for foreground colors. If background
+colors have been enabled ("extended" formats), an additional 9 tokens are
+reserved. The following table illustrates the character range requirements
+graphically.
+Note: The undercurl column indicates whether the undercurl attribute is
+active. It will be "on" if the version of the running Vim is >= 7.0 AND
+undercurl has not been explicitly disabled via the |txtfmt-'undercurl'|
+option.
+
+  +--------+-----------+------------+
+  | suffix | undercurl | num tokens |
+  +--------+-----------+------------+
+  |   S    |   NA      |    17      |
+  |   X    |   NA      |    26      |
+  |   L    |   off     |    41      |
+  |   L    |   on      |    73      |
+  +--------+-----------+------------+
+
+
+When I wrote the initial version of the Txtfmt plugin, only the "short" format
+attributes (bold, underline and italic) were supported. Accordingly, only 17
+tokens needed to be dedicated to Txtfmt usage. At that time, I assumed that
+only ASCII characters would be used for text. (The initial version of Txtfmt
+was actually called "ascfmt"!) Since that time, my mindset has grown a bit
+more global, and I now envision Txtfmt usage with a wide variety of character
+encodings. If Txtfmt is configured for use with all possible format attributes
+(bold, underline, italic, standout, reverse and undercurl), the Txtfmt token
+requirement jumps to 73. Although it is possible for many English speakers
+using a "latin1" encoding to forego the use of 73 character codes in the range
+128-255, Europeans may find this restriction unacceptable, given the presence
+of a number of accented characters in that range. If you're using a multibyte
+character set such as Unicode, you should have no difficulty finding an unused
+sequence of 73 characters to dedicate to Txtfmt. (Hint: see
+|txtfmt-private-use-area| below.)
+
+					*txtfmt-performance-considerations*
+The number of character codes dedicated to Txtfmt usage is not the only factor
+you should consider when choosing a |txtfmt-'tokrange'| setting. The tokrange
+setting also determines the number of syntax regions Txtfmt must define in
+order to accomplish the desired highlighting. The number of syntax regions, in
+turn, directly affects the speed with which Vim can load and redraw a Txtfmt
+buffer. Consider, as an example, the choice between "short" and "long"
+formats. Although it supports only 3 additional format attributes, the "long"
+formats configuration requires roughly 10 times as many syntax regions as
+"short" formats! This increase in the number of syntax regions engenders a
+significant increase in CPU overhead consumed by syntax highlighting, even
+when the additional format attributes are not used, since Vim must spend time
+checking the unused region definitions. On some systems, the performance
+penalty is large enough to render display of "long" formats noticeably
+sluggish.
+
+With the addition of "extended" formats (i.e., background colors) in Txtfmt
+version 2.0, performance considerations have become even more significant. The
+addition of 8 background colors to the "short" formats baseline results in a
+thirty-fold increase in the number of syntax regions! (Hint: The dramatic
+increase is due to the "orthogonality" of the various types of regions.)
+Fortunately, Txtfmt allows you to reduce the number of syntax regions
+considerably (thereby increasing load/redraw speed) by "de-activating" unused
+colors. Consider that the typical user may never use more than 3 or 4 colors
+in his Txtfmt buffers. If Txtfmt knows in advance which colors are used, it
+can avoid defining syntax regions for the unused ones. Note that the tokens
+corresponding to these inactive colors will still be reserved by Txtfmt, since
+if the token range were "collapsed" on top of unused color tokens, it would be
+impossible (or at least difficult) to re-activate the colors later when, for
+example, the user got a faster computer and decided he might occasionally use
+the extra colors.
+
+Txtfmt provides the following 2 "color mask" options to permit you to
+enable foreground and background colors independently:
+        |txtfmt-'fgcolormask'|
+        |txtfmt-'bgcolormask'|
+If you don't define these options, Txtfmt will enable all 8 foreground colors,
+and the 3 background colors corresponding to red, green and blue in the
+default color configuration.
+
+                                                *txtfmt-syn-rgn-count-table*
+The following table is intended to aid you in choosing your
+|txtfmt-'tokrange'| suffix and fg/bg color masks, by showing the number of
+syntax regions required for various configurations and numbers of active fg/bg
+colors. The list is intended to be representative, not exhaustive.
+Note: To facilitate comparison, the table rows are presented in order of
+increasing syntax region counts.
+
+  +--------+-----------+-----------+------------+
+  | suffix | # fg clrs | # bg clrs | # syn rgns |
+  +--------+-----------+-----------+------------+
+  |   S    |     8     |     NA    |    142     |
+  |   L*   |     8     |     NA    |    574     |  * no undercurl
+  |   L    |     4     |     NA    |    638     |
+  |   X    |     5     |     2     |    684     |
+  |   X    |     4     |     4     |    990     |
+  |   L    |     8     |     NA    |    1150    |
+  |   X    |     8     |     3     |    1448    |
+  |   X    |     8     |     4     |    1846    |
+  |   X    |     6     |     6     |    2030    |
+  |   X    |     8     |     8     |    3438    |
+  +--------+-----------+-----------+------------+
+                                               
+                                                *txtfmt-upgrading-tokrange*
+If you don't currently need background colors or "long" formats and thus are
+considering the use of "short" formats because of the reduced token
+requirement, but suspect that you may eventually want to use either "long"
+format attributes or background colors, it may be reassuring to know that the
+implementation has been designed to permit a seamless "upgrade" from "short"
+to "long" or "extended" formats.
+
+As an example, consider a Txtfmt file with the following |txtfmt-modeline|: >
+	txtfmt:tokrange=180S
+
+This file will use tokens in the range 180-196 to support 8 colors as well as
+all combinations of bold, underline and italic attributes. If you decide at
+some point that you would like to begin using standout, reverse and undercurl
+attributes in this file, simply change the modeline to the following: >
+	txtfmt:tokrange=180L
+
+The original (bold, underline and italic) regions will be unaffected, but you
+will now be able to create regions with all 63 combinations of format
+attributes. The cost is an extra 56 character codes that will be unavailable
+for normal text usage. The expanded range of characters used by Txtfmt is now
+180-252.
+
+Alternatively, if you were content with bold, underline and italic format
+attributes, but wished to add background colors to your buffer, you could have
+upgraded from "short" to "extended" with the following modeline: >
+	txtfmt:tokrange=180X
+<
+
+                                *txtfmt-upgrading-to-extended-long-formats*
+                                *txtfmtAllowxl*
+It should be pointed out that the default location for background color tokens
+is just past the end of the "short" format tokens. Note that this is precisely
+where the "long" format tokens would be located. Ideally, since the format
+token range is the only variable-length range, the background color tokens
+would have been located before it. Such a strategy would have permitted the
+user to switch freely back and forth between "extended" and "long" formats
+without the need to move or delete any existing background color tokens.
+Unfortunately, for reasons of backward-compatibility, the background color
+tokens had to go after all other tokens. The reason is that earlier versions
+of Txtfmt, which didn't support background colors at all, used a default for
+tokrange that puts the first token at the very beginning of Unicode's Private
+Use Area. Locating background color tokens at the head of the token range,
+therefore, would require users to translate the tokens at least 9 characters
+rightward in their existing files if they wished to use background colors.
+This was out of the question, as one of my design goals for version 2.0 was to
+ensure that a user who wished to add background colors to a buffer created
+with an older version of Txtfmt would be able to do so simply, i.e., without
+the need for special upgrade steps.
+
+The fact that background color and "long" format tokens occupy overlapping
+ranges means that, by default, you can't have both background colors and long
+formats active in the same buffer. Of course, it would have been possible to
+locate the background color tokens after the long token range, leaving the
+long tokens reserved but unused when only "short" formats are active. Although
+this strategy would support simultaneously active long formats and background
+colors, it would have broken backward compatibility. The reason is that the
+default tokrange for the latin1 encoding is such that there is not enough room
+after the final long format token for the range of background color tokens.
+Thus, users with existing files that use the default tokrange would be
+required to translate their entire token range at least 9 characters leftward
+prior to enabling background colors. In light of the previously stated design
+goals, this was unacceptable. Thus, by default, the background color tokens
+are "packed" in just after the short format tokens. It is possible, however,
+to override this default behavior by clearing the |txtfmt-'pack'| option. When
+this option is turned off, the background color tokens will be located after
+the range reserved for long format tokens, even when the configuration is such
+that long formats are disabled.
+
+Why would you ever wish to clear the |txtfmt-'pack'| option? Well, there are
+two possible motivations:
+1. You're not initially sure whether you would prefer to have background
+   colors or long formats.
+   Example scenario: You're currently using "extended" formats, but you've
+   done a lot of editing and have inserted only a handful of background
+   colors. Moreover, you've found yourself wishing more than once for the
+   undercurl attribute. At this point, you could simply change the tokrange
+   suffix from 'X' to 'L' and begin using undercurl. If |txtfmt-'pack'| had
+   been set when you added the background color tokens, those tokens would now
+   be interpreted as long format tokens, thereby introducing unwanted format
+   regions. Since |txtfmt-'pack'| was clear, however, they are located
+   harmlessly beyond the end of the Txtfmt token range, and will therefore
+   have no effect.
+2. You know that one day Txtfmt will support the 'XL' (extended long) tokrange
+   suffix, and you want to create files that will be able to transition
+   seamlessly from 'X' or 'L' to 'XL'.
+   Note: Unofficially, Txtfmt already does support the 'XL' suffix, but it is
+   currently disabled for performance reasons. If you're wondering why, you
+   may be interested to know that the 'XL' suffix requires 28633 syntax
+   regions!!! On my machine, Vim crashes if I attempt to use 'XL' formats with
+   all foreground and background colors enabled! I can get it to load without
+   crashing by de-activating several colors, but even then, syntax definitions
+   are sometimes silently corrupted, apparently because Vim has run out of
+   memory for storing them. For this reason, I do not advertise support for
+   'XL', and in fact it is disallowed by default. However, if you set the
+   global |txtfmtAllowxl| option to a nonzero value before attempting to load
+   Txtfmt, you will be able to set suffix to 'XL'. (If you do, you may wish to
+   go make a pot of coffee while you wait for the file to load, and if Vim
+   crashes while you're gone, don't say I didn't warn you...;-)
+
+						*txtfmt-start-token*
+						*txtfmt-private-use-area*
+If you're using Unicode, the "Private Use Area" (a block of character codes
+beginning at 0xE000) is probably the ideal location for the Txtfmt token
+range. This block is reserved for "application-specific" use, and is
+guaranteed never to be used for actual characters.
+
+						*txtfmt-multibyte-syntax-bug*
+Note: Several beta-release versions of Txtfmt did not work correctly with
+multibyte encodings because of a Vim bug involving the treatment of offsets
+used in syntax highlight matches. A patch for the Vim bug was created by
+Yukihiro Nakadaira, and was included in the Txtfmt distribution. Only users
+who applied the patch were able to use Txtfmt with a multibyte encoding such
+as utf-8. As of Txtfmt version 1.1, however, the patch was no longer
+necessary, as workaround logic had been added to Txtfmt itself. Moreover,
+Yukihiro's patch has been incorporated into Vim 7.2, so Txtfmt's internal
+workaround is required only for older versions of Vim. There is, however, one
+_extremely_ rare scenario in which someone running a version of Vim older than
+7.2 might wish to apply the patch: namely, when different characters within
+tokrange are encoded with different numbers of bytes. Since the number of
+bytes per character is usually constant across a large block of Unicode
+characters, only users wishing to set tokrange to a very non-standard value
+would be affected by this limitation. All of the default tokrange settings
+work properly with no need for the patch. Thus, as of Txtfmt version 1.5, I'm
+removing Yukihiro's patch from the distribution (to avoid frightening away new
+users;-). If you determine that you need it, you can obtain it from a Txtfmt
+version <= 1.4. Note, however, that you should never need this patch if you're
+running Vim 7.2 or later.
+
+						*txtfmt-problematic-ranges*
+Not all character codes are suitable for use as Txtfmt tokens. In particular,
+only tokens that are susceptible to Vim's syntax highlighting should be used.
+For a color terminal, characters used in terminal control sequences are
+sometimes immune to syntax highlighting. The specific character code ranges
+affected will vary from terminal to terminal. For latin1 and utf-8 encodings,
+characters in the range 0x80-0xA0 should generally be avoided, as they tend to
+cause problems in both GUI and terminal versions of Vim. (Exception: The
+Windows GUI appears to be able to handle this range.) For utf-8 encodings,
+only 16-bit character codes should be used, as Vim does not display characters
+above 0xFFFF correctly. Note that not all 16-bit values correspond to a valid
+Unicode character. The ones that do not will be displayed as <xxxx> (where
+xxxx is the hexadecimal representation of the character code). These
+"characters" cannot be highlighted and should not be used.
+
+As a general rule, modern unix-style terminals tend to work best when Unicode
+is used. I have found by experimentation that some ranges of tokens work
+perfectly when 'encoding' is set to utf-8, but don't work at all when it is
+set to latin1. The bottom-line is, if you're using a color terminal designed
+to work with Unicode, you should probably keep 'encoding' at utf-8. If for
+some reason you must use a different encoding, you should experiment with the
+|txtfmt-:MakeTestPage| command to find a setting for |txtfmt-'tokrange'| that
+works.
+
+						*txtfmt-default-tokrange*
+If you do not explicitly set the |txtfmt-'tokrange'| option, either in a
+|txtfmt-modeline| or via the |txtfmtTokrange| option variable, Txtfmt will
+attempt to choose a default setting that is suitable for the current character
+encoding. Success in this endeavor is not guaranteed, however, since it
+involves choosing a range of characters that will not be used for any other
+purpose in the file being edited. For Unicode, the task of choosing a suitable
+range is simple, due to the existence of the "Private Use Area".
+
+Backward-compatibility Note: Because versions of Vim prior to 7.2 handled
+syntax highlighting match offsets incorrectly for multibyte characters,
+versions of Txtfmt prior to 1.1 would not choose a tokrange default within the
+"Private Use Area", even for Unicode encodings such as utf-8. Txtfmt version
+1.1, however, contained a workaround that permitted multibyte tokens to be
+used even in versions of Vim suffering from the aforementioned bug. Thus, in
+Txtfmt version 1.1, the default start token for Unicode changed from 180 to
+0xE000 (the start of the "Private Use Area").
+
+Important Note: If you are a multibyte encoding user who created Txtfmt files
+with the old start token value of 180, you should consider the following
+(non-exhaustive) list of options...
+	1. Continue using 180 for all Txtfmt files.
+	   How: Override the new default by setting the |txtfmtTokrange|
+	   option explicitly.
+        2. Continue using 180 for existing files, but use 0xE000 for all
+           newly-created Txtfmt files.
+           How: Put a |txtfmt-modeline| containing (e.g.) "tokrange=180X" in
+           your existing Txtfmt files to override the new default. 
+	3. Use 0xE000 for all Txtfmt files, old and new.
+	   How: Use the :MoveStartTok command to relocate the tokens in your
+	   existing file(s) to a new range within the "Private Use Area".
+	   e.g. >
+		   :MoveStartTok 0xE000
+<
+	   For more information, see |txtfmt-:MoveStartTok|
+
+For encodings other than Unicode, there is nothing analogous to the "Private
+Use Area"; hence, it is not possible to choose a default tokrange that will
+work for everyone. Currently, Txtfmt's default algorithm chooses '180X' for
+all 1 and 2 byte encodings. This value should be suitable for most
+non-European users of a single byte encoding such as latin1. European users
+who use accented letters located at or above character code 180 should
+probably be using a multibyte encoding such as utf-8.
+
+Although the tokrange defaults should be suitable for the vast majority of
+users, they may not be suitable for everyone, and each Txtfmt user is
+encouraged to put some thought into the tokrange he will use and then test it
+thoroughly with :MakeTestPage. For usage details, see |txtfmt-:MakeTestPage|.
+
+
+COLORS						*txtfmt-color-config*
+
+IMPORTANT NOTE: This section makes no attempt to distinguish between
+foreground and background colors. The description of the |txtfmtColor{}| array
+applies equally to the|txtfmtBgcolor{}| array, which permits background colors
+to be configured independently of their foreground color counterparts.
+
+As mentioned previously, there are 9 tokens used to begin Txtfmt color
+regions: 8 corresponding to colors, and 1 indicating "default" or "no color".
+By default, Txtfmt picks these colors according to RGB values: #000000
+(black), #0000FF (blue), #00FF00 (green), etc... However, this choice may not
+be desirable for all users; hence, Txtfmt provides a rather flexible mechanism
+by which the user can configure the colors used. In fact, the user can
+configure different sets of colors for different color terminals, GUI's, or
+colorschemes. The configuration is accomplished via the old-style Vim array
+txtfmtColor{1..8}, which may be set either buf-locally or globally. If a given
+element has both a buf-local and a global setting, the buf-local setting is
+given priority. This array has a static counterpart, initialized to default
+values by Txtfmt, so the user can override only those elements he wishes to
+change.
+
+Each element of the txtfmtColor{} array corresponds to 1 of the 8 possible
+colors. Its value is a string consisting of at least 2 comma-separated parts.
+The first part is a Vim regular expression that determines how the color may
+be specified in a "color spec". (See |txtfmt-clr-spec| for more information.)
+Each of the subsequent parts contains a prefix indicating whether the
+definition applies to cterm's or GUI's, an optional list of patterns
+specifying the applicable values of 'term', and the actual color string to be
+used as the rhs of a "ctermfg=" or "guifg=" in a :highlight command.
+
+Here is the formal definition of a single string in the txtfmtColor{} array:
+{namepat},{clrdef1}[,{clrdef2},...,{clrdefN}]
+
+    {clrdef} :=
+	    {c|g}[{termpatlist}]:{clrstr}
+
+	    {termpatlist} :=
+		    :{termpat1}:{termpat2}:...:{termpatN}
+
+Here are the meanings of the fields:
+{namepat}  Vim regex used to recognize the name used to specify a certain
+           color; e.g., when prompted by one of the insert token maps. May not
+           contain spaces or commas. (Example: 'k\\|bla\\%[ck]')
+{c|g}      Determines whether {clrstr} will be the rhs of a "ctermfg=" ('c'),
+           or "guifg=" ('g')
+{termpat}  Pattern used to match against &term option. It is a regex pattern
+           which will be applied as ^{termpat}$.
+           Note: The {termpatlist} is optional. If it is omitted, the color
+           definition will apply to all cterm's or gui's, as determined by
+           {c|g}.
+{clrstr}   rhs of a "ctermfg=" or "guifg=" assignment. For possible values,
+           see |gui-colors| and |cterm-colors| in the Vim help.
+
+Note: When multiple {clrdef}'s could apply, the rightmost one is used.
+Note: {namepat}, {termpat} and {clrstr} fields will have one level of
+backslashes removed during processing. Commas, colons and backslashes
+appearing within those fields should be preceded with a single backslash. (See
+examples below...)
+
+Example txtfmtColor{} elements: >
+    'red,c:xterm:dosterm:DarkRed,g:#FF0000,g:builtin_gui:other_gui:#FF1010'
+    '^b\\%[lue]$,c:DarkBlue,g:#0000FF'
+<
+
+Color defaults					*txtfmt-color-defaults*
+
+The default values for the 8 colors are given below: >
+	txtfmtColor{1} = '^\\%(k\\|bla\\%[ck]\\)$,c:Black,g:#000000'
+	txtfmtColor{2} = '^b\\%[lue]$,c:DarkBlue,g:#0000FF'
+	txtfmtColor{3} = '^g\\%[reen]$,c:DarkGreen,g:#00FF00'
+	txtfmtColor{4} = '^t\\%[urquoise]$,c:DarkCyan,g:#00FFFF'
+	txtfmtColor{5} = '^r\\%[ed]$,c:DarkRed,g:#FF0000'
+	txtfmtColor{6} = '^v\\%[iolet]$,c:DarkMagenta,g:#FF00FF'
+	txtfmtColor{7} = '^y\\%[ellow]$,c:DarkYellow,g:#FFFF00'
+	txtfmtColor{8} = '^w\\%[hite]$,c:White,g:#FFFFFF'
+
+You may override none, some or all of the defaults. It is even permissible to
+override only part of an element; you could, for example, override the
+definition of "red" for a "dosterm" color terminal, but use the default red
+definition for other cterm's and GUI's.
+
+Colorscheme considerations			*txtfmt-colorschemes*
+
+Although the simplest way to override the default colors is to set the global
+version of txtfmtColor{} once and for all in your vimrc, there may be times
+when this simple solution is inadequate. Consider the following scenario...
+You use Txtfmt to create some blue text in a buffer with a light background.
+You later decide you wish to view the Txtfmt buffer with the "blue"
+colorscheme. The blue text you created is no longer visible! Of course, you
+can make it visible again by redefining the "blue" element in the global
+txtfmtColor{} array and re-editing or :Refresh'ing the Txtfmt buffer (see
+|txtfmt-:Refresh|), but changing g:txtfmtColor{} everytime you change
+colorschemes could become tedious. A better solution is to use autocommands to
+change the color definitions automatically whenever the colorscheme changes.
+Although you could set the global version of txtfmtColor{} in the autocommand,
+setting the buf-local version instead lets you reserve the global version for
+defaults that will be used with filetypes for which an autocommand has not
+been defined.
+
+For the sake of example, let us assume that you use Txtfmt to edit *.txt
+files, and that you wish to vary the color definitions according to current
+colorscheme for all such files. To keep the example simple, I will consider
+only the following 3 cases:
+
+	1. "default" colorscheme
+		Txtfmt defaults are acceptable
+	2. "blue" and "darkblue" colorscheme
+		Change black to orange
+		Change blue to brown
+	3. all other colorschemes
+		Change black to orange
+		Leave blue at the Txtfmt default
+
+The following sample implementation shows one possible strategy for
+configuring the Txtfmt colors as described above...
+>
+	" --INSIDE YOUR USER FILETYPE.VIM--
+	augroup filetypedetect
+		au! ColorScheme        *.txt    call Define_colors(1)
+		au! BufRead,BufNewFile *.txt    call Define_colors(0)
+		au  BufRead,BufNewFile *.txt    setfiletype txtfmt
+	augroup END
+<
+-------------------------------
+Explanation of the autocommands
+-------------------------------
+All assignments to the buf-local txtfmtColor{} array occur within the
+Define_colors function (shown below). A call to Define_colors has been placed
+in a BufRead,BufNewFile autocommand to ensure that colors can be set
+appropriately even when :colorscheme has never been called. The call from
+within the ColorScheme autocommand ensures that the colors are recomputed
+whenever the colorscheme is changed. >
+Note: It is not necessary that the ColorScheme autocommand be placed within
+the filetypedetect group.
+>
+	" IN A FILE SOURCED AT STARTUP (E.G., VIMRC)
+	" Configure colors in response to colorscheme change or Txtfmt buffer load
+	" Note: 'refresh' input will be true if and only if the function is
+	" called in response to colorscheme change.
+	fu! Define_colors(refresh)
+		if !exists('g:colors_name') || g:colors_name == 'default'
+			" Use defaults
+			let b:txtfmtColor{1} = '^\\%(k\\|bla\\%[ck]\\)$,c:Black,g:#000000'
+			let b:txtfmtColor{2} = '^b\\%[lue]$,c:DarkBlue,g:#0000FF'
+		elseif g:colors_name == 'blue' || g:colors_name == 'darkblue'
+			" Replace black with orange
+			let b:txtfmtColor{1} = '^o\\%[range]$,c:Yellow,g:#FF8040'
+			" Replace blue with brown
+			let b:txtfmtColor{2} = '^b\\%[rown]$,c:Brown,g:#804000'
+		else
+			" Replace black with orange, but leave blue at Txtfmt
+			" default
+			let b:txtfmtColor{1} = '^o\\%[range]$,c:Yellow,g:#FF8040'
+			let b:txtfmtColor{2} = '^b\\%[lue]$,c:DarkBlue,g:#0000FF'
+		endif
+		" We shouldn't get here if this isn't a Txtfmt buffer, but check to be
+		" safe since :Refresh is defined only for Txtfmt buffers
+		if a:refresh && b:current_syntax =~ '\<txtfmt\>'
+			" Important: We must reload the Txtfmt plugin because
+			" :colorscheme clears the old highlight groups
+			:Refresh
+		endif
+	endfu
+
+------------------------------
+Explanation of Define_colors()
+------------------------------
+In the example, I use g:colors_name (which, if it exists, holds the name of
+the currently active colorscheme) to decide which elements of the buf-local
+txtfmtColor{} array need to be overridden, and what color values should be
+used. It would also be possible to take 'background' into account, but be
+aware that not all colorschemes set this option. You can make the color
+configuration logic as simple or as complex as you like.
+Note: Because Txtfmt processes each element of the txtfmtColor{} array as a
+separate entity, it is necessary to set only the elements you wish to change
+from the Txtfmt defaults. Of course, if one of the if/else blocks sets a
+particular element, the others should set it as well, even if they do not need
+to override the default. Alternatively, a block that wishes to use the default
+could simply unlet! the corresponding element to ensure that the Txtfmt
+default is used.
+
+It is important to note that simply changing the buf-local version of
+txtfmtColor{} has no effect on an existing Txtfmt buffer; the Txtfmt plugin
+must be reloaded (i.e., "refreshed") before the color changes can take effect.
+When Define_colors() is called in response to a BufRead or BufNewFile event,
+the required reload happens automatically because of the subsequent
+"setfiletype txtfmt". In the case of the ColorScheme event, however, there is
+no such automatic reload. To ensure that the user will not need to do anything
+special to see the results of changing the colorscheme, I have added the
+conditional :Refresh to Define_colors(). The test of the boolean "refresh"
+argument ensures that the |txtfmt-:Refresh| command will be invoked only when
+the colorscheme is changing and we are within a Txtfmt buffer.
+
+Achieving colorscheme independence		*txtfmt-hl-color-names*
+
+Although the default txtfmtColor{} array uses hard-coded color names, this is
+by no means required. An intriguing possibility, which I have implemented on
+my own system, is to use color name patterns corresponding to the default Vim
+highlighting groups. Under this strategy, instead of naming a particular color
+"red", you might instead name it "error". Within the Define_colors() routine
+outlined above, you would define the error color according to the
+colorscheme-specific guibg/ctermbg definitions used for the Error highlight
+group. The advantage of this strategy is that it guarantees that your
+Txtfmt files will look good in any colorscheme (assuming they looked good in
+the original colorscheme ;-). To facilitate creation of the required color
+definitions, I created a Vim script that parses the colorscheme files in
+$VIMRUNTIME/colors and extracts the desired definitions for each colorscheme
+automatically. I can send a copy of this script, along with instructions for
+using it, to anyone who is interested...
+
+COLOR TERMINAL PITFALLS				*txtfmt-cterm-pitfalls*
+
+Cterm default background 		*txtfmt-cterm-default-background*
+
+When you define a highlighting region for a cterm without specifying the
+background color with ctermbg, Vim assumes the "default" background color is
+desired. The "default" background for a cterm is the default background color
+of the terminal itself, unless ctermbg has been overridden in a highlight
+statement for the "Normal" group: e.g., >
+	:hi Normal ctermbg=15
+<
+In such cases, the Normal background color replaces the cterm's default
+background for all subsequent highlighting. Certain colorschemes (e.g., blue,
+darkblue and evening) explicitly set the Normal background color in a cterm.
+Others leave it at the default for the color terminal. Ordinarily, Txtfmt can
+handle either case, but the following paragraph describes an issue I have
+encountered with one particular terminal, seen only when 'term' is set
+incorrectly...
+
+Incorrect 'term' setting for gnome-terminal	*txtfmt-cterm-term-issue*
+						*txtfmt-gnome-terminal-issue*
+The default version of gnome-terminal leaves the TERM environment variable
+set to xterm, although the proper setting appears to be gnome-256color.
+Unfortunately, the package containing the gnome-256color terminfo description
+is not installed by default on some gnome systems. Strangely, even when the
+gnome-256color terminfo description is installed, gnome-terminal won't set
+TERM to use it. When Vim is started in a gnome-terminal for which TERM=xterm,
+the 't_Co' termcap entry is incorrectly set to 8 instead of 256. One of the
+effects of this is that outputting certain foreground colors to the cterm will
+cause the default background color to revert from the value defined for the
+Normal group to the terminal's default. The problem appears to be limited to
+the "dark" foreground colors (0-7), which are precisely the colors used in
+Txtfmt's default color map. Thus, this issue has the potential to cause
+serious display problems for Txtfmt.
+
+				*txtfmt-gnome-terminal-issue-workaround*
+There are several ways to resolve this issue. The simplest is to set t_Co=256:
+e.g., >
+	:set t_Co=256
+<
+The set of t_Co could go in your vimrc, or anyplace that causes it to be
+executed before Txtfmt is loaded. A better solution, in my opinion, is to
+ensure that Vim's 'term' option is set to its proper value (i.e.,
+gnome-256color), but this is possible only if the corresponding terminfo
+description is installed on your system. If the following command... >
+	:set term=gnome-256color
+<
+...generates an error in Vim, you must first install the terminfo description.
+On Fedora Linux, the package is named "ncurses-term". (It may have a different
+name in other distributions.) Once you have installed the terminfo package,
+you should ensure that Vim's 'term' option is set properly. There are at least
+2 possible approaches:
+
+1. Set TERM environment variable
+   Put the following in one of your shell startup scripts (e.g., .bashrc): >
+   export TERM=gnome-256color
+<
+2. Set 'term' option in your vimrc
+   e.g., >
+   set term=gnome-256color
+<
+
+When "hidden" tokens are not hidden		*txtfmt-cterm-ignore-issue*
+
+Originally, Txtfmt relied exclusively upon the "Ignore" preferred highlighting
+group to hide the special formatting tokens. The Ignore group was added in Vim
+5.2 to permit markup characters such as the `*' and `|' ("stars and bars")
+surrounding tags in a Vim help file to be hidden. It has since come to my
+attention, however, that roughly half of the colorschemes distributed with Vim
+do not hide text in the Ignore group. In some cases, the contrast between
+foreground and background color is minimized; in other cases, there appears to
+have been no attempt at all to obscure the text.
+Note: It is easy to see how your particular colorscheme treats text in the
+Ignore group: simply execute... >
+	:hi Ignore
+If the Ignore group is defined properly, the "xxx" test pattern should be
+invisible.
+
+In some cases, the Txtfmt plugin can take the Ignore group completely out of
+the equation, by defining a Txtfmt-specific concealment region that sets the
+foreground color equal to the background color. This strategy always works for
+the GUI. It works in a cterm if and only if the terminal background color is
+known to Vim; i.e., it works when the Normal group's background color has been
+set (as described in section |txtfmt-cterm-default-background|). If the Normal
+group background is not set, any attempt to use "bg" as a color name in a
+highlight command will generate an error: e.g., >
+	:hi Tf_conceal ctermfg=bg  " ERROR if Normal ctermbg not set
+<
+If you are seeing the formatting tokens in your Txtfmt buffer, the plugin was
+unable to set ctermfg=bg. In that case, you have several options, as described
+below...
+
+					*txtfmt-cterm-ignore-workaround*
+1. Redefine the Ignore group:
+   First of all, determine the foreground color that most closely matches the
+   default background color of your terminal. You can do this by
+   experimentation, or by looking at the Ignore group definition of a
+   colorscheme that does a better job of hiding Ignore'd text. (The default
+   colorscheme would be a good one to check first.) Once you have determined
+   the proper color, put it into a :highlight command as follows: >
+	:hi Ignore ctermfg=<bg_color>
+<
+   Of course, you need to ensure that the :highlight command is executed after
+   the colorscheme has been sourced. There are several ways this can be
+   accomplished... If your colorscheme is sourced in your vimrc, and you never
+   change it after that, you could put the :highlight command in your vimrc,
+   just after the :colorscheme command. If, however, you sometimes change
+   colorschemes after starting Vim, you should avoid this method. Instead, you
+   might try one of the following:
+ 
+	1. Put the :highlight command into an autocommand defined for the
+	   ColorScheme event: e.g., >
+	   :au ColorScheme * hi Ignore ctermfg=<bg_color>
+<
+	   The autocommand itself could be defined in your vimrc. Note that
+	   the ColorScheme event is triggered only after the colorscheme has
+	   been loaded. (See |ColorScheme| in the Vim help for more
+	   information.)
+
+	2. Create an override of your colorscheme file containing the
+	   following two lines: >
+	   :source <your_colorscheme_file>
+	   :hi Ignore ctermfg=<bg_color>
+<
+	   The file you create should be placed in a folder that appears
+	   earlier in your 'runtimepath' than the folder containing the
+	   colorscheme you are overriding.
+
+2. Define a background color for the Normal group:
+   This method ensures that Vim knows the terminal background color, which
+   enables Txtfmt to define its own highlight group with ctermfg=bg. You can
+   set the default background color like so... >
+   :hi Normal ctermbg=<desired_color>
+<
+   Note: Be sure to put the :highlight command in a place where it will be
+   executed before Txtfmt is loaded. Any of the methods described above for
+   redefining the Ignore group could be used here as well.
+   Note: The Normal background color is used for all buffers, not just the
+   Txtfmt ones, so you will probably want to choose a color that is close to
+   your default background color.
+   Note: If you are using a gnome-terminal, read section
+   |txtfmt-gnome-terminal-issue| before using this method.
+
+3. Choose a colorscheme that does a better job of hiding the text in the
+   Ignore group.
+   Note: Because it is not always possible to specify a foreground text color
+   that _exactly_ matches a color terminal's default background, only
+   colorschemes that explicitly set the Normal background color can guarantee
+   that text in the Ignore group will be hidden. However, even when the
+   Normal group's background color is not defined, it should usually be
+   possible to find a foreground color that comes reasonably close to matching
+   the default background.
+
+
+CUSTOMIZING MAPPINGS				*txtfmt-map-config*
+
+The Txtfmt filetype plugin defines a number of mappings for various modes. By
+default, Txtfmt picks consistent and intuitive key sequences for the lhs of
+these mappings. It may be, however, that you already use one or more of those
+key sequences for an existing map in the same mode. Even if there is no direct
+conflict, it is possible that Txtfmt's default mapping would create an
+ambiguity with respect to an existing mapping. (For details, see
+|map-ambiguous| in the Vim help.) Finally, it may be that you simply do not
+like the key sequences chosen by the plugin author. Whatever the case, Txtfmt
+provides several ways to customize the map lhs. You can even specify that a
+conflicting or ambiguous map should not be defined at all. All of these
+customization mechanisms are discussed below...
+
+All but one of the maps defined by the Txtfmt filetype plugin begin with
+<LocalLeader>; hence, you may achieve a small amount of customization by
+setting the special Vim global variable |maplocalleader| to a non-default
+value.
+
+Example: >
+	let g:maplocalleader = '_'
+
+Now, when a Txtfmt map such as <LocalLeader>I is defined, the actual {lhs}
+will be _I instead of the default \I. Of course, if the conflicting map was
+also defined with <LocalLeader>, then this approach will not resolve the
+conflict.
+
+A more flexible mechanism for customizing maps involves the <Plug> construct.
+If you are unfamiliar with this construct, you may wish to see |using-<Plug>|
+in the Vim documentation. All of the mappings provided by the Txtfmt filetype
+plugin are defined in a 2 stage process, which permits the default {lhs} to be
+completely redefined. To the 2 "stages" in the map definition process
+correspond 2 map "levels", henceforth referred to as the 1st and 2nd levels.
+
+The 2nd level map is the one whose {rhs} actually implements the Txtfmt
+functionality. The {lhs} of the 2nd level map is a key sequence beginning with
+<Plug>, which can never be produced by the keyboard alone. Thus, if the Txtfmt
+map functionality is to be usable, there must be a 1st level mapping capable
+of producing this untypable key sequence. If Txtfmt sees that the user has
+already defined such a map, it will define only the 2nd level map, effectively
+allowing the user-defined 1st level map to override the default map sequence.
+If, on the other hand, the user has not defined a 1st level map for a
+particular map functionality, Txtfmt will define a 1st level map with the
+default key sequence listed in this help document.
+
+Some examples using one of the "Jump to token" mappings will be used to
+illustrate the concepts presented above...
+
+From the section defining the insert token maps (|txtfmt-ins-tok-map-list|),
+we see the following map definition:
+
+    <LocalLeader>i     <Plug>TxtfmtInsertTok_i
+
+The <LocalLeader>i represents the default 1st level map {lhs}, while
+<Plug>TxtfmtInsertTok_i is the 2nd level map {lhs}. The following 4 examples
+show the 1st level map that results for 4 distinct customization scenarios.
+
+	Scenario: Neither maplocalleader nor 1st level map redefined
+	Result: \i  ==> insert token functionality
+
+	Scenario: maplocalleader redefined as follows: >
+	let maplocalleader = '_'
+<	Result: _i  ==> insert token functionality
+
+	Scenario: 1st level map redefined as follows in user's vimrc (or
+	something sourced prior to Txtfmt load): >
+	nmap _it <Plug>TxtfmtInsertTok_i
+<	Result: _it ==> insert token functionality
+	                (\i map not created)
+
+	Scenario: Both maplocalleader and 1st level map redefined: >
+	let maplocalleader = '_'
+	nmap <LocalLeader>it <Plug>TxtfmtInsertTok_i
+<	Result: _it ==> insert token functionality
+	                (\i map not created)
+
+
+Handling map conflicts and ambiguities		*txtfmt-map-conflict*
+
+The mechanisms described above permit the Txtfmt user to eliminate map
+conflicts and ambiguities once they become known. Of course, when you first
+begin using the Txtfmt plugin, you will probably not be aware of the
+conflicts. By default, Txtfmt will overwrite any existing mappings with its
+own 1st level maps; moreover, to ensure that you have the opportunity to
+resolve the conflict, Txtfmt gives one warning per Vim session for each
+conflict or ambiguity it detects. The default behavior just described may be
+tailored with global option |txtfmtMapwarn|. With this option, you can specify
+any or all of the following:
+
+	-whether echomsg or echoerr is used for warnings
+	-whether the same map conflict/ambiguity will produce a warning every
+	 time the plugin is sourced, or only once per Vim session
+	-whether a Txtfmt map will be created when a conflicting/ambiguous map
+	 exists
+
+The |txtfmtMapwarn| option may be set to a string of the following character
+flags: "mMeEoOcC". The flags may appear in any combination and in any order.
+Lowercase flags affect the handling of map ambiguities, while uppercase flags
+pertain to map conflicts. The meaning of the flags is as follows:
+
+	m	Use :echomsg to warn about map ambiguities
+	M	Use :echomsg to warn about map conflicts
+	e	Use :echoerr to warn about map ambiguities
+	E	Use :echoerr to warn about map conflicts
+	o	Warn of a particular map ambiguity only once per Vim session 
+	O	Warn of a particular map conflict only once per Vim session 
+	c	Create the Txtfmt map in case of map ambiguity
+	C	Create the Txtfmt map in case of map conflict
+
+The "once-only" flag: The intent of the o and O flags is to prevent the user
+from being bombarded with the same conflict warning every time he loads a
+Txtfmt buffer. To determine whether a map conflict or ambiguity is identical
+to one for which the user has already been warned, Txtfmt employs the concept
+of a "conflict instance". A conflict instance is defined by a unique
+combination of the following:
+
+	-map mode
+	-{lhs} of the Txtfmt map
+	-{rhs} of the existing map
+
+Note: If mutually exclusive flags are used, Txtfmt will give precedence to the
+flag appearing later in the string. If a flag is used without another flag
+required to give it meaning, the useless flag is simply ignored. Txtfmt will
+not generate an error unless invalid flags are used.
+
+==============================================================================
+6. User interface				*txtfmt-user-interface*
+
+INSERTING TOKENS				*txtfmt-ins-tok*
+
+Whenever you wish to alter the formatting or coloring of text in a Txtfmt
+buffer, you must insert the appropriate Txtfmt token or tokens. A single
+format token is sufficient to determine any combination of format attributes,
+just as a single color token is sufficient to determine any of the 8 possible
+foreground or background colors. Thus, as a general rule, a Txtfmt buffer will
+not contain sequences of more than 3 consecutive Txtfmt tokens. There are,
+however, times when it makes sense to insert more than 3 Txtfmt tokens at
+once; when you know, for example, that the region you are creating will be
+terminated by an explicit "no format" and/or "no color" token, you may wish to
+insert both the region opening and closing tokens with a single insert
+mapping, which leaves the cursor positioned just after the opening tokens
+where the region text will go. Details on the various mappings are provided
+below in the section on |txtfmt-ins-tok-map-list|. Before you attempt to use
+those mappings, however, you should be familiar with the concept of
+format/color specifications. Each of the token insertion mappings prompts you
+to enter a list of such specifications, which it then translates into a
+sequence of tokens to be inserted into the buffer. The following sections
+describe these specifications and the lists comprising them in detail.
+
+Fmt spec					*txtfmt-fmt-spec*
+
+A format specification specifies a unique combination of valid format
+attributes. The set of "valid" format attributes is determined by the
+|txtfmt-'tokrange'| option (in particular, by the tokrange suffix) as well as
+by the version of Vim you are using.
+
+The format of a single format specification is given as follows:
+
+    f{fmts}
+
+where {fmts} is a string consisting of either a single dash ('-') indicating
+"no format attributes", or a sequence of letters from the set "ubisrc", in
+which each letter represents a format attribute that should be applied to the
+region. The letter/attribute correspondences are shown in the table below.
+Also shown are the |txtfmt-'tokrange'| suffix and version of Vim required to
+enable the format attribute.
+
+    ====================================================
+    | ltr | attribute         |  tokrange  | v:version |
+    |     |                   |   suffix   |           |
+    ====================================================
+    |  u  | underline         |   S or X   |    any    |
+    |  b  | bold              |   S or X   |    any    |
+    |  i  | italic            |   S or X   |    any    |
+    |  s  | standout          |     L      |    any    |
+    |  r  | reverse (inverse) |     L      |    any    |
+    |  c  | undercurl         |     L      |   >= 700  |
+    ====================================================
+
+    Note: {fmts} may contain any combination of valid format specification
+    letters in any order.
+
+Clr spec					*txtfmt-clr-spec*
+
+A color specification specifies a single color from among up to 8
+possibilities in the active color definition.
+
+The format of a single color specification is given as follows:
+
+    {typ}{clr}
+
+{typ} is either
+	'c' => foreground color
+	'k' => background color
+{clr} is either a single dash ('-') indicating "no color" (i.e., default
+color), or a string matching the {namepat} corresponding to one of the 8
+possible colors. As discussed in the section |txtfmt-color-config|, {namepat}
+is simply a Vim regular expression used to recognize a (possibly abbreviated)
+color name. The default color definitions use Vim's \%[] contruct with
+intuitive color names (e.g.  "red", "green", "blue") so that you can usually
+specify a color by the first letter of its name.
+
+Example: >
+	{namepat}     valid {clr} values
+	===================================
+	b\%[lue]$     "b" "bl" "blu" "blue"
+	r\%[ed]$      "r" "re" "red"
+
+Of course, if you override the default color definition array, you are free to
+define whatever colors and corresponding {namepat}'s you like. See
+|txtfmt-color-config| for details.
+
+
+Fmt/clr spec list				*txtfmt-fmt-clr-spec-list*
+
+Since most mappings and functions for working with fmt/clr tokens permit
+multiple tokens to be inserted simultaneously, Txtfmt permits the format/color
+specifications described in the preceding two sections to be concatenated into
+comma or dot-separated lists. The resulting "format/color specification lists"
+are the topic of this section.
+
+Format/color specification lists may contain any number of fmt-spec and
+clr-spec "atoms", freely intermixed and in any order. Internally, Txtfmt will
+translate the list of fmt/clr atoms into a sequence of character codes
+representing the corresponding fmt/clr tokens. By default, Txtfmt's token
+insertion mappings leave the cursor after the final token inserted; you can
+alter this behavior, however, by replacing one of the commas separating the
+individual fmt/clr specs with a dot ('.') to indicate the desired cursor
+position.
+Note: Although commas are used only to separate items in the list, a dot may
+be placed at the beginning of the list to indicate that the cursor should end
+up before any of the inserted tokens.
+
+Here are a few example fmt/clr spec lists:
+	Note: The following examples assume the default color definitions
+        listed in |txtfmt-color-defaults|.
+
+	kb
+	Result: Blue background region is begun (but not terminated). Cursor
+	is positioned after the inserted token.
+
+	fu,cr
+	Result: Red underline region is begun (but not terminated). Cursor is
+	positioned after the inserted tokens.
+
+	fbi,cg,kr.k-,c-,f-	       
+	Result: Green bold,italic on red background region is begun (and
+	simultaneously terminated). Cursor is left just inside the region.
+
+	.f-,c-
+	Result: Inserts the "no format" and "no color" tokens, but leaves
+	cursor positioned within the combined fmt/clr region being terminated.
+
+	fubisrc
+	Result: Underline,bold,italic,standout,reverse,undercurl region is
+	begun. Cursor is positioned after the inserted token.
+
+Mapping overview				*txtfmt-ins-tok-maps*
+
+The Txtfmt filetype plugin provides a number of mappings that may be used to
+insert the special tokens used to delineate the Txtfmt format/color regions.
+All of the token insertion mappings prompt the user to enter a special comma
+or dot-separated list, known as a fmt/clr spec list, which completely
+describes the sequence of tokens that should be inserted. Details on the
+format of this list may be found in section |txtfmt-fmt-clr-spec-list|.
+
+There are actually 15 separate mappings that may be used to insert Txtfmt
+tokens: 1 may be used only in insert mode; the other 14 are used only in
+normal mode. The main reason there are so many normal mode mappings is that
+Vim provides many ways to go from normal mode to insert mode, each of which
+may be more suitable than the others in a given context. Suppose, for example,
+that you are in normal mode and you wish to insert the "no format" token at
+the end of the current line. You might consider jumping to the end of the line
+with $, then invoking a Txtfmt normal mode mapping to insert the token. If,
+for the sake of example, Txtfmt provided only one normal mode mapping, which
+inserted tokens before the cursor position, you would have a problem. The
+token would be inserted prior to the last character on the line, when in fact,
+it needed to go after the last character on the line. In this case, you could
+circumvent the difficulty by hitting A in normal mode (instead of $) and using
+the Txtfmt insert mode mapping to insert the desired token, but this would
+require separate operations for entering and exiting insert mode. What would
+be preferable here is a Txtfmt normal mode mapping that functions in a manner
+analogous to Vim's normal mode 'A' command for entering insert mode.
+
+Of course, we could construct other examples, which call for mappings that
+insert tokens at the beginning of a line (analogous to Vim's normal mode 'I'
+command), or mappings that replace the N characters under the cursor with the
+tokens inserted (analogous to Vim's normal mode 's' command), and so on... By
+the same token, there may be times when you wish to remain in insert mode
+after the tokens have been inserted, and times when you wish simply to insert
+the tokens and return to normal mode. The Txtfmt insert-token mappings listed
+below provide you with all of those capabilities and more.
+
+Although the number of normal mode mappings may appear large at first glance,
+their default key sequences are intuitive, once you understand that they all
+are constructed according to the following pattern:
+
+	<LocalLeader>[{end-in-normal}]{vim-enterinsert-char}
+
+where {vim-enterinsert-char} is one of Vim's single-letter normal mode
+commands for entering insert mode: >
+	i, I, a, A, o, O, s
+and the optional {end-in-normal} is the letter 'v', which is simply a flag
+indicating that you wish to return to normal mode after the insertion.
+
+There is only one insert mode mapping. Its default map sequence was selected
+because it is (in the author's opinion, at least) fairly easy to type, and not
+something you are otherwise likely to type in insert mode.
+
+All 15 of the insert-token mappings are listed below, with similar ones
+grouped together to avoid repetition. For each mapping, 2 forms are shown:
+	1. The default map sequence
+	2. The <Plug> form, used only for customization
+For details on customizing maps, refer to section |txtfmt-map-config|.
+
+Mapping list					*txtfmt-ins-tok-map-list*
+
+<LocalLeader>i	   <Plug>TxtfmtInsertTok_i	*\i* *txtfmt-ins-tok-i*
+<LocalLeader>I	   <Plug>TxtfmtInsertTok_I	*\I* *txtfmt-ins-tok-I*
+<LocalLeader>a	   <Plug>TxtfmtInsertTok_a	*\a* *txtfmt-ins-tok-a*
+<LocalLeader>A	   <Plug>TxtfmtInsertTok_A	*\A* *txtfmt-ins-tok-A*
+<LocalLeader>o	   <Plug>TxtfmtInsertTok_o	*\o* *txtfmt-ins-tok-o*
+<LocalLeader>O	   <Plug>TxtfmtInsertTok_O	*\O* *txtfmt-ins-tok-O*
+<LocalLeader>s	   <Plug>TxtfmtInsertTok_s	*\s* *txtfmt-ins-tok-s*
+
+Available in normal mode only. Insert a sequence of Txtfmt tokens in the
+current buffer and remain in insert mode. The various mappings differ only in
+how they enter insert mode. Conceptually, they all do the following:
+
+	-Prompt user to enter a |txtfmt-fmt-clr-spec-list| at the command line
+	-Translate the entered text into a Txtfmt token sequence
+	-Enter insert mode via the {vim-enterinsert-char} specified in the
+	 default map sequence.
+	-Insert the token sequence (with <C-R><C-R>=)
+	-Perform any cursor adjustment requested by the presence of a dot
+	 ('.') in the |txtfmt-fmt-clr-spec-list|.
+	-Remain in insert mode.
+
+<LocalLeader>vi    <Plug>TxtfmtInsertTok_vi	*\vi* *txtfmt-ins-tok-vi*
+<LocalLeader>vI    <Plug>TxtfmtInsertTok_vI	*\vI* *txtfmt-ins-tok-vI*
+<LocalLeader>va    <Plug>TxtfmtInsertTok_va	*\va* *txtfmt-ins-tok-va*
+<LocalLeader>vA    <Plug>TxtfmtInsertTok_vA	*\vA* *txtfmt-ins-tok-vA*
+<LocalLeader>vo    <Plug>TxtfmtInsertTok_vo	*\vo* *txtfmt-ins-tok-vo*
+<LocalLeader>vO    <Plug>TxtfmtInsertTok_vO	*\vO* *txtfmt-ins-tok-vO*
+<LocalLeader>vs    <Plug>TxtfmtInsertTok_vs	*\vs* *txtfmt-ins-tok-vs*
+
+Available in normal mode only. Insert a sequence of Txtfmt tokens in the
+current buffer and return to normal mode. The various mappings differ only in
+how they enter insert mode. Conceptually, they all do the following:
+
+	-Prompt user to enter a |txtfmt-fmt-clr-spec-list| at the command line
+	-Translate the entered text into a Txtfmt token sequence
+	-Enter insert mode via the {vim-enterinsert-char} specified in the
+	 default map sequence.
+	-Insert the token sequence (with <C-R><C-R>=)
+	-Perform any cursor adjustment requested by the presence of a dot
+	 ('.') in the |txtfmt-fmt-clr-spec-list|.
+	-Exit insert mode.
+
+						*<C-\><C-\>*
+<C-\><C-\>	<Plug>TxtfmtInsertTok_i		*txtfmt-ins-tok-CTRL-\_CTRL-\*
+
+Available in insert mode only. Insert a sequence of Txtfmt tokens in the
+current buffer and remain in insert mode. The mapping works like this:
+
+	-Prompt user to enter a |txtfmt-fmt-clr-spec-list| at the command line
+	-Translate the entered text into a Txtfmt token sequence
+	-Insert the token sequence (with <C-R><C-R>=)
+	-Perform any cursor adjustment requested by the presence of a dot
+	('.') in the |txtfmt-fmt-clr-spec-list|.
+	-Remain in insert mode.
+
+IMPORTANT NOTE: Txtfmt will generate an error if |txtfmt-fmt-clr-spec-list|
+specifies any colors that are inactive under the effective color masks. See
+|txtfmtFgcolormask| or |txtfmtBgcolormask| for details on configuring color
+masks.
+
+JUMPING TO TOKENS				*txtfmt-jump-to-tok*
+
+The Txtfmt syntax plugin conceals the special tokens delineating the
+format/color regions. Normally, you will see such tokens only in 3 cases:
+	1. when a region containing them is visually selected
+	2. when the token is serving no purpose in the buffer
+	   Rationale: When a default ("no format" or "no color") token,
+	   normally used to terminate a region, appears where there is no
+	   region to terminate, Txtfmt intentionally leaves the token visible
+	   so that you might notice and remove it.
+	3. when a fg or bg color token is disabled by |txtfmtFgcolormask| or
+	  |txtfmtBgcolormask|
+
+Although this behavior is generally what you want, it can make it difficult to
+locate tokens after you have inserted them. There are many reasons why you
+might wish to locate a concealed token: to remove it, to change it to a
+different token, to insert another token immediately before or after it,
+etc... To simplify the task of locating such tokens, Txtfmt provides various
+mappings for jumping to them. These "jump to token" commands are analogous to
+various Vim motion commands: e.g., [{, ]}, f, F, t, T, etc...
+
+There are exactly 48 such mappings, but their default map sequences are
+constructed according to a pattern, which renders memorization of the
+individual mappings unnecessary. (The desired mapping can be easily deduced
+according to the pattern.)
+
+	{direction}[{till-flag}][{target-modifier}]{target}
+
+The definitions of the fields in the pattern given above are as follows:
+	{direction}
+		[ (search backwards)
+		] (search forwards)
+	{till-flag}
+		Optional flag consisting of the letter 't'. If present,
+		indicates that the sought position is 1 character position
+		closer to the starting point of the jump than it would have
+		been without the {till-flag}. Behavior is analogous to that of
+		Vim's normal mode T operator; i.e., jump is "till" the target
+		location.
+	{target-modifier}
+		b (begin region tokens)
+		e (end region tokens)
+		Note: While there are a number of tokens that can begin a
+		format or color region, each of the 3 orthogonal region types
+		has only one "end region" token: the one specified by a dash
+		(`-') in the |txtfmt-fmt-spec| or |txtfmt-clr-spec|.
+	{target}
+		f (format tokens)
+		c (fg color tokens)
+		k (bg color tokens)
+		a (any format or fg/bg color token)
+
+	Examples: >
+		]f      Jump forward to next token that begins or ends a
+		        format region
+		]ef     Jump forward to next "end format region" token
+		[tbc    Jump backward "till" previous "begin fg color region"
+		        token
+
+
+All of the jump-to-token mappings are defined for normal, visual, and
+operator-pending modes, and all can take a count, which causes them to jump to
+the [count] token of the specified type in the specified direction. Whether
+the search for tokens wraps around the start or end of the buffer is
+determined by the 'wrapscan' option.
+
+SPECIAL NOTE ON VISUAL MODE
+    The visual-mode maps correctly extend the visual selection for linewise,
+    characterwise and blockwise selections.
+
+SPECIAL NOTE ON OPERATOR-PENDING MODE
+    By default, when used with an operator such as 'd', 'c' or 'y', a
+    jump-to-token map behaves in an "exclusive" manner; i.e., the character
+    landed upon is not deleted, changed or yanked. If you wish to make these
+    motions work more like the builtin 'f', 't', 'F' and 'T' commands, simply
+    hit 'v' between the operator and the jump-to-token map. (For details, see
+    |o_v| in the Vim help.)
+
+All 48 of the jump-to-token mappings are listed below. For each mapping, 2
+forms are shown:
+	1. The default map sequence
+	2. The <Plug> form, used only for customization
+For details on customizing maps, refer to section |txtfmt-map-config|.
+
+Mappings					*txtfmt-jump-to-tok-maps*
+
+[f	<Plug>TxtfmtBckToFmtTok			*[f*	*txtfmt-bck-to-fmt-tok*
+	Jump to [count] previous format begin/end region token
+]f	<Plug>TxtfmtFwdToFmtTok			*]f*	*txtfmt-fwd-to-fmt-tok*
+	Jump to [count] next format begin/end region token
+[c	<Plug>TxtfmtBckToClrTok			*[c*	*txtfmt-bck-to-clr-tok*
+	Jump to [count] previous fg color begin/end region token
+]c	<Plug>TxtfmtFwdToClrTok			*]c*	*txtfmt-fwd-to-clr-tok*
+	Jump to [count] next fg color begin/end region token
+[k	<Plug>TxtfmtBckToBgcTok			*[k*	*txtfmt-bck-to-bgc-tok*
+	Jump to [count] previous bg color begin/end region token
+]k	<Plug>TxtfmtFwdToBgcTok			*]k*	*txtfmt-fwd-to-bgc-tok*
+	Jump to [count] next bg color begin/end region token
+[a	<Plug>TxtfmtBckToAnyTok			*[a*	*txtfmt-bck-to-any-tok*
+	Jump to [count] previous format/color begin/end region token
+]a	<Plug>TxtfmtFwdToAnyTok			*]a*	*txtfmt-fwd-to-any-tok*
+	Jump to [count] next format/color begin/end region token
+
+[bf	<Plug>TxtfmtBckToFmtBegTok		*[bf*	*txtfmt-bck-to-fmt-beg-tok*
+	Jump to [count] previous format begin region token
+]bf	<Plug>TxtfmtFwdToFmtBegTok		*]bf*	*txtfmt-fwd-to-fmt-beg-tok*
+	Jump to [count] next format begin region token
+[bc	<Plug>TxtfmtBckToClrBegTok		*[bc*	*txtfmt-bck-to-clr-beg-tok*
+	Jump to [count] previous fg color begin region token
+]bc	<Plug>TxtfmtFwdToClrBegTok		*]bc*	*txtfmt-fwd-to-clr-beg-tok*
+	Jump to [count] next fg color begin region token
+[bk	<Plug>TxtfmtBckToBgcBegTok		*[bk*	*txtfmt-bck-to-bgc-beg-tok*
+	Jump to [count] previous bg color begin region token
+]bk	<Plug>TxtfmtFwdToBgcBegTok		*]bk*	*txtfmt-fwd-to-bgc-beg-tok*
+	Jump to [count] next bg color begin region token
+[ba	<Plug>TxtfmtBckToAnyBegTok		*[ba*	*txtfmt-bck-to-any-beg-tok*
+	Jump to [count] previous format/color begin region token
+]ba	<Plug>TxtfmtFwdToAnyBegTok		*]ba*	*txtfmt-fwd-to-any-beg-tok*
+	Jump to [count] next format/color begin region token
+
+[ef	<Plug>TxtfmtBckToFmtEndTok		*[ef*	*txtfmt-bck-to-fmt-end-tok*
+	Jump to [count] previous format end region token
+]ef	<Plug>TxtfmtFwdToFmtEndTok		*]ef*	*txtfmt-fwd-to-fmt-end-tok*
+	Jump to [count] next format end region token
+[ec	<Plug>TxtfmtBckToClrEndTok		*[ec*	*txtfmt-bck-to-clr-end-tok*
+	Jump to [count] previous fg color end region token
+]ec	<Plug>TxtfmtFwdToClrEndTok		*]ec*	*txtfmt-fwd-to-clr-end-tok*
+	Jump to [count] next fg color end region token
+[ek	<Plug>TxtfmtBckToBgcEndTok		*[ek*	*txtfmt-bck-to-bgc-end-tok*
+	Jump to [count] previous bg color end region token
+]ek	<Plug>TxtfmtFwdToBgcEndTok		*]ek*	*txtfmt-fwd-to-bgc-end-tok*
+	Jump to [count] next bg color end region token
+[ea	<Plug>TxtfmtBckToAnyEndTok		*[ea*	*txtfmt-bck-to-any-end-tok*
+	Jump to [count] previous format/color end region token
+]ea	<Plug>TxtfmtFwdToAnyEndTok		*]ea*	*txtfmt-fwd-to-any-end-tok*
+	Jump to [count] next format/color end region token
+
+[tf	<Plug>TxtfmtBckTillFmtTok		*[tf*	*txtfmt-bck-till-fmt-tok*
+	Jump "till" [count] previous format begin/end region token
+]tf	<Plug>TxtfmtFwdTillFmtTok		*]tf*	*txtfmt-fwd-till-fmt-tok*
+	Jump "till" [count] next format begin/end region token
+[tc	<Plug>TxtfmtBckTillClrTok		*[tc*	*txtfmt-bck-till-clr-tok*
+	Jump "till" [count] previous fg color begin/end region token
+]tc	<Plug>TxtfmtFwdTillClrTok		*]tc*	*txtfmt-fwd-till-clr-tok*
+	Jump "till" [count] next fg color begin/end region token
+[tk	<Plug>TxtfmtBckTillBgcTok		*[tk*	*txtfmt-bck-till-bgc-tok*
+	Jump "till" [count] previous bg color begin/end region token
+]tk	<Plug>TxtfmtFwdTillBgcTok		*]tk*	*txtfmt-fwd-till-bgc-tok*
+	Jump "till" [count] next bg color begin/end region token
+[ta	<Plug>TxtfmtBckTillAnyTok		*[ta*	*txtfmt-bck-till-any-tok*
+	Jump "till" [count] previous format/color begin/end region token
+]ta	<Plug>TxtfmtFwdTillAnyTok		*]ta*	*txtfmt-fwd-till-any-tok*
+	Jump "till" [count] next format/color begin/end region token
+
+[tbf	<Plug>TxtfmtBckTillFmtBegTok		*[tbf*	*txtfmt-bck-till-fmt-beg-tok*
+	Jump "till" [count] previous format begin region token
+]tbf	<Plug>TxtfmtFwdTillFmtBegTok		*]tbf*	*txtfmt-fwd-till-fmt-beg-tok*
+	Jump "till" [count] next format begin region token
+[tbc	<Plug>TxtfmtBckTillClrBegTok		*[tbc*	*txtfmt-bck-till-clr-beg-tok*
+	Jump "till" [count] previous fg color begin region token
+]tbc	<Plug>TxtfmtFwdTillClrBegTok		*]tbc*	*txtfmt-fwd-till-clr-beg-tok*
+	Jump "till" [count] next fg color begin region token
+[tbk	<Plug>TxtfmtBckTillBgcBegTok		*[tbk*	*txtfmt-bck-till-bgc-beg-tok*
+	Jump "till" [count] previous bg color begin region token
+]tbk	<Plug>TxtfmtFwdTillBgcBegTok		*]tbk*	*txtfmt-fwd-till-bgc-beg-tok*
+	Jump "till" [count] next bg color begin region token
+[tba	<Plug>TxtfmtBckTillAnyBegTok		*[tba*	*txtfmt-bck-till-any-beg-tok*
+	Jump "till" [count] previous format/color begin region token
+]tba	<Plug>TxtfmtFwdTillAnyBegTok		*]tba*	*txtfmt-fwd-till-any-beg-tok*
+	Jump "till" [count] next format/color begin region token
+
+[tef	<Plug>TxtfmtBckTillFmtEndTok		*[tef*	*txtfmt-bck-till-fmt-end-tok*
+	Jump "till" [count] previous format end region token
+]tef	<Plug>TxtfmtFwdTillFmtEndTok		*]tef*	*txtfmt-fwd-till-fmt-end-tok*
+	Jump "till" [count] next format end region token
+[tec	<Plug>TxtfmtBckTillClrEndTok		*[tec*	*txtfmt-bck-till-clr-end-tok*
+	Jump "till" [count] previous fg color end region token
+]tec	<Plug>TxtfmtFwdTillClrEndTok		*]tec*	*txtfmt-fwd-till-clr-end-tok*
+	Jump "till" [count] next fg color end region token
+[tek	<Plug>TxtfmtBckTillBgcEndTok		*[tek*	*txtfmt-bck-till-bgc-end-tok*
+	Jump "till" [count] previous bg color end region token
+]tek	<Plug>TxtfmtFwdTillBgcEndTok		*]tek*	*txtfmt-fwd-till-bgc-end-tok*
+	Jump "till" [count] next bg color end region token
+[tea	<Plug>TxtfmtBckTillAnyEndTok		*[tea*	*txtfmt-bck-till-any-end-tok*
+	Jump "till" [count] previous format/color end region token
+]tea	<Plug>TxtfmtFwdTillAnyEndTok		*]tea*	*txtfmt-fwd-till-any-end-tok*
+	Jump "till" [count] next format/color end region token
+
+
+BUILDING COMPLEX MAPPINGS FROM PRIMITIVES	*txtfmt-user-maps*
+
+The insert-token maps discussed in a preceding section permit the insertion of
+a single sequence of fmt/clr tokens at a fixed location relative to the cursor
+position. A common scenario, however, is one in which you wish to perform
+multiple insertions, possibly interspersed with cursor movements and other Vim
+commands. Suppose, for example, that you often find yourself highlighting an
+entire line in bold,italic, and then using :ce to center the text on the line.
+You could accomplish this using only Vim commands and insert-token maps as
+follows: >
+
+	Hit \vI and enter fmt spec "fbi" at the prompt
+	Hit \vA and enter fmt spec "f-" at the prompt
+	Execute :ce[nter] at the command-line
+
+While this approach works, it could become tedious if you do it often. A
+better approach would be to create a single mapping that executes the entire
+sequence of steps shown above. To facilitate creation of such maps, Txtfmt
+provides a mechanism known as "user-maps". User-map creation is requested
+through the "old-style" Vim array |txtfmtUsermap{}|. The first element of the
+array is txtfmtUsermap{1} and the last element is txtfmtUsermap{N}, where N is
+determined from option variable |txtfmtUsermaplimit|. It is not necessary to
+set every element between indices 1 and N. You may define as many or as few
+maps within that range as you like. Only the elements that have been set will
+cause a map to be created. Moreover, both |txtfmtUsermap{}| and
+|txtfmtUsermaplimit| may be set either globally or buffer-locally. As a
+general rule, the global elements define mappings that should be available in
+any type of file, whereas buffer-local elements would define more specialized
+maps: e.g. maps that are used only when using Txtfmt within C comments in
+buffers whose filetype is set to "c.txtfmt". For a more detailed look at
+possible usage scenarios involving buf-local assignment to |txtfmtUsermap{}|
+elements, see |txtfmt-buflocal-user-map|.
+
+txtfmtUsermap{} element format			*txtfmt-user-map-fmt*
+
+Each element of the |txtfmtUsermap{}| array is a string, which specifies a
+single normal or insert mode map to be created in the Txtfmt buffer. The
+format of the string is as follows:
+
+	"{map-cmd} {map-lhs} {map-rhs}"
+
+The descriptions of the fields in braces are as follows:
+
+    {map-cmd}
+	The map creation command used by Txtfmt to create the mapping.
+	Currently, the following commands are supported:
+	    imap, inoremap, nmap, nnoremap
+    {map-lhs}
+	Everything following {map-cmd} up to the first whitespace character
+	that is not preceded by a literal CTRL-V represents the {lhs} of the
+	mapping to be created.
+    {map-rhs}
+	The remainder of the string represents the {rhs} of the mapping to be
+	created. May contain special user-map expansion macros within <<...>>
+	requesting Txtfmt "insert-token" or "jump-to-token" functionality.
+	(See section |txtfmt-user-map-expansion| below.)
+
+MAP-LHS DETAILS
+Note that {map-lhs} should appear exactly as it would if the mapping were
+being created without the aid of Txtfmt; i.e., just as it would if you were
+creating the map with an :exe[cute] on the |txtfmtUsermap{}| string. This
+means, for example, that whitespace may be included in the {lhs} if it is
+escaped by a literal CTRL-V, and that the special key notation sequences (e.g.
+<Up>, <Down>, <Bslash>, etc...) may be used in place of the corresponding key
+codes. For more details, read the following sections in the Vim documentation:
+	|:map-special-keys|
+	|:map-special-chars|
+
+MAP-RHS DETAILS
+Vim's normal map processing rules apply to {map-rhs} as well; however, Txtfmt
+performs a special pre-processing step on {map-rhs} before it is used to
+define the map; in particular, it scans for and processes the special Txtfmt
+expansion macros (enclosed in <<...>>), which are the subject of the following
+section. To include a literal `<' in {map-rhs}, use the special <lt> notation
+discussed in the Vim help for commands and mappings and documented in the
+|key-notation| table.
+
+Example: >
+	<lt><lt>EOF
+	produces a mapping that looks like
+	<<EOF
+
+Note: If necessary, you may use the special symbol <rt> to get a literal `>'
+into {map-rhs}. The <rt> symbol is special only within a Txtfmt user-map
+expansion macro. (Although it is unlikely you would ever need to include a
+literal `>>' within an expansion macro, use of non-alphanumeric characters as
+part of a color name is currently not prohibited.)
+
+Example: >
+	<<n\i:cstrange<rt><rt>color<rt><rt>name>>
+	inserts token for fg color whose user-defined pattern matches
+	"strange>>color>>name"
+
+User-map expansion macros			*txtfmt-user-map-expansion*
+
+When Txtfmt encounters `<<' in {map-rhs}, it attempts to process a user-map
+expansion macro. To facilitate the addition of user-map macros in future
+versions of txtfmt, the following template has been devised:
+
+	<<{mode}{cmd}[{cmd-modifiers}][:{cmd-parameters}]>>
+
+The descriptions of the fields in braces are as follows:
+
+	{mode}			Single character representing the expected
+				mode at the instant the `<<' is encountered.
+				    i = insert
+				    n = normal
+				    o = operator-pending
+				    v = visual
+				Note: The mode flag may specify a mode
+				different from the mode indicated by {map-cmd}
+				(discussed in the previous section). Consider
+				that a single normal or insert mode mapping
+				may cause multiple modes to be entered and
+				exited as the rhs of the mapping is traversed.
+				This flag specifies the "instantaneous" mode.
+	[{count}]		Optional count to be applied to {cmd}.
+				Note: Not all expansion macros accept a count.
+				See command-specific documentation below to
+				determine which ones do.
+	{cmd}			A character or characters indicating the
+				Txtfmt functionality that is required.
+				Currently, all {cmd}'s are indicated by a
+				special character, which, in most cases,
+				corresponds to the first character of the
+				associated default map:
+				\		Insert-token
+				`[' or `]'	Jump-to-token
+	[{cmd-modifiers}]	Optional data modifying the behavior of the
+				{cmd} in some way. (See command-specific
+				documentation below.)
+	[{cmd-parameters}]	Permits data that would normally be entered at
+				a prompt at the time of map execution to be
+				specified in advance (i.e. at the time of map
+				creation).
+
+The specific forms of user-map macro are shown below, grouped according to the
+Txtfmt functionality involved.
+
+INSERT TOKEN MACROS
+    <<i\:{fmt-clr-spec-list}>>
+    <<n[{count}]\[{end-in-normal}]{vim-enterinsert-char}:{fmt-clr-spec-list}>>
+
+Both forms of "insert-token" macro contain a |fmt-clr-spec-list|, describing
+the sequence of fmt/clr tokens to be inserted and optionally specifying a
+cursor offset with a single dot somewhere in the otherwise comma-separated
+list. The first form is used when the instantaneous mode within {map-rhs} is
+"insert", whereas the more complicated second form is needed when the
+instantaneous mode is "normal". (See earlier description of {mode} flag.)
+
+There are 3 additional parameters that apply only to the normal mode form of
+the insert-token expansion sequence:
+
+    {count} is an optional value, specifying the count to be applied to the
+    enter-insert command. Specifying a count in this manner is analogous to
+    typing a count prior to executing the corresponding insert-token map in
+    normal mode.
+
+    {vim-enterinsert-char} is one of Vim's single-letter normal mode commands
+    for entering insert mode: >
+	i, I, a, A, o, O, s
+<   Proper choice of enter-insert command can simplify the mapping by
+    minimizing the number of movement commands required to position the cursor
+    prior to token insertion.
+
+    {end-in-normal} is the letter 'v', which, when present, serves as a flag
+    indicating that you wish to return to normal mode after the insertion. The
+    flag is provided as a convenience to minimize the number of "<Esc>"
+    characters that need to be embedded in {map-rhs}.
+
+Examples: >
+	<<i\:c->>	Starting in insert mode, insert "no fg color" token at
+			cursor location.
+	<<n\I:fbi>>	Starting in normal mode, insert "bold,italic" token at
+			beginning of line. Ends in insert mode.
+	<<n5\vs:fu>>	Starting in normal mode, 'substitute' the next 5
+			characters with a single "underline" token. Ends in
+			normal mode.
+
+JUMP TO TOKEN MACROS
+
+    <<{mode}[{count}]{default-jump-to-tok-map}>>
+
+A jump-to-token macro is created simply by prepending the {mode} flag and the
+optional {count} to the default mapping representing the desired jump, and
+enclosing the whole string within `<<' and `>>'. For a detailed discussion of
+the various forms of jump-to-token mappings and a listing of the default
+mappings, see |txtfmt-jump-to-tok| and |txtfmt-jump-to-tok-maps|.
+
+Examples: >
+	<<n]k>>		Jump forward to next bg color region token
+	<<n[ec>>	Jump backward to previous "end fg color region" token
+	<<n3]tbf>>	Jump forward "till" 3rd "begin format region" token
+
+User-map examples				*txtfmt-user-map-examples*
+
+The following concrete examples should help to clarify the use of the various
+forms of user-map expansion sequence. You should be able to copy any that
+appear useful to your .vimrc.
+
+
+	" Map CTRL-B in insert mode to start and terminate a 'bold' region,
+	" leaving the cursor positioned within the region, ready to type bold
+	" text.
+	" Hint: Similar maps might be created for underline and italic >
+	let g:txtfmtUsermap1 = 'inoremap <C-B> <<i\:fb.f->>'
+<
+	" Map CTRL-\f in insert mode to end current format region. >
+	let g:txtfmtUsermap2 = 'inoremap <C-\>f <<i\:f->>'
+<
+	" Map CTRL-\k in insert mode to end current bg color region. >
+	let g:txtfmtUsermap3 = 'inoremap <C-\>k <<i\:k->>'
+<
+	" Map \t in normal mode to embolden, underline and center (i.e.
+	" 'title-ize') the current line >
+	let g:txtfmtUsermap4 =
+	    \'nnoremap <Bslash>t <<n\vI:fbu>><<n\vA:f->>:ce<CR>'
+<
+	" Map \cf in normal mode to change all text within the current format
+	" region (without deleting the tokens that begin and end the region).
+	" Note: Since the default jump-to-token mappings are used in the rhs
+	" (rather than the special expansion macros), nmap must be used (rather
+	" than nnoremap).
+	" Note: The reason the ]f does not cause the format 'end region' token to
+	" be deleted is that the operator-pending jump-to-token maps work
+	" 'exclusive-ly' when there is no 'v' between operator and motion.
+	"     :help exclusive >
+	let g:txtfmtUsermap5 = 'nmap <Bslash>cf [tbfc]f'
+<
+	" Same as preceding map but for current fg color region.
+	" Note: This one demonstrates the use of the 'jump-to-token' expansion
+	" macros. >
+	let g:txtfmtUsermap6 = 'nnoremap <Bslash>cc <<n[tbc>>c<<o]c>>'
+<
+	" Map <LocalLeader>bw in normal mode to embolden the word under the
+	" cursor. (The extra complexity is needed to ensure that you can invoke
+	" with cursor anywhere on the word.) >
+	let g:txtfmtUsermap7 =
+	    \'nnoremap <LocalLeader>bw :if col(".")!=1 && '
+	    \.'getline(".")[col(".")-2]=~"\\w"<Bar>exe "norm!  b"<Bar>'
+	    \.'endif<CR><<n\vi:fb>>e<<n\va:f->>b'
+<
+	" Map \vf in normal mode to select all of the current format region
+	" visually.
+	" Note: Unlike the earlier one for changing the text in the current
+	" format region, this one doesn't constrain the backwards jump to a
+	" 'begin region' token; hence, it will also highlight the text between
+	" regions if the cursor lies between regions at the time the map is
+	" invoked. >
+	let g:txtfmtUsermap8 = 'nnoremap <LocalLeader>vf <<n[tf>>v<<v]tf>>'
+<
+	" Map <C-\>vf in insert mode to do the same in insert mode >
+	let g:txtfmtUsermap9 = 'inoremap <C-\>vf <<i[tf>><Esc>lv<<v]tf>>'
+<
+	" Map <LocalLeader><Space> in normal mode to jump forward to the 3rd
+	" 'begin format region' token. (Not overly practical, but demonstrates the
+	" use of whitespace in the lhs, as well as the use of the optional count
+	" with the jump-to-token expansion macros.) >
+	let g:txtfmtUsermap10 = 'nnoremap <LocalLeader><Space> <<n3]bf>>'
+<
+	" Map <LocalLeader>_ in normal mode to substitute the next 4 characters
+	" with a bold format token followed by a 'no format' token, leaving the
+	" cursor positioned between the two.
+	" (This map is not intended to be useful, but merely to demonstrate the
+	" specification of a count with an insert-token expansion macro.) >
+	let g:txtfmtUsermap11 = 'nnoremap <LocalLeader>_ <<n4\s:fb.f->>'
+<
+	" Map <LocalLeader>rb in normal mode to make the current line bold with a
+	" red background. >
+	let g:txtfmtUsermap12 =
+	    \'nnoremap <LocalLeader>rb <<n\vI:kr,fb>><<n\vA:f-,k->>'
+<
+
+Using buf-local sets				*txtfmt-buflocal-user-map*
+
+As mentioned in an earlier section, both txtfmtUsermap{} and
+txtfmtUsermaplimit may be set either globally or buf-locally. Here's how it
+works... When Txtfmt loads, it determines the effective value of
+txtfmtUsermaplimit according to the following logic: >
+	if exists('b:txtfmtUsermaplimit')
+		let txtfmtUsermaplimit = b:txtfmtUsermaplimit
+	elseif exists('g:txtfmtUsermaplimit')
+		let txtfmtUsermaplimit = g:txtfmtUsermaplimit
+	else
+		let txtfmtUsermaplimit = 25 "use default
+	endif
+
+Txtfmt then executes the following (pseudo-code) loop: >
+	for i = 1, txtfmtUsermaplimit
+		if exists('b:txtfmtUsermap{i}')
+			Define user-map b:txtfmtUsermap{i}
+		elseif exists('g:txtfmtUsermap{i}')
+			Define user-map g:txtfmtUsermap{i}
+		endif
+	endloop
+
+Several points to note:
+    -Leaving elements of txtfmtUsermap{} undefined is harmless.
+    -Setting b:txtfmtUsermaplimit effectively overrides any existing setting
+     of g:txtfmtUsermaplimit.
+    -Setting an element of b:txtfmtUsermap{} effectively hides the
+     corresponding element of g:txtfmtUsermap{}.
+
+You may be wondering why you would ever need to use the buffer-local versions
+of txtfmtUsermap{} and txtfmtUsermaplimit. If you edit only one type of file
+with Txtfmt, then the simplest approach would be to use only the global
+versions. It is possible, however, that while you have some user-maps that are
+generally useful, you also have some special-purpose user-maps, which are
+useful only in a certain type of file. Defining such user-maps globally would
+render the corresponding {map-lhs} unusable in files in which you would never
+need the special-purpose user-map. I will now describe a strategy that uses
+the buf-local user-map option variables to circumvent the problem just
+described...
+
+STEP #1
+=======
+In your .vimrc, define user-maps 1..N using g:txtfmtUsermap{} and set the
+global version of txtfmtUsermaplimit to N.
+Note: All of the maps defined in this manner should be general purpose maps,
+which you might need in any Txtfmt buffer.
+
+Example: >
+	let g:txtfmtUsermap1 = '<generally useful map #1>'
+	let g:txtfmtUsermap2 = '<generally useful map #2>'
+	.
+	.
+	let g:txtfmtUsermapN = '<generally useful map #N>'
+	let g:txtfmtUsermaplimit = N
+
+STEP #2
+=======
+Create global functions that define special-purpose user maps N+1..M using the
+buffer-local versions of txtfmtUsermap{} and set the buffer-local version of
+txtfmtUsermaplimit to N+M.
+Note: Since these functions do not overwrite previously set elements of the
+g:txtfmtUsermap{}, the general-purpose user-maps will be left intact.
+
+Example: >
+	" This function defines special-purpose Txtfmt user-maps, useful only
+	" for *.abc files.
+	fu! Define_txtfmt_abc_usermaps()
+		let N = g:txtfmtUsermaplimit
+		let b:txtfmtUsermap{N+1} = '<special-purpose map #1>'
+		let b:txtfmtUsermap{N+2} = '<special-purpose map #2>'
+		.
+		.
+		let b:txtfmtUsermap{N+M} = '<special-purpose map #M>'
+		" Ensure that both the general-purpose and special-purpose
+		" user-maps are defined.
+		let b:txtfmtUsermaplimit = N+M
+	endfu
+
+STEP #3
+=======
+Ensure that each special-purpose map function is called from an autocommand
+specific to the filetype that will need the user-maps it defines.
+
+Note: It is necessary to define these autocommands prior to the ones that set
+filetype to txtfmt, so that the changes to txtfmtUsermap{} occur before Txtfmt
+is loaded. An easy way to ensure the proper sequence is to place the
+autocommands that call the map definition functions within the same
+autocommand group as the setfiletype autocommand (see example below).
+
+Example: >
+	" Inside ~/.vim/filetype.vim
+	augroup filetypedetect
+	    au! BufRead,BufNewFile *.abc    call Define_txtfmt_abc_usermaps()
+	    au! BufRead,BufNewFile *.xyz    call Define_txtfmt_xyz_usermaps()
+	    .
+	    .
+	    " Set up detection for Txtfmt files
+	    au! BufRead,BufNewFile *.abc    setfiletype txtfmt
+	    au! BufRead,BufNewFile *.xyz    setfiletype txtfmt
+	    au! BufRead,BufNewFile *.txt    setfiletype txtfmt
+	augroup END
+
+It should be noted that the strategy outlined above is simply one of many
+possibilities. A slight variation would be to replace the general-purpose
+user-maps altogether with special-purpose ones for one or more filetypes.
+Suppose, for example, that we knew we would use only special-purpose maps when
+editing a '*.abc' file. In that case, we would simply omit all occurrences of
+"N+" in Define_txtfmt_abc_usermaps() to ensure that the general-purpose maps
+were overridden.
+
+CREATING TOKEN STRINGS				*txtfmt-create-tok-str*
+Txtfmt_GetTokStr({fmt-clr-spec-list})		*txtfmt-GetTokStr()*
+	This function accepts a |txtfmt-fmt-clr-spec-list| as input and
+	returns the corresponding sequence of Txtfmt tokens as a string.
+	Note: May be called only from a Txtfmt buffer.
+
+QUERYING TOKEN TYPE				*txtfmt-query-tok-type*
+
+In most cases, the role played by a Txtfmt token will be evident from the
+highlighting of the text that follows it. There are at least two scenarios,
+however, in which the role played by a particular format or color token may
+not be evident: 1) there is no text following the token; 2) adjacent format
+and color tokens make it difficult to tell which is which, since the
+formatting of the subsequent text does not depend upon the order of the
+tokens. Although you can always look up the character code (obtained from
+Vim's ga command) in the output of the |txtfmt-:ShowTokenMap| command, this
+section presents some more convenient methods of determining a token's type...
+
+Token-descriptors 				*txtfmt-tok-descriptor*
+
+A {token-descriptor} is returned or displayed by all of the mappings, commands
+and functions discussed in this section. A {token-descriptor} is simply a
+string providing information about a particular character or token in a Txtfmt
+buffer. Its format depends upon how the character is used in the buffer. The
+possibilities are described below...
+
+    format token
+	A |txtfmt-fmt-spec| in fiducial form (e.g. "fubi")
+    color token
+	A string of the form {type}{colornum}[ (inactive)], where {type}
+	indicates the type of color token ('c' => fg, 'k' => bg), {colornum}
+	is a value between 1 and 8 indicating the color's index, and the
+	optional " (inactive)" label, if present, indicates that the color is
+	disabled by the current color mask. (For details on color masks, see
+	|txtfmtFgcolormask| or |txtfmtBgcolormask|.)
+    non-Txtfmt char
+	A character code value in decimal format (e.g. 'a' => 97)
+    invalid char position
+	"NUL" (just like Vim's ga command)
+
+						*\ga* 	*txtfmt-get-tok-info*
+<LocalLeader>ga    <Plug>TxtfmtGetTokInfo
+	This mapping echoes the {token-descriptor} (discussed above) of the
+	character under the cursor. Analogous to Vim's builtin ga command, it
+	provides the most convenient way to obtain information about the token
+	under the cursor. The primary difference between it and the builtin
+	version is that the Txtfmt version is aware of the special role played
+	by Txtfmt formatting tokens.
+	
+	Note: The <Plug> form of the mapping may be used for customization.
+	For details on customizing maps, refer to section |txtfmt-map-config|.
+
+						*txtfmt-:GetTokInfo*
+:GetTokInfo [ {line} {col} ]
+	This buffer-local command echoes the {token-descriptor} corresponding
+	to the character/token at the requested {line} and {col} in the
+	current buffer. If {line} and {col} are not supplied, the cursor
+	location is assumed; i.e., calling :GetTokInfo without args is
+	equivalent to executing the \ga mapping.
+	Note: If either {line} or {col} is specified, both must be specified.
+	Note: {col} is a 1-based byte index, such as would be returned by
+	Vim's col() function. Note that this index may differ from both the
+	virtual column index and the character index.
+
+						*txtfmt-GetTokInfo()*
+Txtfmt_GetTokInfo([{line}, {char}])
+	!!!!!!!!!!!!!!!!!!
+	<<< DEPRECATED >>>
+	!!!!!!!!!!!!!!!!!!
+
+	IMPORTANT NOTE: I have marked this function as deprecated because both
+	the mapping and command (discussed above) provide similar
+	functionality and are easier to use; however, on the off-chance that
+	someone created a mapping to this function in one of the initial
+	versions of Txtfmt, I have not yet removed it. Note that the 2nd
+	argument to this function is a character index, which is fundamentally
+	different from the byte index provided to the :GetTokInfo command. As
+	a general rule, supplying byte indices, (which may be obtained with
+	Vim's col() function), is easier for the plugin user.
+
+	This function returns a string describing the token specified by
+	{line} and {char}. Note that both {line} and {char} are optional.
+	Either both or neither should be specified. If neither is specified,
+	the returned information will apply to the character under the cursor.
+	Otherwise, {char} is the 1-based index of a token on the line
+	specified by {line}.
+	Important Note: Because {char} is a character index, its value may
+	differ from the values returned by virtcol() (screen column index) and
+	col() (byte index).
+	The format of the return string depends upon the type of token
+	being queried, and is described above under |txtfmt-tok-descriptor|.
+
+
+VIEWING TOKEN MAP				*txtfmt-view-tok-map*
+						*txtfmt-:ShowTokenMap*
+:ShowTokenMap
+	This buffer-local command echoes a table displaying the current
+	format/color token map in an intuitive and informative manner.
+	Note: Since a Txtfmt token map is specific to a buffer, the command
+	may be used only from a Txtfmt buffer. The table columns are slightly
+	different for formats and colors. Here is some sample output text,
+	which corresponds to the default |txtfmt-'tokrange'| setting...
+
+	 === FG COLORS ===
+	 char-nr  description            clr-pattern          clr-def  
+	 0xE000   no color               -                    N.A.     
+	 0xE001   Color1                 ^\%(k\|bla\%[ck]\)$  #000000  
+	 0xE002   Color2                 ^b\%[lue]$           #0000FF  
+	 .
+	 .
+	 0xE008   Color8                 ^w\%[hite]$          #FFFFFF  
+	 === FORMAT ===
+	 char-nr  description            fmt-spec             
+	 0xE009   no format              -                    
+	 0xE00A   underline              u                    
+	 .
+	 .
+	 0xE010   underline,bold,italic  ibu                  
+	 === BG COLORS ===
+	 char-nr  description            clr-pattern          clr-def  
+	 0xE011   no color               -                    N.A.     
+	*0xE012   Color1 (inactive)      ^\%(k\|bla\%[ck]\)$  #000000  
+	 0xE013   Color2                 ^b\%[lue]$           #0000FF  
+	 .
+	 .
+	*0xE019   Color8 (inactive)      ^w\%[hite]$          #FFFFFF  
+
+	Several points to note:
+
+	The fmt-spec column gives the set of characters (in fiducial form)
+	that you would put after the 'f' in a |txtfmt-fmt-spec| to insert the
+	corresponding format token.
+	Note: The order of the characters in the set is not significant; i.e.,
+	"ubi" is equivalent to "ibu" and "bui".
+
+	The clr-pattern column represents the Vim regular expression that is
+	used to recognize a color name in a |txtfmt-clr-spec|.
+
+	The clr-def column under the "COLORS" section represents the actual
+	color definitions supplied to Vim via the :highlight command: e.g.
+		hi guifg={clr-def}
+		hi ctermfg={clr-def}
+	For GUI'S, the {clr-def} is either a symbolic color name (e.g.,
+	DarkBlue) or a literal RGB value (e.g., #FF0000). For cterm's, it
+	could be a color number or a symbolic color name.
+	Note: All of the values in the final 2 columns of the "FG/BG COLORS"
+	sections may be overridden by the user. For details, see
+	|txtfmt-color-config|.
+
+	The presence of an asterisk before the char-nr and the string
+	"(inactive)" following the color description indicates that a color
+	has been rendered inactive by the fg or bg colormask currently in
+	effect. For details, see |txtfmtFgcolormask|.
+
+	The char-nr column displays the character code value in the number
+	format used to set |txtfmt-'tokrange'|.
+
+
+TESTING CURRENT SETTINGS			*txtfmt-test-cur-settings*
+						*txtfmt-:MakeTestPage*
+:MakeTestPage [{modeline}]
+	This buffer-local command creates a scratch buffer containing a
+	Txtfmt "test page". The Txtfmt options used to create the test page
+	take into account any global option settings, as well as any
+	|txtfmt-modeline| settings specified on the command line as arguments
+	to the command. Example: >
+
+		:MakeTestPage tokrange=180S escape=bslash nested
+<
+	This creates a test page with the |txtfmt-'tokrange'| option set to
+	"180S", the |txtfmt-'escape'| option set to "bslash" and the
+	|txtfmt-'nested'| option turned on. All other Txtfmt options will have
+	the values set globally, or default values if the global option has
+	not been set.
+	Note: Since the test page is created in a new scratch buffer,
+	buffer-local option settings are not considered.
+
+	This command provides a quick and easy way to visualize the effects of
+	a particular combination of option values. Suppose, for example, that
+	the default 'tokrange' option setting yields Txtfmt tokens that cannot
+	be concealed by Vim, due to their use as control sequences by a
+	particular terminal. In this case, you might wish to run :MakeTestPage
+	iteratively, each time supplying a different value for 'tokrange',
+	until you find one that appears to work.
+
+	In addition to displaying all available formats and colors (both
+	foreground and background if applicable), the test page attempts to
+	show how things like token escaping and nesting of Txtfmt regions
+	within non-Txtfmt regions will (or won't) work, given the applicable
+	option settings. The text in the test page buffer is rather verbose,
+	and is intended as an aid to the new user. Although the primary
+	purpose of the test page is to provide information, the buffer created
+	is a fully valid Txtfmt buffer; hence, you are free to make changes in
+	it, using it as a scratchpad for testing the various Txtfmt mappings.
+
+	Note: If the text in the buffer does not appear to be highlighted at
+	all, it may be that you have not installed Txtfmt properly. (See
+	section |txtfmt-installation|.) Currently, the :MakeTestPage command
+	loads the Txtfmt plugin files by executing the following command in
+	the scratch buffer: >
+
+		:set filetype=txtfmt
+
+<	On a typical system (one on which filetype and syntax are both
+	enabled), this results in a :runtime sourcing of both
+	ftplugin/txtfmt.vim and syntax/txtfmt.vim. Of course, if you have
+	syntax and/or filetype plugins disabled, you will not be able to view
+	the test page as it was meant to be viewed...
+
+TRANSLATING TOKEN RANGE				*txtfmt-move-tok-range*
+						*txtfmt-:MoveStartTok*
+:MoveStartTok {new-starttok} [{old-vim-ver}]
+	NOTE: This command changes the current buffer!
+
+	This buffer-local command relocates the Txtfmt token range in use in
+	the current buffer from its current location to {new-starttok}. Its
+	purpose is to provide an easy way to change the |txtfmt-'tokrange'|
+	option value in a file that already contains a large number of Txtfmt
+	tokens.
+
+	The {new-starttok} argument specifies the character code to be used as
+	the start of the new token range. It should be a decimal or
+	hexadecimal value, which is valid for the 'encoding' in effect.
+	Note: You should NOT append the {formats} specifier to the numeric
+	starttok value; the current value will be used. (See
+	|txtfmt-'tokrange'| for a description of the {formats} specifier.)
+
+	The optional {old-vim-ver} argument allows you to specify the version
+	of Vim that was used to create the file being changed. This could be
+	important if the following conditions are met:
+		-"Long" formats are in effect.
+		-The version of Vim used to create the file differs from the
+		 current version.
+		-Only one of these versions supports the undercurl attribute.
+
+	Txtfmt will not attempt to move characters in the undercurl range if
+	the version of Vim used to create the file does not support undercurl.
+	Txtfmt will, on the other hand, move such tokens if the version used
+	to create the file supports undercurl, and undercurl has not been
+	explicitly disabled with the |txtfmt-'undercurl'| option. Thus, it is
+	possible to translate undercurl tokens even with a version of Vim that
+	doesn't support undercurl. In other words, Txtfmt uses the
+	{old-vim-ver} argument to determine the "shape" of the Txtfmt token
+	range that needs to be translated.
+	Note: If the optional {old-vim-ver} argument is omitted, Txtfmt
+	assumes the buffer was created with the current version of Vim.
+	
+	Since Txtfmt was first released after Vim began supporting undercurl
+	(in version 7.0), the {old-vim-ver} argument can generally be omitted,
+	and is included only for the sake of completeness. Note: The format of
+	{old-vim-ver} is identical to the format of v:version; i.e., Vim major
+	version number times 100 plus Vim minor version number. e.g.,
+	    Vim 7.1 ==> "701"
+
+	If the |txtfmt-'escape'| option is set to something other than "none",
+	:MoveStartTok takes the current escape method into account, and
+	attempts to do whatever makes sense with regard to escaped and
+	escaping characters. Consider that escaping is used to prevent special
+	interpretation of characters. When the Txtfmt token range moves, some
+	of the characters that would have been interpreted specially under the
+	old token range are not special at all under the new range, and hence,
+	no longer require escaping. Similarly, characters that were not
+	special at all under the old token range lie squarely within the new
+	token range, and hence require escaping to prevent their being
+	interpreted specially.
+
+	Here's how Txtfmt handles token translation when escaping is in
+	effect... Characters that are not currently special, but will be after
+	the move, are escaped. Tokens that are currently escaped are not
+	translated. Characters that are currently escaped to prevent special
+	interpretation, but will not need to be escaped after the translation,
+	have their escaping characters removed.
+
+	Note: In the context of the preceding paragraph, a character is
+	considered to be "special" if it could be interpreted as either a
+	Txtfmt token or an escaping character. For details on what constitutes
+	an escaping character, see |txtfmt-'escape'|.
+	
+	If there is a |txtfmt-modeline| containing a tokrange option setting
+	in the current buffer, it will be altered to reflect the new token
+	range. After the changes have been made to the buffer, the filetype
+	and syntax plugins are automatically reloaded to cause the new
+	tokrange setting to take effect. As a result, there should generally
+	be no visible change to the buffer as a result of executing the
+	:MoveStartTok command.
+
+	Note: As previously mentioned, :MoveStartTok alters the current
+	buffer. Txtfmt will save the buffer after performing the token
+	translation unless there were unsaved changes when the command was
+	invoked. In that case, Txtfmt assumes that the user was not yet ready
+	to save the existing changes and leaves the buffer modified. Of
+	course, if you don't like the changes made by the :MoveStartTok
+	command, you can always undo them, regardless of whether or not the
+	changes have been saved.
+
+	Examples of use:
+		Move current tokrange to start of "Private Use Area" >
+		:MoveStartTok 0xE000
+<
+		Move current tokrange to 190 (in file created with Vim 6.3) >
+		:MoveStartTok 190 603
+<
+
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:

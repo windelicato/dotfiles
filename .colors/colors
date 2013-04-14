@@ -1,0 +1,37 @@
+! vim:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+!
+
+! #########################################
+! X::Dotshare COLORS
+! #########################################
+!black
+urxvt*color0:     #AF875F
+urxvt*color8:     #AF875F
+!urxvt*color0:     #101010
+!urxvt*color8:     #404040
+!red
+urxvt*color1:     #E84F4F
+urxvt*color9:     #D23D3D
+!green
+urxvt*color2:     #B8D68C
+urxvt*color10:    #A0CF5D
+!yellow
+urxvt*color3:     #E1AA5D
+urxvt*color11:    #F39D21
+!blue
+urxvt*color4:     #7DC1CF
+urxvt*color12:    #4E9FB1
+!magenta
+urxvt*color5:     #9B64FB
+urxvt*color13:    #8542FF
+!cyan
+urxvt*color6:     #6D878D
+urxvt*color14:    #42717B
+!white
+urxvt*color7:     #dddddd
+urxvt*color15:    #dddddd
+
+URxvt*borderColor:        #151515
+URxvt*colorBD:            #ffffff
+URxvt*cursorColor:        #ff8939
+URxvt*cursorColor2:       #151515

@@ -1,0 +1,50 @@
+*** ../vim-7.1.262/runtime/indent.vim   Mon Mar 28 22:56:55 2005
+--- runtime/indent.vim  Fri Feb 22 20:54:41 2008
+***************
+*** 1,7 ****
+  " Vim support file to switch on loading indent files for file types
+  "
+  " Maintainer: Bram Moolenaar <Bram@vim.org>
+! " Last Change:        2005 Mar 28
+  
+  if exists("did_indent_on")
+    finish
+--- 1,7 ----
+  " Vim support file to switch on loading indent files for file types
+  "
+  " Maintainer: Bram Moolenaar <Bram@vim.org>
+! " Last Change:        2008 Feb 22
+  
+  if exists("did_indent_on")
+    finish
+***************
+*** 15,25 ****
+        exe b:undo_indent
+        unlet! b:undo_indent b:did_indent
+      endif
+!     if expand("<amatch>") != ""
+        if exists("b:did_indent")
+        unlet b:did_indent
+        endif
+!       runtime! indent/<amatch>.vim
+      endif
+    endfunc
+  augroup END
+--- 15,31 ----
+        exe b:undo_indent
+        unlet! b:undo_indent b:did_indent
+      endif
+!     let s = expand("<amatch>")
+!     if s != ""
+        if exists("b:did_indent")
+        unlet b:did_indent
+        endif
+!
+!       " When there is a dot it is used to separate filetype names.  Thus for
+!       " "aaa.bbb" load "indent/aaa.vim" and then "indent/bbb.vim".
+!       for name in split(s, '\.')
+!       exe 'runtime! indent/' . name . '.vim'
+!       endfor
+      endif
+    endfunc
+  augroup END

@@ -1,0 +1,12 @@
+# GTK2.0 Config
+#gtk-theme-name = "Zukitwo"
+#gtk-theme-name = "FlatStudioDark"
+gtk-theme-name = "FlatStudioCustom"
+#gtk-theme-name = "FlatStudioGray"
+#gtk-theme-name = "Boje-Greyscale"
+gtk-font-name = "Droid Sans 8" 
+#gtk-font-name = "Lime 10" 
+#gtk-font-name = "Lucida Grande 8" 
+gtk-icon-theme-name = "AwOkenWhite"
+#gtk-icon-theme-name = "AwOkenDark"
+#gtk-icon-theme-name = "Faenza"

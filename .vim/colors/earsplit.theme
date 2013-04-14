@@ -1,0 +1,40 @@
+" Vim color file
+"
+" Name:		earsplit
+" Maintainer:	Bill E. Indelicato (wei001@bucknell.edu)
+"
+"
+"
+"
+
+set background=dark
+
+if exists("syntax_on")
+	syntax reset
+endif
+
+let colors_name = "earsplit"
+
+hi Normal	ctermfg=256	ctermbg=none
+hi Cursor			ctermbg=214
+hi CursorColumn			ctermbg=238
+hi CursorLine			ctermbg=237
+hi Error	ctermfg=15	ctermbg=1
+hi ErrorMsg	ctermfg=15	ctermbg=1
+hi FoldColumn	ctermfg=247	ctermbg=233
+hi Folded	ctermfg=255	ctermbg=60
+hi IncSearch	ctermfg=0	ctermbg=223
+hi LineNr	ctermfg=247	ctermbg=none
+hi NonText	ctermfg=110	ctermbg=none
+hi StatusLine	ctermfg=15	ctermbg=none
+
+
+hi Comment	ctermfg=244
+hi Constant	ctermfg=229
+hi Identifier	ctermfg=182
+hi Ignore	ctermfg=238
+hi Number	ctermfg=180
+hi PreProc	ctermfg=150
+hi Special	ctermfg=174
+hi Statement	ctermfg=110
+hi Type		ctermfg=146

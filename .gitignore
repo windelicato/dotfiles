@@ -4,6 +4,7 @@ cabal-dev
 *.chi
 *.chs.h
 .virthualenv
+xmonad-x86_64-linux
 
 # Object files
 *.o

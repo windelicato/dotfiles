@@ -1,0 +1,9 @@
+set font "lime normal 9"
+set default-bg "#111111"
+set default-fg "#ffffff"
+set statusbar-bg "#111111"
+set statusbar-fg "#ffffff"
+set adjust-open	width
+set inputbar-fg "#AADB0F"
+set completion-highlight-bg "#111111"
+set completion-highlight-fg "#AADB0F"

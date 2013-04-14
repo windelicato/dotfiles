@@ -1,0 +1,13 @@
+ fg(#404040)^i(/home/sunn/.dzen/arch.xbm)^fg() urxvt
+ ^fg(#404040)^i(/home/sunn/.dzen/fs_01.xbm)^fg() chromium
+ ^fg(#404040)^i(/home/sunn/.dzen/diskette.xbm)^fg() zathura
+ ^fg(#404040)^i(/home/sunn/.dzen/plug.xbm)^fg() lowriter
+ ^fg(#404040)^i(/home/sunn/.dzen/stop.xbm)^fg() localc
+ ^fg(#404040)^i(/home/sunn/.dzen/ac.xbm)^fg() loimpress
+ ^fg(#404040)^i(/home/sunn/.dzen/fox.xbm)^fg() gimp
+ ^fg(#404040)^i(/home/sunn/.dzen/mem.xbm)^fg() servoy
+----------
+ ^fg(#404040)^i(/home/sunn/.dzen/play.xbm)^fg() gmrun
+ ^fg(#404040)^i(/home/sunn/.dzen/full.xbm)^fg() systemctl suspend
+ ^fg(#404040)^i(/home/sunn/.dzen/half.xbm)^fg() systemctl reboot
+ ^fg(#404040)^i(/home/sunn/.dzen/empty.xbm)^fg() systemctl poweroff

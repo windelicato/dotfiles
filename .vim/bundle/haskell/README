@@ -1,0 +1,11 @@
+Use Vim 7.3 Conceal feature to display unicode operator
+in Haskell without changing the underlying file.
+
+GitHub: https://github.com/Twinside/vim-haskellConceal
+
+## Installation
+
+Decompress in your ~/vimfiles or ~/.vim, if you're using
+pathogen (you should), put it in ~/.vim/bundle/haskellConceal
+folder
+

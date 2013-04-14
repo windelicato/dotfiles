@@ -1,0 +1,13 @@
+ ^fg(#556c85)>^fg() vim:urxvt -e vim
+ ^fg(#556c85)>^fg() mutt:urxvt -e mutt -F ~/.mutt/acct/wei001
+ ^fg(#556c85)>^fg() ncmpcpp:urxvt -e ncmpcpp
+ ^fg(#556c85)>^fg() htop:urxvt -e htop
+ ^fg(#556c85)>^fg() alsa:urxvt -e alsamixer -g
+ ^fg(#556c85)>^fg() equal:urxvt -e alsamixer -g -D equal
+----------
+ ^fg(#556c85)^fg() config:urxvt -e vim /home/sunn/.xmonad/xmonad.hs
+ ^fg(#556c85)^fg() menu1:urxvt -e vim /home/sunn/.xmonad/apps
+ ^fg(#556c85)^fg() menu2:urxvt -e vim /home/sunn/.xmonad/configs
+ ^fg(#556c85)^fg() panel:urxvt -e vim /home/sunn/.xmonad/.conky_dzen
+ ^fg(#556c85)^fg() Xconfig:urxvt -e vim /home/sunn/.Xresources
+ ^fg(#556c85)^fg() bashrc:urxvt -e vim /home/sunn/.bashrc

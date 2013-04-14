@@ -1,0 +1,67 @@
+Autor: Rafa Cobreros rafacobreros@gmail.com
+Licencia: GPL
+Original theme en: http://gnome-look.org/content/show.php/FlatStudio?content=154296
+
+1.- Cambiar color de selección
+2.- Cambiar estilo de los botones de la barra de titulos de la ventana
+3.- Seleccionar estilo para nautilus
+
+NOTA:
+	- Los cambios pueden requerir abrir/cerrar sesion para que surtan efecto
+
+
+------------------------------------
+* 1.- Cambiar color de selección
+------------------------------------
+Para aplicaciones GTK3
+Edite el archivo ../FlatStudioDark/gtk-3.0/gtk.css
+sobre la linea 22 asigne el valor de color deseado a
+@define-color theme_selected_bg_color  @selection_blue;
+
+
+Para GTK2
+Edite el archivo ../FlatStudioDark/gtk-2.0/gtkrc
+sobre la linea 14 asigne al valor de color deseado a
+gtk-color-scheme = "selected_bg_color:#XXXXXX"
+
+
+------------------------------------------------------------------------------
+* 2.- Cambiar estilo de los botones de la barra de titulos de la ventana *
+------------------------------------------------------------------------------
+Si no usas unity, en la mayoria de los casos puede ser suficiente seleccionar con gnome-tweak-tools el tema de ventanas con los botones que queremos. Si esto no es suficiente, entonces:
+
+En la carpeta "../FlatStudio/" hay 3 estilos de botones contenidos en los siguientes archivos:
+- window_normal_buttons_dark_frame.tar.gz  		(Por defecto en FlatStudio)
+- window_normal_buttons_light_frame.tar.gz  	(Por defecto en FlatStudioLight)
+- window_square_buttons.tar.gz  				(Por defecto en FlatStudioGray y FlatStudioDark)
+
+Copia el contenido del archivo "window_xxxx_buttons_xxx.tar.gz" en la carpeta "../metacity-1/" y "../unity" de la carpeta correspondiente al tema que quieres cambiar.
+
+Ejemplo, 
+para poner botones cuadrados en "FlatStudioLight"
+copia el contenido de "window_square_buttons.tar.gz" en las carpetas
+
+"../FlatStudioLight/metacity-1/", y si usas unity, también en "../FlatStudioLight/unity/"
+
+
+----------------------------------------
+* 3.- Seleccionar estilo para nautilus *
+----------------------------------------
+Editar (gedit) el archivo ../FlatStudioDark/gtk-3.0/gtk.css
+
+Ve a la ultima linea y encontraras 3 opciones para nautilus:
+
+	1.- "gnome-applications-gray.css"  		(nautilus sidebar y pathbar gris oscuro)
+	2.- "gnome-applications-light.css" 		(nautilus sidebar azulado y pathbar claro))
+	3.- "gnome-applications-gray-light.css" (nautilus sidebar gris oscuro y pathbar claro)
+
+modifica la linea "@import" para que se corresponda con el estilo que buscas,
+de forma que quede como una de las tres lineas de abajo.
+(ten cuidado de dejar solo UNA de las tres)
+
+@import url("gnome-applications-gray.css");
+o
+@import url("gnome-applications-light.css");
+o
+@import url("gnome-applications-gray-light.css");
+

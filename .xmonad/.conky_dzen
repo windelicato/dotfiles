@@ -1,0 +1,18 @@
+short_units yes
+background yes
+out_to_console yes
+out_to_x no
+# Update interval in seconds
+update_interval 10
+update_interval_on_battery 30
+ 
+TEXT
+^ca(1,/home/sunn/.xmonad/scripts/dzen_music.sh)   $if_mpd_playing^fg(\#91BA0D)^i(/home/sunn/.xmonad/dzen2/note.xbm) ^fg(\#D3D3D3)${mpd_artist}$endif   ^ca()\
+^ca(1,/home/sunn/.xmonad/scripts/dzen_vol.sh)   ^fg(\#91BA0D)^i(/home/sunn/.xmonad/dzen2/spkr_01.xbm) ^fg(\#D3D3D3)${exec amixer get Master| egrep -o "[0-9]+%" | head -1 | egrep -o "[0-9]*"}%   ^ca()\
+^ca(1,/home/sunn/.xmonad/scripts/dzen_network.sh)   ^fg(\#91BA0D)^i(/home/sunn/.xmonad/dzen2/wifi_01.xbm) ^fg(\#D3D3D3)${wireless_essid wlan0}   ^ca()\
+^ca(1,/home/sunn/.xmonad/scripts/dzen_battery.sh)   ^fg(\#91BA0D)^i(/home/sunn/.xmonad/dzen2/bat_full_01.xbm) ^fg(\#D3D3D3)${battery_percent}%   ^ca()\
+^ca(1,/home/sunn/.xmonad/scripts/dzen_hardware.sh)   ^fg(\#91BA0D)^i(/home/sunn/.xmonad/dzen2/arch_10x10.xbm) ^fg(\#D3D3D3)${exec uname -r}   ^ca()\
+^ca(1,/home/sunn/.xmonad/scripts/dzen_pacman.sh)   ^fg(\#91BA0D)^i(/home/sunn/.xmonad/dzen2/pacman.xbm) ^fg(\#D3D3D3)${exec pacman -Qu | wc -l} updates   ^ca()\
+^ca(1,/home/sunn/.xmonad/scripts/dzen_date.sh)   ^fg(\#91BA0D)^i(/home/sunn/.xmonad/dzen2/clock.xbm) ^fg(\#cdcdcd)${time %I:%M %P}   ^ca()\
+^ca(1,/home/sunn/.xmonad/scripts/dzen_log.sh)^fg(\#91BA0D)^i(/home/sunn/.xmonad/dzen2/info_03.xbm)^fg(\#D3D3D3)^ca()
+

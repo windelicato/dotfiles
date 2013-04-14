@@ -1,0 +1,35 @@
+! vim:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+!
+! #########################################
+! BLUE AWESOME COLORS
+! #########################################
+urxvt*cursorColor: #b2b2b2
+urxvt*colorIT:	#927d9e
+urxvt*colorUL:  #6e98b8
+urxvt*colorBD:  #7791e0
+urxvt*background: #000000
+urxvt*foreground: #FFFFFF
+
+urxvt*color0:	#343639
+urxvt*color8:	#404040
+
+urxvt*color1:	#2f468e
+urxvt*color9:	#7791e0
+
+urxvt*color2:	#424242
+urxvt*color10:	#828a8c
+
+urxvt*color3:	#6b8ba3
+urxvt*color11:	#8ebdde
+
+urxvt*color4:	#1c4582
+urxvt*color12:	#5365a6
+
+urxvt*color5:	#74637d
+urxvt*color13:	#927d9e
+
+urxvt*color6:	#556c85
+urxvt*color14:	#6e98b8
+
+urxvt*color7:	#b2b2b2
+urxvt*color15:	#bdbdbd

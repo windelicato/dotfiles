@@ -1,0 +1,594 @@
+
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>
+  nl_0 / dotfiles / source &mdash; Bitbucket
+</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!--[if lt IE 9]>
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/e14058e2cf3f/js/lib/html5.js"></script>
+  <![endif]-->
+
+  <script>
+    (function (window) {
+      // prevent stray occurrences of `console.log` from causing errors in IE
+      var console = window.console || (window.console = {});
+      console.log || (console.log = function () {});
+
+      var BB = window.BB || (window.BB = {});
+      BB.debug = false;
+      BB.cname = false;
+      BB.CANON_URL = 'https://bitbucket.org';
+      BB.MEDIA_URL = 'https://dwz7u9t8u8usb.cloudfront.net/m/e14058e2cf3f/';
+      BB.images = {
+        noAvatar: 'https://dwz7u9t8u8usb.cloudfront.net/m/e14058e2cf3f/img/no_avatar.png'
+      };
+      BB.user = {"isKbdShortcutsEnabled": true, "isSshEnabled": false};
+      BB.user.has = (function () {
+        var betaFeatures = [];
+        betaFeatures.push('repo2');
+        return function (feature) {
+          return _.contains(betaFeatures, feature);
+        };
+      }());
+      BB.targetUser = BB.user;
+  
+      BB.repo || (BB.repo = {});
+  
+      BB.user.isAdmin = false;
+      BB.repo.id = 206997;
+    
+    
+      BB.repo.language = null;
+      BB.repo.pygmentsLanguage = null;
+    
+    
+      BB.repo.slug = 'dotfiles';
+    
+    
+      BB.repo.owner = {
+        username: 'nl_0'
+      };
+    
+      // Coerce `BB.repo` to a string to get
+      // "davidchambers/mango" or whatever.
+      BB.repo.toString = function () {
+        return BB.cname ? this.slug : this.owner.username + '/' + this.slug;
+      }
+    
+    
+      BB.changeset = 'eaf8f389c298'
+    
+    
+  
+    }(this));
+  </script>
+
+  
+
+
+  <link rel="stylesheet" href="https://dwz7u9t8u8usb.cloudfront.net/m/e14058e2cf3f/bun/css/bundle.css"/>
+
+
+
+  <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="Bitbucket" />
+  <link rel="icon" href="https://dwz7u9t8u8usb.cloudfront.net/m/e14058e2cf3f/img/logo_new.png" type="image/png" />
+  <link type="text/plain" rel="author" href="/humans.txt" />
+
+
+  
+    <script src="https://dwz7u9t8u8usb.cloudfront.net/m/e14058e2cf3f/bun/js/bundle.js"></script>
+  
+
+
+
+</head>
+
+<body id="" class="">
+  <script>
+    if (navigator.userAgent.indexOf(' AppleWebKit/') === -1) {
+      $('body').addClass('non-webkit')
+    }
+    $('body')
+      .addClass($.client.os.toLowerCase())
+      .addClass($.client.browser.toLowerCase())
+  </script>
+  <!--[if IE 8]>
+  <script>jQuery(document.body).addClass('ie8')</script>
+  <![endif]-->
+  <!--[if IE 9]>
+  <script>jQuery(document.body).addClass('ie9')</script>
+  <![endif]-->
+
+  <div id="wrapper">
+
+
+
+  <div id="header-wrap">
+    <div id="header">
+    <ul id="global-nav">
+      <li><a class="home" href="http://www.atlassian.com">Atlassian Home</a></li>
+      <li><a class="docs" href="http://confluence.atlassian.com/display/BITBUCKET">Documentation</a></li>
+      <li><a class="support" href="/support">Support</a></li>
+      <li><a class="blog" href="http://blog.bitbucket.org">Blog</a></li>
+      <li><a class="forums" href="http://groups.google.com/group/bitbucket-users">Forums</a></li>
+    </ul>
+    <a href="/" id="logo">Bitbucket by Atlassian</a>
+
+    <div id="main-nav">
+    
+      <ul class="clearfix">
+        <li><a href="/plans">Pricing &amp; signup</a></li>
+        <li><a id="explore-link" href="/explore">Explore Bitbucket</a></li>
+        <li><a href="/account/signin/?next=/nl_0/dotfiles/src/eaf8f389c298/icons/layouts/full.xbm">Log in</a></li>
+        
+
+<li class="search-box">
+  
+    <form action="/repo/all">
+      <input type="search" results="5" autosave="bitbucket-explore-search"
+             name="name" id="searchbox"
+             placeholder="owner/repo" />
+  
+  </form>
+</li>
+
+      </ul>
+    
+    </div>
+
+  
+
+    </div>
+  </div>
+
+    <div id="header-messages">
+  
+  
+    
+    
+    
+    
+  
+
+    
+   </div>
+
+
+
+    <div id="content">
+      <div id="source">
+      
+  
+  
+
+
+
+
+
+  <script>
+    jQuery(function ($) {
+        var cookie = $.cookie,
+            cookieOptions, date,
+            $content = $('#content'),
+            $pane = $('#what-is-bitbucket'),
+            $hide = $pane.find('[href="#hide"]').css('display', 'block').hide();
+
+        date = new Date();
+        date.setTime(date.getTime() + 365 * 24 * 60 * 60 * 1000);
+        cookieOptions = { path: '/', expires: date };
+
+        if (cookie('toggle_status') == 'hide') $content.addClass('repo-desc-hidden');
+
+        $('#toggle-repo-content').click(function (event) {
+            event.preventDefault();
+            $content.toggleClass('repo-desc-hidden');
+            cookie('toggle_status', cookie('toggle_status') == 'show' ? 'hide' : 'show', cookieOptions);
+        });
+
+        if (!cookie('hide_intro_message')) $pane.show();
+
+        $hide.click(function (event) {
+            event.preventDefault();
+            cookie('hide_intro_message', true, cookieOptions);
+            $pane.slideUp('slow');
+        });
+
+        $pane.hover(
+            function () { $hide.fadeIn('fast'); },
+            function () { $hide.fadeOut('fast'); });
+
+      (function () {
+        // Update "recently-viewed-repos" cookie for
+        // the "repositories" drop-down.
+        var
+          id = BB.repo.id,
+          cookieName = 'recently-viewed-repos_' + BB.user.id,
+          rvr = cookie(cookieName),
+          ids = rvr? rvr.split(','): [],
+          idx = _.indexOf(ids, '' + id);
+
+        // Remove `id` from `ids` if present.
+        if (~idx) ids.splice(idx, 1);
+
+        cookie(
+          cookieName,
+          // Insert `id` as the first item, then call
+          // `join` on the resulting array to produce
+          // something like "114694,27542,89002,84570".
+          [id].concat(ids.slice(0, 4)).join(),
+          {path: '/', expires: 1e6} // "never" expires
+        );
+      }());
+    });
+  </script>
+
+
+
+  
+  
+  
+  
+  
+    <div id="what-is-bitbucket" class="new-to-bitbucket">
+      <h2>nl 0 <span id="slogan">is sharing code with you</span></h2>
+      <img src="https://secure.gravatar.com/avatar/4598a24b36466972c41eb609e63bf816?d=identicon&s=32" alt="" class="avatar" />
+      <p>Bitbucket is a code hosting site. Unlimited public and private repositories. Free for small teams.</p>
+      <div class="primary-action-link signup"><a href="/account/signup/?utm_source=internal&utm_medium=banner&utm_campaign=what_is_bitbucket">Try Bitbucket free</a></div>
+      <a href="#hide" title="Don't show this again">Don't show this again</a>
+    </div>
+  
+
+
+<div id="tabs" class="tabs">
+  <ul>
+    <li>
+      <a href="/nl_0/dotfiles/overview" id="repo-overview-link">Overview</a>
+    </li>
+
+    <li>
+      <a href="/nl_0/dotfiles/downloads" id="repo-downloads-link">Downloads (<span id="downloads-count">0</span>)</a>
+    </li>
+
+    
+
+    <li>
+      <a href="/nl_0/dotfiles/pull-requests" id="repo-pr-link">Pull requests (0)</a>
+    </li>
+
+    <li class="selected">
+      
+        <a href="/nl_0/dotfiles/src" id="repo-source-link">Source</a>
+      
+    </li>
+
+    <li>
+      <a href="/nl_0/dotfiles/changesets" id="repo-commits-link">Commits</a>
+    </li>
+
+    <li id="wiki-tab" class="dropdown"
+      style="display:
+                        none  
+        
+      ">
+      <a href="/nl_0/dotfiles/wiki" id="repo-wiki-link">Wiki</a>
+    </li>
+
+    <li id="issues-tab" class="dropdown inertial-hover"
+      style="display:
+                      none  
+        
+      ">
+      <a href="/nl_0/dotfiles/issues?status=new&amp;status=open" id="repo-issues-link">Issues (0) &raquo;</a>
+      <ul>
+        <li><a href="/nl_0/dotfiles/issues/new">Create new issue</a></li>
+        <li><a href="/nl_0/dotfiles/issues?status=new">New issues</a></li>
+        <li><a href="/nl_0/dotfiles/issues?status=new&amp;status=open">Open issues</a></li>
+        <li><a href="/nl_0/dotfiles/issues?status=duplicate&amp;status=invalid&amp;status=resolved&amp;status=wontfix">Closed issues</a></li>
+        
+        <li><a href="/nl_0/dotfiles/issues">All issues</a></li>
+        <li><a href="/nl_0/dotfiles/issues/query">Advanced query</a></li>
+      </ul>
+    </li>
+
+    
+  </ul>
+
+  <ul>
+    <li>
+      <a href="/nl_0/dotfiles/descendants" id="repo-forks-link">Forks/queues (0)</a>
+    </li>
+
+    <li>
+      <a href="/nl_0/dotfiles/zealots">Followers (<span id="followers-count">1</span>)</a>
+    </li>
+  </ul>
+</div>
+
+
+
+ 
+
+  <div class="repo-menu" id="repo-menu">
+    <ul id="repo-menu-links">
+    
+      <li>
+        <a href="/nl_0/dotfiles/rss" class="rss" title="RSS feed for dotfiles">RSS</a>
+      </li>
+
+      <li><a id="repo-fork-link" href="/nl_0/dotfiles/fork" class="fork">fork</a></li>
+      
+        
+          <li><a id="repo-patch-queue-link" href="/nl_0/dotfiles/hack" class="patch-queue">patch queue</a></li>
+        
+      
+      <li>
+        <a id="repo-follow-link" rel="nofollow" href="/nl_0/dotfiles/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+      
+        <li class="get-source inertial-hover">
+          <a class="source">get source</a>
+          <ul class="downloads">
+            
+              
+              <li><a rel="nofollow" href="/nl_0/dotfiles/get/eaf8f389c298.zip">zip</a></li>
+              <li><a rel="nofollow" href="/nl_0/dotfiles/get/eaf8f389c298.tar.gz">gz</a></li>
+              <li><a rel="nofollow" href="/nl_0/dotfiles/get/eaf8f389c298.tar.bz2">bz2</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+
+  
+    <ul class="metadata">
+      
+      
+        <li class="branches inertial-hover">branches
+          <ul>
+            <li><a href="/nl_0/dotfiles/src/e6878185e47f" title="default">default</a>
+              
+              
+            </li>
+          </ul>
+        </li>
+      
+      
+      <li class="tags inertial-hover">tags
+        <ul>
+          <li><a href="/nl_0/dotfiles/src/e6878185e47f">tip</a>
+            
+            </li>
+        </ul>
+      </li>
+     
+     
+    </ul>
+  
+</div>
+
+<div class="repo-menu" id="repo-desc">
+    <ul id="repo-menu-links-mini">
+      
+
+      
+      <li>
+        <a href="/nl_0/dotfiles/rss" class="rss" title="RSS feed for dotfiles"></a>
+      </li>
+
+      <li><a href="/nl_0/dotfiles/fork" class="fork" title="Fork"></a></li>
+      
+        
+          <li><a href="/nl_0/dotfiles/hack" class="patch-queue" title="Patch queue"></a></li>
+        
+      
+      <li>
+        <a rel="nofollow" href="/nl_0/dotfiles/follow" class="follow">follow</a>
+      </li>
+      
+          
+      
+      
+        <li>
+          <a class="source" title="Get source"></a>
+          <ul class="downloads">
+            
+              
+              <li><a rel="nofollow" href="/nl_0/dotfiles/get/eaf8f389c298.zip">zip</a></li>
+              <li><a rel="nofollow" href="/nl_0/dotfiles/get/eaf8f389c298.tar.gz">gz</a></li>
+              <li><a rel="nofollow" href="/nl_0/dotfiles/get/eaf8f389c298.tar.bz2">bz2</a></li>
+            
+          </ul>
+        </li>
+      
+    </ul>
+
+    <h3 id="repo-heading" class="public hg">
+      <a class="owner-username" href="/nl_0">nl_0</a> /
+      <a class="repo-name" href="/nl_0/dotfiles">dotfiles</a>
+    
+
+    
+    </h3>
+
+    
+
+  <div id="repo-desc-cloneinfo">Clone this repository (size: 51.3 KB):
+    <a href="https://bitbucket.org/nl_0/dotfiles" class="https">HTTPS</a> /
+    <a href="ssh://hg@bitbucket.org/nl_0/dotfiles" class="ssh">SSH</a>
+    <pre id="clone-url-https">hg clone https://bitbucket.org/nl_0/dotfiles</pre>
+    <pre id="clone-url-ssh">hg clone ssh://hg@bitbucket.org/nl_0/dotfiles</pre>
+    
+  </div>
+
+        <a href="#" id="toggle-repo-content"></a>
+
+        
+
+</div>
+
+
+
+
+      
+  <div id="source-container">
+    
+
+  <div id="source-path">
+    <h1>
+      <a href="/nl_0/dotfiles/src" class="src-pjax">dotfiles</a> /
+
+  
+    
+      <a href="/nl_0/dotfiles/src/eaf8f389c298/icons/" class="src-pjax">icons</a> /
+    
+  
+
+  
+    
+      <a href="/nl_0/dotfiles/src/eaf8f389c298/icons/layouts/" class="src-pjax">layouts</a> /
+    
+  
+
+  
+    
+      <span>full.xbm</span>
+    
+  
+
+    </h1>
+  </div>
+
+  <div class="labels labels-csv">
+  
+    <dl>
+  
+    
+  
+  
+    
+  
+  
+</dl>
+
+  
+  </div>
+
+
+  
+  <div id="source-view">
+    <div class="header">
+      <ul class="metadata">
+        <li><code>eaf8f389c298</code></li>
+        
+          
+            <li>5 loc</li>
+          
+        
+        <li>234 bytes</li>
+      </ul>
+      <ul class="source-view-links">
+        
+        <li><a href="/nl_0/dotfiles/history/icons/layouts/full.xbm">history</a></li>
+        
+        <li><a href="/nl_0/dotfiles/raw/eaf8f389c298/icons/layouts/full.xbm">raw</a></li>
+        <li>
+          <form action="/nl_0/dotfiles/diff/icons/layouts/full.xbm" class="source-view-form">
+          
+            <input type="hidden" name="diff2" value="eaf8f389c298" />
+            <select name="diff1">
+            
+              
+            
+              
+                <option value="76f63742b05c">76f63742b05c</option>
+              
+            
+            </select>
+            <input type="submit" value="diff" />
+          
+          </form>
+        </li>
+      </ul>
+    </div>
+  
+    <div id="inline-image">
+      <img src="https://dwz7u9t8u8usb.cloudfront.net/m/e14058e2cf3f/img/blank.gif" class="inline-img" />
+      <p>
+        icons/layouts/full.xbm is an image.
+      </p>
+      <p>
+        <a href="#" onclick="$('#inline-image .inline-img').attr('src', '/nl_0/dotfiles/raw/eaf8f389c298/icons/layouts/full.xbm')">View image</a>
+      </p>
+    </div>
+  
+  </div>
+  
+
+
+  <div id="mask"><div></div></div>
+
+  </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div id="footer">
+    <ul id="footer-nav">
+      <li>Copyright © 2012 <a href="http://atlassian.com">Atlassian</a></li>
+      <li><a href="http://www.atlassian.com/hosted/terms.jsp">Terms of Service</a></li>
+      <li><a href="http://www.atlassian.com/about/privacy.jsp">Privacy</a></li>
+      <li><a href="//bitbucket.org/site/master/issues/new">Report a Bug to Bitbucket</a></li>
+      <li><a href="http://confluence.atlassian.com/x/IYBGDQ">API</a></li>
+      <li><a href="http://status.bitbucket.org/">Server Status</a></li>
+    </ul>
+    <ul id="social-nav">
+      <li class="blog"><a href="http://blog.bitbucket.org">Bitbucket Blog</a></li>
+      <li class="twitter"><a href="http://www.twitter.com/bitbucket">Twitter</a></li>
+    </ul>
+    <h5>We run</h5>
+    <ul id="technologies">
+      <li><a href="http://www.djangoproject.com/">Django 1.3.1</a></li>
+      <li><a href="//bitbucket.org/jespern/django-piston/">Piston 0.3dev</a></li>
+      <li><a href="http://git-scm.com/">Git 1.7.6</a></li>
+      <li><a href="http://www.selenic.com/mercurial/">Hg 1.9.1</a></li>
+      <li><a href="http://www.python.org">Python 2.7.2</a></li>
+      <li>a6cc54539c16 | bitbucket02</li>
+    </ul>
+  </div>
+
+  <script src="https://dwz7u9t8u8usb.cloudfront.net/m/e14058e2cf3f/js/lib/global.js"></script>
+
+
+
+
+
+
+  <script>
+    BB.gaqPush(['_trackPageview']);
+  
+    BB.gaqPush(['atl._trackPageview']);
+
+    
+
+    
+
+    (function () {
+        var ga = document.createElement('script');
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        ga.setAttribute('async', 'true');
+        document.documentElement.firstChild.appendChild(ga);
+    }());
+  </script>
+
+</body>
+</html>
