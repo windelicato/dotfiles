@@ -9,6 +9,7 @@ Requirements to run full setup with applets...
 +  docky - dock launcher at the bottom
 +  vnstat - for network applet statistics
 +  xdotool - to get current mouse position
++  tint2 - to get windowlist on statusbar
 
 For making things look nice, i use
 +  hsetroot - to set wallpaper
