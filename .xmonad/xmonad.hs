@@ -35,7 +35,7 @@ import Data.List			-- clickable workspaces
 myLayout = onWorkspace (myWorkspaces !! 0) (avoidStruts (tiledSpace ||| tiled) ||| fullTile)
 		$ onWorkspace (myWorkspaces !! 1) (avoidStruts (noBorders(tiledSpace ||| fullTile)) ||| fullScreen)
 		$ onWorkspace (myWorkspaces !! 2) (avoidStruts simplestFloat)
-		$ avoidStruts ( tiledSpace  ||| tiled ||| fullTile ) ||| fullScreen
+		$ avoidStruts ( tiledSpace  ||| tiled ||| fullTile ) 
 	where
 		tiled  		= spacing 5 $ ResizableTall nmaster delta ratio [] 
 		tiledSpace  	= spacing 60 $ ResizableTall nmaster delta ratio [] 
@@ -82,8 +82,8 @@ myManageHook = composeAll 	[ resource =? "dmenu" --> doFloat
 				, resource =? "mutt"--> doShift (myWorkspaces !! 5)
 				, resource =? "irssi"--> doShift (myWorkspaces !! 5)
 				, resource =? "centerim"--> doShift (myWorkspaces !! 5)
-				]
-newManageHook = myManageHook <+> manageHook defaultConfig <+> manageDocks 
+				, manageDocks]
+newManageHook = myManageHook <+> manageHook defaultConfig 
 
 --------------------------------------------------------------------------------------------------------------------
 -- DZEN LOG RULES for workspace names, layout image, current program title
@@ -105,8 +105,8 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 					"Circle"			->	"^i(/home/sunn/.xmonad/dzen2/full.xbm)"
 					_				->	"^i(/home/sunn/.xmonad/dzen2/grid.xbm)"
 				) 
-		, ppTitle	=   wrap "^ca(1,xdotool key alt+shift+x)^fg(#222222)^i(/home/sunn/.xmonad/dzen2/corner_left.xbm)^bg(#222222)^fg(#AADB0F)^fn(fkp)x^fn()" "^fg(#222222)^i(/home/sunn/.xmonad/dzen2/corner_right.xbm)^ca()" .  dzenColor white0 "#222222" . shorten 40 . pad		
-		, ppOrder	=  \(ws:l:t:_) -> [ws,l, t]
+--		, ppTitle	=   wrap "^ca(1,xdotool key alt+shift+x)^fg(#222222)^i(/home/sunn/.xmonad/dzen2/corner_left.xbm)^bg(#222222)^fg(#AADB0F)^fn(fkp)x^fn()" "^fg(#222222)^i(/home/sunn/.xmonad/dzen2/corner_right.xbm)^ca()" .  dzenColor white0 "#222222" . shorten 40 . pad		
+		, ppOrder	=  \(ws:l:t:_) -> [ws,l]
 		, ppOutput	=   hPutStrLn h
 	} )
 
@@ -114,8 +114,8 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 --------------------------------------------------------------------------------------------------------------------
 -- Spawn pipes and menus on boot, set default settings
 --------------------------------------------------------------------------------------------------------------------
-myXmonadBar = "dzen2 -x '0' -y '0' -h '12' -w '700' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
-myStatusBar = "conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '700' -w '666' -h '12' -ta 'r' -bg '"++background++"' -fg '"++foreground++"' -y '0' -fn "++myFont
+myXmonadBar = "dzen2 -x '0' -y '0' -h '14' -w '700' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
+myStatusBar = "conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '700' -w '666' -h '14' -ta 'r' -bg '"++background++"' -fg '"++foreground++"' -y '0' -fn "++myFont
 --myConky = "conky -c /home/sunn/conkyrc"
 --myStartMenu = "/home/sunn/.xmonad/start /home/sunn/.xmonad/start_apps"
 
@@ -124,12 +124,13 @@ main = do
 	dzenLeftBar 	<- spawnPipe myXmonadBar
 	dzenRightBar	<- spawnPipe myStatusBar
 	xmproc 		<- spawnPipe "GTK2_RC_FILES=/home/sunn/.gtkdocky /usr/bin/docky"
+	xmproc 		<- spawnPipe "tint2 -c /home/sunn/.config/tint2/xmonad.tint2rc"
 --	conky 		<- spawn myConky
 --	dzenStartMenu	<- spawnPipe myStartMenu
 	xmonad $ ewmh defaultConfig
 		{ terminal		= myTerminal
 		, borderWidth		= 1
-		, normalBorderColor 	= background
+		, normalBorderColor 	= yellow0
 		, focusedBorderColor  	= green0
 		, modMask 		= mod1Mask
 		, layoutHook 		= myLayout
