@@ -6,14 +6,20 @@ servers = (
     use_ssl = "no";
     ssl_verify = "no";
     autoconnect = "yes";
-  }
+  },
+  { address = "localhost"; autoconnect = "yes"; }
 );
 
 chatnets = {
   SILC = { type = "SILC"; };
   freenode = {
     type = "IRC";
-    autosendcmd = "/msg nickserv identify PASS;wait 2000";
+    autosendcmd = "/msg nickserv identify jacuzzi; /window goto nickserv; /wc";
+
+  };
+  bitlbee = {
+    type = "IRC";
+    autosendcmd = "/msg &bitlbee identify jacuzzi";
   };
 };
 
@@ -185,6 +191,14 @@ statusbar = {
     };
     new1 = { placement = "top"; items = { }; position = "100"; };
     new2 = { placement = "bottom"; };
+    awl_0 = {
+      placement = "top";
+      items = {
+        barstart = { priority = "100"; };
+        awl_0 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
   };
 };
 settings = {
@@ -197,8 +211,8 @@ settings = {
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { theme = "default"; show_names_on_join = "no"; };
   "perl/core/scripts" = {
-    awl_display_key = "$H   %n$Q $C   $S";
-    awl_display_key_active = "$H%y.: %m$Q %m$C %y:.$S";
+    awl_display_key = "$H %K$C $S";
+    awl_display_key_active = "$H %n$C $S";
     awl_placement = "top";
     awl_separator = "\\ \\ \\ ";
   };

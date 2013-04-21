@@ -12,7 +12,7 @@ for i in {0..100..10}; do
 	then
 		val+=("^bg($white0)^ca(1,amixer set Master $i)      ^ca()")	
 	else
-		val+=("^bg(#000000)^ca(1,amixer set Master $i)      ^ca()")
+		val+=("^bg($background)^ca(1,amixer set Master $i)      ^ca()")
 	fi
 done
 

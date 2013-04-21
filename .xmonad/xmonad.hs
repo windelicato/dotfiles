@@ -24,6 +24,8 @@ import XMonad.Util.Dmenu
 import XMonad.Hooks.EwmhDesktops hiding (fullscreenEventHook)
 import System.IO (hPutStrLn)
 --import XMonad.Operations
+import qualified XMonad.StackSet as W
+import qualified XMonad.Actions.FlexibleResize as FlexibleResize
 import XMonad.Util.Run (spawnPipe)
 import XMonad.Actions.CycleWS			-- nextWS, prevWS
 import Data.List			-- clickable workspaces
@@ -33,7 +35,7 @@ import Data.List			-- clickable workspaces
 -- DECLARE WORKSPACES RULES
 --------------------------------------------------------------------------------------------------------------------
 myLayout = onWorkspace (myWorkspaces !! 0) (avoidStruts (tiledSpace ||| tiled) ||| fullTile)
-		$ onWorkspace (myWorkspaces !! 1) (avoidStruts (noBorders(tiledSpace ||| fullTile)) ||| fullScreen)
+		$ onWorkspace (myWorkspaces !! 1) (avoidStruts (tiledSpace ||| fullTile) ||| fullScreen)
 		$ onWorkspace (myWorkspaces !! 2) (avoidStruts simplestFloat)
 		$ avoidStruts ( tiledSpace  ||| tiled ||| fullTile ) 
 	where
@@ -59,11 +61,10 @@ myWorkspaces = clickable $ ["term"
 		,"docs"	
 		,"tunes"
 		,"mail"]	
-
 	where clickable l = [ "^ca(1,xdotool key alt+" ++ show (n) ++ ")" ++ ws ++ "^ca()" |
 				(i,ws) <- zip [1..] l,
 				let n = i ]
-			
+
 --------------------------------------------------------------------------------------------------------------------
 -- APPLICATION SPECIFIC RULES
 --------------------------------------------------------------------------------------------------------------------
@@ -90,13 +91,13 @@ newManageHook = myManageHook <+> manageHook defaultConfig
 --------------------------------------------------------------------------------------------------------------------
 myLogHook h = dynamicLogWithPP ( defaultPP
 	{
-		  ppCurrent		= dzenColor green0 background .	pad
-		, ppVisible		= dzenColor red0 background . 	pad
-		, ppHidden		= dzenColor red0 background . 	pad
-		, ppHiddenNoWindows	= dzenColor yellow0 background.	pad
+		  ppCurrent		= dzenColor foreground background .	pad
+		, ppVisible		= dzenColor color8 background . 	pad
+		, ppHidden		= dzenColor color8 background . 	pad
+		, ppHiddenNoWindows	= dzenColor color0 background .	pad
 		, ppWsSep		= ""
 		, ppSep			= "    "
-		, ppLayout		= wrap "^ca(1,xdotool key alt+space)" "^ca()" . dzenColor white1 background .
+		, ppLayout		= wrap "^ca(1,xdotool key alt+space)" "^ca()" . dzenColor foreground background .
 				(\x -> case x of
 					"Full"				->	"^i(/home/sunn/.xmonad/dzen2/layout_full.xbm)"
 					"Spacing 5 ResizableTall"	->	"^i(/home/sunn/.xmonad/dzen2/layout_tall.xbm)"
@@ -105,7 +106,7 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 					"Circle"			->	"^i(/home/sunn/.xmonad/dzen2/full.xbm)"
 					_				->	"^i(/home/sunn/.xmonad/dzen2/grid.xbm)"
 				) 
---		, ppTitle	=   wrap "^ca(1,xdotool key alt+shift+x)^fg(#222222)^i(/home/sunn/.xmonad/dzen2/corner_left.xbm)^bg(#222222)^fg(#AADB0F)^fn(fkp)x^fn()" "^fg(#222222)^i(/home/sunn/.xmonad/dzen2/corner_right.xbm)^ca()" .  dzenColor white0 "#222222" . shorten 40 . pad		
+--		, ppTitle	=   wrap "^ca(1,xdotool key alt+shift+x)^fg(#222222)^i(/home/sunn/.xmonad/dzen2/corner_left.xbm)^bg(#222222)^fg(#AADB0F)^fn(fkp)x^fn()" "^fg(#222222)^i(/home/sunn/.xmonad/dzen2/corner_right.xbm)^ca()" .  dzenColor foreground "#222222" . shorten 40 . pad		
 		, ppOrder	=  \(ws:l:t:_) -> [ws,l]
 		, ppOutput	=   hPutStrLn h
 	} )
@@ -115,7 +116,7 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 -- Spawn pipes and menus on boot, set default settings
 --------------------------------------------------------------------------------------------------------------------
 myXmonadBar = "dzen2 -x '0' -y '0' -h '14' -w '700' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
-myStatusBar = "conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '700' -w '666' -h '14' -ta 'r' -bg '"++background++"' -fg '"++foreground++"' -y '0' -fn "++myFont
+myStatusBar = "conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '600' -w '766' -h '14' -ta 'r' -bg '"++background++"' -fg '"++foreground++"' -y '0' -fn "++myFont
 --myConky = "conky -c /home/sunn/conkyrc"
 --myStartMenu = "/home/sunn/.xmonad/start /home/sunn/.xmonad/start_apps"
 
@@ -124,16 +125,16 @@ main = do
 	dzenLeftBar 	<- spawnPipe myXmonadBar
 	dzenRightBar	<- spawnPipe myStatusBar
 	xmproc 		<- spawnPipe "GTK2_RC_FILES=/home/sunn/.gtkdocky /usr/bin/docky"
-	xmproc 		<- spawnPipe "tint2 -c /home/sunn/.config/tint2/xmonad.tint2rc"
+--	xmproc 		<- spawnPipe "tint2 -c /home/sunn/.config/tint2/xmonad.tint2rc"
 --	conky 		<- spawn myConky
 --	dzenStartMenu	<- spawnPipe myStartMenu
 	xmonad $ ewmh defaultConfig
 		{ terminal		= myTerminal
-		, borderWidth		= 1
-		, normalBorderColor 	= yellow0
-		, focusedBorderColor  	= green0
+		, borderWidth		= 2
+		, normalBorderColor 	= color0
+		, focusedBorderColor  	= color7
 		, modMask 		= mod1Mask
-		, layoutHook 		= myLayout
+		, layoutHook 		= smartBorders $ myLayout
 		, workspaces 		= myWorkspaces
 		, manageHook		= newManageHook
 		, handleEventHook 	= fullscreenEventHook <+> docksEventHook
@@ -146,7 +147,8 @@ main = do
 		`additionalKeys`
 		[((mod1Mask .|. shiftMask	, xK_b), spawn "chromium")
 		,((mod1Mask  			, xK_b), spawn "dwb")
-		,((mod1Mask .|. shiftMask	, xK_n), spawn "urxvtc -fn '-*-gohufont-medium-r-normal-*-12-*-*-*-*-*-*-*' -fb '-*-gohufont-medium-r-normal-*-12-*-*-*-*-*-*-*' -fi '-*-gohufont-medium-r-normal-*-12-*-*-*-*-*-*-*'")
+--		,((mod1Mask .|. shiftMask	, xK_n), spawn "urxvtc -fn '-*-gohufont-medium-r-normal-*-12-*-*-*-*-*-*-*' -fb '-*-gohufont-medium-r-normal-*-12-*-*-*-*-*-*-*' -fi '-*-gohufont-medium-r-normal-*-12-*-*-*-*-*-*-*'")
+		,((mod1Mask .|. shiftMask	, xK_n), spawn "xterm")
 		,((mod1Mask .|. shiftMask  	, xK_t), spawn "urxvtc -e tmux")
 		,((mod4Mask  			, xK_z), spawn "zathura")
 		,((mod4Mask  			, xK_w), spawn "lowriter")
@@ -158,7 +160,7 @@ main = do
 		,((mod4Mask  			, xK_M), spawn "urxvtc -title centerim -name centerim -e centerim")
 		,((mod1Mask 			, xK_r), spawn "/home/sunn/scripts/lens")
 		,((mod1Mask .|. shiftMask	, xK_r), spawn "/home/sunn/scripts/dmenu/spotlight")
-		,((mod1Mask			, xK_q), spawn "killall dzen2; killall conky; cd ~/.xmonad; ghc -threaded xmonad.hs; mv xmonad xmonad-x86_64-linux; xmonad --restart" )
+		,((mod1Mask			, xK_q), spawn "killall dzen2; killall conky; killall tint2; cd ~/.xmonad; ghc -threaded xmonad.hs; mv xmonad xmonad-x86_64-linux; xmonad --restart" )
 		,((mod1Mask .|. shiftMask	, xK_i), spawn "xcalib -invert -alter")
 		,((mod1Mask .|. shiftMask	, xK_x), kill)
 		,((mod1Mask .|. shiftMask	, xK_c), return())
@@ -186,11 +188,11 @@ main = do
 		,((mod1Mask  			, xK_F7), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_date.sh")
 		,((mod1Mask  			, xK_F8), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_log.sh")
 		,((0 	 			, xK_Print), spawn "scrot & mplayer /usr/share/sounds/freedesktop/stereo/screen-capture.oga")
-		,((mod1Mask 	 			, xK_Print), spawn "scrot -s & mplayer /usr/share/sounds/freedesktop/stereo/screen-capture.oga")
+		,((mod1Mask 	 		, xK_Print), spawn "scrot -s & mplayer /usr/share/sounds/freedesktop/stereo/screen-capture.oga")
 		,((0                     	, xF86XK_AudioLowerVolume), spawn "amixer set Master 2- & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
 		,((0                     	, xF86XK_AudioRaiseVolume), spawn "amixer set Master 2+ & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
 		,((0                     	, xF86XK_AudioMute), spawn "amixer set Master toggle")
---		,((0                     	, xF86XK_Display), spawn "xrandr --newmode `cvt 1366 768 | tail -n1 | cut' ' -f2`; xrandr --addmode VGA1 1368x768_60.00; xrandr --output VGA1 --mode 1368x768_60.00")
+		,((0                     	, xF86XK_Display), spawn "/home/sunn/scripts/project")
 		,((0                     	, xF86XK_Sleep), spawn "pm-suspend")
 		,((0                     	, xF86XK_AudioPlay), spawn "ncmpcpp toggle")
 		,((0                     	, xF86XK_AudioNext), spawn "ncmpcpp next")
@@ -201,6 +203,8 @@ main = do
 		,((mod1Mask			, 7), (\_ -> moveTo Prev NonEmptyWS))
 		,((mod1Mask			, 5), (\_ -> moveTo Prev NonEmptyWS))
 		,((mod1Mask			, 4), (\_ -> moveTo Next NonEmptyWS))
+		,((0				, 2), (\w -> focus w >> windows W.swapMaster))
+--		,((0				, 3), (\w -> focus w >> FlexibleResize.mouseResizeWindow w))
 		]
 
 
@@ -215,33 +219,38 @@ myBitmapsDir	= "~/.xmonad/dzen2/"
 myFont		= "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
 --myFont		= "'sans:italic:bold:underline'"
 --myFont		= "xft:droid sans mono:size=9"
---myFont		= "xft:Droid Sans:size=12"
+--myFont		= "xft:Droxd Sans:size=12"
 --myFont		= "-*-cure-*-*-*-*-*-*-*-*-*-*-*-*"
 
-foreground= "#D3D3D3"
-background= "#111111"
+background= "#30303a"                                                
+foreground= "#d6d6d6"
 
-black0= "#181818"
-black1= "#181818"
-red0= "#D7D7D7"
-red1= "#D7D7D7"
-green0= "#AADB0F"
-green1= "#AADB0F"
---green0= "#A80036"
---green1= "#A80036"
---green0= "#E2791B"
---green1= "#E2791B"
-yellow0= "#666666"
-yellow1= "#666666"
-blue0= "#FFFFFF"
-blue1= "#FFFFFF"
---magenta0= "#91BA0D"
---magenta1= "#91BA0D"
---magenta0= "#740629"
---magenta1= "#740629"
-magenta0= "#BF3C0A"
-magenta1= "#BF3C0A"
-cyan0= "#D4D4D4"
-cyan1= "#D4D4D4"
-white0= "#D3D3D3"
-white1= "#D3D3D3"
+color0 = "#4a4a4a"
+color8 = "#777777"
+
+--color1 = "#c29198"
+--color9 = "#a0616a"
+color1 = "#df6f6f"
+color9 = "#eba8a8"
+
+--color2 = "#abd8a5"
+--color10 = "#80a27b"
+color2 = "#6fdfa4"
+color10 = "#a8ebc8"
+
+--color3 = "#acacac"
+--color11 = "#858585"
+color3 = "#dfdc6f"
+color11 = "#ebeaa8"
+
+color4 = "#6fa5df"
+color12 = "#a8c9eb"
+
+color5 = "#846fdf"
+color13 = "#b5a8eb"
+
+color6 = "#6fcadf"
+color14 = "#a6e6eb"
+
+color7 = "#aaaaaa"
+color15 = "#c3c3c3"

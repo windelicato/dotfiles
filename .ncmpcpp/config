@@ -71,7 +71,7 @@ alternative_header_second_line_format = "{{$4%a$9}{ ($5%y$9$/b)}}|{%D}"
 #selected_item_suffix = "$9"
 ## colors are not supported for below variable
 #song_window_title_format = "{%a - }{%t}|{%f}"
-song_columns_list_format = "(7f)[white]{l} (25)[yellow]{a} (40)[magenta]{t|f} (30)[blue]{b}"
+song_columns_list_format = "(7f)[black]{l} (25)[green]{a} (40)[white]{t|f} (30)[blue]{b}"
 #
 ##### various settings #####
 #
@@ -88,7 +88,7 @@ playlist_display_mode = "columns" (classic/columns)
 #seek_time = "1"
 #autocenter_mode = "no"
 #centered_cursor = "no"
-progressbar_look = ".. "
+progressbar_look = "─╼ "
 #default_place_to_search_in = "database" (database/playlist)
 user_interface = "classic" (classic/alternative)
 #media_library_left_column = "a" (possible values: a,y,g,c,p, legend above)
@@ -166,18 +166,18 @@ ignore_leading_the = "yes"
 ##### colors definitions #####
 colors_enabled = "yes"
 empty_tag_color = "cyan"
-header_window_color = "yellow"
-volume_color = "yellow"
+header_window_color = "black"
+volume_color = "black"
 state_line_color = "default"
 state_flags_color = "default"
-main_window_color = "white0"
+main_window_color = "white"
 color1 = "default"
 color2 = "default"
-main_window_highlight_color = "yellow"
-progressbar_color = "green"
+main_window_highlight_color = "blue"
+progressbar_color = "magenta"
 statusbar_color = "default"
 alternative_ui_separator_color = "black"
-active_column_color = "white"
+active_column_color = "green"
 visualizer_color = "magenta"
-window_border_color = "green"
+window_border_color = "black"
 active_window_border = "black"

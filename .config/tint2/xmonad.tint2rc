@@ -6,20 +6,20 @@
 # ID 1
 rounded = 6
 border_width = 0
-background_color = #111111 
+background_color = #30303a 
 border_color = #FFFFFF 
 
 # ID 2
 rounded = 6
 border_width = 1
-background_color = #666666 
-border_color = #666666 
+background_color = #777777 
+border_color = #777777 
 
 # ID 3
 rounded = 6
 border_width = 1
-background_color = #111111
-border_color = #666666 
+background_color = #30303a
+border_color = #777777 
 
 # Panel
 panel_monitor = all
@@ -65,10 +65,10 @@ task_iconified_icon_asb = 100 0 0
 
 # Fonts
 task_font = nu 9
-task_font_color = #666666 
-task_active_font_color = #91BA0D 
-task_urgent_font_color = #FFFFFF
-task_iconified_font_color = #FFFFFF
+task_font_color = #777777 
+task_active_font_color = #d6d6d6 
+task_urgent_font_color = #d6d6d6
+task_iconified_font_color = #d6d6d6
 font_shadow = 0
 
 # System Tray

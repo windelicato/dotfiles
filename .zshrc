@@ -5,8 +5,22 @@ promptinit
 colors
 
 PROMPT="
-%{$fg[green]%} >  %{$reset_color%}"
-RPROMPT="%{$fg[yellow]%}%~%{$reset_color%}"
+%{$fg[red]%} » %{$reset_color%}"
+RPROMPT="%B%{$fg[black]%}%~%{$reset_color%}"
+
+[[ -t 1 ]] || return
+case $TERM in
+	*xterm*|*rxvt*|(dt|k|E|a)term)
+		preexec () {
+			print -Pn "\e]2;$1\a"    # edited; %n@%m omitted, as I know who and where I am
+		}
+		;;
+	screen*)
+		preexec () {
+			print -Pn "\e\"$1\e\134"
+		}
+		;; 
+esac
 
 setopt AUTO_CD
 setopt CORRECT
@@ -42,7 +56,7 @@ conf() {
 	case $1 in
 		xmonad)		vim ~/.xmonad/xmonad.hs ;;
 		conky)		vim ~/.xmonad/.conky_dzen ;;
-		homepage)	olddir=$(pwd) && cd ~/bin/homepage.py && vim homepage.py && ./homepage.py; cd $olddir ;;
+		homepage)	olddir=$(pwd) && cd ~/scripts/homepage.py && vim homepage.py && ./homepage.py; cd $olddir ;;
 		menu)		vim ~/scripts/menu ;;
 		mpd)		vim ~/.mpdconf ;;
 		mutt)		vim ~/.mutt/acct/wei001 ;;
@@ -59,6 +73,7 @@ conf() {
 		theme3)		vim ~/.themes/FlatStudioCustom/gtk-3.0/gtk.css ;;
 		gtk2)		vim ~/.gtkrc-2.0 ;;
 		gtk3)		vim ~/.config/gtk-3.0/settings.ini ;;
+			tint2)		vim ~/.config/tint2/xmonad.tint2rc ;;
 		zsh)		vim ~/.zshrc && source ~/.zshrc ;;
 		*)			echo "Unknown application: $1" ;;
 	esac
@@ -77,14 +92,10 @@ function music()
 
 # Pamcman Aliases
 # alias pacman='pacman'
-
-# Sudo alias
-alias svim='sudo vim'
-
-# Mounts
-alias music='music'
+# Sudo alias 
+alias svim='sudo vim' 
 alias linuxremotefs='sshfs wei001@linuxremote1.eg.bucknell.edu:/nfs/unixspace ~/bucknell'
-alias linuxremote='ssh wei001@linuxremote1.eg.bucknell.edu'
+alias linuxremote='ssh -X wei001@linuxremote1.eg.bucknell.edu'
 alias netspace="lftp -u wei001 ftp.netspace.bucknell.edu"
 alias HUB='sudo mount -t cifs //bucknellhub.com/HUB /mnt/HUB -o user=hubguest'
 alias HUBDropbox='sudo mount -t cifs //bucknellhub.com/Dropbox /mnt/HUBDropbox -o user=hubguest'
@@ -163,5 +174,5 @@ COLORFGBG="default;default"
 export EDITOR="vim"
 
 if [[ "$TERM" == "rxvt-unicode-256color" ]]; then
-	xseticon -id $WINDOWID /home/sunn/.icons/AwOkenWhite/clear/128x128/apps/terminal.png
+	xseticon -id $WINDOWID /home/sunn/.icons/AwOkenWhite/clear/128x128/apps/terminal1.png
 fi

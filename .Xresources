@@ -1,4 +1,5 @@
-#include "/home/sunn/.colors/crypt"
+#include "/home/sunn/.colors/fallac"
+#include "/home/sunn/.xtermconf"
 
 ! #########################################
 urxvt.termName: rxvt-unicode-256color
@@ -15,11 +16,15 @@ urxvt*fadeColor: 		#000000
 urxvt*cursorBlink:		true
 urxvt*scrollBar:		false
 
+urxvt*font: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+urxvt*boldFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+urxvt*italicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+urxvt*bolditalicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
 
-urxvt*font: -*-lime-*-*-*-*-10-*-*-*-*-*-*-*
-urxvt*boldFont: -*-lime-*-*-*-*-10-*-*-*-*-*-*-*
-urxvt*italicFont: -*-lime-*-*-*-*-10-*-*-*-*-*-*-*
-urxvt*bolditalicFont: -*-lime-*-*-*-*-10-*-*-*-*-*-*-*
+!urxvt*font: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
 
 !urxvt*font: -*-tamsyn-medium-r-normal-*-*-87-*-*-*-*-*-*
 !urxvt*boldFont: -*-tamsyn-bold-r-normal-*-*-87-*-*-*-*-*-*
