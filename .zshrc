@@ -5,7 +5,7 @@ promptinit
 colors
 
 PROMPT="
-%{$fg[red]%} » %{$reset_color%}"
+%{$fg[cyan]%} >  %{$reset_color%}"
 RPROMPT="%B%{$fg[black]%}%~%{$reset_color%}"
 
 [[ -t 1 ]] || return
@@ -15,11 +15,6 @@ case $TERM in
 			print -Pn "\e]2;$1\a"    # edited; %n@%m omitted, as I know who and where I am
 		}
 		;;
-	screen*)
-		preexec () {
-			print -Pn "\e\"$1\e\134"
-		}
-		;; 
 esac
 
 setopt AUTO_CD
@@ -95,7 +90,7 @@ function music()
 # Sudo alias 
 alias svim='sudo vim' 
 alias linuxremotefs='sshfs wei001@linuxremote1.eg.bucknell.edu:/nfs/unixspace ~/bucknell'
-alias linuxremote='ssh -X wei001@linuxremote1.eg.bucknell.edu'
+alias linuxremote='ssh -Y wei001@linuxremote1.eg.bucknell.edu'
 alias netspace="lftp -u wei001 ftp.netspace.bucknell.edu"
 alias HUB='sudo mount -t cifs //bucknellhub.com/HUB /mnt/HUB -o user=hubguest'
 alias HUBDropbox='sudo mount -t cifs //bucknellhub.com/Dropbox /mnt/HUBDropbox -o user=hubguest'
@@ -108,7 +103,7 @@ alias muttsuns='mutt -F ~/.mutt/acct/suns'
 alias bool='espresso -o eqntott'
 #alias compton='compton -cCfF -I 0.065 -O 0.065 -D 6' 
 #alias compton='compton -cCGfF -o 0.38 -O 200 -I 200 -t 0.02 -l 0.02 -r 3.2 -D2 -m 0.88'
-alias scrot="scrot -q100  -d 5"
+#alias scrot="scrot -q100  -d 5"
 alias alsamixer="alsamixer -g"
 alias equalizer="alsamixer -D equal"
 alias mysqlt="mysql -u root -p cargo_science"

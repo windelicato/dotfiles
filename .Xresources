@@ -1,4 +1,4 @@
-#include "/home/sunn/.colors/fallac"
+#include "/home/sunn/.colors/clean"
 #include "/home/sunn/.xtermconf"
 
 ! #########################################
@@ -46,14 +46,10 @@ urxvt*bolditalicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*font: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* !urxvt*boldFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* !urxvt*italicFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* !urxvt*bolditalicFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* !urxvt*font: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-* !urxvt*boldFont: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-* !urxvt*italicFont: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-*
 !urxvt*bolditalicFont: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-*
 
-Xft.dpi:	96
+Xft.dpi:	72
 Xft.rgba:	rgb
 Xft.antialias: 	true
 Xft.hinting: 	true
 Xft.autohint: 	false
 Xft.hintstyle: 	hintslight
 Xft.lcdfilter: 	lcddefault
-
-xclock*analog: false
-xclock*background: #000000
-xclock*foreground: #FFFFFF

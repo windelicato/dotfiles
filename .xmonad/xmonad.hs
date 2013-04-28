@@ -91,10 +91,10 @@ newManageHook = myManageHook <+> manageHook defaultConfig
 --------------------------------------------------------------------------------------------------------------------
 myLogHook h = dynamicLogWithPP ( defaultPP
 	{
-		  ppCurrent		= dzenColor foreground background .	pad
-		, ppVisible		= dzenColor color8 background . 	pad
-		, ppHidden		= dzenColor color8 background . 	pad
-		, ppHiddenNoWindows	= dzenColor color0 background .	pad
+		  ppCurrent		= dzenColor color2 background .	pad
+		, ppVisible		= dzenColor color14 background . 	pad
+		, ppHidden		= dzenColor color14 background . 	pad
+		, ppHiddenNoWindows	= dzenColor color6 background .	pad
 		, ppWsSep		= ""
 		, ppSep			= "    "
 		, ppLayout		= wrap "^ca(1,xdotool key alt+space)" "^ca()" . dzenColor foreground background .
@@ -131,8 +131,8 @@ main = do
 	xmonad $ ewmh defaultConfig
 		{ terminal		= myTerminal
 		, borderWidth		= 2
-		, normalBorderColor 	= color0
-		, focusedBorderColor  	= color7
+		, normalBorderColor 	= background
+		, focusedBorderColor  	= color6
 		, modMask 		= mod1Mask
 		, layoutHook 		= smartBorders $ myLayout
 		, workspaces 		= myWorkspaces
@@ -141,6 +141,7 @@ main = do
 		, startupHook		= setWMName "LG3D"
 		, logHook		= myLogHook dzenLeftBar -- >> fadeInactiveLogHook 0xdddddddd
 		}
+
 --------------------------------------------------------------------------------------------------------------------
 -- Keyboard options
 --------------------------------------------------------------------------------------------------------------------
@@ -203,7 +204,7 @@ main = do
 		,((mod1Mask			, 7), (\_ -> moveTo Prev NonEmptyWS))
 		,((mod1Mask			, 5), (\_ -> moveTo Prev NonEmptyWS))
 		,((mod1Mask			, 4), (\_ -> moveTo Next NonEmptyWS))
-		,((0				, 2), (\w -> focus w >> windows W.swapMaster))
+--		,((0				, 2), (\w -> focus w >> windows W.swapMaster))
 --		,((0				, 3), (\w -> focus w >> FlexibleResize.mouseResizeWindow w))
 		]
 
@@ -215,42 +216,65 @@ myTerminal 	= "urxvtc"
 myBitmapsDir	= "~/.xmonad/dzen2/"
 --myFont		= "-*-tamsyn-medium-*-normal-*-10-*-*-*-*-*-*-*"
 --myFont		= "-*-terminus-medium-*-normal-*-9-*-*-*-*-*-*-*"
---myFont		= "-*-lime-*-*-*-*-*-*-*-*-*-*-*-*"
-myFont		= "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
+--myFont		= "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
+--myFont			= "-artwiz-lime-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
+myFont			= "-artwiz-limey-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
 --myFont		= "'sans:italic:bold:underline'"
 --myFont		= "xft:droid sans mono:size=9"
 --myFont		= "xft:Droxd Sans:size=12"
 --myFont		= "-*-cure-*-*-*-*-*-*-*-*-*-*-*-*"
 
-background= "#30303a"                                                
-foreground= "#d6d6d6"
+--background= "#30303a"                                                
+--foreground= "#d6d6d6"
+--
+--color0 = "#4a4a4a"
+--color8 = "#777777"
+--
+----color1 = "#c29198"
+----color9 = "#a0616a"
+--color1 = "#df6f6f"
+--color9 = "#eba8a8"
+--
+----color2 = "#abd8a5"
+----color10 = "#80a27b"
+--color2 = "#6fdfa4"
+--color10 = "#a8ebc8"
+--
+----color3 = "#acacac"
+----color11 = "#858585"
+--color3 = "#dfdc6f"
+--color11 = "#ebeaa8"
+--
+--color4 = "#6fa5df"
+--color12 = "#a8c9eb"
+--
+--color5 = "#846fdf"
+--color13 = "#b5a8eb"
+--
+--color6 = "#6fcadf"
+--color14 = "#a6e6eb"
+--
+--color7 = "#aaaaaa"
+--color15 = "#c3c3c3"
 
-color0 = "#4a4a4a"
-color8 = "#777777"
 
---color1 = "#c29198"
---color9 = "#a0616a"
-color1 = "#df6f6f"
-color9 = "#eba8a8"
+background=            "#262729"
+foreground=            "#f8f8f2"
+color0=                "#626262"
+color8=                "#626262"
+color1=                "#f92671"
+color9=                "#ff669d"
+color2=                "#a6e22e"
+color10=               "#beed5f"
+color3=                "#fd971f"
+color11=               "#e6db74"
+color4=                "#1692d0"
+color12=               "#66d9ef"
+color5=                "#9e6ffe"
+color13=               "#df92f6"
+color6=                "#5e7175"
+color14=               "#a3babf"
+color7=                "#ffffff"
+color15=               "#ffffff"
+cursorColor=           "#b5d2dd"
 
---color2 = "#abd8a5"
---color10 = "#80a27b"
-color2 = "#6fdfa4"
-color10 = "#a8ebc8"
-
---color3 = "#acacac"
---color11 = "#858585"
-color3 = "#dfdc6f"
-color11 = "#ebeaa8"
-
-color4 = "#6fa5df"
-color12 = "#a8c9eb"
-
-color5 = "#846fdf"
-color13 = "#b5a8eb"
-
-color6 = "#6fcadf"
-color14 = "#a6e6eb"
-
-color7 = "#aaaaaa"
-color15 = "#c3c3c3"
