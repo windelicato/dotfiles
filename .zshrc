@@ -1,4 +1,4 @@
-source /usr/share/zsh/plugins/zsh-syntax-highlight/zsh-syntax-highlighting.zsh
+source ~/bin/zsh-syntax-highlight/zsh-syntax-highlighting.zsh
 autoload -U compinit promptinit colors
 compinit
 promptinit
