@@ -1,8 +1,9 @@
 #!/bin/sh
 
-WIDTH=60
-FONT='-*-lime-*-*-*-*-*-*-*-*-*-*-*-*'
+WIDTH=70
+FONT="-artwiz-limey-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
 #FONT='sans:size=11'
+#FONT='sawasdee:size=10'
 #FONT='-*-nu-*-*-*-*-*-*-*-*-*-*-*-*'
 
 
@@ -49,8 +50,8 @@ execute () {
 
 
 (
-echo "^bg(#AADB0F)^fg(#111111)                    "   
+echo "^bg(#626e74)^fg(#FFFFFF)                    "   
 sed -e 's/:.*$//' \
     -e 's/^.--*/^r('${SEPARATOR_WIDTH}'x1)/' "$MENUFILE" 
 ) | \
-dzen2 -l $LINES -w $WIDTH -x $X -y $Y -fn $FONT -bg '#000000' -fg '#bdbdbd' -p -m -sa l -e 'onstart=uncollapse,scrollhome;button1=menuprint_noparse,exit;button3=exit;key_Return=menuprint_noparse,exit;key_k=scrollup;key_j=scrolldown' | execute
+dzen2 -l $LINES -w $WIDTH -x $X -y $Y -fn $FONT -bg '#181512' -fg '#bea492' -p -m -sa l -e 'onstart=uncollapse,scrollhome;button1=menuprint_noparse,exit;button3=exit;key_Return=menuprint_noparse,exit;key_k=scrollup;key_j=scrolldown' | execute

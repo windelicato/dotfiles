@@ -1,10 +1,10 @@
-"	set number 				" turn on line numbers and highlight colors
+	"set number 				" turn on line numbers and highlight colors
 	set ruler 				" Always show current positions along the bottom
 	set showcmd 				" show the command being typed
 	set autoindent 				" autoindent spaces
 	set cursorline
 "	inoremap ;; <esc>			" fbind ;; to esecape key 
-	set t_Co=256				" 256 colors
+	set t_Co=256				" 256 colors 
 	nmap <C-h> <C-w>h			" control h, j, k, l tab navigation
 	nmap <C-j> <C-w>j
 	nmap <C-k> <C-w>k
@@ -47,9 +47,9 @@
 
 	hi Pmenu ctermfg=10 ctermbg=0
 	hi PmenuSel ctermfg=0 ctermbg=14
-	hi LineNr ctermfg=3 ctermbg=0
-	hi CursorLine ctermfg=none ctermbg=16 cterm=none
-	hi CursorLineNr ctermfg=5 ctermbg=0 
+	hi LineNr ctermfg=0 ctermbg=none
+	hi CursorLine ctermfg=none ctermbg=none cterm=none
+	hi CursorLineNr ctermfg=none ctermbg=0 
 	hi CursorColumn ctermfg=none ctermbg=0
 "}
 

@@ -5,6 +5,7 @@ import XMonad.Layout.Fullscreen
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.SimplestFloat
+import XMonad.Layout.Tabbed
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.Circle
 -- WINDOW RULES
@@ -36,7 +37,7 @@ import Data.List			-- clickable workspaces
 --------------------------------------------------------------------------------------------------------------------
 myLayout = onWorkspace (myWorkspaces !! 0) (avoidStruts (tiledSpace ||| tiled) ||| fullTile)
 		$ onWorkspace (myWorkspaces !! 1) (avoidStruts (tiledSpace ||| fullTile) ||| fullScreen)
-		$ onWorkspace (myWorkspaces !! 2) (avoidStruts simplestFloat)
+		$ onWorkspace (myWorkspaces !! 2) (avoidStruts (simplestFloat))
 		$ avoidStruts ( tiledSpace  ||| tiled ||| fullTile ) 
 	where
 		tiled  		= spacing 5 $ ResizableTall nmaster delta ratio [] 
@@ -55,12 +56,18 @@ myLayout = onWorkspace (myWorkspaces !! 0) (avoidStruts (tiledSpace ||| tiled) |
 --------------------------------------------------------------------------------------------------------------------
 -- WORKSPACE DEFINITIONS
 --------------------------------------------------------------------------------------------------------------------
-myWorkspaces = clickable $ ["term"
-		,"web"	
-		,"float"	
-		,"docs"	
-		,"tunes"
-		,"mail"]	
+--myWorkspaces = clickable $ ["term"
+--		,"web"	
+--		,"float"	
+--		,"docs"	
+--		,"tunes"
+--		,"mail"]	
+myWorkspaces = clickable $ ["I"
+		,"II"	
+		,"III"	
+		,"IV"	
+		,"V"
+		,"VI"]	
 	where clickable l = [ "^ca(1,xdotool key alt+" ++ show (n) ++ ")" ++ ws ++ "^ca()" |
 				(i,ws) <- zip [1..] l,
 				let n = i ]
@@ -71,7 +78,12 @@ myWorkspaces = clickable $ ["term"
 myManageHook = composeAll 	[ resource =? "dmenu" --> doFloat
 				, resource =? "skype" 	--> doFloat
 				, resource =? "mplayer"	--> doFloat
-				, resource =? "feh"	--> doFloat
+				, resource =? "steam"	--> doFloat
+				, resource =? "hl2_linux" --> doFloat
+				, resource =? "feh"	--> doIgnore
+				, resource =? "dzen2"	--> doIgnore
+				, resource =? "transmission"	--> doShift (myWorkspaces !! 2)
+				, resource =? "thunar"	--> doShift (myWorkspaces !! 2)
 				, resource =? "chromium"--> doShift (myWorkspaces !! 1)
 				, resource =? "lowriter"--> doShift (myWorkspaces !! 3)
 				, resource =? "localc"--> doShift (myWorkspaces !! 3)
@@ -91,10 +103,10 @@ newManageHook = myManageHook <+> manageHook defaultConfig
 --------------------------------------------------------------------------------------------------------------------
 myLogHook h = dynamicLogWithPP ( defaultPP
 	{
-		  ppCurrent		= dzenColor color2 background .	pad
-		, ppVisible		= dzenColor color14 background . 	pad
-		, ppHidden		= dzenColor color14 background . 	pad
-		, ppHiddenNoWindows	= dzenColor color6 background .	pad
+		  ppCurrent		= dzenColor color9 background .	pad
+		, ppVisible		= dzenColor color6 background . 	pad
+		, ppHidden		= dzenColor color6 background . 	pad
+		, ppHiddenNoWindows	= dzenColor color0 background .	pad
 		, ppWsSep		= ""
 		, ppSep			= "    "
 		, ppLayout		= wrap "^ca(1,xdotool key alt+space)" "^ca()" . dzenColor foreground background .
@@ -106,8 +118,9 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 					"Circle"			->	"^i(/home/sunn/.xmonad/dzen2/full.xbm)"
 					_				->	"^i(/home/sunn/.xmonad/dzen2/grid.xbm)"
 				) 
---		, ppTitle	=   wrap "^ca(1,xdotool key alt+shift+x)^fg(#222222)^i(/home/sunn/.xmonad/dzen2/corner_left.xbm)^bg(#222222)^fg(#AADB0F)^fn(fkp)x^fn()" "^fg(#222222)^i(/home/sunn/.xmonad/dzen2/corner_right.xbm)^ca()" .  dzenColor foreground "#222222" . shorten 40 . pad		
-		, ppOrder	=  \(ws:l:t:_) -> [ws,l]
+--		, ppTitle	=   wrap "^ca(1,xdotool key alt+shift+x)^fg(#7e7175)^i(/home/sunn/.xmonad/dzen2/corner_left.xbm)^bg(#7e7175)^fg(#f92671)^fn(fkp)x^fn()" "^fg(#7e7175)^i(/home/sunn/.xmonad/dzen2/corner_right.xbm)^ca()" .  dzenColor foreground "#7e7175" . shorten 40 . pad		
+		, ppTitle	=  wrap "^ca(1,xdotool key alt+shift+x)^fg(#D23D3D)^fn(fkp)x ^fn()" "^ca()" . dzenColor foreground background . shorten 40 . pad
+		, ppOrder	=  \(ws:l:t:_) -> [ws,l, t]
 		, ppOutput	=   hPutStrLn h
 	} )
 
@@ -115,8 +128,8 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 --------------------------------------------------------------------------------------------------------------------
 -- Spawn pipes and menus on boot, set default settings
 --------------------------------------------------------------------------------------------------------------------
-myXmonadBar = "dzen2 -x '0' -y '0' -h '14' -w '700' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
-myStatusBar = "conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '600' -w '766' -h '14' -ta 'r' -bg '"++background++"' -fg '"++foreground++"' -y '0' -fn "++myFont
+myXmonadBar = "dzen2 -x '0' -y '0' -h '14' -w '500' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
+myStatusBar = "conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '500' -w '866' -h '14' -ta 'r' -bg '"++background++"' -fg '"++foreground++"' -y '0' -fn "++myFont
 --myConky = "conky -c /home/sunn/conkyrc"
 --myStartMenu = "/home/sunn/.xmonad/start /home/sunn/.xmonad/start_apps"
 
@@ -124,15 +137,15 @@ myStatusBar = "conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '600' -w '766
 main = do
 	dzenLeftBar 	<- spawnPipe myXmonadBar
 	dzenRightBar	<- spawnPipe myStatusBar
-	xmproc 		<- spawnPipe "GTK2_RC_FILES=/home/sunn/.gtkdocky /usr/bin/docky"
+--	xmproc 		<- spawnPipe "GTK2_RC_FILES=/home/sunn/.gtkdocky /usr/bin/docky"
 --	xmproc 		<- spawnPipe "tint2 -c /home/sunn/.config/tint2/xmonad.tint2rc"
 --	conky 		<- spawn myConky
 --	dzenStartMenu	<- spawnPipe myStartMenu
 	xmonad $ ewmh defaultConfig
 		{ terminal		= myTerminal
-		, borderWidth		= 2
+		, borderWidth		= 3
 		, normalBorderColor 	= background
-		, focusedBorderColor  	= color6
+		, focusedBorderColor  	= color9
 		, modMask 		= mod1Mask
 		, layoutHook 		= smartBorders $ myLayout
 		, workspaces 		= myWorkspaces
@@ -178,16 +191,18 @@ main = do
 		,((mod1Mask .|. shiftMask  	, xK_d), withFocused (keysResizeWindow (0,-20) (0,0)))
 		,((mod1Mask .|. shiftMask  	, xK_s), withFocused (keysResizeWindow (0,20) (0,0)))
 		,((mod1Mask .|. shiftMask  	, xK_f), withFocused (keysResizeWindow (20,0) (0,0)))
+		,((mod1Mask			, xK_0), spawn "xdotool key alt+6")
+		,((mod1Mask			, xK_9), spawn "xdotool key alt+5")
+		,((mod1Mask			, xK_8), spawn "xdotool key alt+4")
 		,((0				, xK_Super_L), spawn "menu ~/.xmonad/apps")
 		,((mod1Mask			, xK_Super_L), spawn "menu ~/.xmonad/configs")
 		,((mod1Mask  			, xK_F1), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_music.sh")
-		,((mod1Mask  			, xK_F2), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_vol.sh")
+		,((mod1Mask  			, xK_F2), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_date.sh")
 		,((mod1Mask  			, xK_F3), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_network.sh")
-		,((mod1Mask  			, xK_F4), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_battery.sh")
-		,((mod1Mask  			, xK_F5), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_hardware.sh")
-		,((mod1Mask  			, xK_F6), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_pacman.sh")
-		,((mod1Mask  			, xK_F7), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_date.sh")
-		,((mod1Mask  			, xK_F8), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_log.sh")
+		,((mod1Mask  			, xK_F4), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_vol.sh")
+		,((mod1Mask  			, xK_F5), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_battery.sh")
+		,((mod1Mask  			, xK_F6), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_hardware.sh")
+		,((mod1Mask  			, xK_F7), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_log.sh")
 		,((0 	 			, xK_Print), spawn "scrot & mplayer /usr/share/sounds/freedesktop/stereo/screen-capture.oga")
 		,((mod1Mask 	 		, xK_Print), spawn "scrot -s & mplayer /usr/share/sounds/freedesktop/stereo/screen-capture.oga")
 		,((0                     	, xF86XK_AudioLowerVolume), spawn "amixer set Master 2- & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
@@ -214,67 +229,66 @@ main = do
 
 myTerminal 	= "urxvtc"
 myBitmapsDir	= "~/.xmonad/dzen2/"
---myFont		= "-*-tamsyn-medium-*-normal-*-10-*-*-*-*-*-*-*"
+
+--myFont 		= "-*-tamsyn-medium-r-normal-*-12-87-*-*-*-*-*-*"
 --myFont		= "-*-terminus-medium-*-normal-*-9-*-*-*-*-*-*-*"
---myFont		= "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
+myFont		= "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
 --myFont			= "-artwiz-lime-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
-myFont			= "-artwiz-limey-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
+--myFont			= "-artwiz-limey-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
+--myFont		= "-benis-lemon-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
 --myFont		= "'sans:italic:bold:underline'"
 --myFont		= "xft:droid sans mono:size=9"
 --myFont		= "xft:Droxd Sans:size=12"
 --myFont		= "-*-cure-*-*-*-*-*-*-*-*-*-*-*-*"
 
---background= "#30303a"                                                
---foreground= "#d6d6d6"
---
---color0 = "#4a4a4a"
---color8 = "#777777"
---
-----color1 = "#c29198"
-----color9 = "#a0616a"
---color1 = "#df6f6f"
---color9 = "#eba8a8"
---
-----color2 = "#abd8a5"
-----color10 = "#80a27b"
---color2 = "#6fdfa4"
---color10 = "#a8ebc8"
---
-----color3 = "#acacac"
-----color11 = "#858585"
---color3 = "#dfdc6f"
---color11 = "#ebeaa8"
---
---color4 = "#6fa5df"
---color12 = "#a8c9eb"
---
---color5 = "#846fdf"
---color13 = "#b5a8eb"
---
---color6 = "#6fcadf"
---color14 = "#a6e6eb"
---
---color7 = "#aaaaaa"
---color15 = "#c3c3c3"
 
 
-background=            "#262729"
-foreground=            "#f8f8f2"
-color0=                "#626262"
-color8=                "#626262"
-color1=                "#f92671"
-color9=                "#ff669d"
-color2=                "#a6e22e"
-color10=               "#beed5f"
-color3=                "#fd971f"
-color11=               "#e6db74"
-color4=                "#1692d0"
-color12=               "#66d9ef"
-color5=                "#9e6ffe"
-color13=               "#df92f6"
-color6=                "#5e7175"
-color14=               "#a3babf"
-color7=                "#ffffff"
-color15=               "#ffffff"
-cursorColor=           "#b5d2dd"
+background= "#181512"
+foreground= "#bea492"
 
+color0= "#332d29"
+color8= "#817267"
+
+color1= "#8c644c"
+color9= "#9f7155"
+
+color2= "#c4be90"
+color10= "#bec17e"
+
+color3= "#bfba92"
+color11= "#fafac0"
+
+color4= "#646a6d"
+color12= "#626e74"
+
+color5= "#6d6871"
+color13= "#756f7b"
+
+color6= "#3b484a"
+color14= "#444d4e"
+
+color7= "#504339"
+color15= "#9a875f"
+
+
+
+--background=            "#262729"
+--foreground=            "#f8f8f2"
+--color0=                "#626262"
+--color8=                "#626262"
+--color1=                "#f92671"
+--color9=                "#ff669d"
+--color2=                "#a6e22e"
+--color10=               "#beed5f"
+--color3=                "#fd971f"
+--color11=               "#e6db74"
+--color4=                "#1692d0"
+--color12=               "#66d9ef"
+--color5=                "#9e6ffe"
+--color13=               "#df92f6"
+--color6=                "#5e7175"
+--color14=               "#a3babf"
+--color7=                "#ffffff"
+--color15=               "#ffffff"
+--cursorColor=           "#b5d2dd"
+--

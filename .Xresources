@@ -1,4 +1,4 @@
-#include "/home/sunn/.colors/clean"
+#include "/home/sunn/.colors/erosion"
 #include "/home/sunn/.xtermconf"
 
 ! #########################################
@@ -6,20 +6,25 @@ urxvt.termName: rxvt-unicode-256color
 urxvt*perl-lib:			/usr/lib/urxvt/perl
 urxvt*perl-ext-common:		default,matcher,clipboard
 urxvt*perl-matcher: 		1
+urxvt*matcher-button: 		1
 urxvt*urlLauncher:		/usr/bin/chromium
 urxvt*cursorUnderline: 1
 !urxvt*letterspace: -1
-!urxvt*transparent: 		true
 urxvt*fading: 			10
 urxvt*fadeColor: 		#000000	
-!urxvt*shading:			20
 urxvt*cursorBlink:		true
 urxvt*scrollBar:		false
+urxvt*depth:		32
 
-urxvt*font: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
-urxvt*boldFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
-urxvt*italicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
-urxvt*bolditalicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+urxvt*font: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+urxvt*boldFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+urxvt*italicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+urxvt*bolditalicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+
+!urxvt*font: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
 
 !urxvt*font: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*boldFont: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*

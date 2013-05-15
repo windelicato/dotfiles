@@ -171,21 +171,22 @@ abstracts = {
 
   # the basic styling of how to print message, $0 = nick mode, $1 = nick
   # msgnick = " $1 %N %|";
-  msgnick = "$1 %k│%n %|";
+  msgnick = "$1 %K│%n %|";
   # msgnick = "   $1 %K· %n";
 
   # $0 = nick mode, $1 = nick
-  ownmsgnick = "$1 %k│%n %|";
+  ownmsgnick = "$1 %K│%n %|";
   # msgnick = "   $1 %K· %n";
   ownnick = "%Y$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
-  pubmsgnick = "$1 %k│%n %|";
+  pubmsgnick = "$1 %K│%n %|";
   pubnick = "%N$*%n";
 
   # public highlighted message in channel
-  pubmsghinick = "$1 %k│%n %|%r";
-  menick = "%R$*%n";
+  pubmsghinick = "$1 %K│%n %|%r";
+  #menick = "%R$*%n";
+  menick = "%K$*   %|%r";
 
   # channel name is printed with message
   msgchannel = "%K:%m$*%n";
@@ -390,12 +391,12 @@ formats = {
     part = "%R{channick $[-11]0}%n %y< %nhas left ";
     kick = "%R{nick $[-11]2}%n%| > kicked {channick_hilight $0}%n {reason $3}";
     quit = "%R{channick $[-11]0}%n%| < has quit ";
-    #    quit_once = "{channel $3} {channick $0} {chanhost $1} %kquit {reason %C$2}";
+    #    quit_once = "{channel $3} {channick $0} {chanhost $1} %Kquit {reason %C$2}";
 
     nick_changed = "{nick $[-11]0} %G>%n {channick $1}";
     your_nick_changed = "%|%y        you %G>%n {channick $1}";
 
-    pubmsg = "{pubmsgnick $2 {pubnick \00313$[-11]0}}$1";
+    pubmsg = "{pubmsgnick $2 {pubnick \00304$[-11]0}}$1";
 
     own_msg = "{ownmsgnick $2 {ownnick $[-11]0}}$1%|";
     own_msg_channel = "{ownmsgnick $3 {ownnick $0}{msgchannel $1}}$2";
@@ -404,7 +405,7 @@ formats = {
     pubmsg_me = "{menick $[-11]0}$1";
     pubmsg_me_channel = "{pubmsghinick $3 {menick $[-11]0}{msgchannel $1}}$2";
 
-    pubmsg_hilight = "{pubmsghinick $3 {menick $[-11]1}} %k│ %R$2";
+    pubmsg_hilight = "{pubmsghinick $3 {menick $[-11]1}} %K│ %R$2";
     pubmsg_hilight_channel = "{pubmsghinick $0 $[-11]$4{msgchannel $2}}$3";
 
     pubmsg_channel = "{pubmsgnick {pubnick %G$[-13]0}$2}$1";

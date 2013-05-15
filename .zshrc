@@ -1,11 +1,11 @@
-source ~/bin/zsh-syntax-highlight/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlight/zsh-syntax-highlighting.zsh
 autoload -U compinit promptinit colors
 compinit
 promptinit
 colors
 
 PROMPT="
-%{$fg[cyan]%} >  %{$reset_color%}"
+%{$fg[red]%} »  %{$reset_color%}"
 RPROMPT="%B%{$fg[black]%}%~%{$reset_color%}"
 
 [[ -t 1 ]] || return
@@ -109,15 +109,6 @@ alias equalizer="alsamixer -D equal"
 alias mysqlt="mysql -u root -p cargo_science"
 alias redwm='cd ~/dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm; /home/sunn/scripts/dwm-status;'
 
-# Scripts
-alias temps='~/scripts/temps.sh'
-alias color='~/scripts/colors'
-alias screenfetch='~/scripts/screenfetch-dev'
-alias tumblrcat='~/scripts/tumblrcat'
-alias jazzget='~/scripts/jazzget'
-alias tag='~/scripts/tag'
-alias installed='~/scripts/installed'
-
 # Shortcuts
 #alias rm='rm -i'
 alias rmi='rm -i'
@@ -165,6 +156,15 @@ set -o vi
 
 # MUTT BG fix
 COLORFGBG="default;default"
+
+pathdirs=(
+    ~/scripts
+)
+for dir in $pathdirs; do
+    if [ -d $dir ]; then
+        path+=$dir
+    fi
+done
 
 export EDITOR="vim"
 

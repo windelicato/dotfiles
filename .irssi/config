@@ -7,6 +7,22 @@ servers = (
     ssl_verify = "no";
     autoconnect = "yes";
   },
+  {
+    address = "irc.unixhub.net";
+    chatnet = "unixhub";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
+  {
+    address = "irc.rizon.net";
+    chatnet = "rizon";
+    port = "6667";
+    use_ssl = "no";
+    ssl_verify = "no";
+    autoconnect = "yes";
+  },
   { address = "localhost"; autoconnect = "yes"; }
 );
 
@@ -14,19 +30,27 @@ chatnets = {
   SILC = { type = "SILC"; };
   freenode = {
     type = "IRC";
-    autosendcmd = "/msg nickserv identify jacuzzi; /window goto nickserv; /wc";
+    autosendcmd = "/msg -freenode nickserv identify jacuzzi; /window goto nickserv; /wc";
 
+  };
+  rizon = {
+    type = "IRC";
+    autosendcmd = "wait 100; /msg -rizon NickServ identify jacuzzi; /window goto NickServ; /wc";
   };
   bitlbee = {
     type = "IRC";
-    autosendcmd = "/msg &bitlbee identify jacuzzi";
+    autosendcmd = "wait 200; /msg -localhost &bitlbee identify jacuzzi";
   };
+  unixhub = { type = "IRC"; };
 };
 
 channels = (
   { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#haskell"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#xmonad"; chatnet = "freenode"; autojoin = "yes"; }
+  { name = "#crunchbang"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#ubuntu"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#xmonad"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#/g/summer"; chatnet = "rizon"; autojoin = "yes"; },
+  { name = "#unixhub"; chatnet = "unixhub"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -211,7 +235,7 @@ settings = {
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { theme = "default"; show_names_on_join = "no"; };
   "perl/core/scripts" = {
-    awl_display_key = "$H %K$C $S";
+    awl_display_key = "$H %c$C $S";
     awl_display_key_active = "$H %n$C $S";
     awl_placement = "top";
     awl_separator = "\\ \\ \\ ";
@@ -254,7 +278,7 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#haskell";
+        name = "#crunchbang";
         tag = "freenode";
       }
     );
@@ -266,6 +290,36 @@ windows = {
         chat_type = "IRC";
         name = "#xmonad";
         tag = "freenode";
+      }
+    );
+  };
+  6 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#ubuntu";
+        tag = "freenode";
+      }
+    );
+  };
+  7 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#unixhub";
+        tag = "unixhub";
+      }
+    );
+  };
+  8 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#/g/summer";
+        tag = "rizon";
       }
     );
   };
