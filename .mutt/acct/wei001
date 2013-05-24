@@ -3,16 +3,16 @@
 # Info
 
 # IMAP
-set imap_user 	= "wei001@bucknell.edu"
+set imap_user 	= "USER"
 set imap_pass 	= "PASS"
 set folder 	= "imaps://imap.gmail.com:993"
 set imap_check_subscribed
 
 # SMTP
-set smtp_url	= "smtps://wei001@bucknell.edu@smtp.gmail.com/465"
+set smtp_url	= "smtps://USER@smtp.gmail.com/465"
 set smtp_pass 	= "PASS"
 
-set from 	= "wei001@bucknell.edu"
+set from 	= "USER"
 set realname 	= "Bill Indelicato"
 
 set editor	= "vim"
