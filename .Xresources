@@ -1,4 +1,4 @@
-#include "/home/sunn/.colors/erosion"
+#include "/home/sunn/.colors/erosionedit"
 #include "/home/sunn/.xtermconf"
 
 ! #########################################
@@ -10,26 +10,42 @@ urxvt*matcher-button: 		1
 urxvt*urlLauncher:		/usr/bin/chromium
 urxvt*cursorUnderline: 1
 !urxvt*letterspace: -1
-urxvt*fading: 			10
+!urxvt*fading: 			10
 urxvt*fadeColor: 		#000000	
 urxvt*cursorBlink:		true
 urxvt*scrollBar:		false
 urxvt*depth:		32
+urxvt*internalBorder: 2
 
-urxvt*font: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
-urxvt*boldFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
-urxvt*italicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
-urxvt*bolditalicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*font: -*-uushi-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-uushi-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-uushi-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-uushi-*-*-*-*-*-*-*-*-*-*-*-*
 
-!urxvt*font: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*boldFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*italicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*bolditalicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*font: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+
+!urxvt*font: -*-suxus-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-suxus-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-suxus-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-suxus-*-*-*-*-*-*-*-*-*-*-*-*
+
+urxvt*font: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+urxvt*boldFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+urxvt*italicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
+urxvt*bolditalicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
 
 !urxvt*font: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*boldFont: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*italicFont: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*bolditalicFont: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
+
+!urxvt*font: -*-cure-medium-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-cure-medium-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-cure-medium-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-cure-medium-*-*-*-*-*-*-*-*-*-*-*
 
 !urxvt*font: -*-tamsyn-medium-r-normal-*-*-87-*-*-*-*-*-*
 !urxvt*boldFont: -*-tamsyn-bold-r-normal-*-*-87-*-*-*-*-*-*
@@ -44,12 +60,16 @@ urxvt*bolditalicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*font: xft:inconsolata:size=11
 !urxvt*boldFont: xft:inconsolata:bold:size=11
 !urxvt*italicFont: xft:inconsolata:italic:size=11
+
 !urxvt*font: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
-!urxvt*boldFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-gohufont-bold-r-normal-*-11-*-*-*-*-*-*-*
 !urxvt*italicFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
-!urxvt*bolditalicFont: -*-gohufont-medium-r-normal-*-11-*-*-*-*-*-*-*
-!urxvt*font: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* !urxvt*boldFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* !urxvt*italicFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* !urxvt*bolditalicFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* !urxvt*font: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-* !urxvt*boldFont: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-* !urxvt*italicFont: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-*
-!urxvt*bolditalicFont: -*-tamsyn-medium-*-*-*-12-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-gohufont-bold-r-normal-*-11-*-*-*-*-*-*-*
+
+!urxvt*font: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* 
+!urxvt*boldFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* 
+!urxvt*italicFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* 
+!urxvt*bolditalicFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* 
 
 Xft.dpi:	72
 Xft.rgba:	rgb

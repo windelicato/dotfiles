@@ -1,0 +1,13 @@
+input,
+input[type="radio"],
+input[type="checkbox"],
+input[type="reset"],
+input[type="button"],
+input[type="submit"],
+select,
+textarea {
+-moz-appearance: none !important;
+background-color: white;
+color: black;
+}
+

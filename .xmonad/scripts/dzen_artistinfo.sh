@@ -1,6 +1,6 @@
 #!/bin/bash
 source $(dirname $0)/config.sh
-XPOS="750"
+XPOS=$((950 + $XOFFSET))
 WIDTH="375"
 
 url=http://www.last.fm/music/$(mpc current -f %artist% | sed 's/[ \/]/+/g')

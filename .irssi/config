@@ -47,8 +47,6 @@ chatnets = {
 channels = (
   { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#crunchbang"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#ubuntu"; chatnet = "freenode"; autojoin = "yes"; },
-  { name = "#xmonad"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#/g/summer"; chatnet = "rizon"; autojoin = "yes"; },
   { name = "#unixhub"; chatnet = "unixhub"; autojoin = "yes"; }
 );
@@ -96,7 +94,7 @@ aliases = {
   SBAR = "STATUSBAR";
   INVITELIST = "mode $C +I";
   Q = "QUERY";
-  "MANUAL-WINDOWS" = "set use_status_window off;set autocreate_windows off;set autocreate_query_level none;set autoclose_windows off;set reuse_unused_windows on;save";
+  "MANUAL-WINDOWS" = "set use_status_window off;set autocreate_windows off;set autocreate_query_level yes;set autoclose_windows off;set reuse_unused_windows on;save";
   EXEMPTLIST = "mode $C +e";
   ATAG = "WINDOW SERVER";
   UNSET = "set -clear";
@@ -235,7 +233,7 @@ settings = {
   "fe-text" = { actlist_sort = "refnum"; };
   "fe-common/core" = { theme = "default"; show_names_on_join = "no"; };
   "perl/core/scripts" = {
-    awl_display_key = "$H %c$C $S";
+    awl_display_key = "$H %K$C $S";
     awl_display_key_active = "$H %n$C $S";
     awl_placement = "top";
     awl_separator = "\\ \\ \\ ";
@@ -243,8 +241,7 @@ settings = {
 };
 hilights = (
   { text = "nick"; nick = "yes"; word = "yes"; },
-  { text = "earsplit"; color = "red"; nick = "yes"; word = "yes"; },
-  { text = "zsh"; nick = "yes"; word = "yes"; }
+  { text = "earspliT"; color = "%r»"; nick = "yes"; word = "yes"; }
 );
 ignores = (
   {
@@ -252,7 +249,7 @@ ignores = (
   }
 );
 windows = {
-  1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
+  1 = { immortal = "yes"; name = ""; level = "ALL"; };
   2 = {
     items = (
       {
@@ -288,32 +285,12 @@ windows = {
       {
         type = "CHANNEL";
         chat_type = "IRC";
-        name = "#xmonad";
-        tag = "freenode";
-      }
-    );
-  };
-  6 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
-        name = "#ubuntu";
-        tag = "freenode";
-      }
-    );
-  };
-  7 = {
-    items = (
-      {
-        type = "CHANNEL";
-        chat_type = "IRC";
         name = "#unixhub";
         tag = "unixhub";
       }
     );
   };
-  8 = {
+  6 = {
     items = (
       {
         type = "CHANNEL";

@@ -46,7 +46,7 @@ else
 		ICON="bat_full_01.xbm"
 	fi
 	BATBAR=`echo -e "$BAT"\
-		| gdbar -bg $bar_bg -fg $foreground -h 1 -w 50`
+		| gdbar -bg $bar_bg -fg $bar_fg -h 1 -w 50`
 fi
 
 if [[ $STATUS != "Discharging" ]]; then

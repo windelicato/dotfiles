@@ -11,7 +11,7 @@ if [[ $PERC -gt 75 ]]; then
         | gdbar -bg $bar_bg -fg $warning -h 1 -w 180`
 else
     PERCBAR=`echo -e "$PERC"\
-        | gdbar -bg $bar_bg -fg $foreground -h 1 -w 180`
+        | gdbar -bg $bar_bg -fg $bar_fg -h 1 -w 180`
 fi
 
 ICON='^i(/home/sunn/.xmonad/dzen2/'"$ICON)"

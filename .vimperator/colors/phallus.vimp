@@ -1,0 +1,75 @@
+" ==Vimperator_Color_Scheme==
+" name: Darkness
+" ==Darkness_Colorscheme_Settings==
+
+"StatusLine settings
+hi StatusLine           color: #9a875f; background: #181512; font-size: 8pt;
+"hi StatusLineBroken     color: #9a875f; background: #f9f9f9; "font-size: 8pt;
+"hi StatusLineSecure     color: #9a875f; background: #f9f9f9; "font-size: 8pt;
+
+"CmdLine settings excluding Gradient
+hi Normal               color: #9a875f; background: #181512;
+hi CmdLine              background: #181512; color: #9f7155; font-size: 9pt;
+hi CompDesc             color: #766782; width: 50%; font-size: 9pt;
+hi CompIcon             width: 0px; min-width: 0px; visibility: hidden; display: inline-block; margin-right: .5ex;
+hi CompItem[selected]   background: #181512; color: #D6C3B6; 
+"hi CompLess             text-align: center; height: 0; line-height: .5ex; padding-top: 1ex;
+"hi CompMore             text-align: center; height: .5ex; line-height: .5ex; margin-bottom: -.5ex;
+hi CompMsg              font-style: italic; margin-left: 12px;
+hi CompResult           width: 45%; overflow: hidden;font-size: 10pt; font-family: lemon; font-weight: normal;
+hi CompTitle            color: #646a6d; background: #181512; 
+hi CompTitle>*          padding: 0 .5ex;
+hi Filter               color: #afafaf;
+
+"When using tab complete in CmdLine, line separating Title from function and description
+"hi Gradient             height: 1px; margin-bottom: -1px; margin-top: -1px;
+"hi GradientLeft         background-color: #181512;
+"hi GradientRight        background-color: #181512;
+
+"Used with ]f and [f
+hi FrameIndicator       background-color: #3f3f3f; opacity: 0.5; z-index: 999; position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+
+hi Bell                 border: 0 none; background-color: #181512;
+hi ErrorMsg             color: #1c1c1c; background: #181512;
+
+
+"Hint section
+"hi Hint                 font-family: Sans; font-size: 10px; color: #f6e9e9; background-color: red; border-color: ButtonShadow; border-width: 0px; border-style: solid; padding 0px 1px 0px 1px;
+hi Hint               	font-family: lemon; font-size: 10px; color: white; background-color: rgba(0, 0, 0, 0.5); border: solid 1px black;
+hi Hint::after          content: attr(number);
+hi HintActive           background-color: rgba(0,0,0,0.5); 
+hi HintElem             0;
+hi HintImage            opacity: .5;
+
+"Other important stuff
+hi InfoMsg              color: #1c1c1c; background: #181512;
+hi Message              white-space: normal; min-width: 100%; padding-left: 2em; text-indent: -2em; display: block;
+hi WarningMsg           color: 1c1c1c; background: #181512;
+hi ModeMsg              color: #1c1c1c; background: #181512; "CmdLine when Not in Use
+hi MoreMsg              color: #1c1c1c; background: #181512;
+hi NonText              color: lightblue; min-height: 16px; padding-left: 2px;
+hi Question             color: #1c1c1c; background: #181512;
+"hi Search               font-size: inherit; padding: 0; color: #eab9d5; background-color: black; padding: 0;
+hi Function             color: #9a875f; background: #181512;
+hi Number               color: #9a875f; background: #181512;
+hi String               color: #9a875f; background: #181512;
+hi Tag                  color: #9a875f; background: #181512;
+hi Title                color: #1c1c1c; background: #181512;
+hi URL                  text-decoration: none; color: lightblue; background: inherit;
+hi URL:hover            text-decoration: underline; cursor: pointer;
+hi LineNr               color: #9a875f; background: #181512;
+
+"style -name statusbar chrome://* <<EOM
+"#status-bar statusbarpanel { padding: 0 1px !important; }
+"statusbarpanel > * { margin: 0 !important; padding: 0 2px 0 0 !important; }
+"EOM
+
+hi ContentSeparator border-top: 0px;
+
+"For other descriptions of each item, please see ``Styling'' section included with Vimperator
+
+hi CmdLine>* font-family: lemon
+hi CompDesc font-family: lemon
+hi CompResult font-family: lemon
+hi StatusLine font-family: lemon
+hi PromptText width: 0px 

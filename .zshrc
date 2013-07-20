@@ -6,7 +6,7 @@ colors
 
 PROMPT="
 %{$fg[red]%} »  %{$reset_color%}"
-RPROMPT="%B%{$fg[black]%}%~%{$reset_color%}"
+RPROMPT="%B%{$fg[cyan]%}%~%{$reset_color%}"
 
 [[ -t 1 ]] || return
 case $TERM in
@@ -168,6 +168,6 @@ done
 
 export EDITOR="vim"
 
-if [[ "$TERM" == "rxvt-unicode-256color" ]]; then
-	xseticon -id $WINDOWID /home/sunn/.icons/AwOkenWhite/clear/128x128/apps/terminal1.png
-fi
+#if [[ "$TERM" == "rxvt-unicode-256color" ]]; then
+#	xseticon -id $WINDOWID /home/sunn/.icons/AwOkenWhite/clear/128x128/apps/terminal1.png
+#fi

@@ -1,6 +1,6 @@
 #!/bin/bash
 source $(dirname $0)/config.sh
-XPOS="1100"
+XPOS=$((1100 + $XOFFSET))
 WIDTH="260"
 LINES="15"
 
@@ -13,7 +13,7 @@ ramused=$(free -m | sed -n "3p" | awk -F " " '{print $3}')
 
 kernel="^fg($white0)^i(/home/sunn/.xmonad/dzen2/arch_10x10.xbm)^fg() Kernel ^fg($highlight)$(uname -r)"
 packages="^fg($white0)^i(/home/sunn/.xmonad/dzen2/pacman.xbm)^fg() Packages ^fg($highlight)$(pacman -Q | wc -l)"
-uptime="^fg($white0)^i(/home/sunn/.xmonad/dzen2/net_up_01.xbm)^fg() Uptime ^fg($highlight)$(uptime | awk '{gsub(/,/,""); print $3}')"
+uptime="^fg($white0)^i(/home/sunn/.xmonad/dzen2/net_up_01.xbm)^fg() Uptime ^fg($highlight)$(uptime | cut -d',' -f2)"
 
 hddtitle=$(df -h | head -1)
 hddtotal=$(df -h --total | tail -1)

@@ -1,0 +1,190 @@
+#appcontent,
+#appcontent > #content,
+#appcontent > #content > tabbox > tabpanels {
+	background: #fbfbfb !important;
+}
+
+#main-window[stylish-url="about:blank"]:not([onclose^="PrintUtils"]):not([title^="Source Chart"]):not([chromehidden="menubar toolbar directories extrachrome "]) #content browser:not([src]) {
+	opacity: 0 !important;
+}
+
+a:active {
+	outline: none !important;
+}
+
+.tabbrowser-arrowscrollbox > .scrollbutton-up,
+.tabbrowser-arrowscrollbox > .scrollbutton-down,
+toolbarbutton#appmenu-toolbar-button,
+toolbarbutton#alltabs-button,
+toolbarbutton#new-tab-button,
+.tab-icon-image,
+.tabs-closebutton-box,
+.tabs-border-bottom,
+.tab-close-button {
+	display: none !important;
+}
+
+tabs#tabbrowser-tabs, tabs#tabbrowser-tabs * {
+	-moz-appearance: none !important;
+	border-radius: 0px !important;
+	border: none !important;
+	border-bottom: 0px none !important;
+	background-image: none !important;
+	margin-top: 0px !important;
+	max-height: 14px !important;
+	min-height: 14px !important;        
+}
+
+tabs#tabbrowser-tabs {
+	background: #181512 !important;
+	padding-top: 0px !important;
+	margin-left: 0px !important;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	border-bottom: 0px none !important;
+	text-align: center !important;
+	/*box-shadow: inset 0px -4px 2px rgba(0,0,0,0.1) !important;*/
+}
+
+.tabbrowser-tab {
+	max-height: 12px !important;
+	margin-left: 0px !important;
+	padding-top: 2px !important;
+	color: #9a875f !important;
+	border-bottom: 0px none !important;
+	background: #181512 !important;
+	/*box-shadow: inset 0px -4px 2px rgba(0,0,0,0.1) !important;*/
+
+}
+
+.tabbrowser-tab[selected=true] {
+	color: #D6C3B6 !important;
+	background: #181512 !important;
+	border-bottom: 0px none !important;
+	box-shadow: none !important;
+}
+
+.tabbrowser-tab .tab-text {
+	margin-left: 3px !important;
+	margin-right: 3px !important;
+	margin-top: 2px !important;
+	font-size: 11px !important;
+	font-family: lemon !important;
+}
+
+#urlbar dropmarker,
+#identity-box,
+#star-button,
+#go-button,
+.tab-throbber,
+.tabs-newtab-button,
+.tab-throbber[progress] {
+	display: none !important;
+}
+
+.titlebar-placeholder[type="caption-buttons"] {
+	margin-left: 10px !important;
+}
+
+.tabbrowser-tabs:not([drag=detach]) > .tabbrowser-tab:not([pinned])[fadein] {
+	min-width: 30px !important;
+	max-width: 130px !important;
+}
+
+notificationbox {
+	overflow-x: hidden;
+}
+
+/* hide vertical scrollbar */
+notificationbox {
+	overflow-x: hidden;
+}
+
+/*browser[type="content-primary"], browser[type="content-targetable"] {
+overflow-y: scroll;
+margin-right: 0px; /* 12px == width of my scrollbar */
+    }
+
+    browser[type="content-primary"], browser[type="content-targetable"] {
+	    overflow-y: scroll;
+	    margin-right: 0px;
+    }*/
+
+
+/* will's scrollbar
+scrollbar scrollbarbutton ,
+scrollbar gripper {
+visibility: collapse;
+}
+
+scrollbar ,
+scrollbar thumb {
+-moz-appearance: none !important;
+}
+
+scrollbar[orient="vertical"] {
+-moz-margin-start: -4px;
+min-width: 4px;
+max-width: 4px;
+	}	
+
+	scrollbar[orient="horizontal"] {
+		margin-top: -4px;
+		min-height: 4px;
+		max-height: 4px;
+	}	
+
+	scrollbar {
+		position: relative;
+		background-image: none;
+		z-index: ;
+		background-color: transparent;
+	}	
+
+	scrollbar:hover {
+		background-color: ButtonHighlight;
+		transition: all 0.2s ease 0s;
+	}
+
+	scrollbar thumb {
+		border: none !important;
+		border-radius: 1.5px !important;
+		background-color: #92969b;
+		opacity: .55;
+	}
+
+	scrollbar:hover thumb {
+		opacity: 1;
+		transition: all 0.2s ease 0s;
+	}
+
+	scrollbar thumb:active ,
+	scrollbar thumb:hover {
+		opacity: 1;
+		background-color: ButtonShadow;
+		transition: all 0.2s ease 0s;
+	}
+ */
+
+.searchbar-engine-image {
+	display: none !important;
+}
+.search-go-button {
+	display: none !important;
+}
+#nav-bar {
+	background-image: none !important;
+	background-color: #1c1c1c !important;
+	border: none !important;
+	margin-bottom: 0 !important;
+	padding: 0 !important;
+}
+#url-bar {
+	background: none !important;
+	border: none !important;
+	border-radius: 1px 0 0 0 !important;
+	margin: 0 !important;
+	box-shadow: none !important;
+	color: #1c1c1c !important;
+}
+#statusbar-display { display: none !important; }

@@ -1,6 +1,6 @@
 #!/bin/bash
 source $(dirname $0)/config.sh
-XPOS="750"
+XPOS=$((950 + $XOFFSET))
 WIDTH="300"
 
 url="http://makeitpersonal.co/lyrics?artist=$(mpc current -f %artist% | sed 's/ /%20/g')&title=$(mpc current -f %title% | sed 's/ /%20/g')"

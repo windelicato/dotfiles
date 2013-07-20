@@ -1,0 +1,18 @@
+set autocomplete=false
+set noscrollbars
+set gui=tabs
+
+map <silent> <C-F1> :js toggle_bottombar()<CR>
+
+:js << EOF
+function toggle_bottombar() {
+    var bb = document.getElementById('liberator-bottombar');
+    if (!bb)
+        return;
+    bb.style.height = (bb.style.height == '') ? '0px' : '';
+    bb.style.overflow = (bb.style.height == '') ? '' : 'hidden';
+    }
+EOF
+
+colors phallus
+

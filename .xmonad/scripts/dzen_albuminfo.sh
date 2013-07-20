@@ -2,7 +2,7 @@
 source $(dirname $0)/config.sh
 
 #XPOS=$(xdotool getmouselocation | awk -F " " '{print $1}' | cut -d ":" -f 2)
-XPOS="750"
+XPOS=$((950 + $XOFFSET))
 YPOS="11"
 HEIGHT="12"
 WIDTH="375"

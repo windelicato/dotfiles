@@ -177,7 +177,7 @@ abstracts = {
   # $0 = nick mode, $1 = nick
   ownmsgnick = "$1 %K│%n %|";
   # msgnick = "   $1 %K· %n";
-  ownnick = "%Y$*%n";
+  ownnick = "%r$*%n";
 
   # public message in channel, $0 = nick mode, $1 = nick
   pubmsgnick = "$1 %K│%n %|";
@@ -186,7 +186,7 @@ abstracts = {
   # public highlighted message in channel
   pubmsghinick = "$1 %K│%n %|%r";
   #menick = "%R$*%n";
-  menick = "%K$*   %|%r";
+  menick = "%K$* %R│%n %|%r";
 
   # channel name is printed with message
   msgchannel = "%K:%m$*%n";
@@ -360,7 +360,7 @@ abstracts = {
   topicsbstart = "{sbstart $*}";
   topicsbend = "{sbend $*}";
 
-  prompt = " %g> ";
+  prompt = " %r» ";
 
   sb = "%n$*%n";
   sbmode = "(%c+%n$*)";

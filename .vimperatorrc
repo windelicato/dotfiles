@@ -1,0 +1,22 @@
+colors phallus
+
+set autocomplete=false
+set hintchars=asdfghjkl;
+set noscrollbars
+
+map J gT
+map K gt
+
+
+map <silent> <C-F1> :js toggle_bottombar()<CR>
+
+:js << EOF
+function toggle_bottombar() {
+    var bb = document.getElementById('liberator-bottombar');
+    if (!bb)
+        return;
+    bb.style.height = (bb.style.height == '') ? '0px' : '';
+    bb.style.overflow = (bb.style.height == '') ? '' : 'hidden';
+    }
+EOF
+

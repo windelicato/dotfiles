@@ -1,4 +1,4 @@
-	"set number 				" turn on line numbers and highlight colors
+"	set number 				" turn on line numbers and highlight colors
 	set ruler 				" Always show current positions along the bottom
 	set showcmd 				" show the command being typed
 	set autoindent 				" autoindent spaces
@@ -27,10 +27,10 @@
 " COLORS {
 	" syntax highlighting groups
 	hi Comment      ctermfg=12
-	hi Constant     ctermfg=6 
+	hi Constant     ctermfg=1 
 	hi Identifier   ctermfg=4
 	hi Statement    ctermfg=2
-	hi PreProc      ctermfg=1
+	hi PreProc      ctermfg=6
 	hi Type         ctermfg=3
 	hi Special      ctermfg=5
 	hi Underlined   ctermfg=7
@@ -53,54 +53,6 @@
 	hi CursorColumn ctermfg=none ctermbg=0
 "}
 
-" Code Completion{
-
-"set conceallevel=2
-"set concealcursor=vin
-"let g:clang_snippets=1
-"let g:clang_conceal_snippets=1
-"" The single one that works with clang_complete
-"let g:clang_snippets_engine='clang_complete'
-"
-"" Complete options (disable preview scratch window, longest removed to aways
-"" show menu)
-"set completeopt=menu,menuone,longest
-"
-"" Limit popup menu height
-"set pumheight=20
-"
-"" SuperTab completion fall-back 
-"let g:SuperTabDefaultCompletionType='<c-x><c-u><c-p>'
-"let g:clang_use_library=1
-
-
-	"if v:version >= 600
-	  "filetype plugin on
-	  "filetype indent on
-	"else
-	  "filetype on
-	"endif
-
-	"if v:version >= 700
-	  "set omnifunc=syntaxcomplete#Complete " override built-in C omnicomplete with C++ OmniCppComplete plugin
-	  "let OmniCpp_GlobalScopeSearch   = 1
-	  "let OmniCpp_DisplayMode         = 1
-	  "let OmniCpp_ShowScopeInAbbr     = 0 "do not show namespace in pop-up
-	  "let OmniCpp_ShowPrototypeInAbbr = 1 "show prototype in pop-up
-	  "let OmniCpp_ShowAccess          = 1 "show access in pop-up
-	  "let OmniCpp_SelectFirstItem     = 1 "select first item in pop-up
-	  "set completeopt=menuone,menu,longest
-	"endif
-
-	""Update ctags
-	"function! UpdateTags()
-	 "execute ":!ctags -R --languages=C++ --c++-kinds=+p --fields=+iaS --extra=+q ./"
-	  "execute ":!ctags -R --languages=C,C++ --c++-kinds=+p --fields=+iaS --extra=+q ./"
-	  "echohl StatusLine | echo "C/C++ tag updated" | echohl None
-	"endfunction
-	"nnoremap <F4> :call UpdateTags()
-
-"}
 
 " WORD PROCESSING {
 	set formatoptions=1

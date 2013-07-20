@@ -5,9 +5,11 @@ import XMonad.Layout.Fullscreen
 import XMonad.Layout.NoBorders
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.SimplestFloat
-import XMonad.Layout.Tabbed
+import XMonad.Layout.Tabbed 
 import XMonad.Layout.ResizableTile
 import XMonad.Layout.Circle
+import XMonad.Layout.ThreeColumns
+
 -- WINDOW RULES
 import XMonad.ManageHook
 -- KEYBOARD & MOUSE CONFIG
@@ -35,13 +37,14 @@ import Data.List			-- clickable workspaces
 --------------------------------------------------------------------------------------------------------------------
 -- DECLARE WORKSPACES RULES
 --------------------------------------------------------------------------------------------------------------------
-myLayout = onWorkspace (myWorkspaces !! 0) (avoidStruts (tiledSpace ||| tiled) ||| fullTile)
+myLayout = onWorkspace (myWorkspaces !! 0) (avoidStruts (bigMonitor ||| tiledSpace ||| tiled ||| Mirror tiled) ||| fullTile)
 		$ onWorkspace (myWorkspaces !! 1) (avoidStruts (tiledSpace ||| fullTile) ||| fullScreen)
 		$ onWorkspace (myWorkspaces !! 2) (avoidStruts (simplestFloat))
 		$ avoidStruts ( tiledSpace  ||| tiled ||| fullTile ) 
 	where
 		tiled  		= spacing 5 $ ResizableTall nmaster delta ratio [] 
 		tiledSpace  	= spacing 60 $ ResizableTall nmaster delta ratio [] 
+		bigMonitor  	= spacing 5 $ ThreeColMid nmaster delta ratio 
 		fullScreen 	= noBorders(fullscreenFull Full)
 		fullTile 	= ResizableTall nmaster delta ratio [] 
 		borderlessTile	= noBorders(fullTile)
@@ -56,18 +59,12 @@ myLayout = onWorkspace (myWorkspaces !! 0) (avoidStruts (tiledSpace ||| tiled) |
 --------------------------------------------------------------------------------------------------------------------
 -- WORKSPACE DEFINITIONS
 --------------------------------------------------------------------------------------------------------------------
---myWorkspaces = clickable $ ["term"
---		,"web"	
---		,"float"	
---		,"docs"	
---		,"tunes"
---		,"mail"]	
-myWorkspaces = clickable $ ["I"
-		,"II"	
-		,"III"	
-		,"IV"	
-		,"V"
-		,"VI"]	
+myWorkspaces = clickable $ ["i"
+		,"ii"	
+		,"iii"	
+		,"iv"	
+		,"v"
+		,"vi"]	
 	where clickable l = [ "^ca(1,xdotool key alt+" ++ show (n) ++ ")" ++ ws ++ "^ca()" |
 				(i,ws) <- zip [1..] l,
 				let n = i ]
@@ -77,7 +74,7 @@ myWorkspaces = clickable $ ["I"
 --------------------------------------------------------------------------------------------------------------------
 myManageHook = composeAll 	[ resource =? "dmenu" --> doFloat
 				, resource =? "skype" 	--> doFloat
-				, resource =? "mplayer"	--> doFloat
+--				, resource =? "mplayer"	--> doFloat
 				, resource =? "steam"	--> doFloat
 				, resource =? "hl2_linux" --> doFloat
 				, resource =? "feh"	--> doIgnore
@@ -103,13 +100,13 @@ newManageHook = myManageHook <+> manageHook defaultConfig
 --------------------------------------------------------------------------------------------------------------------
 myLogHook h = dynamicLogWithPP ( defaultPP
 	{
-		  ppCurrent		= dzenColor color9 background .	pad
-		, ppVisible		= dzenColor color6 background . 	pad
-		, ppHidden		= dzenColor color6 background . 	pad
-		, ppHiddenNoWindows	= dzenColor color0 background .	pad
+		  ppCurrent		= dzenColor color15 background .	pad
+		, ppVisible		= dzenColor color14 background . 	pad
+		, ppHidden		= dzenColor color14 background . 	pad
+		, ppHiddenNoWindows	= dzenColor background background .	pad
 		, ppWsSep		= ""
 		, ppSep			= "    "
-		, ppLayout		= wrap "^ca(1,xdotool key alt+space)" "^ca()" . dzenColor foreground background .
+		, ppLayout		= wrap "^ca(1,xdotool key alt+space)" "^ca()" . dzenColor color2 background .
 				(\x -> case x of
 					"Full"				->	"^i(/home/sunn/.xmonad/dzen2/layout_full.xbm)"
 					"Spacing 5 ResizableTall"	->	"^i(/home/sunn/.xmonad/dzen2/layout_tall.xbm)"
@@ -118,8 +115,8 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 					"Circle"			->	"^i(/home/sunn/.xmonad/dzen2/full.xbm)"
 					_				->	"^i(/home/sunn/.xmonad/dzen2/grid.xbm)"
 				) 
---		, ppTitle	=   wrap "^ca(1,xdotool key alt+shift+x)^fg(#7e7175)^i(/home/sunn/.xmonad/dzen2/corner_left.xbm)^bg(#7e7175)^fg(#f92671)^fn(fkp)x^fn()" "^fg(#7e7175)^i(/home/sunn/.xmonad/dzen2/corner_right.xbm)^ca()" .  dzenColor foreground "#7e7175" . shorten 40 . pad		
-		, ppTitle	=  wrap "^ca(1,xdotool key alt+shift+x)^fg(#D23D3D)^fn(fkp)x ^fn()" "^ca()" . dzenColor foreground background . shorten 40 . pad
+--		, ppTitle	=  wrap "^ca(1,xdotool key alt+shift+x)^fg(#D23D3D)^fn(fkp)x ^fn()" "^ca()" . dzenColor foreground background . shorten 40 . pad
+		, ppTitle	=  wrap "^ca(1,xdotool key alt+shift+x)" "^ca()" . dzenColor color15 background . shorten 40 . pad
 		, ppOrder	=  \(ws:l:t:_) -> [ws,l, t]
 		, ppOutput	=   hPutStrLn h
 	} )
@@ -129,7 +126,7 @@ myLogHook h = dynamicLogWithPP ( defaultPP
 -- Spawn pipes and menus on boot, set default settings
 --------------------------------------------------------------------------------------------------------------------
 myXmonadBar = "dzen2 -x '0' -y '0' -h '14' -w '500' -ta 'l' -fg '"++foreground++"' -bg '"++background++"' -fn "++myFont
-myStatusBar = "conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '500' -w '866' -h '14' -ta 'r' -bg '"++background++"' -fg '"++foreground++"' -y '0' -fn "++myFont
+myStatusBar = "/home/sunn/.xmonad/status_bar '"++foreground++"' '"++background++"' "++myFont
 --myConky = "conky -c /home/sunn/conkyrc"
 --myStartMenu = "/home/sunn/.xmonad/start /home/sunn/.xmonad/start_apps"
 
@@ -143,9 +140,9 @@ main = do
 --	dzenStartMenu	<- spawnPipe myStartMenu
 	xmonad $ ewmh defaultConfig
 		{ terminal		= myTerminal
-		, borderWidth		= 3
-		, normalBorderColor 	= background
-		, focusedBorderColor  	= color9
+		, borderWidth		= 4
+		, normalBorderColor 	= color0
+		, focusedBorderColor  	= color8
 		, modMask 		= mod1Mask
 		, layoutHook 		= smartBorders $ myLayout
 		, workspaces 		= myWorkspaces
@@ -159,9 +156,8 @@ main = do
 -- Keyboard options
 --------------------------------------------------------------------------------------------------------------------
 		`additionalKeys`
-		[((mod1Mask .|. shiftMask	, xK_b), spawn "chromium")
+		[((mod1Mask .|. shiftMask	, xK_b), spawn "firefox")
 		,((mod1Mask  			, xK_b), spawn "dwb")
---		,((mod1Mask .|. shiftMask	, xK_n), spawn "urxvtc -fn '-*-gohufont-medium-r-normal-*-12-*-*-*-*-*-*-*' -fb '-*-gohufont-medium-r-normal-*-12-*-*-*-*-*-*-*' -fi '-*-gohufont-medium-r-normal-*-12-*-*-*-*-*-*-*'")
 		,((mod1Mask .|. shiftMask	, xK_n), spawn "xterm")
 		,((mod1Mask .|. shiftMask  	, xK_t), spawn "urxvtc -e tmux")
 		,((mod4Mask  			, xK_z), spawn "zathura")
@@ -196,18 +192,17 @@ main = do
 		,((mod1Mask			, xK_8), spawn "xdotool key alt+4")
 		,((0				, xK_Super_L), spawn "menu ~/.xmonad/apps")
 		,((mod1Mask			, xK_Super_L), spawn "menu ~/.xmonad/configs")
-		,((mod1Mask  			, xK_F1), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_music.sh")
-		,((mod1Mask  			, xK_F2), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_date.sh")
+		,((mod1Mask  			, xK_F1), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_date.sh")
+		,((mod1Mask  			, xK_F2), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_music.sh")
 		,((mod1Mask  			, xK_F3), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_network.sh")
-		,((mod1Mask  			, xK_F4), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_vol.sh")
-		,((mod1Mask  			, xK_F5), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_battery.sh")
-		,((mod1Mask  			, xK_F6), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_hardware.sh")
-		,((mod1Mask  			, xK_F7), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_log.sh")
+		,((mod1Mask  			, xK_F4), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_battery.sh")
+		,((mod1Mask  			, xK_F5), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_hardware.sh")
+		,((mod1Mask  			, xK_F6), spawn "~/.xmonad/sc ~/.xmonad/scripts/dzen_log.sh")
 		,((0 	 			, xK_Print), spawn "scrot & mplayer /usr/share/sounds/freedesktop/stereo/screen-capture.oga")
 		,((mod1Mask 	 		, xK_Print), spawn "scrot -s & mplayer /usr/share/sounds/freedesktop/stereo/screen-capture.oga")
-		,((0                     	, xF86XK_AudioLowerVolume), spawn "amixer set Master 2- & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
-		,((0                     	, xF86XK_AudioRaiseVolume), spawn "amixer set Master 2+ & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
-		,((0                     	, xF86XK_AudioMute), spawn "amixer set Master toggle")
+		,((0                     	, xF86XK_AudioLowerVolume), spawn "/home/sunn/scripts/dvol2 -d 2 & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
+		,((0                     	, xF86XK_AudioRaiseVolume), spawn "/home/sunn/scripts/dvol2 -i 2 & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga")
+		,((0                     	, xF86XK_AudioMute), spawn "/home/sunn/scripts/dvol2 -t")
 		,((0                     	, xF86XK_Display), spawn "/home/sunn/scripts/project")
 		,((0                     	, xF86XK_Sleep), spawn "pm-suspend")
 		,((0                     	, xF86XK_AudioPlay), spawn "ncmpcpp toggle")
@@ -241,54 +236,129 @@ myFont		= "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
 --myFont		= "xft:Droxd Sans:size=12"
 --myFont		= "-*-cure-*-*-*-*-*-*-*-*-*-*-*-*"
 
+--background=         "#140c0b"
+--foreground=         "#877a70"
+--color0=             "#403f3e"
+--color8=             "#666362"
+--color1=             "#91444d"
+--color9=             "#c78186"
+--color2=             "#6b853d"
+--color10=            "#abbd80"
+--color3=             "#916949"
+--color11=            "#cca88b"
+--color4=             "#557282"
+--color12=            "#8eabbd"
+--color5=             "#78516d"
+--color13=            "#a8879f"
+--color6=             "#58756c"
+--color14=            "#8ca8a2"
+--color7=             "#94928f"
+--color15=            "#cdcdcd"
 
+-- CRYPT
+--background="#000000"
+--foreground="#D3D3D3"
+--color0=  "#181818"
+--color8=  "#181818"
+--color1=  "#D7D7D7"
+--color9=  "#D7D7D7"
+--color2=  "#AADB0F"
+--color10= "#AADB0F"
+--color3=  "#666666"
+--color11= "#666666"
+--color4=  "#FFFFFF"
+--color12= "#FFFFFF"
+--color5=  "#91BA0D"
+--color13= "#91BA0D"
+--color6=  "#D4D4D4"
+--color14= "#D4D4D4"
+--color7=  "#D3D3D3"
+--color15= "#D3D3D3"
 
+--CLOUDS
+--background= "#0E0E0E"
+--foreground= "#fefefe"
+-- 
+--color0= "#454545"
+--color8= "#666666"
+--color1=  "#CC4747"
+--color9=  "#BF5858"
+--color2=  "#A0CF5D"
+--color10= "#B8D68C"
+--color3=  "#FF9B52"
+--color11= "#FFB680"
+--color4=  "#5FA69B"
+--color12= "#99C7BF"
+--color5=  "#A966CC"
+--color13= "#BD9FCC"
+--color6=  "#6CAB79"
+--color14= "#95BA9C"
+--color7=  "#d3d3d3"
+--color15= "#fefefe"
+
+-- EROSION EDIT
 background= "#181512"
-foreground= "#bea492"
-
-color0= "#332d29"
-color8= "#817267"
-
-color1= "#8c644c"
-color9= "#9f7155"
-
-color2= "#c4be90"
-color10= "#bec17e"
-
-color3= "#bfba92"
-color11= "#fafac0"
-
-color4= "#646a6d"
-color12= "#626e74"
-
-color5= "#6d6871"
-color13= "#756f7b"
-
-color6= "#3b484a"
-color14= "#444d4e"
-
-color7= "#504339"
+foreground= "#D6C3B6"
+color0=  "#332d29"
+color8=  "#817267"
+color1=  "#8c644c"
+color9=  "#9f7155"
+color2=  "#746C48"
+color10= "#9f7155"
+color3=  "#bfba92"
+color11= "#E0DAAC"
+color4=  "#646a6d"
+color12= "#777E82"
+color5=  "#766782"
+color13= "#897796"
+color6=  "#4B5C5E"
+color14= "#556D70"
+color7=  "#504339"
 color15= "#9a875f"
-
-
-
---background=            "#262729"
---foreground=            "#f8f8f2"
---color0=                "#626262"
---color8=                "#626262"
---color1=                "#f92671"
---color9=                "#ff669d"
---color2=                "#a6e22e"
---color10=               "#beed5f"
---color3=                "#fd971f"
---color11=               "#e6db74"
---color4=                "#1692d0"
---color12=               "#66d9ef"
---color5=                "#9e6ffe"
---color13=               "#df92f6"
---color6=                "#5e7175"
---color14=               "#a3babf"
---color7=                "#ffffff"
---color15=               "#ffffff"
---cursorColor=           "#b5d2dd"
+-- EROSION
+--background= "#181512"
+--foreground= "#bea492"
 --
+--color0= "#332d29"
+--color8= "#817267"
+--
+--color1= "#8c644c"
+--color9= "#9f7155"
+--
+--color2= "#c4be90"
+--color10= "#bec17e"
+--
+--color3= "#bfba92"
+--color11= "#fafac0"
+--
+--color4= "#646a6d"
+--color12= "#626e74"
+--
+--color5= "#6d6871"
+--color13= "#756f7b"
+--
+--color6= "#3b484a"
+--color14= "#444d4e"
+--
+--color7= "#504339"
+--color15= "#9a875f"
+
+-- PAPEY
+--foreground= "#e5e5e5"
+--background= "#1d1d1d"
+--color0=  "#121212"
+--color8=  "#5f5f5F" 
+--color1=  "#a35b66"
+--color9=  "#ab6b74"
+--color2=  "#99ab6f"
+--color10= "#acb792"
+--color3=  "#ca9733"
+--color11= "#ccaa69"
+--color4=  "#495d6e"
+--color12= "#687987"
+--color5=  "#825969"
+--color13= "#977381"
+--color6=  "#839191"
+--color14= "#98A4A4"
+--color7=  "#E0E0E0"
+--color15= "#e5e5e5"
