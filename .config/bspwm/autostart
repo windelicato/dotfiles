@@ -1,0 +1,29 @@
+#! /bin/sh
+
+#FIRST_DESK=I
+#REMAINING_DESKS="II III IV V VI VII VIII IX"
+FIRST_DESK=1
+REMAINING_DESKS="$(seq 2 9) 0"
+bspc desktop Desktop01 -n $FIRST_DESK
+
+bspc monitor -a $REMAINING_DESKS
+bspc monitor -p 14 0 0 0
+bspc window -w last.manual
+
+bspc config split_ratio         0.52
+bspc config border_width        2
+bspc config window_gap          12
+bspc config borderless_monocle  true
+bspc config gapless_monocle     true
+bspc config focus_follows_pointer true
+bspc config auto_rotate true
+
+bspc config focused_border_color = "#9a875f"
+bspc config normal_border_color = "#322d29"
+
+bspc rule -a Thunar --floating
+bspc rule -a Transmission --floating
+bspc rule -a Gimp -d Eight --floating
+
+panel &
+/home/sunn/.xmonad/status_bar "#d6c3b6" "#181512" "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*" &

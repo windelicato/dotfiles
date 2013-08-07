@@ -1,0 +1,143 @@
+#
+# bspwm hotkeys
+#
+
+# Exit bspcwm
+alt + shift + q
+	bspc quit && pkill bar && pkill dzen2
+
+
+# Workstation Monitor
+# alt + w
+
+# Close window
+alt + shift + x
+	bspc  window -c
+
+# Toggle tile
+alt + t
+	bspc window -t floating
+
+# Balance tree
+alt + b
+	bspc desktop -B
+
+# TODO: Presel window for splitting
+alt + ctrl + {h,j,k,l}
+	bspc window -p {left,down,up,right}
+
+# Select windows, or move
+alt + {_,shift + }{h,j,k,l}
+	bspc window -{f,s} {left,down,up,right}
+
+# (Figure out what this does)
+alt + shift + {a,s,d,f}
+	bspc window -e {left,down,up,right} push
+
+alt + {a,s,d,f}
+	bspc window -e {right,up,down,left} pull
+
+alt + {j,k}
+	bspc window -f {next,prev}
+#alt + {h,l}
+#	bspc window -s {left,right}
+#alt + shift + {h,l}
+#	bspc window -s {up,down}
+
+#alt + {grave,Tab}
+#bspc {window,desktop} -f last
+#
+#alt + apostrophe
+#bspc window -s last
+#
+#alt + m
+#bspc window -s biggest
+#alt + {_,shift + }c
+#bspc window -f {next,prev}
+
+
+# Circulate leaves of tree
+alt + {comma,period}
+	bspc desktop -C {backward,forward}
+
+# Select previous / next desktop
+alt + {p,n}
+	bspc desktop -f {prev,next}
+
+# Cancel preselection for splitting
+alt + ctrl + {_,shift + }escape
+	bspc {window -p cancel,desktop -c}
+
+alt + shift + space 
+	bspc window -t fullscreen
+
+
+# Set splitting ratio of windows
+alt + ctrl + {1-9}
+	bspc window -r 0.{1-9}
+
+# Focus or move window to desktops
+alt + {_,shift + }{1-9,0}
+	bspc {desktop -f,window -d} {1-9,0}
+
+:button1
+	bspc pointer -g focus
+
+# Move or resize window
+alt + button{1-3}
+	bspc pointer -g {move,resize_side,resize_corner}
+
+# Not sure...
+alt + !button{1-3}
+	bspc pointer -t %i %i
+
+#
+# wm independent hotkeys
+#
+
+alt + shift + Return
+	urxvtc
+
+
+alt + r
+	gmrun
+
+alt + shift + b
+	firefox
+
+alt + shift + n
+	xterm
+
+alt + z
+	zathura
+
+alt + space
+	menu /home/sunn/.xmonad/apps
+
+XF86AudioRaiseVolume
+	/home/sunn/scripts/dvol2 -i 2 & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+
+XF86AudioLowerVolume
+	/home/sunn/scripts/dvol2 -d 2 & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+
+XF86AudioMute
+	/home/sunn/scripts/dvol2 -t 
+
+XF86Sleep
+	pm-suspend
+
+XF86AudioPlay
+	ncmpcpp toggle
+	
+XF86AudioNext
+	ncmpcpp next
+
+XF86AudioPrev
+	ncmpcpp prev
+
+# make sxhkd reload its configuration files:
+alt + Escape
+	pkill -USR1 -x sxhkd
+
+# vim: set ft=sxhkdrc:
+
