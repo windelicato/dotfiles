@@ -1,11 +1,11 @@
+# vim: set ft=sxhkdrc:
 #
 # bspwm hotkeys
 #
 
 # Exit bspcwm
 alt + shift + q
-	bspc quit && pkill bar && pkill dzen2
-
+bspc quit && pkill bar && pkill dzen2
 
 # Workstation Monitor
 # alt + w
@@ -14,9 +14,12 @@ alt + shift + q
 alt + shift + x
 	bspc  window -c
 
+alt + ctrl + shift + x
+	bspc  window -k
+
 # Toggle tile
-alt + t
-	bspc window -t floating
+alt + {_,shift +} t
+	bspc window -t {floating,fullscreen}
 
 # Balance tree
 alt + b
@@ -26,51 +29,48 @@ alt + b
 alt + ctrl + {h,j,k,l}
 	bspc window -p {left,down,up,right}
 
+# Move window into presel position
+alt + ctrl + shift {h,j,k,l}
+	bspc window -w {left,down,up,right}
+
 # Select windows, or move
 alt + {_,shift + }{h,j,k,l}
 	bspc window -{f,s} {left,down,up,right}
 
-# (Figure out what this does)
+# Resize the hard way 
 alt + shift + {a,s,d,f}
 	bspc window -e {left,down,up,right} push
 
 alt + {a,s,d,f}
 	bspc window -e {right,up,down,left} pull
 
-alt + {j,k}
-	bspc window -f {next,prev}
-#alt + {h,l}
-#	bspc window -s {left,right}
-#alt + shift + {h,l}
-#	bspc window -s {up,down}
-
-#alt + {grave,Tab}
-#bspc {window,desktop} -f last
-#
-#alt + apostrophe
-#bspc window -s last
-#
-#alt + m
-#bspc window -s biggest
-#alt + {_,shift + }c
-#bspc window -f {next,prev}
-
+# Move current window to largest space
+alt + Return
+	bspc window -s biggest
 
 # Circulate leaves of tree
 alt + {comma,period}
-	bspc desktop -C {backward,forward}
+	bspc desktop -F {horizontal,vertical}
+
+alt + shift + {comma,period}
+	bspc desktop -R {90,270}
 
 # Select previous / next desktop
 alt + {p,n}
-	bspc desktop -f {prev,next}
+	bspc desktop -f {prev.occupied,next.occupied} 
 
 # Cancel preselection for splitting
-alt + ctrl + {_,shift + }escape
-	bspc {window -p cancel,desktop -c}
+alt + Escape
+	bspc desktop -c
 
-alt + shift + space 
-	bspc window -t fullscreen
+alt + space 
+	bspc desktop -l next
 
+alt + minus
+	bspc config window_gap $((`bspc config window_gap` - 5 ))
+
+alt + plus
+	bspc config window_gap $((`bspc config window_gap` + 5 ))
 
 # Set splitting ratio of windows
 alt + ctrl + {1-9}
@@ -87,17 +87,20 @@ alt + {_,shift + }{1-9,0}
 alt + button{1-3}
 	bspc pointer -g {move,resize_side,resize_corner}
 
-# Not sure...
+# Needed for ^^^^
 alt + !button{1-3}
-	bspc pointer -t %i %i
+    bspc pointer -t %i %i
 
 #
 # wm independent hotkeys
 #
 
+
 alt + shift + Return
 	urxvtc
 
+alt + ctrl + Return
+	urxvtc && bspc window -t floating
 
 alt + r
 	gmrun
@@ -111,7 +114,7 @@ alt + shift + n
 alt + z
 	zathura
 
-alt + space
+alt + Tab
 	menu /home/sunn/.xmonad/apps
 
 XF86AudioRaiseVolume
@@ -136,8 +139,18 @@ XF86AudioPrev
 	ncmpcpp prev
 
 # make sxhkd reload its configuration files:
-alt + Escape
+alt + shift + Escape
 	pkill -USR1 -x sxhkd
 
-# vim: set ft=sxhkdrc:
-
+alt + F1
+	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_music.sh
+alt + F2
+	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_network.sh
+alt + F3
+	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_battery.sh
+alt + F4
+	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_hardware.sh
+alt + F5
+	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_date.sh
+alt + F6
+	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_log.sh
