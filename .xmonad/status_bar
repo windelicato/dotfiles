@@ -1,0 +1,12 @@
+#!/bin/bash
+foreground=$1
+background=$2
+font=$3
+
+# Check to see if external is connected
+if [[ -z `xrandr | grep " connected" | grep 'VGA'` ]]; then
+	conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '866' -w '500' -h '14' -ta 'r' -bg $background -fg $foreground -y '0' -fn $font 
+else 
+	nitrogen --restore
+	conky -qc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '500' -w '1420' -h '14' -ta 'r' -bg $background -fg $foreground -y '0' -fn $font 
+fi
