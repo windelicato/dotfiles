@@ -1,14 +1,26 @@
 #! /bin/sh
 
-#FIRST_DESK=I
-#REMAINING_DESKS="II III IV V VI VII VIII IX"
-FIRST_DESK=1
-REMAINING_DESKS="$(seq 2 9) 0"
-bspc desktop Desktop01 -n $FIRST_DESK
+FIRST_DESK=i
+REMAINING_DESKS="ii iii iv v vi vii viii ix x"
+FIRST_DESK_EXTERNAL=I
+REMAINING_DESKS_EXTERNAL="II III IV V VI VII VIII IX X"
 
+#FIRST_DESK=1
+#REMAINING_DESKS="$(seq 2 9) 0"
+bspc desktop Desktop01 -n $FIRST_DESK
 bspc monitor -a $REMAINING_DESKS
 bspc monitor -p 14 0 0 0
-bspc window -w last.manual
+
+if [[ -z `xrandr | grep " connected" | grep 'VGA'` ]]; then
+	echo "No monitor connected"
+else
+	bspc monitor -f next
+	bspc desktop Desktop02 -n $FIRST_DESK_EXTERNAL
+	bspc monitor -a $REMAINING_DESKS_EXTERNAL
+#	bspc desktop Desktop02 -n a
+#	bspc monitor -a b c d e f g h i j
+	bspc monitor -p 14 0 0 0
+fi
 
 bspc config split_ratio         0.52
 bspc config border_width        2

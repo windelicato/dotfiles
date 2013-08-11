@@ -9,10 +9,16 @@ xset fp rehash
 xcalib /home/sunn/x230.icm &
 xsetroot -cursor_name left_ptr &
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
-hsetroot -fill /home/sunn/Pictures/southern-alps.jpg &
+hsetroot -fill /home/sunn/Pictures/orange-leaf.jpg &
 unclutter -grab -noevents -root &
 #compton -cCb &
 urxvtd &
+
+if [[ -z `xrandr | grep " connected" | grep 'VGA'` ]]; then
+	echo "No monitor found"
+else
+	xrandr --output VGA1 --auto --left-of LVDS1
+fi
 
 DEFAULT_SESSION=xmonad
 case $1 in
@@ -30,14 +36,7 @@ dwm)
 exec dbus-launch dwm-launch
 ;;
 
-bspwm)
-sxhkd &
-[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
-mkfifo "$PANEL_FIFO"
-exec dbus-launch bspwm -c /home/sunn/.config/bspwm/autostart -s "$PANEL_FIFO" -p W
-;;
-
-*)
+bspwm|*)
 sxhkd &
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"

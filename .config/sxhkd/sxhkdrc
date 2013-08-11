@@ -5,10 +5,11 @@
 
 # Exit bspcwm
 alt + shift + q
-bspc quit && pkill bar && pkill dzen2
+	bspc quit && pkill bar && pkill dzen2
 
 # Workstation Monitor
-# alt + w
+alt + w
+	bspc monitor -f next
 
 # Close window
 alt + shift + x
@@ -77,8 +78,15 @@ alt + ctrl + {1-9}
 	bspc window -r 0.{1-9}
 
 # Focus or move window to desktops
+#alt + {_,shift + }{1-9,0}
+#	bspc {desktop -f,window -d} {1-9,0}
+#
+#ctrl + {_,shift + }{1-9,0}
+#	bspc {desktop -f,window -d} {a,b,c,d,e,f,g,h,i,j}
 alt + {_,shift + }{1-9,0}
-	bspc {desktop -f,window -d} {1-9,0}
+	bspc {desktop -f,window -d} {i,ii,iii,iv,v,vi,viii,ix,x}
+ctrl + {_,shift + }{1-9,0}
+	bspc {desktop -f,window -d} {I,II,III,IV,V,VI,VIII,IX,X}
 
 :button1
 	bspc pointer -g focus
