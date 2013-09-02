@@ -7,6 +7,11 @@
 alt + shift + q
 	bspc quit && pkill bar && pkill dzen2
 
+# Reload panels
+alt + q
+	/home/sunn/.xmonad/status_bar "#d6c3b6" "#181512" "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
+
+
 # Workstation Monitor
 alt + w
 	bspc monitor -f next
@@ -84,9 +89,9 @@ alt + ctrl + {1-9}
 #ctrl + {_,shift + }{1-9,0}
 #	bspc {desktop -f,window -d} {a,b,c,d,e,f,g,h,i,j}
 alt + {_,shift + }{1-9,0}
-	bspc {desktop -f,window -d} {i,ii,iii,iv,v,vi,viii,ix,x}
-ctrl + {_,shift + }{1-9,0}
-	bspc {desktop -f,window -d} {I,II,III,IV,V,VI,VIII,IX,X}
+	bspc {desktop -f,window -d} {i,ii,iii,iv,v,vi,vii,viii,ix,x}
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,window -d} {I,II,III,IV,V,VI,VII,VIII,IX,X}
 
 :button1
 	bspc pointer -g focus
