@@ -30,16 +30,16 @@ chatnets = {
   SILC = { type = "SILC"; };
   freenode = {
     type = "IRC";
-    autosendcmd = "/msg -freenode nickserv identify jacuzzi; /window goto nickserv; /wc";
+    autosendcmd = "/msg -freenode nickserv identify PW; /window goto nickserv; /wc";
 
   };
   rizon = {
     type = "IRC";
-    autosendcmd = "wait 100; /msg -rizon NickServ identify jacuzzi; /window goto NickServ; /wc";
+    autosendcmd = "wait 100; /msg -rizon NickServ identify PW; /window goto NickServ; /wc";
   };
   bitlbee = {
     type = "IRC";
-    autosendcmd = "wait 200; /msg -localhost &bitlbee identify jacuzzi";
+    autosendcmd = "wait 102; /msg -localhost &bitlbee identify PW";
   };
   unixhub = { type = "IRC"; };
 };
@@ -221,6 +221,14 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
+    awl_1 = {
+      placement = "top";
+      items = {
+        barstart = { priority = "100"; };
+        awl_1 = { };
+        barend = { priority = "100"; alignment = "right"; };
+      };
+    };
   };
 };
 settings = {
@@ -245,7 +253,7 @@ hilights = (
 );
 ignores = (
   {
-    level = "CRAP MSGS NOTICES SNOTES CTCPS JOINS PARTS QUITS KICKS MODES TOPICS WALLOPS INVITES NICKS DCC DCCMSGS CLIENTNOTICES CLIENTCRAP CLIENTERRORS HILIGHTS";
+    level = "CRAP JOINS PARTS QUITS KICKS MODES TOPICS WALLOPS NICKS DCC DCCMSGS CLIENTNOTICES CLIENTCRAP CLIENTERRORS HILIGHTS";
   }
 );
 windows = {
