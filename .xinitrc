@@ -4,20 +4,22 @@ xset +fp /usr/share/fonts/myfonts/limey
 xset +fp /usr/share/fonts/myfonts/lemon 
 xset +fp /usr/share/fonts/myfonts/uushi 
 xset +fp /usr/share/fonts/myfonts/suxus 
+xset +fp /usr/share/fonts/myfonts/tewi 
 xset +fp /usr/share/fonts/artwiz-fonts 
 xset fp rehash 
+wmname LG3D
 xcalib /home/sunn/x230.icm &
 xsetroot -cursor_name left_ptr &
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
-hsetroot -fill /home/sunn/Pictures/orange-leaf.jpg &
+hsetroot -tile /home/sunn/Pictures/tweed.png &
 unclutter -grab -noevents -root &
-#compton -cCb &
+compton -cCb -fD 5 -r 5 -o 0.5 -l 2 -t 2 &
 urxvtd &
 
 if [[ -z `xrandr | grep " connected" | grep 'VGA'` ]]; then
 	echo "No monitor found"
 else
-	xrandr --output VGA1 --auto --left-of LVDS1
+	xrandr --output VGA1 --auto --above LVDS1
 fi
 
 DEFAULT_SESSION=xmonad

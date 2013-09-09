@@ -93,7 +93,7 @@ alt + {_,shift + }{1-9,0}
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,window -d} {I,II,III,IV,V,VI,VII,VIII,IX,X}
 
-:button1
+~button1
 	bspc pointer -g focus
 
 # Move or resize window
@@ -150,6 +150,9 @@ XF86AudioNext
 
 XF86AudioPrev
 	ncmpcpp prev
+
+Print
+	scrot -q 100
 
 # make sxhkd reload its configuration files:
 alt + shift + Escape

@@ -29,7 +29,8 @@ bspc config borderless_monocle  true
 bspc config gapless_monocle     true
 bspc config focus_follows_pointer true
 bspc config auto_alternate true
-bspc config focused_border_color #646a6d
+bspc config auto_cancel true
+bspc config focused_border_color #8c644c
 bspc config normal_border_color #322d29
 
 bspc rule -a Thunar --floating
