@@ -2,12 +2,12 @@
 #include "/home/sunn/.xtermconf"
 
 ! #########################################
-urxvt.termName: rxvt-unicode-256color
+!urxvt.termName: rxvt-unicode-256color
 urxvt*perl-lib:			/usr/lib/urxvt/perl
 urxvt*perl-ext-common:		default,matcher,clipboard
-urxvt*perl-matcher: 		1
-urxvt*matcher-button: 		1
-urxvt*urlLauncher:		/usr/bin/chromium
+!urxvt*perl-matcher: 		1
+!urxvt*matcher-button: 		1
+!urxvt*urlLauncher:		/usr/bin/chromium
 urxvt*cursorUnderline: 1
 !urxvt*letterspace: -1
 !urxvt*fading: 			10
