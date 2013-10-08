@@ -30,16 +30,11 @@ chatnets = {
   SILC = { type = "SILC"; };
   freenode = {
     type = "IRC";
-    autosendcmd = "/msg -freenode nickserv identify PW; /window goto nickserv; /wc";
-
+    autosendcmd = "/msg -freenode nickserv identify earsplit PASS;/window goto nickserv;/wc; wait 10";
   };
   rizon = {
     type = "IRC";
-    autosendcmd = "wait 100; /msg -rizon NickServ identify PW; /window goto NickServ; /wc";
-  };
-  bitlbee = {
-    type = "IRC";
-    autosendcmd = "wait 102; /msg -localhost &bitlbee identify PW";
+    autosendcmd = "/msg -rizon NickServ IDENTIFY PASS;/window goto NickServ;/wc;wait 20";
   };
   unixhub = { type = "IRC"; };
 };
@@ -47,8 +42,9 @@ chatnets = {
 channels = (
   { name = "#archlinux"; chatnet = "freenode"; autojoin = "yes"; },
   { name = "#crunchbang"; chatnet = "freenode"; autojoin = "yes"; },
+  { name = "#unixhub"; chatnet = "unixhub"; autojoin = "yes"; },
   { name = "#/g/summer"; chatnet = "rizon"; autojoin = "yes"; },
-  { name = "#unixhub"; chatnet = "unixhub"; autojoin = "yes"; }
+  { name = "#rice"; chatnet = "rizon"; autojoin = "yes"; }
 );
 
 aliases = {
@@ -221,25 +217,32 @@ statusbar = {
         barend = { priority = "100"; alignment = "right"; };
       };
     };
-    awl_1 = {
-      placement = "top";
-      items = {
-        barstart = { priority = "100"; };
-        awl_1 = { };
-        barend = { priority = "100"; alignment = "right"; };
-      };
-    };
   };
 };
+
 settings = {
   core = {
-    real_name = "O)))";
+    real_name = "bill indelicato";
     user_name = "earsplit";
-    nick = "earspliT";
-    hostname = " ";
+    nick = "earsplit";
   };
-  "fe-text" = { actlist_sort = "refnum"; };
-  "fe-common/core" = { theme = "default"; show_names_on_join = "no"; };
+  "fe-text" = {
+    actlist_sort = "refnum";
+    indent_always = "yes";
+    indent = "11";
+    paste_verify_line_count = "45";
+  };
+  "fe-common/core" = {
+    theme = "default";
+    use_status_window = "no";
+    show_names_on_join = "no";
+    autocreate_own_query = "no";
+    autocreate_windows = "yes";
+    autolog = "on";
+    autolog_path = "~/.irssi/logs/$tag/$0/%y-%m-%d.log";
+    use_msgs_window = "yes";
+    autolog_ignore_targets = "auth global hopm-siglost hostserv nickserv phallus [leet] chanserv uguubot";
+  };
   "perl/core/scripts" = {
     awl_display_key = "$H %K$C $S";
     awl_display_key_active = "$H %n$C $S";
@@ -249,12 +252,7 @@ settings = {
 };
 hilights = (
   { text = "nick"; nick = "yes"; word = "yes"; },
-  { text = "earspliT"; color = "%r»"; nick = "yes"; word = "yes"; }
-);
-ignores = (
-  {
-    level = "CRAP JOINS PARTS QUITS KICKS MODES TOPICS WALLOPS NICKS DCC DCCMSGS CLIENTNOTICES CLIENTCRAP CLIENTERRORS HILIGHTS";
-  }
+  { text = "earsplit"; color = "%r»"; nick = "yes"; word = "yes"; }
 );
 windows = {
   1 = { immortal = "yes"; name = ""; level = "ALL"; };
@@ -304,9 +302,24 @@ windows = {
         type = "CHANNEL";
         chat_type = "IRC";
         name = "#/g/summer";
-        tag = "rizon";
+        tag = "/g/summer";
+      }
+    );
+  };
+  7 = {
+    items = (
+      {
+        type = "CHANNEL";
+        chat_type = "IRC";
+        name = "#rice";
+        tag = "rice";
       }
     );
   };
 };
 mainwindows = { 1 = { first_line = "0"; lines = "61"; }; };
+logs = { };
+ignores = (
+  { mask = "MODES"; level = "ALL"; },
+  { level = "JOINS PARTS QUITS KICKS MODES NICKS"; }
+);
