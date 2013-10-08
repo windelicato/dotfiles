@@ -7,6 +7,6 @@ do
 	for j in ~/Pictures/$1*.*
 	do
 		hsetroot -fill $j
-		sleep 60
+		sleep 5
 	done
 done

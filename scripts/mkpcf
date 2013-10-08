@@ -12,3 +12,6 @@ done
 mkfontdir
 mkfontscale
 xset fp rehash
+
+# Refresh font cache
+fc-cache

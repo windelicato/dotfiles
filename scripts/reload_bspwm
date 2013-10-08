@@ -1,0 +1,14 @@
+#!/bin/bash
+
+if [[ -z `xrandr | grep " connected" | grep 'VGA'` ]]; then
+	echo "No monitor found"
+else
+	xrandr --output VGA1 --auto --above LVDS1
+fi
+
+pkill panel && pkill dzen2
+
+bspc monitor -f next
+bspc desktop Desktop02 -n $FIRST_DESK_MAIN
+bspc monitor -a $REMAINING_DESKS_MAIN
+bspc monitor -p 14 0 0 0
