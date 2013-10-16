@@ -4,12 +4,19 @@
 #
 
 # Exit bspcwm
-alt + shift + q
-	bspc quit && pkill bar && pkill dzen2
+#alt + shift + {super,_ + }q
+#	{bspc query -T > "$BSPWM_TREE"; \
+#		bspc query -H > "$BSPWM_HISTORY"; \
+#			bspc quit && pkill bar && pkill dzen2,\
+#	bspc quit 1 && pkill bar && pklil dzen2}, bspc quit 1 && pkill bar && pklil dzen2
 
-# Reload panels
+alt + shift + q
+	bspc quit 1 && pkill bar && pkill dzen2}, bspc quit 1 && pkill bar && pklil dzen2
+
+# Toggle panels
 alt + q
-	/home/sunn/.xmonad/status_bar "#d6c3b6" "#181512" "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"
+	{pkill panel; pkill dzen2; bspc config top_padding 0 ,\
+	bspc config top_padding 14; panel &; /home/sunn/.xmonad/status_bar "#d6c3b6" "#181512" "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"}
 
 
 # Workstation Monitor
@@ -19,6 +26,10 @@ alt + w
 # Close window
 alt + shift + x
 	bspc  window -c
+
+# Kill all detached tmux sessions
+alt + x
+	/home/sunn/scripts/tmux_purge
 
 alt + ctrl + shift + x
 	bspc  window -k
@@ -72,11 +83,14 @@ alt + Escape
 alt + space 
 	bspc desktop -l next
 
-alt + minus
-	bspc config window_gap $((`bspc config window_gap` - 5 ))
+alt + g
+	bspc window -f {next.floating,next.tiled}
 
-alt + plus
-	bspc config window_gap $((`bspc config window_gap` + 5 ))
+alt + minus
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` + 5 ))
+
+alt + equal
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` - 5 ))
 
 # Set splitting ratio of windows
 alt + ctrl + {1-9}
@@ -108,12 +122,21 @@ alt + !button{1-3}
 # wm independent hotkeys
 #
 
+alt + shift + backslash
+#	/home/sunn/scripts/transparent_blank 
+	create_frame 
 
 alt + shift + Return
-	urxvtc
+	urxvtc 
+
+super + shift + Return
+	urxvtc -e "tmux"
 
 alt + ctrl + Return
 	urxvtc && bspc window -t floating
+
+alt + super + Return
+	urxvtc -e "tmux" && bspc window -t floating
 
 alt + r
 	gmrun
@@ -157,6 +180,12 @@ Print
 # make sxhkd reload its configuration files:
 alt + shift + Escape
 	pkill -USR1 -x sxhkd
+
+super + alt + {_,shift + }Escape
+    {bspc query -T > "$BSPWM_TREE"; \
+        bspc query -H > "$BSPWM_HISTORY"; \
+            bspc quit,\
+     bspc quit 1}
 
 alt + F1
 	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_music.sh
