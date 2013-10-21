@@ -1,0 +1,24 @@
+#####
+# Menu Styles
+#####
+Colorset 16 fg #9a875f, bg #181512
+
+MenuStyle * FVWM
+MenuStyle * PopupOffset 0 100
+MenuStyle * Font "-*-nu-*-*-*-*-*-*-*-*-*-*-*"
+MenuStyle * BorderWidth 0
+MenuStyle * Hilightback #181512
+MenuStyle * ActiveFore #d6c3b6
+MenuStyle * MenuColorSet 16
+
+MenuStyle * Hilight3DThin
+MenuStyle * Animation
+MenuStyle * AutomaticHotKeys
+MenyStyle * SeparatorsShort
+
+#Submenu Settings (up for showing, down for hiding after moved away)
+MenuStyle * PopupDelay 150, PopupDelayed
+MenuStyle * PopDownDelay 300, PopDownDelayed
+MenyStyle * TrianglesRelief
+
+Style fvwm_menu UsePPosition

@@ -1,0 +1,41 @@
+##########################################################
+# Load any modules which should be started during fvwm
+# initialization
+
+# Make sure FvwmButtons is always there.
+AddToFunc StartFunction  "I" Module FvwmButtons
+
+# Make it titlebar-less, sticky, and give it an icon
+Style "FvwmButtons"     Icon toolbox.xpm, NoTitle, Sticky
+
+##########################################################
+DestroyModuleConfig FvwmButtons: *
+*FvwmButtons: Fore Black
+*FvwmButtons: Back rgb:90/80/90
+*FvwmButtons: Geometry -0-5
+*FvwmButtons: Rows 1
+*FvwmButtons: BoxSize smart
+*FvwmButtons: Font -*-helvetica-medium-r-*-*-12-*
+*FvwmButtons: Padding 2 2
+
+*FvwmButtons: (Title Resize, Icon resize.xpm,  Action Resize)
+*FvwmButtons: (Title Move,   Icon arrows2.xpm, Action Move  )
+*FvwmButtons: (Title Lower,  Icon Down,        Action Lower )
+*FvwmButtons: (Title Raise,  Icon Up,          Action Raise )
+*FvwmButtons: (Title Kill,   Icon bomb.xpm,    Action Destroy)
+
+*FvwmButtons: (1x1,Container(Rows 3,Frame 1))
+*FvwmButtons: (Title Dopey ,Action                          \
+    `Exec "big_win" xterm -T big_win -geometry 80x50 &`)
+*FvwmButtons: (Title Snoopy, Font fixed, Action             \
+    `Exec "small_win" xterm -T small_win &`)
+*FvwmButtons: (Title Smokin)
+*FvwmButtons: (End)
+
+KillModule FvwmButtons Buttons-Slid
+*FvwmButtons: (Swallow(UseOld,NoKill) "xload15" `Exec xload \
+     -title xload15 -nolabel -bg rgb:90/80/90 -update 15    \
+     -geometry -3000-3000 &`)
+*FvwmButtons: (2x2, Swallow(UseOld, NoKill, Respawn) "astime_run" `Exec astime\
+-geometry 20x20-0+0 -bg "#181512" -fg "#504339" -sec "#8F8558" -min "#646a6d" -hour "#746c48" -day "#9a875f" -ampm "#9a875f" -date "#9a875f" -at -fh -nh -noborder`)
+*FvwmButtons: (8x1, Swallow (NoKill, Respawn, UseOld) "xclock" "Exec exec xclock -bg grey -fg black -digital -twentyfour -padding 1 -norender -update 1")

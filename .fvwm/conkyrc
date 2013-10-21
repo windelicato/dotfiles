@@ -1,0 +1,40 @@
+alignment top_left
+background no
+border_width 1
+cpu_avg_samples 2
+default_color 9a875f 
+default_outline_color white
+default_shade_color white
+draw_borders no draw_graph_borders yes draw_outline no
+draw_shades no
+use_xft yes
+xftfont Nu:size=10
+gap_x 115
+gap_y 5
+minimum_size 5 5
+net_avg_samples 2
+no_buffers yes
+out_to_console no
+out_to_stderr no
+extra_newline no
+own_window yes
+own_window_class Conky
+own_window_colour 181512
+stippled_borders 0
+update_interval 1.0
+uppercase no
+use_spacer none
+show_graph_scale no
+show_graph_range no
+
+TEXT
+$alignc $sysname $kernel $machine${font Sans:size=6} 
+
+${font}CPU ${cpugraph 10,150 -l} $alignr$cpu%${font Sans:size=6}
+
+${font}MEM ${memgraph 10,150 -l} $alignr$mem${font Sans:size=6}
+
+${font}N-T ${upspeedgraph wlan0 10,150 -l} $alignr${totalup wlan0}${font Sans:size=6}
+
+${font}N-R ${downspeedgraph wlan0 10,150 -l} $alignr${totaldown wlan0}${font Sans:size=4}
+

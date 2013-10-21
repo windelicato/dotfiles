@@ -1,0 +1,33 @@
+#####
+# Mouse Button Bindings
+#####
+
+# Clicks that last (in ms) <=ClickTime is a 'Click', > ClickTime is a 'Hold'
+ClickTime 350
+# If the mouse moves more than x pixels, it's considered a 'Drag'
+MoveThreshold 3
+
+Mouse 1 A M Move
+Mouse 3 A M Resize
+
+Mouse 1 S A Move
+Mouse 3 S A Menu MenuWindowOps
+
+#Mouse 1 R A Menu MenuFvwmRoot
+Mouse 1 R A Menu FvwmRootMenu
+Mouse 4 R A Menu MenuFvwmRoot
+Mouse 5 R A Menu MenuFvwmRoot
+# Middle-click
+Mouse 2 R A WindowList (CurrentPage)
+
+#Mouse 1 I A DeiconifyFunc
+
+#Bindings for clicking on titlebars
+Mouse 0 1 A Menu MenuFvwmWindowOps Nop
+Mouse 0 2 A Close
+Mouse 0 3 A WindowShade
+Mouse 0 4 A Maximize
+#Mouse 0 6 A Iconify
+Mouse 0 6 A Thumbnail
+Mouse 4 T A WheelToggleShade True
+Mouse 5 T A WheelToggleShade False

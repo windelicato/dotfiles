@@ -1,0 +1,97 @@
+#####################
+# Created by Sean Wells (codemonk84@gmail.com)
+# Heavy Inspiration by Tavis Ormandy (taviso@gentoo.org)
+#####################
+
+#####
+# Set the image path (this is where FVWM will look for images/icons to display)
+#####
+#ImagePath ${HOME}/icons:/usr/share/icons:+
+ImagePath /usr/share/pixmaps/ 
+#####
+# Global Styles
+#####
+Read fvwm.globalstyle
+
+#####
+# Application specific Style settings
+#####
+Read fvwm.appstyle
+
+#####
+# Setup IconBox (where applications minimize to)
+#
+# fvwm_icon_size is set to how big the thumbnails should be (32/64/96/128)
+#####
+SetEnv fvwm_icon_size 64
+Style * IconBox 20 100 100 -15
+
+#####
+# TitleBar (Allowed to use Colorsets 1-5)
+#####
+Read fvwm.titlebar
+
+#####
+# FvwmPager (Allowed to use Colorsets 6-10)
+#####
+Read fvwm.pager
+
+#####
+# FvwmTaskBar (Allowed to use Colorsets 11-15)
+#####
+Read fvwm.taskbar
+
+#####
+# FvwmTaskBar (Allowed to use Colorsets 11-15)
+#####
+Read fvwm.buttons
+
+#####
+# Keybindings
+#####
+# This disables numlock/scrolllog from interfering with bindings
+IgnoreModifiers L25
+
+Read fvwm.bind_mouse
+Read fvwm.bind_keys
+
+###
+# Menu Styles (Allowed to use Colorsets 16-20)
+###
+Read fvwm.menustyle
+
+#####
+# Virtual Desktops
+#####
+DesktopSize 3x3
+DesktopName 0 Main
+EdgeScroll 100 100
+EdgeResistance 350 350
+EdgeThickness 1
+
+#####
+# Stops Maximised windows from obscuring TaskBars/ButtonBars
+# Right Left Top Bottom
+#####
+EwmhBaseStruts 0 0 0 20
+
+#####
+# OpaqueMoveSize allows you to stop Large windows from being moved opaquely. -1 Disables so that moving can 
+always be seen
+#####
+OpaqueMoveSize -1
+
+#####
+# Custom Functions
+#####
+Read fvwm.functions
+
+#####
+# Startup Programs
+######
+Read fvwm.startup
+
+#####
+# Menu
+#####
+Read fvwm.menu

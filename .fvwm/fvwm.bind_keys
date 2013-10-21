@@ -1,0 +1,31 @@
+#####
+# Keyboard Bindings
+#####
+
+# Alt + F# to move to desktops
+Key 1 RWT M GotoPage 0 0
+Key 2 RWT M GotoPage 1 0
+Key 3 RWT M GotoPage 2 0
+Key 4 RWT M GotoPage 0 1
+Key 5 RWT M GotoPage 1 1
+Key 6 RWT M GotoPage 2 1
+Key 7 RWT M GotoPage 0 2
+Key 8 RWT M GotoPage 1 2
+Key 9 RWT M GotoPage 2 2
+
+# Multimedia Keys
+Key XF86AudioNext         A A Exec exec mpc next
+Key XF86AudioPrev         A A Exec exec mpc prev
+Key XF86AudioPlay         A A Exec exec mpc toggle
+Key XF86AudioStop         A A Exec exec mpc stop
+
+Key Return  A M Exec exec urxvtc
+Key Space   A M FvwmMaximize 100 100
+Key R       A M Exec exec gmrun
+Key B       A M Exec exec firefox
+Key X      A M FvwmDeleteOrDestroy
+
+Key j A M Direction South (AcceptsFocus) Focus
+Key h A M Direction West (AcceptsFocus) Focus
+Key l A M Direction East (AcceptsFocus) Focus
+Key k A M Direction North (AcceptsFocus) Focus

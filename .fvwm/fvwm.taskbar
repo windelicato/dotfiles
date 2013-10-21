@@ -1,0 +1,32 @@
+#####
+# FvwmTaskBar
+#####
+
+Colorset 11 fg #d6c3b6, bg #181512, sh #181512, hi #9a875f 
+
+DestroyModuleConfig FvwmTaskBar: *
+*FvwmTaskBar: Geometry +0-0
+*FvwmTaskBar: Rows 1
+*FvwmTaskBar: Font "-*-nu-medium-*-*-*-*-*-*-*-*-*-*-*"
+*FvwmTaskBar: StatusFont "-*-nu-medium-*-*-*-*-*-*-*-*-*-*-*"
+*FvwmTaskBar: SelFont "-*-nu-medium-*-*-*-*-*-*-*-*-*-*-*"
+*FvwmTaskBar: Colorset 11
+*FvwmTaskBar: IconColorset 11
+*FvwmTaskBar: FocusColorset 11
+*FvwmTaskBar: AutoStick
+*FvwmTaskBar: UseSkipList
+*FvwmTaskBar: PageOnly
+*FvwmTaskBar: ShowTips
+*FvwmTaskBar: AutoHide
+*FvwmTaskBar: NoDefaultStartButton
+*FvwmTaskBar: NoBrightFocus
+#*FvwmTaskBar: MailCheck 0
+#*FvwmTaskBar: ClockFormat | %R
+*FvwmTaskBar: WindowButtonsRightMargin 124
+
+Style FvwmTaskBar !Title, !Handles, !Borders
+Style FvwmTaskBar AutoStick
+Style FvwmTaskBar Sticky
+Style FvwmTaskBar WindowListSkip, CirculateSkip
+Style FvwmTaskBar StaysOnBottom
+

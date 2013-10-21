@@ -1,0 +1,56 @@
+#####
+# TitleBar settings
+# This is to setup the buttons and look of the titlebar on each window
+#
+#
+# +------------------------------------+
+# | .                            _ # X |
+# +------------------------------------+
+# | 1                            6 4 2 |
+# |                                    |
+#
+# When buttons are pressed (ActiveDown), move 5% to the right and down
+# to give the impression of being pressed.
+# 
+# Inactive uses a more tinted colorset,
+#####
+
+#Active
+Colorset 1 NoShape,  bg #181512, fg #9a875f
+#Inactive
+Colorset 2 NoShape,  bg #181512, fg #817267
+
+Style * Button 1, Button 2, Button 4, Button 6, Button 8
+
+DestroyDecor DefaultDecor
+AddToDecor DefaultDecor
++ TitleStyle LeftJustified Height 17
++ TitleStyle Active ( Colorset 1 -- Flat )
++ TitleStyle Inactive ( Colorset 2 -- Flat )
+
+#+ ButtonStyle All Active ( Colorset 1 -- Flat )
+#+ ButtonStyle All Inactive ( Colorset 2 -- Flat )
+#
+##ButtonStyle for top left button
+#+ AddButtonStyle 1 ActiveUp Vector 4 44x44@2 44x45@2 45x45@2 44x44@2 -- Flat
+#+ AddButtonStyle 1 Inactive Vector 4 44x44@2 44x45@2 45x45@2 44x44@2 -- Flat
+#+ AddButtonStyle 1 ActiveDown Vector 4 49x49@2 49x50@2 50x50@2 49x49@2 -- Flat
+#
+##ButtonStyle for minimize button
+#+ AddButtonStyle 6 ActiveUp Vector 5 30x60@2 60x60@2 60x50@2 30x50@2 30x60@2 -- Flat
+#+ AddButtonStyle 6 Inactive Vector 5 30x60@2 60x60@2 60x50@2 30x50@2 30x60@2 -- Flat
+#+ AddButtonStyle 6 ActiveDown Vector 5 35x65@2 65x65@2 65x55@2 35x55@2 35x65@2 -- Flat
+#
+##ButtonStyle for maximize button
+#+ AddButtonStyle 4 ActiveUp Vector 7 30x30@2 30x60@2 60x60@2 60x30@2 30x30@2 30x35@2 60x35@2 -- Flat
+#+ AddButtonStyle 4 Inactive Vector 7 30x30@2 30x60@2 60x60@2 60x30@2 30x30@2 30x35@2 60x35@2 -- Flat
+#+ AddButtonStyle 4 ActiveDown Vector 7 35x35@2 35x65@2 65x65@2 65x35@2 35x35@2 35x40@2 65x40@2 -- Flat
+#
+##ButtonStyle for close button
+#+ AddButtonStyle 2 ActiveUp Vector 5 30x60@2 60x60@2 45x45@2 60x30@2 30@60@2 -- Flat
+#+ AddButtonStyle 2 Inactive Vector 5 30x60@2 60x60@2 45x45@2 60x30@2 30@60@2 -- Flat
+#+ AddButtonStyle 2 ActiveDown Vector 5 35x65@2 65x65@2 50x50@2 65x35@2 35@65@2 -- Flat
+
+#Use the decor we just defined
+Style * UseDecor DefaultDecor
+Style * !Title

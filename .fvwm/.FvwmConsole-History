@@ -1,0 +1,10 @@
+Module FvwmPager 0 2
+Module FvwmPager 0 1
+Module FvwmPager 0 3
+Module FvwmPager 0 2
+FvwmBanner
+FvwmTaskBar
+FvwmAnimate
+DestroyModuleConfig FvwmTaskBar: *
+*FvwmTaskBar: Geometry +0-0
+Module FvwmTaskBar

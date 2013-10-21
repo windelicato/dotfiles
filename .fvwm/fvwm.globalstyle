@@ -1,0 +1,25 @@
+#####
+# Global Style
+#####
+Style * Font "-*-cure-*-*-*-*-*-*-*-*-*-*-*-*"
+Style * Color #332d29/#181512, HilightBack #817267, HilightFore #817267
+Style * BorderWidth 4, HandleWidth 4
+Style * IconBox 600x100+1-1
+Style * DecorateTransient 
+Style * !IconTitle 
+Style * MwmBorder
+
+#Window Behaviors
+Style * SloppyFocus, ClickToFocusRaises	#Focus follows mouse but doesnt raise windows
+Style * SmartPlacement			#Place windows in least obtrusive areas if possible
+Style * ResizeOpaque			#Eye Candy preference of watching resize live
+Style * GrabFocusOff 			#Prevents windows from stealing focus
+
+#Allows windows to snap together
+SnapAttraction 5
+
+#Cursor Style
+CursorStyle ROOT top_left_arrow
+CursorStyle POSITION crosshair
+CursorStyle WAIT watch
+CursorStyle DESTROY gumby

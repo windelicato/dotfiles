@@ -1,0 +1,21 @@
+#####
+# Startup Programs
+# InitFunction runs after the StartFunction during first start 
+# RestartFunction runs after the StartFunction during fvm restart
+#####
+DestroyFunc StartFunction
+AddToFunc StartFunction
++ I Module FvwmPager * *
++ I Exec exec /home/sunn/.fvwm/status
+#+ I Exec exec nitrogen --restore &
+
+DestroyFunc InitFunction
+AddToFunc InitFunction
++ I Module FvwmTaskBar
+#+ I Module FvwmButtons
+#+ I Exec exec fvwm-root -r $[FVWM_USERDIR]/wallpaper.png
+
+DestroyFunc RestartFunction
+AddToFunc RestartFunction
++ I Module FvwmTaskBar
+#+ I Module FvwmButtons

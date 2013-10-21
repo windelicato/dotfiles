@@ -1,0 +1,7 @@
+#####
+# Application specific Style settings
+#####
+Style Conky	!Title, Sticky, WindowListSkip, StaysOnBottom, NeverFocus
+
+#Style "astime"         NoTitle, NoHandles, Sticky, WindowListSkip, ClickToFocus, StaysOnBottom
+Style "astime"         NoTitle, Sticky, WindowListSkip, ClickToFocus, StaysOnBottom

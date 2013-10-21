@@ -1,0 +1,73 @@
+#####
+# Menu
+#
+# Replace the default menu with your own options
+#####
+
+DestroyMenu FvwmRootMenu
+AddToMenu   FvwmRootMenu 
++ "urxvt"  Exec exec urxvtc 
++ "" Nop
++ "Internet"	Popup MenuInternet
++ "Multimedia"  Popup MenuMultimedia
++ "Utilities" 	Popup MenuUtilities
++ "" Nop
+#+ "Fvwm Console"  Module FvwmConsole -terminal aterm
+#+ "Preferences"	Popup MenuFvwmConfig
+#+ "Window Controls"	Popup MenuWindowOps
+#+ "" Nop
++ "Xkill"	Pick Destroy
++ "Restart UI"  Restart
++ "Quit UI"  Quit
+
+#####
+# Internet Menu
+###########
+DestroyMenu MenuInternet
+AddToMenu   MenuInternet "Internet" Title
++ "Firefox" Exec exec firefox
+#+ "Irssi%menu/irc.png%"  Exec exec irssi
+#+ "X-Chat%menu/irc.png%"  Exec exec xchat
+
+#####
+# Multimedia Menu
+###########
+DestroyMenu MenuMultimedia
+AddToMenu   MenuMultimedia "Multimedia" Title
++ "Gimp%menu/gimp.png%"  FvwmGimp
++ "VLC%menu/vlc.png%"  Exec exec vlc
+
+#####
+# Utilities Menu
+###########
+DestroyMenu MenuUtilities
+AddToMenu   MenuUtilities "Utilities" Title
+#+ "Wireshark" Exec exec wireshark
++ "Thunar" Exec exec thunar
+
+#####
+# fvwm Window Operation Menu
+###########
+DestroyMenu MenuWindowOps
+AddToMenu   MenuWindowOps 
++ "(De)Iconify%menu/window-iconify.xpm%"  Iconify
++ "(Un)Maximize%menu/window-maximize.xpm%"  Maximize
++ "(Un)Shade%menu/window-shade.xpm%"  WindowShade
++ "(Un)Stick%menu/window-stick.xpm%"  Stick
++ "" Nop
++ "Close%menu/window-close.xpm%"  Close
+#+ "Delete%menu/window-delete.xpm%"  Delete
+#+ "Destroy%menu/window-destroy.xpm%"  Destroy
+#+ "" Nop
+#+ "StaysOnTop%menu/window-raise.xpm%"  Pick (CirculateHit) Layer 0 6
+#+ "Layer +1%menu/window-raise.xpm%"  Pick (CirculateHit) Layer +1
+#+ "StaysPut%menu/window.xpm%"  Pick (CirculateHit) Layer 0 4
+#+ "Layer -1%menu/window-lower.xpm%"  Pick (CirculateHit) Layer -1
+#+ "StaysOnBottom%menu/window-lower.xpm%"  Pick (CirculateHit) Layer 0 2
+#+ "" Nop
+#+ "%menu/window.xpm%Window Screenshot"  Pick (CirculateHit) 
+#FvwmWindowScreenshot
+#+ "%menu/display.xpm%Screenshot" FvwmDesktopScreenshot 5
+#+ "" Nop
+#+ "Identify%menu/window-identify.xpm%"  Module FvwmIdent
+#

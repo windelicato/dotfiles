@@ -1,0 +1,36 @@
+#####
+# Functions
+#
+# Custom scripts/actions to be called
+#####
+
+#####
+# Name:		Thumbnail
+# Author: 	Tavis Ormando (taviso@gentoo.org)
+# Purpose: 	Iconify a window with a reduced screenshot of the application 
+# 		Window, looks really cool.
+# 
+# 		Uses FVWMEvent to remove the Iconw hen deiconified, you will  want
+# 		to remove this if you use WindowStyle elsewhere.
+# 
+# 		Thumbnailing example: [6]http://dev.gentoo.org/~taviso/step2.png
+#
+#####
+DestroyFunc Thumbnail
+AddToFunc Thumbnail
++ I Raise
++ I PipeRead "xwd -silent -id $[w.id] | convert -scale $[fvwm_icon_size] -frame 1x1 \
+    -mattecolor black -quality 0 xwd:- png:$[HOME]/.fvwm/icon.tmp.$[w.id].png\
+    && echo WindowStyle IconOverride, Icon $[HOME]/.fvwm/icon.tmp.$[w.id].png, StaysOnBottom \
+    || echo Nop"
++ I Iconify
+
+DestroyFunc DeThumbnail
+AddToFunc DeThumbnail
++ I DestroyWindowStyle
++ I Exec exec rm -f $HOME/.fvwm/icon.tmp.$[w.id].png
+
+# FIXME: This will destroy all Windowstyle settings.
+*FvwmEvent: deiconify DeThumbnail
+
+AddToFunc WindowListFunc I WarpToWindow 50 50
