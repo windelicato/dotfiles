@@ -1,14 +1,15 @@
 ! vim:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
 !
-
+urxvt*foreground: #D7D0C7
+urxvt*background: #151515
 ! #########################################
 ! X::Dotshare COLORS
 ! #########################################
 !black
-urxvt*color0:     #AF875F
-urxvt*color8:     #AF875F
-!urxvt*color0:     #101010
-!urxvt*color8:     #404040
+!urxvt*color0:     #AF875F
+!urxvt*color8:     #AF875F
+urxvt*color0:     #404040
+urxvt*color8:     #404040
 !red
 urxvt*color1:     #E84F4F
 urxvt*color9:     #D23D3D

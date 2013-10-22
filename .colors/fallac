@@ -1,6 +1,10 @@
 urxvt*background: #30303a
 urxvt*foreground: #d6d6d6
 
+urxvt*colorIT: #777777
+urxvt*colorUL: #aaaaaa
+urxvt*colorBD: #6fa5df
+
 urxvt*color0: #4a4a4a
 urxvt*color8: #777777
 

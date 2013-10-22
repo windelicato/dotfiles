@@ -1,0 +1,29 @@
+!! NES_Palette_Final
+URxvt.background: #000001
+URxvt.foreground: #f8f8f8
+URxvt.cursorColor: #bcbcbc
+
+!black
+urxvt*color0:#000101
+urxvt*color8:#787878
+!red
+urxvt*color1:#4428BC
+urxvt*color9:#6844FC
+!green
+urxvt*color2:#9878F8
+urxvt*color10:#D8B8F8
+!yellow
+urxvt*color3:#6888FC
+urxvt*color11:#B8B8F8
+!blue
+urxvt*color4:#0078F8
+urxvt*color12:#3CBCFC
+!magenta
+urxvt*color5:#6844FC
+urxvt*color13:#9878f8
+!cyan
+urxvt*color6:#0058f8
+urxvt*color14:#0078f8
+!white
+urxvt*color7:#7c7c7c
+urxvt*color15:#bcbcbc

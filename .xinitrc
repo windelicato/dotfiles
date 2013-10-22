@@ -6,20 +6,24 @@ xset +fp /usr/share/fonts/myfonts/uushi
 xset +fp /usr/share/fonts/myfonts/suxus 
 xset +fp /usr/share/fonts/myfonts/tewi 
 xset +fp /usr/share/fonts/artwiz-fonts 
+xset +fp /usr/share/fonts/yrmtmodded
 xset fp rehash 
 wmname LG3D
 xcalib /home/sunn/x230.icm &
 xsetroot -cursor_name left_ptr &
 xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
-hsetroot -tile /home/sunn/Pictures/tweed.png &
+hsetroot -tile /home/sunn/Pictures/mountain-tall.jpg &
 unclutter -grab -noevents -root &
-compton -cCb -fD 5 -r 5 -o 0.5 -l 2 -t 2 &
+#compton -cCb -fD 5 -r 5 -o 0.5 -l 2 -t 2 &
+#compton -cCfFbG -I 0.05 -O 0.05 -D 4 -r4 -l-6 -t-5 -o.99 &
+compton &
 urxvtd &
 
 if [[ -z `xrandr | grep " connected" | grep 'VGA'` ]]; then
 	echo "No monitor found"
 else
 	xrandr --output VGA1 --auto --above LVDS1
+	nitrogen --restore
 fi
 
 DEFAULT_SESSION=xmonad
@@ -42,6 +46,7 @@ bspwm|*)
 sxhkd &
 [ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
 mkfifo "$PANEL_FIFO"
-exec dbus-launch bspwm -c /home/sunn/.config/bspwm/autostart -s "$PANEL_FIFO" -p W
+#exec dbus-launch bspwm -s "$PANEL_FIFO" -p W
+exec wm
 ;;
 esac

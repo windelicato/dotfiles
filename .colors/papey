@@ -1,0 +1,30 @@
+! --- Xft config ---
+
+urxvt*foreground: #e5e5e5
+urxvt*background: #1d1d1d
+
+!Black
+urxvt*color0:  #121212
+urxvt*color8:  #5f5f5F 
+!Red
+urxvt*color1:  #a35b66
+urxvt*color9:  #ab6b74
+!Green
+urxvt*color2:  #99ab6f
+urxvt*color10: #acb792
+!Yellow
+urxvt*color3:  #ca9733
+urxvt*color11: #ccaa69
+!Blue
+urxvt*color4:  #495d6e
+urxvt*color12: #687987
+!Magenta
+urxvt*color5:  #825969
+urxvt*color13: #977381
+!Cyan
+urxvt*color6:  #839191
+urxvt*color14: #98A4A4
+!White
+urxvt*color7:  #E0E0E0
+urxvt*color15: #e5e5e5
+

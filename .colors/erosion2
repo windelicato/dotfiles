@@ -1,5 +1,5 @@
-urxvt*background: #181512
-urxvt*foreground: #bea492
+urxvt*background: #000000
+urxvt*foreground: #ffffff
 urxvt*cursorColor: #93a1a1
 
 !! black dark/light

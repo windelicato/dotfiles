@@ -1,0 +1,27 @@
+URxvt.background: #0E0E0E
+URxvt.foreground: #fefefe
+ 
+!Black / Light black
+urxvt*color0: #454545
+urxvt*color8: #666666
+!Red / Light red
+urxvt*color1:  #CC4747
+urxvt*color9:  #BF5858
+!Green / Light green
+urxvt*color2:  #A0CF5D
+urxvt*color10: #B8D68C
+!Yellow / Light yellow
+urxvt*color3:  #FF9B52
+urxvt*color11: #FFB680
+!Blue / Light blue
+urxvt*color4:  #5FA69B
+urxvt*color12: #99C7BF
+!Purple / Light purple
+urxvt*color5:  #A966CC
+urxvt*color13: #BD9FCC
+!Cyan / Light cyan
+urxvt*color6:  #6CAB79
+urxvt*color14: #95BA9C
+!White / Light white...?
+urxvt*color7:  #d3d3d3
+urxvt*color15: #fefefe

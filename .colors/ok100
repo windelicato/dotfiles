@@ -1,8 +1,9 @@
-!
-
 urxvt*background:         #140c0b
-!urxvt*foreground:         #877a70
-urxvt*foreground:         #B6A79C
+urxvt*foreground:         #877a70
+urxvt*colorIT: 		  #58756c
+urxvt*colorUL: 		  #cdcdcd
+urxvt*colorBD: 		  #6b753d
+! black
 urxvt*color0:             #403f3e
 urxvt*color8:             #666362
 ! red

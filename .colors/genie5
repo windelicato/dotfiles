@@ -1,0 +1,30 @@
+
+URxvt.background: #171717
+URxvt.foreground: #676767
+URxvt.cursorColor: #676767
+URxvt.title: "urxvt"
+!light/dark
+!black
+*color0: #3a3a3a
+*color8: #676767
+!red (red)
+*color1: #536473
+*color9: #536473
+!green (green)
+*color2: #94a168
+*color10: #94a168
+!yellow (orange)
+*color3: #ababab
+*color11: #ababab
+!blue (blue
+*color4: #536473
+*color12: #536473
+!magenta (magenta)
+*color5: #94a168
+*color13: #94a168
+!cyan (cyan)
+*color6: #676767
+*color14: #676767
+!white (white)
+*color7: #ababab
+*color15: #ababab

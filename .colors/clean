@@ -1,8 +1,12 @@
-urxvt*background:             #262729
+urxvt*background:             [80]#262729
 urxvt*foreground:             #f8f8f2
+urxvt*cursorColor:            #b5d2dd
+urxvt*colorIT: #5e7175
+urxvt*colorUL: #FFFFFF
+urxvt*colorBD: #a6e22e
 ! Black
-urxvt*color0:                 #262729
-urxvt*color8:                 #262729
+urxvt*color0:                 #626262
+urxvt*color8:                 #626262
 ! Red
 urxvt*color1:                 #f92671
 urxvt*color9:                 #ff669d
@@ -25,4 +29,3 @@ urxvt*color14:                #a3babf
 urxvt*color7:                 #ffffff
 urxvt*color15:                #ffffff
 ! Cursor
-urxvt*cursorColor:            #b5d2dd

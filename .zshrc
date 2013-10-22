@@ -50,7 +50,7 @@ function fname() { find . -iname "*$@*"; }
 conf() {
 	case $1 in
 		xmonad)		vim ~/.xmonad/xmonad.hs ;;
-		bspwm)		vim ~/.config/bspwm/autostart ;;
+		bspwm)		vim ~/.config/bspwm/bspwmrc ;;
 		sxhkd)		vim ~/.config/sxhkd/sxhkdrc ;;
 		conky)		vim ~/.xmonad/.conky_dzen ;;
 		homepage)	olddir=$(pwd) && cd ~/scripts/homepage.py && vim homepage.py && ./homepage.py; cd $olddir ;;
@@ -126,6 +126,10 @@ alias emac='emacs -nw'
 alias h='history | tail'
 alias hg='history | grep '
 alias ch='chmod 755 '
+alias ~='urxvtc' #Open new terminals in current working directory
+alias ~~='urxvtc && urxvtc'
+alias ~~~='urxvtc && urxvtc && urxvtc'
+alias ~~~~='urxvtc && urxvtc && urxvtc && urxvtc'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'

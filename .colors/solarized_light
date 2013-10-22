@@ -1,0 +1,57 @@
+
+#define S_base03 #002b36
+#define S_base02 #073642
+#define S_base01 #586e75
+#define S_base00 #657b83
+#define S_base0 #839496
+#define S_base1 #93a1a1
+#define S_base2 #eee8d5
+#define S_base3 #fdf6e3
+#define S_yellow #b58900
+#define S_orange #cb4b16
+#define S_red #dc322f
+#define S_magenta #d33682
+#define S_violet #6c71c4
+#define S_blue #268bd2
+#define S_cyan #2aa198
+#define S_green #859900
+
+urxvt*background: S_base3
+urxvt*foreground: S_base00
+urxvt*fading: 40
+urxvt*fadeColor: S_base3
+urxvt*cursorColor: S_base01
+urxvt*pointerColorBackground:S_base1
+urxvt*pointerColorForeground:S_base01
+
+!! black dark/light
+urxvt*color0: S_base02
+urxvt*color8: S_base03
+
+!! red dark/light
+urxvt*color1: S_red
+urxvt*color9: S_orange
+
+!! green dark/light
+urxvt*color2: S_green
+urxvt*color10: S_base01
+
+!! yellow dark/light
+urxvt*color3: S_yellow
+urxvt*color11: S_base00
+
+!! blue dark/light
+urxvt*color4: S_blue
+urxvt*color12: S_base0
+
+!! magenta dark/light
+urxvt*color5: S_magenta
+urxvt*color13: S_violet
+
+!! cyan dark/light
+urxvt*color6: S_cyan
+urxvt*color14: S_base1
+
+!! white dark/light
+urxvt*color7: S_base2
+urxvt*color15: S_base3
