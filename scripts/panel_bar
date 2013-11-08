@@ -8,11 +8,11 @@ while read -r line ; do
             sys_infos="\\r\\f5${line#?}\\fr"
             ;;
         T*)
-#            title="\\c${line#?}"
-            title=""
+            #title="\\f7  ${line#?}"
+#            title=""
             ;;
         W*)
-            wm_infos=""
+            wm_infos="\\c"
             IFS=':'
             set -- ${line#?}
             while [ $# -gt 0 ] ; do
@@ -21,19 +21,19 @@ while read -r line ; do
                 case $item in
                     [OFU]*)
                         # active desktop
-                        wm_infos="$wm_infos\\u9\\f1 ${name} \\fr\\br\\ur"
+                        wm_infos="$wm_infos\\f9 • \\fr\\br"
                         ;;
                     o*)
                         # inactive but occupied desktop
-                        wm_infos="$wm_infos\\f6 ${name} \\fr"
+                        wm_infos="$wm_infos\\f8 • \\fr"
                         ;;
                     f*)
                         # inactive desktop
-                        wm_infos="$wm_infos\\f2 ${name} \\fr"
+                        wm_infos="$wm_infos\\f8 ○ \\fr"
                         ;;
                     u*)
                         # urgent desktop
-                        wm_infos="$wm_infos \\u3\\f6${name}\\ur\\fr "
+                        wm_infos="$wm_infos \\f3•\\fr "
                         ;;
                     L*)
                         # layout
@@ -46,5 +46,5 @@ while read -r line ; do
             done
             ;;
     esac
-    printf "%s\n" "$wm_infos $title $sys_infos"
+    printf "%s\n" "$title $wm_infos $sys_infos"
 done
