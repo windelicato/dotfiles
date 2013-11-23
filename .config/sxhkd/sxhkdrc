@@ -15,8 +15,8 @@ alt + shift + q
 
 # Toggle panels
 alt + q
-	{pkill panel; pkill cat; pkill dzen2; bspc config top_padding 0 ,\
-	bspc config top_padding 14; panel &; /home/sunn/.xmonad/status_bar "#d6c3b6" "#181512" "-*-nu-*-*-*-*-*-*-*-*-*-*-*-*"}
+	{pkill panel; pkill cat; pkill conky; bspc config top_padding 0 ,\
+	bspc config top_padding 14; /home/sunn/.config/bspwm/panel/panel & }
 
 
 # Workstation Monitor

@@ -1,0 +1,56 @@
+#!/bin/bash
+
+# BATTERY ICONS:
+#      
+
+BAT=`acpi -b | awk '{gsub(/%,/,""); print $4}' | sed 's/%//g'`
+STATUS=`acpi -b | awk '{gsub(/,/,""); print $3}'`
+
+# Set Icon
+icon=""
+if [[ $STATUS != "Discharging" ]]; then
+	icon=""
+elif [[ $BAT -lt 10 ]]; then
+	icon=""
+elif [[ $BAT -lt 40 ]]; then
+	icon=""
+elif [[ $BAT -lt 70 ]]; then
+	icon=""
+else
+	icon=""
+fi
+
+bar=""
+case $BAT in
+	[0-5])
+		bar="\f8—————————"
+		;;
+	[5-9])
+		bar="—\f8————————"
+		;;
+	[1-2]*)
+		bar="——\f8———————"
+		;;
+	3*)
+		bar="———\f8——————"
+		;;
+	4*)
+		bar="————\f8—————"
+		;;
+	5*)
+		bar="—————\f8————"
+		;;
+	6*)
+		bar="——————\f8———"
+		;;
+	7*)
+		bar="———————\f8——"
+		;;
+	*)
+		bar="———————\f8——"
+		;;
+esac
+
+# Create Bar
+
+echo "$icon \f9$bar"

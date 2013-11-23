@@ -54,5 +54,4 @@ rulc -a 'class=="Conky"' 'sticky=on,manage=off,lower=on'
 rulc -a 'class=="astime"' 'sticky=on'
 rulc -a 'class=="feh"' 'floating=on,manage=off'
 
-panel &
-/home/sunn/.xmonad/status_bar "#d6c3b6" "#181512" "-*-tamsyn-medium-*-normal-*-*-87-*-*-*-*-*-*" &
+/home/sunn/.config/bspwm/panel/panel &

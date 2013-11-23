@@ -1,0 +1,12 @@
+short_units yes
+background yes
+out_to_console yes
+out_to_x no
+# Update interval in seconds
+update_interval 3
+update_interval_on_battery 3
+
+TEXT
+S \f8 ${execi 1 ./panel_wifi} \f9 ${wireless_essid wlan0}   \f8 ${execi 1 ./panel_battery} \f1   \fr${time %I:%M %P}  
+
+

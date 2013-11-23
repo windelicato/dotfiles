@@ -1,0 +1,13 @@
+short_units yes
+background yes
+out_to_console yes
+out_to_x no
+# Update interval in seconds
+update_interval 10000
+update_interval_on_battery 10000
+ 
+# ^ca(1,/home/sunn/.xmonad/scripts/dzen_pacman.sh)  ^fg(\#504339)^i(/home/sunn/.xmonad/dzen2/pacman.xbm) ^fg(\#9a875f)${exec pacman -Qu | wc -l} updates  ^ca()\
+#^ca(1,/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_vol.sh)   ^fg(\#504339)${execi 2 /home/sunn/.xmonad/scripts/bar_vol.sh}^fg(\#9a875f)   ^ca()\
+#^ca(1,/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_music.sh)  ${if_match "${mpd_status}"!="MPD not responding"}^fg(\#504339)^i(/home/sunn/.xmonad/dzen2/note.xbm) ^fg(\#9a875f)${mpd_smart}   ^ca()${endif}
+TEXT
+^ca(1,/home/sunn/scripts/start) ^fg(\#504339) ^i(/home/sunn/.dzen/arch_10x10.xbm)^fg(\#9a875f) bspwm ^ca()
