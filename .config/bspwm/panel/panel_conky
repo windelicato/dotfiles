@@ -7,6 +7,4 @@ update_interval 3
 update_interval_on_battery 3
 
 TEXT
-S \f8 ${execi 1 ./panel_wifi} \f9 ${wireless_essid wlan0}   \f8 ${execi 1 ./panel_battery} \f1   \fr${time %I:%M %P}  
-
-
+S\f8${execi 1 ./panel_wifi} \f9${wireless_essid wlan0}   \f8${execi 1 ./panel_battery}   \fr${time %I:%M %P}
