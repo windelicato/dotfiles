@@ -7,4 +7,4 @@ update_interval 99999
 update_interval_on_battery 999999
 
 TEXT
-^ca(1,./launcher_menu) ^fg(\#504339) ^i(/home/sunn/.dzen/arch_10x10.xbm)^fg(\#9a875f) bspwm ^ca()
+^ca(1,./launcher_menu laucnher_apps) ^fg(\#504339) ^i(/home/sunn/.dzen/arch_10x10.xbm)^fg(\#9a875f) bspwm ^ca()
