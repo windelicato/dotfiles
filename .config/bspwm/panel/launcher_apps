@@ -9,7 +9,7 @@
  ^fg(#504339)^i(/home/sunn/.dzen/note.xbm)^fg() ario:ario
  ^fg(#504339)^i(/home/sunn/.dzen/mem.xbm)^fg() matlab:urxvt -e matlab -nodesktop -nosplash
 ----------
- ^fg(#777777)^i(/home/sunn/.dzen/play.xbm)^fg() run:gmrun
- ^fg(#777777)^i(/home/sunn/.dzen/full.xbm)^fg() suspend:systemctl suspend
- ^fg(#777777)^i(/home/sunn/.dzen/half.xbm)^fg() restart:systemctl reboot
- ^fg(#777777)^i(/home/sunn/.dzen/empty.xbm)^fg() shutdown:systemctl poweroff
+ ^fg(#504339)^i(/home/sunn/.dzen/play.xbm)^fg() run:gmrun
+ ^fg(#504339)^i(/home/sunn/.dzen/full.xbm)^fg() suspend:systemctl suspend
+ ^fg(#504339)^i(/home/sunn/.dzen/half.xbm)^fg() restart:systemctl reboot
+ ^fg(#504339)^i(/home/sunn/.dzen/empty.xbm)^fg() shutdown:systemctl poweroff
