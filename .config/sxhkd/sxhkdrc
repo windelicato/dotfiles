@@ -161,7 +161,7 @@ alt + z
 	zathura
 
 alt + Tab
-	menu /home/sunn/.xmonad/apps
+	{/home/sunn/.config/bspwm/panel/launcher_menu /home/sunn/.config/bspwm/panel/launcher_apps, pkill dzen2}
 
 XF86AudioRaiseVolume
 	/home/sunn/scripts/dvol2 -i 2 & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
