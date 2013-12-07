@@ -1,7 +1,7 @@
 #! /bin/sh
 
-cd /home/sunn/.config/bspwm/panel/
-./launcher
+cd $(dirname $0)
+#./launcher
 
 if [ $(pgrep -cx panel) -gt 1 ] ; then
     printf "%s\n" "The panel is already running." >&2
@@ -15,7 +15,7 @@ flavor=${1:-bar}
 bspc control --subscribe > "$PANEL_FIFO" &
 #xtitle -sf 'T%s' > "$PANEL_FIFO" &
 #clock -sf 'S%a %H:%M' > "$PANEL_FIFO" &
-#echo "T" >  "$PANEL_FIFO" &
+echo "T" >  "$PANEL_FIFO" &
 conky -c ./panel_conky > "$PANEL_FIFO" &
 
 case "$flavor" in
