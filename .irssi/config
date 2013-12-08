@@ -222,9 +222,9 @@ statusbar = {
 
 settings = {
   core = {
-    real_name = "bill indelicato";
-    user_name = "earsplit";
-    nick = "earsplit";
+    real_name = "";
+    user_name = "";
+    nick = "";
   };
   "fe-text" = {
     actlist_sort = "refnum";
