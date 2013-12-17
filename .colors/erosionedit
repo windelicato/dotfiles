@@ -30,10 +30,11 @@ urxvt*color4: #646a6d
 urxvt*color12: #71777A
 
 !! magenta dark/light
-!!urxvt*color5: #6d6871
-!!urxvt*color13: #756f7b
-urxvt*color5: #656565
-urxvt*color13: #706D70
+!!urxvt*color5: #656565
+!!urxvt*color13: #706D70
+!!urxvt*color5: #463c3b
+urxvt*color5: #605655
+urxvt*color13: #656565
 
 !! cyan dark/light
 !!urxvt*color6: #3b484a
