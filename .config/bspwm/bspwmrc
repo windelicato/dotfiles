@@ -1,22 +1,21 @@
-#! /bin/sh
+#!/bin/sh
 
-desktop1="i ii iii iv v vi vii viii ix x"
-desktop2="I II III IV V VI VII VIII IX X"
+i=1
+for monitor in $(bspc query -M); do
+bspc monitor $monitor \
+        -n "$i" \
+        -d $i/{i,ii,iii,iv,v,vi,vii,viii,ix,x}
+    let i++
+done
+NMON=$i
+unset i
 
-if [[ -z `xrandr | grep " connected" | grep 'VGA'` ]]; then
-	#No monitor connected
-	bspc monitor -d $desktop1
-	bspc config top_padding 14 
-else
-	bspc monitor LVDS1 -d $desktop1
-	bspc monitor VGA1 -d $desktop2
-	bspc config -m VGA1 top_padding 14
-fi
+bspc config top_padding 14 
 
 # Visual options
 bspc config split_ratio         0.50
-bspc config border_width        2
-bspc config window_gap          12
+bspc config border_width        1
+bspc config window_gap          4
 bspc config borderless_monocle  true
 bspc config gapless_monocle     true
 bspc config focus_follows_pointer true
@@ -24,7 +23,7 @@ bspc config auto_alternate true
 bspc config auto_cancel true
 bspc config normal_border_color "#504339"
 bspc config active_border_color "#504339"
-bspc config focused_border_color "#605655"
+bspc config focused_border_color "#817267"
 bspc config presel_border_color "#9a875f"
 bspc config urgent_border_color "#504339"
 bspc config normal_frame_opacity 0.0

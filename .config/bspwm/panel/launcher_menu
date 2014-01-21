@@ -1,20 +1,22 @@
 #!/bin/sh
 
-WIDTH=85
-#FONT="-artwiz-limey-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
+WIDTH=65
+FONT="-artwiz-limey-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
 #FONT='sans:size=11'
 #FONT='sawasdee:size=10'
 #FONT='-*-gohufontmod11-*-*-*-*-*-*-*-*-*-*-*-*'
 #FONT='-*-suxus-*-*-normal-*-10-100-75-75-c-50-iso8859-1'
 #FONT='-*-nu-*-*-normal-*-10-100-75-75-c-50-iso8859-1'
-FONT='-*-tewi-medium-*-normal-*-*-*-*-*-*-*-*-*'
+#FONT='-*-tewi-medium-*-normal-*-*-*-*-*-*-*-*-*'
+#FONT='-*-lemon-medium-*-normal-*-*-*-*-*-*-*-*-*'
+#FONT="-lokaltog-fixed-medium-*-normal--10-*-*-*-*-*-*-*"
 
 
 # Width of the graphical separator (default 80% of window's width)
 SEPARATOR_WIDTH=`expr $WIDTH - \( $WIDTH / 100 \) \* 20`
 
 #Position
-X=48
+X=25
 Y=0
 
 MENUFILE=$1
@@ -50,4 +52,4 @@ echo " "
 sed -e 's/:.*$//' \
 	-e 's/^.--*/^r('${SEPARATOR_WIDTH}'x1)/' "$MENUFILE" 
 ) | \
-	dzen2 -tw 1 -l $LINES -w $WIDTH -x $X -y $Y -fn $FONT -bg '#181512' -fg '#9a875f' -p -m -sa l -e 'onstart=uncollapse;leaveslave=exit;button1=menuprint_noparse,exit' | execute
+	dzen2 -tw 1 -l $LINES -w $WIDTH -x $X -y $Y -fn $FONT -bg '#181512' -fg '#817267' -p -m -sa l -e 'onstart=uncollapse;leaveslave=exit;button1=menuprint_noparse,exit' | execute

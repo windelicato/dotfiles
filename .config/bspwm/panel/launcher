@@ -1,7 +1,0 @@
-#!/bin/bash
-
-font="-*-tamsyn-medium-r-normal-*-12-110-75-75-m-50-iso8859-*"
-background="#181512"
-foreground="#9a875f"
-
-conky -qc ./launcher_conky | dzen2 -x '0' -w '100' -h '14' -ta 'l' -bg $background -fg $foreground -y '0' -fn $font -dock &

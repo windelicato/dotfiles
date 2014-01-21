@@ -19,6 +19,8 @@ elif [[ $BAT -lt 70 ]]; then
 else
 	icon=""
 fi
+s="«"
+#s="$s"
 
 bar=""
 case $BAT in
@@ -26,37 +28,37 @@ case $BAT in
 		bar=""
 		;;
 	[0-5])
-		bar="\f8—————————"
+		bar="\f8$s$s$s$s$s$s$s$s$s"
 		;;
 	[5-9])
-		bar="\f3—\f8————————"
+		bar="\f3$s\f8$s$s$s$s$s$s$s$s"
 		;;
 	[1-2]*)
-		bar="——\f8———————"
+		bar="$s$s\f8$s$s$s$s$s$s$s"
 		;;
 	3*)
-		bar="———\f8——————"
+		bar="$s$s$s\f8$s$s$s$s$s$s"
 		;;
 	4*)
-		bar="————\f8—————"
+		bar="$s$s$s$s\f8$s$s$s$s$s"
 		;;
 	5*)
-		bar="—————\f8————"
+		bar="$s$s$s$s$s\f8$s$s$s$s"
 		;;
 	6*)
-		bar="——————\f8———"
+		bar="$s$s$s$s$s$s\f8$s$s$s"
 		;;
 	7*)
-		bar="———————\f8——"
+		bar="$s$s$s$s$s$s$s\f8$s$s"
 		;;
 	8*)
-		bar="————————\f8—"
+		bar="$s$s$s$s$s$s$s$s\f8$s"
 		;;
 	*)
-		bar="—————————"
+		bar="$s$s$s$s$s$s$s$s$s"
 		;;
 esac
 
 # Create Bar
 
-echo "$icon \f9$bar"
+echo "$icon \f9"

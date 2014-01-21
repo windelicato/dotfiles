@@ -3,13 +3,6 @@
 # bspwm hotkeys
 #
 
-# Exit bspcwm
-#alt + shift + {super,_ + }q
-#	{bspc query -T > "$BSPWM_TREE"; \
-#		bspc query -H > "$BSPWM_HISTORY"; \
-#			bspc quit && pkill bar && pkill dzen2,\
-#	bspc quit 1 && pkill bar && pklil dzen2}, bspc quit 1 && pkill bar && pklil dzen2
-
 alt + shift + q
 	bspc quit 1 && pkill bar && pkill dzen2
 
@@ -23,14 +16,15 @@ alt + q
 alt + w
 	bspc monitor -f next
 
-# Close window
-alt + shift + x
-	bspc  window -c
-
 # Kill all detached tmux sessions
 alt + x
 	/home/sunn/scripts/tmux_purge
 
+# Close window
+alt + shift + x
+	bspc  window -c
+
+# Kill window
 alt + ctrl + shift + x
 	bspc  window -k
 
@@ -38,6 +32,7 @@ alt + ctrl + shift + x
 alt + {_,shift +} t
 	bspc window -t {floating,fullscreen}
 
+# Lock node
 alt + shift + p
 	bspc window -t private
 
@@ -45,7 +40,7 @@ alt + shift + p
 alt + b
 	bspc desktop -B
 
-# TODO: Presel window for splitting
+# Presel window for splitting
 alt + ctrl + {h,j,k,l}
 	bspc window -p {left,down,up,right}
 
@@ -55,31 +50,36 @@ alt + shift {a,s,d,f}
 
 # Select windows, or move
 alt + {_,shift + }{h,j,k,l}
-	bspc window -{f,s} {left,down,up,right}
+	bspc window -{f,s} {left,down,up,right} || bspc window -f {prev, prev, next, next}
 
-# Resize the hard way 
-#alt + shift + {a,s,d,f}
-#	bspc window -e {left,down,up,right} push
-#
-#alt + {a,s,d,f}
-#	bspc window -e {right,up,down,left} pull
-alt + a
-	bspc window --edge right push || bspc window --edge left push
-alt + f
-	bspc window --edge right pull || bspc window --edge left pull
-alt + s
-	bspc window --edge up push || bspc window --edge down push
-alt + d
-	bspc window --edge up pull || bspc window --edge down pull
+# Resize nodes
+alt + {a,f}
+    S={+,-}; \
+    bspc window -e left $\{S\}20 || \
+    bspc window -e right   $\{S\}20
+alt + {s,d}
+    S={+,-}; \
+    bspc window -e down $\{S\}20 || \
+    bspc window -e up   $\{S\}20
+
+
+# Move floating windows (requires baskerville's xdo)
+alt + {Left,Right,Up,Down}
+    xdo move {-x -20,-x +20,-y -20,-y +20}
+
+# Resize floating windows
+alt + shift + {Left,Right,Up,Down}
+    xdo resize {-w -20,-w +20,-h -20,-h +20}    bspc window -e {left -10,down +10,up -10,right +10} || {right -10,up +10,down -10,left +10}
 
 # Move current window to largest space
 alt + Return
 	bspc window -s biggest
 
-# Circulate leaves of tree
+# Mirror and flip leaves of tree
 alt + {comma,period}
 	bspc desktop -F {horizontal,vertical}
 
+# Rotate leaves of tree
 alt + shift + {comma,period}
 	bspc desktop -R {90,270}
 
@@ -87,37 +87,50 @@ alt + shift + {comma,period}
 alt + {p,n}
 	bspc desktop -f {prev.occupied,next.occupied} 
 
-# Cancel preselection for splitting
+# Lock a window from closing
 alt + Escape
-	bspc desktop -c
+	bspc window -t locked 
 
+# Toggle monocle
 alt + space 
 	bspc desktop -l next
 
+# Toggle pseudotiled (floating in tile)
+alt + shift + space 
+	bspc window -t pseudo_tiled
+
+# Focus on floating / tiled
 alt + e
 	bspc window -f {next.floating,next.tiled}
 
-alt + minus
-	bspc config -d focused window_gap $((`bspc config -d focused window_gap` + 4 ))
+# Change desktop padding
+alt + {_, shift} + bracketright
+	bspc config -d focused right_padding $((`bspc config -d focused right_padding` {+,-} 20 ))
 
-alt + equal
-	bspc config -d focused window_gap $((`bspc config -d focused window_gap` - 4 ))
+alt + {_, shift} + bracketleft
+	bspc config -d focused left_padding $((`bspc config -d focused left_padding` {+,-} 20 ))
+
+ctrl + {_, shift} + bracketright
+	bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding` {+,-} 20 ))
+
+ctrl + {_, shift} + bracketleft
+	bspc config -d focused top_padding $((`bspc config -d focused top_padding` {+,-} 20 ))
+
+# Change window gap
+alt + {minus,equal}
+	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 2 ))
 
 # Set splitting ratio of windows
 alt + ctrl + {1-9}
 	bspc window -r 0.{1-9}
 
 # Focus or move window to desktops
-#alt + {_,shift + }{1-9,0}
-#	bspc {desktop -f,window -d} {1-9,0}
-#
-#ctrl + {_,shift + }{1-9,0}
-#	bspc {desktop -f,window -d} {a,b,c,d,e,f,g,h,i,j}
 alt + {_,shift + }{1-9,0}
-	bspc {desktop -f,window -d} {i,ii,iii,iv,v,vi,vii,viii,ix,x}
-super + {_,shift + }{1-9,0}
-	bspc {desktop -f,window -d} {I,II,III,IV,V,VI,VII,VIII,IX,X}
+    bspc {desktop -f, window -d} $(bspc query -M -m)/{i,ii,iii,iv,v,vi,vii,viii,ix,x}
 
+#
+# mouse bindings
+#
 
 # Move or resize window
 alt + button{1-3}
@@ -132,18 +145,17 @@ super + @button{1-3}
     bspc pointer -u
 
 #
-# wm independent hotkeys
+# spawn programs
 #
 
 alt + shift + backslash
-#	/home/sunn/scripts/transparent_blank 
 	create_frame 
 
 alt + shift + Return
 	urxvtc 
 
 alt + ctrl + Return
-	 rulc -a true floating=true duration=1; urxvtc
+	 bspc rule -a urxvt -o pseudo_tiled=on && urxvtc
 
 alt + r
 	/home/sunn/scripts/lens
@@ -162,6 +174,13 @@ alt + z
 
 alt + Tab
 	{/home/sunn/.config/bspwm/panel/launcher_menu /home/sunn/.config/bspwm/panel/launcher_apps, pkill dzen2}
+
+Print
+	scrot -q 100
+
+#
+# Media keys
+#
 
 XF86AudioRaiseVolume
 	/home/sunn/scripts/dvol2 -i 2 & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
@@ -184,19 +203,10 @@ XF86AudioNext
 XF86AudioPrev
 	ncmpcpp prev
 
-Print
-	scrot -q 100
 
-# make sxhkd reload its configuration files:
-alt + shift + Escape
-	pkill -USR1 -x sxhkd
-
-super + alt + {_,shift + }Escape
-    {bspc query -T > "$BSPWM_TREE"; \
-        bspc query -H > "$BSPWM_HISTORY"; \
-            bspc quit,\
-     bspc quit 1}
-
+#
+# Dzen applets
+#
 alt + F1
 	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_music.sh
 alt + F2
@@ -209,3 +219,7 @@ alt + F5
 	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_date.sh
 alt + F6
 	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_log.sh
+
+# make sxhkd reload its configuration files:
+alt + shift + Escape
+	pkill -USR1 -x sxhkd
