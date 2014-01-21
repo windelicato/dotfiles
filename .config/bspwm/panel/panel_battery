@@ -29,9 +29,11 @@ case $BAT in
 		;;
 	[0-5])
 		bar="\f8$s$s$s$s$s$s$s$s$s"
+		icon="\u5$icon"
 		;;
 	[5-9])
 		bar="\f3$s\f8$s$s$s$s$s$s$s$s"
+		icon="\u3$icon"
 		;;
 	[1-2]*)
 		bar="$s$s\f8$s$s$s$s$s$s$s"
