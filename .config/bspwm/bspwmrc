@@ -26,6 +26,7 @@ bspc config active_border_color "#504339"
 bspc config focused_border_color "#817267"
 bspc config presel_border_color "#9a875f"
 bspc config urgent_border_color "#504339"
+bspc config focused_locked_border_color "#8c644c"
 bspc config normal_frame_opacity 0.0
 bspc config focused_frame_opacity 0.1
 
@@ -33,7 +34,7 @@ bspc config focused_frame_opacity 0.1
 # Rules
 bspc rule -a Skype pseudo_tiled=on
 bspc rule -a Spotify pseudo_tiled=on
-bspc rule -a Thunar pseudo_tiled=on
+bspc rule -a "Thunar" pseudo_tiled=on
 bspc rule -a Skype pseudo_tiled=on
 bspc rule -a File-roller pseudo_tiled=on
 bspc rule -a Transmission-gtk pseudo_tiled=on

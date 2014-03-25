@@ -7,4 +7,4 @@ update_interval 3
 update_interval_on_battery 3
 
 TEXT
-S\f8  \f9${execi 1 sensors | grep "temp1" | cut -d'+' -f2 | head -c2}°  \f8${execi 1 ./panel_wifi} \f9${wireless_essid wlan0}   \f8${execi 1 ./panel_battery}${battery_percent}%   \fr${time %I:%M %P}
+S\f8  \f9${execi 1 sensors | grep "temp1" | cut -d'+' -f2 | head -c2}°  \f8${execi 1 ./panel_wifi} \f9${wireless_essid wlan0}   \f8${execi 1 ./panel_battery}${battery_percent}%   \fr${time %I:%M %P}\ur
