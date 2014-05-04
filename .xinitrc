@@ -11,9 +11,15 @@ unclutter -grab -noevents -root &
 urxvtd &
 
 if [[ -z `xrandr | grep " connected" | grep 'VGA'` ]]; then
-	echo "No monitor found"
+	echo "No monitor found" &
 else
-	xrandr --output VGA1 --auto --above LVDS1
+	xrandr --output VGA1 --auto --above LVDS1 &
+fi
+
+if [[ "`acpi -b | awk '{gsub(/,/,""); print $3}'`" != "Discharging" ]]; then
+	hsetroot -fill /home/sunn/Pictures/forest-birch.jpg &
+	compton &
+	/home/sunn/scripts/docky-launch &
 fi
 
 exec $1
