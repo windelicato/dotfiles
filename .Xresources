@@ -3,10 +3,10 @@
 
 ! #########################################
 urxvt*perl-lib:			/usr/lib/urxvt/perl
-urxvt*perl-ext-common:		default,matcher,clipboard 
+urxvt*perl-ext-common:		default,matcher,clipboard,font-size
 urxvt*perl-matcher: 		1
-urxvt*matcher-button: 		1
-urxvt*urlLauncher:		/usr/bin/firefox
+urxvt*matcher-button: 		3
+urxvt*url-launcher:		/usr/bin/firefox
 !URxvt*matcher.button: 1
 !URxvt*matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
 urxvt*cursorUnderline: 1
@@ -15,23 +15,41 @@ urxvt*letterspace: -5
 !urxvt*fadeColor: 		#000000	
 urxvt*cursorBlink:		true
 urxvt*scrollBar:		false
-urxvt*depth:			33 
-urxvt*internalBorder: 		10
+urxvt*depth:			32 
+urxvt*internalBorder: 		5
+urxvt.urgentOnBell:  true
 
-URxvt.keysym.C-7: command:\033]710;-*-uushi-medium-r-normal-*-*-*-*-*-*-*-*-*\007\033]711;-*-uushi-medium-r-normal-*-*-*-*-*-*-*-*-*\007
-URxvt.keysym.C-8: command:\033]710;-*-gohufontmod11-medium-r-normal-*-*-*-*-*-*-*-*-*\007\033]711;-*-gohufontmod-medium-r-normal-*-*-*-*-*-*-*-*-*\007
-URxvt.keysym.C-9: command:\033]710;-*-limey-*-*-*-*-*-*-*-*-*-*-*-*\007\033]711;-*-limey-*-*-*-*-*-*-*-*-*-*-*-*\007
-URxvt.keysym.C-0: command:\033]710;-*-lemon-*-*-*-*-*-*-*-*-*-*-*-*\007\033]711;-*-lemon-*-*-*-*-*-*-*-*-*-*-*-*\007
-URxvt.keysym.C-minus: command:\033]710;-*-tewi-medium-r-normal-*-*-*-*-*-*-*-*-*\007\033]711;-*-tewi-medium-r-normal-*-*-*-*-*-*-*-*-*\007
-URxvt.keysym.C-equal: command:\033]710;xft:inconsolata:size=8\007\033]711;xft:inconsolata:size=8\007
+URxvt.keysym.C-7: command:\033]710;-lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1\007\033]711;-lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1\007
+URxvt.keysym.C-8: command:\033]710;-*-lemon-*-*-*-*-*-*-*-*-*-*-*-*\007\033]711;-*-lemon-*-*-*-*-*-*-*-*-*-*-*-*\007
+!URxvt.keysym.C-9: command:\033]710;-*-tewi-medium-r-normal-*-*-*-*-*-*-*-*-*\007\033]711;-*-tewi-medium-r-normal-*-*-*-*-*-*-*-*-*\007
+URxvt.keysym.C-9: command:\033]710;-*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*\007\033]711;-*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*\007
+URxvt.keysym.C-0: command:\033]710;xft:monaco:size=9\007\033]711;xft:monaco:size=9\007
+URxvt.keysym.C-minus:   perl:font-size:decglobal
+URxvt.keysym.C-equal: perl:font-size:incglobal
+
+!urxvt*font: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
+!urxvt*boldFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
+!urxvt*italicFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
+
+urxvt*font: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
+urxvt*boldFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
+urxvt*italicFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
+urxvt*bolditalicFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
+
+!urxvt*font: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso10646-1
+!urxvt*boldFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso10646-1
+!urxvt*italic: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso10646-1
+!urxvt*bolditalicFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso10646-1
+
+!urxvt*font: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
 
 !urxvt*font: xft:dejavu sans mono:size=10
 !urxvt*boldFont: xft:dejavu sans mono:bold:size=10
 !urxvt*italicFont: xft:dejavu sans mono:italic:size=10
-
-!urxvt*font: xft:hermit:size=10
-!urxvt*boldFont: xft:hermit:bold:size=10
-!urxvt*italicFont: xft:hermit:italic:size=10
 
 !urxvt*font: -*-dweep-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*boldFont: -*-dweep-*-*-*-*-*-*-*-*-*-*-*-*
@@ -43,6 +61,11 @@ URxvt.keysym.C-equal: command:\033]710;xft:inconsolata:size=8\007\033]711;xft:in
 !urxvt*italicFont: -lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1
 !urxvt*bolditalicFont: -lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1
 
+!urxvt*font: -*-tewi-medium-r-*-*-11-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-tewi-medium-r-*-*-11-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-tewi-medium-r-*-*-11-*-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-tewi-medium-r-*-*-11-*-*-*-*-*-*-*
+
 !urxvt*font: -*-profont-medium-*-*-*-11-*-*-*-*-*-*-*
 !urxvt*boldFont: -*-profont-bold-*-*-*-11-*-*-*-*-*-*-*
 !urxvt*italicFont: -*-profont-medium-*-*-*-11-*-*-*-*-*-*-*
@@ -52,11 +75,6 @@ URxvt.keysym.C-equal: command:\033]710;xft:inconsolata:size=8\007\033]711;xft:in
 !urxvt*boldFont: -*-dash-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*italicFont: -*-dash-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*bolditalicFont: -*-dash-*-*-*-*-*-*-*-*-*-*-*-*
-
-urxvt*font: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
-urxvt*boldFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
-urxvt*italicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
-urxvt*bolditalicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
 
 !urxvt*font: -*-suxus-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*boldFont: -*-suxus-*-*-*-*-*-*-*-*-*-*-*-*
@@ -68,6 +86,8 @@ urxvt*bolditalicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*italicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*bolditalicFont: -*-limey-*-*-*-*-*-*-*-*-*-*-*-*
 
+
+
 !urxvt*font: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*boldFont: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*italicFont: -*-lime-*-*-*-*-*-*-*-*-*-*-*-*
@@ -78,10 +98,6 @@ urxvt*bolditalicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*italicFont: -*-cure-medium-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*bolditalicFont: -*-cure-medium-*-*-*-*-*-*-*-*-*-*-*
 
-!urxvt*font: -*-tamsyn-medium-r-normal-*-*-87-*-*-*-*-*-*
-!urxvt*boldFont: -*-tamsyn-bold-r-normal-*-*-87-*-*-*-*-*-*
-!urxvt*italicFont: -*-tamsyn-medium-r-normal-*-*-87-*-*-*-*-*-*
-!urxvt*bolditalicFont: -*-tamsyn-bold-r-normal-*-*-87-*-*-*-*-*-*
 
 !urxvt*font: -*-terminus-medium-r-normal-*-12-*-*-*-*-*-*-*
 !urxvt*boldFont: -*-terminus-bold-r-normal-*-12-*-*-*-*-*-*-*
@@ -107,13 +123,13 @@ urxvt*bolditalicFont: -*-lemon-*-*-*-*-*-*-*-*-*-*-*-*
 !urxvt*italicFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* 
 !urxvt*bolditalicFont: -*-terminus-medium-r-normal-*-11-*-*-*-*-*-*-* 
 
-Xft.dpi:	96
-Xft.rgba:	rgb
-Xft.antialias: 	1
-Xft.hinting: 	1
-Xft.autohint: 	0
-Xft.hintstyle: 	hintslight
-Xft.lcdfilter: 	lcddefault
+Xft.antialias: 1
+Xft.autohint: 0
+Xft.dpi: 96
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.lcdfilter: lcddefault
+Xft.rgba: rgb
 
 xclock*majorColor: #9a875f
 xclock*minorColor: #9a875f
