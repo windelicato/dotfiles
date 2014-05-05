@@ -26,7 +26,7 @@ toolbarbutton#new-tab-button,
 
 tabs#tabbrowser-tabs, tabs#tabbrowser-tabs * {
 	-moz-appearance: none !important;
-	border-radius: 0px !important;
+	border-radius: 0px !important; 
 	border: none !important;
 	border-bottom: 0px none !important;
 	background-image: none !important;
@@ -68,8 +68,23 @@ tabs#tabbrowser-tabs {
 	margin-left: 3px !important;
 	margin-right: 3px !important;
 	margin-top: 2px !important;
-	font-size: 11px !important;
-	font-family: cure !important;
+	font-size: 12px !important;
+	font-family: lemon !important;
+}
+
+/* Hide the new curved tab edges */
+.tab-background {
+    opacity: 0 !important;
+}
+
+/* Hide the little graphic seperator between inactive tabs */
+.tabbrowser-tab:before,
+.tabbrowser-tab:after {
+    visibility: hidden !important;
+}
+
+html {
+	overflow: hidden;
 }
 
 #urlbar dropmarker,
@@ -90,81 +105,6 @@ tabs#tabbrowser-tabs {
 	min-width: 30px !important;
 	max-width: 130px !important;
 }
-
-notificationbox {
-	overflow-x: hidden;
-}
-
-/* hide vertical scrollbar */
-notificationbox {
-	overflow-x: hidden;
-}
-
-/*browser[type="content-primary"], browser[type="content-targetable"] {
-overflow-y: scroll;
-margin-right: 0px; /* 12px == width of my scrollbar */
-    }
-
-    browser[type="content-primary"], browser[type="content-targetable"] {
-	    overflow-y: scroll;
-	    margin-right: 0px;
-    }*/
-
-
-/* will's scrollbar
-scrollbar scrollbarbutton ,
-scrollbar gripper {
-visibility: collapse;
-}
-
-scrollbar ,
-scrollbar thumb {
--moz-appearance: none !important;
-}
-
-scrollbar[orient="vertical"] {
--moz-margin-start: -4px;
-min-width: 4px;
-max-width: 4px;
-	}	
-
-	scrollbar[orient="horizontal"] {
-		margin-top: -4px;
-		min-height: 4px;
-		max-height: 4px;
-	}	
-
-	scrollbar {
-		position: relative;
-		background-image: none;
-		z-index: ;
-		background-color: transparent;
-	}	
-
-	scrollbar:hover {
-		background-color: ButtonHighlight;
-		transition: all 0.2s ease 0s;
-	}
-
-	scrollbar thumb {
-		border: none !important;
-		border-radius: 1.5px !important;
-		background-color: #92969b;
-		opacity: .55;
-	}
-
-	scrollbar:hover thumb {
-		opacity: 1;
-		transition: all 0.2s ease 0s;
-	}
-
-	scrollbar thumb:active ,
-	scrollbar thumb:hover {
-		opacity: 1;
-		background-color: ButtonShadow;
-		transition: all 0.2s ease 0s;
-	}
- */
 
 .searchbar-engine-image {
 	display: none !important;
