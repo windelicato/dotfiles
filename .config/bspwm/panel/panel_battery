@@ -29,11 +29,11 @@ case $BAT in
 		;;
 	[0-5])
 		bar="\f8$s$s$s$s$s$s$s$s$s"
-		icon="\u5$icon"
+		icon="%{U#FFFF0000}%{+u}$icon"
 		;;
 	[5-9])
 		bar="\f3$s\f8$s$s$s$s$s$s$s$s"
-		icon="\u3$icon"
+		icon="%{U#FFFFD300}%{+u}$icon"
 		;;
 	[1-2]*)
 		bar="$s$s\f8$s$s$s$s$s$s$s"
@@ -63,4 +63,4 @@ esac
 
 # Create Bar
 
-echo "$icon \f9"
+echo "$icon "

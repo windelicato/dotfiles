@@ -5,13 +5,13 @@
 while read -r line ; do
     case $line in
         S*)
-            sys_infos="\\r${line#?}\\fr"
+            sys_infos="%{r}${line#?}"
             ;;
         T*)
-            title="\\f8 \\f9 bspwm"
+            title="  bspwm"
             ;;
         W*)
-            wm_infos="\\c"
+            wm_infos="%{c}"
             IFS=':'
             set -- ${line#?}
             while [ $# -gt 0 ] ; do
@@ -20,24 +20,24 @@ while read -r line ; do
                 case $item in
                     [OFU]*)
                         # active desktop
-                        wm_infos="$wm_infos\\f9  \\fr\\br"
+                        wm_infos="$wm_infos%{U#FF0000000}%{+u}   %{-u}"
                         ;;
                     o*)
                         # inactive but occupied desktop
-                        wm_infos="$wm_infos\\f8  \\fr"
+                        wm_infos="$wm_infos%{U#FFD8D8D8}%{+u}   %{-u}"
                         ;;
                     f*)
                         # inactive desktop
-                        wm_infos="$wm_infos\\f8 - \\fr"
+                        wm_infos="$wm_infos   "
                         ;;
                     u*)
                         # urgent desktop
-                        wm_infos="$wm_infos \\f3\\fr "
+                        wm_infos="$wm_infos%{U#FFC58BFF}%{+u}   %{-u}"
                         ;;
                     L*)
                         # layout
 #                        layout=$(printf "%s" "${name}" | sed 's/\(.\).*/\U\1/')
-                        wm_infos="$wm_infos \\b4\\f0$layout\\br\\fr"
+                        wm_infos="$wm_infos $layout"
                         ;;
                 esac
                 shift

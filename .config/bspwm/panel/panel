@@ -1,7 +1,17 @@
 #! /bin/sh
 
+FONT1="-misc-stlarch-medium-r-normal--10-100-75-75-c-80-iso10646-1"
+FONT2="-lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1"
+BACKGROUND="#FFFFFFFF"
+FOREGROUND="#FF000000"
+LINEHEIGHT="4"
+EDGE_GAP=0
+HEIGHT=14
+WIDTH=$((`bspc query -T | head -n1 | cut -d" " -f2 | cut -d"x" -f1` - ($EDGE_GAP * 2)))
+GEOMETRY="${WIDTH}x$HEIGHT+$EDGE_GAP+$EDGE_GAP"
+MONITOR="$(bspc query -M | tail -n1)"
+
 cd $(dirname $0)
-#./launcher
 
 if [ $(pgrep -cx panel) -gt 1 ] ; then
     printf "%s\n" "The panel is already running." >&2
@@ -20,7 +30,7 @@ conky -c ./panel_conky > "$PANEL_FIFO" &
 
 case "$flavor" in
     bar)
-        cat "$PANEL_FIFO" | ./panel_bar | bar
+        cat "$PANEL_FIFO" | ./panel_bar | bar -f "$FONT1","$FONT2" -F "$FOREGROUND" -B "$BACKGROUND" -g "$GEOMETRY" -u $LINEHEIGHT
         ;;
     dzen2)
         PANEL_HEIGHT=24

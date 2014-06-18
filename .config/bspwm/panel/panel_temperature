@@ -1,0 +1,11 @@
+#!/bin/bash
+
+temp=$((`sensors | grep "Physical id 0" | cut -d'+' -f2 | head -c2`))
+
+if [[ $temp > 49 ]]; then
+	output="%{fred}  %{fr}$temp°"
+else
+	output=""
+fi
+
+echo $output;
