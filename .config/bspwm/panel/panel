@@ -13,7 +13,7 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 bspc control --subscribe > "$PANEL_FIFO" &
 echo "T" >  "$PANEL_FIFO" &
 conky -c ./panel_conky > "$PANEL_FIFO" &
-./notify_mpd &
+./notify_mpd -d &
 
 cat "$PANEL_FIFO" \
 | ./panel_bar \

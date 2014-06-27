@@ -1,12 +1,48 @@
 #!/bin/bash
 
+source $(dirname $0)/config
 
 # Only run if mpd is running
 if [ $(pgrep -cx mpd) -eq 0 ] ; then
 	exit 1
 fi
 
-while true; do
-	infos=$(mpc current --wait)
-	./notify   $infos & 
-done
+err() {
+  echo "$1"
+  exit 1
+}
+
+notify() {
+	$(dirname $0)/notify "$@" &
+}
+
+state() {
+	mpc | sed -n 's/^.*\[\([^\[].*\)\] .*$/\1/p' | uniq
+}
+
+case $1 in
+    '-p'|'--prev')
+		mpc prev
+		icon=
+	;;
+    '-n'|'--next')
+		mpc next
+		icon=
+	;;
+    '-t'|'--toggle')
+		mpc toggle
+		if [[ `state` == 'paused' ]]; then
+			icon=
+		elif [[ `state` == 'playing' ]]; then
+			icon=
+		fi
+	;;
+    '-d'|'--daemon')
+	while true; do
+		infos=$(mpc current --wait)
+		notify   $infos
+	done;;
+    *)
+	err "Unrecognized option \`$1', see dvol --help"
+esac
+notify $icon $(mpc current)

@@ -46,7 +46,7 @@ alt + ctrl + {h,j,k,l}
 
 # Move window into presel position
 alt + shift {a,s,d,f}
-	bspc window -w {left,down,up,right}
+	bspc window -w {left.manual,down.manual,up.manual,right.manual}
 
 # Select windows, or move
 alt + {_,shift + }{h,j,k,l}
@@ -116,6 +116,13 @@ ctrl + {_, shift} + bracketright
 ctrl + {_, shift} + bracketleft
 	bspc config -d focused top_padding $((`bspc config -d focused top_padding` {+,-} 20 ))
 
+alt + shift + {minus,equal}
+	bspc config -d focused right_padding $((`bspc config -d focused right_padding` {+,-} 20 )); \
+	bspc config -d focused left_padding $((`bspc config -d focused left_padding` {+,-} 20 )); \
+	bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding` {+,-} 20 )); \
+	bspc config -d focused top_padding $((`bspc config -d focused top_padding` {+,-} 20 ));
+
+
 # Change window gap
 alt + {minus,equal}
 	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 2 ))
@@ -183,25 +190,25 @@ Print
 #
 
 XF86AudioRaiseVolume
-	/home/sunn/scripts/dvol2 -i 2 & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+	/home/sunn/.config/bspwm/panel/notify_volume +
 
 XF86AudioLowerVolume
-	/home/sunn/scripts/dvol2 -d 2 & mplayer /usr/share/sounds/freedesktop/stereo/audio-volume-change.oga
+	/home/sunn/.config/bspwm/panel/notify_volume -
 
 XF86AudioMute
-	/home/sunn/scripts/dvol2 -t 
+	/home/sunn/.config/bspwm/panel/notify_volume !
 
 XF86Sleep
 	pm-suspend
 
 XF86AudioPlay
-	ncmpcpp toggle
+	/home/sunn/.config/bspwm/panel/notify_mpd -t 
 	
 XF86AudioNext
-	ncmpcpp next
+	/home/sunn/.config/bspwm/panel/notify_mpd -n
 
 XF86AudioPrev
-	ncmpcpp prev
+	/home/sunn/.config/bspwm/panel/notify_mpd -p
 
 
 #
@@ -223,3 +230,6 @@ alt + F6
 # make sxhkd reload its configuration files:
 alt + shift + Escape
 	pkill -USR1 -x sxhkd
+
+super + t
+	thunar
