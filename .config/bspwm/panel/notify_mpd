@@ -19,6 +19,7 @@ usage() {
 	echo "  -n, --next    - next track"
 	echo "  -p, --prev    - previous track"
 	echo "  -t, --toggle  - toggle pause"
+	echo "  -d, --daemon  - listen for track changes through mpd frontends"
 	echo "  -h, --help    - display this"
 	exit
 }
