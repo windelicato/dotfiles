@@ -8,9 +8,21 @@ if [ $(pgrep -cx mpd) -eq 0 ] ; then
 fi
 
 err() {
-  echo "$1"
-  exit 1
+	echo "$1"
+	exit 1
 }
+
+usage() {
+	echo "usage: notify_mpd [option]"
+	echo
+	echo "Options:"
+	echo "  -n, --next    - next track"
+	echo "  -p, --prev    - previous track"
+	echo "  -t, --toggle  - toggle pause"
+	echo "  -h, --help    - display this"
+	exit
+}
+
 
 notify() {
 	$(dirname $0)/notify "$@" &
@@ -21,15 +33,15 @@ state() {
 }
 
 case $1 in
-    '-p'|'--prev')
+	'-p'|'--prev')
 		mpc prev
 		icon=
 	;;
-    '-n'|'--next')
+	'-n'|'--next')
 		mpc next
 		icon=
 	;;
-    '-t'|'--toggle')
+	'-t'|'--toggle')
 		mpc toggle
 		if [[ `state` == 'paused' ]]; then
 			icon=
@@ -37,12 +49,17 @@ case $1 in
 			icon=
 		fi
 	;;
-    '-d'|'--daemon')
-	while true; do
-		infos=$(mpc current --wait)
-		notify   $infos
-	done;;
-    *)
-	err "Unrecognized option \`$1', see dvol --help"
+	'-d'|'--daemon')
+		while true; do
+			infos=$(mpc current --wait)
+			notify	 $infos
+		done
+	;;
+	''|'-h'|'--help')
+		usage
+	;;
+	*)
+		err "Unrecognized option \`$1', see notify_mpd --help"
 esac
-notify $icon $(mpc current)
+
+notify  $icon $(mpc current)

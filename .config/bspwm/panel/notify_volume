@@ -1,30 +1,56 @@
 #!/bin/sh
 #
-# z3bra - (c) wtfpl 2014
-# Manage ALSA Master channel
+# Inspired by :
+#   z3bra - http://blog.z3bra.org/2014/04/pop-it-up.html
+#   bruenig - https://bbs.archlinux.org/viewtopic.php?id=46608
 
 source $(dirname $0)/config
 
-test "$1" = "-h" && echo "usage `basename $0` [+|-|!]" && exit 0
+err() {
+	echo "$1"
+	exit 1
+}
+
+usage() {
+	echo "usage: notify_volume [option] [argument]"
+	echo
+	echo "Options:"
+	echo "	 +, -i, --increase  - increase volume by \`argument'"
+	echo "	 -, -d, --decrease  - decrease volume by \`argument'"
+	echo "	 +, -i, --toggle    - mute/unmute"
+	echo "	 -h, --help         - display this"
+	exit
+}
+
 
 level() {
-    amixer get Master | sed -n 's/^.*\[\([0-9]\+\)%.*$/\1/p' | uniq
+	amixer get Master | sed -n 's/^.*\[\([0-9]\+\)%.*$/\1/p' | uniq
 }
 
 state() {
-    amixer get Master | sed -n 's/^.*\[\(o[nf]\+\)]$/\1/p' | uniq
+	amixer get Master | sed -n 's/^.*\[\(o[nf]\+\)]$/\1/p' | uniq
 }
 
-test $# -eq 0 && echo "`level` `state`" && exit 0
-
 case $1 in
-    +)      amixer set Master 3%+ >/dev/null;; 
-    -)      amixer set Master 3%- >/dev/null;;
-    !)      amixer set Master toggle >/dev/null;;
-    state|level) $1;;
-    *)    amixer set Master $1 >/dev/null;;
+	'+'|'-i'|'--increase')
+		[ -z "$2" ] && err "No argument specified for increase"
+		AMIXARG="${2}%+"
+		;;
+	'-'|'-d'|'--decrease')
+		[ -z "$2" ] && err "No argument specified for decrease."
+		AMIXARG="${2}%-"
+		;;
+	'!'|'-t'|'--toggle')
+		AMIXARG="toggle"
+		;;
+	''|'-h'|'--help')
+		usage
+		;;
+	*)
+		err "Unrecognized option \`$1', see notify_volume --help"
 esac
 
+amixer set Master $AMIXARG >/dev/null
 
 if [[ `state` != "on" ]]; then
 	icon=""
@@ -33,6 +59,7 @@ elif [[ `level` -lt 30 ]]; then
 else
 	icon=""
 fi
+
 steps=$(echo "100/$BAR_LENGTH" | bc)
 current=$(echo "`level`/$steps" | bc)
 for i in `seq 1 $BAR_LENGTH`;
@@ -40,11 +67,11 @@ do
 	if [[ `state` != "on" ]]; then
 		bar+=" "
 	elif [ $i -lt $current ]; then
-		bar+="%{F$COLOR_ACTIVE}-%{F-}"
+		bar+="%{F$COLOR_ACTIVE}=%{F-}"
 	else
-		bar+="%{F$COLOR_OCCUPIED}-%{F-}"
+		bar+="%{F$COLOR_OCCUPIED}=%{F-}"
 	fi
 done
 
-$(dirname $0)/notify  $icon $bar&
+$(dirname $0)/notify  $icon [$bar]&
 mplayer "$CLIP" >/dev/null&
