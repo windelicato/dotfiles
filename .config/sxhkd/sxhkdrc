@@ -190,10 +190,10 @@ Print
 #
 
 XF86AudioRaiseVolume
-	/home/sunn/.config/bspwm/panel/notify_volume +
+	/home/sunn/.config/bspwm/panel/notify_volume + 3
 
 XF86AudioLowerVolume
-	/home/sunn/.config/bspwm/panel/notify_volume -
+	/home/sunn/.config/bspwm/panel/notify_volume - 3
 
 XF86AudioMute
 	/home/sunn/.config/bspwm/panel/notify_volume !
