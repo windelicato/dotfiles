@@ -1,0 +1,33 @@
+# Fonts defined in xfontsel (xft not yet supported)
+FONT1="-misc-stlarch-medium-r-normal--10-100-75-75-c-80-iso10646-1"
+FONT2="-lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1"
+
+COLOR_BACKGROUND="#FFFFFFFF"
+COLOR_FOREGROUND="#FF000000"
+COLOR_ACTIVE="#FF000000"
+COLOR_OCCUPIED="#FFD8D8D8"
+COLOR_URGENT="#FFFFC58BFF"
+
+# Height of underlines / overlines
+LINEHEIGHT="4"
+
+# Panel geometry
+PANEL_HEIGHT=14
+PANEL_WIDTH=''
+PANEL_GEOMETRY="${PANEL_WIDTH}x${PANEL_HEIGHT}+0+0"
+
+# Notification geometry
+NOTIFY_HEIGHT=$PANEL_HEIGHT
+NOTIFY_WIDTH=400
+NOTIFY_GEOMETRY="${NOTIFY_WIDTH}x${NOTIFY_HEIGHT}+0+0"
+
+# Duration of notifications
+DURATION=2
+
+# Monitor to display panel on
+MONITOR="$(bspc query -M | tail -n1)"
+
+# Volume change clip
+CLIP="/usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
+# Length of volume bar
+BAR_LENGTH=20

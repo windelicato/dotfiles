@@ -1,0 +1,12 @@
+#!/bin/bash
+
+
+# Only run if mpd is running
+if [ $(pgrep -cx mpd) -eq 0 ] ; then
+	exit 1
+fi
+
+while true; do
+	infos=$(mpc current --wait)
+	./notify   $infos & 
+done

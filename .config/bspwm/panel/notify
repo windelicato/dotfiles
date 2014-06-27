@@ -1,0 +1,11 @@
+#!/bin/sh
+
+source $(dirname $0)/config
+
+(echo " $@"; sleep $DURATION)\
+| bar \
+        -f "$FONT1","$FONT2"\
+        -F "$COLOR_FOREGROUND"\
+        -B "$COLOR_BACKGROUND"\
+        -g "$NOTIFY_GEOMETRY"\
+        -u $LINEHEIGHT

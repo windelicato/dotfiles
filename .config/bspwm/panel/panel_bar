@@ -1,6 +1,6 @@
 #! /bin/sh
-#
-# Example panel for LemonBoy's bar
+
+source $(dirname $0)/config
 
 while read -r line ; do
     case $line in
@@ -20,19 +20,19 @@ while read -r line ; do
                 case $item in
                     [OFU]*)
                         # active desktop
-                        wm_infos="$wm_infos%{U#FF0000000}%{+u}   %{-u}"
+                        wm_infos="$wm_infos %{U$COLOR_ACTIVE}%{+u}   %{-u}"
                         ;;
                     o*)
                         # inactive but occupied desktop
-                        wm_infos="$wm_infos%{U#FFD8D8D8}%{+u}   %{-u}"
+                        wm_infos="$wm_infos %{U$COLOR_OCCUPIED}%{+u}   %{-u}"
                         ;;
                     f*)
                         # inactive desktop
-                        wm_infos="$wm_infos   "
+                        wm_infos="$wm_infos    "
                         ;;
                     u*)
                         # urgent desktop
-                        wm_infos="$wm_infos%{U#FFC58BFF}%{+u}   %{-u}"
+                        wm_infos="$wm_infos %{U$COLOR_URGENT}%{+u}   %{-u}"
                         ;;
                     L*)
                         # layout

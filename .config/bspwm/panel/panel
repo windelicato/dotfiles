@@ -1,17 +1,7 @@
 #! /bin/sh
 
-FONT1="-misc-stlarch-medium-r-normal--10-100-75-75-c-80-iso10646-1"
-FONT2="-lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1"
-BACKGROUND="#FFFFFFFF"
-FOREGROUND="#FF000000"
-LINEHEIGHT="4"
-EDGE_GAP=0
-HEIGHT=14
-WIDTH=$((`bspc query -T | head -n1 | cut -d" " -f2 | cut -d"x" -f1` - ($EDGE_GAP * 2)))
-GEOMETRY="${WIDTH}x$HEIGHT+$EDGE_GAP+$EDGE_GAP"
-MONITOR="$(bspc query -M | tail -n1)"
-
 cd $(dirname $0)
+source $(dirname $0)/config
 
 if [ $(pgrep -cx panel) -gt 1 ] ; then
     printf "%s\n" "The panel is already running." >&2
@@ -20,22 +10,16 @@ fi
 
 trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 
-flavor=${1:-bar}
-
 bspc control --subscribe > "$PANEL_FIFO" &
-#xtitle -sf 'T%s' > "$PANEL_FIFO" &
-#clock -sf 'S%a %H:%M' > "$PANEL_FIFO" &
 echo "T" >  "$PANEL_FIFO" &
 conky -c ./panel_conky > "$PANEL_FIFO" &
+./notify_mpd &
 
-case "$flavor" in
-    bar)
-        cat "$PANEL_FIFO" | ./panel_bar | bar -f "$FONT1","$FONT2" -F "$FOREGROUND" -B "$BACKGROUND" -g "$GEOMETRY" -u $LINEHEIGHT
-        ;;
-    dzen2)
-        PANEL_HEIGHT=24
-        FONT_FAMILY='DejaVu Sans'
-        FONT_SIZE=11
-        cat "$PANEL_FIFO" | panel_dzen2 -f "$FONT_FAMILY" -s "$FONT_SIZE" | dzen2 -h $PANEL_HEIGHT -dock -ta l -title-name panel -fn "${FONT_FAMILY}:pixelsize=${FONT_SIZE}" -fg "$COLOR_FOREGROUND" -bg "$COLOR_BACKGROUND"
-        ;;
-esac
+cat "$PANEL_FIFO" \
+| ./panel_bar \
+| bar \
+	-f "$FONT1","$FONT2"\
+	-F "$COLOR_FOREGROUND"\
+	-B "$COLOR_BACKGROUND"\
+	-g "$PANEL_GEOMETRY"\
+	-u $LINEHEIGHT
