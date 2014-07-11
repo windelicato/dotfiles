@@ -1,7 +1,0 @@
-#!/bin/bash
-if [ $(pgrep gmrun | wc -w) -gt 0 ]; then
-	kill $(pgrep gmrun | tail -n1)
-	exit
-else
-	gmrun
-fi

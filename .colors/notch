@@ -1,0 +1,295 @@
+! n0tch2k colors
+
+*foreground:#a0a0a0
+*background:#222222
+*color0:  #383838
+*color8:  #474747
+*color1:  #A95551
+*color9:  #A97775
+*color2:  #666666
+*color10: #8C8C8C
+*color3:  #A98051
+*color11: #A99175
+*color4:  #657D3E
+*color12: #98BD5E
+*color5:  #767676
+*color13: #A3A3A3
+*color6:  #C9C9C9
+*color14: #DCDCDC
+*color7:  #D0B8A3
+*color15: #D8C8BB
+
+! ###############################################
+! Square Colors
+
+!*foreground: #acacab
+!*background: #1a1a1a
+!*color0: #050505
+!*color1: #e9897c
+!*color2: #b6377d
+!*color3: #ecebbe
+!*color4: #a9cdeb
+!*color5: #75507b
+!*color6: #c9caec
+!*color7: #f2f2f2
+!*color8: #141414
+!*color9: #f99286
+!*color10: #c3f786
+!*color11: #fcfbcc
+!*color12: #b6defb
+!*color13: #ad7fa8
+!*color14: #d7d9fc
+!*color15: #e2e2e2
+!
+! ###############################################
+
+! n0tch2k simple brown
+
+!*foreground:#6f716d
+!*background:#151310
+!*color0: #322b21
+!*color8: #3a3023
+!*color1: #51473b
+!*color9: #514b44
+!*color2: #4f483e
+!*color10:#63533c
+!*color3: #494339
+!*color11: #3d3933
+!*color4: #474438
+!*color12: #5f5b4c
+!*color5: #504836
+!*color13: #504a3d
+!*color6: #26231e
+!*color14: #262421
+!*color7: #36312d
+!*color15: #342f2b
+
+! ###############################################
+
+! n0tch2k simple grey
+
+!*foreground:#6f716d
+!*background:#272521
+!*color0: #383838
+!*color8: #474747
+!*color1: #575655
+!*color9: #928d8c
+!*color2: #706f69
+!*color10:#a6a399
+!*color3: #737373
+!*color11: #4a4949
+!*color4: #6e6d69
+!*color12: #4a4a4a
+!*color5: #929292
+!*color13: #565656
+!*color6: #949494
+!*color14: #3d3d3d
+!*color7: #545454
+!*color15: #767776
+!
+! ###############################################
+! Tango like
+
+!*background:        #000000
+!*foreground:        #ffffff
+!*color0:        #000000
+!*color8:        #555753
+!*color1:        #ff6565
+!*color9:        #ff8d8d
+!*color2:        #93d44f
+!*color10:       #c8e7a8
+!*color3:        #eab93d
+!*color11:       #ffc123
+!*color4:        #204a87
+!*color12:       #3465a4
+!*color5:        #ce5c00
+!*color13:       #f57900
+!*color6:        #89b6e2
+!*color14:       #46a4ff
+!*color7:        #cccccc
+!*color15:       #ffffff
+
+! ###############################################
+! Taters #1
+!
+!*foreground: #DDEEDD
+!*background: #1C1C1C
+!
+!*color0: #1C1C1C
+!*color8: #4d4d4d
+!*color1: #D81860
+!*color9: #F00060
+!*color2: #B7CE42
+!*color10: #BDE077
+!*color3: #FEA63C
+!*color11: #FFE863
+!*color4: #66AABB
+!*color12: #AACCBB
+!*color5: #B7416E
+!*color13: #BB4466
+!*color6: #5E7175
+!*color14: #A3BABF
+!*color7: #DDEEDD
+!*color15: #6C887A
+!
+! ###############################################
+
+! Sepia
+
+!*foreground: #DDEEDD
+!*background: #1C1C1C
+!*color0: #382d22
+!*color1: #c37b5f
+!*color2: #9cb955
+!*color3: #bba85b
+!*color4: #748e9b
+!*color5: #925e5a
+!*color6: #5f9566
+!*color7: #bdbc8f
+!*color8: #4a3f2e
+!*color9: #e19688
+!*color10: #c0d584
+!*color11: #dbc585
+!*color12: #a3bac5
+!*color13: #ba8092
+!*color14: #8cb9a2
+!*color15: #dbd5ba
+!
+
+! ###############################################
+
+! All-Blue
+!
+!*foreground: #DDEEDD
+!*background: #1C1C1C
+!*color0: #1C1C1C
+!*color8: #4d4d4d
+!*color1: #a0c0e0
+!*color9: #6080a0
+!*color2: #6080c0
+!*color10: #0040a0
+!*color3: #4060c0
+!*color11: #4060a0
+!*color4: #66AABB
+!*color12: #AACCBB
+!*color5: #e0f0f0
+!*color13: #2060c0
+!*color6: #5E7175
+!*color14: #A3BABF
+!*color7: #DDEEDD
+!*color15: #6C887A
+!
+! ###############################################
+
+!Warm Colors
+
+!*background: #000000
+!*foreground: #FFFFFF
+!*color0: #262729
+!*color8: #554444
+!*color1: #EA6868
+!*color9: #FF7272
+!*color2: #ABCB8D
+!*color10: #AFD78A
+!*color3: #E8AE5B
+!*color11: #FFA75D
+!*color4: #71C5F4
+!*color12: #67CDE9
+!*color5: #E2BAF1
+!*color13: #ECAEE9
+!*color6: #21F1EA
+!*color14: #36FFFC
+!*color7: #F1F1F1
+!*color15: #FFFFFF
+!
+! ###############################################
+
+!Arthur Colors
+
+!*foreground: #DDEEDD
+!*background: #1C1C1C
+!*color0: #3d352a
+!*color1: #cd5c5c
+!*color2: #86af80
+!*color3: #e8ae5b
+!*color4: #6495ed
+!*color5: #deb887
+!*color6: #b0c4de
+!*color7: #bbaa99
+!*color8: #554444
+!*color9: #cc5533
+!*color10: #88aa22
+!*color11: #ffa75d
+!*color12: #87ceeb
+!*color13: #996600
+!*color14: #b0c4de
+!*color15: #ddccbb
+!
+! ###############################################
+
+!thayer colors
+
+!*background: #000000
+!*foreground: #FFFFFF
+!*color0: #1B1D1E
+!*color1: #F92672
+!*color9: #FF669D
+!*color2: #A6E22E
+!*color10: #BEED5F
+!*color3: #FD971F
+!*color11: #E6DB74
+!*color4: #66D9EF
+!*color12: #66D9EF
+!*color5: #9E6FFE
+!*color13: #9E6FFE
+!*color6: #5E7175
+!*color14: #A3BABF
+!*color7: #CCCCC6
+!*color15: #F8F8F2
+!
+! ###############################################
+
+!Justin Colors
+
+!*background: #000000
+!*foreground: #FFFFFF
+!*color0: #242424
+!*color8: #cdb5cd
+!*color1: #bf7979
+!*color9: #f4a45f
+!*color2: #97b26b
+!*color10: #c5f779
+!*color3: #cdcda1
+!*color11: #ffffaf
+!*color4: #86a2be
+!*color12: #98afd9
+!*color5: #d9b798
+!*color13: #d7d998
+!*color6: #a1b5cd
+!*color14: #a1b5cd
+!*color7: #ffffff
+!*color15: #dedede
+!
+! ###############################################
+
+! Zenburn
+!*background:  #3f3f3f
+!*foreground:  #dcdccc
+!
+!*color0:      #1E2320
+!*color1:      #705050
+!*color2:      #60b48a
+!*color3:      #dfaf8f
+!*color4:      #506070
+!*color5:      #dc8cc3
+!*color6:      #8cd0d3
+!*color7:      #dcdccc
+!*color8:      #709080
+!*color9:      #dca3a3
+!*color10:     #c3bf9f
+!*color11:     #f0dfaf
+!*color12:     #94bff3
+!*color13:     #ec93d3
+!*color14:     #93e0e3
+!*color15:     #ffffff
+!

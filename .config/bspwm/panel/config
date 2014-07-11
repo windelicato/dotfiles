@@ -1,15 +1,17 @@
 # Fonts defined in xfontsel (xft not yet supported)
 FONT1="-misc-stlarch-medium-r-normal--10-100-75-75-c-80-iso10646-1"
 FONT2="-lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1"
+FONT2="-*-dweep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*"
 
-COLOR_BACKGROUND="#FFFFFFFF"
-COLOR_FOREGROUND="#FF000000"
-COLOR_ACTIVE="#FF000000"
-COLOR_OCCUPIED="#FFD8D8D8"
-COLOR_URGENT="#FFFFC58BFF"
+COLOR_BACKGROUND="#FF181512"
+COLOR_FOREGROUND="#FFbea492"
+COLOR_ICON="#FF504339"
+COLOR_ACTIVE="#FF9a875f"
+COLOR_OCCUPIED="#FF332d29"
+COLOR_URGENT="#FF8c644c"
 
 # Height of underlines / overlines
-LINEHEIGHT="4"
+LINEHEIGHT="3"
 
 # Panel geometry
 PANEL_HEIGHT=14
@@ -31,3 +33,4 @@ MONITOR="$(bspc query -M | tail -n1)"
 CLIP="/usr/share/sounds/freedesktop/stereo/audio-volume-change.oga"
 # Length of volume bar
 BAR_LENGTH=20
+BAR_CHAR='='

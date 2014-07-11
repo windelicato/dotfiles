@@ -1,0 +1,31 @@
+! Colors - dotshare.it/dots/16/ ----------------------------------------------
+
+! *foreground:#a0a0a0
+ *foreground:#333333
+! *background:#1b1d1e
+! *background:#ccccc6
+*background:#bebeb4
+
+*color0: #3d3e3d
+*color8: #5a5b5c
+
+*color1: #755a5b
+*color9: #a37679
+
+*color2: #68755a
+*color10: #87a376
+
+*color3: #756e5a
+*color11: #a39b76
+
+*color4: #5b6976
+*color12: #758ba3
+
+*color5: #755b76
+*color13: #9f76a3
+
+*color6: #465457
+*color14: #899ca1
+
+*color7: #ccccc6
+*color15: #f8f8f2

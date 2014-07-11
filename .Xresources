@@ -1,5 +1,4 @@
 #include "/home/sunn/.colors/erosionedit"
-#include "/home/sunn/.xtermconf"
 
 ! #########################################
 urxvt*perl-lib:			/usr/lib/urxvt/perl
@@ -17,25 +16,30 @@ urxvt*cursorBlink:		true
 urxvt*scrollBar:		false
 urxvt*depth:			32 
 urxvt*internalBorder: 		5
+urxvt*dynamicColors: on
 urxvt.urgentOnBell:  true
 
+! Font change settings
+URxvt.iso14755: false
+URxvt.iso14755_52: false
 URxvt.keysym.C-7: command:\033]710;-lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1\007\033]711;-lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1\007
-URxvt.keysym.C-8: command:\033]710;-*-lemon-*-*-*-*-*-*-*-*-*-*-*-*\007\033]711;-*-lemon-*-*-*-*-*-*-*-*-*-*-*-*\007
+URxvt.keysym.C-8: command:\033]710;-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*\007\033]711;-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*\007
+!URxvt.keysym.C-8: command:\033]710;-*-lemon-*-*-*-*-*-*-*-*-*-*-*-*\007\033]711;-*-lemon-*-*-*-*-*-*-*-*-*-*-*-*\007
 !URxvt.keysym.C-9: command:\033]710;-*-tewi-medium-r-normal-*-*-*-*-*-*-*-*-*\007\033]711;-*-tewi-medium-r-normal-*-*-*-*-*-*-*-*-*\007
 URxvt.keysym.C-9: command:\033]710;-*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*\007\033]711;-*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*\007
 URxvt.keysym.C-0: command:\033]710;xft:monaco:size=9\007\033]711;xft:monaco:size=9\007
-URxvt.keysym.C-minus:   perl:font-size:decglobal
-URxvt.keysym.C-equal: perl:font-size:incglobal
+URxvt.keysym.C-equal:	perl:font-size:increase
+URxvt.keysym.C-minus:   perl:font-size:decrease
 
-!urxvt*font: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
-!urxvt*boldFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
-!urxvt*italicFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
-!urxvt*bolditalicFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
+urxvt*font: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
+urxvt*boldFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
+urxvt*italicFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
+urxvt*bolditalicFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
 
-urxvt*font: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
-urxvt*boldFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
-urxvt*italicFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
-urxvt*bolditalicFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
+!urxvt*font: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
+!urxvt*boldFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
+!urxvt*italicFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
+!urxvt*bolditalicFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
 
 !urxvt*font: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso10646-1
 !urxvt*boldFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso10646-1
@@ -51,10 +55,10 @@ urxvt*bolditalicFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859
 !urxvt*boldFont: xft:dejavu sans mono:bold:size=10
 !urxvt*italicFont: xft:dejavu sans mono:italic:size=10
 
-!urxvt*font: -*-dweep-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*boldFont: -*-dweep-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*italicFont: -*-dweep-*-*-*-*-*-*-*-*-*-*-*-*
-!urxvt*bolditalicFont: -*-dweep-*-*-*-*-*-*-*-*-*-*-*-*
+!urxvt*font: -*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+!urxvt*boldFont: -*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+!urxvt*italicFont: -*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+!urxvt*bolditalicFont:-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
 
 !urxvt*font: -lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1
 !urxvt*boldFont: -lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1

@@ -67,9 +67,9 @@ do
 	if [[ `state` != "on" ]]; then
 		bar+=" "
 	elif [ $i -lt $current ]; then
-		bar+="%{F$COLOR_ACTIVE}=%{F-}"
+		bar+="%{F$COLOR_ACTIVE}${BAR_CHAR}%{F-}"
 	else
-		bar+="%{F$COLOR_OCCUPIED}=%{F-}"
+		bar+="%{F$COLOR_OCCUPIED}${BAR_CHAR}%{F-}"
 	fi
 done
 

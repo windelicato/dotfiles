@@ -185,6 +185,7 @@ input {
 ###############################################################################
 
 # Audio Output ################################################################
+
 #
 # MPD supports various audio output types, as well as playing through multiple 
 # audio outputs at the same time, through multiple audio_output settings 
@@ -199,9 +200,10 @@ input {
 audio_output {
 	type		"alsa"
 	name		"My ALSA Device"
-	device		"hw:0,0"	# optional
-	format		"44100:16:2"	# optional
-	mixer_type      "software"	# optional
+#	device		"hw:1,0"	# optional
+#	format		"44100:16:2"	# optional
+#	mixer_type      "software"	# optional
+
 	#auto_resample	"no"
 	#samplerate_converter "internal"
 ##	mixer_device	"default"	# optional

@@ -16,10 +16,10 @@ conky -c ./panel_conky > "$PANEL_FIFO" &
 ./notify_mpd -d &
 
 cat "$PANEL_FIFO" \
-| ./panel_bar \
-| bar \
-	-f "$FONT1","$FONT2"\
-	-F "$COLOR_FOREGROUND"\
-	-B "$COLOR_BACKGROUND"\
-	-g "$PANEL_GEOMETRY"\
-	-u $LINEHEIGHT
+	| ./panel_bar \
+	| bar \
+		-f "$FONT1","$FONT2"\
+		-F "$COLOR_FOREGROUND"\
+		-B "$COLOR_BACKGROUND"\
+		-g "$PANEL_GEOMETRY"\
+		-u $LINEHEIGHT

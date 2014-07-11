@@ -1,3 +1,0 @@
-#/bin/bash
-
-GTK2_RC_FILES=/home/sunn/.gtkdocky dbus-launch /usr/bin/docky

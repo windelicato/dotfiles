@@ -1,0 +1,29 @@
+*background:        #0F0E0F
+*foreground:        #A59461
+
+! Parker Brothers colors
+!black
+*color0:    #322a2c
+*color8:    #46423b
+!red
+*color1:    #79220E
+*color9:    #AA261F
+!green
+*color2:    #344B1B
+*color10:   #76550F
+!yellow
+!*color3:    #c77920
+*color3:    #B45B00
+*color11:   #B57F02
+!blue
+*color4:    #434045
+*color12:   #908862
+!magenta
+*color5:    #5C1E25
+*color13:   #624A35
+!cyan
+*color6:    #394745
+*color14:   #393E38
+!white
+*color7:    #AE8842
+*color15:   #A59058

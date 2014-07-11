@@ -1,6 +1,0 @@
-#!/bin/bash
-
-sudo systemctl $1 httpd.service
-sudo systemctl $1 memcached.service
-sudo systemctl $1 mysqld.service
-sudo modprobe vboxdrv

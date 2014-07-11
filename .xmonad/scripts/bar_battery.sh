@@ -11,9 +11,9 @@ if [[ $BAT -lt 10  ]]; then
 	color="^fg($warning)"
 	BATBAR=`echo -e "$BAT"\
 		| gdbar -bg $bar_bg -fg $warning -h 1 -w 50`
-	if [[ $STATUS != "Charging" ]]; then
-		notify-send "Warning, battery level below 10 percent" -u critical -t 30000
-	fi
+	#if [[ $STATUS != "Charging" ]]; then
+	#	#notify-send "Warning, battery level below 10 percent" -u critical -t 30000
+	#fi
 else
 
 #	if [[ $BAT -lt 10 ]]; then

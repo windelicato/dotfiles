@@ -68,6 +68,8 @@ DesktopName 0 Main
 EdgeScroll 100 100
 EdgeResistance 350 350
 EdgeThickness 1
+XineramaPrimaryScreen 2
+Xinerama on
 
 #####
 # Stops Maximised windows from obscuring TaskBars/ButtonBars

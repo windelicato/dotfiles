@@ -28,13 +28,13 @@ show_graph_scale no
 show_graph_range no
 
 TEXT
-$alignc $sysname $kernel $machine${font Sans:size=6} 
+$alignc $kernel $machine ($battery_percent%) ${font Sans:size=6} 
 
-${font}CPU ${cpugraph 10,150 -l} $alignr$cpu%${font Sans:size=6}
+${font}CPU ${cpugraph 10,150 504339 9A875F -t -l} $alignr$cpu%${font Sans:size=6}
 
-${font}MEM ${memgraph 10,150 -l} $alignr$mem${font Sans:size=6}
+${font}MEM ${memgraph 10,150 504339 9A875F -t -l} $alignr$mem${font Sans:size=6}
 
-${font}N-T ${upspeedgraph wlan0 10,150 -l} $alignr${totalup wlan0}${font Sans:size=6}
+${font}N-T ${upspeedgraph wlan0 10,150 504339 9A875F -t -l} $alignr${totalup wlan0}${font Sans:size=6}
 
-${font}N-R ${downspeedgraph wlan0 10,150 -l} $alignr${totaldown wlan0}${font Sans:size=4}
+${font}N-R ${downspeedgraph wlan0 10,150 504339 9A875F -t -l} $alignr${totaldown wlan0}${font Sans:size=4}
 

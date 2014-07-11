@@ -3,5 +3,9 @@
 #####
 Style Conky	!Title, Sticky, WindowListSkip, StaysOnBottom, NeverFocus
 
+Style dzen2 !Title, !Borders, Sticky, NeverFocus, StaysOnBottom, Nohandles
+
+Style Dock          !Title, !Handles, Sticky, NeverFocus, WindowListSkip, CirculateSkip, BorderWidth 1, HandleWidth 0
+
 #Style "astime"         NoTitle, NoHandles, Sticky, WindowListSkip, ClickToFocus, StaysOnBottom
 Style "astime"         NoTitle, Sticky, WindowListSkip, ClickToFocus, StaysOnBottom

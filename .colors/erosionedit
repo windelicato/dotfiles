@@ -3,7 +3,7 @@
 urxvt*background: #181512
 !!urxvt*foreground: #D6C3B6
 urxvt*foreground: #bea492
-urxvt*cursorColor: #93a1a1
+urxvt*cursorColor: #9a875f
 urxvt*colorIT: #8c644c
 urxvt*colorUL: #646a6d
 urxvt*colorBD: #9a875f

@@ -3,8 +3,8 @@
 ! #########################################
 ! BW ON BLACK
 ! #########################################
-URxvt.background: #FFFFFF
-URxvt.foreground: #000000
+URxvt.background: #000000
+URxvt.foreground: #FFFFFF
 !black
 URxvt*color0:  #000000
 URxvt*color8:  #090909

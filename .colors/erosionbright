@@ -1,0 +1,45 @@
+! vim:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+
+urxvt*background: #181512
+urxvt*foreground: #bea492
+urxvt*cursorColor: #9a875f
+urxvt*colorIT: #8c644c
+urxvt*colorUL: #646a6d
+urxvt*colorBD: #9a875f
+
+!! black dark/light
+urxvt*color0: #332d29
+urxvt*color8: #4D443E
+
+!! red dark/light
+urxvt*color1: #8c644c
+urxvt*color9: #BF8868
+
+!! green dark/light
+urxvt*color2:  #746C48
+urxvt*color10: #A69B67
+
+!! yellow dark/light
+urxvt*color3:  #908A66
+urxvt*color11: #C2BA89
+
+!! blue dark/light
+urxvt*color4: #646a6d
+urxvt*color12: #949CA1
+
+!! magenta dark/light
+!!urxvt*color5: #656565
+!!urxvt*color13: #706D70
+!!urxvt*color5: #463c3b
+urxvt*color5: #605655
+urxvt*color13: #948583
+
+!! cyan dark/light
+!!urxvt*color6: #3b484a
+!!urxvt*color14: #444d4e
+urxvt*color6: #4B5C5E
+urxvt*color14: #748E91
+
+!! white dark/light
+urxvt*color7: #504339
+urxvt*color15: #9a875f

@@ -13,7 +13,8 @@ Style * MwmBorder
 Style * SloppyFocus, ClickToFocusRaises	#Focus follows mouse but doesnt raise windows
 Style * SmartPlacement			#Place windows in least obtrusive areas if possible
 Style * ResizeOpaque			#Eye Candy preference of watching resize live
-Style * GrabFocusOff 			#Prevents windows from stealing focus
+#Style * GrabFocusOff 			#Prevents windows from stealing focus
+Style * FPGrabFocus
 
 #Allows windows to snap together
 SnapAttraction 5

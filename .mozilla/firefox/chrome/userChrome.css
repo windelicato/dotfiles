@@ -1,8 +1,10 @@
 #appcontent,
 #appcontent > #content,
 #appcontent > #content > tabbox > tabpanels {
-	background: #fbfbfb !important;
+	background: #181512 !important;
 }
+
+#browser { margin-top: -1px !important; }
 
 #main-window[stylish-url="about:blank"]:not([onclose^="PrintUtils"]):not([title^="Source Chart"]):not([chromehidden="menubar toolbar directories extrachrome "]) #content browser:not([src]) {
 	opacity: 0 !important;
@@ -47,7 +49,7 @@ tabs#tabbrowser-tabs {
 }
 
 .tabbrowser-tab {
-	max-height: 12px !important;
+	max-height: 14px !important;
 	margin-left: 0px !important;
 	padding-top: 2px !important;
 	color: #9a875f !important;
@@ -58,7 +60,7 @@ tabs#tabbrowser-tabs {
 }
 
 .tabbrowser-tab[selected=true] {
-	color: #D6C3B6 !important;
+	color: #bea492 !important;
 	background: #181512 !important;
 	border-bottom: 0px none !important;
 	box-shadow: none !important;
@@ -68,8 +70,8 @@ tabs#tabbrowser-tabs {
 	margin-left: 3px !important;
 	margin-right: 3px !important;
 	margin-top: 2px !important;
-	font-size: 12px !important;
-	font-family: lemon !important;
+	font-size: 10px !important;
+	font-family: Dweep !important;
 }
 
 /* Hide the new curved tab edges */

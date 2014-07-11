@@ -8,7 +8,7 @@ while read -r line ; do
             sys_infos="%{r}${line#?}"
             ;;
         T*)
-            title="  bspwm"
+            title=" %{F$COLOR_ICON}%{F-} bspwm"
             ;;
         W*)
             wm_infos="%{c}"

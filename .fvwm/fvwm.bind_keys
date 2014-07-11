@@ -18,12 +18,21 @@ Key XF86AudioNext         A A Exec exec mpc next
 Key XF86AudioPrev         A A Exec exec mpc prev
 Key XF86AudioPlay         A A Exec exec mpc toggle
 Key XF86AudioStop         A A Exec exec mpc stop
+Key XF86AudioStop         A A Exec exec mpc stop
+Key XF86AudioStop         A A Exec exec mpc stop
 
 Key Return  A M Exec exec urxvtc
-Key Space   A M FvwmMaximize 100 100
 Key R       A M Exec exec gmrun
 Key B       A M Exec exec firefox
-Key X      A M FvwmDeleteOrDestroy
+
+
+AddToFunc close_window
++ I ThisWindow ($0) Close
+Key X      A SM close_window
+
+AddToFunc monocle
++ I ThisWindow ($0) Maximize
+Key Space      A M monocle
 
 Key j A M Direction South (AcceptsFocus) Focus
 Key h A M Direction West (AcceptsFocus) Focus

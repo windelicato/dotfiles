@@ -34,3 +34,6 @@ AddToFunc DeThumbnail
 *FvwmEvent: deiconify DeThumbnail
 
 AddToFunc WindowListFunc I WarpToWindow 50 50
+
+# Prevent ugent windows from stealing focus
+DestroyFunc UrgencyFunc

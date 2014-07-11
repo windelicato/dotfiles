@@ -1,8 +1,0 @@
-#!/bin/bash
-
-playing=$(mpc current)
-artist=$(mpc current -f  %artist%)
-
-art="/home/sunn/.config/ario/covers/$(ls ~/.config/ario/covers | grep SMALL | grep "$(mpc current -f %album%)")"
-
-notify-send "$artist" "$playing" -i "$art" -t 1000

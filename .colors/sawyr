@@ -1,0 +1,29 @@
+! swayr color scheme
+
+urxvt*background: #1c1709
+urxvt*foreground: #c2b9a1
+
+urxvt*color0:     #1c1709
+urxvt*color8:     #4f4939
+
+urxvt*color1:     #8e4317
+urxvt*color9:     #f07935
+
+urxvt*color2:     #787200
+urxvt*color10:    #d9d138
+
+urxvt*color3:     #945c00
+urxvt*color11:    #ffab26
+
+urxvt*color4:     #315094
+urxvt*color12:    #8aa9ed
+
+urxvt*color5:     #5c2e40
+urxvt*color13:    #ff8cb8
+
+urxvt*color6:     #00617d
+urxvt*color14:    #43bfe0
+
+urxvt*color7:     #c2b9a1
+urxvt*color15:    #f2e8c9
+

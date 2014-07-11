@@ -1,0 +1,33 @@
+*foreground: #DDCCBB
+
+! Brown BG
+!*background: #30251D
+
+! Grey BG
+*background: #151515
+
+
+!black
+*color0:     #393939
+*color8:     #AF875F
+!red
+*color1:     #BF1E2D
+*color9:     #E7212A
+!green
+*color2:     #9DBA3A
+*color10:    #A9C938
+!yellow
+*color3:     #F5B915
+*color11:    #F7D325
+!blue
+*color4:     #1CA1DB
+*color12:    #00AFDA
+!magenta
+*color5:     #652F90
+*color13:    #894E9F
+!cyan
+*color6:     #EA7D24
+*color14:    #F79321
+!white
+*color7:     #E7E8E9
+*color15:    #F3F3F4

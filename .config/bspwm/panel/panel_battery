@@ -1,4 +1,5 @@
 #!/bin/bash
+source $(dirname $0)/config
 
 # BATTERY ICONS:
 #      
@@ -62,5 +63,4 @@ case $BAT in
 esac
 
 # Create Bar
-
-echo "$icon "
+echo "%{F$COLOR_ICON}$icon%{F-} "

@@ -1,12 +1,10 @@
-colors phallus
-
 set autocomplete=false
 set hintchars=asdfghjkl;
+set gui=none,tabs
 set noscrollbars
 
 map J gT
 map K gt
-
 
 map <silent> <C-F1> :js toggle_bottombar()<CR>
 
@@ -20,3 +18,4 @@ function toggle_bottombar() {
     }
 EOF
 
+colors phallus

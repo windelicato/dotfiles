@@ -4,9 +4,11 @@ compinit
 promptinit
 colors
 
+#PROMPT="
+#%{$fg[white]%} »  %{$reset_color%}"
 PROMPT="
-%{$fg[red]%} »  %{$reset_color%}"
-RPROMPT="%B%{$fg[cyan]%}%~%{$reset_color%}"
+%{$fg[red]%} >  %{$reset_color%}"
+RPROMPT="%B%{$fg[black]%}%~%{$reset_color%}"
 
 [[ -t 1 ]] || return
 case $TERM in
@@ -28,7 +30,6 @@ export HISTFILE="${HOME}"/.zsh-history
 export HISTSIZE=1000000
 export SAVEHIST=$HISTSIZE
 
-
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:*' list-colors 'reply=( "=(#b)(*$VAR)(?)*=00=$color[green]=$color[bg-green]" )'
 zstyle ':completion:*:*:*:*:hosts' list-colors '=*=30;41'
@@ -40,13 +41,11 @@ bindkey '^R' history-incremental-search-backward
 bindkey "^j" history-beginning-search-backward
 bindkey "^k" history-beginning-search-forward
 
-
-
 function open() { xdg-open $1 &> /dev/null &disown; }
 function lt() { ls -ltrsa "$@" | tail; }
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
 function fname() { find . -iname "*$@*"; }
-
+		    
 conf() {
 	case $1 in
 		xmonad)		vim ~/.xmonad/xmonad.hs ;;
@@ -70,7 +69,7 @@ conf() {
 		theme3)		vim ~/.themes/FlatStudioCustom/gtk-3.0/gtk.css ;;
 		gtk2)		vim ~/.gtkrc-2.0 ;;
 		gtk3)		vim ~/.config/gtk-3.0/settings.ini ;;
-			tint2)		vim ~/.config/tint2/xmonad.tint2rc ;;
+		tint2)		vim ~/.config/tint2/xmonad.tint2rc ;;
 		zsh)		vim ~/.zshrc && source ~/.zshrc ;;
 		hosts)		sudoedit /etc/hosts ;;
 		vhosts)		sudoedit /etc/httpd/conf/extra/httpd-vhosts.conf ;;
@@ -93,14 +92,13 @@ function music()
 
 # Sudo alias 
 alias svim='sudoedit'
+alias pacman='sudo pacman'
+
 # Network alias
-alias linuxremotefs='sshfs wei001@linuxremote1.eg.bucknell.edu:/nfs/unixspace ~/bucknell'
-alias linuxremote='ssh -Y wei001@linuxremote1.eg.bucknell.edu'
-alias netspace="lftp -u wei001 ftp.netspace.bucknell.edu"
-alias HUB='sudo mount -t cifs //bucknellhub.com/HUB /mnt/HUB -o user=hubguest'
-alias HUBDropbox='sudo mount -t cifs //bucknellhub.com/Dropbox /mnt/HUBDropbox -o user=hubguest'
 alias somessh='ssh -i /home/sunn/.ssh/someecards'
 alias somescp='scp -i /home/sunn/.ssh/someecards'
+function sshsec () { ssh -i ~/.ssh/opsworks.pem ubuntu@"$@" }
+function scpsec () { scp -i ~/.ssh/opsworks.pem ubuntu@"$@" }
 
 # Programs
 alias installfont='sudo fc-cache -f -v'
@@ -109,12 +107,9 @@ alias muttg='mutt -F ~/.mutt/acct/windelicato'
 alias muttsuns='mutt -F ~/.mutt/acct/suns'
 alias muttecards='mutt -F ~/.mutt/acct/someecards'
 alias bool='espresso -o eqntott'
-#alias compton='compton -cCfF -I 0.065 -O 0.065 -D 6' 
-#alias compton='compton -cCGfF -o 0.38 -O 200 -I 200 -t 0.02 -l 0.02 -r 3.2 -D2 -m 0.88'
-#alias scrot="scrot -q100  -d 5"
 alias alsamixer="alsamixer -g"
 alias equalizer="alsamixer -D equal"
-alias mysqlt="mysql -u root -p cargo_science"
+alias mysql="mysql -u root -p"
 alias redwm='cd ~/dwm; makepkg -g >> PKGBUILD; makepkg -efi --noconfirm; killall dwm; /home/sunn/scripts/dwm-status;'
 
 # Shortcuts
@@ -152,8 +147,6 @@ alias tarbz2='tar -jxvf'
 function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 function cdl () { cd "$@" && ls; }
 
-# Bookmarks
-
 # enable color support of ls and also add handy aliases
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
@@ -180,7 +173,8 @@ done
 
 export EDITOR="vim"
 export XDG_CONFIG_HOME="/home/sunn/.config"
-export BSPWM_SOCKET="/tmp/bspwm-socket"
+export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dawt.useSystemAAFontSettings=true' 
+export JAVA_FONTS=/usr/share/fonts/TTF
 
 #if [[ "$TERM" == "rxvt-unicode-256color" ]]; then
 #	xseticon -id $WINDOWID /home/sunn/.icons/AwOkenWhite/clear/128x128/apps/terminal1.png

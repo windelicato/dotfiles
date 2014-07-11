@@ -14,7 +14,7 @@ Colorset 9 fg #181512, bg #9a875f
 Colorset 10 fg #504339, bg #181512
 
 DestroyModuleConfig FvwmPager: *
-*FvwmPager: Geometry 107x107+340+0
+*FvwmPager: Geometry 107x107+342+0
 *FvwmPager: Colorset * 7
 *FvwmPager: HiLightColorset * 10
 *FvwmPager: WindowColorsets 8 6

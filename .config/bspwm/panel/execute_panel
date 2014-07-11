@@ -1,0 +1,50 @@
+#!/bin/bash
+
+FOCUS_DESKTOP=1
+MOVE_DESKTOP=2
+
+err() {
+	echo "$1"
+	exit 1
+}
+
+usage() {
+	echo "usage: execute_panel [command] [value]"
+	echo
+	echo "Options:"
+	echo "	 -f, --focus-desktop - switch to desktop name"
+	echo "	 -d, --move-desktop   - move to desktop name"
+	echo "	 -h, --help           - display this"
+	exit
+}
+
+case $1 in
+	'-f'|'--focus-desktop')
+		[ -z "$2" ] && err "No desktop name specified"
+		COMMAND=$FOCUS_DESKTOP
+		ARGN="${2}"
+		;;
+	'-d'|'--move-desktop')
+		[ -z "$2" ] && err "No desktop name specified"
+		COMMAND=$MOVE_DESKTOP
+		ARGN="${2}"
+		;;
+	''|'-h'|'--help'|*)
+		usage
+		exit
+		;;
+esac
+
+# Ensure the command is something we want to run
+case $COMMAND in
+	$FOCUS_DESKTOP)
+		bspc config auto_alternate false
+		bspc desktop -f $ARGN
+		bspc config auto_alternate true
+		;;
+	$MOVE_DESKTOP)
+		bspc desktop -d $ARGN
+		;;
+	*)
+		;;
+esac

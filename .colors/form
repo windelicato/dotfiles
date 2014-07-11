@@ -18,3 +18,20 @@ urxvt*color14:
 urxvt*color7:
 urxvt*color15:
 
+
+urxvt*color0 = #3a3a3a
+urxvt*color1 = #8c5b3e
+urxvt*color2 = #80764d
+urxvt*color3 = #917154
+urxvt*color4 = #596875
+urxvt*color5 = #6e464b
+urxvt*color6 = #495e61
+urxvt*color7 = #bcbcaf
+urxvt*color8 = #505050
+urxvt*color9 = #9f6744
+urxvt*color10 = #80785a
+urxvt*color11 = #917963
+urxvt*color12 = #656d75
+urxvt*color13 = #6e5155
+urxvt*color14 = #525F61
+urxvt*color15 = #c1c4bc

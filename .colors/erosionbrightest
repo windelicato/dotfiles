@@ -1,0 +1,21 @@
+! vim:nu:ai:si:et:ts=4:sw=4:ft=xdefaults:
+!
+
+urxvt*background: #181512
+urxvt*foreground: #D9BBA7
+urxvt*color0: #4D443E
+urxvt*color8: #9C897C
+urxvt*color1: #BF8868
+urxvt*color9: #D1946F
+urxvt*color2: #A69B67
+urxvt*color10: #B8AA71
+urxvt*color3: #C2BA89
+urxvt*color11: #CFC592
+urxvt*color4: #949CA1
+urxvt*color12: #A1A9AD
+urxvt*color5: #948583
+urxvt*color13: #808080
+urxvt*color6: #748E91
+urxvt*color14: #7C9EA3
+urxvt*color7: #826D5C
+urxvt*color15: #CCB27D
