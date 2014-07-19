@@ -1,7 +1,7 @@
 #!/bin/sh
 
-bspc config border_width        2
-bspc config window_gap          4
+bspc config border_width        1
+bspc config window_gap          2
 
 i=1
 for monitor in $(bspc query -M); do

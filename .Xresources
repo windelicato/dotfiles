@@ -31,10 +31,15 @@ URxvt.keysym.C-0: command:\033]710;xft:monaco:size=9\007\033]711;xft:monaco:size
 URxvt.keysym.C-equal:	perl:font-size:increase
 URxvt.keysym.C-minus:   perl:font-size:decrease
 
-urxvt*font: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
-urxvt*boldFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
-urxvt*italicFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
-urxvt*bolditalicFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
+!urxvt*font: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
+!urxvt*boldFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
+!urxvt*italicFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
+!urxvt*bolditalicFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
+
+urxvt*font: -*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+urxvt*boldFont: -*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+urxvt*italicFont: -*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
+urxvt*bolditalicFont:-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
 
 !urxvt*font: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
 !urxvt*boldFont: -lokaltog-fixed-medium-r-normal--10-100-75-75-c-60-iso8859-1
@@ -54,11 +59,6 @@ urxvt*bolditalicFont: -*-tamzen-medium-r-normal-*-*-87-*-*-*-*-*-*
 !urxvt*font: xft:dejavu sans mono:size=10
 !urxvt*boldFont: xft:dejavu sans mono:bold:size=10
 !urxvt*italicFont: xft:dejavu sans mono:italic:size=10
-
-!urxvt*font: -*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
-!urxvt*boldFont: -*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
-!urxvt*italicFont: -*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
-!urxvt*bolditalicFont:-*-neep-medium-r-semicondensed-*-11-*-*-*-*-*-*-*
 
 !urxvt*font: -lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1
 !urxvt*boldFont: -lucy-tewi-medium-r-normal--11-90-75-75-p-58-iso10646-1

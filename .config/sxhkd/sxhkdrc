@@ -230,6 +230,3 @@ alt + F6
 # make sxhkd reload its configuration files:
 alt + shift + Escape
 	pkill -USR1 -x sxhkd
-
-super + t
-	thunar

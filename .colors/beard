@@ -1,0 +1,37 @@
+*background:        #191716
+*foreground:        #daba8b
+
+! TRIM YER BEARD colors
+
+!black
+*color0:    #0f0e0d
+*color8:    #383332
+
+!red
+*color1:    #845336
+*color9:    #8c4f4a
+
+!green
+*color2:    #57553c
+*color10:   #898471
+
+!yellow
+*color3:    #a17e3e
+*color11:   #c8b491
+
+!blue
+*color4:    #43454f
+*color12:   #65788f
+
+!magenta
+*color5:    #604848
+*color13:   #755e4a
+
+!cyan
+*color6:    #5c6652
+*color14:   #718062
+
+!white
+*color7:    #a18b62
+*color15:   #bc9d66
+

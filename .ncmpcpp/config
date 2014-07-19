@@ -65,7 +65,7 @@ song_list_format = "{%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
 #song_library_format = "{%n - }{%t}|{%f}"
 #tag_editor_album_format = "{(%y) }%b"
 alternative_header_first_line_format = "$2{%t}$9"
-alternative_header_second_line_format = "$4{%a}$9 $6-$9 $5{%b}$9"
+alternative_header_second_line_format = "$3{%a}$9 $6-$9 $8{%b}$9"
 #now_playing_prefix = "$b"
 #now_playing_suffix = "$/b"
 #browser_playlist_prefix = "$2playlist$9 "
@@ -73,7 +73,7 @@ alternative_header_second_line_format = "$4{%a}$9 $6-$9 $5{%b}$9"
 #selected_item_suffix = "$9"
 ## colors are not supported for below variable
 #song_window_title_format = "{%a - }{%t}|{%f}"
-song_columns_list_format = "(7f)[default]{l} (25)[yellow]{a} (40)[red]{t|f} (30)[blue]{b}"
+song_columns_list_format = "(7f)[white]{l} (25)[green]{a} (40)[default]{t|f} (30)[white]{b}"
 
 
 

@@ -18,7 +18,7 @@
 	"let g:solarized_termcolors=256
 	"let g:solarized_termtrans=1
 	colorscheme default
-	set background=dark
+	set background=light
 	"colors darkspectrum
 "	set nowrap
 "	set mouse=a 				" use mouse anywhere
@@ -26,17 +26,20 @@
 
 	filetype plugin indent on
 	autocmd Filetype php setlocal sts=4 sw=4 expandtab
+	autocmd Filetype javascript setlocal sts=4 sw=4 expandtab
 	autocmd Filetype python setlocal sts=4 sw=4 expandtab
 	autocmd Filetype c setlocal sts=4 sw=4 expandtab
 	autocmd Filetype ruby setlocal sts=2 sw=2 expandtab
 	autocmd Filetype vcl setlocal sts=4 sw=4 expandtab
 	autocmd Filetype json setlocal sts=4 sw=4 expandtab
 	autocmd Filetype erb setlocal sts=4 sw=4 expandtab
+"	autocmd BufNewFile,BufReadPost *.md set filetype=markdown
+	au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
 
 
 " COLORS {
 	" syntax highlighting groups
-"	hi Comment      ctermfg=7
+	hi Comment      ctermfg=7
 "	hi Constant     ctermfg=15 
 "	hi Identifier   ctermfg=4
 "	hi Statement    ctermfg=8
