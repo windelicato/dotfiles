@@ -18,7 +18,7 @@
 	"let g:solarized_termcolors=256
 	"let g:solarized_termtrans=1
 	colorscheme default
-	set background=light
+	set background=dark
 	"colors darkspectrum
 "	set nowrap
 "	set mouse=a 				" use mouse anywhere

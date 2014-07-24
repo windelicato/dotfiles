@@ -73,7 +73,7 @@ alternative_header_second_line_format = "$3{%a}$9 $6-$9 $8{%b}$9"
 #selected_item_suffix = "$9"
 ## colors are not supported for below variable
 #song_window_title_format = "{%a - }{%t}|{%f}"
-song_columns_list_format = "(7f)[white]{l} (25)[green]{a} (40)[default]{t|f} (30)[white]{b}"
+song_columns_list_format = "(7f)[black]{l} (25)[magenta]{a} (40)[default]{t|f} (30)[green]{b}"
 
 
 

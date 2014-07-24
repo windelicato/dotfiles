@@ -4,10 +4,10 @@ compinit
 promptinit
 colors
 
-#PROMPT="
-#%{$fg[white]%} »  %{$reset_color%}"
 PROMPT="
-%{$fg[red]%} >  %{$reset_color%}"
+%{$fg[red]%} »  %{$reset_color%}"
+#PROMPT="
+#%{$fg[red]%} >  %{$reset_color%}"
 RPROMPT="%B%{$fg[black]%}%~%{$reset_color%}"
 
 [[ -t 1 ]] || return

@@ -1,7 +1,7 @@
 #appcontent,
 #appcontent > #content,
 #appcontent > #content > tabbox > tabpanels {
-	background: #181512 !important;
+	background: #1f1f1f !important;
 }
 
 #browser { margin-top: -1px !important; }
@@ -38,7 +38,7 @@ tabs#tabbrowser-tabs, tabs#tabbrowser-tabs * {
 }
 
 tabs#tabbrowser-tabs {
-	background: #181512 !important;
+	background: #1f1f1f !important;
 	padding-top: 0px !important;
 	margin-left: 0px !important;
 	padding-top: 0px !important;
@@ -52,16 +52,16 @@ tabs#tabbrowser-tabs {
 	max-height: 14px !important;
 	margin-left: 0px !important;
 	padding-top: 2px !important;
-	color: #9a875f !important;
+	color: #775759 !important;
 	border-bottom: 0px none !important;
-	background: #181512 !important;
+	background: #1f1f1f !important;
 	/*box-shadow: inset 0px -4px 2px rgba(0,0,0,0.1) !important;*/
 
 }
 
 .tabbrowser-tab[selected=true] {
-	color: #bea492 !important;
-	background: #181512 !important;
+	color: #c0b18b !important;
+	background: #1f1f1f !important;
 	border-bottom: 0px none !important;
 	box-shadow: none !important;
 }

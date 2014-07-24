@@ -54,14 +54,9 @@ alt + {_,shift + }{h,j,k,l}
 
 # Resize nodes
 alt + {a,f}
-    S={+,-}; \
-    bspc window -e left $\{S\}20 || \
-    bspc window -e right   $\{S\}20
+	/home/sunn/scripts/window_move.sh {-p,-n} -x -s 20
 alt + {s,d}
-    S={+,-}; \
-    bspc window -e down $\{S\}20 || \
-    bspc window -e up   $\{S\}20
-
+	/home/sunn/scripts/window_move.sh {-p,-n} -y -s 20
 
 # Move floating windows (requires baskerville's xdo)
 alt + {Left,Right,Up,Down}
