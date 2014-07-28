@@ -1,0 +1,5 @@
+#!/bin/bash
+
+killall dzen2; killall conky; 
+conky -dqc /home/sunn/.xmonad/.conky_dzen | dzen2 -x '700' -w '666' -h '12' -ta 'r' -fn "-*-lime-*-*-*-*-*-*-*-*-*-*-*-*" &> /dev/null &disown;
+

@@ -1,0 +1,72 @@
+#!/bin/bash
+
+DOTFILES_REPO="$HOME/bin/dot2"
+
+# Add file to dotfiles repo
+add() {
+	FILE=$(validate_file "$1")
+	echo $FILE
+#	cp -R "$1" "$DOTFILES_REPO"
+#	rm -rf "$1"
+#	ln -s ${DOTFILES_REPO}${FILE}
+}
+
+validate_file(){
+	FILE=$(resolve_path $1)
+	if [ ! -f "$FILE" ] || [ ! -d "$FILE" ]; then
+		err "No imaginary rice for you (check filename)"
+	elif [[ "$(ls -ld ${FILE} | awk '{ print $3 }')" != "$USER" ]]; then
+		err "You must own this rice (check permissions)"
+	fi
+	echo "$FILE"
+}
+
+resolve_path() {
+	TARGET_FILE=$1
+
+	cd `dirname $TARGET_FILE`
+	TARGET_FILE=`basename $TARGET_FILE`
+
+	# Iterate down a (possible) chain of symlinks
+	while [ -L "$TARGET_FILE" ]
+	do
+	    TARGET_FILE=`readlink $TARGET_FILE`
+	    cd `dirname $TARGET_FILE`
+	    TARGET_FILE=`basename $TARGET_FILE`
+	done
+
+	# Compute the canonicalized name by finding the physical path 
+	# for the directory we're in and appending the target file.
+	PHYS_DIR=`pwd -P`
+	RESULT=$PHYS_DIR/$TARGET_FILE
+	echo $RESULT
+}
+
+err() {
+	echo "$1"
+	exit 1
+}
+
+usage() {
+	echo "usage: ricebag [option] [argument]"
+	echo
+	echo "Options:"
+	echo "     -a, --add      - adds \`argument' to dotfiles repo"
+	echo "     -h, --help     - display this"
+	exit
+}
+
+#Argument Parsing
+case "$1" in
+	'-a'|'--add')
+	    [ -z "$2" ] && err "No file specified for adding."
+	    add "${2}"
+   	 ;;
+	''|'-h'|'--help')
+		usage
+	;;
+	*)
+		err "Unrecognized option \`$1', see ricebag --help"
+	;;
+esac
+

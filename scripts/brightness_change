@@ -1,0 +1,24 @@
+#!/bin/bash
+
+brightness="/sys/class/backlight/acpi_video0/brightness"
+presbright=`cat /sys/class/backlight/acpi_video0/brightness`
+perc=`expr $presbright "*" 100 "/" 15`
+
+case "$1" in
+	up)
+	  echo $(( ${presbright} + 1 )) > $brightness
+	  sudo -u $user notify-send " " -i notification-display-brightness-low -h int:value:$perc -h string:x-canonical-private-synchronous:brightness &
+	;;
+	down)
+	  echo $(( ${presbright} - 1 )) > $brightness
+	  sudo -u $user notify-send " " -i notification-display-brightness-low -h int:value:$perc -h string:x-canonical-private-synchronous:brightness &
+	;;
+	status)
+	  echo $presbright
+	;;
+	*)
+	  echo "Accepted arguments are: up, down, status."
+	;;
+esac
+
+exit 0

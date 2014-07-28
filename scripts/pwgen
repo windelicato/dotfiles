@@ -1,0 +1,6 @@
+#!/bin/bash
+
+NUMBER_CHARACTERS=16
+x=${1:-$NUMBER_CHARACTERS}
+
+cat /dev/urandom | tr -dc 'a-zA-Z0-9[$-:-?{-~!^_`\[\]]' | fold -w $x | head -n 1

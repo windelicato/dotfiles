@@ -1,0 +1,20 @@
+#!/bin/bash
+
+#setup
+SAVEIFS=$IFS
+IFS=$(echo -en "\n\b")
+
+#cd into music dir
+dir=`pwd`
+cd ~/Music
+
+files=`cat ~/.mpd/playlists/$1.m3u | sed 's/ /\\ /g'`
+
+for f in $files; do
+	zip -g $1.zip $f
+done
+
+#cleanup
+IFS=$SAVEIFS
+mv $1.zip $dir
+cd $dir 

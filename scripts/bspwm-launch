@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sxhkd &
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+wm

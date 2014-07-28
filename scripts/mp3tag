@@ -1,0 +1,26 @@
+#!/bin/bash
+
+for f in *.mp3
+do
+	echo $f
+done
+
+echo "Album name"
+read album
+echo "Artst name for $album"
+read artist
+
+for f in *.mp3
+do
+	echo "Track title for $f"
+	read title
+
+	echo "Track number for $f (or blank)"
+	read track
+
+	id3v2 -a "$artist" -A "$album" -t "$title" "$f"
+
+	if [ ! -z "$track" ]; then
+		id3v2 -T"$track" "$f"
+	fi
+done

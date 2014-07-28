@@ -1,0 +1,60 @@
+#!/bin/sh
+
+WIDTH=85
+#FONT="-artwiz-limey-medium-r-normal-*-10-110-75-75-m-50-iso8859-*"
+#FONT='sans:size=11'
+#FONT='sawasdee:size=10'
+#FONT='-*-gohufontmod11-*-*-*-*-*-*-*-*-*-*-*-*'
+#FONT='-*-suxus-*-*-normal-*-10-100-75-75-c-50-iso8859-1'
+#FONT='-*-nu-*-*-normal-*-10-100-75-75-c-50-iso8859-1'
+FONT='-*-tamsyn-medium-*-normal-*-*-87-*-*-*-*-*-*'
+
+
+# Width of the graphical separator (default 80% of window's width)
+SEPARATOR_WIDTH=`expr $WIDTH - \( $WIDTH / 100 \) \* 20`
+
+#Position
+X=$(getcurpos | cut -c1-4)
+Y=$(getcurpos | cut -c5-10)
+
+
+[ -f "$1" ] && MENUFILE="$1" || exit
+
+# number of visible menu entries (access the others through scrolling up/down)
+LINES=`wc -l "$MENUFILE"|sed -e 's/ .*//'`
+[ $LINES -gt 20 ] && LINES=20
+
+# if process already exists, kill it. We dont want more than one instance
+if [ $(pgrep dzen | wc -w) -gt 1 ]; then
+	kill $(pgrep dzen | tail -n1)
+	exit
+fi
+
+execute () {
+        read PROG
+
+        while read LINE; do 
+                LBL=;APP=
+                LBL=$(echo $LINE|sed -e 's/:.*$//' -e 's/^[ \t]*//' -e 's/[ \t]*$//')
+                APP=$(echo $LINE|sed -e 's/^.*://' -e 's/^[ \t]*//' -e 's/[ \t]*$//')
+             
+                if [ x"$APP" = x"exit" ]; then
+                        exit
+                elif [ x"$LBL" = x"$PROG" ]; then
+                       if [ x"$APP" = x"" ]; then
+                          $LBL&
+                       else
+                          $APP&
+                       fi
+                       exit
+                fi
+        done < "$MENUFILE"
+}
+
+
+(
+echo "^bg(#332d29)^fg(#FFFFFF)                    "   
+sed -e 's/:.*$//' \
+    -e 's/^.--*/^r('${SEPARATOR_WIDTH}'x1)/' "$MENUFILE" 
+) | \
+dzen2 -l $LINES -w $WIDTH -x $X -y $Y -fn $FONT -bg '#181512' -fg '#d6c3b6' -p -m -sa l -e 'onstart=uncollapse,scrollhome;button1=menuprint_noparse,exit;button3=exit;key_Return=menuprint_noparse,exit;key_k=scrollup;key_j=scrolldown' | execute

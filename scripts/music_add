@@ -1,0 +1,50 @@
+#!/bin/bash
+
+# Script to add music archive to organized music libary
+#	USAGE: ./music [ARCHIVE]
+#
+# Music is placed into ~/Music/[ARTIST]/[ALBUM]
+
+ARCHIVE=$1
+
+mkdir temp
+mv "$1" temp
+cd temp
+
+if [[ -f $ARCHIVE ]]; then
+case $ARCHIVE in
+	*.7z) 7z x "$ARCHIVE";;
+	*.bz2) bunzip2 "$ARCHIVE";;
+	*.gz) gunzip "$ARCHIVE";;
+	*.rar) unrar x "$ARCHIVE";;
+	*.tar) tar xvf "$ARCHIVE";;
+	*.tar.bz2) tar xvjf "$ARCHIVE";;
+	*.tar.gz) tar xvzf "$ARCHIVE";;
+	*.tbz2) tar xvjf "$ARCHIVE";;
+	*.tgz) tar xvzf "$ARCHIVE";;
+	*.zip) unzip "$ARCHIVE";;
+	*.Z) uncompress "$ARCHIVE";;
+	*) echo "unable to extract '$1'..." ;;
+esac
+else
+	echo "'$1' is not a valid file!"
+fi
+
+dir=`ls -d */ | head -n1`
+while [[ -d $dir ]]; do
+	cd "$dir"
+	echo $dir
+	dir=`ls -d */ | head -n1`
+done
+
+track=`ls | grep mp3 | head -n1`
+artist=`id3v2 -l "$track" | grep "TPE1" | cut -d':' -f2 | sed -r 's/\s//'`
+album=`id3v2 -l "$track" | grep "TALB" | cut -d':' -f2 | sed -r 's/\s//'`
+
+mkdir ~/Music/"$artist"
+mkdir ~/Music/"$artist"/"$album"
+
+mv *.mp3 ~/Music/"$artist"/"$album"
+
+cd ..
+rm -rf temp

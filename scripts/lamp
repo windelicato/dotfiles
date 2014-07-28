@@ -1,0 +1,18 @@
+#!/bin/bash
+set -o verbose
+
+sudo systemctl $1 httpd.service
+sudo systemctl $1 varnish.service
+sudo systemctl $1 memcached.service
+sudo systemctl $1 mysqld.service
+#sudo modprobe vboxdrv
+
+#SOLR_HOME="$HOME/Downloads/solr/"
+#current_dir=`pwd`
+#if [[ $1 -eq "start" ]]; then
+#	cd $SOLR_HOME
+#	nohup java -jar start.jar &
+#	cd $current_dir
+#else
+#	kill `pidof java | head`
+#fi

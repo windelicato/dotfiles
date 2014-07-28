@@ -1,0 +1,7 @@
+#!/bin/bash
+
+detached=`tmux ls | egrep -v "attached" | awk '{gsub(/:/,"");print $1}'`
+
+for session in $detached; do
+	tmux kill-session -t $session
+done

@@ -1,0 +1,50 @@
+#!/bin/bash
+
+TAG=""
+SLEEP=5
+DIRECTORY="$HOME/Pictures"
+
+usage() {
+  echo "usage: wallpaper-switcher [option] [argument]"
+  echo
+  echo "Options:"
+  echo " -t, --tag - filename to read in (ie winter-*)"
+  echo " -s, --sleep   - time to sleep in seconds"
+  echo " -d, --directory - wallpaper directory"
+  echo " -h, --help - display this"
+  exit
+}
+
+#Argument Parsing
+while [[ $# > 1 ]]
+do
+  key="$1"
+  shift
+
+  case "$key" in
+'-t'|'--tag')
+  TAG="$1"
+  shift
+;;
+'-s'|'--sleep')
+  SLEEP="$1"
+  shift
+;;
+'-d'|'--directory')
+  DIRECTORY="$1"
+  shift
+;;
+*)
+  usage; exit 0;
+;;
+  esac
+done
+
+while true
+do
+  for j in $DIRECTORY/$TAG*.*
+  do
+hsetroot -fill $j
+sleep $SLEEP
+  done
+done
