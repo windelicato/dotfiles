@@ -10,6 +10,9 @@ fi
 
 trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 
+[ -e "$PANEL_FIFO" ] && rm "$PANEL_FIFO"
+mkfifo "$PANEL_FIFO"
+
 bspc control --subscribe > "$PANEL_FIFO" &
 echo "T" >  "$PANEL_FIFO" &
 conky -c ./panel_conky > "$PANEL_FIFO" &
@@ -22,4 +25,5 @@ cat "$PANEL_FIFO" \
 		-F "$COLOR_FOREGROUND"\
 		-B "$COLOR_BACKGROUND"\
 		-g "$PANEL_GEOMETRY"\
-		-u $LINEHEIGHT
+		-u $LINEHEIGHT &
+wait
