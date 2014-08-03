@@ -9,7 +9,7 @@ alt + shift + q
 # Toggle panels
 alt + q
 	{pkill panel; pkill cat; pkill conky; bspc config top_padding 0 ,\
-	bspc config top_padding 14; /home/sunn/.config/bspwm/panel/panel & }
+	bspc config top_padding 14; $HOME/.config/bspwm/panel/panel & }
 
 
 # Workstation Monitor
@@ -18,7 +18,7 @@ alt + w
 
 # Kill all detached tmux sessions
 alt + x
-	/home/sunn/scripts/tmux_purge
+	$HOME/scripts/tmux_purge
 
 # Close window
 alt + shift + x
@@ -54,9 +54,9 @@ alt + {_,shift + }{h,j,k,l}
 
 # Resize nodes
 alt + {a,f}
-	/home/sunn/scripts/window_move.sh {-p,-n} -x -s 20
+	$HOME/scripts/window_move.sh {-p,-n} -x -s 20
 alt + {s,d}
-	/home/sunn/scripts/window_move.sh {-p,-n} -y -s 20
+	$HOME/scripts/window_move.sh {-p,-n} -y -s 20
 
 # Move floating windows (requires baskerville's xdo)
 alt + {Left,Right,Up,Down}
@@ -160,10 +160,10 @@ alt + ctrl + Return
 	 bspc rule -a urxvt -o pseudo_tiled=on && urxvtc
 
 alt + r
-	/home/sunn/scripts/lens
+	$HOME/scripts/lens
 
 alt + shift + r
-	/home/sunn/scripts/dmenu/spotlight
+	$HOME/scripts/dmenu/spotlight
 
 alt + shift + b
 	firefox
@@ -175,7 +175,7 @@ alt + z
 	zathura
 
 alt + Tab
-	{/home/sunn/.config/bspwm/panel/launcher_menu /home/sunn/.config/bspwm/panel/launcher_apps, pkill dzen2}
+	{$HOME/.config/bspwm/panel/launcher_menu $HOME/.config/bspwm/panel/launcher_apps, pkill dzen2}
 
 Print
 	scrot -q 100
@@ -185,42 +185,44 @@ Print
 #
 
 XF86AudioRaiseVolume
-	/home/sunn/.config/bspwm/panel/notify_volume + 3
+	$HOME/.config/bspwm/panel/notify_volume + 3
 
 XF86AudioLowerVolume
-	/home/sunn/.config/bspwm/panel/notify_volume - 3
+	$HOME/.config/bspwm/panel/notify_volume - 3
 
 XF86AudioMute
-	/home/sunn/.config/bspwm/panel/notify_volume !
+	$HOME/.config/bspwm/panel/notify_volume !
 
 XF86Sleep
 	pm-suspend
 
 XF86AudioPlay
-	/home/sunn/.config/bspwm/panel/notify_mpd -t 
+	$HOME/.config/bspwm/panel/notify_mpd -t 
 	
 XF86AudioNext
-	/home/sunn/.config/bspwm/panel/notify_mpd -n
+	$HOME/.config/bspwm/panel/notify_mpd -n
 
 XF86AudioPrev
-	/home/sunn/.config/bspwm/panel/notify_mpd -p
+	$HOME/.config/bspwm/panel/notify_mpd -p
 
+XF86WebCam
+	sed -i 's/card [0-9]/card {0,1}/' $HOME/.asoundrc
 
 #
 # Dzen applets
 #
 alt + F1
-	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_music.sh
+	$HOME/.xmonad/sc $HOME/.xmonad/scripts/dzen_music.sh
 alt + F2
-	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_network.sh
+	$HOME/.xmonad/sc $HOME/.xmonad/scripts/dzen_network.sh
 alt + F3
-	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_battery.sh
+	$HOME/.xmonad/sc $HOME/.xmonad/scripts/dzen_battery.sh
 alt + F4
-	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_hardware.sh
+	$HOME/.xmonad/sc $HOME/.xmonad/scripts/dzen_hardware.sh
 alt + F5
-	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_date.sh
+	$HOME/.xmonad/sc $HOME/.xmonad/scripts/dzen_date.sh
 alt + F6
-	/home/sunn/.xmonad/sc /home/sunn/.xmonad/scripts/dzen_log.sh
+	$HOME/.xmonad/sc $HOME/.xmonad/scripts/dzen_log.sh
 
 # make sxhkd reload its configuration files:
 alt + shift + Escape
