@@ -1,0 +1,50 @@
+! Base16 3024
+! Scheme: Jan T. Sott (http://github.com/idleberg)
+
+#define base00 #090300
+#define base01 #3a3432
+#define base02 #4a4543
+#define base03 #5c5855
+#define base04 #807d7c
+#define base05 #a5a2a2
+#define base06 #d6d5d4
+#define base07 #f7f7f7
+#define base08 #db2d20
+#define base09 #e8bbd0
+#define base0A #fded02
+#define base0B #01a252
+#define base0C #b5e4f4
+#define base0D #01a0e4
+#define base0E #a16a94
+#define base0F #cdab53
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06

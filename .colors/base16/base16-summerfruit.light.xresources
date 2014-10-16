@@ -1,0 +1,50 @@
+! Base16 Summerfruit
+! Scheme: Christopher Corley (http://cscorley.github.io/)
+
+#define base00 #151515
+#define base01 #202020
+#define base02 #303030
+#define base03 #505050
+#define base04 #B0B0B0
+#define base05 #D0D0D0
+#define base06 #E0E0E0
+#define base07 #FFFFFF
+#define base08 #FF0086
+#define base09 #FD8900
+#define base0A #ABA800
+#define base0B #00C918
+#define base0C #1faaaa
+#define base0D #3777E6
+#define base0E #AD00A1
+#define base0F #cc6633
+
+*.foreground:   base02
+*.background:   base07
+*.cursorColor:  base02
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06

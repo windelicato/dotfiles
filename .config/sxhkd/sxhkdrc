@@ -3,106 +3,106 @@
 # bspwm hotkeys
 #
 
-alt + shift + q
-	bspc quit 1 && pkill bar && pkill dzen2
+#mod1 + shift + q
+#	bspc quit 1 && pkill bar && pkill dzen2
 
 # Toggle panels
-alt + q
-	{pkill panel; pkill cat; pkill conky; bspc config top_padding 0 ,\
-	bspc config top_padding 14; $HOME/.config/bspwm/panel/panel & }
+mod1 + q
+	{pkill panel; pkill cat; pkill dzen2; bspc config bottom_padding 0 ,\
+	bspc config bottom_padding 22; $HOME/.config/bspwm/panel/panel & }
 
 
 # Workstation Monitor
-alt + w
+mod1 + w
 	bspc monitor -f next
 
 # Kill all detached tmux sessions
-alt + x
+mod1 + x
 	$HOME/scripts/tmux_purge
 
 # Close window
-alt + shift + x
+mod1 + shift + x
 	bspc  window -c
 
 # Kill window
-alt + ctrl + shift + x
+mod1 + ctrl + shift + x
 	bspc  window -k
 
 # Toggle tile
-alt + {_,shift +} t
-	bspc window -t {floating,fullscreen}
+mod1 + {_,shift +} t
+	bspc window -t {floating,pseudo_tiled}
 
 # Lock node
-alt + shift + p
+mod1 + shift + p
 	bspc window -t private
 
 # Balance tree
-alt + b
+mod1 + b
 	bspc desktop -B
 
 # Presel window for splitting
-alt + ctrl + {h,j,k,l}
+mod1 + ctrl + {h,j,k,l}
 	bspc window -p {left,down,up,right}
 
 # Move window into presel position
-alt + shift {a,s,d,f}
+mod1 + shift {a,s,d,f}
 	bspc window -w {left.manual,down.manual,up.manual,right.manual}
 
 # Select windows, or move
-alt + {_,shift + }{h,j,k,l}
+mod1 + {_,shift + }{h,j,k,l}
 	bspc window -{f,s} {left,down,up,right} || bspc window -f {prev, prev, next, next}
 
 # Resize nodes
-alt + {a,f}
+mod1 + {a,f}
 	$HOME/scripts/window_move.sh {-p,-n} -x -s 20
-alt + {s,d}
+mod1 + {s,d}
 	$HOME/scripts/window_move.sh {-p,-n} -y -s 20
 
 # Move floating windows (requires baskerville's xdo)
-alt + {Left,Right,Up,Down}
+mod1 + {Left,Right,Up,Down}
     xdo move {-x -20,-x +20,-y -20,-y +20}
 
 # Resize floating windows
-alt + shift + {Left,Right,Up,Down}
+mod1 + shift + {Left,Right,Up,Down}
     xdo resize {-w -20,-w +20,-h -20,-h +20}    bspc window -e {left -10,down +10,up -10,right +10} || {right -10,up +10,down -10,left +10}
 
 # Move current window to largest space
-alt + Return
+mod1 + Return
 	bspc window -s biggest
 
 # Mirror and flip leaves of tree
-alt + {comma,period}
+mod1 + {comma,period}
 	bspc desktop -F {horizontal,vertical}
 
 # Rotate leaves of tree
-alt + shift + {comma,period}
+mod1 + shift + {comma,period}
 	bspc desktop -R {90,270}
 
 # Select previous / next desktop
-alt + {p,n}
+mod1 + {p,n}
 	bspc desktop -f {prev.occupied,next.occupied} 
 
 # Lock a window from closing
-alt + Escape
+mod1 + Escape
 	bspc window -t locked 
 
 # Toggle monocle
-alt + space 
+mod1 + shift + space 
 	bspc desktop -l next
 
 # Toggle pseudotiled (floating in tile)
-alt + shift + space 
+mod1 + space 
 	bspc window -t pseudo_tiled
 
 # Focus on floating / tiled
-alt + e
+mod1 + e
 	bspc window -f {next.floating,next.tiled}
 
 # Change desktop padding
-alt + {_, shift} + bracketright
+mod1 + {_, shift} + bracketright
 	bspc config -d focused right_padding $((`bspc config -d focused right_padding` {+,-} 20 ))
 
-alt + {_, shift} + bracketleft
+mod1 + {_, shift} + bracketleft
 	bspc config -d focused left_padding $((`bspc config -d focused left_padding` {+,-} 20 ))
 
 ctrl + {_, shift} + bracketright
@@ -111,7 +111,7 @@ ctrl + {_, shift} + bracketright
 ctrl + {_, shift} + bracketleft
 	bspc config -d focused top_padding $((`bspc config -d focused top_padding` {+,-} 20 ))
 
-alt + shift + {minus,equal}
+mod1 + shift + {minus,equal}
 	bspc config -d focused right_padding $((`bspc config -d focused right_padding` {+,-} 20 )); \
 	bspc config -d focused left_padding $((`bspc config -d focused left_padding` {+,-} 20 )); \
 	bspc config -d focused bottom_padding $((`bspc config -d focused bottom_padding` {+,-} 20 )); \
@@ -119,62 +119,51 @@ alt + shift + {minus,equal}
 
 
 # Change window gap
-alt + {minus,equal}
+mod1 + {minus,equal}
 	bspc config -d focused window_gap $((`bspc config -d focused window_gap` {+,-} 2 ))
 
 # Set splitting ratio of windows
-alt + ctrl + {1-9}
+mod1 + ctrl + {1-9}
 	bspc window -r 0.{1-9}
 
 # Focus or move window to desktops
-alt + {_,shift + }{1-9,0}
+mod1 + {_,shift + }{1-9,0}
     bspc {desktop -f, window -d} $(bspc query -M -m)/{i,ii,iii,iv,v,vi,vii,viii,ix,x}
 
 #
 # mouse bindings
 #
-
-# Move or resize window
-alt + button{1-3}
+~button1
+	bspc pointer -g focus
+ctrl + button{1-3}
 	bspc pointer -g {move,resize_side,resize_corner}
+ctrl + !button{1-3}
+	bspc pointer -t %i %i
+ctrl + @button{1-3}
+	bspc pointer -u
 
-# Needed for ^^^^
-alt + !button{1-3}
-    bspc pointer -t %i %i
-
-
-super + @button{1-3}
-    bspc pointer -u
-
-#
-# spawn programs
-#
-
-alt + shift + backslash
-	create_frame 
-
-alt + shift + Return
+mod1 + shift + Return
 	urxvtc 
 
-alt + ctrl + Return
-	 bspc rule -a urxvt -o pseudo_tiled=on && urxvtc
+mod1 + ctrl + Return
+	 bspc rule -a urxvtc -o pseudo_tiled=on && urxvtc
 
-alt + r
+mod1 + r
 	$HOME/scripts/lens
 
-alt + shift + r
+mod1 + shift + r
 	$HOME/scripts/dmenu/spotlight
 
-alt + shift + b
+mod1 + shift + b
 	firefox
 
-alt + shift + n
+mod1 + shift + n
 	xterm
 
-alt + z
+mod1 + z
 	zathura
 
-alt + Tab
+mod1 + Tab
 	{$HOME/.config/bspwm/panel/launcher_menu $HOME/.config/bspwm/panel/launcher_apps, pkill dzen2}
 
 Print
@@ -211,19 +200,19 @@ XF86WebCam
 #
 # Dzen applets
 #
-alt + F1
+mod1 + F1
 	$HOME/.xmonad/sc $HOME/.xmonad/scripts/dzen_music.sh
-alt + F2
+mod1 + F2
 	$HOME/.xmonad/sc $HOME/.xmonad/scripts/dzen_network.sh
-alt + F3
+mod1 + F3
 	$HOME/.xmonad/sc $HOME/.xmonad/scripts/dzen_battery.sh
-alt + F4
+mod1 + F4
 	$HOME/.xmonad/sc $HOME/.xmonad/scripts/dzen_hardware.sh
-alt + F5
+mod1 + F5
 	$HOME/.xmonad/sc $HOME/.xmonad/scripts/dzen_date.sh
-alt + F6
+mod1 + F6
 	$HOME/.xmonad/sc $HOME/.xmonad/scripts/dzen_log.sh
 
 # make sxhkd reload its configuration files:
-alt + shift + Escape
+mod1 + shift + Escape
 	pkill -USR1 -x sxhkd

@@ -1,0 +1,50 @@
+! Base16 Atelier Heath
+! Scheme: Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/heath)
+
+#define base00 #1b181b
+#define base01 #292329
+#define base02 #695d69
+#define base03 #776977
+#define base04 #9e8f9e
+#define base05 #ab9bab
+#define base06 #d8cad8
+#define base07 #f7f3f7
+#define base08 #ca402b
+#define base09 #a65926
+#define base0A #bb8a35
+#define base0B #379a37
+#define base0C #159393
+#define base0D #516aec
+#define base0E #7b59c0
+#define base0F #cc33cc
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06

@@ -1,0 +1,50 @@
+! Base16 Codeschool
+! Scheme: brettof86
+
+#define base00 #232c31
+#define base01 #1c3657
+#define base02 #2a343a
+#define base03 #3f4944
+#define base04 #84898c
+#define base05 #9ea7a6
+#define base06 #a7cfa3
+#define base07 #b5d8f6
+#define base08 #2a5491
+#define base09 #43820d
+#define base0A #a03b1e
+#define base0B #237986
+#define base0C #b02f30
+#define base0D #484d79
+#define base0E #c59820
+#define base0F #c98344
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06

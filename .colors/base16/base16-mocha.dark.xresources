@@ -1,0 +1,50 @@
+! Base16 Mocha
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #3B3228
+#define base01 #534636
+#define base02 #645240
+#define base03 #7e705a
+#define base04 #b8afad
+#define base05 #d0c8c6
+#define base06 #e9e1dd
+#define base07 #f5eeeb
+#define base08 #cb6077
+#define base09 #d28b71
+#define base0A #f4bc87
+#define base0B #beb55b
+#define base0C #7bbda4
+#define base0D #8ab3b5
+#define base0E #a89bb9
+#define base0F #bb9584
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06

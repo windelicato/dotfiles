@@ -1,0 +1,50 @@
+! Base16 Isotope
+! Scheme: Jan T. Sott
+
+#define base00 #000000
+#define base01 #404040
+#define base02 #606060
+#define base03 #808080
+#define base04 #c0c0c0
+#define base05 #d0d0d0
+#define base06 #e0e0e0
+#define base07 #ffffff
+#define base08 #ff0000
+#define base09 #ff9900
+#define base0A #ff0099
+#define base0B #33ff00
+#define base0C #00ffff
+#define base0D #0066ff
+#define base0E #cc00ff
+#define base0F #3300ff
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06

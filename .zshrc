@@ -1,4 +1,4 @@
-source /usr/share/zsh/plugins/zsh-syntax-highlight/zsh-syntax-highlighting.zsh
+source ~/bin/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 autoload -U compinit promptinit colors
 compinit
 promptinit
@@ -45,6 +45,7 @@ function open() { xdg-open $1 &> /dev/null &disown; }
 function lt() { ls -ltrsa "$@" | tail; }
 function psgrep() { ps axuf | grep -v grep | grep "$@" -i --color=auto; }
 function fname() { find . -iname "*$@*"; }
+function search() { grep -RnisI "$1" *; }
 		    
 conf() {
 	case $1 in
@@ -95,6 +96,7 @@ alias svim='sudoedit'
 alias pacman='sudo pacman'
 
 # Network alias
+alias ssh='TERM=xterm ssh'
 alias somessh='ssh -i /home/sunn/.ssh/someecards'
 alias somescp='scp -i /home/sunn/.ssh/someecards'
 function sshsec () { ssh -i ~/.ssh/opsworks.pem ubuntu@"$@" }
@@ -148,7 +150,7 @@ function mkdircd () { mkdir -p "$@" && eval cd "\"\$$#\""; }
 function cdl () { cd "$@" && ls; }
 
 # enable color support of ls and also add handy aliases
-alias ls='ls --color=auto'
+alias ls='ls -G'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
@@ -172,10 +174,10 @@ for dir in $pathdirs; do
 done
 
 export EDITOR="vim"
-export XDG_CONFIG_HOME="/home/sunn/.config"
+export XDG_CONFIG_HOME="/Users/sunn/.config"
 export _JAVA_OPTIONS='-Dswing.defaultlaf=com.sun.java.swing.plaf.gtk.GTKLookAndFeel -Dawt.useSystemAAFontSettings=true' 
 export JAVA_FONTS=/usr/share/fonts/TTF
 
-#if [[ "$TERM" == "rxvt-unicode-256color" ]]; then
-#	xseticon -id $WINDOWID /home/sunn/.icons/AwOkenWhite/clear/128x128/apps/terminal1.png
-#fi
+if [ -f ~/.profile ]; then
+	source ~/.profile
+fi

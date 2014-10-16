@@ -1,0 +1,50 @@
+! Base16 Embers
+! Scheme: Jannik Siebert (https://github.com/janniks)
+
+#define base00 #16130F
+#define base01 #2C2620
+#define base02 #433B32
+#define base03 #5A5047
+#define base04 #8A8075
+#define base05 #A39A90
+#define base06 #BEB6AE
+#define base07 #DBD6D1
+#define base08 #826D57
+#define base09 #828257
+#define base0A #6D8257
+#define base0B #57826D
+#define base0C #576D82
+#define base0D #6D5782
+#define base0E #82576D
+#define base0F #825757
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06

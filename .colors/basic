@@ -1,0 +1,20 @@
+! Terminal colors
+! basic scheme
+*background: #151515
+*foreground: #d8d8d8
+*color0: #a5a5a5
+*color1: #8c5b3e
+*color2: #80764d
+*color3: #917154
+*color4: #596875
+*color5: #6e464b
+*color6: #3b585b
+*color7: #252525
+*color8: #505050
+*color9: #9f6744
+*color10: #80785a
+*color11: #917963
+*color12: #656d75
+*color13: #6e5155
+*color14: #525F61
+*color15: #888888

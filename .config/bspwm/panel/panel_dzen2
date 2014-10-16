@@ -1,0 +1,97 @@
+#! /bin/sh
+#
+# Example panel for dzen2
+
+cd $(dirname $0)
+source $(dirname $0)/config
+
+#font_family='sans-serif'
+#font_size=11
+
+#screen_width=100
+indent=1120
+NORMIFS=$IFS
+FIELDIFS=':'
+PADDING=' '
+
+while getopts 'f:s:' opt ; do
+	case "$opt" in
+		f)
+			font_family=$OPTARG
+			;;
+		s)
+			font_size=$OPTARG
+			;;
+	esac
+done
+
+shift $((OPTIND - 1))
+
+while read -r line ; do
+	case $line in
+		C*)
+			# clock output
+			clock="${line#?}"
+			;;
+		S*)
+			# system infos output
+			sys_infos="${line#?}"
+			;;
+		W*)
+			# bspwm internal state
+			wm_infos="$PADDING"
+			IFS=$FIELDIFS
+			set -- ${line#?}
+			while [ $# -gt 0 ] ; do
+				item=$1
+				case $item in
+					[OoFfUu]*)
+						# desktops
+						name=${item#?}
+						case $item in
+							O*)
+								# focused occupied desktop
+								FG=$COLOR_ACTIVE
+								BG=$COLOR_BACKGROUND
+								;;
+							F*)
+								# focused free desktop
+								FG=$COLOR_ACTIVE
+								BG=$COLOR_BACKGROUND
+								;;
+							U*)
+								# focused urgent desktop
+								FG=$COLOR_ACTIVE
+								BG=$COLOR_BACKGROUND
+								;;
+							o*)
+								# occupied desktop
+								FG=$COLOR_OCCUPIED
+								BG=$COLOR_BACKGROUND
+								;;
+							f*)
+								# free desktop
+								FG=$COLOR_BACKGROUND
+								BG=$COLOR_BACKGROUND
+								;;
+							u*)
+								# urgent desktop
+								FG=$COLOR_URGENT
+								BG=$COLOR_BACKGROUND
+								;;
+						esac
+						wm_infos="${wm_infos}^fg(${FG})^bg(${BG})${PADDING}^r(6x6)${PADDING}"
+						;;
+					L*)
+						# layout
+#						wm_infos="${wm_infos}^fg()^bg()${PADDING}${PADDING}^fg($COLOR_LAYOUT_FG)^bg($COLOR_LAYOUT_BG)^ca(1, bspc desktop -l next)${PADDING}${item#?}${PADDING}^ca()"
+						;;
+				esac
+				shift
+			done
+			IFS=$NORMIFS
+			;;
+	esac
+	printf "%s\n" "$sys_infos^p(_CENTER)^p(-100)$wm_infos ^p(_RIGHT)^p(-100)^fg()^fg($COLOR_ICON)^i(${ICON}clock.xbm)^fg() $clock"
+done
+

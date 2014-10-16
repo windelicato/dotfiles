@@ -1,0 +1,39 @@
+! Base16 Pop
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #000000
+#define base01 #202020
+#define base02 #303030
+#define base03 #505050
+#define base04 #b0b0b0
+#define base05 #d0d0d0
+#define base06 #e0e0e0
+#define base07 #ffffff
+#define base08 #eb008a
+#define base09 #f29333
+#define base0A #f8ca12
+#define base0B #37b349
+#define base0C #00aabb
+#define base0D #0e5a94
+#define base0E #b31e8d
+#define base0F #7a2d00
+
+*.foreground:   base02
+*.background:   base07
+*.cursorColor:  base02
+*.color0:       base01
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0F
+*.color6:       base0C
+*.color7:       base06
+*.color8:       base00
+*.color9:       base09
+*.color10:      base02
+*.color11:      base03
+*.color12:      base04
+*.color13:      base0E
+*.color14:      base05
+*.color15:      base07

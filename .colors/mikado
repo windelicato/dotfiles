@@ -1,0 +1,22 @@
+! █▓▒░ mikado colors
+*foreground: #f3f3f3
+*background: #121212
+*cursorColor: #f3f3f3
+*color0: #322a2c
+*color8: #46423b
+*color1: #a04363
+*color9: #ae837a
+*color2: #9b9329
+*color10: #b4aa30
+*color3: #bf7a29
+*color11: #c7a551
+*color4: #6a8c8c
+*color12: #74999e
+*color5: #856774
+*color13: #9c818e
+*color6: #757978
+*color14: #9fa590
+*color7: #bcbcaf
+*color15: #c1c4bc
+!*color0: #111111
+!*color8: #666666

@@ -5,6 +5,7 @@
 	set cursorline
 	set nocursorcolumn
 	set nocursorline
+	set nowrap
 	syntax sync minlines=256
 
 
@@ -20,7 +21,6 @@
 	colorscheme default
 	set background=dark
 	"colors darkspectrum
-"	set nowrap
 "	set mouse=a 				" use mouse anywhere
 	set autoread 				" Set to auto read when a file is changed from the outside
 
@@ -128,10 +128,10 @@ let g:lightline = {
       \ }
 
 " WORD PROCESSING {
-	set formatoptions=1
-	set lbr
-	set linebreak
-	set wrap
+"	set formatoptions=1
+"	set lbr
+"	set linebreak
+"	set wrap
 	au BufRead,BufNewFile *.todo setfiletype todo
 
 

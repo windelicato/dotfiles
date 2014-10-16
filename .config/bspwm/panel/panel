@@ -3,7 +3,7 @@
 cd $(dirname $0)
 source $(dirname $0)/config
 
-if [ $(pgrep -cx panel) -gt 1 ] ; then
+if [ $(pgrep -x panel | wc -l) -gt 1 ] ; then
     printf "%s\n" "The panel is already running." >&2
     exit 1
 fi
@@ -14,16 +14,10 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 mkfifo "$PANEL_FIFO"
 
 bspc control --subscribe > "$PANEL_FIFO" &
-echo "T" >  "$PANEL_FIFO" &
-conky -c ./panel_conky > "$PANEL_FIFO" &
-./notify_mpd -d &
+while true; do echo "S$(source panel_dzen)" > "$PANEL_FIFO"; sleep 1; done &
+while true; do echo "C$(date +%r)" > "$PANEL_FIFO"; sleep 1; done &
+echo "S" > "$PANEL_FIFO" &
 
-cat "$PANEL_FIFO" \
-	| ./panel_bar \
-	| bar \
-		-f "$FONT1","$FONT2"\
-		-F "$COLOR_FOREGROUND"\
-		-B "$COLOR_BACKGROUND"\
-		-g "$PANEL_GEOMETRY"\
-		-u $LINEHEIGHT &
+cat "$PANEL_FIFO" | ./panel_dzen2 -f $FONT2 | dzen2 -x 0 -y -1 -ta l -bg $COLOR_BACKGROUND -fg $COLOR_FOREGROUND  -fn $FONT1 -h $PANEL_HEIGHT &
+#cat "$PANEL_FIFO" | /usr/local/Cellar/bar-aint-recursive/master/bin/bar/bar -F "#FFFF0000" -B "#FFFFFFFF" -b -g "1000x14+0+0" -f "$FONT1","$FONT2" -d
 wait

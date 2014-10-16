@@ -1,0 +1,9 @@
+#!/bin/bash
+
+source $(dirname $0)/config
+
+BAT=$(pmset -g batt | awk '{gsub(/;/,""); print $2}' | tail -n1 )
+TEMP=$(smc -f | grep "Temp TC0P" | awk '{print $4}')
+
+echo "  ^fg($COLOR_ICON)^i(${ICON}bat_full_01.xbm)^fg() $BAT\
+   ^fg($COLOR_ICON)^i(${ICON}mem.xbm)^fg() ${TEMP}°"

@@ -1,0 +1,50 @@
+! Base16 Marrakesh
+! Scheme: Alexandre Gavioli (http://github.com/Alexx2/)
+
+#define base00 #201602
+#define base01 #302e00
+#define base02 #5f5b17
+#define base03 #6c6823
+#define base04 #86813b
+#define base05 #948e48
+#define base06 #ccc37a
+#define base07 #faf0a5
+#define base08 #c35359
+#define base09 #b36144
+#define base0A #a88339
+#define base0B #18974e
+#define base0C #75a738
+#define base0D #477ca1
+#define base0E #8868b3
+#define base0F #b3588e
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06
