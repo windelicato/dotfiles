@@ -1,25 +1,17 @@
-xrdb ~/.Xresources 
+cd $HOME
+
+source $HOME/.profile
+
+xrdb ~/.Xresources
 xset +fp ~/.fonts
-xset +fp /usr/share/fonts/local 
-xset fp rehash 
-wmname LG3D
-xcalib /home/sunn/x230.icm &
-xsetroot -cursor_name left_ptr &
-xmodmap -e 'clear Lock' -e 'keycode 0x42 = Escape' &
-hsetroot -tile /home/sunn/Pictures/tinytile2.gif &
-unclutter -grab -noevents -root &
+xset fp rehash
+xset -b
+xsetroot -cursor_name left_ptr
+xmodmap ~/.Xmodmap
+
+export LANG="en_US.UTF-8"
+
+exec >>~/.xsession-errors 2>&1
 urxvtd &
-
-if [[ -z `xrandr | grep " connected" | grep 'VGA'` ]]; then
-	echo "No monitor found" &
-else
-	xrandr --output VGA1 --auto --above LVDS1 &
-fi
-
-if [[ "`acpi -b | awk '{gsub(/,/,""); print $3}'`" != "Discharging" ]]; then
-	hsetroot -fill /home/sunn/Pictures/forest-birch.jpg &
-	compton &
-	/home/sunn/scripts/docky-launch &
-fi
-
-exec $1
+sxhkd -c $HOME/.config/sxhkd/sxhkdrc -f 20 &
+exec bspwm -c $HOME/.config/bspwm/bspwmrc
