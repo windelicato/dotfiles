@@ -1,12 +1,12 @@
 ! Base16 Grayscale
 ! Scheme: Alexandre Gavioli (https://github.com/Alexx2/)
 
-#define base00 #101010
+#define base00 #2b2b2b
 #define base01 #252525
 #define base02 #464646
 #define base03 #525252
 #define base04 #ababab
-#define base05 #b9b9b9
+#define base05 #ffffff
 #define base06 #e3e3e3
 #define base07 #f7f7f7
 #define base08 #7c7c7c

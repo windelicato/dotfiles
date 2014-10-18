@@ -1,5 +1,5 @@
-!#include "/Users/sunn/.colors/base16/base16-ocean.dark.xresources"
-#include "/Users/sunn/.colors/mikado"
+#include "/Users/sunn/.colors/base16/base16-grayscale.dark.xresources"
+!#include "/Users/sunn/.colors/mikado"
 
 ! #########################################
 !urxvt.termName: xterm
@@ -133,15 +133,15 @@ URxvt.keysym.C-minus:   perl:font-size:decrease
 !urxvt*italicFont: -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
 !urxvt*bolditalicFont: -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
 
-!urxvt*font: -misc-tamsyn-medium-r-normal--14-*-*-*-*-*-*-*
-!urxvt*boldFont: -misc-tamsyn-medium-r-normal--14-*-*-*-*-*-*-*
-!urxvt*italicFont: -misc-tamsyn-medium-r-normal--14-*-*-*-*-*-*-*
-!urxvt*bolditalicFont: -misc-tamsyn-medium-r-normal--14-*-*-*-*-*-*-*
+urxvt*font: -misc-tamsyn-medium-r-normal--14-*-*-*-*-*-*-*
+urxvt*boldFont: -misc-tamsyn-medium-r-normal--14-*-*-*-*-*-*-*
+urxvt*italicFont: -misc-tamsyn-medium-r-normal--14-*-*-*-*-*-*-*
+urxvt*bolditalicFont: -misc-tamsyn-medium-r-normal--14-*-*-*-*-*-*-*
 
-urxvt*font: xft:monaco:size=9
-urxvt*boldFont: xft:monaco:size=9
-urxvt*italicFont: xft:monaco:size=9
-urxvt*bolditalicFont: xft:monaco:size=9
+!urxvt*font: xft:monaco:size=9
+!urxvt*boldFont: xft:monaco:size=9
+!urxvt*italicFont: xft:monaco:size=9
+!urxvt*bolditalicFont: xft:monaco:size=9
 
 !xclock*majorColor: #9a875f
 !xclock*minorColor: #9a875f

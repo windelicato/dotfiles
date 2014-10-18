@@ -92,6 +92,6 @@ while read -r line ; do
 			IFS=$NORMIFS
 			;;
 	esac
-	printf "%s\n" "$sys_infos^p(_CENTER)^p(-100)$wm_infos ^p(_RIGHT)^p(-100)^fg()^fg($COLOR_ICON)^i(${ICON}clock.xbm)^fg() $clock"
+	printf "%s\n" "$sys_infos^p(_CENTER)^p(-105)$wm_infos ^p(_RIGHT)^p(-100)^fg()^fg($COLOR_ICON)^i(${ICON}clock.xbm)^fg() $clock"
 done
 

@@ -14,8 +14,8 @@ trap 'trap - TERM; kill 0' INT TERM QUIT EXIT
 mkfifo "$PANEL_FIFO"
 
 bspc control --subscribe > "$PANEL_FIFO" &
-while true; do echo "S$(source panel_dzen)" > "$PANEL_FIFO"; sleep 1; done &
-while true; do echo "C$(date +%r)" > "$PANEL_FIFO"; sleep 1; done &
+while true; do echo "S$(source panel_dzen)" > "$PANEL_FIFO"; sleep 2; done &
+while true; do echo "C$(date +%r)" > "$PANEL_FIFO"; sleep 2; done &
 echo "S" > "$PANEL_FIFO" &
 
 cat "$PANEL_FIFO" | ./panel_dzen2 -f $FONT2 | dzen2 -x 0 -y -1 -ta l -bg $COLOR_BACKGROUND -fg $COLOR_FOREGROUND  -fn $FONT1 -h $PANEL_HEIGHT &

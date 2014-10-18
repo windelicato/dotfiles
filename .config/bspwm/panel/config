@@ -6,11 +6,11 @@ FONT2="-*-fixed-*-*-*-*-14-*-*-*-*-*-*-*"
 
 ICON="`pwd`/dzen_icons/"
 
-COLOR_BACKGROUND="#121212"
-COLOR_FOREGROUND="#bcbcaf"
+COLOR_BACKGROUND="#2b2b2b"
+COLOR_FOREGROUND="#ffffff"
 COLOR_ICON="#757978"
-COLOR_ACTIVE="#9b9329"
-COLOR_OCCUPIED="#322a2c"
+COLOR_ACTIVE="#c1c4bc"
+COLOR_OCCUPIED="#46423b"
 COLOR_URGENT="#a04363"
 
 # Height of underlines / overlines
