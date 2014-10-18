@@ -16,4 +16,4 @@ For making things look nice, i use
 +  compton - to set shadows / transparency of windows
 
 CURRENT:
-![Alt text](https://raw.github.com/windelicato/dotfiles/master/screenshot.png "SCREENSHOT")
+![Alt text](https://raw.github.com/windelicato/dotfiles/osx/screenshot.png "SCREENSHOT")
