@@ -1,5 +1,7 @@
 #!/bin/sh
 
+sxhkd &
+
 bspc config border_width        1
 bspc config window_gap          2
 
