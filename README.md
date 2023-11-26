@@ -1,5 +1,6 @@
 Arch Linux configuration files for programs and BSPWM
 
+
 Requirements to run full setup with applets...
 +  dzen2 - for the clickable applets
 +  conky - for the top bar
